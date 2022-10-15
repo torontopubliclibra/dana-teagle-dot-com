@@ -8,7 +8,7 @@ const navLinks = navUl.querySelectorAll(`li a`);
 hamburger.addEventListener('click', () => {
     if(!navUl.style.display){
         hamburger.classList.add('hamburger-active');
-        navUl.style.display = 'block';
+        navUl.style.display = 'flex';
         body.classList.add('nav-open');
         navName.style.display = 'initial';
     } else {

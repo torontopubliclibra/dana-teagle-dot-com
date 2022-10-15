@@ -629,7 +629,9 @@ footer {
     position: fixed;
     right: 0;
     top: -20px;
-    padding-top: 40%;
+    padding-top: 60px;
+    flex-flow: column;
+    justify-content: center;
     background: #678c94;
     background-image: url("./assets/stripes.png");
     height: 100vh;
