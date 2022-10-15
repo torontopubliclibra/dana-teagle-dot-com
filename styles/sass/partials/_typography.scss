@@ -54,7 +54,7 @@ nav {
                 text-decoration: none;
                 color: $color1;
                 &:hover, &:focus {
-                    background: $color2;
+                    background: rgba($color2, 0.5);
                     color: $black;
                     transition: 0.4s;
                 }

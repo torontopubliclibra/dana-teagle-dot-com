@@ -282,7 +282,7 @@ nav ul li a {
   color: #1e4345;
 }
 nav ul li a:hover, nav ul li a:focus {
-  background: #678c94;
+  background: rgba(103, 140, 148, 0.5);
   color: #000000;
   transition: 0.4s;
 }
