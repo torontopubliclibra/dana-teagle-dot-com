@@ -561,7 +561,7 @@ footer {
 
 .about, .projects, footer {
   background-color: #1e4345;
-  background-image: url("./../assets/stripes.png");
+  background-image: url("../assets/stripes.png");
   color: #f8f4f3;
 }
 
@@ -586,7 +586,7 @@ footer {
     width: 100%;
     z-index: 5;
     background: #678c94;
-    background-image: url("./../assets/stripes.png");
+    background-image: url("../assets/stripes.png");
     color: #000000;
     position: absolute;
   }
@@ -631,7 +631,7 @@ footer {
     top: -20px;
     padding-top: 40%;
     background: #678c94;
-    background-image: url("./../assets/stripes.png");
+    background-image: url("../assets/stripes.png");
     height: 100vh;
     width: 100%;
     z-index: 3;
