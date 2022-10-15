@@ -49,6 +49,7 @@ projectDesc.forEach((project) => {
             paragraph.style.opacity = '0%';
             readMore.style.marginBottom = '';
             readMore.innerText = 'Read More';
+            readMore.blur();
         }
     })
 })
