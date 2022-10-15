@@ -598,6 +598,7 @@ footer {
   }
   header nav .hamburger-btn:hover .ham, header nav .hamburger-btn:focus .ham {
     color: #1e4345;
+    cursor: pointer;
   }
   header nav .hamburger-btn .ham {
     background: none;
