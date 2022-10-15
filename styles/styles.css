@@ -338,6 +338,38 @@ nav ul li afocus {
     background-position: 0% 50%;
   }
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .wrapper {
   max-width: 1260px;
   width: 90%;
@@ -635,6 +667,7 @@ footer {
     background: #678c94;
     background-image: url("./assets/stripes.png");
     height: 100vh;
+    opacity: 0;
     width: 100%;
     z-index: 3;
   }
