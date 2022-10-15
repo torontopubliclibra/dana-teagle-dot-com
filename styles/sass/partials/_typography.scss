@@ -1,0 +1,92 @@
+@use 'variables' as *;
+
+body {
+    font-size: 18px;
+}
+
+h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, footer, .hamburger-btn p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+
+footer {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+p, h2 {
+    font-family: 'Lora', serif;
+}
+
+h1 {
+    font-size: 90px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+h3 {
+    font-size: 50px;
+    margin: 20px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+.skills h3, .projects h3, .contact h3 {
+    padding-top: 20px;
+}
+
+nav {
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                color: $color1;
+                &:hover, &:focus {
+                    background: $color2;
+                    color: $black;
+                    transition: 0.4s;
+                }
+                &focus {
+                    outline: initial;
+                }
+            }
+        }
+    }
+}
+
+.about {
+    font-size: 20px;
+}
+
+.button,
+.button-2 {
+    border: none;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+.button {
+    color: $black;
+    background: $color2;
+    &:hover, &:focus {
+        color: $color3;
+        background: $color1;
+        transition: 0.4s;
+    }
+}
+
+.contact p {
+    font-size: 20px;
+}
