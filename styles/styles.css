@@ -345,8 +345,8 @@ nav ul li afocus {
 }
 
 body {
-  -webkit-animation: 5s infinite ease-in-out gradient;
-          animation: 5s infinite ease-in-out gradient;
+  -webkit-animation: 10s infinite ease-in-out gradient;
+          animation: 10s infinite ease-in-out gradient;
   background: linear-gradient(130deg, #678c94 0%, #b0d4e3 20%, #efc4e2 60%, #efc4e2 80%, #678c94 100%);
   background-size: 300% 300%;
   color: #1e4345;
