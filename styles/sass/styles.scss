@@ -318,7 +318,7 @@ footer {
                     }
                 }
                 p {
-                    display: none;
+                    visibility: hidden;
                     float: right;
                     margin: 10px;
                 }
@@ -331,6 +331,10 @@ footer {
                             transform:rotate(90deg);
                             transition: 0.4s;
                         }
+                    }
+                    p {
+                        visibility: visible;
+                        animation: fade-in 0.4s;
                     }
                 }
             }

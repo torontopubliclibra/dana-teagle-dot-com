@@ -641,7 +641,7 @@ footer {
     margin: 10px;
   }
   header nav .hamburger-btn p {
-    display: none;
+    visibility: hidden;
     float: right;
     margin: 10px;
   }
@@ -655,6 +655,11 @@ footer {
   header nav .hamburger-btn.hamburger-active .ham i {
     transform: rotate(90deg);
     transition: 0.4s;
+  }
+  header nav .hamburger-btn.hamburger-active p {
+    visibility: visible;
+    -webkit-animation: fade-in 0.4s;
+            animation: fade-in 0.4s;
   }
   header nav ul {
     display: none;
