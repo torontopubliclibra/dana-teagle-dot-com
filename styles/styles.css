@@ -693,6 +693,9 @@ footer {
   .projects .projects-container .project .project-img .project-overlay {
     display: flex;
   }
+  .skills ul li:hover i {
+    transform: none;
+  }
   .contact .contact-content {
     width: 90%;
   }

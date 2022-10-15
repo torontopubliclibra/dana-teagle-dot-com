@@ -373,6 +373,9 @@ footer {
                 }
         }
     }
+    .skills ul li:hover i {
+            transform: none;
+        }
     .contact {
         .contact-content {
             width: 90%;

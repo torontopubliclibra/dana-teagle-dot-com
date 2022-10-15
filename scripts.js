@@ -12,21 +12,25 @@ hamburger.addEventListener('click', () => {
         body.classList.add('nav-open');
         navUl.style.animation = 'fade-in 0.4s';
         navUl.style.opacity = '1';
+        navName.style.display = 'initial';
+        navName.style.animation = 'fade-in 0.4s';
         setTimeout(function(){
             navUl.style.animation = '';
+            navName.style.animation = '';
         }, 400)
-        navName.style.display = 'initial';
     } else {
         hamburgerIcon.style.transform = `rotate(initial)`;
         hamburgerIcon.style.transition = `0.4s`;
         hamburger.classList.remove('hamburger-active');
         body.classList.remove('nav-open');
         navUl.style.animation = 'fade-out 0.4s';
+        navName.style.animation = 'fade-out 0.4s';
         setTimeout(function(){
             navUl.style.display = '';
             navUl.style.animation = '';
+            navName.style.display = '';
+            navName.style.animation = '';
         }, 400)
-        navName.style.display = '';
     }
 })
 
