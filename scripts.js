@@ -5,28 +5,34 @@ const navUl = document.querySelector(`nav ul`);
 const body = document.querySelector(`body`);
 const navLinks = navUl.querySelectorAll(`li a`);
 
-hamburger.addEventListener('click', () => {
+function hamburgerFunction() {
     if(!navUl.style.display){
         hamburger.classList.add('hamburger-active');
+        hamburger.removeEventListener('click', hamburgerFunction);
         navUl.style.display = 'flex';
         body.classList.add('nav-open');
         navUl.style.animation = 'fade-in 0.4s';
         navUl.style.opacity = '1';
         setTimeout(function(){
             navUl.style.animation = '';
+            hamburger.addEventListener('click', hamburgerFunction);
         }, 400)
     } else {
         hamburgerIcon.style.transform = `rotate(initial)`;
         hamburgerIcon.style.transition = `0.4s`;
         hamburger.classList.remove('hamburger-active');
+        hamburger.removeEventListener('click', hamburgerFunction);
         body.classList.remove('nav-open');
         navUl.style.animation = 'fade-out 0.4s';
         setTimeout(function(){
             navUl.style.display = '';
             navUl.style.animation = '';
+            hamburger.addEventListener('click', hamburgerFunction);
         }, 400)
     }
-})
+}
+
+hamburger.addEventListener('click', hamburgerFunction)
 
 navLinks.forEach((link) => {
     link.addEventListener('click', () => {
