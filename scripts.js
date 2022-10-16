@@ -8,26 +8,24 @@ const navLinks = navUl.querySelectorAll(`li a`);
 function hamburgerFunction() {
     if(!navUl.style.display){
         hamburger.classList.add('hamburger-active');
-        hamburger.removeEventListener('click', hamburgerFunction);
         navUl.style.display = 'flex';
         body.classList.add('nav-open');
         navUl.style.animation = 'fade-in 0.4s';
         navUl.style.opacity = '1';
         setTimeout(function(){
             navUl.style.animation = '';
-            hamburger.addEventListener('click', hamburgerFunction);
         }, 400)
     } else {
         hamburgerIcon.style.transform = `rotate(initial)`;
         hamburgerIcon.style.transition = `0.4s`;
         hamburger.classList.remove('hamburger-active');
-        hamburger.removeEventListener('click', hamburgerFunction);
         body.classList.remove('nav-open');
         navUl.style.animation = 'fade-out 0.4s';
         setTimeout(function(){
+            navUl.style.opacity = '0';
             navUl.style.display = '';
             navUl.style.animation = '';
-            hamburger.addEventListener('click', hamburgerFunction);
+            hamburgerIcon.style.transition = '';
         }, 400)
     }
 }
