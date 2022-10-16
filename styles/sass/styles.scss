@@ -121,7 +121,6 @@ header {
         margin: 0 auto;
     }
     a {
-        text-decoration: none;
         color: $color1;
         &:hover, &:focus {
             color: $color2;
@@ -281,7 +280,6 @@ header {
         padding-bottom: 30px;
         p {
             a {
-                text-decoration: none;
                 color: $color1;
                 &:hover, &:focus {
                     color: $color2;

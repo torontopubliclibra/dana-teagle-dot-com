@@ -464,7 +464,6 @@ header .scroll-down a {
   margin: 0 auto;
 }
 .about a {
-  text-decoration: none;
   color: #1e4345;
 }
 .about a:hover, .about a:focus {
@@ -620,7 +619,6 @@ header .scroll-down a {
   padding-bottom: 30px;
 }
 .contact .contact-content p a {
-  text-decoration: none;
   color: #1e4345;
 }
 .contact .contact-content p a:hover, .contact .contact-content p a:focus {
