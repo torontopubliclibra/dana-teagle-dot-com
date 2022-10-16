@@ -501,7 +501,8 @@ header .title {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
+  opacity: 0%;
   flex-flow: column;
   align-items: center;
   justify-content: center;
@@ -511,13 +512,18 @@ header .title {
   transform: translate(-50%, -50%);
 }
 .projects .projects-container .project .project-img .project-overlay .button {
+  display: none;
   border: solid #f8f4f3 2px;
 }
 .projects .projects-container .project .project-img .project-overlay .live {
   margin-bottom: 20px;
 }
 .projects .projects-container .project .project-img:hover .project-overlay {
-  display: flex;
+  opacity: 100%;
+  transition: 0.4s;
+}
+.projects .projects-container .project .project-img:hover .project-overlay .button {
+  display: initial;
 }
 .projects .projects-container .project h4, .projects .projects-container .project h5 {
   margin: 0;
@@ -696,7 +702,10 @@ footer {
     max-width: 80%;
   }
   .projects .projects-container .project .project-img .project-overlay {
-    display: flex;
+    opacity: 100%;
+  }
+  .projects .projects-container .project .project-img .project-overlay .button {
+    display: initial;
   }
   .skills ul li:hover i {
     transform: none;

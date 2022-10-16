@@ -168,7 +168,8 @@ header {
                     background: rgba($black, 0.5);
                     width: 100%;
                     height: 100%;
-                    display: none;
+                    display: flex;
+                    opacity: 0%;
                     flex-flow: column;
                     align-items: center;
                     justify-content: center;
@@ -177,6 +178,7 @@ header {
                     left: 50%;
                     transform: translate(-50%, -50%);
                     .button {
+                        display: none;
                         border: solid $snow 2px;
                     }
                     .live {
@@ -184,7 +186,11 @@ header {
                     }
                 }
                 &:hover .project-overlay {
-                    display: flex;
+                    opacity: 100%;
+                    transition: 0.4s;
+                    .button {
+                        display: initial;
+                    }
                 }
             }
             h4, h5 {
@@ -373,7 +379,10 @@ footer {
         .project {
             max-width: 80%;
             .project-img .project-overlay {
-                    display: flex;
+                    opacity: 100%;
+                    .button {
+                        display: initial;
+                    }
                 }
         }
     }
