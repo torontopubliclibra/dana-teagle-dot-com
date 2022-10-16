@@ -444,7 +444,6 @@ header .scroll-down {
   position: absolute;
   bottom: 25px;
   left: 50%;
-  transform: translate(-50%, 0%);
   font-size: 60px;
   -webkit-animation: 3s infinite ease-in-out pulse;
           animation: 3s infinite ease-in-out pulse;
