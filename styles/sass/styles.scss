@@ -56,6 +56,15 @@
     margin: 0 auto;
 }
 
+.highlight {
+    padding: 0px 3px;
+    color: $black;
+    background: linear-gradient(120deg, rgba($color2, 0.4) 0%, rgba($color2, 0.4) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+    background-position: 0 90%;
+}
+
 body {
     animation: 10s infinite ease-in-out gradient;
     background: linear-gradient(130deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
@@ -116,7 +125,7 @@ header {
         width: 250px;
     }
     p {
-        width: 75%;
+        width: 80%;
         background: rgba($snow, 0.8);
         color: $color1;
         padding: 20px;

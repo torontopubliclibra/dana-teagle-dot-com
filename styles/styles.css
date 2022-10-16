@@ -402,6 +402,15 @@ nav ul li afocus {
   margin: 0 auto;
 }
 
+.highlight {
+  padding: 0px 3px;
+  color: #000000;
+  background: linear-gradient(120deg, rgba(103, 140, 148, 0.4) 0%, rgba(103, 140, 148, 0.4) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  background-position: 0 90%;
+}
+
 body {
   -webkit-animation: 10s infinite ease-in-out gradient;
           animation: 10s infinite ease-in-out gradient;
@@ -461,7 +470,7 @@ header .scroll-down a {
   width: 250px;
 }
 .about p {
-  width: 75%;
+  width: 80%;
   background: rgba(248, 244, 243, 0.8);
   color: #1e4345;
   padding: 20px;
