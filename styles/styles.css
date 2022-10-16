@@ -426,6 +426,7 @@ body.nav-open {
 header {
   height: 100vh;
   min-height: 600px;
+  max-height: 1000px;
   position: relative;
 }
 header nav .hamburger-btn {
