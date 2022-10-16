@@ -370,6 +370,28 @@ nav ul li afocus {
     opacity: 0;
   }
 }
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .wrapper {
   max-width: 1260px;
   width: 90%;
@@ -389,7 +411,7 @@ body.nav-open {
 }
 
 header {
-  height: 500px;
+  height: 100vh;
   position: relative;
 }
 header nav .hamburger-btn {
@@ -412,6 +434,18 @@ header .title {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+header .scroll-down {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 60px;
+  -webkit-animation: 5s infinite ease-in-out pulse;
+          animation: 5s infinite ease-in-out pulse;
+}
+header .scroll-down a {
+  color: #1e4345;
 }
 
 .about {
