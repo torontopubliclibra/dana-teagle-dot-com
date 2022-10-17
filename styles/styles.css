@@ -719,7 +719,7 @@ footer {
     display: none;
     position: fixed;
     right: 0;
-    top: -20px;
+    top: 0;
     padding-top: 60px;
     flex-flow: column;
     justify-content: center;
