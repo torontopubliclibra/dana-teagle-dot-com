@@ -19,6 +19,7 @@ function hamburgerFunction() {
         hamburgerIcon.style.transform = `rotate(initial)`;
         hamburgerIcon.style.transition = `0.4s`;
         hamburger.classList.remove('hamburger-active');
+        hamburger.blur();
         body.classList.remove('nav-open');
         navUl.style.animation = 'fade-out 0.4s';
         setTimeout(function(){
