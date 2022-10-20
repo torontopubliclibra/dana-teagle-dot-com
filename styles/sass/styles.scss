@@ -1,70 +1,14 @@
 @use 'partials/setup';
 @use 'partials/variables' as *;
 @use 'partials/typography' as *;
+@use 'partials/animations';
+@use 'partials/header';
+@use 'partials/about';
+@use 'partials/skills';
+@use 'partials/projects';
+@use 'partials/contact';
 
-// background animation
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -20px);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(-50%, 0px);
-    }
-}
-
-// wrapper styles
-.wrapper {
-    max-width: 1260px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.highlight {
-    padding: 0px 3px;
-    color: $black;
-    background: linear-gradient(120deg, rgba($color2, 0.4) 0%, rgba($color2, 0.4) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 25%;
-    background-position: 0 90%;
-}
-
+// default body styles
 body {
     animation: 10s infinite ease-in-out gradient;
     background: linear-gradient(130deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
@@ -76,239 +20,33 @@ body {
     }
 }
 
-header {
-    height: 100vh;
-    min-height: 600px;
-    max-height: 1000px;
-    position: relative;
-    nav {
-        .hamburger-btn {
-            display: none;
-        }
-        ul {
-            list-style: none;
-            margin: 0px auto 20px auto;
-            padding: 20px 0px 0px 0px;
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            li {
-                a {
-                    padding: 10px 20px;
-                }
-            }
-        }
-    }
-    .title {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .scroll-down {
-        position: absolute;
-        bottom: 25px;
-        left: 50%;
-        font-size: 60px;
-        animation: 3s infinite ease-in-out pulse;
-        a {
-            color: $color1;
-        }
-    }
+// wrapper styles
+.wrapper {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.about {
-    padding: 20px 0px;
-    .headshot {
-        border: solid $snow 5px;
-        border-radius: 50%;
-        width: 250px;
-    }
-    p {
-        width: 80%;
-        background: rgba($snow, 0.8);
-        color: $color1;
-        padding: 20px;
-        margin: 0 auto;
-    }
-    a {
-        color: $color1;
-        &:hover, &:focus {
-            color: $color2;
-        }
-    }
+// highlight effect
+.highlight {
+    padding: 0px 3px;
+    color: $black;
+    background: linear-gradient(120deg, rgba($color2, 0.4) 0%, rgba($color2, 0.4) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+    background-position: 0 90%;
 }
 
-.skills {
-    ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        width: 75%;
-        margin: 0 auto;
-        li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 25%;
-            min-width: 125px;
-            padding: 25px;
-            text-transform: uppercase;
-            i {
-                font-size: 80px;
-                padding-bottom: 20px;
-            }
-            &:hover {
-                i {
-                    transform: scale(1.2);
-                    transition: 0.4s;
-                }
-            }
-        }
-    }
-}
-
-.projects {
-    h3 {
-        padding-top: 30px;
-        margin-bottom: 10px;
-    }
-    .projects-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        column-gap: 20px;
-        text-align: left;
-        margin: 0 auto;
-        padding-bottom: 20px;
-        .project {
-            max-width: 350px;
-            height: 100%;
-            background: rgba($snow, 0.8);
-            color: $color1;
-            margin: 20px auto;
-            .project-img {
-                overflow: hidden;
-                position:relative;
-                aspect-ratio: 4/2.75;
-                border: solid $snow 5px;
-                img {
-                    width: 100%;
-                    aspect-ratio: 4/2.75;
-                    object-fit: cover;
-                }
-                .project-overlay {
-                    background: rgba($black, 0.5);
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    opacity: 0%;
-                    flex-flow: column;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    .button {
-                        display: none;
-                        border: solid $snow 2px;
-                    }
-                    .live {
-                        margin-bottom: 20px;
-                    }
-                }
-                &:hover .project-overlay {
-                    opacity: 100%;
-                    transition: 0.4s;
-                    .button {
-                        display: initial;
-                    }
-                }
-            }
-            h4, h5 {
-                margin: 0;
-                padding-left: 20px;
-            }
-            h4 {
-                padding-top: 20px;
-                padding-bottom: 5px;
-            }
-            .project-description {
-                display: flex;
-                flex-flow: row wrap;
-                padding: 20px;
-                padding-bottom: 0;
-                overflow: hidden;
-                .read-more {
-                    cursor: pointer;
-                }
-                p {
-                    margin: 0 0 20px 0;
-                    width: 100%;
-                    max-height: 0;
-                    opacity: 0;
-                    transition: opacity, max-height 0.4s;
-                }
-                a {
-                    text-align: center;
-                    margin-right: 10px;
-                }
-            }
-        }
-    }
-}
-
-.contact {
-    margin-bottom: 10px;
-    h3 {
-        padding-top: 20px;
-        margin-bottom: 10px;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        li {
-            display: inline;
-            a {
-                color: $color1;
-                font-size: 35px;
-                i {
-                    padding: 0px 20px;
-                }
-                &:hover i, &:focus i {
-                    color: $color2;
-                    transition: 0.4s;
-                }
-            }
-        }
-    }
-    .contact-content {
-        width: 75%;
-        margin: 0 auto;
-        padding-bottom: 30px;
-        p {
-            a {
-                color: $color1;
-                &:hover, &:focus {
-                    color: $color2;
-                }
-            }
-        }
-    }
-}
-
-footer {
-    padding: 20px;
-}
-
+// section backgrounds
 .about, .projects, footer {
     background-color: $color1;
     background-image: url("./assets/stripes.png");
     color: $snow;
+}
+
+// footer styles
+footer {
+    padding: 20px;
 }
 
 // screens smaller than 768px
@@ -319,114 +57,5 @@ footer {
     }
     .wrapper {
         width: 100%;
-    }
-    .about {
-        p {
-            width: 100%;
-        }
-    }
-    header {
-        .title {
-            width: 90%;
-        }
-        nav {
-            .hamburger-btn {
-                display: initial;
-                font-size: 30px;
-                left: 0;
-                width: 100%;
-                z-index: 5;
-                background: $color2;
-                background-image: url("./assets/stripes.png");
-                color: $black;
-                position: absolute;
-                &:hover, &:focus {
-                    cursor: pointer;
-                    background: $snow;
-                    color: $color1;
-                    transition: 0.4s;   
-                    .ham {
-                        color: $color1;
-                        cursor: pointer;
-                    }
-                }
-                .ham {
-                    background: none;
-                    border: none;
-                    float: left;
-                    i {
-                        margin: 10px;
-                    }
-                }
-                p {
-                    visibility: hidden;
-                    float: right;
-                    margin: 10px;
-                }
-                &.hamburger-active {
-                    background: $snow;
-                    color: $color1;
-                    .ham {
-                        color: $color1;
-                        i {
-                            transform:rotate(90deg);
-                            transition: 0.4s;
-                        }
-                    }
-                    p {
-                        visibility: visible;
-                        animation: fade-in 0.4s;
-                    }
-                }
-            }
-            ul {
-                display: none;
-                position: fixed;
-                right: 0;
-                top: 0;
-                padding-top: 60px;
-                flex-flow: column;
-                justify-content: center;
-                background: $color2;
-                background-image: url("./assets/stripes.png");
-                height: 100vh;
-                opacity: 0;
-                width: 100%;
-                z-index: 3;
-                li {
-                    font-size: 30px;
-                    display: block;
-                    padding: 20px;
-                    width: 100%;
-                    a {
-                        color: $black;
-                        &:hover, &:focus {
-                            background: rgba($snow, 0.8);
-                            color: $color1;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .projects .projects-container {
-        flex-flow: column;
-        .project {
-            max-width: 80%;
-            .project-img .project-overlay {
-                    opacity: 100%;
-                    .button {
-                        display: initial;
-                    }
-                }
-        }
-    }
-    .skills ul li:hover i {
-            transform: none;
-        }
-    .contact {
-        .contact-content {
-            width: 90%;
-        }
     }
 }

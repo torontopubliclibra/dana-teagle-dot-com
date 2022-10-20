@@ -1,0 +1,52 @@
+@use 'variables' as *;
+
+// contact section styles
+.contact {
+    margin-bottom: 10px;
+    h3 {
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline;
+            a {
+                color: $color1;
+                font-size: 35px;
+                i {
+                    padding: 0px 20px;
+                }
+                &:hover i,
+                &:focus i {
+                    color: $color2;
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+    .contact-content {
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        p {
+            a {
+                color: $color1;
+                &:hover,
+                &:focus {
+                    color: $color2;
+                }
+            }
+        }
+    }
+}
+
+// screens smaller than 768px
+@media only screen and (max-width: 768px) {
+    .contact {
+        .contact-content {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@use 'variables' as *;
+
+// header section styles
+header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 1000px;
+    position: relative;
+
+    // nav styles
+    nav {
+        .hamburger-btn {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            margin: 0px auto 20px auto;
+            padding: 20px 0px 0px 0px;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+
+    // main title styles
+    .title {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    // scroll down button styles
+    .scroll-down {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        font-size: 60px;
+        animation: 3s infinite ease-in-out pulse;
+        a {
+            color: $color1;
+        }
+    }
+}
+
+// screens smaller than 768px
+@media only screen and (max-width: 768px) {
+    header {
+
+        // main title styles
+        .title {
+            width: 90%;
+        }
+
+        // mobile nav styles
+        nav {
+            .hamburger-btn {
+                display: initial;
+                font-size: 30px;
+                left: 0;
+                width: 100%;
+                z-index: 5;
+                background: $color2;
+                background-image: url("./assets/stripes.png");
+                color: $black;
+                position: absolute;
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                    background: $snow;
+                    color: $color1;
+                    transition: 0.4s;
+                    .ham {
+                        color: $color1;
+                        cursor: pointer;
+                    }
+                }
+                .ham {
+                    background: none;
+                    border: none;
+                    float: left;
+                    i {
+                        margin: 10px;
+                    }
+                }
+                p {
+                    visibility: hidden;
+                    float: right;
+                    margin: 10px;
+                }
+                &.hamburger-active {
+                    background: $snow;
+                    color: $color1;
+                    .ham {
+                        color: $color1;
+                        i {
+                            transform: rotate(90deg);
+                            transition: 0.4s;
+                        }
+                    }
+                    p {
+                        visibility: visible;
+                        animation: fade-in 0.4s;
+                    }
+                }
+            }
+            ul {
+                display: none;
+                position: fixed;
+                right: 0;
+                top: 0;
+                padding-top: 60px;
+                flex-flow: column;
+                justify-content: center;
+                background: $color2;
+                background-image: url("./assets/stripes.png");
+                height: 100vh;
+                opacity: 0;
+                width: 100%;
+                z-index: 3;
+                li {
+                    font-size: 30px;
+                    display: block;
+                    padding: 20px;
+                    width: 100%;
+                    a {
+                        color: $black;
+                        &:hover,
+                        &:focus {
+                            background: rgba($snow, 0.8);
+                            color: $color1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

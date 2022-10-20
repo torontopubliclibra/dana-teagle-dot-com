@@ -1,0 +1,34 @@
+@use 'variables' as *;
+
+// about section styles
+.about {
+    padding: 20px 0px;
+    .headshot {
+        border: solid $snow 5px;
+        border-radius: 50%;
+        width: 250px;
+    }
+    p {
+        width: 80%;
+        background: rgba($snow, 0.8);
+        color: $color1;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    a {
+        color: $color1;
+        &:hover,
+        &:focus {
+            color: $color2;
+        }
+    }
+}
+
+// screens smaller than 768px
+@media only screen and (max-width: 768px) {
+    .about {
+        p {
+            width: 100%;
+        }
+    }
+}

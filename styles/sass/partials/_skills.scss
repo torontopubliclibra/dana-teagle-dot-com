@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+// skills section styles
+.skills {
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 75%;
+        margin: 0 auto;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            min-width: 125px;
+            padding: 25px;
+            text-transform: uppercase;
+
+            i {
+                font-size: 80px;
+                padding-bottom: 20px;
+            }
+
+            &:hover {
+                i {
+                    transform: scale(1.2);
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+// screens smaller than 768px
+@media only screen and (max-width: 768px) {
+    .skills ul li:hover i {
+            transform: none;
+        }
+}
