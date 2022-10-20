@@ -1,67 +1,121 @@
-const hamburger = document.querySelector(`.hamburger-btn`);
-const hamburgerIcon = hamburger.querySelector(`i`);
-const navName = hamburger.querySelector('p');
-const navUl = document.querySelector(`nav ul`);
-const body = document.querySelector(`body`);
-const navLinks = navUl.querySelectorAll(`li a`);
+// app object
+const app = {};
 
-function hamburgerFunction() {
-    if(!navUl.style.display){
-        hamburger.classList.add('hamburger-active');
-        navUl.style.display = 'flex';
-        body.classList.add('nav-open');
-        navUl.style.animation = 'fade-in 0.4s';
-        navUl.style.opacity = '1';
+// app variables
+app.hamburger = document.querySelector(`.hamburger-btn`);
+app.hamburgerIcon = app.hamburger.querySelector(`i`);
+app.navName = app.hamburger.querySelector('p');
+app.navUl = document.querySelector(`nav ul`);
+app.body = document.querySelector(`body`);
+app.navLinks = app.navUl.querySelectorAll(`li a`);
+app.projectDesc = document.querySelectorAll(`.project-description`)
+
+// mobile hamburger nav function
+app.hamburgerFunction = () => {
+
+    // if nav is not showing
+    if(!app.navUl.style.display){
+
+        // open nav
+        app.hamburger.classList.add('hamburger-active');
+        app.navUl.style.display = 'flex';
+        app.body.classList.add('nav-open');
+        app.navUl.style.animation = 'fade-in 0.4s';
+        app.navUl.style.opacity = '1';
+
+        // after nav is finished opening
         setTimeout(function(){
-            navUl.style.animation = '';
+
+            // remove animation
+            app.navUl.style.animation = '';
+
         }, 400)
+
+    // if nav is showing
     } else {
-        hamburgerIcon.style.transform = `rotate(initial)`;
-        hamburgerIcon.style.transition = `0.4s`;
-        hamburger.classList.remove('hamburger-active');
-        hamburger.blur();
-        body.classList.remove('nav-open');
-        navUl.style.animation = 'fade-out 0.4s';
+
+        // hide nav
+        app.hamburgerIcon.style.transform = `rotate(initial)`;
+        app.hamburgerIcon.style.transition = `0.4s`;
+        app.hamburger.classList.remove('hamburger-active');
+        app.hamburger.blur();
+        app.body.classList.remove('nav-open');
+        app.navUl.style.animation = 'fade-out 0.4s';
+
+        // after nav is finished hiding
         setTimeout(function(){
-            navUl.style.opacity = '0';
-            navUl.style.display = '';
-            navUl.style.animation = '';
-            hamburgerIcon.style.transition = '';
+
+            // remove animation, opacity, and display values
+            app.navUl.style.opacity = '0';
+            app.navUl.style.display = '';
+            app.navUl.style.animation = '';
+            app.hamburgerIcon.style.transition = '';
+
         }, 400)
     }
 }
 
-hamburger.addEventListener('click', hamburgerFunction)
+// close mobile nav function
+app.closeNav = () => {
+    app.navUl.style.display = '';
+    app.hamburgerIcon.style.transform = `rotate(initial)`;
+    app.hamburgerIcon.style.transition = `0.4s`;
+    app.hamburger.classList.remove('hamburger-active');
+    app.body.classList.remove('nav-open');
+    app.navName.style.display = '';
+}
 
-navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-        navUl.style.display = '';
-        hamburgerIcon.style.transform = `rotate(initial)`;
-        hamburgerIcon.style.transition = `0.4s`;
-        hamburger.classList.remove('hamburger-active');
-        body.classList.remove('nav-open');
-        navName.style.display = '';
+// project read more button function
+app.readMore = function(paragraph, button) {
+
+    // if the paragraph has no height
+    if (!paragraph.style.maxHeight){
+
+        // reveal text and change button
+        paragraph.style.maxHeight = paragraph.scrollHeight + 'px';
+        paragraph.style.opacity = '100%'
+        button.style.marginBottom = '20px';
+        button.innerText = 'Read Less';
+
+    // if the paragraph is showing
+    } else {
+
+        // hide text and change button
+        paragraph.style.maxHeight = '';
+        paragraph.style.opacity = '0%';
+        button.style.marginBottom = '';
+        button.innerText = 'Read More';
+        button.blur();
+    }
+}
+
+// app event listeners
+app.events = () => {
+
+    // on hamburger button click, run hamburger function
+    app.hamburger.addEventListener('click', app.hamburgerFunction);
+
+    // for each nav list item link, close nav on click
+    app.navLinks.forEach((link) => {
+        link.addEventListener('click', app.closeNav)
     })
-})
 
-const projectDesc = document.querySelectorAll(`.project-description`)
-console.log(projectDesc);
+    // for each project description
+    app.projectDesc.forEach((project) => {
 
-projectDesc.forEach((project) => {
-    const readMore = project.querySelector(`.read-more`);
-    const paragraph = project.querySelector(`p`);
-    readMore.addEventListener(`click`, () => {
-        if (!paragraph.style.maxHeight){
-            paragraph.style.maxHeight = paragraph.scrollHeight + 'px';
-            paragraph.style.opacity = '100%'
-            readMore.style.marginBottom = '20px';
-            readMore.innerText = 'Read Less';
-        } else {
-            paragraph.style.maxHeight = '';
-            paragraph.style.opacity = '0%';
-            readMore.style.marginBottom = '';
-            readMore.innerText = 'Read More';
-            readMore.blur();
-        }
+        // project description variables
+        const paragraph = project.querySelector(`p`);
+        const button = project.querySelector(`.read-more`);
+
+        // on button click, run read more function using the paragraph and button variables
+        button.addEventListener(`click`, () => app.readMore(paragraph, button));
     })
-})
+}
+
+// initialize app function
+app.init = () => {
+    app.events();
+}
+
+// initialize app
+app.init();
