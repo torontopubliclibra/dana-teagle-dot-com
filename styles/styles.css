@@ -285,7 +285,7 @@ nav ul li a {
 }
 nav ul li a:hover, nav ul li a:focus {
   background: rgba(103, 140, 148, 0.5);
-  color: #000000;
+  color: #282b2c;
   transition: 0.4s;
 }
 nav ul li afocus {
@@ -304,7 +304,7 @@ nav ul li afocus {
 }
 
 .button {
-  color: #000000;
+  color: #282b2c;
   background: #678c94;
 }
 .button:hover, .button:focus {
@@ -406,7 +406,7 @@ nav ul li afocus {
 
 .highlight {
   padding: 0px 3px;
-  color: #000000;
+  color: #282b2c;
   background: linear-gradient(120deg, rgba(103, 140, 148, 0.4) 0%, rgba(103, 140, 148, 0.4) 100%);
   background-repeat: no-repeat;
   background-size: 100% 25%;
@@ -547,7 +547,7 @@ header .scroll-down a {
      object-fit: cover;
 }
 .projects .projects-container .project .project-img .project-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(40, 43, 44, 0.5);
   width: 100%;
   height: 100%;
   display: flex;
@@ -673,7 +673,7 @@ footer {
     z-index: 5;
     background: #678c94;
     background-image: url("./assets/stripes.png");
-    color: #000000;
+    color: #282b2c;
     position: absolute;
   }
   header nav .hamburger-btn:hover, header nav .hamburger-btn:focus {
@@ -737,7 +737,7 @@ footer {
     width: 100%;
   }
   header nav ul li a {
-    color: #000000;
+    color: #282b2c;
   }
   header nav ul li a:hover, header nav ul li a:focus {
     background: rgba(248, 244, 243, 0.8);
