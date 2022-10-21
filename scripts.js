@@ -155,9 +155,22 @@ app.events = () => {
         button.addEventListener(`click`, () => app.readMore(paragraph, button));
     })
 
+    // scroll up to top on button click
     app.scrollTopBtn.addEventListener('click', app.scrollTop);
 
+    // scroll down to about section on button click
     app.scrollDownBtn.addEventListener('click', app.scrollDown);
+
+    // when window is bigger than mobile breakpoint, always show nav
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            app.navUl.style.display = 'flex';
+            app.navUl.style.opacity = '1';
+        } else {
+            app.navUl.style.display = '';
+            app.navUl.style.opacity = '0';
+        }
+    })
 }
 
 // initialize app function
