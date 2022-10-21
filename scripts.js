@@ -73,14 +73,22 @@ app.closeNav = () => {
 
 // animations toggle function
 app.animationToggle = () => {
+
+    // if animations toggle checkbox is checked
     if (app.gradientToggleCheckbox.checked){
+
+        // remove animations and toggle text
         app.body.style.animation = 'none';
         app.body.style.backgroundSize = 'initial';
         app.scrollDownBtn.style.animation = 'none';
         app.scrollDownBtn.style.transform = 'translateX(-50%)';
         app.gradientToggleBtn.title = 'Turn on animations';
         app.gradientToggleText.innerText = 'Turn on animations:';
+
+    // if animations toggle checkbox is unchecked
     } else {
+
+        // reset animations and toggle text 
         app.body.style.animation = '7s infinite ease-in-out gradient';
         app.body.style.backgroundSize = '300% 300%';
         app.scrollDownBtn.style.transform = 'none';
@@ -161,12 +169,20 @@ app.events = () => {
     // scroll down to about section on button click
     app.scrollDownBtn.addEventListener('click', app.scrollDown);
 
-    // when window is bigger than mobile breakpoint, always show nav
+    // show nav when screen embiggens
     window.addEventListener("resize", () => {
+
+        // if window is larger than mobile breakpoint
         if (window.innerWidth >= 768) {
+
+            // display nav
             app.navUl.style.display = 'flex';
             app.navUl.style.opacity = '1';
+
+        // if window is smaller than mobile breakpoint
         } else {
+
+            // hide nav by default
             app.navUl.style.display = '';
             app.navUl.style.opacity = '0';
         }
@@ -175,7 +191,11 @@ app.events = () => {
 
 // initialize app function
 app.init = () => {
+    
+    // set animations toggle to unchecked
     app.gradientToggleCheckbox.checked = false;
+
+    // add event listeners
     app.events();
 }
 
