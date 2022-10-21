@@ -71,6 +71,24 @@ app.closeNav = () => {
     app.navName.style.display = '';
 }
 
+app.changeCheckboxOnFocus = (event) => {
+    const keyCode = event.keyCode;
+    const spacebarKeyCode = 32;
+
+    if (keyCode && keyCode !== spacebarKeyCode) {
+        return;
+    } else if (!app.gradientToggleCheckbox.checked){
+        event.preventDefault();
+        app.gradientToggleCheckbox.checked = true;
+        app.animationToggle();
+    } else {
+        event.preventDefault();
+        app.gradientToggleCheckbox.checked = false;
+        app.animationToggle();
+    }
+}
+
+
 // animations toggle function
 app.animationToggle = () => {
 

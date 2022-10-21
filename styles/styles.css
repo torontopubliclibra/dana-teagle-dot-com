@@ -463,7 +463,7 @@ header .gradient-toggle .switch {
   height: 23px;
 }
 header .gradient-toggle .switch input {
-  display: none;
+  visibility: hidden;
 }
 header .gradient-toggle .slider {
   position: absolute;

@@ -63,8 +63,8 @@
 
         <!-- background animation toggle -->
         <div class="gradient-toggle">
-          <p>Turn off animations:</p>
-          <label class="switch" for="checkbox" title="Turn off animations">
+          <p id="toggle-label">Turn off animations:</p>
+          <label class="switch" title="Turn off animations" tabindex="2" role="checkbox" onKeyDown="app.changeCheckboxOnFocus(event)" aria-labelledby="toggle-label">
             <input type="checkbox" id="checkbox" tabindex="0">
             <span class="slider round"></span>
           </label>
