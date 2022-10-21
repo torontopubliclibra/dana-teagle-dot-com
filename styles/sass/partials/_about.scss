@@ -21,6 +21,7 @@
     .about-content {
         width: 70%;
         margin-bottom: 20px;
+        text-align: left;
         p {
             width: 100%;
             background: rgba($snow, 0.8);
@@ -58,6 +59,7 @@
         .about-content {
             margin-top: 20px;
             width: 90%;
+            text-align: center;
         }
     }
 }

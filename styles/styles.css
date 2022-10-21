@@ -613,6 +613,7 @@ header .gradient-toggle input:checked + .slider:before {
 .about .about-content {
   width: 70%;
   margin-bottom: 20px;
+  text-align: left;
 }
 .about .about-content p {
   width: 100%;
@@ -646,6 +647,7 @@ header .gradient-toggle input:checked + .slider:before {
   .about .about-content {
     margin-top: 20px;
     width: 90%;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 768px) {
