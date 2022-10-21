@@ -45,6 +45,8 @@ header {
         animation: 3s infinite ease-in-out pulse;
         &:hover {
             cursor: pointer;
+            color: rgba($color1, 0.8);
+            transition: 0.4s;
         }
     }
 
@@ -81,6 +83,10 @@ header {
             bottom: 0;
             background-color: $color1;
             border-radius: 34px;
+            &:hover {
+                background-color: rgba($color1, 0.8);
+                transition: 0.4s;
+            }
         }
         .slider:before {
             position: absolute;
@@ -95,12 +101,20 @@ header {
         }
         input:checked+.slider {
             background-color: $black;
+            &:hover {
+                background-color: rgba($black, 0.8);
+                transition: 0.4s;
+            }
+            &:hover:before {
+                background-color: $snow;
+            }
         }
         input:focus+.slider {
             box-shadow: 0 0 1px $black;
         }
         input:checked+.slider:before {
             transform: translateX(26px);
+            background-color: $color2;
         }
     }
 }

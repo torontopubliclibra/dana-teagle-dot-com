@@ -438,6 +438,8 @@ header .scroll-down {
 }
 header .scroll-down:hover {
   cursor: pointer;
+  color: rgba(30, 67, 69, 0.8);
+  transition: 0.4s;
 }
 header .gradient-toggle {
   display: flex;
@@ -473,6 +475,10 @@ header .gradient-toggle .slider {
   background-color: #1e4345;
   border-radius: 34px;
 }
+header .gradient-toggle .slider:hover {
+  background-color: rgba(30, 67, 69, 0.8);
+  transition: 0.4s;
+}
 header .gradient-toggle .slider:before {
   position: absolute;
   content: "";
@@ -487,11 +493,19 @@ header .gradient-toggle .slider:before {
 header .gradient-toggle input:checked + .slider {
   background-color: #282b2c;
 }
+header .gradient-toggle input:checked + .slider:hover {
+  background-color: rgba(40, 43, 44, 0.8);
+  transition: 0.4s;
+}
+header .gradient-toggle input:checked + .slider:hover:before {
+  background-color: #f8f4f3;
+}
 header .gradient-toggle input:focus + .slider {
   box-shadow: 0 0 1px #282b2c;
 }
 header .gradient-toggle input:checked + .slider:before {
   transform: translateX(26px);
+  background-color: #678c94;
 }
 
 @media only screen and (max-width: 768px) {

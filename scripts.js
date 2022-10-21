@@ -79,12 +79,14 @@ app.animationToggle = () => {
         app.body.style.backgroundSize = 'initial';
         app.scrollDownBtn.style.animation = 'none';
         app.scrollDownBtn.style.transform = 'translateX(-50%)';
+        app.gradientToggleBtn.title = 'Turn on animations';
         app.gradientToggleText.innerText = 'Turn on animations:';
     } else {
         app.body.style.animation = '7s infinite ease-in-out gradient';
         app.body.style.backgroundSize = '300% 300%';
         app.scrollDownBtn.style.transform = 'none';
         app.scrollDownBtn.style.animation = '3s infinite ease-in-out pulse';
+        app.gradientToggleBtn.title = 'Turn off animations';
         app.gradientToggleText.innerText = 'Turn off animations:';
     }
 }
