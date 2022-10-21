@@ -595,28 +595,60 @@ header .gradient-toggle input:checked + .slider:before {
 .about {
   padding: 20px 0px;
 }
-.about .headshot {
+.about .wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 5%;
+}
+.about .headshot-container {
+  width: 25%;
+}
+.about .headshot-container .headshot {
   border: solid #f8f4f3 5px;
   border-radius: 50%;
-  width: 250px;
+  width: 100%;
 }
-.about p {
-  width: 80%;
+.about .about-content {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.about .about-content p {
+  width: 100%;
   background: rgba(248, 244, 243, 0.8);
   color: #1e4345;
   padding: 20px;
   margin: 0 auto;
 }
-.about a {
+.about .about-content a {
   color: #1e4345;
 }
-.about a:hover, .about a:focus {
+.about .about-content a:hover, .about .about-content a:focus {
   color: #678c94;
   transition: 0.4s;
 }
+.about h3 {
+  width: 100%;
+}
 
+@media only screen and (max-width: 1024px) {
+  .about .wrapper {
+    flex-flow: column nowrap;
+  }
+  .about .headshot-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .about .headshot-container .headshot {
+    width: 300px;
+  }
+  .about .about-content {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
 @media only screen and (max-width: 768px) {
-  .about p {
+  .about .about-content {
     width: 100%;
   }
 }
