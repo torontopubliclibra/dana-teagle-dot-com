@@ -45,7 +45,6 @@ app.hamburgerFunction = () => {
         app.hamburgerIcon.style.transform = `rotate(initial)`;
         app.hamburgerIcon.style.transition = `0.4s`;
         app.hamburger.classList.remove('hamburger-active');
-        app.hamburger.blur();
         app.body.classList.remove('nav-open');
         app.navUl.style.animation = 'fade-out 0.4s';
 
@@ -80,7 +79,6 @@ app.animationToggle = () => {
         app.scrollDownBtn.style.animation = 'none';
         app.scrollDownBtn.style.transform = 'translateX(-50%)';
         app.gradientToggleBtn.title = 'Turn on animations';
-        app.gradientToggleBtn.blur();
         app.gradientToggleText.innerText = 'Turn on animations:';
     } else {
         app.body.style.animation = '7s infinite ease-in-out gradient';
