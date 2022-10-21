@@ -655,11 +655,6 @@ header .gradient-toggle input:checked + .slider:before {
     width: 100%;
   }
 }
-.skills p {
-  width: 90%;
-  margin: 40px auto;
-  font-size: 20px;
-}
 .skills ul {
   list-style: none;
   padding: 0;
