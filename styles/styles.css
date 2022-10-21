@@ -234,7 +234,7 @@ body {
   font-size: 18px;
 }
 
-h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, footer, .hamburger-btn p {
+h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, footer, .hamburger-btn p, .gradient-toggle p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 }
@@ -421,13 +421,13 @@ header nav ul li a {
 header .title {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 header .scroll-down {
   position: absolute;
-  bottom: 25px;
+  bottom: 10%;
   left: 50%;
   font-size: 60px;
   -webkit-animation: 3s infinite ease-in-out pulse;
@@ -435,6 +435,60 @@ header .scroll-down {
 }
 header .scroll-down a {
   color: #1e4345;
+}
+header .gradient-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #282b2c;
+  background: #678c94;
+  background-image: url("./assets/stripes.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 18px;
+}
+header .gradient-toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 49px;
+  height: 23px;
+}
+header .gradient-toggle .switch input {
+  display: none;
+}
+header .gradient-toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e4345;
+  border-radius: 34px;
+}
+header .gradient-toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f8f4f3;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+header .gradient-toggle input:checked + .slider {
+  background-color: #282b2c;
+}
+header .gradient-toggle input:focus + .slider {
+  box-shadow: 0 0 1px #282b2c;
+}
+header .gradient-toggle input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -728,8 +782,8 @@ header .scroll-down a {
   }
 }
 body {
-  -webkit-animation: 10s infinite ease-in-out gradient;
-          animation: 10s infinite ease-in-out gradient;
+  -webkit-animation: 7s infinite ease-in-out gradient;
+          animation: 7s infinite ease-in-out gradient;
   background: linear-gradient(130deg, #678c94 0%, #b0d4e3 20%, #efc4e2 60%, #efc4e2 80%, #678c94 100%);
   background-size: 300% 300%;
   color: #1e4345;
