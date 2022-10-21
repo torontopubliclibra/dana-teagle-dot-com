@@ -499,6 +499,7 @@ header .gradient-toggle input:checked + .slider:hover {
 }
 header .gradient-toggle input:checked + .slider:hover:before {
   background-color: #f8f4f3;
+  transition: 0.4s;
 }
 header .gradient-toggle input:focus + .slider {
   box-shadow: 0 0 1px #282b2c;
@@ -611,6 +612,7 @@ header .gradient-toggle input:checked + .slider:before {
 }
 .about a:hover, .about a:focus {
   color: #678c94;
+  transition: 0.4s;
 }
 
 @media only screen and (max-width: 768px) {
@@ -791,6 +793,7 @@ header .gradient-toggle input:checked + .slider:before {
 }
 .contact .contact-content p a:hover, .contact .contact-content p a:focus {
   color: #678c94;
+  transition: 0.4s;
 }
 
 @media only screen and (max-width: 768px) {

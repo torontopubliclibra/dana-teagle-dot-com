@@ -107,6 +107,7 @@ header {
             }
             &:hover:before {
                 background-color: $snow;
+                transition: 0.4s;
             }
         }
         input:focus+.slider {

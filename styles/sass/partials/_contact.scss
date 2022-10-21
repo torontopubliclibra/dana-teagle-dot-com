@@ -36,6 +36,7 @@
                 &:hover,
                 &:focus {
                     color: $color2;
+                    transition: 0.4s;
                 }
             }
         }
