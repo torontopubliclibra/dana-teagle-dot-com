@@ -80,6 +80,7 @@ app.animationToggle = () => {
         app.scrollDownBtn.style.animation = 'none';
         app.scrollDownBtn.style.transform = 'translateX(-50%)';
         app.gradientToggleBtn.title = 'Turn on animations';
+        app.gradientToggleBtn.blur();
         app.gradientToggleText.innerText = 'Turn on animations:';
     } else {
         app.body.style.animation = '7s infinite ease-in-out gradient';
