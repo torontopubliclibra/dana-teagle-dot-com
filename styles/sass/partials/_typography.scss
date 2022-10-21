@@ -9,9 +9,12 @@ h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, footer, .hamburger-btn p, 
     font-weight: 600;
 }
 
-footer {
+footer p {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
+    &.button-label {
+        font-weight: 600;
+    }
 }
 
 p, h2 {

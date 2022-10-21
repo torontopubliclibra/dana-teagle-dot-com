@@ -58,14 +58,14 @@
 
         <!-- scroll down icon -->
         <div class="scroll-down">
-          <a href="#about"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div>
 
         <!-- background animation toggle -->
         <div class="gradient-toggle">
           <p>Turn off animations:</p>
-          <label class="switch">
-            <input type="checkbox">
+          <label class="switch" for="checkbox" title="Turn off animations:">
+            <input type="checkbox" id="checkbox" tabindex="0">
             <span class="slider round"></span>
           </label>
         </div>
@@ -298,7 +298,14 @@
 
     <!-- footer section -->
     <footer>
-      <div class="wrapper">Designed by Dana Teagle in 2022</div>
+      <div class="wrapper">
+        <div class="button scroll-to-top">
+          <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+          <p class="button-label">Back to top</p>
+          <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </div>
+        <p class="credit">Designed by Dana Teagle in 2022</p>
+      </div>
     </footer>
 
     <!-- javascript import -->

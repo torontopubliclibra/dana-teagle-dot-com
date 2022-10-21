@@ -8,12 +8,14 @@ app.hamburgerIcon = app.hamburger.querySelector(`i`);
 app.navName = app.hamburger.querySelector('p');
 app.navUl = document.querySelector(`nav ul`);
 app.body = document.querySelector(`body`);
+app.aboutSection = document.querySelector('.about');
 app.navLinks = app.navUl.querySelectorAll(`li a`);
 app.projectDesc = document.querySelectorAll(`.project-description`);
 app.gradientToggleText = document.querySelector(`.gradient-toggle p`);
 app.gradientToggleCheckbox = document.querySelector(`.gradient-toggle .switch input`);
 app.gradientToggleBtn = document.querySelector(`.gradient-toggle .switch`);
 app.scrollDownBtn = document.querySelector(`.scroll-down`);
+app.scrollTopBtn = document.querySelector(`.scroll-to-top`);
 
 // mobile hamburger nav function
 app.hamburgerFunction = () => {
@@ -87,6 +89,23 @@ app.animationToggle = () => {
     }
 }
 
+// scroll down function
+app.scrollDown = () => {
+    let aboutTop = app.aboutSection.offsetTop;
+    window.scrollTo({
+        top: aboutTop,
+        behavior: `smooth`,
+    });
+}
+
+// scroll to top function
+app.scrollTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: `smooth`,
+    });
+}
+
 // project read more button function
 app.readMore = function(paragraph, button) {
 
@@ -134,6 +153,10 @@ app.events = () => {
         // on button click, run read more function using the paragraph and button variables
         button.addEventListener(`click`, () => app.readMore(paragraph, button));
     })
+
+    app.scrollTopBtn.addEventListener('click', app.scrollTop);
+
+    app.scrollDownBtn.addEventListener('click', app.scrollDown);
 }
 
 // initialize app function

@@ -43,8 +43,8 @@ header {
         left: 50%;
         font-size: 60px;
         animation: 3s infinite ease-in-out pulse;
-        a {
-            color: $color1;
+        &:hover {
+            cursor: pointer;
         }
     }
 

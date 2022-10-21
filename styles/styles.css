@@ -239,9 +239,12 @@ h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, footer, .hamburger-btn p, 
   font-weight: 600;
 }
 
-footer {
+footer p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
+}
+footer p.button-label {
+  font-weight: 600;
 }
 
 p, h2 {
@@ -433,8 +436,8 @@ header .scroll-down {
   -webkit-animation: 3s infinite ease-in-out pulse;
           animation: 3s infinite ease-in-out pulse;
 }
-header .scroll-down a {
-  color: #1e4345;
+header .scroll-down:hover {
+  cursor: pointer;
 }
 header .gradient-toggle {
   display: flex;
@@ -814,8 +817,35 @@ body.nav-open {
   color: #f8f4f3;
 }
 
-footer {
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+}
+footer .wrapper .button {
+  width: auto;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+footer .wrapper .button:hover {
+  background: #f8f4f3;
+  color: #1e4345;
+  cursor: pointer;
+}
+footer .wrapper .button i {
+  font-size: 25px;
+}
+footer .wrapper .button p {
+  margin: 0;
+}
+footer .wrapper .credit {
+  margin: 10px;
 }
 
 @media only screen and (max-width: 768px) {

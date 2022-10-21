@@ -45,8 +45,35 @@ body {
 }
 
 // footer styles
-footer {
+footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    .button {
+        width: auto;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        &:hover {
+            background: $snow;
+            color: $color1;
+            cursor: pointer;
+        }
+        i {
+            font-size: 25px;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .credit {
+        margin: 10px;
+    }
 }
 
 // screens smaller than 768px
