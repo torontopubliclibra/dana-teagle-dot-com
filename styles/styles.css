@@ -618,6 +618,7 @@ header .gradient-toggle input:checked + .slider:before {
 .about .about-content p {
   width: 100%;
   background: rgba(248, 244, 243, 0.8);
+  border: solid #678c94 5px;
   color: #1e4345;
   padding: 20px;
   margin: 0 auto;
@@ -653,6 +654,10 @@ header .gradient-toggle input:checked + .slider:before {
 @media only screen and (max-width: 768px) {
   .about .about-content {
     width: 100%;
+  }
+  .about .about-content p {
+    border-left: none;
+    border-right: none;
   }
 }
 .skills ul {
@@ -705,6 +710,7 @@ header .gradient-toggle input:checked + .slider:before {
   max-width: 350px;
   height: 100%;
   background: rgba(248, 244, 243, 0.8);
+  border: solid #678c94 5px;
   color: #1e4345;
   margin: 20px auto;
 }
@@ -712,7 +718,7 @@ header .gradient-toggle input:checked + .slider:before {
   overflow: hidden;
   position: relative;
   aspect-ratio: 4/2.75;
-  border: solid #f8f4f3 5px;
+  border-bottom: solid #f8f4f3 5px;
 }
 .projects .projects-container .project .project-img img {
   width: 100%;

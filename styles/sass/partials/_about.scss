@@ -25,6 +25,7 @@
         p {
             width: 100%;
             background: rgba($snow, 0.8);
+            border: solid $color2 5px;
             color: $color1;
             padding: 20px;
             margin: 0 auto;
@@ -69,5 +70,9 @@
 @media only screen and (max-width: 768px) {
     .about .about-content {
         width: 100%;
+        p {
+            border-left: none;
+            border-right: none;
+        }
     }
 }
