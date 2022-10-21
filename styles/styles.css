@@ -234,7 +234,7 @@ body {
   font-size: 18px;
 }
 
-h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, footer, .hamburger-btn p, .gradient-toggle p {
+h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, .skills p, footer, .hamburger-btn p, .gradient-toggle p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 }
@@ -652,6 +652,11 @@ header .gradient-toggle input:checked + .slider:before {
   .about .about-content {
     width: 100%;
   }
+}
+.skills p {
+  width: 90%;
+  margin: 40px auto;
+  font-size: 18px;
 }
 .skills ul {
   list-style: none;
