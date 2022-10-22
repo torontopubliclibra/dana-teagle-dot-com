@@ -74,8 +74,9 @@ app.closeNav = () => {
 app.changeCheckboxOnFocus = (event) => {
     const keyCode = event.keyCode;
     const spacebarKeyCode = 32;
+    const enterKeyCode = 13;
 
-    if (keyCode && keyCode !== spacebarKeyCode) {
+    if (keyCode && keyCode !== spacebarKeyCode && keyCode !== enterKeyCode) {
         return;
     } else if (!app.gradientToggleCheckbox.checked){
         event.preventDefault();
