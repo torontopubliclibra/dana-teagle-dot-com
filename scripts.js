@@ -16,10 +16,6 @@ app.gradientToggleCheckbox = document.querySelector(`.gradient-toggle .switch in
 app.gradientToggleBtn = document.querySelector(`.gradient-toggle .switch`);
 app.scrollDownBtn = document.querySelector(`.scroll-down`);
 app.scrollTopBtn = document.querySelector(`.scroll-to-top`);
-app.contactForm = document.querySelector(`form[name="contact"]`);
-app.contactSuccess = document.querySelector(`.contact-success`)
-
-console.log(app.contactForm);
 
 // mobile hamburger nav function
 app.hamburgerFunction = () => {
@@ -209,16 +205,6 @@ app.events = () => {
             app.navUl.style.opacity = '0';
         }
     })
-
-    app.contactForm.addEventListener('submit', () => {
-        app.contactForm.submit();
-        app.contactSuccess.style.display = 'block';
-        app.contactForm.style.display = 'none';
-        app.contactForm[2].value = '';
-        app.contactForm[3].value = '';
-        app.contactForm[4].value = '';
-        app.contactForm[5].value = '';
-    });
 }
 
 // initialize app function
