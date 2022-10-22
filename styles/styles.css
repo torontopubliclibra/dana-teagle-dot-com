@@ -929,18 +929,6 @@ header .gradient-toggle input:checked + .slider:before {
     order: -3;
   }
 }
-body {
-  -webkit-animation: 7s infinite ease-in-out gradient;
-          animation: 7s infinite ease-in-out gradient;
-  background: linear-gradient(130deg, #678c94 0%, #b0d4e3 20%, #efc4e2 60%, #efc4e2 80%, #678c94 100%);
-  background-size: 300% 300%;
-  color: #1e4345;
-  text-align: center;
-}
-body.nav-open {
-  overflow-y: hidden;
-}
-
 body.contact-success {
   background-color: #1e4345;
   background-image: url("../assets/stripes.png");
@@ -962,6 +950,7 @@ body.contact-success main .wrapper {
   flex-direction: column;
   justify-content: center;
   width: 90%;
+  max-width: 550px;
 }
 body.contact-success main .wrapper p {
   margin: 0;
@@ -973,9 +962,22 @@ body.contact-success main .wrapper a.button {
   align-items: end;
   justify-content: center;
   gap: 10px;
+  border: solid #282b2c 2px;
 }
 body.contact-success main .wrapper a.button i {
   font-size: 25px;
+}
+
+body {
+  -webkit-animation: 7s infinite ease-in-out gradient;
+          animation: 7s infinite ease-in-out gradient;
+  background: linear-gradient(130deg, #678c94 0%, #b0d4e3 20%, #efc4e2 60%, #efc4e2 80%, #678c94 100%);
+  background-size: 300% 300%;
+  color: #1e4345;
+  text-align: center;
+}
+body.nav-open {
+  overflow-y: hidden;
 }
 
 .wrapper {
