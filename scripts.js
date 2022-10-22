@@ -71,17 +71,23 @@ app.closeNav = () => {
     app.navName.style.display = '';
 }
 
+// animations toggle checkbox tab behaviour function
 app.changeCheckboxOnFocus = (event) => {
     const keyCode = event.keyCode;
     const spacebarKeyCode = 32;
     const enterKeyCode = 13;
 
+    // if a key is pressed but it is not spacebar or enter then behave normally
     if (keyCode && keyCode !== spacebarKeyCode && keyCode !== enterKeyCode) {
         return;
+    
+    // if a key is pressed and it is spacebar or enter and the checkbox isn't checked, mark it to checked and toggle the animations
     } else if (!app.gradientToggleCheckbox.checked){
         event.preventDefault();
         app.gradientToggleCheckbox.checked = true;
         app.animationToggle();
+
+    // if a key is pressed and it is spacebar or enter and the checkbox is checked, mark it to unchecked, and toggle the animations
     } else {
         event.preventDefault();
         app.gradientToggleCheckbox.checked = false;
@@ -120,6 +126,8 @@ app.animationToggle = () => {
 // scroll down function
 app.scrollDown = () => {
     let aboutTop = app.aboutSection.offsetTop;
+
+    // smoothly scroll down to top of about section
     window.scrollTo({
         top: aboutTop,
         behavior: `smooth`,
@@ -128,6 +136,8 @@ app.scrollDown = () => {
 
 // scroll to top function
 app.scrollTop = () => {
+
+    // smoothly scroll up to top of window
     window.scrollTo({
         top: 0,
         behavior: `smooth`,
