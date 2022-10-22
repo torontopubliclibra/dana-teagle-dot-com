@@ -910,10 +910,12 @@ header .gradient-toggle input:checked + .slider:before {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .contact .contact-content {
     width: 90%;
   }
+}
+@media only screen and (max-width: 768px) {
   .contact .contact-content fieldset label[for=name], .contact .contact-content label[for=pronouns] {
     width: 100% !important;
   }
