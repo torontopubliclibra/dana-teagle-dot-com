@@ -210,8 +210,7 @@ app.events = () => {
         }
     })
 
-    app.contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    app.contactForm.addEventListener('submit', () => {
         app.contactSuccess.style.display = 'block';
         app.contactForm.style.display = 'none';
         app.contactForm[2].value = '';
