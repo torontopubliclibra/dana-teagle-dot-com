@@ -234,7 +234,7 @@ body {
   font-size: 18px;
 }
 
-h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, .skills p, footer, .hamburger-btn p, .gradient-toggle p, .contact fieldset, .contact fieldset p {
+h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, .skills p, footer, .hamburger-btn p, .gradient-toggle p, .contact fieldset, .contact fieldset p, body.contact-success p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 }
@@ -937,6 +937,43 @@ body {
 }
 body.nav-open {
   overflow-y: hidden;
+}
+
+body.contact-success {
+  background-color: #1e4345;
+  background-image: url("../assets/stripes.png");
+  background-size: initial;
+  color: #282b2c;
+  -webkit-animation: none;
+          animation: none;
+}
+body.contact-success main .wrapper {
+  padding: 20px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(248, 244, 243, 0.5);
+  border: solid #678c94 5px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+body.contact-success main .wrapper p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+body.contact-success main .wrapper a.button {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  gap: 10px;
+}
+body.contact-success main .wrapper a.button i {
+  font-size: 25px;
 }
 
 .wrapper {

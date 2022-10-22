@@ -20,6 +20,42 @@ body {
     }
 }
 
+body.contact-success {
+    background-color: $color1;
+    background-image: url("../assets/stripes.png");
+    background-size: initial;
+    color: $black;
+    animation: none;
+    main .wrapper {
+        padding: 20px;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba($snow, 0.5);
+        border: solid $color2 5px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        a.button {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: center;
+            gap: 10px;
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
 // wrapper styles
 .wrapper {
     max-width: 1260px;
