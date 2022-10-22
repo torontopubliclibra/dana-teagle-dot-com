@@ -214,10 +214,10 @@ app.events = () => {
         e.preventDefault();
         app.contactSuccess.style.display = 'block';
         app.contactForm.style.display = 'none';
-        app.contactForm[1].value = '';
         app.contactForm[2].value = '';
         app.contactForm[3].value = '';
         app.contactForm[4].value = '';
+        app.contactForm[5].value = '';
         setTimeout(() => form.submit(), 2000);
     });
 }
