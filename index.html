@@ -287,9 +287,30 @@
 
         <!-- contact content -->
         <div class="contact-content">
-          <p>
-            Whether you have an opportunity you want to discuss with me, you like what you see in my portfolio, or you just want to chat, <a href="mailto:dana.r.teagle@gmail.com">I'd love to hear from you</a>.
+          <p>Whether you have an opportunity you want to discuss with me, you like what you see in my portfolio, or you just want to chat, I'd love to hear from you.
+          <br /><br />
+          <a href="mailto:dana.r.teagle@gmail.com">Send me an email</a> or fill out the form below to get in touch.
           </p>
+          <div class="contact-success">
+            <hr />
+            <p>Thank you! Your message has been sent.</p>
+          </div>
+          <form name="contact" method="POST" data-netlify="true">
+            <fieldset>
+              <label for="name" >Name: *</label>
+              <input type="text" name="name" id="name" required="required" aria-required="true"/>
+              <label for="pronouns">Pronouns: *</label>
+              <input type="text" name="pronouns" id="pronouns" placeholder="e.g., she/her, they/them, he/him" required="required" aria-required="true"/>
+
+              <label for="email">Email: *</label>
+              <input type="email" name="email" id="email" required="required" aria-required="true"/>
+              <label for ="message">Message: *</label>
+              <textarea name="message" id="message" required="required" aria-required="true"></textarea>
+              <div class="submit-button">
+                <button type="submit" class="button">Submit</button>
+              </div>
+            </fieldset>
+          </form>
         </div> <!-- .contact-content end -->
 
       </div> <!-- wrapper end -->

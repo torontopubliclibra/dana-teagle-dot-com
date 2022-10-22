@@ -234,7 +234,7 @@ body {
   font-size: 18px;
 }
 
-h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, .skills p, footer, .hamburger-btn p, .gradient-toggle p {
+h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, .skills p, footer, .hamburger-btn p, .gradient-toggle p, .contact fieldset, .contact fieldset p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 }
@@ -836,10 +836,95 @@ header .gradient-toggle input:checked + .slider:before {
   color: #678c94;
   transition: 0.4s;
 }
+.contact .contact-content .contact-success {
+  display: none;
+}
+.contact .contact-content .contact-success hr {
+  color: #1e4345;
+  border-bottom: solid #1e4345 2px;
+}
+.contact .contact-content fieldset {
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px;
+  background-color: #678c94;
+  background-image: url("../assets/stripes.png");
+  border: solid #1e4345 5px;
+  color: #282b2c;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+.contact .contact-content fieldset p {
+  width: 100%;
+  margin: 0;
+  color: #282b2c;
+}
+.contact .contact-content fieldset label {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.contact .contact-content fieldset label[for=name], .contact .contact-content fieldset label[for=pronouns] {
+  width: 49%;
+}
+.contact .contact-content fieldset label[for=name] {
+  order: -4;
+}
+.contact .contact-content fieldset label[for=pronouns] {
+  order: -3;
+}
+.contact .contact-content fieldset input, .contact .contact-content fieldset textarea {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  background: rgba(248, 244, 243, 0.8);
+  border: solid #1e4345 2px;
+}
+.contact .contact-content fieldset input[type=text], .contact .contact-content fieldset textarea[type=text] {
+  width: 49%;
+}
+.contact .contact-content fieldset input[name=name], .contact .contact-content fieldset textarea[name=name] {
+  order: -2;
+}
+.contact .contact-content fieldset input[name=pronouns], .contact .contact-content fieldset textarea[name=pronouns] {
+  order: -1;
+}
+.contact .contact-content fieldset textarea {
+  margin-bottom: 20px;
+  resize: none;
+  height: 150px;
+}
+.contact .contact-content fieldset .submit-button {
+  width: 100%;
+}
+.contact .contact-content fieldset button {
+  float: right;
+  background: rgba(248, 244, 243, 0.8);
+  border: solid #1e4345 2px;
+}
+.contact .contact-content fieldset button:hover {
+  background: #1e4345;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 768px) {
   .contact .contact-content {
     width: 90%;
+  }
+  .contact .contact-content fieldset label[for=name], .contact .contact-content label[for=pronouns] {
+    width: 100% !important;
+  }
+  .contact .contact-content fieldset label[for=pronouns] {
+    order: -2;
+  }
+  .contact .contact-content fieldset input[type=text] {
+    width: 100% !important;
+  }
+  .contact .contact-content fieldset input[name=name] {
+    order: -3;
   }
 }
 body {
