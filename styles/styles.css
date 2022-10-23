@@ -902,11 +902,13 @@ header .gradient-toggle input:checked + .slider:before {
 }
 .contact .contact-content fieldset button {
   float: right;
-  background: rgba(248, 244, 243, 0.8);
+  background: #1e4345;
   border: solid #1e4345 2px;
+  color: #f8f4f3;
 }
 .contact .contact-content fieldset button:hover, .contact .contact-content fieldset button:focus {
-  background: #1e4345;
+  color: #1e4345;
+  background: #f8f4f3;
   cursor: pointer;
 }
 

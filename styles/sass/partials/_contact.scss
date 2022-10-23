@@ -105,10 +105,12 @@
             }
             button {
                 float: right;
-                background: rgba($snow, 0.8);
+                background: $color1;
                 border: solid $color1 2px;
+                color: $snow;
                 &:hover, &:focus {
-                    background: $color1;
+                    color: $color1;
+                    background: $snow;
                     cursor: pointer;
                 }
             }
