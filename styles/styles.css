@@ -427,6 +427,8 @@ header .title {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-animation: 1s ease-in-out fade-in;
+          animation: 1s ease-in-out fade-in;
 }
 header .scroll-down {
   position: absolute;
