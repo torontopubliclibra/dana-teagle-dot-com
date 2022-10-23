@@ -857,9 +857,11 @@ header .gradient-toggle input:checked + .slider:before {
   text-align: left;
 }
 .contact .contact-content fieldset p {
+  font-size: 15px;
+  margin-top: 0;
   width: 100%;
-  margin: 0;
   color: #282b2c;
+  order: -5;
 }
 .contact .contact-content fieldset label {
   display: flex;
