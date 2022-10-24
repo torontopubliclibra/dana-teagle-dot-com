@@ -232,9 +232,25 @@ html {
 
 body {
   font-size: 18px;
+  font-display: swap;
 }
 
-h1, h3, h4, h5, h6, nav, .button, .button-2, .skills, .skills p, footer, .hamburger-btn p, .gradient-toggle p, .contact fieldset, .contact fieldset p, body.contact-success p {
+h1,
+h3,
+h4,
+h5,
+h6,
+nav,
+.button,
+.button-2,
+.skills,
+.skills p,
+footer,
+.hamburger-btn p,
+.gradient-toggle p,
+.contact fieldset,
+.contact fieldset p,
+body.contact-success p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 }
@@ -247,7 +263,8 @@ footer p.button-label {
   font-weight: 600;
 }
 
-p, h2 {
+p,
+h2 {
   font-family: "Lora", serif;
 }
 
@@ -278,7 +295,9 @@ h5 {
   font-size: 18px;
 }
 
-.skills h3, .projects h3, .contact h3 {
+.skills h3,
+.projects h3,
+.contact h3 {
   padding-top: 20px;
 }
 
