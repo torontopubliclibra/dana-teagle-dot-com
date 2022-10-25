@@ -95,7 +95,6 @@ app.changeCheckboxOnFocus = (event) => {
     }
 }
 
-
 // animations toggle function
 app.animationToggle = () => {
 
@@ -134,6 +133,20 @@ app.scrollDown = () => {
     });
 }
 
+app.scrollDownOnFocus = (event) => {
+    const keyCode = event.keyCode;
+    const enterKeyCode = 13; 
+
+    // if a key is pressed but it is not enter then behave normally
+    if (keyCode && keyCode !== enterKeyCode) {
+        return;
+
+    // if a key is pressed and it is enter scroll down
+    } else {
+        app.scrollDown();
+    }
+}
+
 // scroll to top function
 app.scrollTop = () => {
 
@@ -142,6 +155,20 @@ app.scrollTop = () => {
         top: 0,
         behavior: `smooth`,
     });
+}
+
+app.scrollTopOnFocus = (event) => {
+    const keyCode = event.keyCode;
+    const enterKeyCode = 13; 
+
+    // if a key is pressed but it is not enter then behave normally
+    if (keyCode && keyCode !== enterKeyCode) {
+        return;
+
+    // if a key is pressed and it is enter scroll down
+    } else {
+        app.scrollTop();
+    }
 }
 
 // project read more button function
