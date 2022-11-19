@@ -31,6 +31,12 @@ footer p {
   &.button-label {
     font-weight: 600;
   }
+  a {
+    color: $snow;
+    &:hover {
+      color: $color3;
+    }
+  }
 }
 
 p,

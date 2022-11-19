@@ -262,6 +262,12 @@ footer p {
 footer p.button-label {
   font-weight: 600;
 }
+footer p a {
+  color: #f8f4f3;
+}
+footer p a:hover {
+  color: #b0d4e3;
+}
 
 p,
 h2 {
