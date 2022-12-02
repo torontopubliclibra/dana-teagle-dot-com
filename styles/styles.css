@@ -294,7 +294,7 @@ h3 {
 }
 
 h4 {
-  font-size: 25px;
+  font-size: 23px;
 }
 
 h5 {
@@ -734,7 +734,7 @@ header .gradient-toggle input:checked + .slider:before {
   padding-bottom: 20px;
 }
 .projects .projects-container .project {
-  max-width: 350px;
+  max-width: 500px;
   height: 100%;
   background: rgba(248, 244, 243, 0.8);
   border: solid #678c94 5px;
