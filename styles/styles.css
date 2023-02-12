@@ -345,18 +345,6 @@ nav ul li afocus {
   font-size: 20px;
 }
 
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -368,14 +356,6 @@ nav ul li afocus {
     background-position: 0% 50%;
   }
 }
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -384,33 +364,12 @@ nav ul li afocus {
     opacity: 1;
   }
 }
-@-webkit-keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes fade-out {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-@-webkit-keyframes pulse {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, 0px);
   }
 }
 @keyframes pulse {
@@ -452,16 +411,14 @@ header .title {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-animation: 1s ease-in-out fade-in;
-          animation: 1s ease-in-out fade-in;
+  animation: 1s ease-in-out fade-in;
 }
 header .scroll-down {
   position: absolute;
   bottom: 10%;
   left: 50%;
   font-size: 60px;
-  -webkit-animation: 3s infinite ease-in-out pulse;
-          animation: 3s infinite ease-in-out pulse;
+  animation: 3s infinite ease-in-out pulse;
 }
 header .scroll-down:hover {
   cursor: pointer;
@@ -587,8 +544,7 @@ header .gradient-toggle input:checked + .slider:before {
   }
   header nav .hamburger-btn.hamburger-active p {
     visibility: visible;
-    -webkit-animation: fade-in 0.4s;
-            animation: fade-in 0.4s;
+    animation: fade-in 0.4s;
   }
   header nav ul {
     display: none;
@@ -734,7 +690,7 @@ header .gradient-toggle input:checked + .slider:before {
   padding-bottom: 20px;
 }
 .projects .projects-container .project {
-  max-width: 500px;
+  max-width: 350px;
   height: 100%;
   background: rgba(248, 244, 243, 0.8);
   border: solid #678c94 5px;
@@ -965,8 +921,7 @@ body.contact-success {
   background-image: url("../assets/stripes.png");
   background-size: initial;
   color: #282b2c;
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 body.contact-success main .wrapper {
   padding: 20px;
@@ -1000,8 +955,7 @@ body.contact-success main .wrapper a.button i {
 }
 
 body {
-  -webkit-animation: 7s infinite ease-in-out gradient;
-          animation: 7s infinite ease-in-out gradient;
+  animation: 7s infinite ease-in-out gradient;
   background: linear-gradient(130deg, #678c94 0%, #b0d4e3 20%, #efc4e2 60%, #efc4e2 80%, #678c94 100%);
   background-size: 300% 300%;
   color: #1e4345;
