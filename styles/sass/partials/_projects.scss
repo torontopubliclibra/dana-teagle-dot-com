@@ -3,6 +3,7 @@
 
 // project section styles
 .projects {
+    padding: 30px 0;
     h3 {
         padding-top: 30px;
         margin-bottom: 10px;
@@ -20,7 +21,7 @@
 
         // project styles
         .project {
-            max-width: 350px;
+            max-width: 320px;
             height: 100%;
             background: rgba($snow, 0.8);
             border: solid $color2 5px;
@@ -78,7 +79,7 @@
             h4,
             h5 {
                 margin: 0;
-                padding-left: 20px;
+                padding: 0px 20px;
             }
 
             h4 {
@@ -118,8 +119,9 @@
 // screens smaller than 768px
 @media only screen and (max-width: 768px) {
 
-    // projects flex container styles
-    .projects .projects-container {
+    .projects {
+        padding: 50px 0px;
+        .projects-container {
             flex-flow: column;
     
             // project styles
@@ -136,4 +138,5 @@
                 }
             }
         }
+    }
 }

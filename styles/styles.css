@@ -434,6 +434,7 @@ header .gradient-toggle {
   color: #282b2c;
   background: #678c94;
   background-image: url("../assets/stripes.png");
+  border-top: solid #1e4345 5px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -500,13 +501,15 @@ header .gradient-toggle input:checked + .slider:before {
   header nav .hamburger-btn {
     display: initial;
     font-size: 30px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 5;
     background: #678c94;
     background-image: url("../assets/stripes.png");
+    border-bottom: solid #1e4345 5px;
     color: #282b2c;
-    position: absolute;
+    position: fixed;
   }
   header nav .hamburger-btn:hover, header nav .hamburger-btn:focus {
     cursor: pointer;
@@ -550,7 +553,6 @@ header .gradient-toggle input:checked + .slider:before {
     display: none;
     position: fixed;
     right: 0;
-    top: 0;
     padding-top: 60px;
     flex-flow: column;
     justify-content: center;
@@ -576,7 +578,7 @@ header .gradient-toggle input:checked + .slider:before {
   }
 }
 .about {
-  padding: 20px 0px;
+  padding: 30px 0;
 }
 .about .wrapper {
   display: flex;
@@ -635,6 +637,9 @@ header .gradient-toggle input:checked + .slider:before {
   }
 }
 @media only screen and (max-width: 768px) {
+  .about {
+    padding: 70px 0px 50px 0;
+  }
   .about .about-content {
     width: 100%;
   }
@@ -642,6 +647,9 @@ header .gradient-toggle input:checked + .slider:before {
     border-left: none;
     border-right: none;
   }
+}
+.skills {
+  padding: 30px 0;
 }
 .skills ul {
   list-style: none;
@@ -671,9 +679,15 @@ header .gradient-toggle input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 768px) {
+  .skills {
+    padding: 70px 0 50px 0;
+  }
   .skills ul li:hover i {
     transform: none;
   }
+}
+.projects {
+  padding: 30px 0;
 }
 .projects h3 {
   padding-top: 30px;
@@ -690,7 +704,7 @@ header .gradient-toggle input:checked + .slider:before {
   padding-bottom: 20px;
 }
 .projects .projects-container .project {
-  max-width: 350px;
+  max-width: 320px;
   height: 100%;
   background: rgba(248, 244, 243, 0.8);
   border: solid #678c94 5px;
@@ -740,7 +754,7 @@ header .gradient-toggle input:checked + .slider:before {
 .projects .projects-container .project h4,
 .projects .projects-container .project h5 {
   margin: 0;
-  padding-left: 20px;
+  padding: 0px 20px;
 }
 .projects .projects-container .project h4 {
   padding-top: 20px;
@@ -769,6 +783,9 @@ header .gradient-toggle input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 768px) {
+  .projects {
+    padding: 50px 0px;
+  }
   .projects .projects-container {
     flex-flow: column;
   }
@@ -784,6 +801,7 @@ header .gradient-toggle input:checked + .slider:before {
 }
 .contact {
   margin-bottom: 10px;
+  padding: 30px 0;
 }
 .contact h3 {
   padding-top: 20px;
@@ -791,7 +809,7 @@ header .gradient-toggle input:checked + .slider:before {
 }
 .contact ul {
   list-style: none;
-  padding: 0;
+  padding: 15px 0;
 }
 .contact ul li {
   display: inline;
@@ -903,6 +921,9 @@ header .gradient-toggle input:checked + .slider:before {
   }
 }
 @media only screen and (max-width: 768px) {
+  .contact {
+    padding: 70px 0 50px 0;
+  }
   .contact .contact-content fieldset label[for=name], .contact .contact-content label[for=pronouns] {
     width: 100% !important;
   }

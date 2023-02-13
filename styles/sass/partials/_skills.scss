@@ -2,6 +2,7 @@
 
 // skills section styles
 .skills {
+    padding: 30px 0;
     ul {
         list-style: none;
         padding: 0;
@@ -37,7 +38,10 @@
 
 // screens smaller than 768px
 @media only screen and (max-width: 768px) {
-    .skills ul li:hover i {
+    .skills {
+        padding: 70px 0 50px 0;
+        ul li:hover i {
             transform: none;
         }
+    }
 }
