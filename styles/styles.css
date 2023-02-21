@@ -683,8 +683,14 @@ header .gradient-toggle input:checked + .slider:before {
   .skills {
     padding: 70px 0 50px 0;
   }
+  .skills ul {
+    width: 85%;
+  }
   .skills ul li:hover i {
     transform: none;
+  }
+  .skills ul li {
+    min-width: 105px;
   }
 }
 .projects {

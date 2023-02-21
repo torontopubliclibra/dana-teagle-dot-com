@@ -41,8 +41,14 @@
 @media only screen and (max-width: 768px) {
     .skills {
         padding: 70px 0 50px 0;
-        ul li:hover i {
-            transform: none;
+        ul {
+            width: 85%;
+            li:hover i {
+                transform: none;
+            }
+            li {
+                min-width: 105px;
+            }
         }
     }
 }
