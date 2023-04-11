@@ -684,7 +684,7 @@ header .gradient-toggle input:checked + .slider:before {
     padding: 70px 0 50px 0;
   }
   .skills ul {
-    width: 85%;
+    width: 65%;
   }
   .skills ul li:hover i {
     transform: none;
