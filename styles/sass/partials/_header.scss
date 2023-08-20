@@ -60,7 +60,7 @@ header {
         gap: 20px;
         color: $black;
         background: $color2;
-        background-image: url("../assets/stripes.png");
+        // background-image: url("../assets/stripes.png");
         border-top: solid $color1 5px;
         position: absolute;
         bottom: 0;
@@ -141,7 +141,7 @@ header {
                 width: 100%;
                 z-index: 5;
                 background: $color2;
-                background-image: url("../assets/stripes.png");
+                // background-image: url("../assets/stripes.png");
                 border-bottom: solid $color1 5px;
                 color: $black;
                 position: fixed;
@@ -193,7 +193,7 @@ header {
                 flex-flow: column;
                 justify-content: center;
                 background: $color2;
-                background-image: url("../assets/stripes.png");
+                // background-image: url("../assets/stripes.png");
                 height: 100vh;
                 opacity: 0;
                 width: 100%;

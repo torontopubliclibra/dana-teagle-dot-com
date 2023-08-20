@@ -11,9 +11,6 @@ app.body = document.querySelector(`body`);
 app.aboutSection = document.querySelector('.about');
 app.navLinks = app.navUl.querySelectorAll(`li a`);
 app.projectDesc = document.querySelectorAll(`.project-description`);
-app.gradientToggleText = document.querySelector(`.gradient-toggle p`);
-app.gradientToggleCheckbox = document.querySelector(`.gradient-toggle .switch input`);
-app.gradientToggleBtn = document.querySelector(`.gradient-toggle .switch`);
 app.scrollDownBtn = document.querySelector(`.scroll-down`);
 app.scrollTopBtn = document.querySelector(`.scroll-to-top`);
 
@@ -69,57 +66,6 @@ app.closeNav = () => {
     app.hamburger.classList.remove('hamburger-active');
     app.body.classList.remove('nav-open');
     app.navName.style.display = '';
-}
-
-// animations toggle checkbox tab behaviour function
-app.changeCheckboxOnFocus = (event) => {
-    const keyCode = event.keyCode;
-    const spacebarKeyCode = 32;
-    const enterKeyCode = 13;
-
-    // if a key is pressed but it is not spacebar or enter then behave normally
-    if (keyCode && keyCode !== spacebarKeyCode && keyCode !== enterKeyCode) {
-        return;
-    
-    // if a key is pressed and it is spacebar or enter and the checkbox isn't checked, mark it to checked and toggle the animations
-    } else if (!app.gradientToggleCheckbox.checked){
-        event.preventDefault();
-        app.gradientToggleCheckbox.checked = true;
-        app.animationToggle();
-
-    // if a key is pressed and it is spacebar or enter and the checkbox is checked, mark it to unchecked, and toggle the animations
-    } else {
-        event.preventDefault();
-        app.gradientToggleCheckbox.checked = false;
-        app.animationToggle();
-    }
-}
-
-// animations toggle function
-app.animationToggle = () => {
-
-    // if animations toggle checkbox is checked
-    if (app.gradientToggleCheckbox.checked){
-
-        // remove animations and toggle text
-        app.body.style.animation = 'none';
-        app.body.style.backgroundSize = 'initial';
-        app.scrollDownBtn.style.animation = 'none';
-        app.scrollDownBtn.style.transform = 'translateX(-50%)';
-        app.gradientToggleBtn.title = 'Turn on animations';
-        app.gradientToggleText.innerText = 'Turn on animations:';
-
-    // if animations toggle checkbox is unchecked
-    } else {
-
-        // reset animations and toggle text 
-        app.body.style.animation = '7s infinite ease-in-out gradient';
-        app.body.style.backgroundSize = '300% 300%';
-        app.scrollDownBtn.style.transform = 'none';
-        app.scrollDownBtn.style.animation = '3s infinite ease-in-out pulse';
-        app.gradientToggleBtn.title = 'Turn off animations';
-        app.gradientToggleText.innerText = 'Turn off animations:';
-    }
 }
 
 // scroll down function
@@ -201,8 +147,6 @@ app.events = () => {
     // on hamburger button click, run hamburger function
     app.hamburger.addEventListener('click', app.hamburgerFunction);
 
-    app.gradientToggleBtn.addEventListener('click', app.animationToggle);
-
     // for each nav list item link, close nav on click
     app.navLinks.forEach((link) => {
         link.addEventListener('click', app.closeNav)
@@ -247,9 +191,6 @@ app.events = () => {
 
 // initialize app function
 app.init = () => {
-    
-    // set animations toggle to unchecked
-    app.gradientToggleCheckbox.checked = false;
 
     // add event listeners
     app.events();

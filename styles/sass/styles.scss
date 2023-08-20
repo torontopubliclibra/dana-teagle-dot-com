@@ -12,7 +12,8 @@
 // default body styles
 body {
     animation: 7s infinite ease-in-out gradient;
-    background: linear-gradient(130deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
+    background-color: $snow;
+    // background: linear-gradient(130deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
     background-size: 300% 300%;
     color: $color1;
     text-align: center;
@@ -41,7 +42,7 @@ body {
 // section backgrounds
 .about, .projects, footer {
     background-color: $color1;
-    background-image: url("../assets/stripes.png");
+    // background-image: url("../assets/stripes.png");
     color: $snow;
 }
 
@@ -80,7 +81,7 @@ footer .wrapper {
 // screens smaller than 768px
 @media only screen and (max-width: 768px) {
     body {
-        background: linear-gradient(100deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
+        // background: linear-gradient(100deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
         background-size: 300% 300%;
     }
     .wrapper {
