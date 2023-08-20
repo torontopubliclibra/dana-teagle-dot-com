@@ -10,9 +10,45 @@ app.navUl = document.querySelector(`nav ul`);
 app.body = document.querySelector(`body`);
 app.aboutSection = document.querySelector('.about');
 app.navLinks = app.navUl.querySelectorAll(`li a`);
-app.projectDesc = document.querySelectorAll(`.project-description`);
 app.scrollDownBtn = document.querySelector(`.scroll-down`);
 app.scrollTopBtn = document.querySelector(`.scroll-to-top`);
+app.projectDesc = [];
+app.projectsContainer = document.querySelector(`.projects-container`);
+app.projectCategories = document.querySelector(`.project-categories`);
+app.projectSort = "all";
+app.sortedProjects = ``;
+app.projects = [
+    {
+        title: "queer walk/pytheas",
+        year: "2023",
+        stack: ["react", "typescript", "css"],
+        description: ""
+    },
+    {
+        title: "trans i.d.",
+        year: "2022 - present",
+        stack: ["vue", "typescript", "sass"],
+        description: ""
+    },
+    {
+        title: "superhero showdown",
+        year: "2022",
+        stack: ["react", "css"],
+        description: "Superhero Showdown is a statistics-based online card game that I built during the Juno Web Development bootcamp in October and November 2022. On game start, 20 superhero character objects with various statistics are pulled from the database, shuffled, and dealt into two decks of 10 cards—one for the player and one for the computer. Each round, the player chooses the stat from their card that they think is bigger than the computer's and the winner gets both cards. Gameplay continues until one deck is out of cards. The site was built as a single-page application using the React library, using data pulled from the Marvel Database Wiki and stored in Firebase."
+    },
+    {
+        title: "the pigeon hole",
+        year: "2022",
+        stack: ["html", "jquery", "css"],
+        description: "The Pigeon Hole is an API project that I built during the Juno JavaScript course in July 2022. This app demonstrates the globe-spanning urban habitats and biodiversity of my favourite bird, displaying photos of pigeons in different cities based on the user's selection or by random. Functionally, the site makes an Ajax request to the Flickr API for the 10 most relevant photos in the selected or randomized city, then randomly selects one image and adds that image to the page through DOM manipulation."
+    },
+    {
+        title: "sydney gautreau website",
+        year: "2022",
+        stack: ["html", "javascript", "sass"],
+        description: "For Sydney Gautreau, Editor & Writing Coach, I built a multi-page site using HTML, SASS, and Javascript. The website uses a clean and responsive interface that puts the focus on the content. It was designed in collaboration with the client to express her personality within a professional-looking layout. Features include a Javascript hamburger menu and a contact form."
+    }
+]
 
 // mobile hamburger nav function
 app.hamburgerFunction = () => {
@@ -117,6 +153,70 @@ app.scrollTopOnFocus = (event) => {
     }
 }
 
+// projects
+app.projectLoop = (category) => {
+
+    app.projectSort = category;
+
+    let projectCategories = ['all'];
+
+    app.projects.forEach((project) => {
+        project.stack.forEach((language) => {
+            projectCategories = projectCategories.filter(item => item !== language).concat([language])
+        })
+    });
+
+    projectCategories = projectCategories.sort();
+
+    projectCategories = projectCategories.map((language) => {
+        if (language === app.projectSort) {
+            return `<span class="selected">${language}</span>`
+        } else {
+            return `<a onclick="app.projectLoop('${language}')">${language}</a>`
+        }
+    })
+
+    app.projectCategories.innerHTML = projectCategories.reduce((accumulator, language) => {
+        return accumulator +  ' | ' + language
+    })
+
+    let projectArray = [];
+
+    sortProjects = (projectArray) => {
+        app.sortedProjects = projectArray.map((project, index) => {
+            let languages = project.stack.reduce((accumulator, language) => {
+                return accumulator +  ' | ' + language
+            });
+            return `<div class='project ${index}'>
+                <h4>${project.title} (${project.year})</h4>
+                <h5>${languages}</h5>
+                <div class="project-links">
+                    <a href="" target="_blank" class="button live" title="Pigeon Pad site">View Live</a>
+                    <a href="" class="button code" target="_blank" title="Pigeon Pad on GitHub">View Code</a>
+                </div>
+                <div class="project-description">
+                    <button class="button read-more">Read More</button>
+                    <p>${project.description}</p>
+                </div>
+            </div>
+        `})
+    }
+
+    if (app.projectSort == "all"){
+        projectArray = app.projects;
+    } else {
+        projectArray = app.projects.filter((project) => project.stack.includes(app.projectSort));
+    }
+
+    sortProjects(projectArray);
+
+    app.projectsContainer.innerHTML = app.sortedProjects.reduce((accumulator, project) => {
+        return accumulator + project;
+    });
+
+    app.projectDesc = document.querySelectorAll(`.project-description`);
+}
+
 // project read more button function
 app.readMore = function(paragraph, button) {
 
@@ -191,6 +291,7 @@ app.events = () => {
 
 // initialize app function
 app.init = () => {
+    app.projectLoop(app.projectSort);
 
     // add event listeners
     app.events();

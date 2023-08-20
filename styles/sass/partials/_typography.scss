@@ -1,50 +1,47 @@
 @use "variables" as *;
 
-* {
+*, input, textarea {
   font-family: "Source Code Pro", monospace;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 18px;
   font-display: swap;
   color: $black;
 }
 
-p, a {
-  font-weight: 600;
-}
-
-// footer p a {
-//   color: $snow;
-//   &:hover {
-//     color: $color3;
-//   }
-// }
-
 h1 {
   font-size: 90px;
-  margin-top: 20px;
-  margin-bottom: 0px;
+  margin: 0;
   line-height: 1;
 }
 
 h2 {
   font-size: 40px;
-  margin: 20px;
   text-align: left;
-  padding: 0 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+  .selected {
+    font-style: italic;
+    color: $color2;
+  }
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 h4 {
-  font-size: 23px;
+  font-size: 22px;
 }
 
 h5 {
   font-size: 18px;
-}
-
-.skills h2,
-.projects h2,
-.contact h2 {
-  padding-top: 20px;
 }
 
 nav {
@@ -55,7 +52,7 @@ nav {
         // color: $color1;
         &:hover,
         &:focus {
-          background: rgba($color2, 0.5);
+          background: rgba($color1, 0.5);
           // color: $black;
           transition: 0.4s;
         }
@@ -71,32 +68,37 @@ nav {
   font-size: 20px;
 }
 
-.button,
-.button-2 {
+.button {
   font-family: "Source Code Pro", monospace;
   border: none;
   padding: 10px 25px;
+  margin-right: 10px;
   text-decoration: none;
-}
-
-.button {
-  // color: $black;
-  background: $color2;
+  background: $snow;
   &:hover,
   &:focus {
-    color: $color3;
-    background: $color1;
+    background: $color2;
     transition: 0.4s;
   }
 }
 
 .contact p {
   font-size: 20px;
+  text-align: left;
 }
 
 // screens smaller than 768px
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 60px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h2, h3 {
+    text-align: left;
+    margin: 10px auto;
+    padding: 0;
+    width: 85%;
   }
 }

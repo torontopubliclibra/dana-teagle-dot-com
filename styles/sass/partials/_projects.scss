@@ -4,10 +4,6 @@
 // project section styles
 .projects {
     padding: 30px 0;
-    h2 {
-        padding-top: 30px;
-        margin-bottom: 10px;
-    }
 
     // projects flex container styles
     .projects-container {
@@ -21,60 +17,60 @@
 
         // project styles
         .project {
-            max-width: 320px;
             height: 100%;
-            background: rgba($snow, 0.8);
+            width: 45%;
+            background: rgba($color1, 0.7);
             border: solid $color2 5px;
             color: $color1;
             margin: 20px auto;
 
             // project image styles
-            .project-img {
-                overflow: hidden;
-                position: relative;
-                aspect-ratio: 4/2.8;
-                border-bottom: solid $snow 5px;
+            // .project-img {
+            //     overflow: hidden;
+            //     position: relative;
+            //     aspect-ratio: 4/2.8;
+            //     border-bottom: solid $snow 5px;
 
-                img {
-                    width: 100%;
-                    aspect-ratio: 4/2.75;
-                    object-fit: cover;
-                }
+            //     img {
+            //         width: 100%;
+            //         aspect-ratio: 4/2.75;
+            //         object-fit: cover;
+            //     }
 
-                // project hover overlay
-                .project-overlay {
-                    background: rgba($black, 0.5);
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    opacity: 0%;
-                    flex-flow: column;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+            //     // project hover overlay
+            //     .project-overlay {
+            //         background: rgba($black, 0.5);
+            //         width: 100%;
+            //         height: 100%;
+            //         display: flex;
+            //         opacity: 0%;
+            //         flex-flow: column;
+            //         align-items: center;
+            //         justify-content: center;
+            //         position: absolute;
+            //         top: 50%;
+            //         left: 50%;
+            //         transform: translate(-50%, -50%);
 
-                    .button {
-                        display: none;
-                        border: solid $snow 2px;
-                    }
+            //         .button {
+            //             display: none;
+            //             border: solid $snow 2px;
+            //         }
 
-                    .live {
-                        margin-bottom: 20px;
-                    }
-                }
+            //         .live {
+            //             margin-bottom: 20px;
+            //         }
+            //     }
 
-                &:hover .project-overlay {
-                    opacity: 100%;
-                    transition: 0.4s;
+            //     &:hover .project-overlay {
+            //         opacity: 100%;
+            //         transition: 0.4s;
 
-                    .button {
-                        display: initial;
-                    }
-                }
-            }
+            //         .button {
+            //             display: initial;
+            //         }
+            //     }
+            // }
 
             h4,
             h5 {
@@ -85,6 +81,13 @@
             h4 {
                 padding-top: 20px;
                 padding-bottom: 5px;
+            }
+
+            .project-links {
+                display: flex;
+                flex-flow: row wrap;
+                padding: 20px;
+                padding-bottom: 0;
             }
 
             // project description styles
@@ -120,13 +123,13 @@
 @media only screen and (max-width: 768px) {
 
     .projects {
-        padding: 50px 0px;
+        padding: 70px 0px 50px 0;
         .projects-container {
             flex-flow: column;
     
             // project styles
             .project {
-                max-width: 80%;
+                width: 85%;
     
                 // project overlay turned on by default
                 .project-img .project-overlay {

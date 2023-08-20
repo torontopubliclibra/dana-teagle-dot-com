@@ -42,11 +42,16 @@ header {
         position: absolute;
         bottom: 10%;
         left: 50%;
-        font-size: 60px;
-        animation: 3s infinite ease-in-out pulse;
+        font-size: 75px;
+        animation: 4s infinite ease-in-out pulse;
+        i {
+            color: $color1;
+            &:hover {
+                color: rgba($color2, 0.8);
+            }
+        }
         &:hover {
             cursor: pointer;
-            color: rgba($color1, 0.8);
             transition: 0.4s;
         }
     }
@@ -128,7 +133,7 @@ header {
 
         // main title styles
         .title {
-            width: 90%;
+            padding: 0 5%;
         }
 
         // mobile nav styles
@@ -140,15 +145,14 @@ header {
                 left: 0;
                 width: 100%;
                 z-index: 5;
-                background: $color2;
+                background: $color1;
                 // background-image: url("../assets/stripes.png");
-                border-bottom: solid $color1 5px;
-                color: $black;
+                border-bottom: solid $snow 5px;
                 position: fixed;
                 &:hover,
                 &:focus {
                     cursor: pointer;
-                    background: $snow;
+                    background: $color2;
                     color: $color1;
                     transition: 0.4s;
                     .ham {
@@ -160,6 +164,8 @@ header {
                     background: none;
                     border: none;
                     float: left;
+                    padding: 0 10px;
+                    height: 52px;
                     i {
                         margin: 10px;
                     }
@@ -167,10 +173,13 @@ header {
                 p {
                     visibility: hidden;
                     float: right;
-                    margin: 10px;
+                    margin: 0 10px;
+                    min-height: 52px;
+                    padding: 15px 0;
                 }
                 &.hamburger-active {
                     background: $snow;
+                    border-bottom: solid $color2 5px;
                     color: $color1;
                     .ham {
                         color: $color1;
@@ -192,7 +201,7 @@ header {
                 padding-top: 60px;
                 flex-flow: column;
                 justify-content: center;
-                background: $color2;
+                background: $color1;
                 // background-image: url("../assets/stripes.png");
                 height: 100vh;
                 opacity: 0;
@@ -207,8 +216,7 @@ header {
                         color: $black;
                         &:hover,
                         &:focus {
-                            background: rgba($snow, 0.8);
-                            color: $color1;
+                            background: rgba($color2, 0.8);
                         }
                     }
                 }

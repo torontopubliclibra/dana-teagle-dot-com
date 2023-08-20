@@ -22,6 +22,14 @@ body {
     }
 }
 
+hr {
+    width: 100%;
+    border: solid $color2 2px;
+    &.hr-2 {
+        border: solid $snow 2px;
+    }
+}
+
 // wrapper styles
 .wrapper {
     max-width: 1260px;
@@ -31,16 +39,14 @@ body {
 
 // highlight effect
 .highlight {
-    padding: 0px 3px;
-    color: $black;
-    background: linear-gradient(120deg, rgba($color2, 0.4) 0%, rgba($color2, 0.4) 100%);
+    background: linear-gradient(120deg, rgba($color2, 0.7) 0%, rgba($color2, 0.7) 100%);
     background-repeat: no-repeat;
-    background-size: 100% 25%;
-    background-position: 0 90%;
+    background-size: 100% 15%;
+    background-position: 0 97%;
 }
 
 // section backgrounds
-.about, .projects, footer {
+.about, .contact {
     background-color: $color1;
     // background-image: url("../assets/stripes.png");
     color: $snow;
@@ -86,5 +92,13 @@ footer .wrapper {
     }
     .wrapper {
         width: 100%;
+    }
+    // highlight effect
+    .highlight {
+        background-size: 100% 10%;
+        background-position: 0 100%;
+    }
+    hr {
+        width: 85%;
     }
 }
