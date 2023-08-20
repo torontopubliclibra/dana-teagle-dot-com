@@ -252,8 +252,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin: 20px;
-  text-align: left;
-  padding: 0 25px;
+  padding: 25px 25px 10px 25px;
 }
 
 h4 {
@@ -309,6 +308,9 @@ nav ul li afocus {
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 60px;
+  }
+  h2 {
+    padding: 10px;
   }
 }
 @keyframes gradient {
