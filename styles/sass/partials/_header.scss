@@ -15,15 +15,15 @@ header {
         .hamburger-btn {
             display: none;
 
-            // responsive to 768px
-            @media only screen and (max-width: 970px) {
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
                 display: initial;
                 top: 0;
                 left: 0;
                 width: 100%;
                 z-index: 5;
                 background: $color1;
-                border-bottom: solid $snow 5px;
+                border-bottom: solid $white 5px;
                 position: fixed;
                 &:hover,
                 &:focus {
@@ -56,7 +56,7 @@ header {
                     padding: 15px 0;
                 }
                 &.hamburger-active {
-                    background: $snow;
+                    background: $white;
                     border-bottom: solid $color2 5px;
                     color: $color1;
                     button {
@@ -86,8 +86,8 @@ header {
                 padding: 10px 20px;
             }
 
-            // responsive to 768px
-            @media only screen and (max-width: 970px) {
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
                 display: none;
                 position: fixed;
                 right: 0;

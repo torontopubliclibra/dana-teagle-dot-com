@@ -14,18 +14,18 @@
     width: 90%;
     margin: 0 auto;
 
-    // reponsive to 768px
-    @media only screen and (max-width: 768px) {
+    // reponsive to mobile
+    @media only screen and (max-width: $mobile) {
         width: 100%;
     }
 }
 
 // body background and overflow
 body {
-    background-color: $snow;
+    background-color: $white;
 
-    // responsive to 768px
-    @media only screen and (max-width: 768px) {
+    // responsive to mobile
+    @media only screen and (max-width: $tablet) {
         &.nav-open {
             overflow-y: hidden;
         }
@@ -34,14 +34,14 @@ body {
 
 // section backgrounds
 #about, #contact {
-    background: rgba($color1, 0.7);
+    background: $color1;
 }
 
 // section padding
 #about, #projects, #contact {
 
-    // reponsive to 768px
-    @media only screen and (max-width: 768px) {
+    // reponsive to mobile
+    @media only screen and (max-width: $mobile) {
         padding: 70px 0px
     }
 }
@@ -51,15 +51,15 @@ hr {
     width: 100%;
     border: solid $color2 2px;
 
-    // reponsive to 768px
-    @media only screen and (max-width: 768px) {
+    // reponsive to mobile
+    @media only screen and (max-width: $mobile) {
         width: 85%;
     }
 }
 
 // buttons
 .button {
-    background: $snow;
+    background: $white;
     border: none;
     padding: 10px 25px;
     &:hover, &:focus {

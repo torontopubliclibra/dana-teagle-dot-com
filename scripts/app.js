@@ -5,13 +5,13 @@ let app = {
     elements: {
         body: $("body"),
         about: $("#about"),
-        ham: $(".hamburger-btn"),
+        hamButton: $(".hamburger-btn"),
         hamIcon: $(".ham-icon"),
         navName: $(".nav-name"),
         navUl: $("nav ul"),
         navLinks: $("nav ul li a"),
-        scrollDown: $(".scroll-down"),
-        scrollTop: $(".scroll-to-top"),
+        scrollDownArrow: $(".scroll-down"),
+        scrollTopButton: $(".scroll-to-top"),
         projects: $(".projects-container"),
         projectsNav: $(".projects-nav"),
     },
@@ -33,7 +33,7 @@ let app = {
 
                 // open the nav
                 app.elements.body.addClass("nav-open");
-                app.elements.ham.addClass("hamburger-active");
+                app.elements.hamButton.addClass("hamburger-active");
                 app.elements.navName.css({"visibility": "visible"})
                 app.elements.hamIcon.css({
                     "transform": "rotate(90deg)"
@@ -52,7 +52,7 @@ let app = {
 
                 // hide the nav
                 app.elements.body.removeClass("nav-open");
-                app.elements.ham.removeClass("hamburger-active");
+                app.elements.hamButton.removeClass("hamburger-active");
                 app.elements.navName.css({"visibility": "hidden"})
                 app.elements.hamIcon.css({
                         "transform": "rotate(0deg)"
@@ -75,7 +75,7 @@ let app = {
 
             // reset the nav styling
             app.elements.body.removeClass("nav-open")
-            app.elements.ham.removeClass("hamburger-active")
+            app.elements.hamButton.removeClass("hamburger-active")
             app.elements.navName.css({"visibility": "hidden"})
             app.elements.hamIcon.css({"transform": "rotate(0deg)"})
 
@@ -100,11 +100,11 @@ let app = {
         },
 
         // scroll down button
-        scrollDown: () => {
+        scrollDown: (section) => {
 
-            // smoothly scroll down to the top of the about section
+            // smoothly scroll down to the top of the specified section
             window.scrollTo({
-                top: app.elements.about.offset().top,
+                top: section.offset().top,
                 behavior: "smooth",
             })
         },
@@ -211,14 +211,14 @@ let app = {
                     let formattedParagraph = project.description.reduce((accumulator, paragraph) => {return accumulator +  `</br></br>` + paragraph})
 
                     // and combine that paragraph with a read more button
-                    formattedProject.description = `<button class="button read-more" title="Toggle the project description">Read more</button><hr><p>` + formattedParagraph + `</p>`
+                    formattedProject.description = `<button class="button read-more" title="Toggle project description">Read more</button><hr><p>` + formattedParagraph + `</p>`
                 }
 
                 // if the project has a site link, format a site button
-                if (project.site) {formattedProject.site = `<a href="${project.site}" target="_blank" class="button" title="Open the ${project.title} website">Site link</a>`}
+                if (project.site) {formattedProject.site = `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">Site link</a>`}
 
                 // if the project has a repo link, format a repo button
-                if (project.repo) {formattedProject.repo = `<a href="${project.repo}" class="button" target="_blank" title="Open the ${project.title} repo on Github">Repo link</a>`}
+                if (project.repo) {formattedProject.repo = `<a href="${project.repo}" class="button" target="_blank" title="${project.title} repo on Github">Repo link</a>`}
 
                 // stitch together all the html for the project
                 return `<div class="project">` + formattedProject.heading + formattedProject.languages + `<div class="project-details">` + formattedProject.site + formattedProject.repo + formattedProject.description + `</div></div>`
@@ -275,16 +275,16 @@ let app = {
     events: () => {
 
         // on the hamburger button click, run the hamburger function
-        app.elements.ham.click(app.functions.hamburger);
+        app.elements.hamButton.click(app.functions.hamburger);
 
         // for each of the nav list item links, close the nav on click
         document.querySelectorAll("nav ul li a").forEach((link) => link.addEventListener("click", app.functions.closeNav));
 
         // scroll up to top of browser window on button click
-        app.elements.scrollTop.click(app.functions.scrollTop)
+        app.elements.scrollTopButton.click(app.functions.scrollTop)
 
         // scroll down to top of about section on button click
-        app.elements.scrollDown.click(app.functions.scrollDown)
+        app.elements.scrollDownArrow.click(() => app.functions.scrollDown(app.elements.about))
 
         // when the browser window size changes
         window.addEventListener("resize", () => {

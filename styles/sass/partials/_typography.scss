@@ -35,7 +35,7 @@ h2, h3, p {
 
 // sections text colour
 #about, #contact {
-  color: $snow;
+  color: $white;
 }
 
 // title
@@ -44,8 +44,8 @@ h1 {
   font-size: 75px;
   margin: 0;
 
-  // reponsive to 970px
-  @media only screen and (max-width: 970px) {
+  // reponsive to tablet
+  @media only screen and (max-width: $tablet) {
     max-width: 400px;
     font-size: 50px;
     margin: 0 auto;
@@ -56,8 +56,8 @@ h1 {
 h2, h3 {
   width: 100%;
 
-  // reponsive to 768px
-  @media only screen and (max-width: 768px) {
+  // reponsive to mobile
+  @media only screen and (max-width: $mobile) {
     width: 85%;
     margin: 10px auto;
     padding: 0;
@@ -69,8 +69,8 @@ h2 {
   font-size: 40px;
   margin: 0 auto 15px auto;
   
-  // reponsive to 768px
-  @media only screen and (max-width: 768px) {
+  // reponsive to mobile
+  @media only screen and (max-width: $mobile) {
     font-size: 30px;
     margin: 0 auto;
   }

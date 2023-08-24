@@ -574,9 +574,8 @@ header .scroll-down i:hover {
   height: 100%;
   width: calc(50% - 5px);
   max-width: 550px;
-  background: rgba(132, 165, 157, 0.7);
+  background: #84A59D;
   border: solid #B57E9B 5px;
-  color: #84A59D;
   margin: 0;
 }
 #projects .projects-container .project h4, #projects .projects-container .project h5 {
@@ -690,14 +689,14 @@ header .scroll-down i:hover {
 body {
   background-color: #f3e8e9;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   body.nav-open {
     overflow-y: hidden;
   }
 }
 
 #about, #contact {
-  background: rgba(132, 165, 157, 0.7);
+  background: #84A59D;
 }
 
 @media only screen and (max-width: 768px) {

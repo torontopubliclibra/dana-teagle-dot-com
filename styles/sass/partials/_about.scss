@@ -12,15 +12,15 @@
         align-items: center;
         gap: 5%;
 
-        // responsive to 970px
-        @media only screen and (max-width: 970px) {
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
             flex-flow: column nowrap;
         }
     }
 
     // content container
     .about-content {
-        background: rgba($snow, 0.8);
+        background: rgba($white, 0.8);
         border: solid $color2 5px;
         display: flex;
         flex-direction: column;
@@ -41,13 +41,13 @@
             }
         }
 
-        // responsive to 970px
-        @media only screen and (max-width: 970px) {
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
             margin-top: 20px;
         }
 
-        // responsive to 768px
-        @media only screen and (max-width: 768px) {
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
             width: 85%;
         }
     }
