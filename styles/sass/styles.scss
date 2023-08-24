@@ -1,104 +1,121 @@
+// import all partials
 @use 'partials/setup';
 @use 'partials/variables' as *;
 @use 'partials/typography' as *;
 @use 'partials/animations';
 @use 'partials/header';
 @use 'partials/about';
-@use 'partials/skills';
 @use 'partials/projects';
 @use 'partials/contact';
-@use 'partials/contact-success';
 
-// default body styles
-body {
-    animation: 7s infinite ease-in-out gradient;
-    background-color: $snow;
-    // background: linear-gradient(130deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
-    background-size: 300% 300%;
-    color: $color1;
-    text-align: center;
-    &.nav-open {
-        overflow-y: hidden;
-    }
-}
-
-hr {
-    width: 100%;
-    border: solid $color2 2px;
-    &.hr-2 {
-        border: solid $snow 2px;
-    }
-}
-
-// wrapper styles
+// default wrapper
 .wrapper {
     max-width: 1260px;
     width: 90%;
     margin: 0 auto;
+
+    // reponsive to 768px
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
-// highlight effect
+// body background and overflow
+body {
+    background-color: $snow;
+
+    // responsive to 768px
+    @media only screen and (max-width: 768px) {
+        &.nav-open {
+            overflow-y: hidden;
+        }
+    }
+}
+
+// section backgrounds
+#about, #contact {
+    background: rgba($color1, 0.7);
+}
+
+// section padding
+#about, #projects, #contact {
+
+    // reponsive to 768px
+    @media only screen and (max-width: 768px) {
+        padding: 70px 0px
+    }
+}
+
+// horizontal lines
+hr {
+    width: 100%;
+    border: solid $color2 2px;
+
+    // reponsive to 768px
+    @media only screen and (max-width: 768px) {
+        width: 85%;
+    }
+}
+
+// buttons
+.button {
+    background: $snow;
+    border: none;
+    padding: 10px 25px;
+    &:hover, &:focus {
+      background: $color2;
+      transition: 0.4s;
+    }
+  }
+
+// highlighted text
 .highlight {
     background: linear-gradient(120deg, rgba($color2, 0.7) 0%, rgba($color2, 0.7) 100%);
     background-repeat: no-repeat;
     background-size: 100% 15%;
     background-position: 0 97%;
-}
 
-// section backgrounds
-.about, .contact {
-    background-color: $color1;
-    // background-image: url("../assets/stripes.png");
-    color: $snow;
-}
-
-// footer styles
-footer .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    .button {
-        width: auto;
-        margin: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: end;
-        justify-content: center;
-        gap: 10px;
-        &:hover {
-            background: $snow;
-            color: $color1;
-            cursor: pointer;
-        }
-        i {
-            font-size: 25px;
-        }
-        p {
-            margin: 0;
-        }
-    }
-    .credit {
-        margin: 10px;
-    }
-}
-
-// screens smaller than 768px
-@media only screen and (max-width: 768px) {
-    body {
-        // background: linear-gradient(100deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
-        background-size: 300% 300%;
-    }
-    .wrapper {
-        width: 100%;
-    }
-    // highlight effect
-    .highlight {
+    // reponsive to 970px
+    @media only screen and (max-width: 970px) {
         background-size: 100% 10%;
-        background-position: 0 100%;
+        background-position: 0 99%;
     }
-    hr {
-        width: 85%;
+}
+
+// footer
+footer {
+
+    // wrapper
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        // scroll to top button
+        .scroll-to-top {
+            background: $color2;
+            width: auto;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: center;
+            gap: 10px;
+            p {
+                margin: 0;
+            }
+            &:hover {
+                background: $color1;
+                cursor: pointer;
+            }
+        }
+
+        // credit text
+        .credit {
+            margin: 10px;
+            text-align: center;
+        }
     }
 }

@@ -1,0 +1,30 @@
+{
+    "Queer Walk/Pytheas": {
+        "year": "2023",
+        "stack": ["React", "Typescript"],
+        "description": ["This application is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built as a new implementation and update of the open-source Pytheas codebase.", "I was the lead developer on this project, working alongside Haley Tibbitts, and our project manager, Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge.", "The research and organizing for this tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance. The Pytheas application is based on work originally developed for the McDougall Corridor tour app, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute."],
+        "site": "https://queerwalk.ca",
+        "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
+    },
+    "Superhero Showdown": {
+        "year": "2022",
+        "stack": ["React", "Javascript", "CSS"],
+        "description": ["This is a statistics-based online card game that I originally built in October and November 2022.", "On game start, 20 superhero character objects with various statistics are pulled from the database, shuffled, and dealt into two decks of 10 cards—one for the player and one for the computer. Each round, the player chooses the stat from their card that they think is larger than the computer's and the winner of the challenge gets both cards. Gameplay continues until one deck is out of cards.", "The site was built as a single-page application using the React library, using data pulled from the Marvel Database Wiki and stored in Firebase."],
+        "site": "/superhero",
+        "repo": "https://github.com/torontopubliclibra/dana-teagle-project-three"
+    },
+    "The Pigeon Hole": {
+        "year": "2022",
+        "stack": ["HTML", "jQuery", "CSS"],
+        "description": ["This is an API project that I originally built in July 2022. This app displays photos of pigeons in different cities, retrieved from the Flickr API, based on the user's selection or by random."],
+        "site": "/pigeon",
+        "repo": "https://github.com/torontopubliclibra/the-pigeon-hole"
+    },
+    "Sydney Gautreau": {
+        "year": "2022",
+        "stack": ["HTML", "Javascript", "SASS"],
+        "description": ["This is a website I originally built in November 2022, for Sydney's editor and writing coach business. Features include a Javascript hamburger menu and a contact form."],
+        "site": "https://sydneygautreau.com",
+        "repo": "https://github.com/torontopubliclibra/sydney-gautreau"
+    } 
+}

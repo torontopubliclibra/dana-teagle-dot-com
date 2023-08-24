@@ -1,152 +1,28 @@
+// import variables
 @use 'variables' as *;
 
-// header section styles
+// header section
 header {
     height: 100vh;
     min-height: 600px;
     max-height: 1000px;
     position: relative;
 
-    // nav styles
+    // navigation
     nav {
+
+        // hamburger button
         .hamburger-btn {
             display: none;
-        }
-        ul {
-            list-style: none;
-            margin: 0px auto 20px auto;
-            padding: 20px 0px 0px 0px;
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            li {
-                a {
-                    padding: 10px 20px;
-                }
-            }
-        }
-    }
 
-    // main title styles
-    .title {
-        width: 100%;
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation: 1s ease-in-out fade-in;
-    }
-
-    // scroll down button styles
-    .scroll-down {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        font-size: 75px;
-        animation: 4s infinite ease-in-out pulse;
-        i {
-            color: $color1;
-            &:hover {
-                color: rgba($color2, 0.8);
-            }
-        }
-        &:hover {
-            cursor: pointer;
-            transition: 0.4s;
-        }
-    }
-
-    // scroll down button styles
-    .gradient-toggle {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        color: $black;
-        background: $color2;
-        // background-image: url("../assets/stripes.png");
-        border-top: solid $color1 5px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        font-size: 18px;
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 49px;
-            height: 23px;
-        }
-        .switch input {
-            visibility: hidden;
-        }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: $color1;
-            border-radius: 34px;
-            &:hover {
-                background-color: rgba($color1, 0.8);
-                transition: 0.4s;
-            }
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 15px;
-            width: 15px;
-            left: 4px;
-            bottom: 4px;
-            background-color: $snow;
-            transition: 0.4s;
-            border-radius: 50%;
-        }
-        input:checked+.slider {
-            background-color: $black;
-            &:hover {
-                background-color: rgba($black, 0.8);
-                transition: 0.4s;
-            }
-            &:hover:before {
-                background-color: $snow;
-                transition: 0.4s;
-            }
-        }
-        input:focus+.slider {
-            box-shadow: 0 0 1px $black;
-        }
-        input:checked+.slider:before {
-            transform: translateX(26px);
-            background-color: $color2;
-        }
-    }
-}
-
-// screens smaller than 768px
-@media only screen and (max-width: 768px) {
-    header {
-
-        // main title styles
-        .title {
-            padding: 0 5%;
-        }
-
-        // mobile nav styles
-        nav {
-            .hamburger-btn {
+            // responsive to 768px
+            @media only screen and (max-width: 970px) {
                 display: initial;
-                font-size: 30px;
                 top: 0;
                 left: 0;
                 width: 100%;
                 z-index: 5;
                 background: $color1;
-                // background-image: url("../assets/stripes.png");
                 border-bottom: solid $snow 5px;
                 position: fixed;
                 &:hover,
@@ -155,22 +31,24 @@ header {
                     background: $color2;
                     color: $color1;
                     transition: 0.4s;
-                    .ham {
+                    button {
                         color: $color1;
                         cursor: pointer;
                     }
                 }
-                .ham {
+                button {
                     background: none;
                     border: none;
                     float: left;
                     padding: 0 10px;
                     height: 52px;
-                    i {
+                    .ham-icon {
                         margin: 10px;
+                        transform: rotate(0deg);
+                        transition: transform 0.4s;
                     }
                 }
-                p {
+                .nav-name {
                     visibility: hidden;
                     float: right;
                     margin: 0 10px;
@@ -181,20 +59,35 @@ header {
                     background: $snow;
                     border-bottom: solid $color2 5px;
                     color: $color1;
-                    .ham {
+                    button {
                         color: $color1;
-                        i {
+                        .ham-icon {
                             transform: rotate(90deg);
-                            transition: 0.4s;
                         }
                     }
-                    p {
+                    .nav-name {
                         visibility: visible;
                         animation: fade-in 0.4s;
                     }
                 }
             }
-            ul {
+        }
+
+        // nav list
+        ul {
+            display: flex;
+            opacity: 1;
+            justify-content: space-between;
+            width: 60%;
+            margin: 0 auto 20px auto;
+            padding: 20px 0 0 0;
+            list-style: none;
+            li a {
+                padding: 10px 20px;
+            }
+
+            // responsive to 768px
+            @media only screen and (max-width: 970px) {
                 display: none;
                 position: fixed;
                 right: 0;
@@ -202,24 +95,49 @@ header {
                 flex-flow: column;
                 justify-content: center;
                 background: $color1;
-                // background-image: url("../assets/stripes.png");
                 height: 100vh;
                 opacity: 0;
                 width: 100%;
                 z-index: 3;
                 li {
-                    font-size: 30px;
                     display: block;
                     padding: 20px;
                     width: 100%;
                     a {
                         color: $black;
-                        &:hover,
-                        &:focus {
+                        &:hover, &:focus {
                             background: rgba($color2, 0.8);
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // main title
+    .title {
+        width: 100%;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: 1s ease-in-out fade-in;
+    }
+
+    // scroll down button
+    .scroll-down {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        animation: 4s infinite ease-in-out pulse;
+        &:hover {
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        i {
+            color: $color1;
+            &:hover {
+                color: rgba($color2, 0.8);
             }
         }
     }

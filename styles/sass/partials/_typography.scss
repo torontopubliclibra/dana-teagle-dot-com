@@ -1,104 +1,136 @@
+// import variables
 @use "variables" as *;
 
-*, input, textarea {
+// default typography
+*, button {
   font-family: "Source Code Pro", monospace;
-  font-weight: 600;
-  font-size: 18px;
   font-display: swap;
-  color: $black;
-}
-
-h1 {
-  font-size: 90px;
-  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1;
+  color: $black;
+  text-align: center;
+  text-transform: lowercase;
 }
 
+// button styles
+.button {
+  text-decoration: none;
+}
+
+// title, button, and link italicize on hover/focus
+h1, a, .button {
+  &:hover, &:focus {
+    font-style: italic;
+  }
+}
+
+// text alignment
+h2, h3, p {
+  text-align: left;
+}
+.project-details p {
+  text-align: center;
+}
+
+// sections text colour
+#about, #contact {
+  color: $snow;
+}
+
+// title
+h1 {
+  width: 100%;
+  font-size: 75px;
+  margin: 0;
+
+  // reponsive to 970px
+  @media only screen and (max-width: 970px) {
+    max-width: 400px;
+    font-size: 50px;
+    margin: 0 auto;
+  }
+}
+
+// subheading styles
+h2, h3 {
+  width: 100%;
+
+  // reponsive to 768px
+  @media only screen and (max-width: 768px) {
+    width: 85%;
+    margin: 10px auto;
+    padding: 0;
+  }
+}
+
+// section headings
 h2 {
   font-size: 40px;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-h3 {
-  font-size: 18px;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 20px;
-  .selected {
-    font-style: italic;
-    color: $color2;
-  }
-  a {
-    text-decoration: underline;
-    cursor: pointer;
+  margin: 0 auto 15px auto;
+  
+  // reponsive to 768px
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+    margin: 0 auto;
   }
 }
 
-h4 {
-  font-size: 22px;
-}
+// project categories nav
+.projects-nav {
 
-h5 {
-  font-size: 18px;
-}
+  li {
+    list-style-type: none;
+    margin: 0;
 
-nav {
-  ul {
-    li {
-      a {
-        text-decoration: none;
-        // color: $color1;
-        &:hover,
-        &:focus {
-          background: rgba($color1, 0.5);
-          // color: $black;
-          transition: 0.4s;
-        }
-        &focus {
-          outline: initial;
-        }
+    // selected category highlight
+    &.selected {
+      font-style: italic;
+      background: linear-gradient(120deg, $color2 0%, $color2 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 25%;
+      background-position: 0 95%;
+    }
+
+    // category links
+    a {
+      cursor: pointer;
+      &:hover {
+        color: $color2;
       }
     }
   }
 }
 
-.about {
-  font-size: 20px;
+// scroll down button
+.scroll-down {
+  font-size: 75px;
 }
 
-.button {
-  font-family: "Source Code Pro", monospace;
-  border: none;
-  padding: 10px 25px;
-  margin-right: 10px;
-  text-decoration: none;
-  background: $snow;
-  &:hover,
-  &:focus {
-    background: $color2;
-    transition: 0.4s;
+// page navigation
+nav {
+
+  // nav item links
+  ul li a {
+    text-decoration: none;
+    &:hover, &:focus {
+      background: rgba($color1, 0.7);
+      font-style: italic;
+      transition: 0.4s;
+      outline: initial;
+    }
+  }
+
+  // hamburger icon
+  .ham-icon {
+    font-size: 25px;
   }
 }
 
-.contact p {
-  font-size: 20px;
-  text-align: left;
-}
-
-// screens smaller than 768px
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 60px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  h2, h3 {
-    text-align: left;
-    margin: 10px auto;
-    padding: 0;
-    width: 85%;
+// scroll to top button
+.scroll-to-top {
+  font-size: 25px;
+  p {
+    line-height: 1.5;
   }
 }

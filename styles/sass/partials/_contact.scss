@@ -1,35 +1,25 @@
+// import variables
 @use 'variables' as *;
 
-// contact section styles
-.contact {
+// contact section
+#contact {
     margin-bottom: 10px;
     padding: 30px 0;
-    ul {
-        list-style: none;
-        padding: 15px 0;
-        li {
-            display: inline;
-            a {
-                // color: $color1;
-                font-size: 35px;
-                i {
-                    padding: 0px 20px;
-                }
-                &:hover i,
-                &:focus i {
-                    // color: $color2;
-                    transition: 0.4s;
-                }
-            }
-        }
-    }
+
+    // content container
     .contact-content {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        width: 95%;
+        background: rgba($snow, 0.8);
+        border: solid $color2 5px;
+        padding: 20px;
         margin: 0 auto;
-        padding-bottom: 30px;
         p {
+            margin: 0;
             a {
-                // color: $color1;
                 &:hover,
                 &:focus {
                     color: $color2;
@@ -37,111 +27,15 @@
                 }
             }
         }
-        .contact-success {
-            display: none;
-            hr {
-                color: $color1;
-                border-bottom: solid $color1 2px;
-            }
-        }
-        fieldset {
-            margin-top: 30px;
-            width: 100%;
-            padding: 20px;
-            background-color: $color2;
-            // background-image: url("../assets/stripes.png");
-            border: solid $color1 5px;
-            color: $black;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            text-align: left;
-            p {
-                font-size: 15px;
-                margin-top: 0;
-                width: 100%;
-                color: $black;
-                order: -5;
-            }
-            label {
-                display: flex;
-                width: 100%;
-                margin-bottom: 5px;
-                &[for="name"], &[for="pronouns"]{
-                    width: 49%;
-                }
-                &[for="name"]{
-                    order: -4;
-                }
-                &[for="pronouns"]{
-                    order: -3;
-                }
-            }
-            input, textarea {
-                font-size: 16px;
-                padding: 10px;
-                margin-bottom: 10px;
-                width: 100%;
-                background: rgba($snow, 0.8);
-                border: solid $color1 2px;
-                &[type="text"]{
-                    width: 49%;
-                }
-                &[name="name"]{
-                    order: -2;
-                }
-                &[name="pronouns"]{
-                    order: -1;
-                }
-            }
-            textarea {
-                margin-bottom: 20px;
-                resize: none;
-                height: 150px;
-            }
-            .submit-button {
-                width: 100%;
-            }
-            button {
-                float: right;
-                background: $color1;
-                border: solid $color1 2px;
-                color: $snow;
-                &:hover, &:focus {
-                    color: $color1;
-                    background: $snow;
-                    cursor: pointer;
-                }
-            }
-        }
     }
-}
-
-// screens smaller than 1024px
-@media only screen and (max-width: 1024px) {
-    .contact .contact-content {
-        width: 90%;
-    }
-}
-
-// screens smaller than 768px
-@media only screen and (max-width: 768px) {
-    .contact {
+    // responsive to 768px
+    @media only screen and (max-width: 768px) {
         padding: 70px 0 50px 0;
+
+        // content container
         .contact-content {
             width: 85%;
-                fieldset label[for="name"], label[for="pronouns"]{
-                    width: 100% !important;
-                }
-                fieldset label[for="pronouns"]{
-                    order: -2;
-                }
-                fieldset input[type="text"] {
-                    width: 100% !important;
-                }
-                fieldset input[name="name"]{
-                    order: -3;
-                }
+            margin-top: 20px;
         }
     }
 }
