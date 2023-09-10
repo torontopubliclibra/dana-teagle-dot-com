@@ -44,18 +44,11 @@ a {
   }
 }
 
-.button {
-  @include textStyle (18px);
-  background: $white;
-  border: none;
-  padding: 10px 25px;
-  cursor: pointer;
-  transition: 0.4s color, 0.4s background, 0.4s font-style;
-  &:hover, &:focus {
-    color: $black;
-    background: $color2;
-    font-style: italic;
-  }
+h2 {
+  font-size: 40px;
+  margin: 20px;
+  // text-align: left;
+  padding: 25px 25px 10px 25px;
 }
 
 // scroll down button
