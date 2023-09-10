@@ -242,6 +242,11 @@ body, .button {
   text-decoration: none;
 }
 
+.button:hover, .button:focus {
+  color: #282b2c;
+  font-style: italic;
+}
+
 .highlight, .selected {
   background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
   background-repeat: no-repeat;
@@ -277,21 +282,10 @@ a:hover, a:focus {
   font-style: italic;
 }
 
-.button {
-  font-size: 18px;
-  text-align: left;
-  line-height: 1;
-  color: #282b2c;
-  background: #f3e8e9;
-  border: none;
-  padding: 10px 25px;
-  cursor: pointer;
-  transition: 0.4s color, 0.4s background, 0.4s font-style;
-}
-.button:hover, .button:focus {
-  color: #282b2c;
-  background: #B57E9B;
-  font-style: italic;
+h2 {
+  font-size: 40px;
+  margin: 20px;
+  padding: 25px 25px 10px 25px;
 }
 
 .scroll-down {
@@ -502,6 +496,17 @@ hr {
   hr {
     width: 85%;
   }
+}
+
+.button {
+  background: #f3e8e9;
+  border: none;
+  padding: 10px 25px;
+}
+.button:hover, .button:focus {
+  cursor: pointer;
+  background: #B57E9B;
+  transition: 0.4s;
 }
 
 header {
@@ -730,6 +735,7 @@ header .scroll-down {
   overflow: hidden;
 }
 #projects .projects-container .project .project-details .button {
+  padding: 10px 20px;
   margin: 5px;
 }
 #projects .projects-container .project .project-details hr {
@@ -813,4 +819,10 @@ footer .wrapper {
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+footer .wrapper .button {
+  background: #B57E9B;
+}
+footer .wrapper .button:hover, footer .wrapper .button:focus {
+  background: #84A59D;
 }

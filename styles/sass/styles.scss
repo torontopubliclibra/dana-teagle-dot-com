@@ -55,6 +55,18 @@ hr {
     }
 }
 
+// buttons
+    .button {
+        background: $white;
+        border: none;
+        padding: 10px 25px;
+        &:hover, &:focus {
+            cursor: pointer;
+            background: $color2;
+            transition: 0.4s;
+        }
+    }
+
 // header section
 header {
     @include positioning(relative);
@@ -250,6 +262,7 @@ header {
                 padding: 20px;
                 overflow: hidden;
                 .button {
+                    padding: 10px 20px;
                     margin: 5px;
                 }
                 hr {
@@ -339,4 +352,11 @@ header {
 footer .wrapper {
     @include flex(column, 0, center, center);
     padding: 20px;
+
+    .button {
+        background: $color2;
+        &:hover, &:focus {
+            background: $color1;
+        }
+    }
 }
