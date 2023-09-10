@@ -1,136 +1,169 @@
 // import variables
 @use "variables" as *;
+@use "mixins" as *;
 
 // default typography
-*, button {
+body, .button {
+  @include textStyle (18px);
   font-family: "Source Code Pro", monospace;
   font-display: swap;
-  font-size: 18px;
   font-weight: 600;
-  line-height: 1;
-  color: $black;
-  text-align: center;
   text-transform: lowercase;
-}
-
-// button styles
-.button {
   text-decoration: none;
 }
 
-// title, button, and link italicize on hover/focus
-h1, a, .button {
+// highlighted text
+.highlight, .selected {
+  background: linear-gradient(120deg, $color2 0%, $color2 100%);
+    background-repeat: no-repeat;
+}
+.selected {
+  background-size: 100% 25%;
+  background-position: 0 95%;
+  font-style: italic;
+}
+.highlight {
+  background-size: 100% 15%;
+  background-position: 0 97%;
+
+  // reponsive to 970px
+  @media only screen and (max-width: 970px) {
+      background-size: 100% 10%;
+      background-position: 0 99%;
+  }
+}
+
+// link typography
+a {
+  @include textStyle (18px);
+  cursor: pointer;
+  transition: 0.4s color, 0.4s font-style;
   &:hover, &:focus {
+      color: $color2;
+      font-style: italic;
+  }
+}
+
+.button {
+  @include textStyle (18px);
+  background: $white;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.4s color, 0.4s background, 0.4s font-style;
+  &:hover, &:focus {
+    color: $black;
+    background: $color2;
     font-style: italic;
   }
 }
 
-// text alignment
-h2, h3, p {
-  text-align: left;
-}
-.project-details p {
-  text-align: center;
+// scroll down button
+.scroll-down {
+  @include textStyle (75px, center, "", $color1);
+  cursor: pointer;
+  &:hover {
+    color: $color2;
+  }
 }
 
-// sections text colour
-#about, #contact {
-  color: $white;
+// hamburger menu buttons
+.ham-icon {
+  @include textStyle (25px, center);
+}
+
+// scroll to top button
+.scroll-to-top {
+  @include textStyle (25px, center);
+  @include flex(row, 10px, center, end);
+  width: auto;
+  margin: 10px;
+  background: $color2;
+  cursor: pointer;
+  p {
+    @include textStyle (18px, center, 1.5);
+    margin: 0;
+  }
+  &:hover {
+    background: $color1;
+  }
+}
+
+// page navigation
+nav {
+  // nav item links
+  ul li a {
+    text-decoration: none;
+    transition: 0.4s background;
+    &:hover, &:focus {
+      color: $black;
+      background: $color2;
+      outline: initial;
+    }
+  }
 }
 
 // title
 h1 {
+  @include textStyle (75px, center);
   width: 100%;
-  font-size: 75px;
-  margin: 0;
+  margin: 0 auto;
+  &:hover, &:focus {
+    font-style: italic;
+  }
 
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
+    @include textStyle (50px, center);
     max-width: 400px;
-    font-size: 50px;
-    margin: 0 auto;
   }
 }
 
-// subheading styles
-h2, h3 {
+// section headings
+h2 {
+  @include textStyle (40px);
+  margin: 0 auto 15px auto;
   width: 100%;
-
+  
   // reponsive to mobile
   @media only screen and (max-width: $mobile) {
+    @include textStyle (30px);
     width: 85%;
     margin: 10px auto;
     padding: 0;
   }
 }
 
-// section headings
-h2 {
-  font-size: 40px;
-  margin: 0 auto 15px auto;
-  
-  // reponsive to mobile
-  @media only screen and (max-width: $mobile) {
-    font-size: 30px;
-    margin: 0 auto;
-  }
+h3 {
+  @include textStyle (20px, center);
+  margin: 0;
+  padding: 20px 5px 20px 20px;
+}
+
+h4 {
+  @include textStyle (18px, center);
+  margin: 0;
+  padding: 0px 20px;
+}
+
+p {
+  margin: 0;
 }
 
 // project categories nav
 .projects-nav {
-
   li {
     list-style-type: none;
     margin: 0;
-
-    // selected category highlight
-    &.selected {
-      font-style: italic;
-      background: linear-gradient(120deg, $color2 0%, $color2 100%);
-      background-repeat: no-repeat;
-      background-size: 100% 25%;
-      background-position: 0 95%;
-    }
-
-    // category links
-    a {
-      cursor: pointer;
-      &:hover {
-        color: $color2;
-      }
-    }
   }
 }
 
-// scroll down button
-.scroll-down {
-  font-size: 75px;
+.project-details p {
+  @include textStyle (18px, center);
 }
 
-// page navigation
-nav {
-
-  // nav item links
-  ul li a {
-    text-decoration: none;
-    &:hover, &:focus {
-      background: rgba($color1, 0.7);
-      font-style: italic;
-      transition: 0.4s;
-      outline: initial;
-    }
-  }
-
-  // hamburger icon
-  .ham-icon {
-    font-size: 25px;
-  }
-}
-
-// scroll to top button
-.scroll-to-top {
-  font-size: 25px;
-  p {
-    line-height: 1.5;
-  }
+// credit text
+footer .credit {
+  @include textStyle (18px, center);
+  margin: 10px;
 }

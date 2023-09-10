@@ -1,19 +1,17 @@
-// app object
+// app objecttions.
 let app = {
 
     // page elements
     elements: {
         body: $("body"),
         about: $("#about"),
-        hamButton: $(".hamburger-btn"),
-        hamIcon: $(".ham-icon"),
-        navName: $(".nav-name"),
-        navUl: $("nav ul"),
-        navLinks: $("nav ul li a"),
-        scrollDownArrow: $(".scroll-down"),
+        nav: $("nav"),
+        hamburgerButton: $(".hamburger-btn"),
+        scrollDownButton: $(".scroll-down"),
         scrollTopButton: $(".scroll-to-top"),
-        projects: $(".projects-container"),
+        projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
+        projectDescription: $(".project-details")
     },
 
     // projects data and selected category
@@ -25,102 +23,33 @@ let app = {
     // app functions
     functions: {
 
-        // hamburger menu
-        hamburger: () => {
-
-            // if the nav is not open
-            if(app.elements.navUl.css("display") === "none"){
-
-                // open the nav
-                app.elements.body.addClass("nav-open");
-                app.elements.hamButton.addClass("hamburger-active");
-                app.elements.navName.css({"visibility": "visible"})
-                app.elements.hamIcon.css({
-                    "transform": "rotate(90deg)"
-                })
-                app.elements.navUl.css({
-                        "display": "flex",
-                        "animation": "fade-in 0.4s",
-                        "opacity": "1"
-                    })
-
-                // after the nav is finished opening (0.4s), remove the animation
-                setTimeout(() => {app.elements.navUl.css({"animation": "none"})}, 400);
-
-            // if the nav is open
-            } else {
-
-                // hide the nav
-                app.elements.body.removeClass("nav-open");
-                app.elements.hamButton.removeClass("hamburger-active");
-                app.elements.navName.css({"visibility": "hidden"})
-                app.elements.hamIcon.css({
-                        "transform": "rotate(0deg)"
-                    })
-                app.elements.navUl.css({"animation": "fade-out 0.4s"});
-
-                // after the nav is finished hiding (0.4s), reset the values
-                setTimeout(() => {
-                    app.elements.navUl.css({
-                            "display": "none",
-                            "animation": "none",
-                            "opacity": "0",
-                        })
-                }, 400)
-            }
+        // toggle classes to hide or show the nav
+        toggleNav: () => {
+            app.elements.body.toggleClass("nav-open");
+            app.elements.nav.toggleClass("active");
         },
 
-        // nav closing
-        closeNav: () => {
+        // smoothly scroll to location
+        scroll: (direction) => {
 
-            // reset the nav styling
-            app.elements.body.removeClass("nav-open")
-            app.elements.hamButton.removeClass("hamburger-active")
-            app.elements.navName.css({"visibility": "hidden"})
-            app.elements.hamIcon.css({"transform": "rotate(0deg)"})
+            // establish an empty variable
+            let location = "";
 
-            // if the window is bigger than the tablet breakpoint
-            if (window.innerWidth >= 970) {
+            // if the direction is "top", set the location to the top of the page
+            if (direction === "top") {location = 0}
 
-                // show the nav
-                app.elements.navUl.css({
-                    "display": "flex",
-                    "opacity": "1"
-                })
-            
-            // if the window is smaller
-            } else {
+            // if the direction is anything else, set the location to the top of that section
+            else {location = app.elements[direction].offset().top}
 
-                // hide the nav
-                app.elements.navUl.css({
-                    "display": "none",
-                    "opacity": "0"
-                })
-            }
-        },
-
-        // scroll down button
-        scrollDown: (section) => {
-
-            // smoothly scroll down to the top of the specified section
-            window.scrollTo({
-                top: section.offset().top,
-                behavior: "smooth",
-            })
-        },
-
-        // scroll to top button
-        scrollTop: () => {
-
-            // smoothly scroll up to the top of the browser window
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            })
+            // smoothly scroll to the location
+            window.scrollTo({top: location, behavior: "smooth"})
         },
         
         // displaying the projects
         projectDisplay: (category) => {
+
+            // initialize the project array
+            let projectArray = []
 
             // save the parameter as the project category value
             app.projects.category = category
@@ -137,6 +66,7 @@ let app = {
 
             // sort the project categories
             projectCategories = projectCategories.sort((a, b) => {
+
                 // put 'all' first
                 if (a === "All") {return -1}
                 else if (b === "All") {return 1}
@@ -169,11 +99,8 @@ let app = {
                 // stitch the html for each of the categories together and add to the projects nav
                 app.elements.projectsNav.html(`<p>Filter by:</p><ul class="project-categories">` + projectCategories.reduce((accumulator, language) => {return accumulator + language}) + `</ul></h3>`);
             }
-            
-            // initialize the project array
-            let projectArray = []
 
-            // then sort the projects by year
+            // sort the projects by year
             let sortedByYear = app.projects.data.sort((a, b) => {
                 if (b.year > a.year) {return 1}
                 if (a.year < b.year) {return -1}
@@ -183,7 +110,7 @@ let app = {
             // if the selected category is 'all', fill the array with the sorted projects
             if (app.projects.category == "All") {projectArray = sortedByYear}
 
-            // else fill the array with the sorted projects filtered by the selected category
+            // if the selected category is anything else, fill the array with the sorted projects, filtered by the selected category
             else {projectArray = sortedByYear.filter((project) => project.stack.includes(app.projects.category))}
 
             // map out the sorted projects to the page
@@ -199,10 +126,10 @@ let app = {
                 }
 
                 // format the project heading
-                formattedProject.heading = `<h4>` + project.title + ` (` + project.year + `)</h4>`
+                formattedProject.heading = `<h3>` + project.title + ` (` + project.year + `)</h3>`
 
                 // format the project languages (sorted by year)
-                formattedProject.languages = `<h5>[ ` + project.stack.sort().reduce((accumulator, language) => {return accumulator +  ` | ` + language}) + ` ]</h5>`
+                formattedProject.languages = `<h4>[ ` + project.stack.sort().reduce((accumulator, language) => {return accumulator +  ` | ` + language}) + ` ]</h4>`
 
                 // if the project description exists
                 if (project.description.length > 0) {
@@ -225,46 +152,37 @@ let app = {
             })
 
             // stitch the html for each of the projects together and add that the projects container
-            app.elements.projects.html(formattedProjects.reduce((accumulator, project) => {return accumulator + project}))
+            app.elements.projectsContainer.html(formattedProjects.reduce((accumulator, project) => {return accumulator + project}))
 
             // for each project details section
             document.querySelectorAll(".project-details").forEach((project) => {
 
-                // if there's a read more button
                 if (project.querySelector(".read-more")) {
-
-                    // save the project description variables
-                    let line = project.querySelector("hr")
-                    let paragraph = project.querySelector("p")
                     let button = project.querySelector(".read-more")
-
-                    // and on read more button click, run read more function
-                    button.addEventListener("click", () => app.functions.readMore(line, paragraph, button))
+                    let paragraph = project.querySelector("p")
+    
+                    button.addEventListener("click", () => app.functions.readMore(project, paragraph, button))
                 }
             })
         },
 
         // read more button
-        readMore: (line, paragraph, button) => {
+        readMore: (project, paragraph, button) => {
 
             // if the paragraph has no height
             if (!paragraph.style.maxHeight){
 
                 // show the text and change the button to 'less'
-                paragraph.style.maxHeight = paragraph.scrollHeight + 'px';
-                line.style.display = "unset";
-                line.style.opacity = "1";
-                paragraph.style.opacity = "1";
+                project.classList.add("active");
+                paragraph.style.maxHeight = paragraph.scrollHeight + `px`;
                 button.innerText = "Read less";
 
             // if the paragraph is showing
             } else {
 
                 // hide the text and change the button to 'more'
-                paragraph.style.maxHeight = '';
-                line.style.opacity = "0";
-                line.style.display = "none";
-                paragraph.style.opacity = "0";
+                project.classList.remove("active");
+                paragraph.style.maxHeight = "";
                 button.innerText = "Read more";
                 button.blur();
             }
@@ -275,23 +193,16 @@ let app = {
     events: () => {
 
         // on the hamburger button click, run the hamburger function
-        app.elements.hamButton.click(app.functions.hamburger);
+        app.elements.hamburgerButton.click(app.functions.toggleNav);
 
-        // for each of the nav list item links, close the nav on click
-        document.querySelectorAll("nav ul li a").forEach((link) => link.addEventListener("click", app.functions.closeNav));
+        // for each of the nav list item links, toggle the nav on click
+        document.querySelectorAll("nav ul li a").forEach((link) => link.addEventListener("click", app.functions.toggleNav));
 
         // scroll up to top of browser window on button click
-        app.elements.scrollTopButton.click(app.functions.scrollTop)
+        app.elements.scrollTopButton.click(() => app.functions.scroll("top"))
 
         // scroll down to top of about section on button click
-        app.elements.scrollDownArrow.click(() => app.functions.scrollDown(app.elements.about))
-
-        // when the browser window size changes
-        window.addEventListener("resize", () => {
-
-            // close the nav
-            app.functions.closeNav();
-        })
+        app.elements.scrollDownButton.click(() => app.functions.scroll("about"))
     },
     
     // app initializion

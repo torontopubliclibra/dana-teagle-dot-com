@@ -230,112 +230,206 @@ html {
   overflow: hidden;
 }
 
-*, button {
-  font-family: "Source Code Pro", monospace;
-  font-display: swap;
+body, .button {
   font-size: 18px;
-  font-weight: 600;
+  text-align: left;
   line-height: 1;
   color: #282b2c;
-  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-display: swap;
+  font-weight: 600;
   text-transform: lowercase;
-}
-
-.button {
   text-decoration: none;
 }
 
-h1:hover, h1:focus, a:hover, a:focus, .button:hover, .button:focus {
+.highlight, .selected {
+  background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+  background-repeat: no-repeat;
+}
+
+.selected {
+  background-size: 100% 25%;
+  background-position: 0 95%;
   font-style: italic;
 }
 
-h2, h3, p {
-  text-align: left;
-}
-
-.project-details p {
-  text-align: center;
-}
-
-#about, #contact {
-  color: #f3e8e9;
-}
-
-h1 {
-  width: 100%;
-  font-size: 75px;
-  margin: 0;
+.highlight {
+  background-size: 100% 15%;
+  background-position: 0 97%;
 }
 @media only screen and (max-width: 970px) {
-  h1 {
-    max-width: 400px;
-    font-size: 50px;
-    margin: 0 auto;
+  .highlight {
+    background-size: 100% 10%;
+    background-position: 0 99%;
   }
 }
 
-h2, h3 {
+a {
+  font-size: 18px;
+  text-align: left;
+  line-height: 1;
+  color: #282b2c;
+  cursor: pointer;
+  transition: 0.4s color, 0.4s font-style;
+}
+a:hover, a:focus {
+  color: #B57E9B;
+  font-style: italic;
+}
+
+.button {
+  font-size: 18px;
+  text-align: left;
+  line-height: 1;
+  color: #282b2c;
+  background: #f3e8e9;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.4s color, 0.4s background, 0.4s font-style;
+}
+.button:hover, .button:focus {
+  color: #282b2c;
+  background: #B57E9B;
+  font-style: italic;
+}
+
+.scroll-down {
+  font-size: 75px;
+  text-align: center;
+  line-height: "";
+  color: #84A59D;
+  cursor: pointer;
+}
+.scroll-down:hover {
+  color: #B57E9B;
+}
+
+.ham-icon {
+  font-size: 25px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
+}
+
+.scroll-to-top {
+  font-size: 25px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: end;
+  width: auto;
+  margin: 10px;
+  background: #B57E9B;
+  cursor: pointer;
+}
+.scroll-to-top p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  color: #282b2c;
+  margin: 0;
+}
+.scroll-to-top:hover {
+  background: #84A59D;
+}
+
+nav ul li a {
+  text-decoration: none;
+  transition: 0.4s background;
+}
+nav ul li a:hover, nav ul li a:focus {
+  color: #282b2c;
+  background: #B57E9B;
+  outline: initial;
+}
+
+h1 {
+  font-size: 75px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
+  width: 100%;
+  margin: 0 auto;
+}
+h1:hover, h1:focus {
+  font-style: italic;
+}
+@media only screen and (max-width: 970px) {
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    line-height: 1;
+    color: #282b2c;
+    max-width: 400px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  text-align: left;
+  line-height: 1;
+  color: #282b2c;
+  margin: 0 auto 15px auto;
   width: 100%;
 }
 @media only screen and (max-width: 768px) {
-  h2, h3 {
+  h2 {
+    font-size: 30px;
+    text-align: left;
+    line-height: 1;
+    color: #282b2c;
     width: 85%;
     margin: 10px auto;
     padding: 0;
   }
 }
 
-h2 {
-  font-size: 40px;
-  margin: 0 auto 15px auto;
+h3 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
+  margin: 0;
+  padding: 20px 5px 20px 20px;
 }
-@media only screen and (max-width: 768px) {
-  h2 {
-    font-size: 30px;
-    margin: 0 auto;
-  }
+
+h4 {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
+  margin: 0;
+  padding: 0px 20px;
+}
+
+p {
+  margin: 0;
 }
 
 .projects-nav li {
   list-style-type: none;
   margin: 0;
 }
-.projects-nav li.selected {
-  font-style: italic;
-  background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 25%;
-  background-position: 0 95%;
-}
-.projects-nav li a {
-  cursor: pointer;
-}
-.projects-nav li a:hover {
-  color: #B57E9B;
+
+.project-details p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
 }
 
-.scroll-down {
-  font-size: 75px;
-}
-
-nav ul li a {
-  text-decoration: none;
-}
-nav ul li a:hover, nav ul li a:focus {
-  background: rgba(132, 165, 157, 0.7);
-  font-style: italic;
-  transition: 0.4s;
-  outline: initial;
-}
-nav .ham-icon {
-  font-size: 25px;
-}
-
-.scroll-to-top {
-  font-size: 25px;
-}
-.scroll-to-top p {
-  line-height: 1.5;
+footer .credit {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1;
+  color: #282b2c;
+  margin: 10px;
 }
 
 @keyframes fade-in {
@@ -367,35 +461,79 @@ nav .ham-icon {
     transform: translate(-50%, 0px);
   }
 }
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+body {
+  background: #f3e8e9;
+}
+@media only screen and (max-width: 970px) {
+  body.nav-open {
+    overflow-y: hidden;
+  }
+}
+
+#about, #contact {
+  background: #84A59D;
+}
+
+#about, #projects, #contact {
+  padding: 30px 0;
+}
+@media only screen and (max-width: 768px) {
+  #about, #projects, #contact {
+    padding: 70px 0;
+  }
+}
+
+hr {
+  width: 100%;
+  border: solid #B57E9B 2px;
+}
+@media only screen and (max-width: 768px) {
+  hr {
+    width: 85%;
+  }
+}
+
 header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 1000px;
   position: relative;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
+  min-height: 500px;
+  height: 100vh;
+  max-height: 1000px;
 }
 header nav .hamburger-btn {
   display: none;
 }
 @media only screen and (max-width: 970px) {
   header nav .hamburger-btn {
-    display: initial;
+    position: fixed;
     top: 0;
+    right: "";
+    bottom: "";
     left: 0;
-    width: 100%;
-    z-index: 5;
+    cursor: pointer;
     background: #84A59D;
     border-bottom: solid #f3e8e9 5px;
-    position: fixed;
+    display: initial;
+    width: 100%;
+    z-index: 5;
+    transition: 0.4s all;
   }
   header nav .hamburger-btn:hover, header nav .hamburger-btn:focus {
-    cursor: pointer;
     background: #B57E9B;
-    color: #84A59D;
-    transition: 0.4s;
-  }
-  header nav .hamburger-btn:hover button, header nav .hamburger-btn:focus button {
-    color: #84A59D;
-    cursor: pointer;
   }
   header nav .hamburger-btn button {
     background: none;
@@ -403,6 +541,9 @@ header nav .hamburger-btn {
     float: left;
     padding: 0 10px;
     height: 52px;
+  }
+  header nav .hamburger-btn button:hover, header nav .hamburger-btn button:focus {
+    cursor: pointer;
   }
   header nav .hamburger-btn button .ham-icon {
     margin: 10px;
@@ -416,26 +557,15 @@ header nav .hamburger-btn {
     min-height: 52px;
     padding: 15px 0;
   }
-  header nav .hamburger-btn.hamburger-active {
-    background: #f3e8e9;
-    border-bottom: solid #B57E9B 5px;
-    color: #84A59D;
-  }
-  header nav .hamburger-btn.hamburger-active button {
-    color: #84A59D;
-  }
-  header nav .hamburger-btn.hamburger-active button .ham-icon {
-    transform: rotate(90deg);
-  }
-  header nav .hamburger-btn.hamburger-active .nav-name {
-    visibility: visible;
-    animation: fade-in 0.4s;
-  }
 }
 header nav ul {
   display: flex;
-  opacity: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0;
   justify-content: space-between;
+  align-items: initial;
+  opacity: 1;
   width: 60%;
   margin: 0 auto 20px auto;
   padding: 20px 0 0 0;
@@ -446,87 +576,98 @@ header nav ul li a {
 }
 @media only screen and (max-width: 970px) {
   header nav ul {
-    display: none;
-    position: fixed;
-    right: 0;
-    padding-top: 60px;
-    flex-flow: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0;
     justify-content: center;
-    background: #84A59D;
-    height: 100vh;
+    align-items: initial;
+    position: fixed;
+    top: "";
+    right: 0;
+    bottom: initial;
+    left: initial;
+    display: none;
     opacity: 0;
     width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+    background: #84A59D;
     z-index: 3;
   }
   header nav ul li {
     display: block;
-    padding: 20px;
     width: 100%;
+    padding: 20px;
   }
-  header nav ul li a {
-    color: #282b2c;
+}
+@media only screen and (max-width: 970px) {
+  header nav.active .hamburger-btn {
+    background: #f3e8e9;
+    border-bottom: solid #B57E9B 5px;
   }
-  header nav ul li a:hover, header nav ul li a:focus {
-    background: rgba(181, 126, 155, 0.8);
+  header nav.active .hamburger-btn button .ham-icon {
+    transform: rotate(90deg);
+  }
+  header nav.active .hamburger-btn .nav-name {
+    visibility: hidden;
+    animation: 0.4s fade-in;
+  }
+  header nav.active .hamburger-btn .nav-name.active {
+    visibility: visible;
+  }
+  header nav.active ul {
+    display: flex;
+    animation: fade-in 0.4s;
+    opacity: 1;
   }
 }
 header .title {
-  width: 100%;
   position: absolute;
-  top: 48%;
+  top: 50%;
+  right: "";
+  bottom: "";
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   animation: 1s ease-in-out fade-in;
 }
 header .scroll-down {
   position: absolute;
+  top: "";
+  right: "";
   bottom: 10%;
   left: 50%;
   animation: 4s infinite ease-in-out pulse;
-}
-header .scroll-down:hover {
-  cursor: pointer;
   transition: 0.4s;
 }
-header .scroll-down i {
-  color: #84A59D;
-}
-header .scroll-down i:hover {
-  color: rgba(181, 126, 155, 0.8);
-}
 
-#about {
-  padding: 30px 0;
-}
 #about .wrapper {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 5%;
+  justify-content: "";
+  align-items: center;
 }
 @media only screen and (max-width: 970px) {
   #about .wrapper {
-    flex-flow: column nowrap;
+    flex-direction: column;
   }
 }
 #about .about-content {
-  background: rgba(243, 232, 233, 0.8);
-  border: solid #B57E9B 5px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+  justify-content: initial;
+  align-items: initial;
+  background: rgba(243, 232, 233, 0.8);
+  border: solid #B57E9B 5px;
   max-width: 100%;
   width: 95%;
   padding: 20px;
   margin: 0 auto 20px auto;
-  text-align: left;
-}
-#about .about-content p {
-  margin: 0;
-}
-#about .about-content a:hover, #about .about-content a:focus {
-  color: #B57E9B;
-  transition: 0.4s;
 }
 @media only screen and (max-width: 970px) {
   #about .about-content {
@@ -539,96 +680,91 @@ header .scroll-down i:hover {
   }
 }
 
-#projects {
-  padding: 30px 0;
-}
 #projects .projects-nav {
-  width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 10px;
+  justify-content: initial;
+  align-items: initial;
+  width: 100%;
   margin: 20px 0;
 }
-#projects .projects-nav p {
-  margin: 0;
-}
 #projects .projects-nav .project-categories {
-  padding: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 10px;
+  justify-content: initial;
+  align-items: initial;
+  padding: 0;
   margin: 0;
 }
 #projects .projects-container {
-  max-width: 95%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 10px;
-  text-align: left;
+  justify-content: center;
+  align-items: initial;
+  max-width: 95%;
   margin: 0 auto;
   padding-bottom: 20px;
 }
 #projects .projects-container .project {
-  text-align: center;
+  background: #84A59D;
+  border: solid #B57E9B 5px;
   height: 100%;
   width: calc(50% - 5px);
   max-width: 550px;
-  background: #84A59D;
-  border: solid #B57E9B 5px;
   margin: 0;
-}
-#projects .projects-container .project h4, #projects .projects-container .project h5 {
-  margin: 0;
-  padding: 0px 20px;
-}
-#projects .projects-container .project h4 {
-  padding-top: 20px;
-  padding-bottom: 5px;
 }
 #projects .projects-container .project .project-details {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0;
   justify-content: center;
+  align-items: initial;
   padding: 20px;
   overflow: hidden;
 }
 #projects .projects-container .project .project-details .button {
-  cursor: pointer;
   margin: 5px;
 }
 #projects .projects-container .project .project-details hr {
   display: none;
   margin: 20px 0;
   opacity: 0;
-  transition: opacity 0.4s;
 }
 #projects .projects-container .project .project-details p {
-  margin: 0;
   width: 100%;
   max-height: 0;
   opacity: 0;
-  transition: opacity, max-height 0.4s;
+  transition: max-height 0.4s;
+}
+#projects .projects-container .project .project-details.active p {
+  opacity: 1;
+}
+#projects .projects-container .project .project-details.active hr {
+  display: unset;
+  opacity: 1;
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-nav {
     display: flex;
-    flex-flow: column wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0;
+    justify-content: initial;
+    align-items: initial;
   }
   #projects .projects-nav .project-categories {
-    padding: 10px 0;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-  }
-  #projects .project-categories {
-    display: block;
     width: 100%;
-    text-align: left;
+    padding: 10px 0;
   }
   #projects .projects-container {
-    flex-flow: column;
+    flex-direction: column;
     width: 550px;
     max-width: 85%;
   }
@@ -644,30 +780,24 @@ header .scroll-down i:hover {
 }
 
 #contact {
-  margin-bottom: 10px;
   padding: 30px 0;
 }
 #contact .contact-content {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
-  text-align: left;
-  width: 95%;
+  justify-content: initial;
+  align-items: initial;
   background: rgba(243, 232, 233, 0.8);
   border: solid #B57E9B 5px;
+  width: 95%;
   padding: 20px;
   margin: 0 auto;
 }
-#contact .contact-content p {
-  margin: 0;
-}
-#contact .contact-content p a:hover, #contact .contact-content p a:focus {
-  color: #B57E9B;
-  transition: 0.4s;
-}
 @media only screen and (max-width: 768px) {
   #contact {
-    padding: 70px 0 50px 0;
+    padding: 70px 0;
   }
   #contact .contact-content {
     width: 85%;
@@ -675,94 +805,12 @@ header .scroll-down i:hover {
   }
 }
 
-.wrapper {
-  max-width: 1260px;
-  width: 90%;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 768px) {
-  .wrapper {
-    width: 100%;
-  }
-}
-
-body {
-  background-color: #f3e8e9;
-}
-@media only screen and (max-width: 970px) {
-  body.nav-open {
-    overflow-y: hidden;
-  }
-}
-
-#about, #contact {
-  background: #84A59D;
-}
-
-@media only screen and (max-width: 768px) {
-  #about, #projects, #contact {
-    padding: 70px 0px;
-  }
-}
-
-hr {
-  width: 100%;
-  border: solid #B57E9B 2px;
-}
-@media only screen and (max-width: 768px) {
-  hr {
-    width: 85%;
-  }
-}
-
-.button {
-  background: #f3e8e9;
-  border: none;
-  padding: 10px 25px;
-}
-.button:hover, .button:focus {
-  background: #B57E9B;
-  transition: 0.4s;
-}
-
-.highlight {
-  background: linear-gradient(120deg, rgba(181, 126, 155, 0.7) 0%, rgba(181, 126, 155, 0.7) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 15%;
-  background-position: 0 97%;
-}
-@media only screen and (max-width: 970px) {
-  .highlight {
-    background-size: 100% 10%;
-    background-position: 0 99%;
-  }
-}
-
 footer .wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  gap: 0;
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
-footer .wrapper .scroll-to-top {
-  background: #B57E9B;
-  width: auto;
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  justify-content: center;
-  gap: 10px;
-}
-footer .wrapper .scroll-to-top p {
-  margin: 0;
-}
-footer .wrapper .scroll-to-top:hover {
-  background: #84A59D;
-  cursor: pointer;
-}
-footer .wrapper .credit {
-  margin: 10px;
-  text-align: center;
 }
