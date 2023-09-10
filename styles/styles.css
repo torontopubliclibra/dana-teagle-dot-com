@@ -316,7 +316,7 @@ h2 {
   flex-direction: row;
   gap: 10px;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   width: auto;
   margin: 10px;
   background: #B57E9B;

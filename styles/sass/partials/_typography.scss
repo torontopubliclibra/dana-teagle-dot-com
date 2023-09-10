@@ -73,7 +73,7 @@ h2 {
 // scroll to top button
 .scroll-to-top {
   @include textStyle (25px, center);
-  @include flex(row, 10px, center, end);
+  @include flex(row, 10px, center, flex-end);
   width: auto;
   margin: 10px;
   background: $color2;
