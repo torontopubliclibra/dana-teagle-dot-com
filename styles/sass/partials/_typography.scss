@@ -12,6 +12,11 @@ body, .button {
   text-decoration: none;
 }
 
+.button:hover, .button:focus {
+  color: $black;
+  font-style: italic;
+}
+
 // highlighted text
 .highlight, .selected {
   background: linear-gradient(120deg, $color2 0%, $color2 100%);
@@ -68,7 +73,7 @@ h2 {
 // scroll to top button
 .scroll-to-top {
   @include textStyle (25px, center);
-  @include flex(row, 10px, center, end);
+  @include flex(row, 10px, center, flex-end);
   width: auto;
   margin: 10px;
   background: $color2;
