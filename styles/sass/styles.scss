@@ -1,90 +1,342 @@
+// import all partials
 @use 'partials/setup';
 @use 'partials/variables' as *;
+@use 'partials/mixins' as *;
 @use 'partials/typography' as *;
 @use 'partials/animations';
-@use 'partials/header';
-@use 'partials/about';
-@use 'partials/skills';
-@use 'partials/projects';
-@use 'partials/contact';
-@use 'partials/contact-success';
 
-// default body styles
-body {
-    animation: 7s infinite ease-in-out gradient;
-    background-color: $snow;
-    // background: linear-gradient(130deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
-    background-size: 300% 300%;
-    color: $color1;
-    text-align: center;
-    &.nav-open {
-        overflow-y: hidden;
-    }
-}
-
-// wrapper styles
+// default wrapper
 .wrapper {
     max-width: 1260px;
     width: 90%;
     margin: 0 auto;
+
+    // reponsive to mobile
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+    }
 }
 
-// highlight effect
-.highlight {
-    padding: 0px 3px;
-    color: $black;
-    background: linear-gradient(120deg, rgba($color2, 0.4) 0%, rgba($color2, 0.4) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 25%;
-    background-position: 0 90%;
+// body background and overflow
+body {
+    background: $white;
+
+    // responsive to mobile
+    @media only screen and (max-width: $tablet) {
+        &.nav-open {
+            overflow-y: hidden;
+        }
+    }
 }
 
 // section backgrounds
-.about, .projects, footer {
-    background-color: $color1;
-    // background-image: url("../assets/stripes.png");
-    color: $snow;
+#about, #contact {
+    background: $color1;
 }
 
-// footer styles
-footer .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    .button {
-        width: auto;
-        margin: 10px;
-        display: flex;
-        flex-direction: row;
-        align-items: end;
-        justify-content: center;
-        gap: 10px;
-        &:hover {
-            background: $snow;
-            color: $color1;
-            cursor: pointer;
+// section padding
+#about, #projects, #contact {
+    padding: 30px 0;
+
+    // reponsive to mobile
+    @media only screen and (max-width: $mobile) {
+        padding: 70px 0;
+    }
+}
+
+// horizontal lines
+hr {
+    width: 100%;
+    border: solid $color2 2px;
+
+    // reponsive to mobile
+    @media only screen and (max-width: $mobile) {
+        width: 85%;
+    }
+}
+
+// header section
+header {
+    @include positioning(relative);
+    min-height: 500px;
+    height: 100vh;
+    max-height: 1000px;
+
+    // navigation
+    nav {
+
+        // hamburger button
+        .hamburger-btn {
+            display: none;
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                @include positioning(fixed, 0, "", "", 0);
+                cursor: pointer;
+                background: $color1;
+                border-bottom: solid $white 5px;
+                display: initial;
+                width: 100%;
+                z-index: 5;
+                transition: 0.4s all;
+                &:hover, &:focus {
+                    background: $color2;
+                }
+                button {
+                    background: none;
+                    border: none;
+                    float: left;
+                    padding: 0 10px;
+                    height: 52px;
+                    &:hover, &:focus {
+                        cursor: pointer;
+                    }
+                    .ham-icon {
+                        margin: 10px;
+                        transform: rotate(0deg);
+                        transition: transform 0.4s;
+                    }
+                }
+                .nav-name {
+                    visibility: hidden;
+                    float: right;
+                    margin: 0 10px;
+                    min-height: 52px;
+                    padding: 15px 0;
+                }
+            }
         }
-        i {
-            font-size: 25px;
+
+        // nav list
+        ul {
+            @include flex(row, 0, space-between);
+            opacity: 1;
+            width: 60%;
+            margin: 0 auto 20px auto;
+            padding: 20px 0 0 0;
+            list-style: none;
+            li a {
+                padding: 10px 20px;
+            }
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                @include flex (column, 0, center);
+                @include positioning (fixed, "", 0);
+                display: none;
+                opacity: 0;
+                width: 100%;
+                height: 100vh;
+                padding-top: 60px;
+                background: $color1;
+                z-index: 3;
+                li {
+                    display: block;
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
         }
-        p {
+        &.active {
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                .hamburger-btn {
+                    background: $white;
+                    border-bottom: solid $color2 5px;
+                    button {
+                        .ham-icon {
+                        transform: rotate(90deg);
+                        }
+                    }
+                    .nav-name {
+                        visibility: hidden;
+                        animation: 0.4s fade-in;
+                        &.active {
+                            visibility: visible;
+                        }
+                    }
+                }
+                ul {
+                    display: flex;
+                    animation: fade-in 0.4s;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // main title
+    .title {
+        @include positioning (absolute, 50%, "", "", 50%);
+        width: 100%;
+        transform: translate(-50%, -50%);
+        animation: 1s ease-in-out fade-in;
+    }
+
+    // scroll down button
+    .scroll-down {
+        @include positioning (absolute, "", "", 10%, 50%);
+        animation: 4s infinite ease-in-out pulse;
+        transition: 0.4s;
+    }
+}
+
+// about section
+#about {
+
+    // wrapper
+    .wrapper {
+        @include flex(row, 5%, "", center);
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    // content container
+    .about-content {
+        @include flex(column, 20px);
+        @include borderedBox(rgba($white, 0.8), $color2);
+        max-width: 100%;
+        width: 95%;
+        padding: 20px;
+        margin: 0 auto 20px auto;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            margin-top: 20px;
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            width: 85%;
+        }
+    }
+}
+
+// projects
+#projects {
+
+    .projects-nav {
+        @include flex(row, 10px);
+        width: 100%;
+        margin: 20px 0;
+        .project-categories {
+            @include flex(row, 10px);
+            padding: 0;
             margin: 0;
         }
     }
-    .credit {
-        margin: 10px;
+    
+    // projects container
+    .projects-container {
+        @include flex(row, 10px, center);
+        max-width: 95%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        // individual projects
+        .project {
+            @include borderedBox($color1, $color2);
+            height: 100%;
+            width: calc(50% - 5px);
+            max-width: 550px;
+            margin: 0;
+
+            // project details
+            .project-details {
+                @include flex(row, 0, center);
+                padding: 20px;
+                overflow: hidden;
+                .button {
+                    margin: 5px;
+                }
+                hr {
+                    display: none;
+                    margin: 20px 0;
+                    opacity: 0;
+                }
+                p {
+                    width: 100%;
+                    max-height: 0;
+                    opacity: 0;
+                    transition: max-height 0.4s;
+                }
+                &.active {
+                    p {
+                        opacity: 1;
+                    }
+                    hr {
+                        display: unset;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    // responsive to tablet
+    @media only screen and (max-width: $tablet) {
+
+        .projects-nav {
+            @include flex(column);
+    
+            // project categories
+            .project-categories {
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+
+        // projects container
+        .projects-container {
+            flex-direction: column;
+            width: 550px;
+            max-width: 85%;
+
+            // individual projects
+            .project {
+                width: 100%;
+            }
+        }
+    }
+
+    // responsive to mobile
+    @media only screen and (max-width: $mobile) {
+        .projects-nav {
+            width: 85%;
+            margin: 20px auto;
+        }
     }
 }
 
-// screens smaller than 768px
-@media only screen and (max-width: 768px) {
-    body {
-        // background: linear-gradient(100deg, $color2 0%, $color3 20%, $color4 60%, $color4 80%, $color2 100%);
-        background-size: 300% 300%;
+// contact section
+#contact {
+    padding: 30px 0;
+
+    // content container
+    .contact-content {
+        @include flex(column, 20px);
+        @include borderedBox(rgba($white, 0.8), $color2);
+        width: 95%;
+        padding: 20px;
+        margin: 0 auto;
     }
-    .wrapper {
-        width: 100%;
+    // responsive to mobile
+    @media only screen and (max-width: $mobile) {
+        padding: 70px 0;
+
+        // content container
+        .contact-content {
+            width: 85%;
+            margin-top: 20px;
+        }
     }
+}
+
+// footer
+footer .wrapper {
+    @include flex(column, 0, center, center);
+    padding: 20px;
 }

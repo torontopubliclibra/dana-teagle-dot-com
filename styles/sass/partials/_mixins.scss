@@ -1,0 +1,32 @@
+// import variables
+@use "variables" as *;
+
+// flexbox mixin
+@mixin flex ($direction, $gap: 0, $justify: initial, $align: initial) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin positioning ($position, $top: initial, $right: initial, $bottom: initial, $left: initial) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin borderedBox ($backgroundColour, $borderColour) {
+    background: $backgroundColour;
+    border: solid $borderColour 5px;
+}
+
+@mixin textStyle ($size, $alignment: left, $lineHeight: 1, $colour: $black) {
+    font-size: $size;
+    text-align: $alignment;
+    line-height: $lineHeight;
+    color: $colour;
+}
