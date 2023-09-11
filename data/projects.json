@@ -38,7 +38,7 @@
             "On game start, the character objects are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. Game play continues until one of the decks is empty."
         ],
         "site": "/superhero",
-        "repo": "https://github.com/torontopubliclibra/dana-teagle-project-three"
+        "repo": "https://github.com/torontopubliclibra/superhero-showdown"
     },
     "The Pigeon Hole": {
         "year": "2022",

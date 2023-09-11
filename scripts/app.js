@@ -51,20 +51,15 @@ let app = {
         // keyboard support for scroll
         scrollOnEnter: (keyCode, direction) => {
 
-            // store the code for the key the user pressed
+            // store the codes for both the key pressed and the enter key
             let key = keyCode;
-
-            // store the code for the enter key
             let enter = 13;
         
             // if a key is pressed but it is not the enter key, behave normally
-            if (key && (key !== enter)) {
-                return;
+            if (key && (key !== enter)) {return}
         
-            // if a key is pressed and it is the enter ke, scroll to the direction specified
-            } else {
-                app.functions.scroll(direction);
-            }
+            // if a key is pressed and it is the enter key, scroll to the direction specified
+            else {app.functions.scroll(direction)}
         },
         
         // displaying the projects
