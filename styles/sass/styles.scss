@@ -164,14 +164,11 @@ header {
                     width: 100%;
                     padding: 20px;
                     margin-bottom: 20px;
-                    &:focus, &:hover {
-                        border-bottom: solid $black 5px;
-                        transition: 0.5s;
-                    }
                 }
             }
         }
         &.active {
+
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
                 .hamburger-btn {
@@ -182,11 +179,8 @@ header {
                         }
                     }
                     .nav-name {
-                        visibility: hidden;
-                        animation: 0.4s fade-in;
-                        &.active {
-                            visibility: visible;
-                        }
+                        visibility: visible;
+                        animation: fade-in 0.4s;
                     }
                 }
                 ul {

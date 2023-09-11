@@ -637,10 +637,6 @@ header nav ul li a {
     padding: 20px;
     margin-bottom: 20px;
   }
-  header nav ul li a:focus, header nav ul li a:hover, header nav ul li a:focus:focus, header nav ul li a:focus:hover, header nav ul li a:hover:focus, header nav ul li a:hover:hover {
-    border-bottom: solid #282b2c 5px;
-    transition: 0.5s;
-  }
 }
 @media only screen and (max-width: 970px) {
   header nav.active .hamburger-btn {
@@ -650,11 +646,8 @@ header nav ul li a {
     transform: rotate(90deg);
   }
   header nav.active .hamburger-btn .nav-name {
-    visibility: hidden;
-    animation: 0.4s fade-in;
-  }
-  header nav.active .hamburger-btn .nav-name.active {
     visibility: visible;
+    animation: fade-in 0.4s;
   }
   header nav.active ul {
     display: flex;
