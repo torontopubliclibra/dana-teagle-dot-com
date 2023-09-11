@@ -35,13 +35,17 @@ body, .button {
 // link typography
 a {
   @include textStyle (18px);
-  cursor: pointer;
   transition: 0.4s color, 0.4s font-style;
   &:hover, &:focus {
-      color: $color2;
-      font-style: italic;
+    cursor: pointer;
+    color: $color2;
+    font-style: italic;
   }
-  
+}
+
+.button, nav ul li a {
+  user-select: none;
+
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
     font-style: italic;
@@ -108,9 +112,10 @@ nav {
 
 // title
 h1 {
-  @include textStyle (75px, center);
+  @include textStyle (75px, center, 1);
   width: 100%;
   margin: 0 auto;
+  user-select: none;
   &:hover, &:focus {
     font-style: italic;
     transition: 0.4s;
@@ -118,14 +123,14 @@ h1 {
 
   // responsive to tablet
   @media only screen and (max-width: $tablet) {
-    @include textStyle (65px, center);
+    @include textStyle (65px, center, 1);
     max-width: 500px;
     font-style: italic;
   }
 
   // responsive to mobile
   @media only screen and (max-width: $mobile) {
-    @include textStyle (50px, center);
+    @include textStyle (50px, center, 1);
     max-width: 400px;
   }
 }
@@ -146,13 +151,17 @@ h2 {
 }
 
 h3 {
-  @include textStyle (20px, center);
+  @include textStyle (20px, center, 1.5);
   margin: 0;
   padding: 20px 5px 20px 20px;
 }
 
 p {
   margin: 0;
+}
+
+.project .button {
+  font-size: 16px;
 }
 
 // project categories nav
@@ -165,7 +174,7 @@ p {
   // responsive to tablet
   @media only screen and (max-width: $tablet) {
     p, li, li a {
-      font-size: 16px;
+      @include textStyle (16px, "", 1);
       font-style: normal;
     }
     .selected {

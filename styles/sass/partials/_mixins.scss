@@ -24,7 +24,7 @@
     border: solid $borderColour 5px;
 }
 
-@mixin textStyle ($size, $alignment: left, $lineHeight: 1, $colour: $black) {
+@mixin textStyle ($size, $alignment: left, $lineHeight: 1.25, $colour: $black) {
     font-size: $size;
     text-align: $alignment;
     line-height: $lineHeight;
