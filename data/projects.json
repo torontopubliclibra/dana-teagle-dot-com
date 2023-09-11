@@ -1,16 +1,14 @@
 {
-    "Queer Walk / Pytheas": {
+    "Queer Walk [Pytheas]": {
         "year": "2023",
         "stack": [
             "React",
-            "TypeScript",
-            "Emotion",
-            "Jotai"
+            "TypeScript"
         ],
         "description": [
-            "This application is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built between May and August 2023 as an implementation of the open-source Pytheas codebase.",
-            "I was the lead developer on this project, working alongside Haley Tibbitts, and our project manager, Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for this tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
-            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the Pytheas project."
+            "This is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It is an implementation of the open-source Pytheas application, written in Typescript using the React, Emotion, Jotai, and Leaflet librares, and the OpenRouteService API.",
+            "I was the lead developer on Queer Walk, working from May to August 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
+            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source codebase."
         ],
         "site": "https://queerwalk.ca",
         "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -23,8 +21,7 @@
             "SASS"
         ],
         "description": [
-            "This is a notes application written in Typescript using the Angular framework that I originally built in February 2023.",
-            "The site allows the user to save up to 12 notes between 1-85 characters in length, each in the colour of their choice (pink, purple, green, or yellow). It uses the Angular local storage API to save the data client-side so the notes are persistent until the user's browser cache is cleared."
+            "This is a web application for storing short text notes to revisit later, written in Typescript and SASS using the Angular framework. The user can save up to 12 notes between 1-85 characters in length, each in the colour of their choice (pink, purple, green, or yellow). The site has a background decorated in pigeons, and offers both light and dark themes. Using the Angular local storage API, all data is saved client-side so the notes and selected theme are persistent until the browser cache is cleared. I built it over a weekend in February 2023."
         ],
         "site": "https://pigeon-pad.netlify.app/",
         "repo": "https://github.com/torontopubliclibra/pigeon-pad"
@@ -34,12 +31,11 @@
         "stack": [
             "React",
             "JavaScript",
-            "CSS",
-            "Firebase"
+            "CSS"
         ],
         "description": [
-            "This is a statistics-based card game that I originally built in October and November 2022 during my time at Juno College. The site was built as a single-page application using the React library, using data pulled from the Marvel Database Wiki and stored in a database on Firebase.",
-            "On game start, 20 superhero character objects with various statistics are pulled from the database, shuffled, and dealt into 2 decks of 10 cards each—one for the player and one for the computer. Each round, the player chooses the stat from their card that they think is larger than the computer's and the winner of the challenge gets both cards. Gameplay continues until one deck is out of cards."
+            "This is a statistics-based card game that I originally built in October and November 2022 during my time at Juno College, written in JavaScript and CSS using the React library. The site uses a data set of superhero character objects stored in Firebase, each with statistics pulled from the Marvel Database Wiki.",
+            "On game start, the character objects are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. Game play continues until one of the decks is empty."
         ],
         "site": "/superhero",
         "repo": "https://github.com/torontopubliclibra/dana-teagle-project-three"
@@ -52,7 +48,7 @@
             "CSS"
         ],
         "description": [
-            "This is an API project that I originally built with HTML and jQuery in July 2022 during my time at Juno College. The app displays photos of pigeons in different cities, retrieved from the Flickr API, based on the user's selection or by random."
+            "This is an application for looking at photos of pigeons in different cities around the world. It is written in HTML, jQuery, and CSS, uses the Flickr API, and was originally built in July 2022 during my time at Juno College. The site retrieves JSON data objects representing images of pigeons based on the user's selection of a city or by random, it shuffles through those image objects, and then it displays one of the photos on the page."
         ],
         "site": "/pigeon",
         "repo": "https://github.com/torontopubliclibra/the-pigeon-hole"
@@ -65,7 +61,7 @@
             "SASS"
         ],
         "description": [
-            "This is a website I originally built in November 2022, for Sydney's editing and writing coaching business. The features of the site include a Javascript hamburger menu and a contact form."
+            "This is a website for Sydney Gautreau's editing and writing coaching business, written in HTML, JavaScript, and SASS, and originally built in November 2022."
         ],
         "site": "https://sydneygautreau.com",
         "repo": "https://github.com/torontopubliclibra/sydney-gautreau"

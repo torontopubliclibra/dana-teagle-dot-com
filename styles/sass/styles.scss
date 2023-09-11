@@ -260,6 +260,7 @@ header {
             .project-details {
                 @include flex(row, 0, center);
                 padding: 20px;
+                padding-top: 0;
                 overflow: hidden;
                 .button {
                     padding: 10px 20px;

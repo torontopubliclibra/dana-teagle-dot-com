@@ -128,9 +128,6 @@ let app = {
                 // format the project heading
                 formattedProject.heading = `<h3>` + project.title + ` (` + project.year + `)</h3>`
 
-                // format the project languages (sorted by year)
-                formattedProject.languages = `<h4>[ ` + project.stack.sort().reduce((accumulator, language) => {return accumulator +  ` | ` + language}) + ` ]</h4>`
-
                 // if the project description exists
                 if (project.description.length > 0) {
                     
