@@ -157,22 +157,26 @@ let app = {
             // for each project details section
             document.querySelectorAll(".project-details").forEach((project) => {
 
+                // if the project has a read more button
                 if (project.querySelector(".read-more")) {
+
+                    // store the button and paragraph in variables
                     let button = project.querySelector(".read-more")
                     let paragraph = project.querySelector("p")
     
+                    // run the read more function on the click of the button
                     button.addEventListener("click", () => app.functions.readMore(project, paragraph, button))
                 }
             })
         },
 
-        // read more button
+        // read more function
         readMore: (project, paragraph, button) => {
 
-            // if the paragraph has no height
+            // if the paragraph isn't showing
             if (!paragraph.style.maxHeight){
 
-                // show the text and change the button to 'less'
+                // reveal the paragraph and change the button text
                 button.classList.add("read-less");
                 button.innerText = "Read less";
                 project.classList.add("active");
@@ -181,13 +185,13 @@ let app = {
             // if the paragraph is showing
             } else {
 
-                // hide the text and change the button to 'more'
+                // hide the paragraph and change the button text
                 button.classList.remove("read-less");
                 button.innerText = "Read more";
                 project.classList.remove("active");
                 paragraph.style.maxHeight = "";
                 
-                // blur the button after scroll
+                // blur the button after paragraph is hidden
                 document.activeElement.blur();
             }
         }
