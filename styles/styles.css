@@ -242,11 +242,6 @@ body, .button {
   text-decoration: none;
 }
 
-.button:hover, .button:focus {
-  color: #282b2c;
-  font-style: italic;
-}
-
 .highlight, .selected {
   background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
   background-repeat: no-repeat;
@@ -494,9 +489,11 @@ hr {
   border: none;
   padding: 10px 25px;
 }
-.button:hover, .button:focus {
+.button:hover, .button:focus, .button.read-less {
   cursor: pointer;
   background: #B57E9B;
+  color: #282b2c;
+  font-style: italic;
   transition: 0.4s;
 }
 

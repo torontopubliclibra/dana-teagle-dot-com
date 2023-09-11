@@ -12,11 +12,6 @@ body, .button {
   text-decoration: none;
 }
 
-.button:hover, .button:focus {
-  color: $black;
-  font-style: italic;
-}
-
 // highlighted text
 .highlight, .selected {
   background: linear-gradient(120deg, $color2 0%, $color2 100%);
