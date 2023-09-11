@@ -189,6 +189,11 @@ h3 {
 // project descriptions
 .project-details p {
   @include textStyle (18px, center);
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    @include textStyle (16px, center);
+  }
 }
 
 // footer text
