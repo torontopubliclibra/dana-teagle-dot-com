@@ -43,6 +43,9 @@ let app = {
 
             // smoothly scroll to the location
             window.scrollTo({top: location, behavior: "smooth"})
+
+            // blur the button after scroll
+            document.activeElement.blur();
         },
         
         // displaying the projects
@@ -172,6 +175,7 @@ let app = {
                 // show the text and change the button to 'less'
                 project.classList.add("active");
                 paragraph.style.maxHeight = paragraph.scrollHeight + `px`;
+                button.classList.add("read-less");
                 button.innerText = "Read less";
 
             // if the paragraph is showing
@@ -180,8 +184,11 @@ let app = {
                 // hide the text and change the button to 'more'
                 project.classList.remove("active");
                 paragraph.style.maxHeight = "";
+                button.classList.remove("read-less");
                 button.innerText = "Read more";
-                button.blur();
+                
+                // blur the button after scroll
+                document.activeElement.blur();
             }
         }
     },
