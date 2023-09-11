@@ -46,7 +46,6 @@ let app = {
 
             // blur the button after scroll
             document.activeElement.blur();
-            body.focus();
         },
         
         // displaying the projects
@@ -188,9 +187,9 @@ let app = {
                 button.classList.remove("read-less");
                 button.innerText = "Read more";
 
-                // blur the button after scroll
+                // blur the button after the paragraph goes away
                 document.activeElement.blur();
-                body.focus();
+                app.elements.projectsContainer.focus();
             }
         }
     },
