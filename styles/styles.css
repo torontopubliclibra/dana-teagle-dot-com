@@ -317,7 +317,7 @@ h2 {
 }
 
 .scroll-to-top {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
@@ -333,9 +333,9 @@ h2 {
   cursor: pointer;
 }
 .scroll-to-top p {
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.25;
   color: #282b2c;
   margin: 0;
 }
@@ -415,7 +415,7 @@ h3 {
   line-height: 1.5;
   color: #282b2c;
   margin: 0;
-  padding: 20px 5px 20px 20px;
+  padding: 20px;
 }
 
 p {
@@ -424,6 +424,11 @@ p {
 
 .project .button {
   font-size: 16px;
+}
+@media only screen and (max-width: 970px) {
+  .project .button {
+    font-size: 14px;
+  }
 }
 
 .projects-nav li {
@@ -783,10 +788,18 @@ header .scroll-down {
   padding: 20px;
   padding-top: 0;
   overflow: hidden;
+  gap: 10px;
 }
 #projects .projects-container .project .project-details .button {
   padding: 10px 15px;
-  margin: 5px;
+}
+@media only screen and (max-width: 970px) {
+  #projects .projects-container .project .project-details {
+    gap: 5px;
+  }
+  #projects .projects-container .project .project-details .button {
+    padding: 10px;
+  }
 }
 #projects .projects-container .project .project-details hr {
   border-color: #f3e8e9;

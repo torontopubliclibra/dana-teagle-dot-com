@@ -278,9 +278,16 @@ header {
                 padding: 20px;
                 padding-top: 0;
                 overflow: hidden;
+                gap: 10px;
                 .button {
                     padding: 10px 15px;
-                    margin: 5px;
+                }
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    gap: 5px;
+                    .button {
+                        padding: 10px;
+                    }
                 }
                 hr {
                     border-color: $white;

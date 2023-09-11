@@ -80,14 +80,14 @@ h2 {
 
 // scroll to top button
 .scroll-to-top {
-  @include textStyle (25px, center);
+  @include textStyle (20px, center);
   @include flex(row, 10px, center, flex-end);
   width: auto;
   margin: 10px;
   background: $color2;
   cursor: pointer;
   p {
-    @include textStyle (18px, center, 1.5);
+    @include textStyle (16px, center);
     margin: 0;
   }
   &:hover {
@@ -153,7 +153,7 @@ h2 {
 h3 {
   @include textStyle (20px, center, 1.5);
   margin: 0;
-  padding: 20px 5px 20px 20px;
+  padding: 20px;
 }
 
 p {
@@ -162,6 +162,11 @@ p {
 
 .project .button {
   font-size: 16px;
+
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    font-size: 14px;
+  }
 }
 
 // project categories nav
