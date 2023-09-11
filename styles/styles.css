@@ -263,6 +263,10 @@ body, .button {
   }
 }
 
+p {
+  margin: 0;
+}
+
 a {
   font-size: 18px;
   text-align: left;
@@ -285,12 +289,6 @@ a:hover, a:focus {
   .button, nav ul li a {
     font-style: italic;
   }
-}
-
-h2 {
-  font-size: 40px;
-  margin: 20px;
-  padding: 25px 25px 10px 25px;
 }
 
 .scroll-down {
@@ -416,10 +414,6 @@ h3 {
   color: #282b2c;
   margin: 0;
   padding: 20px;
-}
-
-p {
-  margin: 0;
 }
 
 .project .button {
