@@ -164,7 +164,7 @@ p {
   font-size: 16px;
 
   // responsive to tablet
-  @media only screen and (max-width: $tablet) {
+  @media only screen and (max-width: $mobile) {
     font-size: 14px;
   }
 }
@@ -192,8 +192,14 @@ p {
   @include textStyle (18px, center);
 }
 
-// credit text
-footer .credit {
-  @include textStyle (18px, center);
-  margin: 10px;
+// footer text
+footer {
+  .credit, p, a {
+    @include textStyle (18px, center);
+
+    // responsive to mobile
+    @media only screen and (max-width: $mobile) {
+      @include textStyle (16px, center);
+    }
+  }
 }

@@ -425,7 +425,7 @@ p {
 .project .button {
   font-size: 16px;
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 768px) {
   .project .button {
     font-size: 14px;
   }
@@ -455,12 +455,19 @@ p {
   color: #282b2c;
 }
 
-footer .credit {
+footer .credit, footer p, footer a {
   font-size: 18px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
-  margin: 10px;
+}
+@media only screen and (max-width: 768px) {
+  footer .credit, footer p, footer a {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.25;
+    color: #282b2c;
+  }
 }
 
 @keyframes fade-in {
