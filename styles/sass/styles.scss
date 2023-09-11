@@ -385,7 +385,10 @@ footer .wrapper {
             }
         }
     }
-    .credit {
-        margin-top: 30px;
+
+    hr {
+        margin: 30px 0;
+        border-color: $color1;
+        width: 80%;
     }
 }
