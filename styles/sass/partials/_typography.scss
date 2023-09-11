@@ -96,11 +96,12 @@ nav {
   // nav item links
   ul li a {
     text-decoration: none;
-    transition: 0.4s background;
+    border-bottom: solid $color1 3px;
     &:hover, &:focus {
       color: $black;
-      background: $color2;
+      border-bottom: solid $color2 3px;
       outline: initial;
+      transition: 0.4s;
     }
   }
 }
@@ -112,6 +113,7 @@ h1 {
   margin: 0 auto;
   &:hover, &:focus {
     font-style: italic;
+    transition: 0.4s;
   }
 
   // responsive to tablet
