@@ -143,6 +143,13 @@ p {
     list-style-type: none;
     margin: 0;
   }
+
+  // reponsive to tablet
+  @media only screen and (max-width: $tablet) {
+    p, li, li a {
+      font-size: 16px;
+    }
+  }
 }
 
 .project-details p {
