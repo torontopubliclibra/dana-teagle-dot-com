@@ -6,9 +6,9 @@
             "TypeScript"
         ],
         "description": [
-            "This is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It is an implementation of the open-source Pytheas application, written in Typescript using the React, Emotion, Jotai, and Leaflet librares, and the OpenRouteService API.",
+            "This is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It is an implementation of the open-source Pytheas application, written in Typescript using the React, Emotion, Jotai, and Leaflet libraries, and the OpenRouteService API.",
             "I was the lead developer on Queer Walk, working from May to August 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
-            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source codebase."
+            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source code base."
         ],
         "site": "https://queerwalk.ca",
         "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -48,7 +48,7 @@
             "CSS"
         ],
         "description": [
-            "This is an application for looking at photos of pigeons in different cities around the world. It is written in HTML, jQuery, and CSS, uses the Flickr API, and was originally built in July 2022 during my time at Juno College. The site retrieves JSON data objects representing images of pigeons based on the user's selection of a city or by random, it shuffles through those image objects, and then it displays one of the photos on the page."
+            "This is an application for viewing images of pigeons in different cities around the world. It is written in HTML, jQuery, and CSS, uses the Flickr API, and was originally built in July 2022 during my time at Juno College. The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page."
         ],
         "site": "/pigeon",
         "repo": "https://github.com/torontopubliclibra/the-pigeon-hole"
