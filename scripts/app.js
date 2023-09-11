@@ -173,19 +173,19 @@ let app = {
             if (!paragraph.style.maxHeight){
 
                 // show the text and change the button to 'less'
-                project.classList.add("active");
-                paragraph.style.maxHeight = paragraph.scrollHeight + `px`;
                 button.classList.add("read-less");
                 button.innerText = "Read less";
+                project.classList.add("active");
+                paragraph.style.maxHeight = paragraph.scrollHeight + `px`;
 
             // if the paragraph is showing
             } else {
 
                 // hide the text and change the button to 'more'
-                project.classList.remove("active");
-                paragraph.style.maxHeight = "";
                 button.classList.remove("read-less");
                 button.innerText = "Read more";
+                project.classList.remove("active");
+                paragraph.style.maxHeight = "";
                 
                 // blur the button after scroll
                 document.activeElement.blur();
