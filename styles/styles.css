@@ -445,10 +445,12 @@ footer .credit {
   max-width: 1260px;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 768px) {
   .wrapper {
     width: 100%;
+    margin-bottom: 10px;
   }
 }
 
