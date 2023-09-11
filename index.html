@@ -6,7 +6,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="dana teagle | front-end developer"/>
+    <meta name="description" content="Dana Teagle, Front-End Developer - Toronto, Ontario, Canada"/>
 
     <!-- title and icon -->
     <title>dana teagle | front-end developer</title>
@@ -54,7 +54,7 @@
 
         <!-- scroll down icon -->
         <div class="scroll-down" title="Scroll down the page">
-          <i class="fa fa-angle-down" tabindex="0"></i>
+          <i class="fa fa-angle-down" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')"></i>
         </div>
         
       </div>
@@ -135,7 +135,7 @@
         <hr/>
 
         <!-- scroll to top button -->
-        <div class="button scroll-to-top" title="Go back to top of page" tabindex="0">
+        <div class="button scroll-to-top" title="Go back to top of page" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
           <i class="fa fa-angle-up"></i>
           <p class="button-label">Back to top</p>
           <i class="fa fa-angle-up"></i>

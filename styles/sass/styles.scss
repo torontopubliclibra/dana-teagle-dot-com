@@ -31,7 +31,7 @@ body {
     }
 }
 
-// section backgrounds
+// coloured section backgrounds
 #about, #contact {
     background: $color1;
 }
@@ -168,6 +168,7 @@ header {
                 }
             }
         }
+        // nav list when active
         &.active {
 
             // responsive to tablet
@@ -246,10 +247,13 @@ header {
 // projects
 #projects {
 
+    // projects navigation
     .projects-nav {
         @include flex(row, 10px);
         width: 100%;
         margin: 20px 0;
+
+        // project categories
         .project-categories {
             @include flex(row, 10px);
             padding: 0;
@@ -282,6 +286,7 @@ header {
                 .button {
                     padding: 10px 15px;
                 }
+
                 // responsive to tablet
                 @media only screen and (max-width: $tablet) {
                     gap: 5px;
@@ -289,18 +294,24 @@ header {
                         padding: 10px;
                     }
                 }
+
+                // horizontal lines
                 hr {
                     border-color: $white;
                     display: none;
                     margin: 20px 0;
                     opacity: 0;
                 }
+                
+                // project paragraphs
                 p {
                     width: 100%;
                     max-height: 0;
                     opacity: 0;
                     transition: max-height 0.4s;
                 }
+
+                // project details when active
                 &.active {
                     p {
                         opacity: 1;
@@ -317,6 +328,7 @@ header {
     // responsive to tablet
     @media only screen and (max-width: $tablet) {
 
+        // projects navigation
         .projects-nav {
             @include flex(column);
     
@@ -342,6 +354,8 @@ header {
 
     // responsive to mobile
     @media only screen and (max-width: $mobile) {
+
+        // projects navigation
         .projects-nav {
             width: 85%;
             margin: 20px auto;
@@ -379,6 +393,7 @@ footer .wrapper {
     padding: 20px;
     margin: 20px auto;
 
+    // footer button
     .button {
         background: $color2;
         &:hover, &:focus {
@@ -393,6 +408,7 @@ footer .wrapper {
         }
     }
 
+    // horizontal line
     hr {
         margin: 30px 0;
         border-color: $color1;
