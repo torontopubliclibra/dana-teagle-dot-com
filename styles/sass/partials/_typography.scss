@@ -109,6 +109,7 @@ h1 {
   @media only screen and (max-width: $tablet) {
     @include textStyle (50px, center);
     max-width: 400px;
+    font-style: italic;
   }
 }
 

@@ -356,6 +356,7 @@ h1:hover, h1:focus {
     line-height: 1;
     color: #282b2c;
     max-width: 400px;
+    font-style: italic;
   }
 }
 
