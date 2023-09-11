@@ -250,7 +250,6 @@ body, .button {
 .selected {
   background-size: 100% 25%;
   background-position: 0 95%;
-  font-style: italic;
 }
 
 .highlight {
@@ -276,6 +275,11 @@ a:hover, a:focus {
   color: #B57E9B;
   font-style: italic;
 }
+@media only screen and (max-width: 970px) {
+  a {
+    font-style: italic;
+  }
+}
 
 h2 {
   font-size: 40px;
@@ -292,6 +296,11 @@ h2 {
 }
 .scroll-down:hover {
   color: #B57E9B;
+}
+@media only screen and (max-width: 970px) {
+  .scroll-down:hover {
+    color: #84A59D;
+  }
 }
 
 .ham-icon {
@@ -351,6 +360,16 @@ h1:hover, h1:focus {
 }
 @media only screen and (max-width: 970px) {
   h1 {
+    font-size: 65px;
+    text-align: center;
+    line-height: 1;
+    color: #282b2c;
+    max-width: 500px;
+    font-style: italic;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h1 {
     font-size: 50px;
     text-align: center;
     line-height: 1;
@@ -399,6 +418,10 @@ p {
 @media only screen and (max-width: 970px) {
   .projects-nav p, .projects-nav li, .projects-nav li a {
     font-size: 16px;
+    font-style: normal;
+  }
+  .projects-nav .selected {
+    font-style: italic;
   }
 }
 
@@ -475,7 +498,7 @@ body {
 #about, #projects, #contact {
   padding: 30px 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   #about, #projects, #contact {
     padding: 70px 0;
   }
@@ -501,7 +524,20 @@ hr {
   background: #B57E9B;
   color: #282b2c;
   font-style: italic;
+}
+.button:hover, .button:focus {
   transition: 0.4s;
+}
+@media only screen and (max-width: 970px) {
+  .button {
+    font-style: italic;
+  }
+  .button:hover, .button:focus {
+    background: #f3e8e9;
+  }
+  .button.read-less, .button.read-less:hover, .button.read-less:focus {
+    background: #B57E9B;
+  }
 }
 
 header {
@@ -531,9 +567,6 @@ header nav .hamburger-btn {
     width: 100%;
     z-index: 5;
     transition: 0.4s all;
-  }
-  header nav .hamburger-btn:hover, header nav .hamburger-btn:focus {
-    background: #B57E9B;
   }
   header nav .hamburger-btn button {
     background: none;
@@ -595,26 +628,26 @@ header nav ul li a {
     background: #84A59D;
     z-index: 3;
   }
-  header nav ul li {
+  header nav ul li a, header nav ul li a:focus, header nav ul li a:hover {
+    background: #f3e8e9;
+    border-bottom: solid #B57E9B 5px;
+    font-style: italic;
     display: block;
     width: 100%;
     padding: 20px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (max-width: 970px) {
   header nav.active .hamburger-btn {
-    background: #f3e8e9;
-    border-bottom: solid #B57E9B 5px;
+    background: #B57E9B;
   }
   header nav.active .hamburger-btn button .ham-icon {
     transform: rotate(90deg);
   }
   header nav.active .hamburger-btn .nav-name {
-    visibility: hidden;
-    animation: 0.4s fade-in;
-  }
-  header nav.active .hamburger-btn .nav-name.active {
     visibility: visible;
+    animation: fade-in 0.4s;
   }
   header nav.active ul {
     display: flex;
@@ -781,9 +814,6 @@ header .scroll-down {
   }
 }
 
-#contact {
-  padding: 30px 0;
-}
 #contact .contact-content {
   display: flex;
   flex-wrap: wrap;
@@ -815,10 +845,19 @@ footer .wrapper {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin: 20px auto;
 }
 footer .wrapper .button {
   background: #B57E9B;
 }
 footer .wrapper .button:hover, footer .wrapper .button:focus {
   background: #84A59D;
+}
+@media only screen and (max-width: 970px) {
+  footer .wrapper .button:hover, footer .wrapper .button:focus {
+    background: #B57E9B;
+  }
+}
+footer .wrapper .credit {
+  margin-top: 30px;
 }
