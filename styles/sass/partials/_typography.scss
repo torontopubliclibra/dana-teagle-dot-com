@@ -35,17 +35,21 @@ body, .button {
 // link typography
 a {
   @include textStyle (18px);
-  cursor: pointer;
   transition: 0.4s color, 0.4s font-style;
   &:hover, &:focus {
-      color: $color2;
-      font-style: italic;
+    cursor: pointer;
+    color: $color2;
+    font-style: italic;
   }
   
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
     font-style: italic;
   }
+}
+
+.button, nav ul li a {
+  user-select: none;
 }
 
 h2 {
@@ -111,6 +115,7 @@ h1 {
   @include textStyle (75px, center);
   width: 100%;
   margin: 0 auto;
+  user-select: none;
   &:hover, &:focus {
     font-style: italic;
     transition: 0.4s;

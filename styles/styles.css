@@ -268,10 +268,10 @@ a {
   text-align: left;
   line-height: 1;
   color: #282b2c;
-  cursor: pointer;
   transition: 0.4s color, 0.4s font-style;
 }
 a:hover, a:focus {
+  cursor: pointer;
   color: #B57E9B;
   font-style: italic;
 }
@@ -279,6 +279,12 @@ a:hover, a:focus {
   a {
     font-style: italic;
   }
+}
+
+.button, nav ul li a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 h2 {
@@ -355,6 +361,9 @@ h1 {
   color: #282b2c;
   width: 100%;
   margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 h1:hover, h1:focus {
   font-style: italic;
