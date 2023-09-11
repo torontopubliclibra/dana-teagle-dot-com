@@ -12,7 +12,7 @@
     margin: 0 auto;
     margin-bottom: 30px;
 
-    // reponsive to mobile
+    // responsive to mobile
     @media only screen and (max-width: $mobile) {
         width: 100%;
         margin-bottom: 10px;
@@ -40,7 +40,7 @@ body {
 #about, #projects, #contact {
     padding: 30px 0;
 
-    // reponsive to mobile
+    // responsive to mobile
     @media only screen and (max-width: $tablet) {
         padding: 70px 0;
     }
@@ -51,7 +51,7 @@ hr {
     width: 100%;
     border: solid $color2 2px;
 
-    // reponsive to mobile
+    // responsive to mobile
     @media only screen and (max-width: $mobile) {
         width: 85%;
     }
@@ -72,7 +72,7 @@ hr {
             transition: 0.4s;
         }
 
-        // reponsive to tablet
+        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             font-style: italic;
             &:hover, &:focus {
@@ -107,7 +107,6 @@ header {
                 display: initial;
                 width: 100%;
                 z-index: 5;
-                transition: 0.4s all;
                 button {
                     background: none;
                     border: none;
@@ -116,6 +115,7 @@ header {
                     height: 52px;
                     &:hover, &:focus {
                         cursor: pointer;
+                        transition: 0.4s;
                     }
                     .ham-icon {
                         margin: 10px;
@@ -125,6 +125,7 @@ header {
                 }
                 .nav-name {
                     visibility: hidden;
+                    user-select: none;
                     float: right;
                     margin: 0 10px;
                     min-height: 52px;
@@ -282,6 +283,7 @@ header {
                     margin: 5px;
                 }
                 hr {
+                    border-color: $white;
                     display: none;
                     margin: 20px 0;
                     opacity: 0;

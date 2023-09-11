@@ -339,12 +339,13 @@ h2 {
 
 nav ul li a {
   text-decoration: none;
-  transition: 0.4s background;
+  border-bottom: solid #84A59D 3px;
 }
 nav ul li a:hover, nav ul li a:focus {
   color: #282b2c;
-  background: #B57E9B;
+  border-bottom: solid #B57E9B 3px;
   outline: initial;
+  transition: 0.4s;
 }
 
 h1 {
@@ -357,6 +358,7 @@ h1 {
 }
 h1:hover, h1:focus {
   font-style: italic;
+  transition: 0.4s;
 }
 @media only screen and (max-width: 970px) {
   h1 {
@@ -566,7 +568,6 @@ header nav .hamburger-btn {
     display: initial;
     width: 100%;
     z-index: 5;
-    transition: 0.4s all;
   }
   header nav .hamburger-btn button {
     background: none;
@@ -577,6 +578,7 @@ header nav .hamburger-btn {
   }
   header nav .hamburger-btn button:hover, header nav .hamburger-btn button:focus {
     cursor: pointer;
+    transition: 0.4s;
   }
   header nav .hamburger-btn button .ham-icon {
     margin: 10px;
@@ -585,6 +587,9 @@ header nav .hamburger-btn {
   }
   header nav .hamburger-btn .nav-name {
     visibility: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     float: right;
     margin: 0 10px;
     min-height: 52px;
@@ -768,6 +773,7 @@ header .scroll-down {
   margin: 5px;
 }
 #projects .projects-container .project .project-details hr {
+  border-color: #f3e8e9;
   display: none;
   margin: 20px 0;
   opacity: 0;
