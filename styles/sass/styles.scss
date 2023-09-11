@@ -390,8 +390,9 @@ header {
 // footer
 footer .wrapper {
     @include flex(column, 0, center, center);
-    padding: 20px;
+    padding: 20px 0;
     margin: 20px auto;
+    width: 85%;
 
     // footer button
     .button {
@@ -410,8 +411,8 @@ footer .wrapper {
 
     // horizontal line
     hr {
+        width: 85%;
         margin: 30px 0;
         border-color: $color1;
-        width: 80%;
     }
 }
