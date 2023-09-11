@@ -46,6 +46,7 @@ let app = {
 
             // blur the button after scroll
             document.activeElement.blur();
+            body.focus();
         },
         
         // displaying the projects
@@ -186,9 +187,10 @@ let app = {
                 paragraph.style.maxHeight = "";
                 button.classList.remove("read-less");
                 button.innerText = "Read more";
-                
+
                 // blur the button after scroll
                 document.activeElement.blur();
+                body.focus();
             }
         }
     },
