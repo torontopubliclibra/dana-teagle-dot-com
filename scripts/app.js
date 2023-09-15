@@ -1,4 +1,4 @@
-// app objecttions.
+// app object
 let app = {
 
     // page elements
