@@ -23,7 +23,7 @@
         "description": [
             "This is a web application for storing short text notes to revisit later, written in Typescript and SASS using the Angular framework. The user can save up to 12 notes between 1-85 characters in length, each in the colour of their choice (pink, purple, green, or yellow). The site has a background decorated in pigeons, and offers both light and dark themes. Using the Angular local storage API, all data is saved client-side so the notes and selected theme are persistent until the browser cache is cleared. I built it over a weekend in February 2023."
         ],
-        "site": "https://pigeon-pad.netlify.app/",
+        "site": "/notes",
         "repo": "https://github.com/torontopubliclibra/pigeon-pad"
     },
     "Superhero Showdown": {
