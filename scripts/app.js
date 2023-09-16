@@ -143,7 +143,7 @@ let app = {
                 }
 
                 // format the project heading
-                formattedProject.heading = `<h3>` + project.title + ` (` + project.year + `)</h3>`
+                formattedProject.heading = `<h3>` + project.title + `</h3>`
 
                 // if the project description exists
                 if (project.description.length > 0) {
