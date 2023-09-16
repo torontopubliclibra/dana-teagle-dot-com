@@ -1,18 +1,4 @@
 {
-    "Queer Walk (Pytheas)": {
-        "year": "2023",
-        "stack": [
-            "React",
-            "TypeScript"
-        ],
-        "description": [
-            "This is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It is an implementation of the open-source Pytheas application, written in Typescript using the React, Emotion, Jotai, and Leaflet libraries, and the OpenRouteService API.",
-            "I was the lead developer on Queer Walk, working from May to August 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
-            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source code base."
-        ],
-        "site": "https://queerwalk.ca",
-        "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
-    },
     "Note Taken": {
         "year": "2023",
         "stack": [
@@ -26,6 +12,20 @@
         ],
         "site": "/notes",
         "repo": "https://github.com/torontopubliclibra/note-taken"
+    },
+    "Queer Walk (Pytheas)": {
+        "year": "2023",
+        "stack": [
+            "React",
+            "TypeScript"
+        ],
+        "description": [
+            "This is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It is an implementation of the open-source Pytheas application, written in Typescript using the React, Emotion, Jotai, and Leaflet libraries, and the OpenRouteService API.",
+            "I was the lead developer on Queer Walk, working from May to August 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
+            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source code base."
+        ],
+        "site": "https://queerwalk.ca",
+        "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
     },
     "Superhero Showdown": {
         "year": "2022",
