@@ -21,7 +21,8 @@
             "SASS"
         ],
         "description": [
-            "This is a local storage notes app written in Typescript and SASS, using the Angular framework. Any user can store up to 20 notes (less than 100 characters in length) in various colours. All data is saved client-side without a database, so the notes are private and persistent across sessions until the user clears their cache. Notes can be sorted, filtered, edited, and deleted. I originally developed it as Pigeon Pad in February 2023 and revamped it with updated functionality and a new name in September 2023."
+            "This is a notes app written in Typescript and SASS, using the Angular framework. Any user can store up to 20 text notes (each up to 100 characters in length) in various colours. All inputted data is stored locally in their browser without being sent to a database, so the notes are private and persistent across sessions until the user clears their cache. Notes can be sorted, filtered, edited, and deleted.",
+            "I originally developed it as Pigeon Pad in February 2023 and relaunched it with improved functionality in September 2023."
         ],
         "site": "/notes",
         "repo": "https://github.com/torontopubliclibra/note-taken"
@@ -34,8 +35,9 @@
             "CSS"
         ],
         "description": [
-            "This is a statistics-based card game that I originally built in October and November 2022 during my time at Juno College, written in JavaScript and CSS using the React library. The site uses a data set of superhero character objects stored in Firebase, each with statistics pulled from the Marvel Database Wiki.",
-            "On game start, the character objects are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. Game play continues until one of the decks is empty."
+            "This is a statistics-based superhero card game, written in JavaScript and CSS using the React library, that I built in October and November 2022 during my time at Juno College.",
+            "When the game starts, a data set of objects stored in Firebase (each representing a character with statistics pulled from the Marvel Database Wiki) are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.",
+            "This application uses algorithms for card shuffling, and calculates game scores by comparing state variables and object values as you move through gameplay."
         ],
         "site": "/superhero",
         "repo": "https://github.com/torontopubliclibra/superhero-showdown"
@@ -48,7 +50,8 @@
             "CSS"
         ],
         "description": [
-            "This is an application for viewing images of pigeons in different cities around the world. It is written in HTML, jQuery, and CSS, uses the Flickr API, and was originally built in July 2022 during my time at Juno College. The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page."
+            "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and CSS, and using the Flickr API. I originally built in July 2022 during my time at Juno College, and updated it in September 2023.",
+            "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page."
         ],
         "site": "/pigeon",
         "repo": "https://github.com/torontopubliclibra/the-pigeon-hole"
