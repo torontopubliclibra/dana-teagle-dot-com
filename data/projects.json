@@ -13,7 +13,7 @@
         "site": "https://queerwalk.ca",
         "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
     },
-    "Pigeon Pad": {
+    "Note Taken": {
         "year": "2023",
         "stack": [
             "Angular",
@@ -21,10 +21,10 @@
             "SASS"
         ],
         "description": [
-            "This is a web application for storing short text notes to revisit later, written in Typescript and SASS using the Angular framework. The user can save up to 12 notes between 1-85 characters in length, each in the colour of their choice (pink, purple, green, or yellow). The site has a background decorated in pigeons, and offers both light and dark themes. Using the Angular local storage API, all data is saved client-side so the notes and selected theme are persistent until the browser cache is cleared. I built it over a weekend in February 2023."
+            "This is a local storage notes app written in Typescript and SASS, using the Angular framework. Any user can store up to 20 notes (less than 100 characters in length) in various colours. All data is saved client-side without a database, so the notes are private and persistent across sessions until the user clears their cache. Notes can be sorted, filtered, edited, and deleted. I originally developed it as Pigeon Pad in February 2023 and revamped it with updated functionality and a new name in September 2023."
         ],
         "site": "/notes",
-        "repo": "https://github.com/torontopubliclibra/pigeon-pad"
+        "repo": "https://github.com/torontopubliclibra/note-taken"
     },
     "Superhero Showdown": {
         "year": "2022",
