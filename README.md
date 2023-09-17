@@ -1,5 +1,12 @@
 # dana teagle dot com
 
 ## About
+[dana teagle dot com](https://danateagle.com/) is my portfolio website. I wrote it using HTML, SCSS, and jQuery. The data for each of the portfolio projects is stored as a JSON object for ease of iterating, filtering, and updating.
 
-[dana teagle dot com](https://danateagle.com/) is a portfolio website built by and for Dana Rosamund Teagle (she/her), a Front-End Developer from Toronto, Ontario, Canada. The site is written using HTML, SASS, JSON, and jQuery.
+## Development
+The site was originally built in Oct 2022, and was most recently redesigned and refactored in Aug and Sept 2023.
+
+## Attributions
+- [jQuery v3.7.0](https://jquery.com/)
+- [Source Code Pro typeface from Google Fonts](https://fonts.google.com/specimen/Source+Code+Pro)
+- [Font Awesome v4.7.0](https://fontawesome.com/v4/icons/)

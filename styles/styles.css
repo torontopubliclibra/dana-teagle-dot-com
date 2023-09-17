@@ -248,8 +248,8 @@ body, .button {
 }
 
 .selected {
-  background-size: 100% 25%;
-  background-position: 0 95%;
+  background-size: 100% 20%;
+  background-position: 0 90%;
 }
 
 .highlight {
@@ -263,8 +263,27 @@ body, .button {
   }
 }
 
+@media only screen and (max-width: 970px) {
+  .selected {
+    background-size: 100% 25%;
+    background-position: 0 95%;
+  }
+  .highlight {
+    background-size: 100% 10%;
+    background-position: 0 45%;
+  }
+}
 p {
   margin: 0;
+}
+
+.about-content p, .contact-content p, .about-content a, .contact-content a {
+  line-height: 1.4;
+}
+@media only screen and (max-width: 970px) {
+  .about-content p, .contact-content p, .about-content a, .contact-content a {
+    font-size: 16px;
+  }
 }
 
 a {
@@ -434,6 +453,9 @@ h3 {
   list-style-type: none;
   margin: 0;
 }
+.projects-nav .selected {
+  font-style: italic;
+}
 @media only screen and (max-width: 970px) {
   .projects-nav p, .projects-nav li, .projects-nav li a {
     font-size: 16px;
@@ -441,9 +463,6 @@ h3 {
     line-height: 1;
     color: #282b2c;
     font-style: normal;
-  }
-  .projects-nav .selected {
-    font-style: italic;
   }
 }
 
@@ -754,6 +773,9 @@ header .scroll-down {
   padding: 20px;
   margin: 0 auto 20px auto;
 }
+#about .about-content hr {
+  border-color: #84A59D;
+}
 @media only screen and (max-width: 970px) {
   #about .about-content {
     margin-top: 20px;
@@ -768,7 +790,7 @@ header .scroll-down {
 #projects .projects-nav {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
   justify-content: initial;
   align-items: initial;
@@ -850,14 +872,6 @@ header .scroll-down {
   opacity: 1;
 }
 @media only screen and (max-width: 970px) {
-  #projects .projects-nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 0;
-    justify-content: initial;
-    align-items: initial;
-  }
   #projects .projects-nav .project-filters {
     width: 100%;
     padding: 10px 0;

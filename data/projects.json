@@ -4,10 +4,11 @@
         "tags": [
             "Angular",
             "TypeScript",
-            "SASS"
+            "SCSS"
         ],
         "description": [
-            "This is a client-side notes app, written in Typescript and SASS using the Angular framework. Any user of the site can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted, filtered, and edited.",
+            "This is a client-side notes app, written in Typescript and SCSS using Angular.",
+            "Any user can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted, filtered, and edited.",
             "I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
@@ -20,9 +21,10 @@
             "TypeScript"
         ],
         "description": [
-            "This is a guided walking tour of historic locations for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It is an implementation of the open-source Pytheas application, written in Typescript using the React, Emotion, Jotai, and Leaflet libraries, and the OpenRouteService API.",
-            "I was the lead developer on Queer Walk, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
-            "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source code base."
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, Canada.",
+            "The site walks you through the selected tour length, displaying text and photos for each location. It was built upon the open source Pytheas application, written in Typescript using React, Emotion, Jotai, and Leaflet, and the OpenRouteService API. This project added several significant functional upgrades to that code base.",
+            "Queer Walk aims to promote awareness of the nuanced histories of the queer, trans, and intersex communities over the decades, espcecially those stories which have been lost, forgotten, or intentionally erased.",
+            "I was the lead developer on the project, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -35,9 +37,9 @@
             "CSS"
         ],
         "description": [
-            "This is a statistics-based superhero card game, written in JavaScript and CSS using the React library, that I built in Oct and Nov 2022 during my time at Juno College.",
-            "When the game starts, a data set of objects stored in Firebase (each representing a character with statistics pulled from the Marvel Database Wiki) are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.",
-            "This application uses algorithms for card shuffling, and calculates game scores by comparing state variables and object values as you move through gameplay."
+            "This is a card game written in JavaScript and CSS using React.",
+            "When the game starts, a set of data objects stored in Firebase (each representing a superhero, with statistics pulled from the Marvel Database Wiki) are retrieved, shuffled, and divided into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Every round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.", 
+            "Superhero Showdown uses algorithms for card shuffling, and calculates game scores by comparing state values as you move through game play. I built it in Oct and Nov 2022 during my time at Juno College."
         ],
         "site": "/superhero",
         "code": "https://github.com/torontopubliclibra/superhero-showdown"
@@ -50,8 +52,9 @@
             "CSS"
         ],
         "description": [
-            "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and CSS, and using the Flickr API. I originally built in July 2022 during my time at Juno College, and updated it in Sept 2023.",
-            "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page."
+            "This is an application for viewing photos of pigeons in different cities around the world, written in HTML, jQuery, and CSS, and using the Flickr API.",
+            "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a randomized city, then it randomly selects one of the objects and displays the photo on the page.",
+            "I originally built The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
         ],
         "site": "/pigeon",
         "code": "https://github.com/torontopubliclibra/the-pigeon-hole"
@@ -61,10 +64,10 @@
         "tags": [
             "HTML",
             "JavaScript",
-            "SASS"
+            "SCSS"
         ],
         "description": [
-            "This is a multi-page site for Sydney's business, written in HTML, JavaScript, and SASS, and originally built in Nov 2022."
+            "This is a multi-page site for Sydney's business, written in HTML, JavaScript, and SCSS, built in Nov 2022."
         ],
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"

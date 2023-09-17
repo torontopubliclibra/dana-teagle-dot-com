@@ -18,8 +18,8 @@ body, .button {
     background-repeat: no-repeat;
 }
 .selected {
-  background-size: 100% 25%;
-  background-position: 0 95%;
+  background-size: 100% 20%;
+  background-position: 0 90%;
 }
 .highlight {
   background-size: 100% 15%;
@@ -32,9 +32,30 @@ body, .button {
   }
 }
 
+// responsive to tablet
+@media only screen and (max-width: $tablet) {
+  .selected {
+    background-size: 100% 25%;
+    background-position: 0 95%;
+  }
+  .highlight {
+    background-size: 100% 10%;
+    background-position: 0 45%;
+  }
+}
+
 // paragraphs
 p {
   margin: 0;
+}
+
+.about-content p, .contact-content p, .about-content a, .contact-content a {
+  line-height: 1.4;
+
+  // reponsive to tablet
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
 }
 
 // links
@@ -179,14 +200,15 @@ h3 {
     margin: 0;
   }
 
+  .selected {
+    font-style: italic;
+  }
+
   // responsive to tablet
   @media only screen and (max-width: $tablet) {
     p, li, li a {
       @include textStyle (16px, "", 1);
       font-style: normal;
-    }
-    .selected {
-      font-style: italic;
     }
   }
 }
