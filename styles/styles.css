@@ -829,6 +829,9 @@ header .scroll-down {
   #projects .projects-container .project .project-description {
     gap: 5px;
   }
+  #projects .projects-container .project .project-description .button {
+    padding: 10px;
+  }
   #projects .projects-container .project .project-description hr {
     width: 100%;
   }

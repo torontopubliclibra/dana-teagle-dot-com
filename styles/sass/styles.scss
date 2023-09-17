@@ -317,6 +317,10 @@ header {
                 @media only screen and (max-width: $tablet) {
                     gap: 5px;
 
+                    .button {
+                        padding: 10px;
+                    }
+
                     hr {
                         width: 100%;
                     }
