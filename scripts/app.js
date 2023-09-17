@@ -11,7 +11,8 @@ let app = {
         scrollTop: $(".scroll-to-top"),
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
-        projectDescription: $(".project-description")
+        projectDescription: $(".project-description"),
+        emailLink: $(".email")
     },
 
     // projects data and selected filter
@@ -20,8 +21,21 @@ let app = {
         filter: "All",
     },
 
+    // email address to inject
+    email: "",
+
     // app functions
     functions: {
+
+        // inject email link function
+        emailInject: () => {
+
+            // save email address
+            app.email = "dana.r.teagle@gmail.com";
+
+            app.elements.emailLink.html(`<a href="mailto:${app.email}" target="_blank" title="Send an email to Dana">an email</a>`);
+
+        },
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
@@ -225,6 +239,10 @@ let app = {
 
         // scroll down to top of about section on button click
         app.elements.scrollDown.click(() => app.functions.scroll("about"))
+
+        // inject email link
+        app.functions.emailInject();
+
     },
     
     // app initializion
