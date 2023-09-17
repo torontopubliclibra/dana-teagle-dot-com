@@ -62,6 +62,15 @@ hr {
         background: $white;
         border: none;
         padding: 10px 25px;
+
+        i.fa-external-link-square {
+            font-size: 15px;
+        }
+
+        i {
+            font-size: 18px;
+        }
+
         &:hover, &:focus, &.read-less {
             cursor: pointer;
             background: $color2;
@@ -75,6 +84,15 @@ hr {
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
             font-style: italic;
+
+            i.fa-external-link-square {
+                font-size: 12px;
+            }
+    
+            i {
+                font-size: 16px;
+            }
+
             &:hover, &:focus {
                 background: $white;
             }
@@ -254,7 +272,7 @@ header {
         margin: 20px 0;
 
         // project categories
-        .project-categories {
+        .project-filters {
             @include flex(row, 10px);
             padding: 0;
             margin: 0;
@@ -276,8 +294,8 @@ header {
             max-width: 550px;
             margin: 0;
 
-            // project details
-            .project-details {
+            // project description
+            .project-description {
                 @include flex(row, 0, center);
                 padding: 20px;
                 padding-top: 0;
@@ -287,20 +305,25 @@ header {
                     padding: 10px 15px;
                 }
 
-                // responsive to tablet
-                @media only screen and (max-width: $tablet) {
-                    gap: 5px;
-                    .button {
-                        padding: 10px;
-                    }
-                }
-
                 // horizontal lines
                 hr {
                     border-color: $white;
                     display: none;
                     margin: 20px 0;
                     opacity: 0;
+                }
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    gap: 5px;
+
+                    .button {
+                        padding: 10px;
+                    }
+
+                    hr {
+                        width: 100%;
+                    }
                 }
                 
                 // project paragraphs
@@ -333,7 +356,7 @@ header {
             @include flex(column);
     
             // project categories
-            .project-categories {
+            .project-filters {
                 width: 100%;
                 padding: 10px 0;
             }
@@ -397,6 +420,7 @@ footer .wrapper {
     // footer button
     .button {
         background: $color2;
+
         &:hover, &:focus {
             background: $color1;
         }

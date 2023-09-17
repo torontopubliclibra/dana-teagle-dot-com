@@ -279,6 +279,11 @@ a:hover, a:focus {
   color: #B57E9B;
   font-style: italic;
 }
+@media only screen and (max-width: 970px) {
+  a {
+    font-style: italic;
+  }
+}
 
 .button, nav ul li a {
   -webkit-user-select: none;
@@ -324,7 +329,7 @@ a:hover, a:focus {
   flex-direction: row;
   gap: 10px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: auto;
   margin: 10px;
   background: #B57E9B;
@@ -442,14 +447,14 @@ h3 {
   }
 }
 
-.project-details p {
+.project-description p {
   font-size: 18px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
 }
 @media only screen and (max-width: 768px) {
-  .project-details p {
+  .project-description p {
     font-size: 16px;
     text-align: center;
     line-height: 1.25;
@@ -551,6 +556,12 @@ hr {
   border: none;
   padding: 10px 25px;
 }
+.button i.fa-external-link-square {
+  font-size: 15px;
+}
+.button i {
+  font-size: 18px;
+}
 .button:hover, .button:focus, .button.read-less {
   cursor: pointer;
   background: #B57E9B;
@@ -563,6 +574,12 @@ hr {
 @media only screen and (max-width: 970px) {
   .button {
     font-style: italic;
+  }
+  .button i.fa-external-link-square {
+    font-size: 12px;
+  }
+  .button i {
+    font-size: 16px;
   }
   .button:hover, .button:focus {
     background: #f3e8e9;
@@ -758,7 +775,7 @@ header .scroll-down {
   width: 100%;
   margin: 20px 0;
 }
-#projects .projects-nav .project-categories {
+#projects .projects-nav .project-filters {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -787,7 +804,7 @@ header .scroll-down {
   max-width: 550px;
   margin: 0;
 }
-#projects .projects-container .project .project-details {
+#projects .projects-container .project .project-description {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -799,33 +816,36 @@ header .scroll-down {
   overflow: hidden;
   gap: 10px;
 }
-#projects .projects-container .project .project-details .button {
+#projects .projects-container .project .project-description .button {
   padding: 10px 15px;
 }
-@media only screen and (max-width: 970px) {
-  #projects .projects-container .project .project-details {
-    gap: 5px;
-  }
-  #projects .projects-container .project .project-details .button {
-    padding: 10px;
-  }
-}
-#projects .projects-container .project .project-details hr {
+#projects .projects-container .project .project-description hr {
   border-color: #f3e8e9;
   display: none;
   margin: 20px 0;
   opacity: 0;
 }
-#projects .projects-container .project .project-details p {
+@media only screen and (max-width: 970px) {
+  #projects .projects-container .project .project-description {
+    gap: 5px;
+  }
+  #projects .projects-container .project .project-description .button {
+    padding: 10px;
+  }
+  #projects .projects-container .project .project-description hr {
+    width: 100%;
+  }
+}
+#projects .projects-container .project .project-description p {
   width: 100%;
   max-height: 0;
   opacity: 0;
   transition: max-height 0.4s;
 }
-#projects .projects-container .project .project-details.active p {
+#projects .projects-container .project .project-description.active p {
   opacity: 1;
 }
-#projects .projects-container .project .project-details.active hr {
+#projects .projects-container .project .project-description.active hr {
   display: unset;
   opacity: 1;
 }
@@ -838,7 +858,7 @@ header .scroll-down {
     justify-content: initial;
     align-items: initial;
   }
-  #projects .projects-nav .project-categories {
+  #projects .projects-nav .project-filters {
     width: 100%;
     padding: 10px 0;
   }

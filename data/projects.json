@@ -1,21 +1,21 @@
 {
     "Note Taken": {
         "year": "2023",
-        "stack": [
+        "tags": [
             "Angular",
             "TypeScript",
             "SASS"
         ],
         "description": [
-            "This is a client-side notes app written in Typescript and SASS using the Angular framework. Any user of the site can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database. Unless deleted, the notes will remain in your browser until the next time you clear the cache. The notes can be sorted, filtered, edited, and deleted.",
-            "I originally developed it as Pigeon Pad in Feb 2023 and relaunched it with a new name and improved functionality in Sept 2023."
+            "This is a client-side notes app, written in Typescript and SASS using the Angular framework. Any user of the site can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted, filtered, and edited.",
+            "I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
-        "repo": "https://github.com/torontopubliclibra/note-taken"
+        "code": "https://github.com/torontopubliclibra/note-taken"
     },
     "Queer Walk (Pytheas)": {
         "year": "2023",
-        "stack": [
+        "tags": [
             "React",
             "TypeScript"
         ],
@@ -25,11 +25,11 @@
             "The Pytheas application itself is based on work originally developed for the McDougall Corridor tour application, built in partnership with the Essex County Black Historical Research Society, the Windsor Law Centre for Cities, the School of Creative Arts (SOCA), and Leddy Library, with funding provided by Canada's federal government through the Canadian Urban Institute. The development of this implementation resulted in several significant functional upgrades to the open-source code base."
         ],
         "site": "https://queerwalk.ca",
-        "repo": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
+        "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
     },
     "Superhero Showdown": {
         "year": "2022",
-        "stack": [
+        "tags": [
             "React",
             "JavaScript",
             "CSS"
@@ -40,11 +40,11 @@
             "This application uses algorithms for card shuffling, and calculates game scores by comparing state variables and object values as you move through gameplay."
         ],
         "site": "/superhero",
-        "repo": "https://github.com/torontopubliclibra/superhero-showdown"
+        "code": "https://github.com/torontopubliclibra/superhero-showdown"
     },
     "The Pigeon Hole": {
         "year": "2022",
-        "stack": [
+        "tags": [
             "HTML",
             "jQuery",
             "CSS"
@@ -54,11 +54,11 @@
             "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page."
         ],
         "site": "/pigeon",
-        "repo": "https://github.com/torontopubliclibra/the-pigeon-hole"
+        "code": "https://github.com/torontopubliclibra/the-pigeon-hole"
     },
     "Sydney Gautreau, Editor & Writing Coach": {
         "year": "2022",
-        "stack": [
+        "tags": [
             "HTML",
             "JavaScript",
             "SASS"
@@ -67,6 +67,6 @@
             "This is a multi-page site for Sydney's business, written in HTML, JavaScript, and SASS, and originally built in Nov 2022."
         ],
         "site": "https://sydneygautreau.com",
-        "repo": "https://github.com/torontopubliclibra/sydney-gautreau"
+        "code": "https://github.com/torontopubliclibra/sydney-gautreau"
     }
 }

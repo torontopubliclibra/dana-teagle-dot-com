@@ -46,6 +46,11 @@ a {
     color: $color2;
     font-style: italic;
   }
+
+  // reponsive to tablet
+  @media only screen and (max-width: $tablet) {
+    font-style: italic;
+  }
 }
 
 // buttons and nav links
@@ -80,7 +85,7 @@ a {
 // scroll to top button
 .scroll-to-top {
   @include textStyle (20px, center);
-  @include flex(row, 10px, center, flex-end);
+  @include flex(row, 10px, center, center);
   width: auto;
   margin: 10px;
   background: $color2;
@@ -187,7 +192,7 @@ h3 {
 }
 
 // project descriptions
-.project-details p {
+.project-description p {
   @include textStyle (18px, center);
 
   // responsive to mobile
