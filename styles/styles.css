@@ -773,6 +773,9 @@ header .scroll-down {
   padding: 20px;
   margin: 0 auto 20px auto;
 }
+#about .about-content hr {
+  border-color: #84A59D;
+}
 @media only screen and (max-width: 970px) {
   #about .about-content {
     margin-top: 20px;

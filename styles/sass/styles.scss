@@ -250,6 +250,10 @@ header {
         padding: 20px;
         margin: 0 auto 20px auto;
 
+        hr {
+            border-color: $color1;
+        }
+
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
             margin-top: 20px;
