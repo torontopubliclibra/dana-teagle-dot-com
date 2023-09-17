@@ -267,7 +267,7 @@ header {
 
     // projects navigation
     .projects-nav {
-        @include flex(row, 10px);
+        @include flex(column, 10px);
         width: 100%;
         margin: 20px 0;
 
@@ -352,14 +352,9 @@ header {
     @media only screen and (max-width: $tablet) {
 
         // projects navigation
-        .projects-nav {
-            @include flex(column);
-    
-            // project categories
-            .project-filters {
-                width: 100%;
-                padding: 10px 0;
-            }
+        .projects-nav .project-filters {
+            width: 100%;
+            padding: 10px 0;
         }
 
         // projects container

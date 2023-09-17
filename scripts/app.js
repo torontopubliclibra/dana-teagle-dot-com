@@ -110,11 +110,11 @@ let app = {
                     if (filter === app.projects.filter) {return `<li class="selected">` + filterName + `</li>`}
 
                     // otherwise create a link that displays the projects of that filter
-                    else {return `<li><a onclick="app.functions.projectDisplay('${filter}')">` + filterName + `</a></li>`}
+                    else {return `<li><a onclick="app.functions.projectDisplay('${filter}')" title="${filter} projects">` + filterName + `</a></li>`}
                 })
 
                 // stitch the html for each of the filters together and add it to the projects nav
-                app.elements.projectsNav.html(`<p>Filter by:</p><ul class="project-filters">` + projectFilters.reduce((accumulator, tag) => {return accumulator + tag}) + `</ul></h3>`);
+                app.elements.projectsNav.html(`<p>Filter by tag:</p><ul class="project-filters">` + projectFilters.reduce((accumulator, tag) => {return accumulator + tag}) + `</ul></h3>`);
             }
 
             // sort the projects by year
