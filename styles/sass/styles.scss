@@ -305,20 +305,21 @@ header {
                     padding: 10px 15px;
                 }
 
-                // responsive to tablet
-                @media only screen and (max-width: $tablet) {
-                    gap: 5px;
-                    .button {
-                        padding: 10px;
-                    }
-                }
-
                 // horizontal lines
                 hr {
                     border-color: $white;
                     display: none;
                     margin: 20px 0;
                     opacity: 0;
+                }
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    gap: 5px;
+
+                    hr {
+                        width: 100%;
+                    }
                 }
                 
                 // project paragraphs

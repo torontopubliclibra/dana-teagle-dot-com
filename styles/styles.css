@@ -819,19 +819,19 @@ header .scroll-down {
 #projects .projects-container .project .project-description .button {
   padding: 10px 15px;
 }
-@media only screen and (max-width: 970px) {
-  #projects .projects-container .project .project-description {
-    gap: 5px;
-  }
-  #projects .projects-container .project .project-description .button {
-    padding: 10px;
-  }
-}
 #projects .projects-container .project .project-description hr {
   border-color: #f3e8e9;
   display: none;
   margin: 20px 0;
   opacity: 0;
+}
+@media only screen and (max-width: 970px) {
+  #projects .projects-container .project .project-description {
+    gap: 5px;
+  }
+  #projects .projects-container .project .project-description hr {
+    width: 100%;
+  }
 }
 #projects .projects-container .project .project-description p {
   width: 100%;
