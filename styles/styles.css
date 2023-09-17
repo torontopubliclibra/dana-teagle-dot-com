@@ -277,8 +277,13 @@ p {
   margin: 0;
 }
 
-.about-content p, .contact-content p {
+.about-content p, .contact-content p, .about-content a, .contact-content a {
   line-height: 1.4;
+}
+@media only screen and (max-width: 970px) {
+  .about-content p, .contact-content p, .about-content a, .contact-content a {
+    font-size: 16px;
+  }
 }
 
 a {

@@ -49,8 +49,13 @@ p {
   margin: 0;
 }
 
-.about-content p, .contact-content p {
+.about-content p, .contact-content p, .about-content a, .contact-content a {
   line-height: 1.4;
+
+  // reponsive to tablet
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
 }
 
 // links
