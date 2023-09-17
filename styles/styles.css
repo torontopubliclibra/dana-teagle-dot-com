@@ -785,6 +785,9 @@ header .scroll-down {
   #about .about-content {
     width: 85%;
   }
+  #about .about-content hr {
+    width: 100%;
+  }
 }
 
 #projects .projects-nav {

@@ -262,6 +262,11 @@ header {
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             width: 85%;
+
+            hr {
+                width: 100%;
+            }
+
         }
     }
 }
