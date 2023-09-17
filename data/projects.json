@@ -18,7 +18,9 @@
         "year": "2023",
         "tags": [
             "React",
-            "TypeScript"
+            "TypeScript",
+            "Jotai",
+            "Emotion"
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, Canada.",
