@@ -12,7 +12,7 @@
             "I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
-        "code": "https://github.com/torontopubliclibra/note-taken"
+        "code": "/notes/repo"
     },
     "Queer Walk (Pytheas)": {
         "year": "2023",
@@ -44,7 +44,7 @@
             "Superhero Showdown uses algorithms for card shuffling, and calculates game scores by comparing state values as you move through game play. I built it in Oct and Nov 2022 during my time at Juno College."
         ],
         "site": "/superhero",
-        "code": "https://github.com/torontopubliclibra/superhero-showdown"
+        "code": "/superhero/repo"
     },
     "The Pigeon Hole": {
         "year": "2022",
@@ -59,7 +59,7 @@
             "I originally built The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
         ],
         "site": "/pigeon",
-        "code": "https://github.com/torontopubliclibra/the-pigeon-hole"
+        "code": "/pigeon/repo"
     },
     "Sydney Gautreau, Editor & Writing Coach": {
         "year": "2022",
