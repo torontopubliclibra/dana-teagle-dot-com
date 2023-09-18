@@ -7,9 +7,9 @@
             "SCSS"
         ],
         "description": [
-            "This is a client-side notes app, written in Typescript and SCSS using Angular.",
+            "This is a client-side notes app, built with Angular, Typescript, and SCSS.",
             "Any user can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted, filtered, and edited.",
-            "I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
+            "I originally developed the app in Feb 2023 as 'Pigeon Pad', and then relaunched it as 'Note Taken' in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -23,10 +23,9 @@
             "Emotion"
         ],
         "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, Canada.",
-            "The site walks you through the selected tour length, displaying text and photos for each location. It was built upon the open source Pytheas application, written in Typescript using React, Emotion, Jotai, Leaflet, and the OpenRouteService API. This project added several significant functional upgrades to that code base.",
-            "Queer Walk aims to promote awareness of the nuanced histories of the queer, trans, and intersex communities over the decades, especially those stories which have been lost, forgotten, or intentionally erased.",
-            "I was the lead developer on the project, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It was built upon the open source Pytheas application, using React, Typescript, Emotion, Jotai, Leaflet, and the OpenRouteService API. This project added several significant functional upgrades to that code base.",
+            "The app aims to promote awareness of the nuanced histories of the queer, trans, and intersex communities over the decades, especially those stories which have been lost, forgotten, or intentionally erased. The site walks you through the selected tour length, displaying text and photos for each location.",
+            "I was the lead developer on 'Queer Walk', working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -39,9 +38,9 @@
             "CSS"
         ],
         "description": [
-            "This is a card game written in JavaScript and CSS using React.",
+            "This is a card game built with React, JavaScript, and CSS.",
             "When the game starts, a set of data objects stored in Firebase (each representing a superhero, with statistics pulled from the Marvel Database Wiki) are retrieved, shuffled, and divided into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Every round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.", 
-            "Superhero Showdown uses algorithms for card shuffling, and calculates game scores by comparing state values as you move through game play. I built it in Oct and Nov 2022 during my time at Juno College."
+            "'Superhero Showdown' uses algorithms for card shuffling, and calculates scores by comparing state values as you move through game play. I developed it in Oct and Nov 2022 during my time at Juno College."
         ],
         "site": "/superhero",
         "code": "/superhero/repo"
@@ -54,14 +53,14 @@
             "CSS"
         ],
         "description": [
-            "This is an application for viewing photos of pigeons in different cities around the world, written in HTML, jQuery, and CSS, and using the Flickr API.",
+            "This is an app for viewing photos of pigeons in different cities around the world, built with jQuery, HTML, CSS, and the Flickr API.",
             "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a randomized city, then it randomly selects one of the objects and displays the photo on the page.",
-            "I originally built The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
+            "I originally developed 'The Pigeon Hole' in July 2022 during my time at Juno College, before later updating it in Sept 2023."
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
     },
-    "Sydney Gautreau, Editor & Writing Coach": {
+    "Sydney Gautreau": {
         "year": "2022",
         "tags": [
             "HTML",
@@ -69,9 +68,40 @@
             "SCSS"
         ],
         "description": [
-            "This is a multi-page site for Sydney's business, written in HTML, JavaScript, and SCSS, built in Nov 2022."
+            "This is a website for Sydney Gautreau's editing & writing coaching business, originally built in 2022 with JavaScript, HTML, and SCSS."
         ],
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"
+    },
+    "Body Stories Dance": {
+        "year": "2022",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a site for Candice Irwin's dance teaching business in Manitoulin Island, Ontario, originally designed in 2022 using Squarespace and JavaScript."
+        ],
+        "site": "https://bodystoriesdance.com/"
+    },
+    "The Crevice": {
+        "year": "2021",
+        "tags": [
+            "Squarespace"
+        ],
+        "description": [
+            "This is a website for a sitcom-inspired play written by Rebecca Falvey and directed by Meghan Hubley, performed at, and live-streamed from, The Bus Stop Theatre in Halifax, Nova Scotia. The site was originally designed in 2021 using Squarespace."
+        ],
+        "site": "https://thecrevice.ca/"
+    },
+    "Raegan Mary Swanson": {
+        "year": "2022",
+        "tags": [
+            "Squarespace"
+        ],
+        "description": [
+            "This is a website for Raegan Swanson, the Archivist & Executive Director of The ArQuives (formerly known as the Canadian Lesbian & Gay Archives). The site was designed in 2021 using Squarespace."
+        ],
+        "site": "https://raeganswanson.ca/"
     }
 }
