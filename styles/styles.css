@@ -884,14 +884,8 @@ header .scroll-down {
   transition: max-height 0.6s, opacity 0.75s;
 }
 @media only screen and (max-width: 970px) {
-  #projects .projects-container .project .project-description .project-description {
-    gap: 5px;
-  }
-  #projects .projects-container .project .project-description .project-description .button {
+  #projects .projects-container .project .project-description .button {
     padding: 10px;
-  }
-  #projects .projects-container .project .project-description hr {
-    width: 100%;
   }
 }
 @media only screen and (max-width: 970px) {
