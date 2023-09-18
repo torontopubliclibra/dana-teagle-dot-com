@@ -50,11 +50,17 @@ p {
 }
 
 .about-content p, .contact-content p, .about-content a, .contact-content a {
+  text-align: center;
   line-height: 1.4;
 
   // reponsive to tablet
-  @media only screen and (max-width: $tablet) {
-    font-size: 16px;
+  @media only screen and (max-width: $mobile) {
+    text-align: left;
+  }
+
+  // reponsive to mobile
+  @media only screen and (max-width: $mobile) {
+    font-size: 17px;
   }
 }
 
@@ -88,6 +94,7 @@ a {
 .scroll-down {
   @include textStyle (75px, center, "", $color1);
   cursor: pointer;
+  transition: 0.75s;
   &:hover {
     color: $color2;
 
@@ -109,10 +116,9 @@ a {
   @include flex(row, 10px, center, center);
   width: auto;
   margin: 10px;
-  background: $color2;
   cursor: pointer;
   p {
-    @include textStyle (16px, center);
+    @include textStyle (17px, center);
     margin: 0;
   }
   &:hover {
@@ -144,7 +150,6 @@ h1 {
   user-select: none;
   &:hover, &:focus {
     font-style: italic;
-    transition: 0.4s;
   }
 
   // responsive to tablet
@@ -178,14 +183,23 @@ h2 {
 
 // project headings
 h3 {
-  @include textStyle (20px, center, 1.5);
-  margin: 0;
+  @include textStyle (22px, center, 1.5);
+  margin: 0 auto;
   padding: 20px;
+  max-width: 85%;
+
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    text-align: left;
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 // project buttons
 .project .button {
-  font-size: 16px;
+  font-size: 17px;
+  text-align: center;
 
   // responsive to tablet
   @media only screen and (max-width: $mobile) {
@@ -195,6 +209,9 @@ h3 {
 
 // projects navigation
 .projects-nav {
+  p {
+    font-size: 20px;
+  }
   li {
     list-style-type: none;
     margin: 0;
@@ -204,10 +221,13 @@ h3 {
     font-style: italic;
   }
 
-  // responsive to tablet
-  @media only screen and (max-width: $tablet) {
-    p, li, li a {
-      @include textStyle (16px, "", 1);
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    p {
+      font-size: 18px;
+    }
+    li, li a {
+      @include textStyle (15px, "", 1.25);
       font-style: normal;
     }
   }
@@ -217,9 +237,14 @@ h3 {
 .project-description p {
   @include textStyle (18px, center);
 
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    text-align: left;
+  }
+
   // responsive to mobile
   @media only screen and (max-width: $mobile) {
-    @include textStyle (16px, center);
+    font-size: 17px;
   }
 }
 

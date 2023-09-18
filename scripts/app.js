@@ -109,7 +109,7 @@ let app = {
             if (projectFilters.length > 3) {
                 
                 // map out those filters
-                projectFilters = projectFilters.sort().map((filter) => {
+                projectFilters = projectFilters.map((filter) => {
 
                     // set the filter name to an empty string
                     let filterName = '';
@@ -128,7 +128,7 @@ let app = {
                 })
 
                 // stitch the html for each of the filters together and add it to the projects nav
-                app.elements.projectsNav.html(`<p>Filter by tag:</p><ul class="project-filters">` + projectFilters.reduce((accumulator, tag) => {return accumulator + tag}) + `</ul></h3>`);
+                app.elements.projectsNav.html(`<p>Filter by technology:</p><ul class="project-filters">` + projectFilters.reduce((accumulator, tag) => {return accumulator + tag}) + `</ul></h3>`);
             }
 
             // sort the projects by year
@@ -150,7 +150,6 @@ let app = {
                 // intialize an empty object for the formatted project
                 let formattedProject = {
                     heading: "",
-                    tags: "",
                     description: "",
                     site: "",
                     code: "",
@@ -166,7 +165,7 @@ let app = {
                     let formattedParagraph = project.description.reduce((accumulator, paragraph) => {return accumulator +  `</br></br>` + paragraph})
 
                     // and combine that paragraph with a read more button
-                    formattedProject.description = `<button class="button read-more" title="` + project.title + ` project description">Description <i class="fa fa-angle-down"></i></button><hr><p>` + formattedParagraph + `</p>`
+                    formattedProject.description = `<button class="button read-more" title="` + project.title + ` project description">Description <i class="fa fa-angle-down"></i></button><p>` + formattedParagraph + `</p>`
                 }
 
                 // if the project has a site link, format a site button
@@ -176,7 +175,7 @@ let app = {
                 if (project.code) {formattedProject.code = `<a href="${project.code}" class="button" target="_blank" title="${project.title} repo on Github">Code <i class="fa fa-external-link-square" aria-hidden="true"></i></a>`}
 
                 // stitch together all the html for the project
-                return `<div class="project">` + formattedProject.heading + formattedProject.tags + `<div class="project-description">` + formattedProject.site + formattedProject.code + formattedProject.description + `</div></div>`
+                return `<div class="project">` + formattedProject.heading + `<div class="project-description">` + formattedProject.site + formattedProject.code + formattedProject.description + `</div></div>`
             })
 
             // stitch the html for each of the projects together and add that the projects container
@@ -208,7 +207,7 @@ let app = {
                 button.classList.add("read-less");
                 button.innerHTML = `Description <i class="fa fa-angle-up"></i>`;
                 project.classList.add("active");
-                paragraph.style.maxHeight = paragraph.scrollHeight + `px`;
+                paragraph.style.maxHeight = (paragraph.scrollHeight + 30) + `px`;
 
             // if the paragraph is showing
             } else {

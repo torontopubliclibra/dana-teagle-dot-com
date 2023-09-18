@@ -49,7 +49,7 @@ body {
 // horizontal lines
 hr {
     width: 100%;
-    border: solid $color2 2px;
+    border: solid $color1 2px;
 
     // responsive to mobile
     @media only screen and (max-width: $mobile) {
@@ -78,7 +78,7 @@ hr {
             font-style: italic;
         }
         &:hover, &:focus {
-            transition: 0.4s;
+            transition: background-color 0.75s;
         }
 
         // responsive to tablet
@@ -125,6 +125,7 @@ header {
                 display: initial;
                 width: 100%;
                 z-index: 5;
+                transition: background-color 0.75s;
                 button {
                     background: none;
                     border: none;
@@ -133,12 +134,11 @@ header {
                     height: 52px;
                     &:hover, &:focus {
                         cursor: pointer;
-                        transition: 0.4s;
                     }
                     .ham-icon {
                         margin: 10px;
                         transform: rotate(0deg);
-                        transition: transform 0.4s;
+                        transition: transform 0.75s;
                     }
                 }
                 .nav-name {
@@ -224,7 +224,6 @@ header {
     .scroll-down {
         @include positioning (absolute, "", "", 10%, 50%);
         animation: 4s infinite ease-in-out pulse;
-        transition: 0.4s;
     }
 }
 
@@ -252,6 +251,7 @@ header {
 
         hr {
             border-color: $color1;
+            margin: 0;
         }
 
         // responsive to tablet
@@ -297,7 +297,7 @@ header {
 
         // individual projects
         .project {
-            @include borderedBox($color1, $color2);
+            @include borderedBox(rgba($color2, 0.8), $color1);
             height: 100%;
             width: calc(50% - 5px);
             max-width: 550px;
@@ -312,26 +312,9 @@ header {
                 gap: 10px;
                 .button {
                     padding: 10px 15px;
-                }
 
-                // horizontal lines
-                hr {
-                    border-color: $white;
-                    display: none;
-                    margin: 20px 0;
-                    opacity: 0;
-                }
-
-                // responsive to tablet
-                @media only screen and (max-width: $tablet) {
-                    gap: 5px;
-
-                    .button {
-                        padding: 10px;
-                    }
-
-                    hr {
-                        width: 100%;
+                    &:hover, &:focus, &.read-less {
+                        background-color: $color1;
                     }
                 }
                 
@@ -340,18 +323,30 @@ header {
                     width: 100%;
                     max-height: 0;
                     opacity: 0;
-                    transition: max-height 0.4s;
+                    transition: max-height 0.75s;
                 }
 
                 // project details when active
                 &.active {
                     p {
+                        @include borderedBox(rgba($white, 0.8), $color1);
+                        padding: 15px;
+                        margin-top: 10px;
                         opacity: 1;
+                        transition: max-height 0.6s, opacity 0.75s;
                     }
-                    hr {
-                        display: unset;
-                        opacity: 1;
+                }
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+
+                    .button {
+                        padding: 10px;
                     }
+                }
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    justify-content: left;
                 }
             }
         }
@@ -363,18 +358,17 @@ header {
         // projects navigation
         .projects-nav .project-filters {
             width: 100%;
-            padding: 10px 0;
         }
 
         // projects container
         .projects-container {
             flex-direction: column;
-            width: 550px;
-            max-width: 85%;
+            width: 85%;
 
             // individual projects
             .project {
                 width: 100%;
+                max-width: 100%;
             }
         }
     }
