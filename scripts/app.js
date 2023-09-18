@@ -109,7 +109,7 @@ let app = {
             if (projectFilters.length > 3) {
                 
                 // map out those filters
-                projectFilters = projectFilters.map((filter) => {
+                projectFilters = projectFilters.sort().map((filter) => {
 
                     // set the filter name to an empty string
                     let filterName = '';

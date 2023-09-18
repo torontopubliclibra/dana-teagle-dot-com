@@ -577,7 +577,12 @@ body {
 }
 
 #about, #contact {
-  background: #84A59D;
+  background: rgba(132, 165, 157, 0.8);
+}
+@media only screen and (max-width: 970px) {
+  #about, #contact {
+    background: rgba(132, 165, 157, 0.6);
+  }
 }
 
 #about, #projects, #contact {
