@@ -281,7 +281,7 @@ p {
   text-align: center;
   line-height: 1.4;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   .about-content p, .contact-content p, .about-content a, .contact-content a {
     text-align: left;
   }
@@ -308,6 +308,9 @@ a:hover, a:focus {
   a {
     font-style: italic;
   }
+  a:active {
+    background-color: none;
+  }
 }
 
 .button, nav ul li a {
@@ -318,6 +321,9 @@ a:hover, a:focus {
 @media only screen and (max-width: 970px) {
   .button, nav ul li a {
     font-style: italic;
+  }
+  .button:active, nav ul li a:active {
+    background-color: none;
   }
 }
 
@@ -441,6 +447,7 @@ h3 {
   text-align: center;
   line-height: 1.5;
   color: #282b2c;
+  font-style: italic;
   margin: 0 auto;
   padding: 20px;
   max-width: 85%;
@@ -652,11 +659,11 @@ header nav .hamburger-btn {
     left: 0;
     cursor: pointer;
     background: #84A59D;
-    border-bottom: solid #f3e8e9 5px;
+    border-bottom: solid #B57E9B 5px;
     display: initial;
     width: 100%;
     z-index: 5;
-    transition: background-color 0.75s;
+    transition: background-color 0.75s, border-color 0.75s;
   }
   header nav .hamburger-btn button {
     background: none;
@@ -733,7 +740,8 @@ header nav ul li a {
 }
 @media only screen and (max-width: 970px) {
   header nav.active .hamburger-btn {
-    background: #B57E9B;
+    background-color: #B57E9B;
+    border-color: #f3e8e9;
   }
   header nav.active .hamburger-btn button .ham-icon {
     transform: rotate(90deg);
@@ -887,6 +895,12 @@ header .scroll-down {
   #projects .projects-container .project .project-description .button {
     padding: 10px;
   }
+  #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus {
+    background-color: #f3e8e9;
+  }
+  #projects .projects-container .project .project-description .button.read-less:hover, #projects .projects-container .project .project-description .button.read-less:focus {
+    background-color: #84A59D;
+  }
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .project-description {
@@ -948,18 +962,18 @@ footer .wrapper {
   width: 85%;
 }
 footer .wrapper .button {
-  background: #B57E9B;
+  background: #84A59D;
 }
 footer .wrapper .button:hover, footer .wrapper .button:focus {
-  background: #84A59D;
+  background: #B57E9B;
 }
 @media only screen and (max-width: 970px) {
   footer .wrapper .button:hover, footer .wrapper .button:focus {
-    background: #B57E9B;
+    background: #84A59D;
   }
 }
 footer .wrapper hr {
   width: 85%;
   margin: 30px 0;
-  border-color: #84A59D;
+  border-color: #B57E9B;
 }
