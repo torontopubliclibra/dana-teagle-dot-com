@@ -121,11 +121,11 @@ header {
                 @include positioning(fixed, 0, "", "", 0);
                 cursor: pointer;
                 background: $color1;
-                border-bottom: solid $white 5px;
+                border-bottom: solid $color2 5px;
                 display: initial;
                 width: 100%;
                 z-index: 5;
-                transition: background-color 0.75s;
+                transition: background-color 0.75s, border-color 0.75s;
                 button {
                     background: none;
                     border: none;
@@ -192,7 +192,8 @@ header {
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
                 .hamburger-btn {
-                    background: $color2;
+                    background-color: $color2;
+                    border-color: $white;
                     button {
                         .ham-icon {
                         transform: rotate(90deg);
@@ -342,6 +343,14 @@ header {
 
                     .button {
                         padding: 10px;
+                        &:hover, &:focus {
+                            background-color: $white;
+                        }
+                        &.read-less {
+                            &:hover, &:focus {
+                                background-color: $color1;
+                            }
+                        }
                     }
                 }
                 // responsive to tablet
@@ -417,16 +426,16 @@ footer .wrapper {
 
     // footer button
     .button {
-        background: $color2;
+        background: $color1;
 
         &:hover, &:focus {
-            background: $color1;
+            background: $color2;
         }
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
             &:hover, &:focus {
-                background: $color2;
+                background: $color1;
             }
         }
     }
@@ -435,6 +444,6 @@ footer .wrapper {
     hr {
         width: 85%;
         margin: 30px 0;
-        border-color: $color1;
+        border-color: $color2;
     }
 }

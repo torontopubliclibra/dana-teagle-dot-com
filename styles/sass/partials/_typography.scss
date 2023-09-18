@@ -54,7 +54,7 @@ p {
   line-height: 1.4;
 
   // reponsive to tablet
-  @media only screen and (max-width: $mobile) {
+  @media only screen and (max-width: $tablet) {
     text-align: left;
   }
 
@@ -77,6 +77,10 @@ a {
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
     font-style: italic;
+
+    &:active {
+      background-color: none;
+    }
   }
 }
 
@@ -87,6 +91,10 @@ a {
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
     font-style: italic;
+
+    &:active {
+      background-color: none;
+    }
   }
 }
 
@@ -184,6 +192,7 @@ h2 {
 // project headings
 h3 {
   @include textStyle (22px, center, 1.5);
+  font-style: italic;
   margin: 0 auto;
   padding: 20px;
   max-width: 85%;
