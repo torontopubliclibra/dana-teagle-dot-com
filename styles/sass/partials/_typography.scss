@@ -12,10 +12,10 @@ body, .button {
   text-decoration: none;
 }
 
-// highlighted/selected text effect
-.highlight, .selected {
+// selected/highlighted text effect
+.selected, .highlight {
   background: linear-gradient(120deg, $color2 0%, $color2 100%);
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 .selected {
   background-size: 100% 20%;
@@ -24,12 +24,6 @@ body, .button {
 .highlight {
   background-size: 100% 15%;
   background-position: 0 97%;
-
-  // responsive to tablet
-  @media only screen and (max-width: $tablet) {
-      background-size: 100% 10%;
-      background-position: 0 45%;
-  }
 }
 
 // responsive to tablet
@@ -48,7 +42,6 @@ body, .button {
 p {
   margin: 0;
 }
-
 .about-content p, .contact-content p, .about-content a, .contact-content a {
   text-align: center;
   line-height: 1.4;
@@ -68,6 +61,7 @@ p {
 a {
   @include textStyle (18px);
   transition: 0.4s color, 0.4s font-style;
+
   &:hover, &:focus {
     cursor: pointer;
     color: $color2;
@@ -77,10 +71,6 @@ a {
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
     font-style: italic;
-
-    &:active {
-      background-color: none;
-    }
   }
 }
 
@@ -91,10 +81,6 @@ a {
   // reponsive to tablet
   @media only screen and (max-width: $tablet) {
     font-style: italic;
-
-    &:active {
-      background-color: none;
-    }
   }
 }
 
@@ -103,6 +89,7 @@ a {
   @include textStyle (75px, center, "", $color1);
   cursor: pointer;
   transition: 0.75s;
+
   &:hover {
     color: $color2;
 
@@ -125,10 +112,12 @@ a {
   width: auto;
   margin: 10px;
   cursor: pointer;
+
   p {
     @include textStyle (17px, center);
     margin: 0;
   }
+
   &:hover {
     background: $color1;
   }
@@ -141,6 +130,7 @@ nav {
   ul li a {
     text-decoration: none;
     border-bottom: solid $color1 3px;
+
     &:hover, &:focus {
       color: $black;
       border-bottom: solid $color2 3px;
@@ -156,6 +146,7 @@ h1 {
   width: 100%;
   margin: 0 auto;
   user-select: none;
+
   &:hover, &:focus {
     font-style: italic;
   }
@@ -225,7 +216,6 @@ h3 {
     list-style-type: none;
     margin: 0;
   }
-
   .selected {
     font-style: italic;
   }

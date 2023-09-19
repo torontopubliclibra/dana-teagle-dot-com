@@ -1,7 +1,7 @@
 // import variables
 @use "variables" as *;
 
-// flexboxes
+// flexbox mixin
 @mixin flex ($direction, $gap: 0, $justify: initial, $align: initial) {
     display: flex;
     flex-wrap: wrap;
@@ -9,27 +9,27 @@
     gap: $gap;
     justify-content: $justify;
     align-items: $align;
-}
+};
 
-// positioning
+// positioning mixin
 @mixin positioning ($position, $top: initial, $right: initial, $bottom: initial, $left: initial) {
     position: $position;
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
-}
+};
 
-// bordered boxes
+// colour background/colour border mixin
 @mixin borderedBox ($backgroundColour, $borderColour) {
     background: $backgroundColour;
     border: solid $borderColour 5px;
-}
+};
 
-// text sizing, alignment, etc.
+// typographic mixin
 @mixin textStyle ($size, $alignment: left, $lineHeight: 1.25, $colour: $black) {
     font-size: $size;
     text-align: $alignment;
     line-height: $lineHeight;
     color: $colour;
-}
+};
