@@ -8,7 +8,7 @@
         ],
         "description": [
             "This is a client-side notes app, built with Angular, Typescript, and SCSS.",
-            "Any user can store up to 50 notes at a time (each up to 140 characters in length) in various colours. All inputted data is stored client-side without sending anything to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted by time stamp, filtered by colour, searched by an inputted query, edited, deleted, and exported to a text file for offline access (with the help of FileSaver.js).",
+            "Any user can save up to 50 notes at a time (each up to 140 characters in length) in various colours. All inputted data is stored client-side without ever being sent to a database, and remains secure in the browser until the next time the cache is cleared. The notes can be sorted by time stamp, filtered by colour, searched by an inputted query, edited, deleted, and even exported to a .txt file for offline access.",
             "I originally developed the app in Feb 2023 as 'Pigeon Pad', and then relaunched it as 'Note Taken' in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
