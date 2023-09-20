@@ -8,7 +8,7 @@
         ],
         "description": [
             "This is a client-side notes app, built with Angular, Typescript, and SCSS.",
-            "Any user can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted, filtered, and edited.",
+            "Any user can store up to 20 notes at a time (each up to 100 characters in length) in various colours. All inputted data is stored locally without being sent to a database, and remains in the browser until the next time the cache is cleared. The notes can be sorted by time stamp, filtered by colour, searched by an inputted query, edited, and deleted.",
             "I originally developed the app in Feb 2023 as 'Pigeon Pad', and then relaunched it as 'Note Taken' in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
@@ -72,36 +72,5 @@
         ],
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"
-    },
-    "Body Stories Dance": {
-        "year": "2022",
-        "tags": [
-            "Squarespace",
-            "JavaScript"
-        ],
-        "description": [
-            "This is a site for Candice Irwin's dance teaching business in Manitoulin Island, Ontario, originally designed in 2022 using Squarespace and JavaScript."
-        ],
-        "site": "https://bodystoriesdance.com/"
-    },
-    "The Crevice": {
-        "year": "2021",
-        "tags": [
-            "Squarespace"
-        ],
-        "description": [
-            "This is a website for a series of sitcom-inspired plays written by Rebecca Falvey and directed by Meghan Hubley, performed at, and live-streamed from, The Bus Stop Theatre in Halifax, Nova Scotia. The site was originally designed in 2021 using Squarespace."
-        ],
-        "site": "https://thecrevice.ca/"
-    },
-    "Raegan Mary Swanson": {
-        "year": "2022",
-        "tags": [
-            "Squarespace"
-        ],
-        "description": [
-            "This is a website for Raegan Swanson, the Archivist & Executive Director of The ArQuives (formerly known as the Canadian Lesbian & Gay Archives). The site was designed in 2021 using Squarespace."
-        ],
-        "site": "https://raeganswanson.ca/"
     }
 }
