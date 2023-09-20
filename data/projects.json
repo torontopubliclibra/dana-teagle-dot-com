@@ -7,9 +7,9 @@
             "SCSS"
         ],
         "description": [
-            "This is a client-side notes app, built with Angular, Typescript, and SCSS.",
-            "Any user can save up to 50 notes at a time (each up to 140 characters in length) in various colours. All inputted data is stored client-side without ever being sent to a database, and remains secure in the browser until the next time the cache is cleared. The notes can be sorted by time stamp, filtered by colour, searched by an inputted query, edited, deleted, and even exported to a .txt file for offline access.",
-            "I originally developed the app in Feb 2023 as 'Pigeon Pad', and then relaunched it as 'Note Taken' in Sept 2023 with improved functionality and an updated design."
+            "This is an online notes app, built with Angular, Typescript, and SCSS.",
+            "Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side without ever being sent to a database, and remains secure in the browser until the next time the cache is cleared. Notes can be sorted by their time stamps, filtered by their colours, searched by an inputted query, edited, and deleted, as well as batch exported to a .txt file for offline access.",
+            "I originally developed the app in Feb 2023 under the name Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -25,7 +25,7 @@
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It was built upon the open source Pytheas application, using React, Typescript, Emotion, Jotai, Leaflet, and the OpenRouteService API. This project added several significant functional upgrades to that code base.",
             "The app aims to promote awareness of the nuanced histories of the queer, trans, and intersex communities over the decades, especially those stories which have been lost, forgotten, or intentionally erased. The site walks you through the selected tour length, displaying text and photos for each location.",
-            "I was the lead developer on 'Queer Walk', working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "I was the lead developer on Queer Walk, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -38,9 +38,9 @@
             "CSS"
         ],
         "description": [
-            "This is a card game built with React, JavaScript, and CSS.",
+            "This is an online card game built with React, JavaScript, and CSS.",
             "When the game starts, a set of data objects stored in Firebase (each representing a superhero, with statistics pulled from the Marvel Database Wiki) are retrieved, shuffled, and divided into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Every round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.", 
-            "'Superhero Showdown' uses algorithms for card shuffling, and calculates scores by comparing state values as you move through game play. I developed it in Oct and Nov 2022 during my time at Juno College."
+            "Superhero Showdown uses algorithms for card shuffling, and calculates scores by comparing state values as you move through game play. I developed it in Oct and Nov 2022 during my time at Juno College."
         ],
         "site": "/superhero",
         "code": "/superhero/repo"
@@ -55,7 +55,7 @@
         "description": [
             "This is an app for viewing photos of pigeons in different cities around the world, built with jQuery, HTML, CSS, and the Flickr API.",
             "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a randomized city, then it randomly selects one of the objects and displays the photo on the page.",
-            "I originally developed 'The Pigeon Hole' in July 2022 during my time at Juno College, before later updating it in Sept 2023."
+            "I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
