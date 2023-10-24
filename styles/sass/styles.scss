@@ -285,6 +285,10 @@ header {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                width: initial;
+               img {
+                width: 225px;
+                height: 225px;
+               }
             }
         }
 

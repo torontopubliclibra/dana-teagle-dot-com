@@ -816,6 +816,10 @@ header .scroll-down {
   #about .about-content .portrait {
     width: initial;
   }
+  #about .about-content .portrait img {
+    width: 225px;
+    height: 225px;
+  }
 }
 #about .about-content .bio-1 {
   display: flex;
