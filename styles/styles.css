@@ -784,7 +784,7 @@ header .scroll-down {
 #about .about-content {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
   justify-content: initial;
   align-items: initial;
@@ -794,6 +794,69 @@ header .scroll-down {
   width: 95%;
   padding: 20px;
   margin: 0 auto 20px auto;
+}
+#about .about-content .portrait {
+  display: flex;
+  margin: 5px;
+}
+#about .about-content .portrait img {
+  border: solid #84A59D 4px;
+  width: 275px;
+  height: 275px;
+}
+@media only screen and (max-width: 970px) {
+  #about .about-content .portrait {
+    width: 100%;
+  }
+  #about .about-content .portrait img {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .portrait {
+    width: initial;
+  }
+  #about .about-content .portrait img {
+    width: 225px;
+    height: 225px;
+  }
+}
+#about .about-content .bio-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: initial;
+  max-width: calc(100% - 325px);
+  min-height: 275px;
+}
+@media only screen and (max-width: 970px) {
+  #about .about-content .bio-1 {
+    min-height: initial;
+    max-width: 100%;
+    margin: 20px;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .bio-1 {
+    margin: 0;
+  }
+}
+#about .about-content .bio-2 {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: initial;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .bio-2 {
+    margin: 0;
+  }
 }
 #about .about-content hr {
   border-color: #84A59D;
