@@ -466,6 +466,21 @@ header {
         width: 95%;
         margin: 0 auto;
 
+        p {
+            margin: 20px;
+            &:first-of-type {
+                margin-bottom: 0;
+            }
+            &:last-of-type {
+                margin-top: 0;
+            }
+            
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                margin: 0;
+            }
+        }
+
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             width: 85%;
