@@ -998,6 +998,20 @@ header .scroll-down {
   width: 95%;
   margin: 0 auto;
 }
+#contact .contact-content p {
+  margin: 20px;
+}
+#contact .contact-content p:first-of-type {
+  margin-bottom: 0;
+}
+#contact .contact-content p:last-of-type {
+  margin-top: 0;
+}
+@media only screen and (max-width: 768px) {
+  #contact .contact-content p {
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   #contact .contact-content {
     width: 85%;
