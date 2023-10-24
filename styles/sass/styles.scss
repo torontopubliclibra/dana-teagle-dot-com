@@ -258,12 +258,64 @@ header {
 
     // content container
     .about-content {
-        @include flex(column, 20px);
+        @include flex(row, 20px);
         @include borderedBox(rgba($white, 0.8), $color2);
         max-width: 100%;
         width: 95%;
         padding: 20px;
         margin: 0 auto 20px auto;
+
+        .portrait {
+            display: flex;
+            margin: 5px;
+            img {
+                border: solid $color1 4px;
+                width: 275px;
+                height: 275px;
+            }
+    
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                width: 100%;
+                img {
+                    margin: 0 auto;
+                }
+            }
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+               width: initial;
+            }
+        }
+
+        .bio-1 {
+            @include flex(column, 20px, center);
+            max-width: calc(100% - 325px);
+            min-height: 275px;
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                min-height: initial;
+                max-width: 100%;
+                margin: 20px;
+                margin-top: 0;
+            }
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                margin: 0;
+            }
+        }
+
+        .bio-2 {
+            margin: 20px;
+            @include flex(column, 20px, center);
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                margin: 0;
+            }
+        }
 
         hr {
             border-color: $color1;
