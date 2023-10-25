@@ -811,6 +811,8 @@ header .scroll-down {
   }
   #about .about-content .portrait img {
     margin: 0 auto;
+    width: 350px;
+    height: 350px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -818,8 +820,8 @@ header .scroll-down {
     width: initial;
   }
   #about .about-content .portrait img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
   }
 }
 #about .about-content .bio-1 {
