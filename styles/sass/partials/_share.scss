@@ -92,6 +92,10 @@ main {
             width: auto;
             margin: 10px;
             cursor: pointer;
+
+            &:nth-of-type(even) {
+                background-color: #8491a5;
+            }
           
             p {
               @include textStyle (16px, left);

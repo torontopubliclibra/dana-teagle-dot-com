@@ -11,6 +11,14 @@
         "link": "/bluesky",
         "description": ""
     },
+    "LinkedIn": {
+        "link": "/linkedin",
+        "description": ""
+    },
+    "GitHub": {
+        "link": "/github",
+        "description": ""
+    },
     "Spotify": {
         "link": "/spotify",
         "description": ""
@@ -23,12 +31,12 @@
         "link": "/goodreads",
         "description": ""
     },
-    "GitHub": {
-        "link": "/github",
-        "description": ""
-    },
     "Discord": {
         "link": "/discord",
+        "description": ""
+    },
+    "Paypal": {
+        "link": "/paypal",
         "description": ""
     },
     "Email": {

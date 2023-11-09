@@ -635,6 +635,9 @@ main .share-links .share-link {
   margin: 10px;
   cursor: pointer;
 }
+main .share-links .share-link:nth-of-type(even) {
+  background-color: #8491a5;
+}
 main .share-links .share-link p {
   font-size: 16px;
   text-align: left;
