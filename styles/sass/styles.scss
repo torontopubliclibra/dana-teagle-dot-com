@@ -4,6 +4,7 @@
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
 @use 'partials/animations';
+@use 'partials/share';
 
 // default wrapper
 .wrapper {

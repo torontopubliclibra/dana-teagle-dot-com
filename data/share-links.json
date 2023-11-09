@@ -1,0 +1,34 @@
+{
+    "Dana Teagle Dot Com": {
+        "link": "/",
+        "description": "Web/Software Development profile & portfolio"
+    },
+    "Letterboxd": {
+        "link": "/letterboxd",
+        "description": ""
+    },
+    "Goodreads": {
+        "link": "/goodreads",
+        "description": ""
+    },
+    "Instagram": {
+        "link": "/instagram",
+        "description": ""
+    },
+    "Spotify": {
+        "link": "/spotify",
+        "description": ""
+    },
+    "GitHub": {
+        "link": "/github",
+        "description": ""
+    },
+    "Discord": {
+        "link": "/discord",
+        "description": ""
+    },
+    "Email": {
+        "link": "mailto:dana.r.teagle@gmail.com",
+        "description": ""
+    }
+}
