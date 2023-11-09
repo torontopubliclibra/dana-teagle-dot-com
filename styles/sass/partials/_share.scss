@@ -1,7 +1,7 @@
 @use 'mixins' as *;
 @use 'variables' as *;
 
-html {
+html.share {
     background-color: rgba($black, 0.9);
 }
 

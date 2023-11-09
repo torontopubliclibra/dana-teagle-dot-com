@@ -542,7 +542,7 @@ footer .credit, footer p, footer a {
     transform: translate(-50%, 0px);
   }
 }
-html {
+html.share {
   background-color: rgba(40, 43, 44, 0.9);
 }
 
