@@ -1,14 +1,10 @@
 {
     "Dana Teagle Dot Com": {
         "link": "/",
-        "description": "Web/Software Development profile & portfolio"
+        "description": "Web dev profile & portfolio"
     },
-    "Letterboxd": {
-        "link": "/letterboxd",
-        "description": ""
-    },
-    "Goodreads": {
-        "link": "/goodreads",
+    "Bluesky": {
+        "link": "/bluesky",
         "description": ""
     },
     "Instagram": {
@@ -17,6 +13,14 @@
     },
     "Spotify": {
         "link": "/spotify",
+        "description": ""
+    },
+    "Letterboxd": {
+        "link": "/letterboxd",
+        "description": ""
+    },
+    "Goodreads": {
+        "link": "/goodreads",
         "description": ""
     },
     "GitHub": {
