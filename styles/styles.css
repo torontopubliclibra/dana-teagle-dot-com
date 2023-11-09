@@ -619,9 +619,10 @@ main hr {
 }
 main .share-links .share-link {
   background-color: #84A59D;
-  min-width: 400px;
+  border: solid 3px #f3e8e9;
+  min-width: 475px;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   line-height: 1.25;
   color: #282b2c;
   display: flex;
@@ -635,19 +636,21 @@ main .share-links .share-link {
   cursor: pointer;
 }
 main .share-links .share-link p {
-  font-size: 18px;
-  text-align: center;
+  font-size: 16px;
+  text-align: left;
   line-height: 1.25;
   color: #282b2c;
+  min-width: 90%;
   margin: 0;
+  margin-right: 10%;
 }
 main .share-links .share-link .button-description {
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
 }
 main .share-links .share-link hr {
-  border: solid 1px #282b2c;
-  width: 90%;
+  border: solid 1px #f3e8e9;
+  width: 100%;
   margin: 0;
 }
 main .share-links .share-link:hover {
@@ -655,7 +658,7 @@ main .share-links .share-link:hover {
 }
 @media only screen and (max-width: 768px) {
   main .share-links .share-link {
-    min-width: 350px;
+    min-width: 340px;
   }
   main .share-links .share-link p {
     max-width: 250px;

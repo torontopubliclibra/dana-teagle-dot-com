@@ -85,26 +85,29 @@ main {
     .share-links {
         .share-link {
             background-color: $color1;
-            min-width: 400px;
-            @include textStyle (20px, center);
+            border: solid 3px $white;
+            min-width: 475px;
+            @include textStyle (20px, left);
             @include flex(column, 10px, center, center);
             width: auto;
             margin: 10px;
             cursor: pointer;
           
             p {
-              @include textStyle (18px, center);
+              @include textStyle (16px, left);
+              min-width: 90%;
               margin: 0;
+              margin-right: 10%;
             }
 
             .button-description {
-                font-size: 14px;
+                font-size: 12px;
                 font-style: normal;
             }
 
             hr {
-                border: solid 1px $black;
-                width: 90%;
+                border: solid 1px $white;
+                width: 100%;
                 margin: 0;
             }
           
@@ -114,7 +117,7 @@ main {
 
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                min-width: 350px;
+                min-width: 340px;
                 
                 p {
                     max-width: 250px;

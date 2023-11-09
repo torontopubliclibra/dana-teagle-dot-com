@@ -16,7 +16,7 @@ let share = {
             // map out the links to the page
             let formattedLinks = share.links.map((link) => {
 
-                let title = `<p class="button-label" >` + link.title + `</p>`;
+                let title = `<p class="button-label">` + link.title + ` <i class="fa fa-external-link-square" aria-hidden="true"></i></p>`;
                 let href = `href="` + link.link + `"`;
                 let description = ``;
 
