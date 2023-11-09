@@ -3,12 +3,12 @@
         "link": "/",
         "description": "Web dev profile & portfolio"
     },
-    "Bluesky": {
-        "link": "/bluesky",
-        "description": ""
-    },
     "Instagram": {
         "link": "/instagram",
+        "description": ""
+    },
+    "Bluesky": {
+        "link": "/bluesky",
         "description": ""
     },
     "Spotify": {
