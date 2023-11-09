@@ -42,6 +42,11 @@ main {
         font-style: italic;
         font-size: 20px;
         margin: 0;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            font-size: 16px;
+        }
     }
 
     h3 {
@@ -49,6 +54,11 @@ main {
         font-size: 18px;
         margin: 0;
         padding: 0;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            font-size: 14px;
+        }
     }
 
     hr {
