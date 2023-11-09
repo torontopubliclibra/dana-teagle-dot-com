@@ -1,5 +1,5 @@
 {
-    "Dana Teagle Dot Com": {
+    "Dana Teagle dot com": {
         "link": "/",
         "description": "Web dev profile & portfolio"
     },
@@ -32,7 +32,7 @@
         "description": ""
     },
     "Email": {
-        "link": "mailto:dana.r.teagle@gmail.com",
+        "link": "/email",
         "description": ""
     }
 }
