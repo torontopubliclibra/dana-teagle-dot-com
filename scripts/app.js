@@ -21,16 +21,8 @@ let app = {
         filter: "All",
     },
 
-    // email address to inject
-    email: "info@danateagle.com",
-
     // app functions
     functions: {
-
-        // inject email link function
-        emailInject: () => {
-            app.elements.emailLink.html(`<a href="mailto:${app.email}" target="_blank" title="Send an email to Dana">an email</a>`);
-        },
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
