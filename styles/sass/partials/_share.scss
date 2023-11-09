@@ -20,16 +20,16 @@ main {
         text-align: center;
         cursor: text;
         color: $white;
-        max-width: 750px;
+        max-width: 850px;
         
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
-            max-width: 600px;
+            max-width: 550px;
         }
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            max-width: 400px;
+            max-width: 375px;
         }
     }
 
@@ -52,25 +52,25 @@ main {
     }
 
     hr {
-        width: 750px;
+        width: 850px;
         margin: 20px 0;
         border: 1.5px solid $color2;
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
-            max-width: 600px;
+            max-width: 550px;
         }
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            max-width: 400px;
+            max-width: 375px;
         }
     }
 
     .share-links {
         .share-link {
             background-color: $color1;
-            min-width: 450px;
+            min-width: 400px;
             @include textStyle (20px, center);
             @include flex(column, 10px, center, center);
             width: auto;
@@ -97,9 +97,9 @@ main {
               background: $color2;
             }
 
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
-                min-width: 350px;
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                min-width: 325px;
                 
                 p {
                     max-width: 250px;
