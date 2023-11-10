@@ -411,12 +411,12 @@ header {
 
                 a.tag, span.tag {
                     font-size: 14px;
+                }
 
-                    &:hover {
-                       cursor: pointer;
-                       font-style: italic;
-                       color: $black;
-                    }
+                a.tag:hover {
+                    cursor: pointer;
+                    font-style: italic;
+                    color: $black;
                 }
 
                 .selected {
