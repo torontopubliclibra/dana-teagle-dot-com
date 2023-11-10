@@ -108,6 +108,9 @@ let app = {
                 // map out those filters
                 projectFilters = projectFilters.sort().map((filter) => {
 
+                    // set the filter name to an empty string
+                    let filterName = filter;
+
                     // if the parameter is 'all', save that as the filter
                     if (filter === "All") {
                         filterName = filter;
