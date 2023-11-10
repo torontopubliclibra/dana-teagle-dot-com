@@ -1,150 +1,154 @@
 @use 'mixins' as *;
 @use 'variables' as *;
 
-html.share, body, main, footer {
-    background-color: rgba($black, 0.9);
-}
+html.share {
+    background-color: $black;
 
-main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 50px 0;
-    align-items: center;
-    justify-content: center;
-
-    .portrait img {
-        width: 150px;
-        border: 4px solid $color1;
+    body, main, footer {
+        background-color: rgba($black, 0.9);
     }
 
-    h1, h2, h3 {
-        text-align: center;
-        cursor: text;
-        color: $white;
-        max-width: 850px;
-        
-        // responsive to tablet
-        @media only screen and (max-width: $tablet) {
-            max-width: 550px;
-        }
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            max-width: 375px;
-        }
-    }
-
-    h1 {
-        font-size: 32px;
-        margin: 15px;
-    }
+    main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 50px 0;
+        align-items: center;
+        justify-content: center;
     
-    h2 {
-        font-style: italic;
-        font-size: 22px;
-        margin: 0;
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            font-size: 18px;
+        .portrait img {
+            width: 150px;
+            border: 4px solid $color1;
         }
-    }
-
-    h3 {
-        min-width: 60%;
-        font-style: normal;
-        font-size: 18px;
-        margin: 0;
-        padding: 0;
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            font-size: 14px;
-        }
-    }
-
-    hr {
-        width: 850px;
-        margin: 20px 0;
-        border: 1.5px solid $color2;
-
-        // responsive to tablet
-        @media only screen and (max-width: $tablet) {
-            max-width: 550px;
-        }
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            max-width: 375px;
-        }
-    }
-
-    .share-links {
-
-        h3 {
-            text-align: left;
-        }
-
-        .share-link {
-            background-color: $color1;
-            border: solid 3px $white;
-            min-width: 425px;
-            @include textStyle (20px, left);
-            @include flex(column, 10px, center, center);
-            width: auto;
-            margin: 10px;
-            cursor: pointer;
-
-            &:nth-of-type(even) {
-                background-color: $color3;
+    
+        h1, h2, h3 {
+            text-align: center;
+            cursor: text;
+            color: $white;
+            max-width: 850px;
+            
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                max-width: 550px;
             }
-          
-            p {
-              @include textStyle (16px, left);
-              min-width: 90%;
-              margin: 0;
-              margin-right: 10%;
-            }
-
-            .button-description {
-                font-size: 12px;
-                font-style: normal;
-            }
-
-            hr {
-                border: solid 1px $white;
-                width: 100%;
-                margin: 0;
-            }
-          
-            &:hover {
-              background: $color2;
-            }
-
+    
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                min-width: 350px;
-                
+                max-width: 375px;
+            }
+        }
+    
+        h1 {
+            font-size: 32px;
+            margin: 15px;
+        }
+        
+        h2 {
+            font-style: italic;
+            font-size: 22px;
+            margin: 0;
+    
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                font-size: 18px;
+            }
+        }
+    
+        h3 {
+            min-width: 60%;
+            font-style: normal;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+    
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                font-size: 14px;
+            }
+        }
+    
+        hr {
+            width: 850px;
+            margin: 20px 0;
+            border: 1.5px solid $color2;
+    
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                max-width: 550px;
+            }
+    
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                max-width: 375px;
+            }
+        }
+    
+        .share-links {
+    
+            h3 {
+                text-align: left;
+            }
+    
+            .share-link {
+                background-color: $color1;
+                border: solid 3px $white;
+                min-width: 425px;
+                @include textStyle (20px, left);
+                @include flex(column, 10px, center, center);
+                width: auto;
+                margin: 10px;
+                cursor: pointer;
+    
+                &:nth-of-type(even) {
+                    background-color: $color3;
+                }
+              
                 p {
-                    max-width: 250px;
+                  @include textStyle (16px, left);
+                  min-width: 90%;
+                  margin: 0;
+                  margin-right: 10%;
+                }
+    
+                .button-description {
+                    font-size: 12px;
+                    font-style: normal;
+                }
+    
+                hr {
+                    border: solid 1px $white;
+                    width: 100%;
+                    margin: 0;
+                }
+              
+                &:hover {
+                  background: $color2;
+                }
+    
+                // responsive to mobile
+                @media only screen and (max-width: $mobile) {
+                    min-width: 350px;
+                    
+                    p {
+                        max-width: 250px;
+                    }
                 }
             }
         }
     }
-}
-
-footer {
-    p.credit, a {
-        max-width: 80%;
-        margin: 0 auto;
-        color: $white;
-        font-size: 14px;
-
-        .alt {
-            color: $color2;
+    
+    footer {
+        p.credit, a {
+            max-width: 80%;
+            margin: 0 auto;
+            color: $white;
+            font-size: 14px;
+    
+            .alt {
+                color: $color2;
+            }
         }
+        margin-bottom: 40px;
     }
-    margin-bottom: 40px;
 }
