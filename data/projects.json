@@ -20,7 +20,8 @@
             "React",
             "TypeScript",
             "Jotai",
-            "Emotion"
+            "Emotion",
+            "GeoJSON"
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario. It was built upon the open source Pytheas application, using React, Typescript, Emotion, Jotai, Leaflet, and the OpenRouteService API. This project added several significant functional upgrades to that code base.",
