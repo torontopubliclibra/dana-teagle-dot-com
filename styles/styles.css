@@ -1079,6 +1079,9 @@ header .scroll-down {
 #projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
   font-size: 14px;
 }
+#projects .projects-container .project .tags span.tag:hover {
+  cursor: text;
+}
 #projects .projects-container .project .tags a.tag:hover {
   cursor: pointer;
   font-style: italic;
