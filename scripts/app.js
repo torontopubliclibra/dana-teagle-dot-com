@@ -183,12 +183,12 @@ let app = {
                     if (tag === app.projects.filter) {
                         return `<span class="selected tag">#` + tag + `</span>`
                     } else {
-                        return `<span class="tag">#` + tag + `</span>`
+                        return `<a onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</a>`
                     }
                 })
 
-                formattedProject.tags = `<h4>` + formattedTags.reduce((accumulator, tag) => {
-                    return accumulator + tag}) + `</h4>`;
+                formattedProject.tags = `<div class="tags">` + formattedTags.reduce((accumulator, tag) => {
+                    return accumulator + tag}) + `</div>`;
 
                 // if the project description exists
                 if (project.description.length > 0) {
@@ -273,8 +273,6 @@ let app = {
                 button.innerHTML = `Description <i class="fa fa-angle-down"></i>`;
                 project.classList.remove("active");
                 paragraph.style.maxHeight = "";
-                
-                // blur the button after paragraph is hidden
                 document.activeElement.blur();
             }
         }
