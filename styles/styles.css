@@ -617,10 +617,13 @@ main hr {
     max-width: 375px;
   }
 }
+main .share-links h3 {
+  text-align: left;
+}
 main .share-links .share-link {
   background-color: #84A59D;
   border: solid 3px #f3e8e9;
-  min-width: 475px;
+  min-width: 425px;
   font-size: 20px;
   text-align: left;
   line-height: 1.25;
@@ -661,7 +664,7 @@ main .share-links .share-link:hover {
 }
 @media only screen and (max-width: 768px) {
   main .share-links .share-link {
-    min-width: 340px;
+    min-width: 350px;
   }
   main .share-links .share-link p {
     max-width: 250px;
