@@ -548,12 +548,19 @@ html.share {
 html.share body, html.share main, html.share footer {
   background-color: rgba(40, 43, 44, 0.9);
 }
+html.share hr {
+  width: 85%;
+  max-width: 850px;
+  margin: 20px 0;
+  border: 1.5px solid #B57E9B;
+}
 html.share main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
   padding: 50px 0;
+  padding-bottom: 0;
   align-items: center;
   justify-content: center;
 }
@@ -592,7 +599,8 @@ html.share main h2 {
   }
 }
 html.share main h3 {
-  min-width: 60%;
+  width: 85%;
+  max-width: 850px;
   font-style: normal;
   font-size: 18px;
   margin: 0;
@@ -601,21 +609,6 @@ html.share main h3 {
 @media only screen and (max-width: 768px) {
   html.share main h3 {
     font-size: 14px;
-  }
-}
-html.share main hr {
-  width: 850px;
-  margin: 20px 0;
-  border: 1.5px solid #B57E9B;
-}
-@media only screen and (max-width: 970px) {
-  html.share main hr {
-    max-width: 550px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  html.share main hr {
-    max-width: 375px;
   }
 }
 html.share main .share-links h3 {
@@ -672,10 +665,12 @@ html.share main .share-links .share-link:hover {
   }
 }
 html.share footer {
-  margin-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 html.share footer p.credit, html.share footer a {
-  max-width: 80%;
+  width: 85%;
+  max-width: 850px;
   margin: 0 auto;
   color: #f3e8e9;
   font-size: 14px;

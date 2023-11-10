@@ -8,12 +8,20 @@ html.share {
         background-color: rgba($black, 0.9);
     }
 
+    hr {
+        width: 85%;
+        max-width: 850px;
+        margin: 20px 0;
+        border: 1.5px solid $color2;
+    }
+
     main {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         margin: 0 auto;
         padding: 50px 0;
+        padding-bottom: 0;
         align-items: center;
         justify-content: center;
     
@@ -56,7 +64,8 @@ html.share {
         }
     
         h3 {
-            min-width: 60%;
+            width: 85%;
+            max-width: 850px;
             font-style: normal;
             font-size: 18px;
             margin: 0;
@@ -65,22 +74,6 @@ html.share {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 font-size: 14px;
-            }
-        }
-    
-        hr {
-            width: 850px;
-            margin: 20px 0;
-            border: 1.5px solid $color2;
-    
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
-                max-width: 550px;
-            }
-    
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
-                max-width: 375px;
             }
         }
     
@@ -139,8 +132,12 @@ html.share {
     }
     
     footer {
+        padding-top: 10px;
+        padding-bottom: 30px;
+
         p.credit, a {
-            max-width: 80%;
+            width: 85%;
+            max-width: 850px;
             margin: 0 auto;
             color: $white;
             font-size: 14px;
@@ -149,6 +146,5 @@ html.share {
                 color: $color2;
             }
         }
-        margin-bottom: 40px;
     }
 }
