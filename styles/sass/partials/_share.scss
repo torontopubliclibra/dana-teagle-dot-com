@@ -99,7 +99,7 @@ main {
             cursor: pointer;
 
             &:nth-of-type(even) {
-                background-color: #8491a5;
+                background-color: $color3;
             }
           
             p {
