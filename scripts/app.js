@@ -171,12 +171,24 @@ let app = {
                 let formattedProject = {
                     heading: "",
                     description: "",
+                    tags: "",
                     site: "",
                     code: "",
                 };
 
                 // format the project heading
                 formattedProject.heading = `<h3>` + project.title + `</h3>`
+
+                let formattedTags = project.tags.map((tag) => {
+                    if (tag === app.projects.filter) {
+                        return `<span class="selected tag">#` + tag + `</span>`
+                    } else {
+                        return `<span class="tag">#` + tag + `</span>`
+                    }
+                })
+
+                formattedProject.tags = `<h4>` + formattedTags.reduce((accumulator, tag) => {
+                    return accumulator + tag}) + `</h4>`;
 
                 // if the project description exists
                 if (project.description.length > 0) {
@@ -191,8 +203,8 @@ let app = {
                     // and combine that paragraph with a read more button
                     formattedProject.description =
                         `<button class="button read-more" title="`
-                        + project.title +
-                        ` project description">Description <i class="fa fa-angle-down"></i></button><p>`
+                        + project.title
+                        + ` project description">Description <i class="fa fa-angle-down"></i></button><p>`
                         + formattedParagraph
                         + `</p>`
                 }
@@ -216,6 +228,7 @@ let app = {
                 + formattedProject.site
                 + formattedProject.code
                 + formattedProject.description
+                + formattedProject.tags
                 + `</div></div>`
             });
 
@@ -281,9 +294,6 @@ let app = {
 
         // scroll down to top of about section on button click
         app.elements.scrollDownButton.click(() => app.functions.scroll("about"));
-
-        // inject email link
-        app.functions.emailInject();
 
     },
     
