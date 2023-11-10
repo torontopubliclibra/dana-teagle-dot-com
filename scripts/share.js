@@ -5,7 +5,7 @@ let share = {
     shareLinks: $(".share-links"),
 
     // links data
-    links: [{title: "", link: "", description: ""}],
+    links: [],
 
     // share functions
     functions: {
@@ -13,24 +13,36 @@ let share = {
         // displaying the projects
         linkDisplay: () => {
 
-            // map out the links to the page
-            let formattedLinks = share.links.map((link) => {
+            let formattedLinks = [];
 
-                let title = `<p class="button-label">` + link.title + ` <i class="fa fa-external-link-square" aria-hidden="true"></i></p>`;
-                let href = `href="` + link.link + `"`;
-                let description = ``;
+            for (let category in share.links) {
 
-                if (link.description) {
-                    description = `<hr/><p class="button-description">` + link.description + `</p>`
-                }
+                let heading = `<h3>` + category + `</h3>`
 
-                // stitch together all the html for the project
-                return `<a class="button share-link"` + href + `>` + title + description + `</a>`
-            });
+                let categoryLinks = [heading];
 
-            // stitch the html for each of the projects together and add that the projects container
-            share.shareLinks.html(formattedLinks.reduce((accumulator, link) => {
-                return accumulator + link;
+                share.links[category].forEach((link) => {
+
+                    let title = `<p class="button-label">` + link.title + ` <i class="fa fa-external-link-square" aria-hidden="true"></i></p>`;
+                    let href = `href="` + link.link + `"`;
+                    let description = ``;
+
+                    if (link.description) {
+                        description = `<hr/><p class="button-description">` + link.description + `</p>`
+                    }
+
+                    // stitch together all the html for the project
+                    categoryLinks.push(`<a class="button share-link"` + href + `>` + title + description + `</a>`)
+
+                })
+
+                formattedLinks.push(categoryLinks.reduce((accumulator, link) => {
+                    return accumulator + link;
+                }));
+            }
+
+            share.shareLinks.html(formattedLinks.reduce((accumulator, category) => {
+                return accumulator + `<br/>` + category;
             }));
         },
     },
@@ -44,26 +56,32 @@ let share = {
             .then((data) => {
 
                 // set the projects to an empty array
-                let links = [];
+                let links = {};
 
-                // and for each project in the data
                 for (let object in data) {
 
-                    // initialize a project object, setting the title to the object key
-                    let link = {
-                        "title": object,
-                        "description": "",
-                        "link": ""
-                    }
+                    links[object] = [];
 
-                    // then map each property in the initial object to the new object
-                    for (let property in data[object]) {
-                        link[property] = data[object][property];
+                    // and for each item in the object
+                    for (let item in data[object]) {
+
+                        // initialize a link object, setting the title to the object key
+                        let link = {
+                            "title": item,
+                            "description": "",
+                            "link": ""
+                        }
+
+                        // then map each property in the initial item to the new item
+                        for (let property in data[object][item]) {
+                            link[property] = data[object][item][property];
+                        };
+
+                        // and push each item object into the links array
+                        links[object].push(link);
                     };
 
-                    // and push each project object into the projects array
-                    links.push(link);
-                };
+                }
 
                 // save the projects array to the project data
                 share.links = links;

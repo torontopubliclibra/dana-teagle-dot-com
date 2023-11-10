@@ -1,46 +1,58 @@
 {
-    "Dana Teagle dot com": {
-        "link": "/",
-        "description": "Web/software development portfolio"
+    "sites": {
+        "Dana Teagle dot com": {
+            "link": "/",
+            "description": "Web/software development portfolio"
+        }
     },
-    "Instagram": {
-        "link": "/instagram",
-        "description": ""
+    "socials": {
+        "Instagram": {
+            "link": "/instagram",
+            "description": ""
+        },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": ""
+        },
+        "GitHub": {
+            "link": "/github",
+            "description": ""
+        },
+        "LinkedIn": {
+            "link": "/linkedin",
+            "description": ""
+        },
+        "Spotify": {
+            "link": "/spotify",
+            "description": ""
+        },
+        "Letterboxd": {
+            "link": "/letterboxd",
+            "description": ""
+        },
+        "Goodreads": {
+            "link": "/goodreads",
+            "description": ""
+        }
     },
-    "Bluesky": {
-        "link": "/bluesky",
-        "description": ""
+    "payments": {
+        "Paypal": {
+            "link": "/paypal",
+            "description": ""
+        },
+        "Kofi": {
+            "link": "/kofi",
+            "description": ""
+        }
     },
-    "LinkedIn": {
-        "link": "/linkedin",
-        "description": ""
-    },
-    "GitHub": {
-        "link": "/github",
-        "description": ""
-    },
-    "Spotify": {
-        "link": "/spotify",
-        "description": ""
-    },
-    "Letterboxd": {
-        "link": "/letterboxd",
-        "description": ""
-    },
-    "Goodreads": {
-        "link": "/goodreads",
-        "description": ""
-    },
-    "Discord": {
-        "link": "/discord",
-        "description": ""
-    },
-    "Paypal": {
-        "link": "/paypal",
-        "description": ""
-    },
-    "Email": {
-        "link": "mailto:dana.r.teagle@gmail.com",
-        "description": ""
+    "contact": {
+        "Email": {
+            "link": "mailto:dana.r.teagle@gmail.com",
+            "description": ""
+        },
+        "Discord": {
+            "link": "/discord",
+            "description": ""
+        }
     }
 }

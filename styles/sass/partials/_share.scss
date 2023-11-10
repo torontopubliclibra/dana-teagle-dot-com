@@ -83,10 +83,15 @@ main {
     }
 
     .share-links {
+
+        h3 {
+            text-align: left;
+        }
+
         .share-link {
             background-color: $color1;
             border: solid 3px $white;
-            min-width: 475px;
+            min-width: 425px;
             @include textStyle (20px, left);
             @include flex(column, 10px, center, center);
             width: auto;
@@ -121,7 +126,7 @@ main {
 
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                min-width: 340px;
+                min-width: 350px;
                 
                 p {
                     max-width: 250px;
