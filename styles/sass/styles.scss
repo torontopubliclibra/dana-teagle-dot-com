@@ -413,6 +413,10 @@ header {
                     font-size: 14px;
                 }
 
+                span.tag:hover {
+                    cursor: text;
+                }
+
                 a.tag:hover {
                     cursor: pointer;
                     font-style: italic;
