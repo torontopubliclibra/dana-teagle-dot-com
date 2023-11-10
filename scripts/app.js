@@ -109,7 +109,7 @@ let app = {
                 projectFilters = projectFilters.sort().map((filter) => {
 
                     // set the filter name to an empty string
-                    let filterName = filter;
+                    let filterName = '';
 
                     // if the parameter is 'all', save that as the filter
                     if (filter === "All") {
