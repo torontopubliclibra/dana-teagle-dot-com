@@ -21,13 +21,33 @@ let app = {
         filter: "All",
     },
 
-    pgp: "B6A6 18AB 63E8 36CD 4787 4CC1 81BE E5FF B067 4687",
+    pgp: {
+        fingerprint: "B6A6 18AB 63E8 36CD 4787 4CC1 81BE E5FF B067 4687"
+    },
 
     // app functions
     functions: {
 
         copyPGP: () => {
-            navigator.clipboard.writeText(app.pgp);
+
+            if (!app.elements.pgpFingerprint.hasClass("copied")) {
+
+                // copy the fingerprint to the clipboard
+                navigator.clipboard.writeText(app.pgp.fingerprint);
+
+                console.log("copied");
+
+                // inject the onclick html
+                app.elements.pgpFingerprint.html(app.pgp.onclick);
+                app.elements.pgpFingerprint.toggleClass("copied");
+
+                setTimeout(() => {
+                    // inject the default html
+                    app.elements.pgpFingerprint.html(app.pgp.default);
+                    app.elements.pgpFingerprint.toggleClass("copied");
+
+                }, 2000);
+            }
         },
 
         // toggle classes to hide or show the nav
@@ -343,8 +363,12 @@ let app = {
             // console log any promise errors
             .catch(error => console.log(error));
 
+        // set the pgp html blocks
+        app.pgp.default = app.pgp.fingerprint + `<i  class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i>`;
+        app.pgp.onclick = app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i>`;
+
         // inject the pgp fingerprint
-        app.elements.pgpFingerprint.html(app.pgp + `<i onclick="app.functions.copyPGP()" class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i>`);
+        app.elements.pgpFingerprint.html(app.pgp.default);
 
         // add the event listeners
         app.events();

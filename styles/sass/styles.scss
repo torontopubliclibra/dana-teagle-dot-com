@@ -516,14 +516,21 @@ header {
             padding: 2px 8px;
             background-color: rgba($color2, 0.5);
             border-bottom: solid $black 2px;
+            cursor: pointer;
+
+            &.copied {
+                cursor: default;
+            }
+
+            &:hover, &.copied {
+                background-color: rgba($color3, 0.5);
+                color: $black;
+            }
 
             i {
                 font-size: 14px;
+                font-weight: 900;
                 margin-left: 10px;
-                &:hover {
-                    color: $white;
-                    cursor: pointer;
-                }
             }
 
             // responsive to mobile

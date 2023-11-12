@@ -1214,14 +1214,19 @@ header .scroll-down {
   padding: 2px 8px;
   background-color: rgba(181, 126, 155, 0.5);
   border-bottom: solid #282b2c 2px;
+  cursor: pointer;
+}
+#contact .contact-content .pgp.copied {
+  cursor: default;
+}
+#contact .contact-content .pgp:hover, #contact .contact-content .pgp.copied {
+  background-color: rgba(132, 145, 165, 0.5);
+  color: #282b2c;
 }
 #contact .contact-content .pgp i {
   font-size: 14px;
+  font-weight: 900;
   margin-left: 10px;
-}
-#contact .contact-content .pgp i:hover {
-  color: #f3e8e9;
-  cursor: pointer;
 }
 @media only screen and (max-width: 768px) {
   #contact .contact-content .pgp {
