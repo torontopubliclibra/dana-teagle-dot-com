@@ -513,8 +513,9 @@ header {
         .pgp {
             font-style: italic;
             font-size: 16px;
-            padding: 3px 8px;
-            background-color: rgba($color2, 0.6);
+            padding: 2px 8px;
+            background-color: rgba($color2, 0.5);
+            border-bottom: solid $black 2px;
 
             i {
                 font-size: 14px;
