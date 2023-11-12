@@ -336,7 +336,7 @@ a:hover, a:focus {
 }
 
 .ham-icon {
-  font-size: 25px;
+  font-size: 22px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
@@ -835,7 +835,7 @@ header nav .hamburger-btn {
     height: 52px;
   }
   header nav .hamburger-btn button .ham-icon {
-    margin: 10px;
+    margin: 5px;
     transform: rotate(0deg);
     transition: transform 0.75s;
   }
@@ -1261,9 +1261,9 @@ footer .wrapper .button:hover, footer .wrapper .button:focus {
 }
 @media only screen and (max-width: 970px) {
   footer .wrapper .button {
-    background: #B57E9B;
+    background: #8491a5;
   }
   footer .wrapper .button:hover, footer .wrapper .button:focus {
-    background: #B57E9B;
+    background: #8491a5;
   }
 }
