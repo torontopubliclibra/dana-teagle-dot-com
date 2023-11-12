@@ -12,7 +12,7 @@ let app = {
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
-        emailLink: $(".email"),
+        pgpFingerprint: $(".pgp"),
     },
 
     // projects data and selected filter
@@ -21,8 +21,14 @@ let app = {
         filter: "All",
     },
 
+    pgp: "B6A6 18AB 63E8 36CD 4787 4CC1 81BE E5FF B067 4687",
+
     // app functions
     functions: {
+
+        copyPGP: () => {
+            navigator.clipboard.writeText(app.pgp);
+        },
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
@@ -336,6 +342,9 @@ let app = {
             })
             // console log any promise errors
             .catch(error => console.log(error));
+
+        // inject the pgp fingerprint
+        app.elements.pgpFingerprint.html(app.pgp + `<i onclick="app.functions.copyPGP()" class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i>`);
 
         // add the event listeners
         app.events();

@@ -513,8 +513,17 @@ header {
         .pgp {
             font-style: italic;
             font-size: 16px;
-            padding: 2px 5px;
-            background-color: rgba($color2, 0.4);
+            padding: 3px 8px;
+            background-color: rgba($color2, 0.6);
+
+            i {
+                font-size: 14px;
+                margin-left: 10px;
+                &:hover {
+                    color: $white;
+                    cursor: pointer;
+                }
+            }
 
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
