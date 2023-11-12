@@ -181,7 +181,7 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<span class="selected tag">#` + tag + `</span>`
+                        return `<a onclick="app.functions.projectDisplay('All')" class="selected tag">#` + tag + `</a>`
                     } else {
                         return `<a onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</a>`
                     }

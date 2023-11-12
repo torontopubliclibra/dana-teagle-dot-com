@@ -45,16 +45,28 @@
             "description": "Petition to Amazon & Google to stop supporting the genocide of Palestinians in Gaza [Nov 2023]"
         },
         "House of Commons petition e-4649": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Sign/e-4649",
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4649",
             "description": "Petition to the Prime Minister to take the necessary measures to address the Israel-Palestine conflict [closes Nov 23, 2023]"
         },
-        "All the Walls Will Fall": {
-            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
-            "description": "2023 Palestinian liberation resource list curated by the Palestinian Youth Movement"
+        "House of Commons petition e-4661": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4661",
+            "description": "Petition to the Government of Canada to sanction the state of Israel for its continued ongoing violations of International law [closes Dec 9, 2023]"
+        },
+        "House of Commons petition e-4552": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4552",
+            "description": "Petition to the House of Commons to increase Canada's humanitarian assistance in Sudan [closes Dec 23, 2023]"
+        },
+        "House of Commons petition e-4667": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4667",
+            "description": "Petition to the Government of Canada to budget the necessary funds for the Canada Disability Benefit into the federal expenditures [closes Feb 1, 2024]"
         },
         "House of Commons petition e-4666": {
             "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
             "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
+        },
+        "All the Walls Will Fall": {
+            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
+            "description": "2023 Palestinian liberation resource list curated by the Palestinian Youth Movement"
         },
         "Anti-Trans Legislative Risk Map": {
             "link": "https://celeste.lgbt/map",
@@ -67,6 +79,10 @@
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
+        },
+        "National Network of Abortion Funds": {
+            "link": "https://abortionfunds.org/",
+            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         },
         "Donate A Mask": {
             "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",

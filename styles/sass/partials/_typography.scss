@@ -64,7 +64,7 @@ a {
 
   &:hover, &:focus {
     cursor: pointer;
-    color: $color2;
+    color: $color3;
     font-style: italic;
   }
 
@@ -86,15 +86,17 @@ a {
 
 // scroll down button
 .scroll-down {
-  @include textStyle (75px, center, "", $color1);
+  @include textStyle (75px, center, "", $color3);
   cursor: pointer;
   transition: 0.75s;
-
   &:hover {
-    color: $color2;
+    color: $color1;
+  }
 
-    // responsive to tablet
-    @media only screen and (max-width: $tablet) {
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    color: $color1;
+    &:hover {
       color: $color1;
     }
   }
@@ -129,11 +131,11 @@ nav {
   // nav item links
   ul li a {
     text-decoration: none;
-    border-bottom: solid $color1 3px;
+    border-bottom: solid $color3 3px;
 
     &:hover, &:focus {
       color: $black;
-      border-bottom: solid $color2 3px;
+      border-bottom: solid $color1 3px;
       outline: initial;
       transition: 0.4s;
     }
@@ -185,7 +187,7 @@ h3 {
   @include textStyle (22px, center, 1.5);
   font-style: italic;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px 20px;
   max-width: 85%;
 
   // responsive to tablet
@@ -255,6 +257,10 @@ footer {
     // responsive to mobile
     @media only screen and (max-width: $mobile) {
       @include textStyle (16px, center);
+    }
+
+    a:hover {
+      color: $color2;
     }
   }
 }
