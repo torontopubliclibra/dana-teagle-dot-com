@@ -23,7 +23,7 @@ let share = {
 
                 share.links[category].forEach((link) => {
 
-                    let title = `<p class="button-label">` + link.title + ` <i class="fa fa-external-link-square" aria-hidden="true"></i></p>`;
+                    let title = `<span class="link-title"><p class="button-label">` + link.title + ` </p><i class="fa fa-external-link-square" aria-hidden="true"></i></span>`;
                     let href = `href="` + link.link + `"`;
                     let description = ``;
 

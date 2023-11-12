@@ -612,7 +612,15 @@ html.share main h3 {
   }
 }
 html.share main .share-links h3 {
-  text-align: left;
+  text-align: center;
+  width: auto;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links h3 {
+    text-align: left;
+    margin-right: auto;
+  }
 }
 html.share main .share-links .share-link {
   background-color: #84A59D;
@@ -636,18 +644,30 @@ html.share main .share-links .share-link {
 html.share main .share-links .share-link:nth-of-type(even) {
   background-color: #8491a5;
 }
-html.share main .share-links .share-link p {
+html.share main .share-links .share-link .link-title {
+  display: flex;
+  gap: 10px;
   font-size: 16px;
   text-align: left;
   line-height: 1.25;
   color: #282b2c;
-  min-width: 90%;
-  margin: 0;
-  margin-right: 10%;
+  min-width: 100%;
+}
+html.share main .share-links .share-link .link-title p {
+  width: calc(100% - 15px);
+}
+html.share main .share-links .share-link .link-title i {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  min-height: 15px;
+  width: 10px;
 }
 html.share main .share-links .share-link .button-description {
+  min-width: 100%;
   font-size: 12px;
   font-style: normal;
+  text-align: left;
 }
 html.share main .share-links .share-link hr {
   border: solid 1px #f3e8e9;
@@ -659,10 +679,15 @@ html.share main .share-links .share-link:hover {
 }
 @media only screen and (max-width: 768px) {
   html.share main .share-links .share-link {
-    min-width: 350px;
+    min-width: 80%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  html.share main .share-links .share-link p {
-    max-width: 250px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links {
+    min-width: 85%;
   }
 }
 html.share footer {

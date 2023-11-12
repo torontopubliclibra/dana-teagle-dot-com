@@ -80,7 +80,15 @@ html.share {
         .share-links {
     
             h3 {
-                text-align: left;
+                text-align: center;
+                width: auto;
+                margin-bottom: 10px;
+
+                // responsive to mobile
+                @media only screen and (max-width: $mobile) {
+                    text-align: left;
+                    margin-right: auto;
+                }
             }
     
             .share-link {
@@ -98,16 +106,28 @@ html.share {
                     background-color: $color3;
                 }
               
-                p {
-                  @include textStyle (16px, left);
-                  min-width: 90%;
-                  margin: 0;
-                  margin-right: 10%;
+                .link-title {
+                    display: flex;
+                    gap: 10px;
+                    @include textStyle (16px, left);
+                    min-width: 100%;
+                    p {
+                        width: calc(100% - 15px);
+                    }
+                    i {
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        min-height: 15px;
+                        width: 10px;
+                    }
                 }
     
                 .button-description {
+                    min-width: 100%;
                     font-size: 12px;
                     font-style: normal;
+                    text-align: left;
                 }
     
                 hr {
@@ -122,12 +142,16 @@ html.share {
     
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
-                    min-width: 350px;
-                    
-                    p {
-                        max-width: 250px;
-                    }
+                    min-width: 80%;
+                    max-width: 350px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
+            }
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                min-width: 85%;
             }
         }
     }
