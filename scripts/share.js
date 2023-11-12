@@ -32,7 +32,7 @@ let share = {
                     }
 
                     // stitch together all the html for the project
-                    categoryLinks.push(`<a class="button share-link"` + href + `>` + title + description + `</a>`)
+                    categoryLinks.push(`<a class="button share-link"` + href + `target="_blank"` + `>` + title + description + `</a>`)
 
                 })
 
