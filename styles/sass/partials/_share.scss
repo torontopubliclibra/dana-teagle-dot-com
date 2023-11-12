@@ -87,10 +87,11 @@ html.share {
                 background-color: $color1;
                 border: solid 3px $white;
                 min-width: 425px;
+                max-width: 500px;
                 @include textStyle (20px, left);
                 @include flex(column, 10px, center, center);
                 width: auto;
-                margin: 10px;
+                margin: 5px;
                 cursor: pointer;
     
                 &:nth-of-type(even) {

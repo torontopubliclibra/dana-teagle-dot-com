@@ -3,6 +3,10 @@
         "Dana Teagle dot com": {
             "link": "/",
             "description": "Web/software development portfolio"
+        },
+        "Note Taken": {
+            "link": "/notes",
+            "description": "Local storage notes app"
         }
     },
     "socials": {
@@ -33,6 +37,40 @@
         "Goodreads": {
             "link": "/goodreads",
             "description": ""
+        }
+    },
+    "links & resources": {
+        "No Tech for Apartheid": {
+            "link": "https://www.notechforapartheid.com/",
+            "description": "Petition to Amazon & Google to stop supporting the genocide of Palestinians in Gaza [Nov 2023]"
+        },
+        "House of Commons petition e-4649": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Sign/e-4649",
+            "description": "Petition to the Prime Minister to take the necessary measures to address the Israel-Palestine conflict [closes Nov 23, 2023]"
+        },
+        "All the Walls Will Fall": {
+            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
+            "description": "2023 Palestinian liberation resource list curated by the Palestinian Youth Movement"
+        },
+        "House of Commons petition e-4666": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
+            "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
+        },
+        "Anti-Trans Legislative Risk Map": {
+            "link": "https://celeste.lgbt/map",
+            "description": "Resource by Celeste Trianon tracking the escalating risk levels of anti-trans legislation and policy in Canadian provinces"
+        },
+        "Justice Trans": {
+            "link": "https://justicetrans.org/en/",
+            "description": "Justice & legal info for Two Spirit, trans, non-binary, and gender non-conforming communities across Canada"
+        },
+        "Digital Transgender Archive": {
+            "link": "https://www.digitaltransgenderarchive.net/",
+            "description": "Archive of digitized and born-digital materials relating to the history of trans people"
+        },
+        "Donate A Mask": {
+            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
+            "description": "Request form for free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
         }
     },
     "payments": {

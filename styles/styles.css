@@ -618,6 +618,7 @@ html.share main .share-links .share-link {
   background-color: #84A59D;
   border: solid 3px #f3e8e9;
   min-width: 425px;
+  max-width: 500px;
   font-size: 20px;
   text-align: left;
   line-height: 1.25;
@@ -629,7 +630,7 @@ html.share main .share-links .share-link {
   justify-content: center;
   align-items: center;
   width: auto;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
 }
 html.share main .share-links .share-link:nth-of-type(even) {
