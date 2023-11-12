@@ -2,7 +2,7 @@
     "sites": {
         "Dana Teagle dot com": {
             "link": "/",
-            "description": "Web/software development portfolio"
+            "description": "Web/software design & development portfolio"
         },
         "Note Taken": {
             "link": "/notes",
@@ -66,11 +66,11 @@
         },
         "All the Walls Will Fall": {
             "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
-            "description": "2023 Palestinian liberation resource list curated by the Palestinian Youth Movement"
+            "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
         },
         "Anti-Trans Legislative Risk Map": {
             "link": "https://celeste.lgbt/map",
-            "description": "Resource by Celeste Trianon tracking the escalating risk levels of anti-trans legislation and policy in Canadian provinces"
+            "description": "Resource tracking the risk levels of anti-trans legislation and policy in Canadian provinces [maintained by Celeste Trianon]"
         },
         "Justice Trans": {
             "link": "https://justicetrans.org/en/",
@@ -86,17 +86,17 @@
         },
         "Donate A Mask": {
             "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
-            "description": "Request form for free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
+            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
         }
     },
     "payments": {
         "Paypal": {
             "link": "/paypal",
-            "description": ""
+            "description": "For personal & business payments"
         },
         "Kofi": {
             "link": "/kofi",
-            "description": ""
+            "description": "If you want to support my work, you can buy me a coffee"
         }
     },
     "contact": {

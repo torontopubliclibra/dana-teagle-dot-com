@@ -710,6 +710,9 @@ html.share footer p.credit, html.share footer a {
 html.share footer p.credit .alt, html.share footer a .alt {
   color: #B57E9B;
 }
+html.share footer a:hover {
+  color: #8491a5;
+}
 
 .wrapper {
   max-width: 1260px;
