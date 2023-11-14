@@ -531,6 +531,11 @@ header {
                 font-size: 14px;
                 font-weight: 900;
                 margin-left: 10px;
+
+                // responsive to mobile
+                @media only screen and (max-width: $mobile) {
+                    font-size: 12px;
+                }
             }
 
             // responsive to mobile

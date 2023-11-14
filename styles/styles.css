@@ -1236,6 +1236,11 @@ header .scroll-down {
   margin-left: 10px;
 }
 @media only screen and (max-width: 768px) {
+  #contact .contact-content .pgp i {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
   #contact .contact-content .pgp {
     font-size: 14px;
   }
