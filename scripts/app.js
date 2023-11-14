@@ -364,8 +364,8 @@ let app = {
             .catch(error => console.log(error));
 
         // set the pgp html blocks
-        app.pgp.default = app.pgp.fingerprint + `<i  class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i>`;
-        app.pgp.onclick = app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i>`;
+        app.pgp.default = `[ click here to add to clipboard<i  class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i> ]`;
+        app.pgp.onclick = `[ ` + app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i> ]`;
 
         // inject the pgp fingerprint
         app.elements.pgpFingerprint.html(app.pgp.default);
