@@ -561,57 +561,23 @@ html.share {
 html.share body, html.share main, html.share footer {
   background-color: rgba(40, 43, 44, 0.9);
 }
-html.share hr {
-  width: 85%;
-  max-width: 850px;
-  margin: 20px 0;
-  border: 1.5px solid #B57E9B;
+html.share #contact {
+  background: none !important;
+  padding: 0 !important;
 }
-html.share main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 50px 0;
-  padding-bottom: 0;
-  align-items: center;
-  justify-content: center;
-}
-html.share main .portrait img {
-  width: 150px;
-  border: 4px solid #84A59D;
-}
-html.share main h1, html.share main h2, html.share main h3 {
+html.share h1, html.share h2, html.share h3 {
   text-align: center;
   cursor: text;
   color: #f3e8e9;
+  width: 85%;
   max-width: 850px;
 }
-@media only screen and (max-width: 970px) {
-  html.share main h1, html.share main h2, html.share main h3 {
-    max-width: 550px;
-  }
-}
 @media only screen and (max-width: 768px) {
-  html.share main h1, html.share main h2, html.share main h3 {
-    max-width: 375px;
+  html.share h1, html.share h2, html.share h3 {
+    text-align: left;
   }
 }
-html.share main h1 {
-  font-size: 32px;
-  margin: 15px;
-}
-html.share main h2 {
-  font-style: italic;
-  font-size: 22px;
-  margin: 0;
-}
-@media only screen and (max-width: 768px) {
-  html.share main h2 {
-    font-size: 18px;
-  }
-}
-html.share main h3 {
+html.share h3 {
   width: 85%;
   max-width: 850px;
   font-style: normal;
@@ -620,8 +586,118 @@ html.share main h3 {
   padding: 0;
 }
 @media only screen and (max-width: 768px) {
-  html.share main h3 {
+  html.share h3 {
     font-size: 14px;
+  }
+}
+html.share hr {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px 0;
+  border: 1.5px solid #8491a5;
+}
+html.share main, html.share header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html.share header {
+  position: initial;
+  min-height: auto;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 50px 0;
+  padding-bottom: 0;
+}
+html.share header .portrait img {
+  width: 175px;
+  border: 4px solid #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.share header .portrait {
+    width: 85%;
+    max-width: 850px;
+  }
+  html.share header .portrait img {
+    width: 125px;
+  }
+}
+html.share header h1 {
+  font-size: 32px;
+  margin: 15px;
+}
+html.share header h2 {
+  font-style: italic;
+  font-size: 22px;
+  margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  html.share header h2 {
+    font-size: 18px;
+  }
+}
+html.share main {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+html.share main .share-categories {
+  width: 85%;
+  max-width: 850px;
+  margin: 5px 0;
+}
+html.share main .share-categories ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 0 15px;
+  margin-bottom: 25px;
+  padding: 0;
+}
+html.share main .share-categories ul li {
+  margin: 8px 0;
+}
+html.share main .share-categories ul li a {
+  border: solid #B57E9B 3px;
+  padding: 5px 15px 8px 15px;
+  font-size: 14px;
+  color: #f3e8e9;
+  text-decoration: none;
+}
+html.share main .share-categories ul li a:hover {
+  border: solid #84A59D 3px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-categories ul li a:hover {
+    border: solid #B57E9B 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-categories {
+    margin: 0;
+  }
+  html.share main .share-categories ul {
+    justify-content: left;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  html.share main .share-categories ul li {
+    margin: 4px 0;
+  }
+  html.share main .share-categories ul li a {
+    font-size: 12px;
+    padding: 3px 10px 5px 10px;
+  }
+}
+html.share main .share-links {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links {
+    margin-bottom: 15px;
   }
 }
 html.share main .share-links h3 {
@@ -631,8 +707,10 @@ html.share main .share-links h3 {
 }
 @media only screen and (max-width: 768px) {
   html.share main .share-links h3 {
+    max-width: 90%;
     text-align: left;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 html.share main .share-links .share-link {
@@ -691,9 +769,17 @@ html.share main .share-links .share-link:hover {
   background: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
+  html.share main .share-links .share-link:hover {
+    background: #84A59D;
+  }
+  html.share main .share-links .share-link:hover:nth-of-type(even) {
+    background-color: #8491a5;
+  }
+}
+@media only screen and (max-width: 768px) {
   html.share main .share-links .share-link {
-    min-width: 80%;
-    max-width: 350px;
+    min-width: 85%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -704,8 +790,14 @@ html.share main .share-links .share-link:hover {
   }
 }
 html.share footer {
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
 }
 html.share footer p.credit, html.share footer a {
   width: 85%;
@@ -719,6 +811,11 @@ html.share footer p.credit .alt, html.share footer a .alt {
 }
 html.share footer a:hover {
   color: #8491a5;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer a:hover {
+    color: #f3e8e9;
+  }
 }
 
 .wrapper {
