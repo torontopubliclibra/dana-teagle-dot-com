@@ -158,6 +158,12 @@ html.share {
         }
     
         .share-links {
+            margin-bottom: 20px;
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 15px;
+            }
     
             h3 {
                 text-align: center;
@@ -220,6 +226,13 @@ html.share {
               
                 &:hover {
                   background: $color2;
+                    // responsive to mobile
+                    @media only screen and (max-width: $mobile) {
+                        background: $color1;
+                        &:nth-of-type(even) {
+                            background-color: $color3;
+                        }
+                    }
                 }
     
                 // responsive to mobile
@@ -239,8 +252,14 @@ html.share {
     }
     
     footer {
-        padding-top: 10px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
 
         p.credit, a {
             width: 85%;
@@ -256,6 +275,10 @@ html.share {
 
         a:hover {
             color: $color3;
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                color: $white;
+            }
         }
     }
 }

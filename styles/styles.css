@@ -692,6 +692,14 @@ html.share main .share-categories ul li a:hover {
     padding: 3px 10px 5px 10px;
   }
 }
+html.share main .share-links {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links {
+    margin-bottom: 15px;
+  }
+}
 html.share main .share-links h3 {
   text-align: center;
   width: auto;
@@ -761,6 +769,14 @@ html.share main .share-links .share-link:hover {
   background: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
+  html.share main .share-links .share-link:hover {
+    background: #84A59D;
+  }
+  html.share main .share-links .share-link:hover:nth-of-type(even) {
+    background-color: #8491a5;
+  }
+}
+@media only screen and (max-width: 768px) {
   html.share main .share-links .share-link {
     min-width: 85%;
     max-width: 85%;
@@ -774,8 +790,14 @@ html.share main .share-links .share-link:hover {
   }
 }
 html.share footer {
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
 }
 html.share footer p.credit, html.share footer a {
   width: 85%;
@@ -789,6 +811,11 @@ html.share footer p.credit .alt, html.share footer a .alt {
 }
 html.share footer a:hover {
   color: #8491a5;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer a:hover {
+    color: #f3e8e9;
+  }
 }
 
 .wrapper {
