@@ -82,8 +82,10 @@ html.share {
         }
     
         h1 {
+            font-style: normal;
             font-size: 32px;
             margin: 15px;
+            user-select: initial;
         }
         
         h2 {
