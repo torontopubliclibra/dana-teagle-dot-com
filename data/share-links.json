@@ -100,13 +100,17 @@
         },
         "Kofi": {
             "link": "/kofi",
-            "description": "If you want to support my work, you can buy me a coffee"
+            "description": "For supporting me and my work"
         }
     },
     "contact": {
         "Email": {
             "link": "mailto:dana.r.teagle@gmail.com",
-            "description": ""
+            "description": "dana.r.teagle [at] gmail.com"
+        },
+        "PGP public key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "For encrypted email communication"
         },
         "Discord": {
             "link": "/discord",
