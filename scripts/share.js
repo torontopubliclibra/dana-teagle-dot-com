@@ -19,12 +19,12 @@ let share = {
             let formattedLinks = [];
 
             let linkCategories = [...Object.keys(share.links)].map((category) => {
-                return `<li class="link-category"><a href="#${category}">${category}</a></li>`;
+                return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}</a></li>`;
             });
 
             for (let category in share.links) {
 
-                let heading = `<h3 id="${category}">${category}</h3>`
+                let heading = `<h3 id=` + category.replace(/\s/g, "-") + `>${category}</h3>`
 
                 let categoryLinks = [heading];
 

@@ -13,42 +13,71 @@ html.share {
         padding: 0 !important;
     }
 
-    hr {
+    h1, h2, h3 {
+        text-align: center;
+        cursor: text;
+        color: $white;
         width: 85%;
+        max-width: 850px;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            text-align: left;
+
+        }
+    }
+
+    h3 {
+        width: 85%;
+        max-width: 850px;
+        font-style: normal;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            font-size: 14px;
+        }
+    }
+
+    hr {
+        width: 90%;
         max-width: 850px;
         margin: 20px 0;
         border: 1.5px solid $color3;
     }
 
-    main {
+    main, header {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
-        margin: 0 auto;
-        padding: 50px 0;
-        padding-bottom: 0;
         align-items: center;
         justify-content: center;
-    
+    }
+
+    header {
+        position: initial;
+        min-height: auto;
+        height: auto;
+        max-height: none;
+        margin: 0;
+        padding: 50px 0;
+        padding-bottom: 0;
+
         .portrait img {
-            width: 150px;
+            width: 175px;
             border: 4px solid $color2;
         }
-    
-        h1, h2, h3 {
-            text-align: center;
-            cursor: text;
-            color: $white;
-            max-width: 850px;
-            
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
-                max-width: 550px;
-            }
-    
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
-                max-width: 375px;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            .portrait {
+                width: 85%;
+                max-width: 850px;
+
+                img {
+                    width: 125px;
+                }
             }
         }
     
@@ -67,20 +96,11 @@ html.share {
                 font-size: 18px;
             }
         }
-    
-        h3 {
-            width: 85%;
-            max-width: 850px;
-            font-style: normal;
-            font-size: 18px;
-            margin: 0;
-            padding: 0;
-    
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
-                font-size: 14px;
-            }
-        }
+    }
+
+    main {
+        min-height: 100vh;
+        margin: 0 auto;
 
         .share-categories {
             width: 85%;
@@ -105,7 +125,12 @@ html.share {
                         color: $white;
                         text-decoration: none;
                         &:hover {
-                            border: solid $color3 3px;
+                            border: solid $color1 3px;
+
+                            // responsive to mobile
+                            @media only screen and (max-width: $mobile) {
+                                border: solid $color2 3px;
+                            }
                         }
                     }
                 }
@@ -115,10 +140,10 @@ html.share {
                 margin: 0;
 
                 ul {
-                    justify-content: center;
+                    justify-content: left;
                     gap: 10px;
                     margin: 0;
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
 
                     li {
                         margin: 4px 0;
@@ -140,8 +165,10 @@ html.share {
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
+                    max-width: 90%;
                     text-align: left;
                     margin-right: auto;
+                    margin-left: auto;
                 }
             }
     
@@ -196,8 +223,8 @@ html.share {
     
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
-                    min-width: 80%;
-                    max-width: 350px;
+                    min-width: 85%;
+                    max-width: 85%;
                     margin-left: auto;
                     margin-right: auto;
                 }
