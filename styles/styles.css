@@ -688,6 +688,7 @@ html.share main .share-categories ul li a:hover {
     margin: 4px 0;
   }
   html.share main .share-categories ul li a {
+    font-size: 12px;
     padding: 3px 10px 5px 10px;
   }
 }
