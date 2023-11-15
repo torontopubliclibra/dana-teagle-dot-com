@@ -1,11 +1,14 @@
 // share object
 let share = {
 
+    // share categories element
+    shareCategories: $(".share-categories"),
+
     // share links element
     shareLinks: $(".share-links"),
 
     // links data
-    links: [],
+    links: {},
 
     // share functions
     functions: {
@@ -15,24 +18,28 @@ let share = {
 
             let formattedLinks = [];
 
+            let linkCategories = [...Object.keys(share.links)].map((category) => {
+                return `<li class="link-category"><a href="#${category}">${category}</a></li>`;
+            });
+
             for (let category in share.links) {
 
-                let heading = `<h3>` + category + `</h3>`
+                let heading = `<h3 id="${category}">${category}</h3>`
 
                 let categoryLinks = [heading];
 
                 share.links[category].forEach((link) => {
 
-                    let title = `<span class="link-title"><p class="button-label">` + link.title + ` </p><i class="fa fa-external-link-square" aria-hidden="true"></i></span>`;
-                    let href = `href="` + link.link + `"`;
+                    let title = `<span class="link-title"><p class="button-label">${link.title}</p><i class="fa fa-external-link-square" aria-hidden="true"></i></span>`;
+                    let href = `href="${link.link}"`;
                     let description = ``;
 
                     if (link.description) {
-                        description = `<hr/><p class="button-description">` + link.description + `</p>`
+                        description = `<hr/><p class="button-description">${link.description}</p>`
                     }
 
                     // stitch together all the html for the project
-                    categoryLinks.push(`<a class="button share-link"` + href + `target="_blank"` + `>` + title + description + `</a>`)
+                    categoryLinks.push(`<a class="button share-link"${href} target="_blank">${title}${description}</a>`)
 
                 })
 
@@ -40,6 +47,10 @@ let share = {
                     return accumulator + link;
                 }));
             }
+
+            share.shareCategories.html(`<ul>` + linkCategories.reduce((accumulator, category) => {
+                return accumulator + category;
+            }) + `</ul>`);
 
             share.shareLinks.html(formattedLinks.reduce((accumulator, category) => {
                 return accumulator + `<br/>` + category;

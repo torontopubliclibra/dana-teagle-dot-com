@@ -8,11 +8,16 @@ html.share {
         background-color: rgba($black, 0.9);
     }
 
+    #contact {
+        background: none !important;
+        padding: 0 !important;
+    }
+
     hr {
         width: 85%;
         max-width: 850px;
         margin: 20px 0;
-        border: 1.5px solid $color2;
+        border: 1.5px solid $color3;
     }
 
     main {
@@ -27,7 +32,7 @@ html.share {
     
         .portrait img {
             width: 150px;
-            border: 4px solid $color1;
+            border: 4px solid $color2;
         }
     
         h1, h2, h3 {
@@ -74,6 +79,55 @@ html.share {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 font-size: 14px;
+            }
+        }
+
+        .share-categories {
+            width: 85%;
+            max-width: 850px;
+            margin: 10px 0;
+
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                list-style-type: none;
+                justify-content: space-around;
+                margin: 0 15px;
+                margin-bottom: 25px;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                    a {
+                        border: solid $color2 3px;
+                        padding: 5px 15px 8px 15px;
+                        font-size: 14px;
+                        color: $white;
+                        text-decoration: none;
+                        &:hover {
+                            border: solid $color3 3px;
+                        }
+                    }
+                }
+            }
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                margin: 0;
+
+                ul {
+                    justify-content: center;
+                    gap: 10px;
+                    margin: 0;
+                    margin-bottom: 15px;
+
+                    li {
+                        margin: 4px 0;
+
+                        a {
+                            padding: 3px 10px 5px 10px;
+                        }
+                    }
+                }
             }
         }
     
