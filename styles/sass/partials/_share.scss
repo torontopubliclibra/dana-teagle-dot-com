@@ -105,19 +105,20 @@ html.share {
         .share-categories {
             width: 85%;
             max-width: 850px;
-            margin: 10px 0;
+            margin: 5px 0;
 
             ul {
                 display: flex;
                 flex-flow: row wrap;
                 list-style-type: none;
                 justify-content: space-around;
+                gap: 10px;
                 margin: 0 15px;
                 margin-bottom: 25px;
                 padding: 0;
 
                 li {
-                    margin: 0;
+                    margin: 8px 0;
                     a {
                         border: solid $color2 3px;
                         padding: 5px 15px 8px 15px;
@@ -141,7 +142,6 @@ html.share {
 
                 ul {
                     justify-content: left;
-                    gap: 10px;
                     margin: 0;
                     margin-bottom: 20px;
 
