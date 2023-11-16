@@ -230,6 +230,364 @@ html {
   overflow: hidden;
 }
 
+@keyframes fade-in-share {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-share-error {
+  0% {
+    opacity: 0;
+    color: #282b2c;
+    border: solid #282b2c 3px;
+  }
+  100% {
+    opacity: 1;
+    color: #f3e8e9;
+    border: solid #B57E9B 3px;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-error {
+  0% {
+    opacity: 0;
+    color: #f3e8e9;
+    border: solid #f3e8e9 5px;
+  }
+  100% {
+    opacity: 1;
+    color: #282b2c;
+    border: solid #B57E9B 5px;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0px);
+  }
+}
+html.share body {
+  background-color: #282b2c;
+}
+html.share #contact {
+  background: none !important;
+  padding: 0 !important;
+}
+html.share h1, html.share h2, html.share h3 {
+  text-align: center;
+  cursor: text;
+  color: #f3e8e9;
+  width: 85%;
+  max-width: 850px;
+}
+@media only screen and (max-width: 768px) {
+  html.share h1, html.share h2, html.share h3 {
+    text-align: left;
+  }
+}
+html.share h1 {
+  font-style: normal;
+  font-size: 32px;
+  margin: 15px;
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+          user-select: initial;
+}
+html.share h2 {
+  font-style: italic;
+  font-size: 22px;
+  margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  html.share h2 {
+    font-size: 18px;
+  }
+}
+html.share h3 {
+  width: 85%;
+  max-width: 850px;
+  font-style: normal;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 768px) {
+  html.share h3 {
+    font-size: 14px;
+  }
+}
+html.share p.js-disabled-share {
+  width: 65%;
+  max-width: 850px;
+  font-style: italic;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #282b2c;
+  border: solid 3px #282b2c;
+  opacity: 0;
+  animation: fade-in-share-error 0.75s ease-in 1.5s forwards;
+}
+@media only screen and (max-width: 768px) {
+  html.share p.js-disabled-share {
+    text-align: left;
+    width: 85%;
+    padding: 30px 20px;
+  }
+}
+html.share hr {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px 0;
+  border: 1.5px solid #8491a5;
+}
+html.share main, html.share header, html.share footer {
+  opacity: 0;
+  animation: fade-in-share 0.4s ease-in 0.2s forwards;
+}
+html.share main, html.share header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html.share header {
+  position: initial;
+  min-height: auto;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 30px 0;
+  padding-bottom: 0;
+}
+html.share header .portrait img {
+  width: 175px;
+  border: 4px solid #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.share header .portrait {
+    width: 85%;
+    max-width: 850px;
+  }
+  html.share header .portrait img {
+    width: 125px;
+  }
+}
+html.share main {
+  margin: 0 auto;
+}
+html.share main hr:first-of-type {
+  margin-bottom: 5px;
+}
+html.share main hr:last-of-type {
+  margin-top: 25px;
+}
+html.share main .share-categories {
+  width: 85%;
+  max-width: 850px;
+}
+html.share main .share-categories ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 15px;
+  margin-bottom: 25px;
+  padding: 0;
+}
+html.share main .share-categories ul li {
+  margin: 8px 0;
+}
+html.share main .share-categories ul li a {
+  border: solid #B57E9B 3px;
+  padding: 5px 15px 8px 15px;
+  font-size: 14px;
+  color: #f3e8e9;
+  text-decoration: none;
+}
+html.share main .share-categories ul li a:hover {
+  border: solid #84A59D 3px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-categories ul li a:hover {
+    border: solid #B57E9B 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-categories {
+    margin: 0;
+  }
+  html.share main .share-categories ul {
+    justify-content: left;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  html.share main .share-categories ul li {
+    margin: 4px 0;
+  }
+  html.share main .share-categories ul li a {
+    font-size: 12px;
+    padding: 3px 10px 5px 10px;
+  }
+}
+html.share main .share-links {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links {
+    margin-bottom: 15px;
+  }
+}
+html.share main .share-links h3 {
+  text-align: center;
+  width: auto;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links h3 {
+    max-width: 90%;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+html.share main .share-links .share-link {
+  background-color: #84A59D;
+  border: solid 3px #f3e8e9;
+  min-width: 425px;
+  max-width: 500px;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.25;
+  color: #282b2c;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 5px;
+  cursor: pointer;
+}
+html.share main .share-links .share-link:nth-of-type(even) {
+  background-color: #8491a5;
+}
+html.share main .share-links .share-link .link-title {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.25;
+  color: #282b2c;
+  min-width: 100%;
+}
+html.share main .share-links .share-link .link-title p {
+  width: calc(100% - 15px);
+}
+html.share main .share-links .share-link .link-title i {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  min-height: 15px;
+  width: 10px;
+}
+html.share main .share-links .share-link .button-description {
+  min-width: 100%;
+  font-size: 12px;
+  font-style: normal;
+  text-align: left;
+}
+html.share main .share-links .share-link hr {
+  border: solid 1px #f3e8e9;
+  width: 100%;
+  margin: 0;
+}
+html.share main .share-links .share-link:hover {
+  background: #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links .share-link:hover {
+    background: #84A59D;
+  }
+  html.share main .share-links .share-link:hover:nth-of-type(even) {
+    background-color: #8491a5;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links .share-link {
+    min-width: 85%;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.share main .share-links {
+    min-width: 85%;
+  }
+}
+html.share footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+html.share footer p.credit, html.share footer a {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #f3e8e9;
+  font-size: 14px;
+}
+html.share footer p.credit .alt, html.share footer a .alt {
+  color: #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer p.credit, html.share footer a {
+    text-align: left;
+  }
+}
+html.share footer a:hover {
+  color: #8491a5;
+}
+@media only screen and (max-width: 768px) {
+  html.share footer a:hover {
+    color: #f3e8e9;
+  }
+}
+
 @font-face {
   font-family: "Source Code Pro";
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
@@ -526,329 +884,6 @@ footer .credit a:hover, footer p a:hover, footer a a:hover {
   color: #B57E9B;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes pulse {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, 0px);
-  }
-}
-html.share {
-  background-color: #282b2c;
-}
-html.share body, html.share main, html.share footer {
-  background-color: rgba(40, 43, 44, 0.9);
-}
-html.share #contact {
-  background: none !important;
-  padding: 0 !important;
-}
-html.share h1, html.share h2, html.share h3 {
-  text-align: center;
-  cursor: text;
-  color: #f3e8e9;
-  width: 85%;
-  max-width: 850px;
-}
-@media only screen and (max-width: 768px) {
-  html.share h1, html.share h2, html.share h3 {
-    text-align: left;
-  }
-}
-html.share h1 {
-  font-style: normal;
-  font-size: 32px;
-  margin: 15px;
-  -webkit-user-select: initial;
-     -moz-user-select: initial;
-          user-select: initial;
-}
-html.share h2 {
-  font-style: italic;
-  font-size: 22px;
-  margin: 0;
-}
-@media only screen and (max-width: 768px) {
-  html.share h2 {
-    font-size: 18px;
-  }
-}
-html.share h3 {
-  width: 85%;
-  max-width: 850px;
-  font-style: normal;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
-}
-@media only screen and (max-width: 768px) {
-  html.share h3 {
-    font-size: 14px;
-  }
-}
-html.share .js-disabled-share {
-  width: 65%;
-  max-width: 850px;
-  font-style: italic;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #f3e8e9;
-  border: solid 3px #B57E9B;
-}
-@media only screen and (max-width: 768px) {
-  html.share .js-disabled-share {
-    text-align: left;
-    width: 85%;
-    padding: 30px 20px;
-  }
-}
-html.share hr {
-  width: 90%;
-  max-width: 850px;
-  margin: 20px 0;
-  border: 1.5px solid #8491a5;
-}
-html.share main, html.share header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-html.share header {
-  position: initial;
-  min-height: auto;
-  height: auto;
-  max-height: none;
-  margin: 0;
-  padding: 30px 0;
-  padding-bottom: 0;
-}
-html.share header .portrait img {
-  width: 175px;
-  border: 4px solid #B57E9B;
-}
-@media only screen and (max-width: 768px) {
-  html.share header .portrait {
-    width: 85%;
-    max-width: 850px;
-  }
-  html.share header .portrait img {
-    width: 125px;
-  }
-}
-html.share main {
-  margin: 0 auto;
-}
-html.share main hr:first-of-type {
-  margin-bottom: 5px;
-}
-html.share main hr:last-of-type {
-  margin-top: 25px;
-}
-html.share main .share-categories {
-  width: 85%;
-  max-width: 850px;
-}
-html.share main .share-categories ul {
-  display: flex;
-  flex-flow: row wrap;
-  list-style-type: none;
-  justify-content: space-around;
-  gap: 10px;
-  margin: 15px;
-  margin-bottom: 25px;
-  padding: 0;
-}
-html.share main .share-categories ul li {
-  margin: 8px 0;
-}
-html.share main .share-categories ul li a {
-  border: solid #B57E9B 3px;
-  padding: 5px 15px 8px 15px;
-  font-size: 14px;
-  color: #f3e8e9;
-  text-decoration: none;
-}
-html.share main .share-categories ul li a:hover {
-  border: solid #84A59D 3px;
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-categories ul li a:hover {
-    border: solid #B57E9B 3px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-categories {
-    margin: 0;
-  }
-  html.share main .share-categories ul {
-    justify-content: left;
-    margin: 0;
-    margin-top: 15px;
-    margin-bottom: 30px;
-  }
-  html.share main .share-categories ul li {
-    margin: 4px 0;
-  }
-  html.share main .share-categories ul li a {
-    font-size: 12px;
-    padding: 3px 10px 5px 10px;
-  }
-}
-html.share main .share-links {
-  margin-bottom: 20px;
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-links {
-    margin-bottom: 15px;
-  }
-}
-html.share main .share-links h3 {
-  text-align: center;
-  width: auto;
-  margin-bottom: 10px;
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-links h3 {
-    max-width: 90%;
-    text-align: left;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-html.share main .share-links .share-link {
-  background-color: #84A59D;
-  border: solid 3px #f3e8e9;
-  min-width: 425px;
-  max-width: 500px;
-  font-size: 20px;
-  text-align: left;
-  line-height: 1.25;
-  color: #282b2c;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  margin: 5px;
-  cursor: pointer;
-}
-html.share main .share-links .share-link:nth-of-type(even) {
-  background-color: #8491a5;
-}
-html.share main .share-links .share-link .link-title {
-  display: flex;
-  gap: 10px;
-  font-size: 16px;
-  text-align: left;
-  line-height: 1.25;
-  color: #282b2c;
-  min-width: 100%;
-}
-html.share main .share-links .share-link .link-title p {
-  width: calc(100% - 15px);
-}
-html.share main .share-links .share-link .link-title i {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  min-height: 15px;
-  width: 10px;
-}
-html.share main .share-links .share-link .button-description {
-  min-width: 100%;
-  font-size: 12px;
-  font-style: normal;
-  text-align: left;
-}
-html.share main .share-links .share-link hr {
-  border: solid 1px #f3e8e9;
-  width: 100%;
-  margin: 0;
-}
-html.share main .share-links .share-link:hover {
-  background: #B57E9B;
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-links .share-link:hover {
-    background: #84A59D;
-  }
-  html.share main .share-links .share-link:hover:nth-of-type(even) {
-    background-color: #8491a5;
-  }
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-links .share-link {
-    min-width: 85%;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media only screen and (max-width: 768px) {
-  html.share main .share-links {
-    min-width: 85%;
-  }
-}
-html.share footer {
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-@media only screen and (max-width: 768px) {
-  html.share footer {
-    padding-top: 10px;
-    padding-bottom: 30px;
-  }
-}
-html.share footer p.credit, html.share footer a {
-  width: 85%;
-  max-width: 850px;
-  margin: 0 auto;
-  color: #f3e8e9;
-  font-size: 14px;
-}
-html.share footer p.credit .alt, html.share footer a .alt {
-  color: #B57E9B;
-}
-@media only screen and (max-width: 768px) {
-  html.share footer p.credit, html.share footer a {
-    text-align: left;
-  }
-}
-html.share footer a:hover {
-  color: #8491a5;
-}
-@media only screen and (max-width: 768px) {
-  html.share footer a:hover {
-    color: #f3e8e9;
-  }
-}
-
 .wrapper {
   max-width: 1260px;
   width: 90%;
@@ -870,13 +905,15 @@ html.share footer a:hover {
   margin: 0 auto;
   margin-top: 80px;
   padding: 40px 20px;
-  border: solid #B57E9B 5px;
   font-size: 18px;
   text-align: center;
   line-height: 1.5;
   color: #282b2c;
   font-style: italic;
   width: 90%;
+  opacity: 0;
+  border: solid #f3e8e9 5px;
+  animation: fade-in-error 0.75s ease-in 1.5s forwards;
 }
 @media only screen and (max-width: 768px) {
   .js-disabled {
@@ -970,6 +1007,16 @@ header {
   min-height: 500px;
   height: 100vh;
   max-height: 1000px;
+}
+header nav {
+  opacity: 0;
+  animation: fade-in 0.4s ease-in 0.4s forwards;
+}
+@media only screen and (max-width: 970px) {
+  header nav {
+    opacity: 1;
+    animation: none;
+  }
 }
 header nav .hamburger-btn {
   display: none;
@@ -1088,7 +1135,8 @@ header .title {
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
-  animation: 1s ease-in-out fade-in;
+  opacity: 0;
+  animation: fade-in 0.75s ease-in 0.4s forwards;
 }
 header .scroll-down {
   position: absolute;

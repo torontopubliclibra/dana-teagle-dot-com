@@ -1,11 +1,10 @@
 @use 'mixins' as *;
 @use 'variables' as *;
+@use 'animations';
 
 html.share {
-    background-color: $black;
-
-    body, main, footer {
-        background-color: rgba($black, 0.9);
+    body {
+        background-color: $black;
     }
 
     #contact {
@@ -58,15 +57,17 @@ html.share {
         }
     }
 
-    .js-disabled-share {
+    p.js-disabled-share {
         width: 65%;
         max-width: 850px;
         font-style: italic;
         padding : 40px 20px;
         text-align: center;
         font-size: 14px;
-        color: $white;
-        border: solid 3px $color2;
+        color: $black;
+        border: solid 3px $black;
+        opacity: 0;
+        animation: fade-in-share-error 0.75s ease-in 1.5s forwards;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
@@ -81,6 +82,11 @@ html.share {
         max-width: 850px;
         margin: 20px 0;
         border: 1.5px solid $color3;
+    }
+
+    main, header, footer {
+        opacity: 0;
+        animation: fade-in-share 0.4s ease-in 0.2s forwards;
     }
 
     main, header {

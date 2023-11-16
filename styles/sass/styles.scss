@@ -1,10 +1,10 @@
 // import all partials
 @use 'partials/setup';
+@use 'partials/share';
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
 @use 'partials/animations';
-@use 'partials/share';
 
 // default wrapper
 .wrapper {
@@ -28,10 +28,12 @@
     margin: 0 auto;
     margin-top: 80px;
     padding: 40px 20px;
-    border: solid $color2 5px;
     @include textStyle (18px, center, 1.5);
     font-style: italic;
     width: 90%;
+    opacity: 0;
+    border: solid $white 5px;
+    animation: fade-in-error 0.75s ease-in 1.5s forwards;
 
     // responsive to mobile
     @media only screen and (max-width: $mobile) {
@@ -142,6 +144,15 @@ header {
 
     // navigation
     nav {
+
+        opacity: 0;
+        animation: fade-in 0.4s ease-in 0.4s forwards;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            opacity: 1;
+            animation: none;
+        }
 
         // hamburger button
         .hamburger-btn {
@@ -255,7 +266,8 @@ header {
         @include positioning (absolute, 50%, "", "", 50%);
         width: 100%;
         transform: translate(-50%, -50%);
-        animation: 1s ease-in-out fade-in;
+        opacity: 0;
+        animation: fade-in 0.75s ease-in 0.4s forwards;
     }
 
     // scroll down button
