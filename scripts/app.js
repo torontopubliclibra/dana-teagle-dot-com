@@ -13,6 +13,7 @@ let app = {
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
         pgpFingerprint: $(".pgp"),
+        errorMessage: $(".js-disabled"),
     },
 
     // projects data and selected filter
@@ -104,6 +105,12 @@ let app = {
 
             // intialize the filters array with just 'all'
             let projectFilters = ["All"];
+
+            if (app.projects.data) {
+                app.elements.errorMessage.html(``);
+                app.elements.errorMessage.removeClass("js-disabled");
+                app.elements.errorMessage.addClass("js-enabled");
+            }
 
             // for each project
             app.projects.data.forEach((project) => {
@@ -368,6 +375,7 @@ let app = {
         app.pgp.onclick = `[ ` + app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i> ]`;
 
         // inject the pgp fingerprint
+        app.elements.pgpFingerprint.addClass('clipboard');
         app.elements.pgpFingerprint.html(app.pgp.default);
 
         // add the event listeners
