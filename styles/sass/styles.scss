@@ -20,6 +20,27 @@
     }
 }
 
+.js-enabled {
+    display: none;
+}
+
+.js-disabled {
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 40px 20px;
+    border: solid $color2 5px;
+    @include textStyle (18px, center, 1.5);
+    font-style: italic;
+    width: 90%;
+
+    // responsive to mobile
+    @media only screen and (max-width: $mobile) {
+        width: 80%;
+        font-size: 16px;
+        margin-top: 120px;
+    }
+}
+
 // body background and overflow
 body {
     background: $white;
@@ -511,20 +532,31 @@ header {
         margin: 0 auto;
 
         .pgp {
-            font-style: italic;
-            font-size: 16px;
-            padding: 2px 8px;
-            background-color: rgba($color2, 0.5);
-            border-bottom: solid $black 2px;
-            cursor: pointer;
 
-            &.copied {
-                cursor: default;
+            &:hover {
+                cursor: text;
+                color: $black;
+                background-color: initial;
+                color: initial;
+                font-style: normal;
             }
 
-            &:hover, &.copied {
-                background-color: rgba($color3, 0.5);
-                color: $black;
+            &.clipboard {
+                font-style: italic;
+                font-size: 16px;
+                padding: 2px 8px;
+                background-color: rgba($color2, 0.5);
+                border-bottom: solid $black 2px;
+                cursor: pointer;
+
+                &:hover, &.copied {
+                    background-color: rgba($color3, 0.5);
+                    color: $black;
+                }
+
+                &.copied {
+                    cursor: default;
+                }
             }
 
             i {

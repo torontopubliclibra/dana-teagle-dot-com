@@ -4,6 +4,9 @@ let share = {
     // share categories element
     shareCategories: $(".share-categories"),
 
+    // error message element
+    errorMessage: $(".js-disabled-share"),
+
     // share links element
     shareLinks: $(".share-links"),
 
@@ -21,6 +24,12 @@ let share = {
             let linkCategories = [...Object.keys(share.links)].map((category) => {
                 return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}</a></li>`;
             });
+
+            if (share.links) {
+                share.errorMessage.html(``);
+                share.errorMessage.removeClass("js-disabled");
+                share.errorMessage.addClass("js-enabled");
+            }
 
             for (let category in share.links) {
 

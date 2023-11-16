@@ -577,6 +577,24 @@ html.share h1, html.share h2, html.share h3 {
     text-align: left;
   }
 }
+html.share h1 {
+  font-style: normal;
+  font-size: 32px;
+  margin: 15px;
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+          user-select: initial;
+}
+html.share h2 {
+  font-style: italic;
+  font-size: 22px;
+  margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  html.share h2 {
+    font-size: 18px;
+  }
+}
 html.share h3 {
   width: 85%;
   max-width: 850px;
@@ -588,6 +606,23 @@ html.share h3 {
 @media only screen and (max-width: 768px) {
   html.share h3 {
     font-size: 14px;
+  }
+}
+html.share .js-disabled-share {
+  width: 65%;
+  max-width: 850px;
+  font-style: italic;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #f3e8e9;
+  border: solid 3px #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.share .js-disabled-share {
+    text-align: left;
+    width: 85%;
+    padding: 30px 20px;
   }
 }
 html.share hr {
@@ -608,7 +643,7 @@ html.share header {
   height: auto;
   max-height: none;
   margin: 0;
-  padding: 50px 0;
+  padding: 30px 0;
   padding-bottom: 0;
 }
 html.share header .portrait img {
@@ -624,32 +659,18 @@ html.share header .portrait img {
     width: 125px;
   }
 }
-html.share header h1 {
-  font-style: normal;
-  font-size: 32px;
-  margin: 15px;
-  -webkit-user-select: initial;
-     -moz-user-select: initial;
-          user-select: initial;
-}
-html.share header h2 {
-  font-style: italic;
-  font-size: 22px;
-  margin: 0;
-}
-@media only screen and (max-width: 768px) {
-  html.share header h2 {
-    font-size: 18px;
-  }
-}
 html.share main {
-  min-height: 100vh;
   margin: 0 auto;
+}
+html.share main hr:first-of-type {
+  margin-bottom: 5px;
+}
+html.share main hr:last-of-type {
+  margin-top: 25px;
 }
 html.share main .share-categories {
   width: 85%;
   max-width: 850px;
-  margin: 5px 0;
 }
 html.share main .share-categories ul {
   display: flex;
@@ -657,7 +678,7 @@ html.share main .share-categories ul {
   list-style-type: none;
   justify-content: space-around;
   gap: 10px;
-  margin: 0 15px;
+  margin: 15px;
   margin-bottom: 25px;
   padding: 0;
 }
@@ -686,7 +707,8 @@ html.share main .share-categories ul li a:hover {
   html.share main .share-categories ul {
     justify-content: left;
     margin: 0;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
   html.share main .share-categories ul li {
     margin: 4px 0;
@@ -813,6 +835,11 @@ html.share footer p.credit, html.share footer a {
 html.share footer p.credit .alt, html.share footer a .alt {
   color: #B57E9B;
 }
+@media only screen and (max-width: 768px) {
+  html.share footer p.credit, html.share footer a {
+    text-align: left;
+  }
+}
 html.share footer a:hover {
   color: #8491a5;
 }
@@ -832,6 +859,30 @@ html.share footer a:hover {
   .wrapper {
     width: 100%;
     margin-bottom: 10px;
+  }
+}
+
+.js-enabled {
+  display: none;
+}
+
+.js-disabled {
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 40px 20px;
+  border: solid #B57E9B 5px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  color: #282b2c;
+  font-style: italic;
+  width: 90%;
+}
+@media only screen and (max-width: 768px) {
+  .js-disabled {
+    width: 80%;
+    font-size: 16px;
+    margin-top: 120px;
   }
 }
 
@@ -1316,7 +1367,14 @@ header .scroll-down {
   width: 95%;
   margin: 0 auto;
 }
-#contact .contact-content .pgp {
+#contact .contact-content .pgp:hover {
+  cursor: text;
+  color: #282b2c;
+  background-color: initial;
+  color: initial;
+  font-style: normal;
+}
+#contact .contact-content .pgp.clipboard {
   font-style: italic;
   font-size: 16px;
   padding: 2px 8px;
@@ -1324,12 +1382,12 @@ header .scroll-down {
   border-bottom: solid #282b2c 2px;
   cursor: pointer;
 }
-#contact .contact-content .pgp.copied {
-  cursor: default;
-}
-#contact .contact-content .pgp:hover, #contact .contact-content .pgp.copied {
+#contact .contact-content .pgp.clipboard:hover, #contact .contact-content .pgp.clipboard.copied {
   background-color: rgba(132, 145, 165, 0.5);
   color: #282b2c;
+}
+#contact .contact-content .pgp.clipboard.copied {
+  cursor: default;
 }
 #contact .contact-content .pgp i {
   font-size: 14px;
