@@ -23,7 +23,7 @@ let app = {
     },
 
     pgp: {
-        fingerprint: "B6A6 18AB 63E8 36CD 4787 4CC1 81BE E5FF B067 4687"
+        fingerprint: "424A 8233 C832 042A"
     },
 
     // app functions
@@ -371,8 +371,8 @@ let app = {
             .catch(error => console.log(error));
 
         // set the pgp html blocks
-        app.pgp.default = `[ click here to add to clipboard<i  class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i> ]`;
-        app.pgp.onclick = `[ ` + app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i> ]`;
+        app.pgp.default = `click here to add to clipboard<i  class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i>`;
+        app.pgp.onclick = app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i>`;
 
         // inject the pgp fingerprint
         app.elements.pgpFingerprint.addClass('clipboard');

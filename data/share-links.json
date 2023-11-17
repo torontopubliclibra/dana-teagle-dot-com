@@ -2,11 +2,11 @@
     "sites": {
         "Dana Teagle dot com": {
             "link": "/",
-            "description": "Web/software design & development portfolio"
+            "description": "Web/software design & development profile and portfolio"
         },
         "Note Taken": {
             "link": "/notes",
-            "description": "Local storage notes app"
+            "description": "Local storage notes app developed in Angular"
         }
     },
     "socials": {
@@ -114,11 +114,11 @@
     "contact": {
         "Email": {
             "link": "mailto:dana.r.teagle@gmail.com",
-            "description": "dana.r.teagle [at] gmail.com"
+            "description": "For personal & business communications"
         },
         "PGP public key": {
             "link": "/data/rusty-pgp.asc",
-            "description": "For encrypted email communication"
+            "description": "OpenPGP key for sending me encrypted emails and documents"
         },
         "Discord": {
             "link": "/discord",
