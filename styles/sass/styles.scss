@@ -319,7 +319,7 @@ header {
     // content container
     .about-content {
         @include flex(row, 20px);
-        @include borderedBox(rgba($white, 0.8), $color3);
+        @include borderedBox(rgba($white, 0.8), $color2);
         max-width: 100%;
         width: 95%;
         padding: 20px;
@@ -327,14 +327,18 @@ header {
 
         .portrait {
             display: flex;
-            flex-direction: column;
+            flex-flow: column wrap;
             justify-content: center;
             margin: 5px;
             max-width: 225px;
             min-height: 100%;
 
+            hr {
+                display: none;
+            }
+
             img {
-                border: solid $color2 4px;
+                border: solid $color3 4px;
                 width: 225px;
                 height: 225px;
             }
@@ -358,6 +362,18 @@ header {
                     height: auto;
                     max-width: 40%;
                 }
+
+                .portrait-caption {
+                    margin-top: 20px;
+                }
+
+                hr {
+                    border-color: $color2;
+                    display: block;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+
             }
 
             // responsive to mobile
@@ -365,8 +381,15 @@ header {
                 flex-direction: row;
                 width: 100%;
                 margin: 0;
+                justify-content: flex-start;
+
+                hr {
+                    margin-top: 25px;
+                }
+
                 .portrait-caption {
                     width: 55%;
+                    align-self: flex-end;
                     text-align: left;
                     margin-top: 0;
                     margin-left: 15px;

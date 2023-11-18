@@ -1191,7 +1191,7 @@ header .scroll-down {
   justify-content: initial;
   align-items: initial;
   background: rgba(243, 232, 233, 0.8);
-  border: solid #8491a5 5px;
+  border: solid #B57E9B 5px;
   max-width: 100%;
   width: 95%;
   padding: 20px;
@@ -1199,14 +1199,17 @@ header .scroll-down {
 }
 #about .about-content .portrait {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
   margin: 5px;
   max-width: 225px;
   min-height: 100%;
 }
+#about .about-content .portrait hr {
+  display: none;
+}
 #about .about-content .portrait img {
-  border: solid #B57E9B 4px;
+  border: solid #8491a5 4px;
   width: 225px;
   height: 225px;
 }
@@ -1228,15 +1231,29 @@ header .scroll-down {
     height: auto;
     max-width: 40%;
   }
+  #about .about-content .portrait .portrait-caption {
+    margin-top: 20px;
+  }
+  #about .about-content .portrait hr {
+    border-color: #B57E9B;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .portrait {
     flex-direction: row;
     width: 100%;
     margin: 0;
+    justify-content: flex-start;
+  }
+  #about .about-content .portrait hr {
+    margin-top: 25px;
   }
   #about .about-content .portrait .portrait-caption {
     width: 55%;
+    align-self: flex-end;
     text-align: left;
     margin-top: 0;
     margin-left: 15px;
