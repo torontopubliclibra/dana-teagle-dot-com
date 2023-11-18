@@ -10,20 +10,20 @@
         }
     },
     "socials": {
-        "Instagram": {
-            "link": "/instagram",
-            "description": ""
-        },
-        "Bluesky": {
-            "link": "/bluesky",
+        "LinkedIn": {
+            "link": "/linkedin",
             "description": ""
         },
         "GitHub": {
             "link": "/github",
             "description": ""
         },
-        "LinkedIn": {
-            "link": "/linkedin",
+        "Instagram": {
+            "link": "/instagram",
+            "description": ""
+        },
+        "Bluesky": {
+            "link": "/bluesky",
             "description": ""
         },
         "Medium": {
