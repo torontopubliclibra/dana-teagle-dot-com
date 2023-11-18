@@ -634,7 +634,7 @@ p {
 }
 
 .about-content p, .contact-content p, .about-content a, .contact-content a {
-  text-align: center;
+  text-align: left;
   line-height: 1.4;
 }
 @media only screen and (max-width: 970px) {
@@ -1160,6 +1160,29 @@ header .scroll-down {
     flex-direction: column;
   }
 }
+#about .wrapper hr {
+  border-color: #8491a5;
+  margin: 0;
+  margin-bottom: 15px;
+}
+#about .wrapper h3 {
+  font-size: 20px;
+  text-align: left;
+  margin: 0;
+}
+@media only screen and (max-width: 970px) {
+  #about .wrapper h3 {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #about .wrapper h3 {
+    width: 85%;
+  }
+}
 #about .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -1176,31 +1199,39 @@ header .scroll-down {
 }
 #about .about-content .portrait {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 5px;
+  max-width: 225px;
+  min-height: 100%;
 }
 #about .about-content .portrait img {
   border: solid #B57E9B 4px;
-  width: 275px;
-  height: 275px;
+  width: 225px;
+  height: 225px;
+}
+#about .about-content .portrait .portrait-caption {
+  margin-top: 10px;
+  font-size: 13px;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .portrait .portrait-caption {
+    max-width: 75%;
+  }
 }
 @media only screen and (max-width: 970px) {
   #about .about-content .portrait {
-    width: 100%;
-    margin: 0;
-  }
-  #about .about-content .portrait img {
+    order: -1;
+    max-width: unset;
+    width: 95%;
     margin: 0 auto;
-    width: 350px;
-    height: 350px;
+    margin-top: 15px;
   }
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .portrait {
-    width: initial;
-  }
-  #about .about-content .portrait img {
     width: 100%;
-    height: 100%;
+    margin: 0;
   }
 }
 #about .about-content .bio-1 {
@@ -1210,7 +1241,7 @@ header .scroll-down {
   gap: 20px;
   justify-content: center;
   align-items: initial;
-  max-width: calc(100% - 325px);
+  max-width: calc(100% - 275px);
   min-height: 275px;
 }
 @media only screen and (max-width: 970px) {
@@ -1238,15 +1269,6 @@ header .scroll-down {
 @media only screen and (max-width: 768px) {
   #about .about-content .bio-2 {
     margin: 0;
-  }
-}
-#about .about-content hr {
-  border-color: #84A59D;
-  margin: 0;
-}
-@media only screen and (max-width: 970px) {
-  #about .about-content {
-    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
