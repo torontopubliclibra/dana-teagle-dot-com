@@ -1211,13 +1211,9 @@ header .scroll-down {
   height: 225px;
 }
 #about .about-content .portrait .portrait-caption {
+  font-style: italic;
   margin-top: 10px;
   font-size: 13px;
-}
-@media only screen and (max-width: 768px) {
-  #about .about-content .portrait .portrait-caption {
-    max-width: 75%;
-  }
 }
 @media only screen and (max-width: 970px) {
   #about .about-content .portrait {
@@ -1227,11 +1223,23 @@ header .scroll-down {
     margin: 0 auto;
     margin-top: 15px;
   }
+  #about .about-content .portrait img {
+    width: 175px;
+    height: auto;
+    max-width: 40%;
+  }
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .portrait {
+    flex-direction: row;
     width: 100%;
     margin: 0;
+  }
+  #about .about-content .portrait .portrait-caption {
+    width: 55%;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 15px;
   }
 }
 #about .about-content .bio-1 {

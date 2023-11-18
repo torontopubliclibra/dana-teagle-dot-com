@@ -340,13 +340,9 @@ header {
             }
 
             .portrait-caption {
+                font-style: italic;
                 margin-top: 10px;
                 font-size: 13px;
-
-                // responsive to mobile
-                @media only screen and (max-width: $mobile) {
-                    max-width: 75%;
-                }
             }
     
             // responsive to tablet
@@ -356,11 +352,25 @@ header {
                 width: 95%;
                 margin: 0 auto;
                 margin-top: 15px;
+
+                img {
+                    width: 175px;
+                    height: auto;
+                    max-width: 40%;
+                }
             }
+
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
+                flex-direction: row;
                 width: 100%;
                 margin: 0;
+                .portrait-caption {
+                    width: 55%;
+                    text-align: left;
+                    margin-top: 0;
+                    margin-left: 15px;
+                }
             }
         }
 
