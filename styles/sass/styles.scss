@@ -597,7 +597,7 @@ header {
     // content container
     .contact-content {
         @include flex(column, 20px);
-        @include borderedBox(rgba($white, 0.8), $color3);
+        @include borderedBox(rgba($white, 0.8), $color2);
         padding: 20px;
         width: 95%;
         margin: 0 auto;
@@ -616,12 +616,12 @@ header {
                 font-style: italic;
                 font-size: 16px;
                 padding: 2px 8px;
-                background-color: rgba($color2, 0.5);
+                background-color: rgba($color3, 0.5);
                 border-bottom: solid $black 2px;
                 cursor: pointer;
 
                 &:hover, &.copied {
-                    background-color: rgba($color3, 0.5);
+                    background-color: rgba($color2, 0.5);
                     color: $black;
                 }
 

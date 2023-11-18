@@ -1457,7 +1457,7 @@ header .scroll-down {
   justify-content: initial;
   align-items: initial;
   background: rgba(243, 232, 233, 0.8);
-  border: solid #8491a5 5px;
+  border: solid #B57E9B 5px;
   padding: 20px;
   width: 95%;
   margin: 0 auto;
@@ -1473,12 +1473,12 @@ header .scroll-down {
   font-style: italic;
   font-size: 16px;
   padding: 2px 8px;
-  background-color: rgba(181, 126, 155, 0.5);
+  background-color: rgba(132, 145, 165, 0.5);
   border-bottom: solid #282b2c 2px;
   cursor: pointer;
 }
 #contact .contact-content .pgp.clipboard:hover, #contact .contact-content .pgp.clipboard.copied {
-  background-color: rgba(132, 145, 165, 0.5);
+  background-color: rgba(181, 126, 155, 0.5);
   color: #282b2c;
 }
 #contact .contact-content .pgp.clipboard.copied {
