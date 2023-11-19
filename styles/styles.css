@@ -1268,6 +1268,8 @@ header .scroll-down {
   align-items: initial;
   max-width: calc(100% - 275px);
   min-height: 275px;
+  margin: 20px;
+  margin-right: 0;
 }
 @media only screen and (max-width: 970px) {
   #about .about-content .bio-1 {
