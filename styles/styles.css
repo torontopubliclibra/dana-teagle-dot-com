@@ -512,6 +512,9 @@ html.share main .share-links .share-link .link-title {
 html.share main .share-links .share-link .link-title p {
   width: calc(100% - 15px);
 }
+html.share main .share-links .share-link .link-title img {
+  width: 18px;
+}
 html.share main .share-links .share-link .link-title i {
   font-size: 14px;
   display: flex;
@@ -718,6 +721,9 @@ a:hover, a:focus {
   width: auto;
   margin: 10px;
   cursor: pointer;
+}
+.scroll-to-top img {
+  width: 20px;
 }
 .scroll-to-top p {
   font-size: 17px;
@@ -1044,7 +1050,8 @@ header nav .hamburger-btn {
     height: 52px;
   }
   header nav .hamburger-btn button .ham-icon {
-    margin: 5px;
+    width: 30px;
+    margin-top: 5px;
     transform: rotate(0deg);
     transition: transform 0.75s;
   }
@@ -1145,6 +1152,9 @@ header .scroll-down {
   bottom: 10%;
   left: 50%;
   animation: 4s infinite ease-in-out pulse;
+}
+header .scroll-down img {
+  width: 75px;
 }
 
 #about .wrapper {
@@ -1415,7 +1425,12 @@ header .scroll-down {
   gap: 10px;
 }
 #projects .projects-container .project .project-description .button {
+  display: flex;
+  gap: 5px;
   padding: 10px 15px;
+}
+#projects .projects-container .project .project-description .button img {
+  width: 18px;
 }
 #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus, #projects .projects-container .project .project-description .button.read-less {
   background-color: rgba(132, 145, 165, 0.8);
@@ -1486,13 +1501,13 @@ header .scroll-down {
 #contact .contact-content .pgp.clipboard.copied {
   cursor: default;
 }
-#contact .contact-content .pgp i {
-  font-size: 14px;
-  font-weight: 900;
-  margin-left: 10px;
+#contact .contact-content .pgp img {
+  width: 18px;
+  margin-left: 8px;
+  transform: translateY(3px);
 }
 @media only screen and (max-width: 768px) {
-  #contact .contact-content .pgp i {
+  #contact .contact-content .pgp img {
     font-size: 12px;
   }
 }

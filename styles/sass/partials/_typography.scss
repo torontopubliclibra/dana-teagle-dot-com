@@ -121,6 +121,10 @@ a {
   margin: 10px;
   cursor: pointer;
 
+  img {
+    width: 20px;
+  }
+
   p {
     @include textStyle (17px, center);
     margin: 0;

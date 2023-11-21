@@ -237,7 +237,7 @@ let app = {
                     formattedProject.description =
                         `<button class="button read-more" title="`
                         + project.title
-                        + ` project description">Description <i class="fa fa-angle-down"></i></button><p>`
+                        + ` project description">Description<img src="./assets/expand-down.svg"></button><p>`
                         + formattedParagraph
                         + `</p>`
                 }
@@ -245,13 +245,13 @@ let app = {
                 // if the project has a site link, format a site button
                 if (project.site) {
                     formattedProject.site =
-                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">Site <i class="fa fa-external-link-square" aria-hidden="true"></i></a>`
+                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">Site<img src="./assets/external-link.svg"></a>`
                     };
 
                 // if the project has a code link, format a code button
                 if (project.code) {
                     formattedProject.code =
-                        `<a href="${project.code}" class="button" target="_blank" title="${project.title} repo on Github">Code <i class="fa fa-external-link-square" aria-hidden="true"></i></a>`
+                        `<a href="${project.code}" class="button" target="_blank" title="${project.title} repo on Github">Code<img src="./assets/external-link.svg"></a>`
                     };
 
                 // stitch together all the html for the project
@@ -294,7 +294,7 @@ let app = {
 
                 // reveal the paragraph and change the button text
                 button.classList.add("read-less");
-                button.innerHTML = `Description <i class="fa fa-angle-up"></i>`;
+                button.innerHTML = `Description<img src="./assets/collapse-up.svg">`;
                 project.classList.add("active");
                 paragraph.style.maxHeight = (paragraph.scrollHeight + 30) + `px`;
 
@@ -303,7 +303,7 @@ let app = {
 
                 // hide the paragraph and change the button text
                 button.classList.remove("read-less");
-                button.innerHTML = `Description <i class="fa fa-angle-down"></i>`;
+                button.innerHTML = `Description<img src="./assets/expand-down.svg">`;
                 project.classList.remove("active");
                 paragraph.style.maxHeight = "";
                 document.activeElement.blur();
@@ -371,8 +371,8 @@ let app = {
             .catch(error => console.log(error));
 
         // set the pgp html blocks
-        app.pgp.default = `click here to add to clipboard<i  class="fa fa-clone" aria-hidden="true" title="Copy Dana's PGP fingerprint to your clipboard"></i>`;
-        app.pgp.onclick = app.pgp.fingerprint + `<i class="fa fa-check" aria-hidden="true" title="PGP fingerprint copied!"></i>`;
+        app.pgp.default = app.pgp.fingerprint + `<img src="./assets/clipboard.svg">`;
+        app.pgp.onclick = app.pgp.fingerprint + `<img src="./assets/clipboard-success.svg">`;
 
         // inject the pgp fingerprint
         app.elements.pgpFingerprint.addClass('clipboard');

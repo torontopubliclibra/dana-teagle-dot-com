@@ -177,7 +177,8 @@ header {
                     height: 52px;
 
                     .ham-icon {
-                        margin: 5px;
+                        width: 30px;
+                        margin-top: 5px;
                         transform: rotate(0deg);
                         transition: transform 0.75s;
                     }
@@ -274,6 +275,10 @@ header {
     .scroll-down {
         @include positioning (absolute, "", "", 10%, 50%);
         animation: 4s infinite ease-in-out pulse;
+
+        img {
+            width: 75px;
+        }
     }
 }
 
@@ -545,6 +550,14 @@ header {
 
                 // buttons
                 .button {
+
+                    display: flex;
+                    gap: 5px;
+
+                    img {
+                        width: 18px;
+                    }
+
                     padding: 10px 15px;
 
                     &:hover, &:focus, &.read-less {
@@ -632,10 +645,10 @@ header {
                 }
             }
 
-            i {
-                font-size: 14px;
-                font-weight: 900;
-                margin-left: 10px;
+            img {
+                width: 18px;
+                margin-left: 8px;
+                transform: translateY(3px);
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
