@@ -31,19 +31,8 @@ html.share {
         margin: 15px;
         user-select: initial;
     }
-    
-    h2 {
-        font-style: italic;
-        font-size: 22px;
-        margin: 0;
 
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            font-size: 18px;
-        }
-    }
-
-    h3 {
+    h2, h3 {
         width: 85%;
         max-width: 850px;
         font-style: normal;
