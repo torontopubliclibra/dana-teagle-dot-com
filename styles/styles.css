@@ -700,7 +700,7 @@ a:hover, a:focus {
   }
 }
 
-.ham-icon {
+.menu-icon {
   font-size: 22px;
   text-align: center;
   line-height: 1.25;
@@ -1029,11 +1029,11 @@ header nav {
     animation: none;
   }
 }
-header nav .hamburger-btn {
+header nav .mobile-menu {
   display: none;
 }
 @media only screen and (max-width: 970px) {
-  header nav .hamburger-btn {
+  header nav .mobile-menu {
     position: fixed;
     top: 0;
     right: "";
@@ -1047,23 +1047,23 @@ header nav .hamburger-btn {
     z-index: 5;
     transition: background-color 0.75s, border-color 0.75s;
   }
-  header nav .hamburger-btn button {
+  header nav .mobile-menu button {
     background: none;
     border: none;
     float: left;
     padding: 0 10px;
     height: 52px;
   }
-  header nav .hamburger-btn button .ham-icon {
+  header nav .mobile-menu button .menu-icon {
     width: 30px;
     margin-top: 5px;
     transform: rotate(0deg);
     transition: transform 0.75s;
   }
-  header nav .hamburger-btn button:hover, header nav .hamburger-btn button:focus {
+  header nav .mobile-menu button:hover, header nav .mobile-menu button:focus {
     cursor: pointer;
   }
-  header nav .hamburger-btn .nav-name {
+  header nav .mobile-menu .nav-name {
     visibility: hidden;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -1122,14 +1122,14 @@ header nav ul li a {
   }
 }
 @media only screen and (max-width: 970px) {
-  header nav.active .hamburger-btn {
+  header nav.active .mobile-menu {
     background-color: #84A59D;
     border-color: #f3e8e9;
   }
-  header nav.active .hamburger-btn button .ham-icon {
+  header nav.active .mobile-menu button .menu-icon {
     transform: rotate(90deg);
   }
-  header nav.active .hamburger-btn .nav-name {
+  header nav.active .mobile-menu .nav-name {
     visibility: visible;
     animation: fade-in 0.4s;
   }

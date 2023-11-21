@@ -6,7 +6,7 @@ let app = {
         body: $("body"),
         about: $("#about"),
         nav: $("nav"),
-        hamburgerButton: $(".hamburger-btn"),
+        mobileMenu: $(".mobile-menu"),
         scrollDownButton: $(".scroll-down"),
         scrollTopButton: $(".scroll-to-top"),
         projectsContainer: $(".projects-container"),
@@ -315,7 +315,7 @@ let app = {
     events: () => {
 
         // on the hamburger button click, run the hamburger function
-        app.elements.hamburgerButton.click(app.functions.toggleNav);
+        app.elements.mobileMenu.click(app.functions.toggleNav);
 
         // for each of the nav list item links, toggle the nav on click
         document.querySelectorAll("nav ul li a").forEach((link) => link.addEventListener("click", app.functions.toggleNav));

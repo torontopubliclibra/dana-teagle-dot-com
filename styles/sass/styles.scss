@@ -154,8 +154,8 @@ header {
             animation: none;
         }
 
-        // hamburger button
-        .hamburger-btn {
+        // mobile menu button
+        .mobile-menu {
             display: none;
 
             // responsive to tablet
@@ -176,7 +176,7 @@ header {
                     padding: 0 10px;
                     height: 52px;
 
-                    .ham-icon {
+                    .menu-icon {
                         width: 30px;
                         margin-top: 5px;
                         transform: rotate(0deg);
@@ -239,12 +239,12 @@ header {
 
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
-                .hamburger-btn {
+                .mobile-menu {
                     background-color: $color1;
                     border-color: $white;
 
                     button {
-                        .ham-icon {
+                        .menu-icon {
                             transform: rotate(90deg);
                         }
                     }
