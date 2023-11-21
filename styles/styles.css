@@ -594,6 +594,7 @@ html.share footer a:hover {
 @font-face {
   font-family: "Source Code Pro";
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
+  font-display: swap;
 }
 body, .button {
   font-size: 18px;
@@ -1569,17 +1570,14 @@ footer .wrapper hr {
   margin: 30px 0;
   border-color: #B57E9B;
 }
-footer .wrapper .button {
-  background: #8491a5;
+footer .wrapper .scroll-to-top {
+  background: rgba(132, 145, 165, 0.75);
 }
-footer .wrapper .button:hover, footer .wrapper .button:focus {
-  background: #B57E9B;
+footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
+  background: rgba(181, 126, 155, 0.75);
 }
 @media only screen and (max-width: 970px) {
-  footer .wrapper .button {
-    background: #8491a5;
-  }
-  footer .wrapper .button:hover, footer .wrapper .button:focus {
-    background: #8491a5;
+  footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
+    background: rgba(132, 145, 165, 0.75);
   }
 }

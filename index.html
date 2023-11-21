@@ -14,9 +14,8 @@
     <link rel="shortcut icon" href="/assets/icons/favicon-192.png" sizes="192x192" >
     <link rel="icon" href="/assets/icons/favicon.ico" type="image/icon type"/>
 
-    <!-- preload fonts -->
+    <!-- preload typeface -->
     <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
 
     <!-- preload icons -->
     <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
@@ -31,7 +30,8 @@
     <!-- preload image -->
     <link rel="preload" href="./assets/rusty.png" as="image"/>
 
-    <!-- preload script -->
+    <!-- preload scripts -->
+    <link rel="preload" href="./scripts/jquery-3.7.0.min.js" as="script" />
     <link rel="preload" href="./scripts/app.js" as="script" />
 
     <!-- style import -->
@@ -50,7 +50,7 @@
           <!-- mobile menu button -->
           <div class="mobile-menu">
             <button aria-label="Click to open navigation">
-              <img src="./assets/icons/menu-lines.svg" class="menu-icon">
+              <img src="./assets/icons/menu-lines.svg" class="menu-icon" alt="mobile menu icon">
             </button>
             <p class="nav-name">Dana Teagle dot com</p>
           </div>
@@ -70,7 +70,7 @@
 
         <!-- scroll down icon -->
         <div class="scroll-down" title="Scroll down the page">
-          <img src="./assets/icons/arrow-down.svg" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
+          <img src="./assets/icons/arrow-down.svg" alt="scroll down icon" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
         </div>
         
       </div>
@@ -92,7 +92,7 @@
               I'm Dana Teagle, a web/software designer & developer living in Tkaronto, Ontario, Canada. Making neat things on the internet was a hobby for most of my life before it became my career in 2020. In every field I've ever found myself working in though, I've always been a problem-solver first and foremost.
             </p>
             <p>
-              I studied Front-End development at Juno College of Technology in 2022. Since then, I've been working with clients on a contract basis, primarily building websites and apps for businesses and non-profit organizations. You can find the most recent version of my resume <a href="/assets/DanaRosamundTeagleResume-170923.pdf" target="_blank" title="Download Dana's resume (last updated Sept 17 2023)">here</a>.
+              I studied Front-End development at Juno College of Technology in 2022. Since then, I've been working with clients on a contract basis, primarily building websites and apps for businesses and non-profit organizations. <a href="/assets/DanaRosamundTeagleResume-170923.pdf" target="_blank" title="Download Dana's resume (last updated Sept 17 2023)">Click here</a> to download a PDF copy of my most recent resume.
             </p>
             <p>
               I enjoy working with a variety of languages, frameworks, libraries, and technologies, and I am constantly striving to pick up new skills and learn different ways of doing things. At the moment, I find myself most passionate about accessible design, open source development, data privacy, and projects that intersect with advocacy (particularly for the queer and trans communities).
@@ -153,7 +153,7 @@
             Please feel free to contact me if you have a question about any of my apps or websites, or if there's a project or opportunity you think I'd be a particularly good fit for. I can be reached by email at <a href="mailto:dana.r.teagle@gmail.com" target="_blank" title="Send Dana an email">dana.r.teagle [at] gmail.com</a> and I'm also on <a href="/discord" target="_blank" title="Dana on Discord">Discord</a>.
           </p>
           <p>
-            If you want to send me any encrypted communications or documents, my <a href="https://www.openpgp.org/" target="_blank" title="OpenPGP website">OpenPGP</a> fingerprint is <a class="pgp" onclick="app.functions.copyPGP()">424A 8233 C832 042A</a> and you can download my public key <a href="/data/rusty-pgp.asc" target="_blank" title="Dana's PGP key">here</a>. You can also find me on <a href="/github" target="_blank" title="Dana on Github">Github</a>, <a href="/linkedin" target="_blank" title="Dana on LinkedIn">LinkedIn</a>, <a href="/kofi" target="_blank" title="Dana on Kofi">Kofi</a>, and <a href="/share" target="_blank" title="The Toronto Public Libra">various other places online</a>.
+            If you want to send me any encrypted communications or documents, my <a href="https://www.openpgp.org/" target="_blank" title="OpenPGP website">OpenPGP</a> fingerprint is <a class="pgp" onclick="app.functions.copyPGP()">424A 8233 C832 042A</a> and you can <a href="/data/rusty-pgp.asc" target="_blank" title="Dana's PGP key">click here</a> to download my public key. You can also find me on <a href="/github" target="_blank" title="Dana on Github">Github</a>, <a href="/linkedin" target="_blank" title="Dana on LinkedIn">LinkedIn</a>, <a href="/kofi" target="_blank" title="Dana on Kofi">Kofi</a>, and <a href="/share" target="_blank" title="The Toronto Public Libra">various other places online</a>.
           </p>
         </div>
 
@@ -166,9 +166,9 @@
 
         <!-- scroll to top button -->
         <div class="button scroll-to-top" title="Go back to top of page" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
-          <img src="./assets/icons/arrow-up.svg">
+          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
           <p class="button-label">Back to top</p>
-          <img src="./assets/icons/arrow-up.svg">
+          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
         </div>
 
         <hr/>

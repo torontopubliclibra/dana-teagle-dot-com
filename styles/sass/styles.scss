@@ -712,19 +712,18 @@ footer .wrapper {
     }
 
     // footer button
-    .button {
-        background: $color3;
+    .scroll-to-top {
+        background: rgba($color3, 0.75);
 
         &:hover, &:focus {
-            background: $color2;
+            background: rgba($color2, 0.75);
         }
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
-            background: $color3;
 
             &:hover, &:focus {
-                background: $color3;
+                background: rgba($color3, 0.75);
             }
         }
     }
