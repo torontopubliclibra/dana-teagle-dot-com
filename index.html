@@ -2,19 +2,39 @@
 <html lang="en">
   <head>
 
-    <!-- metadata-->
+    <!-- metadata and title -->
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Dana Teagle, Web/Software Developer - Toronto, Ontario, Canada"/>
-
-    <!-- title and icon -->
     <title>dana teagle | web/software developer</title>
-    <link rel="apple-touch-icon-precomposed" href="/assets/favicon-touch.png">
-    <link rel="shortcut icon" href="/assets/favicon-192.png" sizes="192x192" >
-    <link rel="icon" href="/assets/favicon.ico" type="image/icon type"/>
 
-    <!-- style imports -->
+    <!-- favicons-->
+    <link rel="apple-touch-icon-precomposed" href="/assets/icons/favicon-touch.png">
+    <link rel="shortcut icon" href="/assets/icons/favicon-192.png" sizes="192x192" >
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/icon type"/>
+
+    <!-- preload fonts -->
+    <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+
+    <!-- preload icons -->
+    <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/arrow-up.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/collapse-up.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/clipboard.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/clipboard-success.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/expand-down.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/external-link.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/menu-lines.svg" as="image" type="image/svg+xml" />
+
+    <!-- preload image -->
+    <link rel="preload" href="./assets/rusty.png" as="image"/>
+
+    <!-- preload script -->
+    <link rel="preload" href="./scripts/app.js" as="script" />
+
+    <!-- style import -->
     <link rel="stylesheet" href="./styles/styles.css"/>
 
   </head>
@@ -30,7 +50,7 @@
           <!-- mobile menu button -->
           <div class="mobile-menu">
             <button aria-label="Click to open navigation">
-              <img src="./assets/menu-lines.svg" class="menu-icon">
+              <img src="./assets/icons/menu-lines.svg" class="menu-icon">
             </button>
             <p class="nav-name">Dana Teagle dot com</p>
           </div>
@@ -50,7 +70,7 @@
 
         <!-- scroll down icon -->
         <div class="scroll-down" title="Scroll down the page">
-          <img src="./assets/arrow-down.svg" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
+          <img src="./assets/icons/arrow-down.svg" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
         </div>
         
       </div>
@@ -146,9 +166,9 @@
 
         <!-- scroll to top button -->
         <div class="button scroll-to-top" title="Go back to top of page" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
-          <img src="./assets/arrow-up.svg">
+          <img src="./assets/icons/arrow-up.svg">
           <p class="button-label">Back to top</p>
-          <img src="./assets/arrow-up.svg">
+          <img src="./assets/icons/arrow-up.svg">
         </div>
 
         <hr/>
