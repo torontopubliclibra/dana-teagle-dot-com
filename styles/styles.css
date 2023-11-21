@@ -725,6 +725,11 @@ a:hover, a:focus {
 .scroll-to-top img {
   width: 20px;
 }
+@media only screen and (max-width: 970px) {
+  .scroll-to-top img {
+    width: 18px;
+  }
+}
 .scroll-to-top p {
   font-size: 17px;
   text-align: center;
@@ -1156,6 +1161,11 @@ header .scroll-down {
 header .scroll-down img {
   width: 75px;
 }
+@media only screen and (max-width: 970px) {
+  header .scroll-down img {
+    width: 60px;
+  }
+}
 
 #about .wrapper {
   display: flex;
@@ -1441,6 +1451,11 @@ header .scroll-down img {
   }
   #projects .projects-container .project .project-description .button {
     padding: 10px;
+    gap: 4px;
+  }
+  #projects .projects-container .project .project-description .button img {
+    width: 14px;
+    padding-top: 2px;
   }
   #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus {
     background-color: #f3e8e9;
@@ -1509,6 +1524,7 @@ header .scroll-down img {
 @media only screen and (max-width: 768px) {
   #contact .contact-content .pgp img {
     font-size: 12px;
+    width: 17px;
   }
 }
 @media only screen and (max-width: 768px) {
