@@ -6,7 +6,7 @@
 A [second page](https://danateagle.com/share) also serves as a landing site (similar to a Linktree) for sharing external links, iterated from another JSON file.
 
 ## Development
-The site was originally developed in Oct 2022, redesigned and refactored in Aug and Sept 2023, and continues to be updated and improved periodicly.
+The site was originally developed in Oct 2022, redesigned and refactored in Aug and Sept 2023, and continues to be updated and improved periodically.
 
 ## Attributions
 - [RemixIcon](https://remixicon.com/)
