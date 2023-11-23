@@ -1,4 +1,22 @@
 {
+    "True History Brewing": {
+        "year": "2023",
+        "tags": [
+            "React",
+            "JavaScript",
+            "Remix",
+            "Figma",
+            "Hydrogen",
+            "Shopify",
+            "Sanity",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website and online storefront I'm currently building for True History, a brewery and taproom in the west-end of Toronto, Ontario. The site is being built using React, Remix, Hydrogen, and Oxygen as a headless storefront for use with the Shopify CLI. Sanity is also used as a headless CMS.",
+            "I wireframed the project myself using Figma, and am in the development process at the moment, aiming for a projected launch in December 2023. Check back soon."
+        ],
+        "code": "/thb/repo"
+    },
     "Note Taken": {
         "year": "2023",
         "tags": [
@@ -35,6 +53,7 @@
         "tags": [
             "React",
             "JavaScript",
+            "Firebase",
             "CSS"
         ],
         "description": [
