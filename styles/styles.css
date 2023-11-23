@@ -1435,7 +1435,7 @@ header .scroll-down img {
   width: 18px;
 }
 #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus, #projects .projects-container .project .project-description .button.read-less {
-  background-color: rgba(132, 145, 165, 0.8);
+  background-color: rgba(132, 145, 165, 0.75);
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .project-description {
@@ -1453,7 +1453,7 @@ header .scroll-down img {
     background-color: #f3e8e9;
   }
   #projects .projects-container .project .project-description .button.read-less:hover, #projects .projects-container .project .project-description .button.read-less:focus {
-    background-color: #84A59D;
+    background-color: rgba(132, 145, 165, 0.75);
   }
 }
 #projects .projects-container .project .project-description p {
@@ -1467,6 +1467,7 @@ header .scroll-down img {
   display: block;
   background: rgba(243, 232, 233, 0.8);
   border: solid #8491a5 5px;
+  border-width: 4px;
   padding: 15px;
   margin-top: 10px;
   opacity: 1;

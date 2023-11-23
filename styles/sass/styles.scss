@@ -566,7 +566,7 @@ header {
                     padding: 10px 15px;
 
                     &:hover, &:focus, &.read-less {
-                        background-color: rgba($color3, 0.8);
+                        background-color: rgba($color3, 0.75);
                     }
                 }
 
@@ -587,7 +587,7 @@ header {
                             background-color: $white;
                         }
                         &.read-less:hover, &.read-less:focus {
-                            background-color: $color1;
+                            background-color: rgba($color3, 0.75);
                         }
                     }
                 }
@@ -606,6 +606,7 @@ header {
                     p {
                         display: block;
                         @include borderedBox(rgba($white, 0.8), $color3);
+                        border-width: 4px;
                         padding: 15px;
                         margin-top: 10px;
                         opacity: 1;
