@@ -1374,10 +1374,9 @@ header .scroll-down img {
   background: rgba(181, 126, 155, 0.8);
   border: solid #8491a5 5px;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   width: calc(50% - 5px);
   max-width: 550px;
-  align-self: flex-end;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
