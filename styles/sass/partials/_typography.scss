@@ -172,7 +172,7 @@ h1 {
 
   // responsive to tablet
   @media only screen and (max-width: $tablet) {
-    @include textStyle (80px, center, 1);
+    @include textStyle (70px, center, 1);
     max-width: 500px;
     font-style: italic;
   }
@@ -220,7 +220,7 @@ h3 {
 
 // project buttons
 .project .button {
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
 
   // responsive to tablet
