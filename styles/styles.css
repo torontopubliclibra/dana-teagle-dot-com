@@ -1377,6 +1377,7 @@ header .scroll-down img {
   height: 100%;
   width: calc(50% - 5px);
   max-width: 550px;
+  align-self: flex-end;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
