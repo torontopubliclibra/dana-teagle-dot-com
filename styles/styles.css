@@ -603,7 +603,7 @@ html.trans-id body {
   }
 }
 html.trans-id header, html.trans-id main, html.trans-id footer {
-  background-color: rgba(243, 232, 233, 0.5);
+  background-color: rgba(243, 232, 233, 0.75);
   border: solid 3px #282b2c;
 }
 html.trans-id header h1, html.trans-id header h2, html.trans-id header h3, html.trans-id header p, html.trans-id header a, html.trans-id header .alt, html.trans-id main h1, html.trans-id main h2, html.trans-id main h3, html.trans-id main p, html.trans-id main a, html.trans-id main .alt, html.trans-id footer h1, html.trans-id footer h2, html.trans-id footer h3, html.trans-id footer p, html.trans-id footer a, html.trans-id footer .alt {
