@@ -1,0 +1,72 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'animations';
+
+html.trans-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 90%;
+    margin: 0 auto;
+    body {
+        background-image: url("../../../assets/trans-id_bg.png");
+        background-repeat: repeat;
+        background-size: 500px;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+    header, main, footer {
+        background-color: rgba($white, 0.5);
+        border: solid 3px $black;
+        h1, h2, h3, p, a, .alt {
+            color: $black !important;
+        }
+    }
+    header {
+        border-bottom: none;
+    }
+    main {
+        padding: 10px;
+        border-top: none;
+        border-bottom: none;
+        .share-link {
+            background-color: rgba($color2, 0.75) !important;
+            border-color: $black !important;
+            margin: 10px !important;
+            hr {
+                border-color: $black !important;
+            }
+            &:nth-of-type(even) {
+                background-color: rgba($color1, 0.75) !important;
+            }
+            &:hover {
+                background-color: rgba($color3, 0.75) !important;
+
+                // responsive to mobile
+                @media only screen and (max-width: $mobile) {
+                    background-color: rgba($color2, 0.75) !important;
+                    &:nth-of-type(even) {
+                        background-color: rgba($color1, 0.75) !important;
+                    }
+                }
+            }
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                min-width: 95% !important;
+                max-width: 95% !important;
+            }
+        }
+    }
+    footer {
+        border-top: none; 
+    }
+    hr {
+        border-color: $black;
+    }
+}
