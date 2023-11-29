@@ -623,7 +623,13 @@ html.trans-id header {
     padding-top: 15px;
   }
   html.trans-id header h1 {
-    font-size: 27px;
+    font-size: 38px;
+  }
+  html.trans-id header h2 {
+    font-size: 15px;
+  }
+  html.trans-id header h3, html.trans-id header h3 a {
+    font-size: 12px;
   }
 }
 html.trans-id main {
