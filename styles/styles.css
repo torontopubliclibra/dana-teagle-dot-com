@@ -354,7 +354,7 @@ html.share hr {
   width: 90%;
   max-width: 850px;
   margin: 20px 0;
-  border: 1.5px solid #8491a5;
+  border: 1.5px solid #7a91b1;
 }
 html.share main, html.share header, html.share footer {
   opacity: 0;
@@ -488,7 +488,7 @@ html.share main .share-links .share-link {
   cursor: pointer;
 }
 html.share main .share-links .share-link:nth-of-type(even) {
-  background-color: #8491a5;
+  background-color: #7a91b1;
 }
 html.share main .share-links .share-link .link-title {
   display: flex;
@@ -531,7 +531,7 @@ html.share main .share-links .share-link:hover {
     background: #84A59D;
   }
   html.share main .share-links .share-link:hover:nth-of-type(even) {
-    background-color: #8491a5;
+    background-color: #7a91b1;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -573,7 +573,7 @@ html.share footer p.credit .alt, html.share footer a .alt {
   }
 }
 html.share footer a:hover {
-  color: #8491a5;
+  color: #7a91b1;
 }
 @media only screen and (max-width: 768px) {
   html.share footer a:hover {
@@ -641,7 +641,7 @@ html.trans-id main .share-links {
   margin-bottom: 0;
 }
 html.trans-id main .share-link {
-  background-color: rgba(181, 126, 155, 0.75) !important;
+  background-color: rgba(181, 126, 155, 0.5) !important;
   border-color: #282b2c !important;
   margin: 10px !important;
 }
@@ -649,17 +649,17 @@ html.trans-id main .share-link hr {
   border-color: #282b2c !important;
 }
 html.trans-id main .share-link:nth-of-type(even) {
-  background-color: rgba(91, 150, 205, 0.75) !important;
+  background-color: rgba(91, 150, 205, 0.5) !important;
 }
 html.trans-id main .share-link:hover {
-  background-color: rgba(132, 165, 157, 0.75) !important;
+  background-color: rgba(132, 165, 157, 0.5) !important;
 }
 @media only screen and (max-width: 768px) {
   html.trans-id main .share-link:hover {
-    background-color: rgba(181, 126, 155, 0.75) !important;
+    background-color: rgba(181, 126, 155, 0.5) !important;
   }
   html.trans-id main .share-link:hover:nth-of-type(even) {
-    background-color: rgba(91, 150, 205, 0.75) !important;
+    background-color: rgba(91, 150, 205, 0.5) !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -748,7 +748,7 @@ a {
 }
 a:hover, a:focus {
   cursor: pointer;
-  color: #8491a5;
+  color: #7a91b1;
   font-style: italic;
 }
 @media only screen and (max-width: 970px) {
@@ -772,7 +772,7 @@ a:hover, a:focus {
   font-size: 75px;
   text-align: center;
   line-height: "";
-  color: #8491a5;
+  color: #7a91b1;
   cursor: pointer;
   transition: 0.75s;
 }
@@ -831,7 +831,7 @@ a:hover, a:focus {
 
 nav ul li a {
   text-decoration: none;
-  border-bottom: solid #8491a5 3px;
+  border-bottom: solid #7a91b1 3px;
 }
 nav ul li a:hover, nav ul li a:focus {
   color: #282b2c;
@@ -941,9 +941,9 @@ h3 {
     font-size: 18px;
   }
   .projects-nav li, .projects-nav li a {
-    font-size: 15px;
+    font-size: 12px;
     text-align: "";
-    line-height: 1.25;
+    line-height: 1;
     color: #282b2c;
     font-style: normal;
   }
@@ -1129,7 +1129,7 @@ header nav .mobile-menu {
     bottom: "";
     left: 0;
     cursor: pointer;
-    background: #8491a5;
+    background: #7a91b1;
     border-bottom: solid #B57E9B 5px;
     display: initial;
     width: 100%;
@@ -1197,7 +1197,7 @@ header nav ul li a {
     width: 100%;
     height: 100vh;
     padding-top: 60px;
-    background: #8491a5;
+    background: #7a91b1;
     z-index: 3;
   }
   header nav ul li a, header nav ul li a:focus, header nav ul li a:hover {
@@ -1270,7 +1270,7 @@ header .scroll-down img {
   }
 }
 #about .wrapper hr {
-  border-color: #8491a5;
+  border-color: #7a91b1;
   margin: 0;
   margin-bottom: 15px;
 }
@@ -1318,7 +1318,7 @@ header .scroll-down img {
   display: none;
 }
 #about .about-content .portrait img {
-  border: solid #8491a5 4px;
+  border: solid #7a91b1 4px;
   width: 225px;
   height: 225px;
 }
@@ -1417,7 +1417,7 @@ header .scroll-down img {
 }
 
 #projects hr {
-  border-color: #8491a5;
+  border-color: #7a91b1;
 }
 #projects .projects-nav {
   display: flex;
@@ -1469,7 +1469,7 @@ header .scroll-down img {
 }
 #projects .projects-container .project {
   background: rgba(181, 126, 155, 0.8);
-  border: solid #8491a5 5px;
+  border: solid #7a91b1 5px;
   margin: 0;
   min-height: 100%;
   width: calc(50% - 5px);
@@ -1482,7 +1482,7 @@ header .scroll-down img {
   flex-flow: row wrap;
   gap: 10px;
   background-color: rgba(243, 232, 233, 0.8);
-  border: solid 4px #8491a5;
+  border: solid 4px #7a91b1;
   margin: 0 15px;
   margin-top: 10px;
   padding: 10px 15px;
@@ -1532,7 +1532,7 @@ header .scroll-down img {
   width: 18px;
 }
 #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus, #projects .projects-container .project .project-description .button.read-less {
-  background-color: rgba(132, 145, 165, 0.75);
+  background-color: rgba(122, 145, 177, 0.75);
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .project-description {
@@ -1550,7 +1550,7 @@ header .scroll-down img {
     background-color: #f3e8e9;
   }
   #projects .projects-container .project .project-description .button.read-less:hover, #projects .projects-container .project .project-description .button.read-less:focus {
-    background-color: rgba(132, 145, 165, 0.75);
+    background-color: rgba(122, 145, 177, 0.75);
   }
 }
 #projects .projects-container .project .project-description p {
@@ -1563,7 +1563,7 @@ header .scroll-down img {
 #projects .projects-container .project .project-description.active p {
   display: block;
   background: rgba(243, 232, 233, 0.8);
-  border: solid #8491a5 5px;
+  border: solid #7a91b1 5px;
   border-width: 4px;
   padding: 15px;
   margin-top: 10px;
@@ -1595,7 +1595,7 @@ header .scroll-down img {
   font-style: italic;
   font-size: 16px;
   padding: 2px 8px;
-  background-color: rgba(132, 145, 165, 0.5);
+  background-color: rgba(122, 145, 177, 0.5);
   border-bottom: solid #282b2c 2px;
   cursor: pointer;
 }
@@ -1660,13 +1660,13 @@ footer .wrapper hr {
   border-color: #B57E9B;
 }
 footer .wrapper .scroll-to-top {
-  background: rgba(132, 145, 165, 0.75);
+  background: rgba(122, 145, 177, 0.75);
 }
 footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
   background: rgba(181, 126, 155, 0.75);
 }
 @media only screen and (max-width: 970px) {
   footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
-    background: rgba(132, 145, 165, 0.75);
+    background: rgba(122, 145, 177, 0.75);
   }
 }

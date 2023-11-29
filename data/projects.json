@@ -13,7 +13,7 @@
         ],
         "description": [
             "This is a website and online storefront I'm currently building for True History, a brewery and taproom in the west-end of Toronto, Ontario. The site is being built using React, Remix, Hydrogen, and Oxygen as a headless storefront for use with the Shopify CLI. Sanity is also used as a headless CMS.",
-            "I wireframed the project myself using Figma, and am in the development process at the moment, aiming for a projected launch in December 2023. Check back soon."
+            "I wireframed the project myself using Figma, and am in the development process at the moment. Please check back soon."
         ],
         "code": "/thb/repo"
     },
@@ -25,8 +25,8 @@
             "SCSS"
         ],
         "description": [
-            "This is a local storage notes app. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side without being sent to a database, and remains secure in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file.",
-            "I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
+            "This is a local storage notes app that I built using Typescript and Angular.",
+            "Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side without being sent to a database, and remains secure in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -41,9 +41,8 @@
             "GeoJSON"
         ],
         "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built upon the open source Pytheas application. This project added several significant functional upgrades to that code base.",
-            "The app aims to promote awareness of the nuanced histories of the queer, trans, and intersex communities over the decades, especially those stories which have been lost, forgotten, or intentionally erased. The site walks you through the selected tour length, displaying text and photos for each location.",
-            "I was the lead developer on Queer Walk, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built upon the open source Pytheas application. Queer Walk promotes awareness of the histories of the queer, trans, and intersex communities. It guides users through the selected tour length, and displays text and photos for each historic location.",
+            "I was the lead developer on the application, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -57,9 +56,9 @@
             "CSS"
         ],
         "description": [
-            "This is an online statistics-based card game using characters from the Marvel Universe.",
+            "Superhero Showdown is an online stats-based card game that I built with React, using characters from Marvel Comics.",
             "When the game starts, a set of data objects stored in Firebase (each representing a character) are retrieved, shuffled, and divided into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Every round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.", 
-            "Superhero Showdown uses algorithms for card shuffling, and calculates scores by comparing state values as you move through game play. I developed it in Oct and Nov 2022 during my time at Juno College."
+            "This game uses algorithms for card shuffling, and calculates scores by comparing values as you move through game play. I developed it in Oct and Nov 2022 during my time at Juno College."
         ],
         "site": "/superhero",
         "code": "/superhero/repo"
@@ -72,8 +71,7 @@
             "CSS"
         ],
         "description": [
-            "This is an app for viewing photos of pigeons in different cities around the world using the Flickr API.",
-            "The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a randomized city, then it randomly selects one of the objects and displays the photo on the page.",
+            "This is an app for viewing photos of pigeons in different cities around the world, built with jQuery using the Flickr API. The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the objects and displays that photo on the page.",
             "I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
         ],
         "site": "/pigeon",

@@ -14,14 +14,6 @@
         }
     },
     "socials": {
-        "LinkedIn": {
-            "link": "/linkedin",
-            "description": ""
-        },
-        "GitHub": {
-            "link": "/github",
-            "description": ""
-        },
         "Instagram": {
             "link": "/instagram",
             "description": ""
@@ -30,8 +22,8 @@
             "link": "/bluesky",
             "description": ""
         },
-        "Medium": {
-            "link": "/medium",
+        "GitHub": {
+            "link": "/github",
             "description": ""
         },
         "Spotify": {
@@ -44,6 +36,14 @@
         },
         "Goodreads": {
             "link": "/goodreads",
+            "description": ""
+        },
+        "Medium": {
+            "link": "/medium",
+            "description": ""
+        },
+        "LinkedIn": {
+            "link": "/linkedin",
             "description": ""
         }
     },
@@ -83,6 +83,10 @@
             "link": "/trans-id-resources",
             "description": "Documents and resources I've personally collected and curated for changing your name and/or gender marker with governmental bodies and services in Ontario"
         },
+        "Donate A Mask": {
+            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
+            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
+        },
         "All the Walls Will Fall": {
             "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
             "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
@@ -114,10 +118,6 @@
         "National Network of Abortion Funds": {
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        },
-        "Donate A Mask": {
-            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
-            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
         }
     },
     "contact & payments": {

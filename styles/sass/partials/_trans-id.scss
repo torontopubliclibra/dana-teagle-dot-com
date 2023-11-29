@@ -60,23 +60,23 @@ html.trans-id {
             margin-bottom: 0;
         }
         .share-link {
-            background-color: rgba($color2, 0.75) !important;
+            background-color: rgba($color2, 0.5) !important;
             border-color: $black !important;
             margin: 10px !important;
             hr {
                 border-color: $black !important;
             }
             &:nth-of-type(even) {
-                background-color: rgba($color4, 0.75) !important;
+                background-color: rgba($color4, 0.5) !important;
             }
             &:hover {
-                background-color: rgba($color1, 0.75) !important;
+                background-color: rgba($color1, 0.5) !important;
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
-                    background-color: rgba($color2, 0.75) !important;
+                    background-color: rgba($color2, 0.5) !important;
                     &:nth-of-type(even) {
-                        background-color: rgba($color4, 0.75) !important;
+                        background-color: rgba($color4, 0.5) !important;
                     }
                 }
             }

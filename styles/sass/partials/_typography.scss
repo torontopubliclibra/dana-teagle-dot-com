@@ -248,7 +248,7 @@ h3 {
       font-size: 18px;
     }
     li, li a {
-      @include textStyle (15px, "", 1.25);
+      @include textStyle (12px, "", 1);
       font-style: normal;
     }
   }
