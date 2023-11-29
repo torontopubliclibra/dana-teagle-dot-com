@@ -609,6 +609,12 @@ html.trans-id header, html.trans-id main, html.trans-id footer {
 html.trans-id header h1, html.trans-id header h2, html.trans-id header h3, html.trans-id header p, html.trans-id header a, html.trans-id header .alt, html.trans-id main h1, html.trans-id main h2, html.trans-id main h3, html.trans-id main p, html.trans-id main a, html.trans-id main .alt, html.trans-id footer h1, html.trans-id footer h2, html.trans-id footer h3, html.trans-id footer p, html.trans-id footer a, html.trans-id footer .alt {
   color: #282b2c !important;
 }
+html.trans-id header h3, html.trans-id header h3 a, html.trans-id main h3, html.trans-id main h3 a, html.trans-id footer h3, html.trans-id footer h3 a {
+  font-size: 14px;
+}
+html.trans-id header h3, html.trans-id main h3, html.trans-id footer h3 {
+  padding-top: 15px;
+}
 html.trans-id header {
   border-bottom: none;
 }

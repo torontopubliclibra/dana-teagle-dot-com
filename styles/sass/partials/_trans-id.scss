@@ -27,6 +27,12 @@ html.trans-id {
         h1, h2, h3, p, a, .alt {
             color: $black !important;
         }
+        h3, h3 a {
+            font-size: 14px;
+        }
+        h3 {
+            padding-top: 15px;
+        }
     }
     header {
         border-bottom: none;
