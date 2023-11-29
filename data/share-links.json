@@ -1,12 +1,16 @@
 {
-    "sites": {
+    "sites & apps": {
         "Dana Teagle dot com": {
             "link": "/",
             "description": "Web/software design & development portfolio"
         },
         "Note Taken": {
             "link": "/notes",
-            "description": "Local storage notes app developed in Angular"
+            "description": "Local storage notes app"
+        },
+        "The Pigeon Hole": {
+            "link": "/pigeon",
+            "description": "Photos of pigeons in cities around the world"
         }
     },
     "socials": {
@@ -43,22 +47,14 @@
             "description": ""
         }
     },
-    "links and resources": {
-        "Ontario Trans I.D. resources": {
-            "link": "/trans-id-resources",
-            "description": "Documents and resources I've personally collected and curated for changing your name and/or gender marker with governmental bodies and services in Ontario"
-        },
-        "Ontario Trans I.D. workshop - Nov 29 2023": {
-            "link": "http://bit.ly/tfac-nov29",
-            "description": "Free virtual workshop I'm presenting on Zoom on Nov 29, 2023 about how to change your name and/or gender marker in Ontario [hosted by CUPE 3903 Trans Feminist Action Caucus (TFAC)]"
+    "global & community actions": {
+        "No Homeless Evictions petition": {
+            "link": "https://openletter.earth/no-homeless-evictions-1f357736/",
+            "description": "Petition to Toronto Mayor Olivia Chow to place a full moratorium on evictions of unhoused people [sponsored by Voices for Unhoused Liberation, Nov 2023]"
         },
         "Toronto Community Defence Fund for Palestinian organizing": {
             "link": "https://actionnetwork.org/fundraising/community-defence-fund-for-palestinian-activists/",
             "description": "Fund for activists in Toronto working for Palestinian justice, to support with legal fees and other expenses [sponsored by Showing Up for Racial Justice (SURJ) Toronto]"
-        },
-        "No Homeless Evictions petition": {
-            "link": "https://openletter.earth/no-homeless-evictions-1f357736/",
-            "description": "Petition to Toronto Mayor Olivia Chow to place a full moratorium on evictions of unhoused people [sponsored by Voices for Unhoused Liberation, Nov 2023]"
         },
         "No Tech for Apartheid petition": {
             "link": "https://www.notechforapartheid.com/",
@@ -79,6 +75,13 @@
         "House of Commons petition e-4666": {
             "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
             "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
+        }
+    },
+
+    "links & resources": {
+        "Ontario Trans I.D. resources": {
+            "link": "/trans-id-resources",
+            "description": "Documents and resources I've personally collected and curated for changing your name and/or gender marker with governmental bodies and services in Ontario"
         },
         "All the Walls Will Fall": {
             "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
@@ -117,7 +120,19 @@
             "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
         }
     },
-    "payments": {
+    "contact & payments": {
+        "Discord": {
+            "link": "/discord",
+            "description": "For personal correspondence"
+        },
+        "Email": {
+            "link": "mailto:dana.r.teagle@gmail.com",
+            "description": "For personal & business correspondence"
+        },
+        "PGP public key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "OpenPGP key for sending encrypted emails & documents"
+        },
         "Paypal": {
             "link": "/paypal",
             "description": "For personal & business payments"
@@ -125,20 +140,6 @@
         "Kofi": {
             "link": "/kofi",
             "description": "For supporting me and my work"
-        }
-    },
-    "contact": {
-        "Email": {
-            "link": "mailto:dana.r.teagle@gmail.com",
-            "description": "For personal & business communications"
-        },
-        "PGP public key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "OpenPGP key for sending me encrypted emails and documents"
-        },
-        "Discord": {
-            "link": "/discord",
-            "description": ""
         }
     }
 }
