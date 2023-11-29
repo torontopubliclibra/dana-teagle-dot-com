@@ -417,7 +417,7 @@ html.share main .share-categories ul li {
 html.share main .share-categories ul li a {
   border: solid #B57E9B 3px;
   padding: 5px 15px 8px 15px;
-  font-size: 13px;
+  font-size: 12px;
   color: #f3e8e9;
   text-decoration: none;
 }
@@ -443,7 +443,7 @@ html.share main .share-categories ul li a:hover {
     margin: 4px 0;
   }
   html.share main .share-categories ul li a {
-    font-size: 12px;
+    font-size: 11px;
     padding: 3px 10px 5px 10px;
   }
 }
