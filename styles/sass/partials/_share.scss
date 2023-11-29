@@ -27,7 +27,7 @@ html.share {
 
     h1 {
         font-style: normal;
-        font-size: 32px;
+        font-size: 36px;
         margin: 15px;
         user-select: initial;
     }
@@ -42,7 +42,7 @@ html.share {
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            font-size: 14px;
+            font-size: 15px;
         }
     }
 
@@ -142,7 +142,7 @@ html.share {
                     a {
                         border: solid $color2 3px;
                         padding: 5px 15px 8px 15px;
-                        font-size: 12px;
+                        font-size: 13px;
                         color: $white;
                         text-decoration: none;
                         &:hover {
@@ -170,7 +170,7 @@ html.share {
                         margin: 4px 0;
 
                         a {
-                            font-size: 11px;
+                            font-size: 12px;
                             padding: 3px 10px 5px 10px;
                         }
                     }

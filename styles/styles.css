@@ -312,7 +312,7 @@ html.share h1, html.share h2, html.share h3 {
 }
 html.share h1 {
   font-style: normal;
-  font-size: 32px;
+  font-size: 36px;
   margin: 15px;
   -webkit-user-select: initial;
      -moz-user-select: initial;
@@ -328,7 +328,7 @@ html.share h2, html.share h3 {
 }
 @media only screen and (max-width: 768px) {
   html.share h2, html.share h3 {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 html.share p.js-disabled-share {
@@ -417,7 +417,7 @@ html.share main .share-categories ul li {
 html.share main .share-categories ul li a {
   border: solid #B57E9B 3px;
   padding: 5px 15px 8px 15px;
-  font-size: 12px;
+  font-size: 13px;
   color: #f3e8e9;
   text-decoration: none;
 }
@@ -443,7 +443,7 @@ html.share main .share-categories ul li a:hover {
     margin: 4px 0;
   }
   html.share main .share-categories ul li a {
-    font-size: 11px;
+    font-size: 12px;
     padding: 3px 10px 5px 10px;
   }
 }
