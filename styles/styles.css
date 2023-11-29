@@ -612,6 +612,14 @@ html.trans-id header h1, html.trans-id header h2, html.trans-id header h3, html.
 html.trans-id header {
   border-bottom: none;
 }
+@media only screen and (max-width: 768px) {
+  html.trans-id header {
+    padding-top: 15px;
+  }
+  html.trans-id header h1 {
+    font-size: 27px;
+  }
+}
 html.trans-id main {
   padding: 10px;
   border-top: none;
@@ -626,23 +634,25 @@ html.trans-id main .share-link hr {
   border-color: #282b2c !important;
 }
 html.trans-id main .share-link:nth-of-type(even) {
-  background-color: rgba(132, 165, 157, 0.75) !important;
+  background-color: rgba(91, 150, 205, 0.75) !important;
 }
 html.trans-id main .share-link:hover {
-  background-color: rgba(132, 145, 165, 0.75) !important;
+  background-color: rgba(132, 165, 157, 0.75) !important;
 }
 @media only screen and (max-width: 768px) {
   html.trans-id main .share-link:hover {
     background-color: rgba(181, 126, 155, 0.75) !important;
   }
   html.trans-id main .share-link:hover:nth-of-type(even) {
-    background-color: rgba(132, 165, 157, 0.75) !important;
+    background-color: rgba(91, 150, 205, 0.75) !important;
   }
 }
 @media only screen and (max-width: 768px) {
   html.trans-id main .share-link {
-    min-width: 95% !important;
-    max-width: 95% !important;
+    min-width: 92% !important;
+    max-width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 html.trans-id footer {

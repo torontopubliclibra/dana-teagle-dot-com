@@ -30,6 +30,15 @@ html.trans-id {
     }
     header {
         border-bottom: none;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            padding-top: 15px;
+
+            h1 {
+                font-size: 27px;
+            }
+        }
     }
     main {
         padding: 10px;
@@ -43,23 +52,25 @@ html.trans-id {
                 border-color: $black !important;
             }
             &:nth-of-type(even) {
-                background-color: rgba($color1, 0.75) !important;
+                background-color: rgba($color4, 0.75) !important;
             }
             &:hover {
-                background-color: rgba($color3, 0.75) !important;
+                background-color: rgba($color1, 0.75) !important;
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
                     background-color: rgba($color2, 0.75) !important;
                     &:nth-of-type(even) {
-                        background-color: rgba($color1, 0.75) !important;
+                        background-color: rgba($color4, 0.75) !important;
                     }
                 }
             }
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                min-width: 95% !important;
-                max-width: 95% !important;
+                min-width: 92% !important;
+                max-width: 92% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
             }
         }
     }
