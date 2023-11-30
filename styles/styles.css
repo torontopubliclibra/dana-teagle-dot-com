@@ -929,7 +929,8 @@ h3 {
 .projects-nav p {
   font-size: 20px;
 }
-.projects-nav li {
+.projects-nav li, .projects-nav li a {
+  font-size: 16px;
   list-style-type: none;
   margin: 0;
 }
@@ -941,7 +942,7 @@ h3 {
     font-size: 18px;
   }
   .projects-nav li, .projects-nav li a {
-    font-size: 12px;
+    font-size: 14px;
     text-align: "";
     line-height: 1;
     color: #282b2c;
