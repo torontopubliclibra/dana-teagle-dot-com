@@ -132,13 +132,12 @@ html.share {
                 flex-flow: row wrap;
                 list-style-type: none;
                 justify-content: space-around;
-                gap: 10px;
-                margin: 15px;
-                margin-bottom: 25px;
+                margin: 10px 0;
                 padding: 0;
+                gap: 10px;
 
                 li {
-                    margin: 8px 0;
+                    margin-top: 5px;
                     a {
                         border: solid $color2 3px;
                         padding: 5px 15px 8px 15px;
@@ -157,22 +156,26 @@ html.share {
                 }
             }
             // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 margin: 0;
 
                 ul {
-                    justify-content: left;
+                    gap: 0;
                     margin: 0;
-                    margin-top: 15px;
-                    margin-bottom: 30px;
+                    margin-top: 5px;
 
                     li {
-                        margin: 4px 0;
+                        margin-top: 3px;
+                        margin: 7px;
+                        margin-left: 0;
 
                         a {
                             font-size: 11px;
                             padding: 3px 10px 5px 10px;
                         }
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        justify-content: left;
                     }
                 }
             }

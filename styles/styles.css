@@ -406,13 +406,12 @@ html.share main .share-categories ul {
   flex-flow: row wrap;
   list-style-type: none;
   justify-content: space-around;
-  gap: 10px;
-  margin: 15px;
-  margin-bottom: 25px;
+  margin: 10px 0;
   padding: 0;
+  gap: 10px;
 }
 html.share main .share-categories ul li {
-  margin: 8px 0;
+  margin-top: 5px;
 }
 html.share main .share-categories ul li a {
   border: solid #B57E9B 3px;
@@ -429,22 +428,28 @@ html.share main .share-categories ul li a:hover {
     border: solid #B57E9B 3px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   html.share main .share-categories {
     margin: 0;
   }
   html.share main .share-categories ul {
-    justify-content: left;
+    gap: 0;
     margin: 0;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 5px;
   }
   html.share main .share-categories ul li {
-    margin: 4px 0;
+    margin-top: 3px;
+    margin: 7px;
+    margin-left: 0;
   }
   html.share main .share-categories ul li a {
     font-size: 11px;
     padding: 3px 10px 5px 10px;
+  }
+}
+@media only screen and (max-width: 970px) and (max-width: 768px) {
+  html.share main .share-categories ul {
+    justify-content: left;
   }
 }
 html.share main .share-links {
