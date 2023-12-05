@@ -1,19 +1,13 @@
 {
-    "sites": {
+    "sites & socials": {
         "Dana Teagle dot com": {
             "link": "/",
             "description": "Web/software design & development portfolio"
         },
-        "Note Taken": {
-            "link": "/notes",
-            "description": "Local storage notes app"
+        "GitHub": {
+            "link": "/github",
+            "description": ""
         },
-        "The Pigeon Hole": {
-            "link": "/pigeon",
-            "description": "Photos of pigeons in cities around the world"
-        }
-    },
-    "socials": {
         "Instagram": {
             "link": "/instagram",
             "description": ""
@@ -22,8 +16,8 @@
             "link": "/bluesky",
             "description": ""
         },
-        "GitHub": {
-            "link": "/github",
+        "LinkedIn": {
+            "link": "/linkedin",
             "description": ""
         },
         "Spotify": {
@@ -36,14 +30,6 @@
         },
         "Goodreads": {
             "link": "/goodreads",
-            "description": ""
-        },
-        "Medium": {
-            "link": "/medium",
-            "description": ""
-        },
-        "LinkedIn": {
-            "link": "/linkedin",
             "description": ""
         }
     },
