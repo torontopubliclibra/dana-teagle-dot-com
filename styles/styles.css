@@ -322,12 +322,21 @@ html.share h2, html.share h3 {
   width: 85%;
   max-width: 850px;
   font-style: normal;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 0 5%;
   margin: 0;
-  padding: 0;
 }
 @media only screen and (max-width: 768px) {
   html.share h2, html.share h3 {
+    font-size: 17px;
+    padding: 0;
+  }
+}
+html.share h3 {
+  font-size: 18px;
+}
+@media only screen and (max-width: 768px) {
+  html.share h3 {
     font-size: 15px;
   }
 }
@@ -395,7 +404,7 @@ html.share main hr:first-of-type {
   margin-bottom: 5px;
 }
 html.share main hr:last-of-type {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 html.share main .share-categories {
   width: 85%;
@@ -411,7 +420,7 @@ html.share main .share-categories ul {
   gap: 10px;
 }
 html.share main .share-categories ul li {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 html.share main .share-categories ul li a {
   border: solid #B57E9B 3px;
@@ -439,7 +448,7 @@ html.share main .share-categories ul li a:hover {
   }
   html.share main .share-categories ul li {
     margin-top: 3px;
-    margin: 6px;
+    margin: 7px;
     margin-left: 0;
   }
   html.share main .share-categories ul li a {

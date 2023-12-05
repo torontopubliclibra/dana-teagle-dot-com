@@ -36,9 +36,19 @@ html.share {
         width: 85%;
         max-width: 850px;
         font-style: normal;
-        font-size: 18px;
+        font-size: 20px;
+        padding: 0 5%;
         margin: 0;
-        padding: 0;
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            font-size: 17px;
+            padding: 0;
+        }
+    }
+
+    h3 {
+        font-size: 18px;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
@@ -120,7 +130,7 @@ html.share {
         }
 
         hr:last-of-type {
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .share-categories {
@@ -137,7 +147,7 @@ html.share {
                 gap: 10px;
 
                 li {
-                    margin-top: 5px;
+                    margin-top: 10px;
                     a {
                         border: solid $color2 3px;
                         padding: 5px 15px 8px 15px;
@@ -166,7 +176,7 @@ html.share {
 
                     li {
                         margin-top: 3px;
-                        margin: 6px;
+                        margin: 7px;
                         margin-left: 0;
 
                         a {
