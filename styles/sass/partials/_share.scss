@@ -151,7 +151,7 @@ html.share {
                     a {
                         border: solid $color2 3px;
                         padding: 5px 15px 8px 15px;
-                        font-size: 12px;
+                        font-size: 14px;
                         color: $white;
                         text-decoration: none;
                         &:hover {
@@ -176,11 +176,11 @@ html.share {
 
                     li {
                         margin-top: 3px;
-                        margin: 7px;
+                        margin: 10px;
                         margin-left: 0;
 
                         a {
-                            padding: 3px 10px 5px 10px;
+                            padding: 5px 10px;
                         }
                     }
                     @media only screen and (max-width: $mobile) {
