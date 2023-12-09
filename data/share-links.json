@@ -4,20 +4,16 @@
             "link": "/",
             "description": "Web/software development portfolio"
         },
-        "GitHub": {
-            "link": "/github",
-            "description": ""
-        },
         "Instagram": {
             "link": "/instagram",
             "description": ""
         },
-        "Bluesky": {
-            "link": "/bluesky",
+        "X (Twitter)": {
+            "link": "/twitter",
             "description": ""
         },
-        "LinkedIn": {
-            "link": "/linkedin",
+        "Bluesky": {
+            "link": "/bluesky",
             "description": ""
         },
         "Spotify": {
@@ -45,10 +41,6 @@
         "No Tech for Apartheid petition": {
             "link": "https://www.notechforapartheid.com/",
             "description": "Petition to Amazon & Google to stop supporting the genocide of Palestinians in Gaza [Nov 2023]"
-        },
-        "House of Commons petition e-4661": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4661",
-            "description": "Petition to the Government of Canada to sanction the state of Israel for its continued ongoing violations of International law [closes Dec 9, 2023]"
         },
         "House of Commons petition e-4552": {
             "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4552",
@@ -88,6 +80,10 @@
         "Anti-Trans Legislative Risk Map": {
             "link": "https://celeste.lgbt/map",
             "description": "Resource tracking the risk levels of anti-trans legislation and policy in Canadian provinces [maintained by Celeste Trianon]"
+        },
+        "Transfeminine Science": {
+            "link": "https://transfemscience.org/",
+            "description": "A resource for original informational content on the subject of transfeminine hormone therapy"
         },
         "Justice Trans": {
             "link": "https://justicetrans.org/en/",
