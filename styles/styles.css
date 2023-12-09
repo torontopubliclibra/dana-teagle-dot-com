@@ -448,10 +448,11 @@ html.share main .share-categories ul li a:hover {
   }
   html.share main .share-categories ul li {
     margin: 5px;
-    margin-top: 12px;
+    margin-top: 10px;
     margin-left: 0;
   }
   html.share main .share-categories ul li a {
+    font-size: 12px;
     padding: 5px 10px;
   }
 }
