@@ -386,7 +386,7 @@ html.share header {
 }
 html.share header .portrait img {
   width: 175px;
-  border: 4px solid #f3e8e9;
+  border: 4px solid #B57E9B;
 }
 @media only screen and (max-width: 768px) {
   html.share header .portrait {
