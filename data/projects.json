@@ -2,18 +2,16 @@
     "True History Brewing": {
         "year": "2023",
         "tags": [
-            "React",
             "JavaScript",
-            "Remix",
-            "Hydrogen",
-            "Oxygen",
+            "React",
             "Shopify",
+            "Remix",
+            "Hydrogen/Oxygen",
             "Strapi",
             "SCSS"
         ],
         "description": [
-            "This is a website and online storefront I'm currently building for True History, a brewery and taproom in the west-end of Toronto, Ontario. The site is being built using React, Remix, Hydrogen, and Oxygen as a headless storefront for use with Shopify. The open-source headless CMS, Strapi, is also being used as a database.",
-            "I wireframed the project myself using Figma, and am in the development process at the moment. Please check back soon."
+            "This is a website and online storefront I'm currently building for True History, a brewery and taproom in the west-end of Toronto, Ontario. I wireframed the project myself using Figma, and am currently in the development process. Please check back soon."
         ],
         "code": "/thb/repo"
     },
@@ -26,8 +24,7 @@
             "SCSS"
         ],
         "description": [
-            "This is a local storage notes app that I built using Typescript and Angular.",
-            "Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side without being sent to a database, and remains secure in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file."
+            "This is a local storage notes app that I built in 2023. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -42,8 +39,8 @@
             "GeoJSON"
         ],
         "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built upon the open source Pytheas application. Queer Walk promotes awareness of the histories of the queer, trans, and intersex communities. It guides users through the selected tour length, and displays text and photos for each historic location.",
-            "I was the lead developer on the application, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built upon the open source Pytheas framework.",
+            "The application guides users through a selected tour length, and displays text and photos for each historic location. I was the lead developer on the application, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -57,8 +54,8 @@
             "CSS"
         ],
         "description": [
-            "Superhero Showdown is an online stats-based card game that I built with React, using characters from Marvel Comics.",
-            "When the game starts, a set of data objects stored in Firebase (each representing a character) are retrieved, shuffled, and divided into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Every round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. The game continues until one of the decks is empty.", 
+            "This is an online stats-based card game built using characters from Marvel Comics.",
+            "When the game starts, a set of data objects (each representing a character) are retrieved, shuffled, and divided into 2 decks of 10 cards each. Every round, you choose the statistic from your card that you believe to be larger than the other deck's, and the winner of the challenge gets both cards. The game continues until one of the players runs out of cards.", 
             "This game uses algorithms for card shuffling, and calculates scores by comparing values as you move through game play. I developed it in Oct and Nov 2022 during my time at Juno College."
         ],
         "site": "/superhero",
@@ -72,8 +69,8 @@
             "CSS"
         ],
         "description": [
-            "This is an app for viewing photos of pigeons in different cities around the world, built with jQuery using the Flickr API. The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the objects and displays that photo on the page.",
-            "I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
+            "This is an app for viewing photos of pigeons in different cities around the world.",
+            "The site retrieves data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the objects and displays that photo on the page. I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in Sept 2023."
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
@@ -98,7 +95,7 @@
             "JavaScript"
         ],
         "description": [
-            "This is a website for Body Stories Dance Education & Performance, a dance studio in Manitoulin, Ontario. I designed their logo and marketing materials, and built their website using Squarespace and custom JavaScript in 2022."
+            "This is a website for Body Stories Dance Education & Performance, a dance studio in Manitoulin, Ontario. I designed their logo, marketing materials, and website in 2021 and 2022."
         ],
         "site": "https://www.bodystoriesdance.com/"
     }
