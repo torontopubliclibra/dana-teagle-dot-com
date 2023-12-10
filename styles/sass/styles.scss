@@ -519,7 +519,7 @@ header {
                 padding: 10px 15px;
 
                 a.tag, span.tag {
-                    font-size: 14px;
+                    font-size: 15px;
                 }
 
                 a.tag:hover {
@@ -537,6 +537,10 @@ header {
                 @media only screen and (max-width: $tablet) {
                     margin: 0;
                     justify-content: left;
+
+                    a.tag, span.tag {
+                        font-size: 14px;
+                    }
                 }
             }
 

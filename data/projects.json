@@ -5,7 +5,6 @@
             "React",
             "JavaScript",
             "Remix",
-            "Figma",
             "Hydrogen",
             "Shopify",
             "Sanity",
@@ -89,5 +88,16 @@
         ],
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"
+    },
+    "Body Stories Dance": {
+        "year": "2022",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for Body Stories Dance Education & Performance, a dance studio in Manitoulin, Ontario. I designed their logo and marketing materials, and built their website using Squarespace and custom JavaScript in 2022."
+        ],
+        "site": "https://www.bodystoriesdance.com/"
     }
 }

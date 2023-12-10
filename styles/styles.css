@@ -941,10 +941,10 @@ h3 {
 }
 
 .projects-nav p {
-  font-size: 20px;
+  font-size: 18px;
 }
 .projects-nav li, .projects-nav li a {
-  font-size: 16px;
+  font-size: 15px;
   list-style-type: none;
   margin: 0;
 }
@@ -1503,7 +1503,7 @@ header .scroll-down img {
   padding: 10px 15px;
 }
 #projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
-  font-size: 14px;
+  font-size: 15px;
 }
 #projects .projects-container .project .tags a.tag:hover {
   cursor: pointer;
@@ -1518,6 +1518,9 @@ header .scroll-down img {
   #projects .projects-container .project .tags {
     margin: 0;
     justify-content: left;
+  }
+  #projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 970px) {
