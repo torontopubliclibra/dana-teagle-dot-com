@@ -385,7 +385,7 @@ html.share header {
   padding-bottom: 0;
 }
 html.share header .portrait img {
-  width: 175px;
+  width: 150px;
   border: 4px solid #B57E9B;
 }
 @media only screen and (max-width: 768px) {
@@ -394,7 +394,7 @@ html.share header .portrait img {
     max-width: 850px;
   }
   html.share header .portrait img {
-    width: 125px;
+    width: 100px;
   }
 }
 html.share main {
@@ -444,11 +444,10 @@ html.share main .share-categories ul li a:hover {
   html.share main .share-categories ul {
     gap: 0;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 8px;
   }
   html.share main .share-categories ul li {
-    margin: 5px;
-    margin-top: 10px;
+    margin: 10px;
     margin-left: 0;
   }
   html.share main .share-categories ul li a {
