@@ -4,11 +4,12 @@
         "tags": [
             "JavaScript",
             "React",
-            "Shopify",
             "Remix",
-            "Hydrogen/Oxygen",
+            "GraphQL",
+            "Hydrogen",
+            "Shopify",
             "Strapi",
-            "SCSS"
+            "SASS"
         ],
         "description": [
             "This is a website and online storefront for True History (a brewery and taproom in Toronto, Ontario), currently being developed as a React Remix site with a headless Shopify storefront, and launching in early 2024. Please check back soon."
@@ -18,13 +19,13 @@
     "Note Taken": {
         "year": "2023",
         "tags": [
-            "Angular",
             "TypeScript",
-            "Filesaver.js",
-            "SCSS"
+            "Angular",
+            "Filesaver",
+            "SASS"
         ],
         "description": [
-            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js)."
+            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver)."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -32,11 +33,13 @@
     "Queer Walk": {
         "year": "2023",
         "tags": [
-            "React",
             "TypeScript",
+            "React",
+            "Vite",
+            "Wouter",
             "Jotai",
-            "Emotion",
-            "GeoJSON"
+            "Leaflet",
+            "Emotion"
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and using the open-source Pytheas framework.",
@@ -48,8 +51,8 @@
     "Superhero Showdown": {
         "year": "2022",
         "tags": [
-            "React",
             "JavaScript",
+            "React",
             "Firebase",
             "CSS"
         ],
@@ -80,7 +83,7 @@
         "tags": [
             "HTML",
             "JavaScript",
-            "SCSS"
+            "SASS"
         ],
         "description": [
             "This is a website for Sydney Gautreau's editing & writing coaching business, originally built in 2022."
