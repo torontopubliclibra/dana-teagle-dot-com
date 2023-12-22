@@ -6,6 +6,7 @@ let app = {
         body: $("body"),
         about: $("#about"),
         nav: $("nav"),
+        projects: $("#projects"),
         mobileMenu: $(".mobile-menu"),
         scrollDownButton: $(".scroll-down"),
         scrollTopButton: $(".scroll-to-top"),
@@ -284,6 +285,8 @@ let app = {
                     button.addEventListener("click", () => app.functions.readMore(project, paragraph, button));
                 };
             });
+
+            app.functions.scroll("projects");
         },
 
         // read more function
