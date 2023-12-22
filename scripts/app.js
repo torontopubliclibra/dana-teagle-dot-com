@@ -161,6 +161,10 @@ let app = {
                         + `</li>`;
 
                     // otherwise create a link that displays the projects of that filter
+                    } else if (filter === "All") {
+                        return `<li><a onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" title="All projects">`
+                        + filterName
+                        + `</a></li>`;
                     } else {
                         return `<li><a onclick="app.functions.projectDisplay('${filter}')" title="${filter} projects">`
                         + filterName
@@ -215,7 +219,7 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<a onclick="app.functions.projectDisplay('All')" class="selected tag">#` + tag + `</a>`
+                        return `<a onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" class="selected tag">#` + tag + `</a>`
                     } else {
                         return `<a onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</a>`
                     }
@@ -286,6 +290,14 @@ let app = {
                 };
             });
 
+            if (app.projects.filter !== "All") {
+                app.functions.scroll("projects");
+            }
+        },
+
+        allProjectsClick: () => {
+            console.log("clicked");
+            app.functions.projectDisplay("All");
             app.functions.scroll("projects");
         },
 
