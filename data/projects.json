@@ -5,7 +5,6 @@
             "JavaScript",
             "React",
             "Remix",
-            "GraphQL",
             "Hydrogen",
             "Shopify",
             "Strapi",
@@ -21,11 +20,11 @@
         "tags": [
             "TypeScript",
             "Angular",
-            "Filesaver",
+            "Filesaver.js",
             "SASS"
         ],
         "description": [
-            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver)."
+            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js)."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -39,7 +38,8 @@
             "Wouter",
             "Jotai",
             "Leaflet",
-            "Emotion"
+            "Emotion",
+            "CSS"
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and using the open-source Pytheas framework.",
@@ -47,6 +47,20 @@
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
+    },
+    "The Pigeon Hole": {
+        "year": "2022",
+        "tags": [
+            "Jquery",
+            "HTML",
+            "CSS"
+        ],
+        "description": [
+            "This is an app for viewing photos of pigeons in different cities around the world built with jQuery and the Flickr API.",
+            "The site retrieves data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the images and displays it on the page. I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in 2023."
+        ],
+        "site": "/pigeon",
+        "code": "/pigeon/repo"
     },
     "Superhero Showdown": {
         "year": "2022",
@@ -64,25 +78,11 @@
         "site": "/superhero",
         "code": "/superhero/repo"
     },
-    "The Pigeon Hole": {
-        "year": "2022",
-        "tags": [
-            "HTML",
-            "Jquery",
-            "CSS"
-        ],
-        "description": [
-            "This is an app for viewing photos of pigeons in different cities around the world built with jQuery and the Flickr API.",
-            "The site retrieves data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the images and displays it on the page. I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in 2023."
-        ],
-        "site": "/pigeon",
-        "code": "/pigeon/repo"
-    },
     "Sydney Gautreau": {
         "year": "2022",
         "tags": [
-            "HTML",
             "JavaScript",
+            "HTML",
             "SASS"
         ],
         "description": [
@@ -90,16 +90,5 @@
         ],
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"
-    },
-    "Body Stories Dance": {
-        "year": "2022",
-        "tags": [
-            "Squarespace",
-            "JavaScript"
-        ],
-        "description": [
-            "This is a website for Body Stories Dance Education & Performance, a dance studio in Manitoulin, Ontario. I designed their logo, marketing materials, and website in 2021 and 2022."
-        ],
-        "site": "https://www.bodystoriesdance.com/"
     }
 }
