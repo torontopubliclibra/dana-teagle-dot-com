@@ -18,6 +18,6 @@ I'm currently in the early stages of developing a new permanent home for these r
 I originally built my portfolio page in Oct 2022. I redesigned and refactored the website in Aug and Sept 2023, and I continue to update and improve it periodically.
 
 ## Attributions
+- [jQuery v3.7.0](https://jquery.com/)
 - [RemixIcon](https://remixicon.com/)
 - [Source Code Pro typeface](https://fonts.google.com/specimen/Source+Code+Pro)
-- [jQuery v3.7.0](https://jquery.com/)
