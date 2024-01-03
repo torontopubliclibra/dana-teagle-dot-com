@@ -2,7 +2,7 @@
 @use 'variables' as *;
 @use 'animations';
 
-html.share {
+html.alt {
     body {
         background-color: $black;
     }
@@ -27,14 +27,14 @@ html.share {
 
     h1 {
         font-style: normal;
-        font-size: 36px;
+        font-size: 40px;
         margin: 15px;
         user-select: initial;
     }
 
     h2, h3 {
         width: 85%;
-        max-width: 850px;
+        max-width: 1000px;
         font-style: normal;
         font-size: 20px;
         padding: 0 5%;
@@ -56,7 +56,7 @@ html.share {
         }
     }
 
-    p.js-disabled-share {
+    p.js-disabled-alt {
         width: 65%;
         max-width: 850px;
         font-style: italic;
@@ -66,7 +66,7 @@ html.share {
         color: $black;
         border: solid 3px $black;
         opacity: 0;
-        animation: fade-in-share-error 0.75s ease-in 1.5s forwards;
+        animation: fade-in-alt-error 0.75s ease-in 1.5s forwards;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
@@ -85,7 +85,7 @@ html.share {
 
     main, header, footer {
         opacity: 0;
-        animation: fade-in-share 0.4s ease-in 0.2s forwards;
+        animation: fade-in-alt 0.4s ease-in 0.2s forwards;
     }
 
     main, header {
@@ -116,7 +116,7 @@ html.share {
                 max-width: 850px;
 
                 img {
-                    width: 100px;
+                    width: 125px;
                 }
             }
         }
@@ -133,7 +133,7 @@ html.share {
             margin-top: 20px;
         }
 
-        .share-categories {
+        .alt-categories {
             width: 85%;
             max-width: 900px;
 
@@ -202,7 +202,7 @@ html.share {
             }
         }
     
-        .share-links {
+        .alt-links {
             margin-bottom: 20px;
 
             // responsive to mobile
@@ -224,7 +224,7 @@ html.share {
                 }
             }
     
-            .share-link {
+            .alt-link {
                 background-color: $color1;
                 border: solid 3px $white;
                 min-width: 425px;

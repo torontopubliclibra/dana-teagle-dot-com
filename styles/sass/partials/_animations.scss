@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 // fade-in animation
-@keyframes fade-in-share {
+@keyframes fade-in-alt {
     0% {
         opacity: 0;
     };
@@ -11,7 +11,7 @@
 };
 
 // fade-in error animation
-@keyframes fade-in-share-error {
+@keyframes fade-in-alt-error {
     0% {
         opacity: 0;
         color: $black;

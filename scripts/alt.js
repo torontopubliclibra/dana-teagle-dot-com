@@ -1,19 +1,19 @@
-// share object
-let share = {
+// alt object
+let alt = {
 
-    // share categories element
-    shareCategories: $(".share-categories"),
+    // categories element
+    altCategories: $(".alt-categories"),
 
     // error message element
-    errorMessage: $(".js-disabled-share"),
+    errorMessage: $(".js-disabled-alt"),
 
-    // share links element
-    shareLinks: $(".share-links"),
+    // alt links element
+    altLinks: $(".alt-links"),
 
     // links data
     links: {},
 
-    // share functions
+    // alt functions
     functions: {
         
         // displaying the projects
@@ -21,23 +21,23 @@ let share = {
 
             let formattedLinks = [];
 
-            let linkCategories = [...Object.keys(share.links)].map((category) => {
+            let linkCategories = [...Object.keys(alt.links)].map((category) => {
                 return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}<img src="./assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`;
             });
 
-            if (share.links) {
-                share.errorMessage.html(``);
-                share.errorMessage.removeClass("js-disabled");
-                share.errorMessage.addClass("js-enabled");
+            if (alt.links) {
+                alt.errorMessage.html(``);
+                alt.errorMessage.removeClass("js-disabled");
+                alt.errorMessage.addClass("js-enabled");
             }
 
-            for (let category in share.links) {
+            for (let category in alt.links) {
 
                 let heading = `<h3 id=` + category.replace(/\s/g, "-") + `>${category}</h3>`
 
                 let categoryLinks = [heading];
 
-                share.links[category].forEach((link) => {
+                alt.links[category].forEach((link) => {
 
                     let title = `<span class="link-title"><p class="button-label">${link.title}</p><img src="./assets/icons/external-link.svg"  alt="external link icon"></span>`;
                     let href = `href="${link.link}"`;
@@ -48,7 +48,7 @@ let share = {
                     }
 
                     // stitch together all the html for the project
-                    categoryLinks.push(`<a class="button share-link"${href} target="_blank">${title}${description}</a>`)
+                    categoryLinks.push(`<a class="button alt-link"${href} target="_blank">${title}${description}</a>`)
 
                 })
 
@@ -57,21 +57,21 @@ let share = {
                 }));
             }
 
-            share.shareCategories.html(`<ul>` + linkCategories.reduce((accumulator, category) => {
+            alt.altCategories.html(`<ul>` + linkCategories.reduce((accumulator, category) => {
                 return accumulator + category;
             }) + `</ul>`);
 
-            share.shareLinks.html(formattedLinks.reduce((accumulator, category) => {
+            alt.altLinks.html(formattedLinks.reduce((accumulator, category) => {
                 return accumulator + `<br/>` + category;
             }));
         },
     },
     
-    // share initializion
+    // alt initializion
     init: () => {
 
         // fetch the projects from the json file and send the response
-        fetch('./data/share-links.json').then(response => response.json())
+        fetch('./data/alt-links.json').then(response => response.json())
             // then with the data
             .then((data) => {
 
@@ -104,17 +104,17 @@ let share = {
                 }
 
                 // save the projects array to the project data
-                share.links = links;
+                alt.links = links;
 
                 // display the projects on the page using the default filter
-                share.functions.linkDisplay();
+                alt.functions.linkDisplay();
             })
             // console log any promise errors
             .catch(error => console.log(error));
     },
 };
 
-// initialize the share
+// initialize the alt
 $(document).ready(() => {
-    share.init();
+    alt.init();
 });

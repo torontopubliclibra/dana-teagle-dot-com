@@ -230,7 +230,7 @@ html {
   overflow: hidden;
 }
 
-@keyframes fade-in-share {
+@keyframes fade-in-alt {
   0% {
     opacity: 0;
   }
@@ -238,7 +238,7 @@ html {
     opacity: 1;
   }
 }
-@keyframes fade-in-share-error {
+@keyframes fade-in-alt-error {
   0% {
     opacity: 0;
     color: #282b2c;
@@ -291,14 +291,14 @@ html {
     transform: translate(-50%, 0px);
   }
 }
-html.share body {
+html.alt body {
   background-color: #282b2c;
 }
-html.share #contact {
+html.alt #contact {
   background: none !important;
   padding: 0 !important;
 }
-html.share h1, html.share h2, html.share h3 {
+html.alt h1, html.alt h2, html.alt h3 {
   text-align: center;
   cursor: text;
   color: #f3e8e9;
@@ -306,41 +306,41 @@ html.share h1, html.share h2, html.share h3 {
   max-width: 850px;
 }
 @media only screen and (max-width: 768px) {
-  html.share h1, html.share h2, html.share h3 {
+  html.alt h1, html.alt h2, html.alt h3 {
     text-align: left;
   }
 }
-html.share h1 {
+html.alt h1 {
   font-style: normal;
-  font-size: 36px;
+  font-size: 40px;
   margin: 15px;
   -webkit-user-select: initial;
      -moz-user-select: initial;
           user-select: initial;
 }
-html.share h2, html.share h3 {
+html.alt h2, html.alt h3 {
   width: 85%;
-  max-width: 850px;
+  max-width: 1000px;
   font-style: normal;
   font-size: 20px;
   padding: 0 5%;
   margin: 0;
 }
 @media only screen and (max-width: 768px) {
-  html.share h2, html.share h3 {
+  html.alt h2, html.alt h3 {
     font-size: 17px;
     padding: 0;
   }
 }
-html.share h3 {
+html.alt h3 {
   font-size: 18px;
 }
 @media only screen and (max-width: 768px) {
-  html.share h3 {
+  html.alt h3 {
     font-size: 15px;
   }
 }
-html.share p.js-disabled-share {
+html.alt p.js-disabled-alt {
   width: 65%;
   max-width: 850px;
   font-style: italic;
@@ -350,32 +350,32 @@ html.share p.js-disabled-share {
   color: #282b2c;
   border: solid 3px #282b2c;
   opacity: 0;
-  animation: fade-in-share-error 0.75s ease-in 1.5s forwards;
+  animation: fade-in-alt-error 0.75s ease-in 1.5s forwards;
 }
 @media only screen and (max-width: 768px) {
-  html.share p.js-disabled-share {
+  html.alt p.js-disabled-alt {
     text-align: left;
     width: 85%;
     padding: 30px 20px;
   }
 }
-html.share hr {
+html.alt hr {
   width: 90%;
   max-width: 950px;
   margin: 20px 0;
   border: 1.5px solid #7a91b1;
 }
-html.share main, html.share header, html.share footer {
+html.alt main, html.alt header, html.alt footer {
   opacity: 0;
-  animation: fade-in-share 0.4s ease-in 0.2s forwards;
+  animation: fade-in-alt 0.4s ease-in 0.2s forwards;
 }
-html.share main, html.share header {
+html.alt main, html.alt header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-html.share header {
+html.alt header {
   position: initial;
   min-height: auto;
   height: auto;
@@ -384,33 +384,33 @@ html.share header {
   padding: 30px 0;
   padding-bottom: 0;
 }
-html.share header .portrait img {
+html.alt header .portrait img {
   width: 150px;
   border: 3px solid #f3e8e9;
 }
 @media only screen and (max-width: 768px) {
-  html.share header .portrait {
+  html.alt header .portrait {
     width: 85%;
     max-width: 850px;
   }
-  html.share header .portrait img {
-    width: 100px;
+  html.alt header .portrait img {
+    width: 125px;
   }
 }
-html.share main {
+html.alt main {
   margin: 0 auto;
 }
-html.share main hr:first-of-type {
+html.alt main hr:first-of-type {
   margin-bottom: 5px;
 }
-html.share main hr:last-of-type {
+html.alt main hr:last-of-type {
   margin-top: 20px;
 }
-html.share main .share-categories {
+html.alt main .alt-categories {
   width: 85%;
   max-width: 900px;
 }
-html.share main .share-categories ul {
+html.alt main .alt-categories ul {
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
@@ -419,7 +419,7 @@ html.share main .share-categories ul {
   padding: 0;
   gap: 10px;
 }
-html.share main .share-categories ul li a {
+html.alt main .alt-categories ul li a {
   display: flex;
   align-items: center;
   border: solid #B57E9B 3px;
@@ -428,68 +428,68 @@ html.share main .share-categories ul li a {
   color: #f3e8e9;
   text-decoration: none;
 }
-html.share main .share-categories ul li a:hover {
+html.alt main .alt-categories ul li a:hover {
   border: solid #84A59D 3px;
 }
 @media only screen and (max-width: 768px) {
-  html.share main .share-categories ul li a:hover {
+  html.alt main .alt-categories ul li a:hover {
     border: solid #B57E9B 3px;
   }
 }
-html.share main .share-categories ul li a img {
+html.alt main .alt-categories ul li a img {
   width: 16px;
   margin-left: 5px;
   padding-top: 2px;
   filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
 }
 @media only screen and (max-width: 970px) {
-  html.share main .share-categories {
+  html.alt main .alt-categories {
     margin: 0;
   }
-  html.share main .share-categories ul {
+  html.alt main .alt-categories ul {
     flex-flow: column;
     gap: 0;
     margin: 0;
     margin-top: 8px;
   }
-  html.share main .share-categories ul li {
+  html.alt main .alt-categories ul li {
     margin: 5px 0;
   }
-  html.share main .share-categories ul li a {
+  html.alt main .alt-categories ul li a {
     justify-content: space-between;
     padding: 5px 15px;
   }
-  html.share main .share-categories ul li a img {
+  html.alt main .alt-categories ul li a img {
     margin-left: 10px;
   }
 }
 @media only screen and (max-width: 970px) and (max-width: 768px) {
-  html.share main .share-categories ul {
+  html.alt main .alt-categories ul {
     justify-content: left;
   }
 }
-html.share main .share-links {
+html.alt main .alt-links {
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
-  html.share main .share-links {
+  html.alt main .alt-links {
     margin-bottom: 15px;
   }
 }
-html.share main .share-links h3 {
+html.alt main .alt-links h3 {
   text-align: center;
   width: auto;
   margin-bottom: 10px;
 }
 @media only screen and (max-width: 768px) {
-  html.share main .share-links h3 {
+  html.alt main .alt-links h3 {
     max-width: 90%;
     text-align: left;
     margin-right: auto;
     margin-left: auto;
   }
 }
-html.share main .share-links .share-link {
+html.alt main .alt-links .alt-link {
   background-color: #84A59D;
   border: solid 3px #f3e8e9;
   min-width: 425px;
@@ -508,10 +508,10 @@ html.share main .share-links .share-link {
   margin: 5px;
   cursor: pointer;
 }
-html.share main .share-links .share-link:nth-of-type(even) {
+html.alt main .alt-links .alt-link:nth-of-type(even) {
   background-color: #7a91b1;
 }
-html.share main .share-links .share-link .link-title {
+html.alt main .alt-links .alt-link .link-title {
   display: flex;
   gap: 10px;
   font-size: 16px;
@@ -520,43 +520,43 @@ html.share main .share-links .share-link .link-title {
   color: #282b2c;
   min-width: 100%;
 }
-html.share main .share-links .share-link .link-title p {
+html.alt main .alt-links .alt-link .link-title p {
   width: calc(100% - 15px);
 }
-html.share main .share-links .share-link .link-title img {
+html.alt main .alt-links .alt-link .link-title img {
   width: 18px;
 }
-html.share main .share-links .share-link .link-title i {
+html.alt main .alt-links .alt-link .link-title i {
   font-size: 14px;
   display: flex;
   align-items: center;
   min-height: 15px;
   width: 10px;
 }
-html.share main .share-links .share-link .button-description {
+html.alt main .alt-links .alt-link .button-description {
   min-width: 100%;
   font-size: 12px;
   font-style: normal;
   text-align: left;
 }
-html.share main .share-links .share-link hr {
+html.alt main .alt-links .alt-link hr {
   border: solid 1px #f3e8e9;
   width: 100%;
   margin: 0;
 }
-html.share main .share-links .share-link:hover {
+html.alt main .alt-links .alt-link:hover {
   background: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
-  html.share main .share-links .share-link:hover {
+  html.alt main .alt-links .alt-link:hover {
     background: #84A59D;
   }
-  html.share main .share-links .share-link:hover:nth-of-type(even) {
+  html.alt main .alt-links .alt-link:hover:nth-of-type(even) {
     background-color: #7a91b1;
   }
 }
 @media only screen and (max-width: 768px) {
-  html.share main .share-links .share-link {
+  html.alt main .alt-links .alt-link {
     min-width: 85%;
     max-width: 85%;
     margin-left: auto;
@@ -564,40 +564,40 @@ html.share main .share-links .share-link:hover {
   }
 }
 @media only screen and (max-width: 768px) {
-  html.share main .share-links {
+  html.alt main .alt-links {
     min-width: 85%;
   }
 }
-html.share footer {
+html.alt footer {
   padding-top: 20px;
   padding-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
-  html.share footer {
+  html.alt footer {
     padding-top: 10px;
     padding-bottom: 30px;
   }
 }
-html.share footer p.credit, html.share footer a {
+html.alt footer p.credit, html.alt footer a {
   width: 85%;
   max-width: 850px;
   margin: 0 auto;
   color: #f3e8e9;
   font-size: 14px;
 }
-html.share footer p.credit .alt, html.share footer a .alt {
+html.alt footer p.credit .alt, html.alt footer a .alt {
   color: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
-  html.share footer p.credit, html.share footer a {
+  html.alt footer p.credit, html.alt footer a {
     text-align: left;
   }
 }
-html.share footer a:hover {
+html.alt footer a:hover {
   color: #7a91b1;
 }
 @media only screen and (max-width: 768px) {
-  html.share footer a:hover {
+  html.alt footer a:hover {
     color: #f3e8e9;
   }
 }
@@ -658,33 +658,33 @@ html.trans-id main {
   border-top: none;
   border-bottom: none;
 }
-html.trans-id main .share-links {
+html.trans-id main .alt-links {
   margin-bottom: 0;
 }
-html.trans-id main .share-link {
+html.trans-id main .alt-link {
   background-color: rgba(181, 126, 155, 0.5) !important;
   border-color: #282b2c !important;
   margin: 10px !important;
 }
-html.trans-id main .share-link hr {
+html.trans-id main .alt-link hr {
   border-color: #282b2c !important;
 }
-html.trans-id main .share-link:nth-of-type(even) {
+html.trans-id main .alt-link:nth-of-type(even) {
   background-color: rgba(91, 150, 205, 0.5) !important;
 }
-html.trans-id main .share-link:hover {
+html.trans-id main .alt-link:hover {
   background-color: rgba(132, 165, 157, 0.5) !important;
 }
 @media only screen and (max-width: 768px) {
-  html.trans-id main .share-link:hover {
+  html.trans-id main .alt-link:hover {
     background-color: rgba(181, 126, 155, 0.5) !important;
   }
-  html.trans-id main .share-link:hover:nth-of-type(even) {
+  html.trans-id main .alt-link:hover:nth-of-type(even) {
     background-color: rgba(91, 150, 205, 0.5) !important;
   }
 }
 @media only screen and (max-width: 768px) {
-  html.trans-id main .share-link {
+  html.trans-id main .alt-link {
     min-width: 92% !important;
     max-width: 92% !important;
     margin-left: auto !important;
