@@ -8,7 +8,7 @@
             "link": "/instagram",
             "description": ""
         },
-        "X (Twitter)": {
+        "Twitter": {
             "link": "/twitter",
             "description": ""
         },
@@ -31,6 +31,36 @@
         "Goodreads": {
             "link": "/goodreads",
             "description": ""
+        }
+    },
+        "direct actions": {
+        "No Homeless Evictions petition": {
+            "link": "https://openletter.earth/no-homeless-evictions-1f357736/",
+            "description": "Petition to Toronto Mayor Olivia Chow to place a full moratorium on evictions of unhoused people [sponsored by Voices for Unhoused Liberation, Nov 2023]"
+        },
+        "Toronto Community Defence Fund for Palestinian organizing": {
+            "link": "https://actionnetwork.org/fundraising/community-defence-fund-for-palestinian-activists/",
+            "description": "Fund for activists in Toronto working for Palestinian justice, to support with legal fees and other expenses [sponsored by Showing Up for Racial Justice (SURJ) Toronto]"
+        },
+        "National Network of Abortion Funds": {
+            "link": "https://abortionfunds.org/",
+            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
+        },
+        "House of Commons petition e-4731": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4731",
+            "description": "Petition to the Government of Canada to immediately create direct pathways for emergency travel of Palestinians to Canada [closes Jan 14, 2024]"
+        },
+        "House of Commons petition e-4667": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4667",
+            "description": "Petition to the Government of Canada to budget the necessary funds for the Canada Disability Benefit into the federal expenditures [closes Feb 1, 2024]"
+        },
+        "House of Commons petition e-4745": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4745",
+            "description": "Petition to the Government of Canada to impose a two-way embargo on arms between Canada and Israel [closes Feb 19, 2024]"
+        },
+        "House of Commons petition e-4666": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
+            "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
         }
     },
     "links & resources": {
@@ -63,36 +93,6 @@
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
         }
     },
-    "direct actions": {
-        "No Homeless Evictions petition": {
-            "link": "https://openletter.earth/no-homeless-evictions-1f357736/",
-            "description": "Petition to Toronto Mayor Olivia Chow to place a full moratorium on evictions of unhoused people [sponsored by Voices for Unhoused Liberation, Nov 2023]"
-        },
-        "Toronto Community Defence Fund for Palestinian organizing": {
-            "link": "https://actionnetwork.org/fundraising/community-defence-fund-for-palestinian-activists/",
-            "description": "Fund for activists in Toronto working for Palestinian justice, to support with legal fees and other expenses [sponsored by Showing Up for Racial Justice (SURJ) Toronto]"
-        },
-        "National Network of Abortion Funds": {
-            "link": "https://abortionfunds.org/",
-            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        },
-        "House of Commons petition e-4731": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4731",
-            "description": "Petition to the Government of Canada to immediately create direct pathways for emergency travel of Palestinians to Canada [closes Jan 14, 2024]"
-        },
-        "House of Commons petition e-4667": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4667",
-            "description": "Petition to the Government of Canada to budget the necessary funds for the Canada Disability Benefit into the federal expenditures [closes Feb 1, 2024]"
-        },
-        "House of Commons petition e-4745": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4745",
-            "description": "Petition to the Government of Canada to impose a two-way embargo on arms between Canada and Israel [closes Feb 19, 2024]"
-        },
-        "House of Commons petition e-4666": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
-            "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
-        }
-    },
     "contact & payments": {
         "Discord": {
             "link": "/discord",
@@ -102,10 +102,6 @@
             "link": "mailto:dana.r.teagle@gmail.com",
             "description": "For personal & business correspondence"
         },
-        "PGP public key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "OpenPGP key for encrypted communication"
-        },
         "Paypal": {
             "link": "/paypal",
             "description": "For personal & business payments"
@@ -113,6 +109,10 @@
         "Kofi": {
             "link": "/kofi",
             "description": "For supporting me & my work"
+        },
+        "PGP public key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "OpenPGP key for encrypted communications"
         }
     }
 }
