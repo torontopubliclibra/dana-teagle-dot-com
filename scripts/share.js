@@ -22,7 +22,7 @@ let share = {
             let formattedLinks = [];
 
             let linkCategories = [...Object.keys(share.links)].map((category) => {
-                return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}</a></li>`;
+                return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}<img src="./assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`;
             });
 
             if (share.links) {

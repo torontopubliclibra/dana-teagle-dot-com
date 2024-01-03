@@ -147,10 +147,11 @@ html.share {
                 gap: 10px;
 
                 li {
-                    margin-top: 7px;
                     a {
+                        display: flex;
+                        align-items: center;
                         border: solid $color2 3px;
-                        padding: 5px 15px 8px 15px;
+                        padding: 5px 10px 8px 15px;
                         font-size: 14px;
                         color: $white;
                         text-decoration: none;
@@ -162,6 +163,13 @@ html.share {
                                 border: solid $color2 3px;
                             }
                         }
+
+                        img {
+                            width: 16px;
+                            margin-left: 5px;
+                            padding-top: 2px;
+                            filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
+                        }
                     }
                 }
             }
@@ -170,17 +178,21 @@ html.share {
                 margin: 0;
 
                 ul {
+                    flex-flow: column;
                     gap: 0;
                     margin: 0;
                     margin-top: 8px;
 
                     li {
-                        margin: 10px;
-                        margin-left: 0;
+                        margin: 5px 0;
 
                         a {
-                            font-size: 12px;
-                            padding: 5px 10px;
+                            justify-content: space-between;
+                            padding: 5px 15px;
+
+                            img {
+                                margin-left: 10px;
+                            }
                         }
                     }
                     @media only screen and (max-width: $mobile) {
