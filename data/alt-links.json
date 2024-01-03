@@ -8,16 +8,16 @@
             "link": "/instagram",
             "description": ""
         },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": ""
-        },
         "X (Twitter)": {
             "link": "/twitter",
             "description": ""
         },
         "Bluesky": {
             "link": "/bluesky",
+            "description": ""
+        },
+        "Tumblr": {
+            "link": "/tumblr",
             "description": ""
         },
         "Spotify": {
@@ -75,10 +75,6 @@
         "National Network of Abortion Funds": {
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        },
-        "No Tech for Apartheid petition": {
-            "link": "https://www.notechforapartheid.com/",
-            "description": "Petition to Amazon & Google to stop supporting the genocide of Palestinians in Gaza [Nov 2023]"
         },
         "House of Commons petition e-4731": {
             "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4731",
