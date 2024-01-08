@@ -209,13 +209,14 @@ let app = {
                 let formattedProject = {
                     heading: "",
                     description: "",
+                    image: "",
                     tags: "",
                     site: "",
                     code: "",
                 };
 
                 // format the project heading
-                formattedProject.heading = `<h3>` + project.title + `</h3>`
+                formattedProject.heading = `<h3>${project.title} (${project.year})</h3>`
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
@@ -227,6 +228,15 @@ let app = {
 
                 formattedProject.tags = `<div class="tags">` + formattedTags.reduce((accumulator, tag) => {
                     return accumulator + tag}) + `</div>`;
+                
+                if (project.image) {
+                    console.log(project.image);
+                    formattedProject.image = `<img src="`
+                    + project.image
+                    + `" class="project-image" alt="`
+                    + project.title
+                    + ` screenshot">`
+                }
 
                 // if the project description exists
                 if (project.description.length > 0) {
@@ -244,6 +254,7 @@ let app = {
                         + project.title
                         + ` project description">Description<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
                         + formattedParagraph
+                        + formattedProject.image
                         + `</p>`
                 }
 
@@ -361,6 +372,7 @@ let app = {
                     let project = {
                         "title": object,
                         "year": "",
+                        "image": "",
                         "tags": [],
                         "description": [],
                         "site": "",

@@ -352,6 +352,7 @@ header {
                 border: solid $color3 4px;
                 width: 225px;
                 height: 225px;
+                cursor: help;
             }
 
             .portrait-caption {
@@ -489,7 +490,7 @@ header {
     .projects-container {
         margin: 0 auto;
         padding-bottom: 20px;
-        @include flex(row, 10px, center);
+        @include flex(row, 20px, center);
         max-width: 100%;
 
         // responsive to tablet
@@ -504,7 +505,7 @@ header {
             margin: 0;
             height: 100%;
             width: calc(50% - 5px);
-            max-width: 360px;
+            max-width: 500px;
 
             .tags {
                 min-width: 100%;
@@ -615,6 +616,12 @@ header {
                         padding: 15px;
                         opacity: 1;
                         transition: display 0.6s, max-height 0.6s, opacity 0.75s;
+
+                        .project-image {
+                            max-width: 100%;
+                            border: solid 4px $color3;
+                            margin-top: 15px;
+                        }
                     }
                 }
             }

@@ -1,13 +1,10 @@
 {
     "True History Brewing": {
-        "year": "2023",
+        "year": "2024",
         "tags": [
             "JavaScript",
             "React",
             "Remix",
-            "Hydrogen",
-            "Shopify",
-            "Strapi",
             "SASS"
         ],
         "description": [
@@ -20,7 +17,6 @@
         "tags": [
             "TypeScript",
             "Angular",
-            "Filesaver.js",
             "SASS"
         ],
         "description": [
@@ -35,10 +31,6 @@
             "TypeScript",
             "React",
             "Vite",
-            "Wouter",
-            "Jotai",
-            "Leaflet",
-            "Emotion",
             "CSS"
         ],
         "description": [
@@ -67,7 +59,6 @@
         "tags": [
             "JavaScript",
             "React",
-            "Firebase",
             "CSS"
         ],
         "description": [
