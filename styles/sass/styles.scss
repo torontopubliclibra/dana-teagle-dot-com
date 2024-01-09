@@ -332,8 +332,8 @@ header {
         
         hr {
             border-color: $color2;
-            margin: 20px auto;
-            width: 90%;
+            margin: 20px 0;
+            width: 95%;
         }
 
         .portrait {
@@ -348,7 +348,6 @@ header {
                 border: solid $color3 4px;
                 width: 175px;
                 height: 175px;
-                cursor: help;
             }
 
             .portrait-caption {
@@ -373,7 +372,8 @@ header {
                 }
 
                 .portrait-caption {
-                    margin-top: 20px;
+                    margin-top: 0;
+                    font-size: 14px;
                 }
 
             }
@@ -387,7 +387,6 @@ header {
 
                 .portrait-caption {
                     width: 100%;
-                    font-size: 14px;
                     text-align: left;
                     margin: 0;
                     margin-top: 15px;
@@ -412,7 +411,7 @@ header {
             padding: 20px;
 
             hr {
-                width: 90%;
+                width: 85%;
                 margin: 0;
             }
 
