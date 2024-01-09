@@ -353,9 +353,13 @@ header {
             .portrait-caption {
                 font-style: italic;
                 margin-left: 30px;
+                line-height: 30px;
 
                 .item {
                     font-style: normal;
+                    margin: 4px 0;
+                    background-color: rgba($color3, 0.5);
+                    padding: 1px 10px;
                 }
             }
     
@@ -374,6 +378,11 @@ header {
                 .portrait-caption {
                     margin-top: 0;
                     font-size: 14px;
+                    line-height: 25px;
+
+                    .item {
+                        padding: 0 8px;
+                    }
                 }
 
             }
