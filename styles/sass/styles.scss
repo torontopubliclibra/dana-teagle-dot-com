@@ -300,12 +300,6 @@ header {
             flex-direction: column;
         }
 
-        hr {
-            border-color: $color3;
-            margin: 0;
-            margin-bottom: 15px;
-        }
-
         h3 {
             font-size: 20px;
             text-align: left;
@@ -329,45 +323,48 @@ header {
 
     // content container
     .about-content {
-        @include flex(row, 20px);
+        @include flex(column, 20px);
         @include borderedBox(rgba($white, 0.8), $color2);
         max-width: 100%;
         width: 95%;
-        padding: 20px;
+        padding: 50px;
         margin: 0 auto 20px auto;
+        
+        hr {
+            border-color: $color2;
+            margin: 20px auto;
+            width: 90%;
+        }
 
         .portrait {
             display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            margin: 5px;
-            max-width: 225px;
+            flex-flow: row wrap;
+            justify-content: left;
+            align-items: center;
+            width: 100%;
             min-height: 100%;
-
-            hr {
-                display: none;
-            }
 
             img {
                 border: solid $color3 4px;
-                width: 225px;
-                height: 225px;
+                width: 175px;
+                height: 175px;
                 cursor: help;
             }
 
             .portrait-caption {
                 font-style: italic;
-                margin-top: 10px;
-                font-size: 13px;
+                margin-left: 30px;
+
+                .item {
+                    font-style: normal;
+                }
             }
     
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
                 order: -1;
-                max-width: unset;
-                width: 95%;
-                margin: 0 auto;
-                margin-top: 15px;
+                width: 100%;
+                margin: 0;
 
                 img {
                     width: 175px;
@@ -379,60 +376,28 @@ header {
                     margin-top: 20px;
                 }
 
-                hr {
-                    border-color: $color2;
-                    display: block;
-                    margin-top: 20px;
-                    margin-bottom: 0;
-                }
-
             }
 
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                flex-direction: row;
+                flex-direction: column;
                 width: 100%;
                 margin: 0;
-                justify-content: flex-start;
-
-                hr {
-                    margin-top: 25px;
-                }
+                align-items: flex-start;
 
                 .portrait-caption {
-                    width: 55%;
-                    align-self: flex-end;
+                    width: 100%;
+                    font-size: 14px;
                     text-align: left;
-                    margin-top: 0;
-                    margin-left: 15px;
+                    margin: 0;
+                    margin-top: 15px;
                 }
             }
         }
 
         .bio-1 {
-
-            @include flex(column, 20px, center);
-            max-width: calc(100% - 275px);
-            min-height: 275px;
-            margin: 20px;
-            margin-right: 0;
-
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
-                min-height: initial;
-                max-width: 100%;
-                margin: 20px;
-                margin-top: 0;
-            }
-
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
-                margin: 0;
-            }
-        }
-
-        .bio-2 {
-            margin: 20px;
+            width: 100%;
+            margin: 0;
             @include flex(column, 20px, center);
 
             // responsive to mobile
@@ -444,9 +409,11 @@ header {
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             width: 85%;
+            padding: 20px;
 
             hr {
-                width: 100%;
+                width: 90%;
+                margin: 0;
             }
 
         }
