@@ -8,7 +8,8 @@
             "SASS"
         ],
         "description": [
-            "This is a website and online storefront for True History (a brewery and taproom in Toronto, Ontario), currently being developed as a React Remix site with a headless Shopify storefront, and launching in early 2024. Please check back soon."
+            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. It will be launching in late January 2024.",
+            "The site is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc)."
         ],
         "code": "/thb/repo"
     },
