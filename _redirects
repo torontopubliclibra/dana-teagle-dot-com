@@ -1,13 +1,18 @@
 # Project sites and repos
 /repo https://github.com/torontopubliclibra/dana-teagle-dot-com/
-/thb https://true-history-brewing-13a85932b5a02fb2f916.o2.myshopify.dev/
-/thb/repo https://github.com/torontopubliclibra/true-history-brewing
+
 /notes https://note-taken-local.netlify.app/
 /notes/repo https://github.com/torontopubliclibra/note-taken/
+
 /pigeon https://the-pigeon-hole.netlify.app/
 /pigeon/repo https://github.com/torontopubliclibra/the-pigeon-hole/
+
 /superhero https://superhero-showdown.netlify.app/
 /superhero/repo https://github.com/torontopubliclibra/superhero-showdown/
+
+/thb https://true-history-brewing-13a85932b5a02fb2f916.o2.myshopify.dev/
+/thb/db https://thb-data-3vd2n.ondigitalocean.app/admin/
+/thb/repo https://github.com/torontopubliclibra/true-history-brewing/
 
 # Websites and socials
 /discord https://discordapp.com/users/825447165915955200/
@@ -19,6 +24,6 @@
 /letterboxd https://letterboxd.com/torontolibra/
 /goodreads https://www.goodreads.com/user/show/168158850-dana-teagle/
 /instagram https://instagram.com/torontopubliclibra/
-/twitter https://x.com/rustbecomesher
+/twitter https://x.com/rustbecomesher/
 /bluesky https://bsky.app/profile/torontopubliclibra.bsky.social/
 /tumblr https://torontopubliclibra.tumblr.com/
