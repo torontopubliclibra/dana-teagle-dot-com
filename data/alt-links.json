@@ -4,6 +4,22 @@
             "link": "/",
             "description": "Web/software development portfolio"
         },
+        "Spotify": {
+            "link": "/spotify",
+            "description": ""
+        },
+        "Letterboxd": {
+            "link": "/letterboxd",
+            "description": ""
+        },
+        "Goodreads": {
+            "link": "/goodreads",
+            "description": ""
+        },
+        "Github": {
+            "link": "/github",
+            "description": ""
+        },
         "Instagram": {
             "link": "/instagram",
             "description": ""
@@ -19,36 +35,6 @@
         "Tumblr": {
             "link": "/tumblr",
             "description": ""
-        },
-        "Spotify": {
-            "link": "/spotify",
-            "description": ""
-        },
-        "Letterboxd": {
-            "link": "/letterboxd",
-            "description": ""
-        },
-        "Goodreads": {
-            "link": "/goodreads",
-            "description": ""
-        }
-    },
-    "direct actions": {
-        "House of Commons petition e-4667": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4667",
-            "description": "Petition to the Government of Canada to budget the necessary funds for the Canada Disability Benefit into the federal expenditures [closes Feb 1, 2024]"
-        },
-        "House of Commons petition e-4745": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4745",
-            "description": "Petition to the Government of Canada to impose a two-way embargo on arms between Canada and Israel [closes Feb 19, 2024]"
-        },
-        "House of Commons petition e-4666": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
-            "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
-        },
-        "National Network of Abortion Funds": {
-            "link": "https://abortionfunds.org/",
-            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         }
     },
     "links & resources": {
@@ -79,6 +65,24 @@
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
+        }
+    },
+    "direct actions": {
+        "House of Commons petition e-4667": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4667",
+            "description": "Petition to the Government of Canada to budget the necessary funds for the Canada Disability Benefit into the federal expenditures [closes Feb 1, 2024]"
+        },
+        "House of Commons petition e-4745": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4745",
+            "description": "Petition to the Government of Canada to impose a two-way embargo on arms between Canada and Israel [closes Feb 19, 2024]"
+        },
+        "House of Commons petition e-4666": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
+            "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
+        },
+        "National Network of Abortion Funds": {
+            "link": "https://abortionfunds.org/",
+            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         }
     },
     "contact & payments": {

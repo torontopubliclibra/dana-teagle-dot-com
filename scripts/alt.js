@@ -31,6 +31,8 @@ let alt = {
                 alt.errorMessage.addClass("js-enabled");
             }
 
+            let categoryTag = "category-1";
+
             for (let category in alt.links) {
 
                 let heading = `<h3 id=` + category.replace(/\s/g, "-") + `>${category}</h3>`
@@ -48,13 +50,19 @@ let alt = {
                     }
 
                     // stitch together all the html for the project
-                    categoryLinks.push(`<a class="button alt-link"${href} target="_blank">${title}${description}</a>`)
+                    categoryLinks.push(`<a class="button alt-link ${categoryTag}"${href} target="_blank">${title}${description}</a>`)
 
                 })
 
                 formattedLinks.push(categoryLinks.reduce((accumulator, link) => {
                     return accumulator + link;
                 }));
+
+                if (categoryTag == "category-1") {
+                    categoryTag = "category-2";
+                } else {
+                    categoryTag = "category-1";
+                }
             }
 
             alt.altCategories.html(`<ul>` + linkCategories.reduce((accumulator, category) => {

@@ -79,7 +79,7 @@ html.alt {
     hr {
         width: 90%;
         max-width: 950px;
-        margin: 20px 0;
+        margin: 0;
         border: 1.5px solid $color3;
     }
 
@@ -103,34 +103,42 @@ html.alt {
         margin: 0;
         padding: 30px 0;
         padding-bottom: 0;
-
-        .portrait img {
-            width: 150px;
-            border: 3px solid $white;
-        }
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            .portrait {
-                width: 85%;
-                max-width: 850px;
-
-                img {
-                    width: 125px;
-                }
-            }
-        }
     }
 
     main {
         margin: 0 auto;
 
         hr:first-of-type {
-            margin-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        hr:nth-of-type(2) {
+            margin-top: 10px;
+            margin-bottom: 40px;
         }
 
         hr:last-of-type {
-            margin-top: 20px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            hr:first-of-type {
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+    
+            hr:nth-of-type(2) {
+                margin-top: 18px;
+                margin-bottom: 30px;
+            }
+    
+            hr:last-of-type {
+                margin-top: 30px;
+                // margin-bottom: 15px;
+            }
         }
 
         .alt-categories {
@@ -234,10 +242,6 @@ html.alt {
                 width: auto;
                 margin: 5px;
                 cursor: pointer;
-    
-                &:nth-of-type(even) {
-                    background-color: $color3;
-                }
               
                 .link-title {
                     display: flex;
@@ -277,9 +281,6 @@ html.alt {
                     // responsive to mobile
                     @media only screen and (max-width: $mobile) {
                         background: $color1;
-                        &:nth-of-type(even) {
-                            background-color: $color3;
-                        }
                     }
                 }
     
