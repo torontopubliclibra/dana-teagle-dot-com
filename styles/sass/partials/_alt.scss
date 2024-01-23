@@ -281,9 +281,6 @@ html.alt {
                     // responsive to mobile
                     @media only screen and (max-width: $mobile) {
                         background: $color1;
-                        &:nth-of-type(even) {
-                            background-color: $color3;
-                        }
                     }
                 }
     

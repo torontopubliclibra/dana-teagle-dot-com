@@ -554,9 +554,6 @@ html.alt main .alt-links .alt-link:hover {
   html.alt main .alt-links .alt-link:hover {
     background: #84A59D;
   }
-  html.alt main .alt-links .alt-link:hover:nth-of-type(even) {
-    background-color: #7a91b1;
-  }
 }
 @media only screen and (max-width: 768px) {
   html.alt main .alt-links .alt-link {
