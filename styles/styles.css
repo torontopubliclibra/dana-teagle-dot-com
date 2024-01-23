@@ -362,7 +362,7 @@ html.alt p.js-disabled-alt {
 html.alt hr {
   width: 90%;
   max-width: 950px;
-  margin: 20px 0;
+  margin: 0;
   border: 1.5px solid #7a91b1;
 }
 html.alt main, html.alt header, html.alt footer {
@@ -384,27 +384,33 @@ html.alt header {
   padding: 30px 0;
   padding-bottom: 0;
 }
-html.alt header .portrait img {
-  width: 150px;
-  border: 3px solid #f3e8e9;
-}
-@media only screen and (max-width: 768px) {
-  html.alt header .portrait {
-    width: 85%;
-    max-width: 850px;
-  }
-  html.alt header .portrait img {
-    width: 125px;
-  }
-}
 html.alt main {
   margin: 0 auto;
 }
 html.alt main hr:first-of-type {
-  margin-bottom: 5px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+html.alt main hr:nth-of-type(2) {
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 html.alt main hr:last-of-type {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 768px) {
+  html.alt main hr:first-of-type {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  html.alt main hr:nth-of-type(2) {
+    margin-top: 18px;
+    margin-bottom: 30px;
+  }
+  html.alt main hr:last-of-type {
+    margin-top: 30px;
+  }
 }
 html.alt main .alt-categories {
   width: 85%;
@@ -507,9 +513,6 @@ html.alt main .alt-links .alt-link {
   width: auto;
   margin: 5px;
   cursor: pointer;
-}
-html.alt main .alt-links .alt-link:nth-of-type(even) {
-  background-color: #7a91b1;
 }
 html.alt main .alt-links .alt-link .link-title {
   display: flex;
@@ -712,6 +715,7 @@ body, .button {
   font-family: "Source Code Pro", monospace;
   font-display: swap;
   font-weight: 600;
+  line-height: 1.6;
   text-transform: lowercase;
   text-decoration: none;
 }
@@ -747,7 +751,6 @@ p {
 
 .about-content p, .contact-content p, .about-content a, .contact-content a {
   text-align: left;
-  line-height: 1.4;
 }
 @media only screen and (max-width: 970px) {
   .about-content p, .contact-content p, .about-content a, .contact-content a {
@@ -1582,43 +1585,10 @@ header .scroll-down img {
   width: 95%;
   margin: 0 auto;
 }
-#contact .contact-content .pgp:hover {
-  cursor: text;
-  color: #282b2c;
-  background-color: initial;
-  color: initial;
-  font-style: normal;
-}
-#contact .contact-content .pgp.clipboard {
+#contact .contact-content .email {
   font-style: italic;
-  font-size: 16px;
-  padding: 2px 8px;
-  background-color: rgba(122, 145, 177, 0.5);
-  border-bottom: solid #282b2c 2px;
-  cursor: pointer;
-}
-#contact .contact-content .pgp.clipboard:hover, #contact .contact-content .pgp.clipboard.copied {
-  background-color: rgba(181, 126, 155, 0.5);
-  color: #282b2c;
-}
-#contact .contact-content .pgp.clipboard.copied {
-  cursor: default;
-}
-#contact .contact-content .pgp img {
-  width: 18px;
-  margin-left: 8px;
-  transform: translateY(3px);
-}
-@media only screen and (max-width: 768px) {
-  #contact .contact-content .pgp img {
-    font-size: 12px;
-    width: 17px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  #contact .contact-content .pgp {
-    font-size: 14px;
-  }
+  border-bottom: solid #7a91b1 2px;
+  padding: 0 5px;
 }
 #contact .contact-content p {
   margin: 20px;

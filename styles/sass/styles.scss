@@ -615,50 +615,10 @@ header {
         width: 95%;
         margin: 0 auto;
 
-        .pgp {
-
-            &:hover {
-                cursor: text;
-                color: $black;
-                background-color: initial;
-                color: initial;
-                font-style: normal;
-            }
-
-            &.clipboard {
-                font-style: italic;
-                font-size: 16px;
-                padding: 2px 8px;
-                background-color: rgba($color3, 0.5);
-                border-bottom: solid $black 2px;
-                cursor: pointer;
-
-                &:hover, &.copied {
-                    background-color: rgba($color2, 0.5);
-                    color: $black;
-                }
-
-                &.copied {
-                    cursor: default;
-                }
-            }
-
-            img {
-                width: 18px;
-                margin-left: 8px;
-                transform: translateY(3px);
-
-                // responsive to mobile
-                @media only screen and (max-width: $mobile) {
-                    font-size: 12px;
-                    width: 17px;
-                }
-            }
-
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
-                font-size: 14px;
-            }
+        .email {
+            font-style: italic;
+            border-bottom: solid $color3 2px;
+            padding: 0 5px;
         }
 
         p {

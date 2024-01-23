@@ -13,7 +13,6 @@ let app = {
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
-        pgpFingerprint: $(".pgp"),
         errorMessage: $(".js-disabled"),
     },
 
@@ -23,34 +22,8 @@ let app = {
         filter: "All",
     },
 
-    pgp: {
-        fingerprint: "424A 8233 C832 042A"
-    },
-
     // app functions
     functions: {
-
-        copyPGP: () => {
-
-            if (!app.elements.pgpFingerprint.hasClass("copied")) {
-
-                // copy the fingerprint to the clipboard
-                navigator.clipboard.writeText(app.pgp.fingerprint);
-
-                console.log("copied");
-
-                // inject the onclick html
-                app.elements.pgpFingerprint.html(app.pgp.onclick);
-                app.elements.pgpFingerprint.toggleClass("copied");
-
-                setTimeout(() => {
-                    // inject the default html
-                    app.elements.pgpFingerprint.html(app.pgp.default);
-                    app.elements.pgpFingerprint.toggleClass("copied");
-
-                }, 2000);
-            }
-        },
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
@@ -396,14 +369,6 @@ let app = {
             })
             // console log any promise errors
             .catch(error => console.log(error));
-
-        // set the pgp html blocks
-        app.pgp.default = app.pgp.fingerprint + `<img src="./assets/icons/clipboard.svg" alt="clipboard icon">`;
-        app.pgp.onclick = app.pgp.fingerprint + `<img src="./assets/icons/clipboard-success.svg" alt="clipboard success icon">`;
-
-        // inject the pgp fingerprint
-        app.elements.pgpFingerprint.addClass('clipboard');
-        app.elements.pgpFingerprint.html(app.pgp.default);
 
         // add the event listeners
         app.events();

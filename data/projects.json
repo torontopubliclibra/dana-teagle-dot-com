@@ -5,26 +5,14 @@
             "JavaScript",
             "React",
             "Remix",
-            "SASS"
+            "SASS",
+            "Shopify"
         ],
         "description": [
             "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. It will be launching in late January 2024.",
             "The site is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc)."
         ],
         "code": "/thb/repo"
-    },
-    "Note Taken": {
-        "year": "2023",
-        "tags": [
-            "TypeScript",
-            "Angular",
-            "SASS"
-        ],
-        "description": [
-            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js)."
-        ],
-        "site": "/notes",
-        "code": "/notes/repo"
     },
     "Queer Walk": {
         "year": "2023",
@@ -40,6 +28,32 @@
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
+    },
+    "Note Taken": {
+        "year": "2023",
+        "tags": [
+            "TypeScript",
+            "Angular",
+            "SASS"
+        ],
+        "description": [
+            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js)."
+        ],
+        "site": "/notes",
+        "code": "/notes/repo"
+    },
+    "Sydney Gautreau": {
+        "year": "2022",
+        "tags": [
+            "JavaScript",
+            "HTML",
+            "SASS"
+        ],
+        "description": [
+            "This is a website for Sydney Gautreau's editing & writing coaching business, originally built in 2022."
+        ],
+        "site": "https://sydneygautreau.com",
+        "code": "https://github.com/torontopubliclibra/sydney-gautreau"
     },
     "The Pigeon Hole": {
         "year": "2022",
@@ -69,18 +83,5 @@
         ],
         "site": "/superhero",
         "code": "/superhero/repo"
-    },
-    "Sydney Gautreau": {
-        "year": "2022",
-        "tags": [
-            "JavaScript",
-            "HTML",
-            "SASS"
-        ],
-        "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business, originally built in 2022."
-        ],
-        "site": "https://sydneygautreau.com",
-        "code": "https://github.com/torontopubliclibra/sydney-gautreau"
     }
 }
