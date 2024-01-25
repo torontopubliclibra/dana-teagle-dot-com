@@ -1378,6 +1378,22 @@ header .scroll-down img {
 #services .services-content .service ul li {
   font-size: 17px;
 }
+@media only screen and (max-width: 970px) {
+  #services .services-content .service {
+    padding: 15px;
+    font-size: 17px;
+  }
+  #services .services-content .service ul {
+    padding: 0 15px;
+  }
+  #services .services-content .service h3 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  #services .services-content .service h4 {
+    font-size: 18px;
+  }
+}
 @media only screen and (max-width: 768px) {
   #services .services-content {
     width: 85%;
@@ -1390,15 +1406,11 @@ header .scroll-down img {
   #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
     text-align: left;
   }
+  #services .services-content .service ul, #services .services-content .service h3, #services .services-content .service h4 {
+    padding: 0;
+  }
   #services .services-content .service ul {
-    padding: 0 15px;
-  }
-  #services .services-content .service h3 {
-    font-size: 24px;
-    padding-left: 10px;
-  }
-  #services .services-content .service h4 {
-    font-size: 18px;
+    margin-bottom: 0;
   }
 }
 
