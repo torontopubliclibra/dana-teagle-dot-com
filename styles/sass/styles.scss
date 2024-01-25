@@ -59,17 +59,17 @@ body {
 }
 
 // coloured section backgrounds
-#about, #contact {
-    background: rgba($color1, 0.8);
+#services {
+    background: rgba($color3, 0.4);
+}
 
-    // responsive to mobile
-    @media only screen and (max-width: $tablet) {
-        background: rgba($color1, 0.6);
-    }
+// coloured section backgrounds
+#about, #contact {
+    background: rgba($color1, 0.6);
 }
 
 // section padding
-#about, #projects, #contact {
+#about, #projects, #services, #contact {
     padding: 30px 0;
 
     // responsive to mobile
@@ -288,6 +288,138 @@ header {
     }
 }
 
+#services {
+    // wrapper
+    .wrapper {
+        @include flex(row, 5%, "", center);
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        hr {
+            border-color: $color2;
+        }
+
+        h3 {
+            font-size: 20px;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 100%;
+
+            a {
+                font-size: 20px;
+                &:hover {
+                    color: $color2;
+                }
+            }
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            h3 {
+                font-size: 18px;
+                max-width: 85%;
+                margin: 10px auto;
+                padding: 0;
+
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+    .services-content {
+        @include flex(column, 20px);
+        @include borderedBox(rgba($white, 0.8), $color1);
+        max-width: 100%;
+        width: 95%;
+        padding: 50px;
+        margin: 20px auto;
+
+        hr {
+            border-color: $color2;
+            margin: 20px 0;
+            width: 95%;
+        }
+
+        .services-description {
+            @include flex(column, 20px);
+            gap: 20px;
+        }
+        
+        .service {
+            @include borderedBox(rgba($color1, 0.3), $color2);
+            @include flex(row, 0, left);
+            padding: 10px;
+            padding-top: 0;
+            overflow: hidden;
+            margin-top: 40px;
+
+            h3, h4, li {
+                width: 100%;
+                text-align: left;
+            }
+
+            h3 {
+                max-width: unset;
+                margin: 0;
+                padding: 10px;
+                font-size: 26px;
+                padding-bottom: 0;
+                padding-top: 20px;
+                padding-left: 15px;
+            }
+
+            h4 {
+                font-size: 19px;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-top: 0;
+                padding: 0 30px;
+
+                li {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            width: 85%;
+            padding: 20px;
+
+            hr {
+                width: 85%;
+                margin: 0;
+            }
+
+            .service {
+                h3, h4, li {
+                    text-align: left;
+                }
+                ul {
+                    padding: 0 15px;
+                }
+                h3 {
+                    font-size: 24px;
+                    padding-left: 10px;
+                }
+
+                h4 {
+                    font-size: 18px;
+                }
+            }
+
+        }
+    }
+}
+
 // about section
 #about {
 
@@ -358,7 +490,7 @@ header {
                 .item {
                     font-style: normal;
                     margin: 4px 0;
-                    background-color: rgba($color3, 0.5);
+                    background-color: rgba($color3, 0.25);
                     padding: 1px 10px;
                 }
             }
@@ -617,8 +749,9 @@ header {
 
         .email {
             font-style: italic;
-            border-bottom: solid $color3 2px;
-            padding: 0 5px;
+            margin: 4px 0;
+            background-color: rgba($color3, 0.25);
+            padding: 1px 10px;
         }
 
         p {
