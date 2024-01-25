@@ -374,8 +374,12 @@ header {
             }
 
             h4 {
+                font-weight: 600;
                 font-size: 19px;
                 margin-bottom: 10px;
+                font-style: italic;
+                max-width: 90%;
+                border-bottom: solid 3px $color3;
             }
 
             ul {
@@ -400,11 +404,12 @@ header {
                 }
 
                 h3 {
-                    font-size: 20px;
+                    font-size: 22px;
                     padding-left: 10px;
                 }
                 h4 {
                     font-size: 18px;
+                    max-width: 80%;
                 }
             }
         }
