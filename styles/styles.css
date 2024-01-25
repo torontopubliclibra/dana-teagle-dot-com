@@ -439,7 +439,7 @@ html.alt main .alt-categories ul li a:hover {
 }
 @media only screen and (max-width: 768px) {
   html.alt main .alt-categories ul li a:hover {
-    border: solid #B57E9B 3px;
+    border: solid #7a91b1 3px;
   }
 }
 html.alt main .alt-categories ul li a img {
@@ -1367,8 +1367,12 @@ header .scroll-down img {
   padding-left: 15px;
 }
 #services .services-content .service h4 {
+  font-weight: 600;
   font-size: 19px;
   margin-bottom: 10px;
+  font-style: italic;
+  max-width: 90%;
+  border-bottom: solid 3px #7a91b1;
 }
 #services .services-content .service ul {
   list-style-type: none;
@@ -1387,11 +1391,12 @@ header .scroll-down img {
     padding: 0 15px;
   }
   #services .services-content .service h3 {
-    font-size: 20px;
+    font-size: 22px;
     padding-left: 10px;
   }
   #services .services-content .service h4 {
     font-size: 18px;
+    max-width: 80%;
   }
 }
 @media only screen and (max-width: 768px) {
