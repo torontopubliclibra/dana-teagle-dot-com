@@ -6,6 +6,26 @@
         }
     },
     "social profiles": {
+        "Letterboxd": {
+            "link": "/letterboxd",
+            "description": ""
+        },
+        "Goodreads": {
+            "link": "/goodreads",
+            "description": ""
+        },
+        "Discord": {
+            "link": "/discord",
+            "description": ""
+        },
+        "Spotify": {
+            "link": "/spotify",
+            "description": ""
+        },
+        "Github": {
+            "link": "/github",
+            "description": ""
+        },
         "Instagram": {
             "link": "/instagram",
             "description": ""
@@ -21,52 +41,16 @@
         "Tumblr": {
             "link": "/tumblr",
             "description": ""
-        },
-        "Spotify": {
-            "link": "/spotify",
-            "description": ""
-        },
-        "Letterboxd": {
-            "link": "/letterboxd",
-            "description": ""
-        },
-        "Goodreads": {
-            "link": "/goodreads",
-            "description": ""
-        },
-        "Github": {
-            "link": "/github",
-            "description": ""
         }
     },
-    "resources": {
-        "Donate a Mask": {
-            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
-            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
+    "payments": {
+        "Paypal": {
+            "link": "/paypal",
+            "description": ""
         },
-        "All the Walls Will Fall": {
-            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
-            "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
-        },
-        "Ontario Trans I.D. resources": {
-            "link": "/trans-id-resources",
-            "description": "Documents and resources I've personally collected and curated for changing your name and/or gender marker with governmental bodies and services in Ontario"
-        },
-        "Justice Trans": {
-            "link": "https://justicetrans.org/en/",
-            "description": "Justice & legal info for Two Spirit, trans, non-binary, and gender non-conforming communities across Canada"
-        },
-        "Anti-Trans Legislative Risk Map": {
-            "link": "https://celeste.lgbt/map",
-            "description": "Resource tracking the risk levels of anti-trans legislation and policy in Canadian provinces and territories [maintained by Celeste Trianon]"
-        },
-        "Transfeminine Science": {
-            "link": "https://transfemscience.org/",
-            "description": "Informational content on transfeminine hormone therapy"
-        },
-        "Digital Transgender Archive": {
-            "link": "https://www.digitaltransgenderarchive.net/",
-            "description": "Archive of digitized and born-digital materials relating to the history of trans people"
+        "Kofi": {
+            "link": "/kofi",
+            "description": ""
         }
     },
     "direct actions": {
@@ -87,14 +71,34 @@
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         }
     },
-    "contact & payments": {
-        "Discord": {
-            "link": "/discord",
-            "description": "For personal correspondence"
+    "info & resources": {
+        "Donate a Mask": {
+            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
+            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
         },
-        "Kofi": {
-            "link": "/kofi",
-            "description": "For supporting me & my work"
+        "All the Walls Will Fall": {
+            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
+            "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
+        },
+        "Ontario Trans I.D. resources": {
+            "link": "/trans-id-resources",
+            "description": "Documents and resources I've personally collected and curated for changing your name and/or gender marker with governmental bodies and services in Ontario"
+        },
+        "Justice Trans": {
+            "link": "https://justicetrans.org/en/",
+            "description": "Justice & legal info for Two Spirit, trans, non-binary, and gender non-conforming individuals in Canada"
+        },
+        "Anti-Trans Legislative Risk Map": {
+            "link": "https://celeste.lgbt/map",
+            "description": "Risk levels of anti-trans legislation and policy in Canadian provinces and territories [resource maintained by Celeste Trianon]"
+        },
+        "Transfeminine Science": {
+            "link": "https://transfemscience.org/",
+            "description": "Research & info on transfeminine hormone therapy"
+        },
+        "Digital Transgender Archive": {
+            "link": "https://www.digitaltransgenderarchive.net/",
+            "description": "Archive of digitized and born-digital materials relating to the history of trans people"
         }
     }
 }
