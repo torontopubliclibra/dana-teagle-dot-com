@@ -1,8 +1,26 @@
 {
-    "websites & socials": {
+    "website": {
         "Dana Teagle dot com": {
             "link": "/",
             "description": "Web/software development portfolio"
+        }
+    },
+    "social profiles": {
+        "Instagram": {
+            "link": "/instagram",
+            "description": ""
+        },
+        "Twitter": {
+            "link": "/twitter",
+            "description": ""
+        },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": ""
+        },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": ""
         },
         "Spotify": {
             "link": "/spotify",
@@ -19,25 +37,9 @@
         "Github": {
             "link": "/github",
             "description": ""
-        },
-        "Instagram": {
-            "link": "/instagram",
-            "description": ""
-        },
-        "Twitter": {
-            "link": "/twitter",
-            "description": ""
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": ""
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": ""
         }
     },
-    "links & resources": {
+    "resources": {
         "Donate a Mask": {
             "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
             "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
@@ -90,21 +92,9 @@
             "link": "/discord",
             "description": "For personal correspondence"
         },
-        "Email": {
-            "link": "mailto:dana.r.teagle@gmail.com",
-            "description": "For personal & business correspondence"
-        },
-        "Paypal": {
-            "link": "/paypal",
-            "description": "For personal & business payments"
-        },
         "Kofi": {
             "link": "/kofi",
             "description": "For supporting me & my work"
-        },
-        "PGP public key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "OpenPGP key for encrypted communications"
         }
     }
 }
