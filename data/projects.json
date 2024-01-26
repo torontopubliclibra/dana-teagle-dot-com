@@ -3,12 +3,11 @@
         "year": "2024",
         "tags": [
             "TypeScript",
-            "Vue",
-            "SASS"
+            "Vue"
         ],
         "description": [
-            "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change one's name and/or legal gender marker with governmental bodies and services.",
-            "This web application has been in various stages of development since 2022, and I am currently working to acquire funding, either through grants or charitable donations. I'm hoping to hire a small development team at that point, and aim for a projected launch in late 2024 or early 2025."
+            "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
+            "This web app has been in various stages of development since 2022, and I am currently working to acquire funding, either through grants or charitable donations. I'm hoping to hire a small development team at that point, and aim for a projected launch in late 2024 or early 2025."
         ]
     },
     "True History Brewing": {
@@ -68,20 +67,6 @@
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"
     },
-    "The Pigeon Hole": {
-        "year": "2022",
-        "tags": [
-            "Jquery",
-            "HTML",
-            "CSS"
-        ],
-        "description": [
-            "This is an app for viewing photos of pigeons in different cities around the world built with jQuery and the Flickr API.",
-            "The site retrieves data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the images and displays it on the page. I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in 2023."
-        ],
-        "site": "/pigeon",
-        "code": "/pigeon/repo"
-    },
     "Superhero Showdown": {
         "year": "2022",
         "tags": [
@@ -96,5 +81,19 @@
         ],
         "site": "/superhero",
         "code": "/superhero/repo"
+    },
+    "The Pigeon Hole": {
+        "year": "2022",
+        "tags": [
+            "Jquery",
+            "HTML",
+            "CSS"
+        ],
+        "description": [
+            "This is an app for viewing photos of pigeons in different cities around the world built with jQuery and the Flickr API.",
+            "The site retrieves data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the images and displays it on the page. I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in 2023."
+        ],
+        "site": "/pigeon",
+        "code": "/pigeon/repo"
     }
 }
