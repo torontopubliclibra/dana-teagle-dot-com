@@ -1326,7 +1326,7 @@ header .scroll-down img {
   margin: 20px auto;
 }
 #services .services-content hr {
-  border-color: #B57E9B;
+  border-color: #84A59D;
   margin: 20px 0;
   width: 95%;
 }
@@ -1338,6 +1338,9 @@ header .scroll-down img {
   justify-content: initial;
   align-items: initial;
   gap: 20px;
+}
+#services .services-content .services-list p {
+  font-size: 16px;
 }
 #services .services-content .service {
   background: rgba(132, 165, 157, 0.3);
@@ -1352,6 +1355,9 @@ header .scroll-down img {
   padding-top: 0;
   overflow: hidden;
   margin-top: 40px;
+}
+#services .services-content .service:last-of-type {
+  margin-bottom: 40px;
 }
 #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
   width: 100%;
@@ -1379,8 +1385,8 @@ header .scroll-down img {
   margin-top: 0;
   padding: 0 30px;
 }
-#services .services-content .service ul li {
-  font-size: 17px;
+#services .services-content .service ul li p {
+  font-size: 15px;
 }
 @media only screen and (max-width: 970px) {
   #services .services-content .service {

@@ -340,7 +340,7 @@ header {
         margin: 20px auto;
 
         hr {
-            border-color: $color2;
+            border-color: $color1;
             margin: 20px 0;
             width: 95%;
         }
@@ -348,6 +348,10 @@ header {
         .services-description {
             @include flex(column, 20px);
             gap: 20px;
+        }
+
+        .services-list p {
+            font-size: 16px;
         }
         
         .service {
@@ -357,6 +361,10 @@ header {
             padding-top: 0;
             overflow: hidden;
             margin-top: 40px;
+
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
 
             h3, h4, li {
                 width: 100%;
@@ -387,8 +395,8 @@ header {
                 margin-top: 0;
                 padding: 0 30px;
 
-                li {
-                    font-size: 17px;
+                li p {
+                    font-size: 15px;
                 }
             }
         }
