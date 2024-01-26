@@ -138,10 +138,19 @@ hr {
 
 // header section
 header {
+    // animation: 10s infinite ease-in-out gradient;
+    // background: linear-gradient(130deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, $white 60%, rgba($color2, 0.75) 98%, rgba($color2, 0.75) 100%);
+    // background-size: 400% 400%;
     @include positioning(relative);
     min-height: 500px;
     height: 100vh;
     max-height: 1000px;
+
+    // responsive to tablet
+    // @media only screen and (max-width: $tablet) {
+    //     background-size: 250% 250%;
+    //     animation: 5s infinite ease-in-out gradient;
+    // }
 
     // navigation
     nav {
@@ -348,10 +357,14 @@ header {
         .services-description {
             @include flex(column, 20px);
             gap: 20px;
+
+            p {
+                font-size: 18px;
+            }
         }
 
         .services-list p {
-            font-size: 16px;
+            font-size: 17px;
         }
         
         .service {
@@ -430,6 +443,10 @@ header {
             hr {
                 width: 85%;
                 margin: 0;
+            }
+
+            .services-description p {
+                font-size: 17px;
             }
 
             .service {
