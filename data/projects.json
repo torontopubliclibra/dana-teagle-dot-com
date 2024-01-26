@@ -95,5 +95,29 @@
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
+    },
+    "Body Stories Dance": {
+        "year": "2021",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for Body Stories Dance Education & Performance, a dance business based in Manitoulin, Ontario. The site was originally built with Squarespace and JavaScript in 2021."
+        ],
+        "site": "https://www.bodystoriesdance.com/",
+        "code": ""
+    },
+    "The Crevice": {
+        "year": "2021",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace and JavaScript in 2021."
+        ],
+        "site": "https://thecrevice.ca/",
+        "code": ""
     }
 }
