@@ -357,10 +357,6 @@ header {
         .services-description {
             @include flex(column, 20px);
             gap: 20px;
-
-            p {
-                font-size: 18px;
-            }
         }
 
         .services-list p {
@@ -445,7 +441,7 @@ header {
                 margin: 0;
             }
 
-            .services-description p {
+            .services-description p, .services-description a {
                 font-size: 17px;
             }
 
