@@ -1339,9 +1339,6 @@ header .scroll-down img {
   align-items: initial;
   gap: 20px;
 }
-#services .services-content .services-description p {
-  font-size: 18px;
-}
 #services .services-content .services-list p {
   font-size: 17px;
 }
@@ -1417,7 +1414,7 @@ header .scroll-down img {
     width: 85%;
     margin: 0;
   }
-  #services .services-content .services-description p {
+  #services .services-content .services-description p, #services .services-content .services-description a {
     font-size: 17px;
   }
   #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
