@@ -3,7 +3,7 @@
         "year": "2024",
         "tags": [
             "TypeScript",
-            "Vue"
+            "Vue.js"
         ],
         "description": [
             "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
@@ -14,28 +14,44 @@
         "year": "2024",
         "tags": [
             "JavaScript",
-            "React",
+            "React.js",
             "Remix",
+            "Hydrogen",
+            "Shopify",
             "SASS",
-            "Strapi",
-            "Shopify"
+            "Strapi"
         ],
         "description": [
             "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. It will be launching in late January 2024.",
-            "The site is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc)."
+            "The site is built with React and Remix, and uses Hydrogen as a headless Shopify storefront for online orders, with Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc)."
         ],
         "code": "/thb/repo"
+    },
+    "Sydney Gautreau": {
+        "year": "2024",
+        "tags": [
+            "Jquery",
+            "HTML",
+            "SASS"
+        ],
+        "description": [
+            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024."
+        ],
+        "site": "https://sydneygautreau.com",
+        "code": "https://github.com/torontopubliclibra/sydney-gautreau"
     },
     "Queer Walk": {
         "year": "2023",
         "tags": [
             "TypeScript",
-            "React",
+            "React.js",
             "Vite",
+            "Jotai",
+            "Emotion",
             "CSS"
         ],
         "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and using the open-source Pytheas framework.",
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React.js and using the open-source Pytheas framework.",
             "The application guides users through a selected tour length, and displays text and photos for each historic location. I was the lead developer on the application, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
@@ -49,33 +65,21 @@
             "SASS"
         ],
         "description": [
-            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js)."
+            "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js).",
+            "I originally developed the site throughout 2023."
         ],
         "site": "/notes",
         "code": "/notes/repo"
-    },
-    "Sydney Gautreau": {
-        "year": "2022",
-        "tags": [
-            "JavaScript",
-            "HTML",
-            "SASS"
-        ],
-        "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business, originally built in 2022."
-        ],
-        "site": "https://sydneygautreau.com",
-        "code": "https://github.com/torontopubliclibra/sydney-gautreau"
     },
     "Superhero Showdown": {
         "year": "2022",
         "tags": [
             "JavaScript",
-            "React",
+            "React.js",
             "CSS"
         ],
         "description": [
-            "This is an online stats-based card game built with React, using characters from Marvel Comics.",
+            "This is an online stats-based card game built with React.js, using characters from Marvel Comics.",
             "When the game starts, a set of data objects (each representing a character) are retrieved, shuffled, and divided into 2 decks of 10 cards each. Every round, you choose the statistic from your card that you believe to be larger than the other deck's, and the winner of the challenge gets both cards. The game continues until one of the players runs out of cards.",
             "I originally built Superhero Showdown in 2022 during my time at Juno College."
         ],
