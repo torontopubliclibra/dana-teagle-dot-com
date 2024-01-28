@@ -5,7 +5,41 @@
             "description": "Web/software development portfolio"
         }
     },
+    "contact & payments": {
+        "Work email": {
+            "link": "mailto:contact@danateagle.com",
+            "description": "contact [at] danateagle.com"
+        },
+        "Personal email": {
+            "link": "mailto:torontopubliclibra@gmail.com",
+            "description": "torontopubliclibra [at] gmail.com"
+        },
+        "Paypal": {
+            "link": "/paypal",
+            "description": ""
+        },
+        "Kofi": {
+            "link": "/kofi",
+            "description": ""
+        }
+    },
     "socials": {
+        "Instagram": {
+            "link": "/instagram",
+            "description": ""
+        },
+        "Twitter": {
+            "link": "/twitter",
+            "description": ""
+        },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": ""
+        },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": ""
+        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": ""
@@ -24,40 +58,6 @@
         },
         "Github": {
             "link": "/github",
-            "description": ""
-        },
-        "Instagram": {
-            "link": "/instagram",
-            "description": ""
-        },
-        "Twitter": {
-            "link": "/twitter",
-            "description": ""
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": ""
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": ""
-        }
-    },
-    "contact & payments": {
-        "Work email": {
-            "link": "mailto:contact@danateagle.com",
-            "description": "contact [at] danateagle.com"
-        },
-        "Personal email": {
-            "link": "mailto:torontopubliclibra@gmail.com",
-            "description": "torontopubliclibra [at] gmail.com"
-        },
-        "Paypal": {
-            "link": "/paypal",
-            "description": ""
-        },
-        "Kofi": {
-            "link": "/kofi",
             "description": ""
         }
     },
