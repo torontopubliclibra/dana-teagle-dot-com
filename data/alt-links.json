@@ -6,13 +6,13 @@
         }
     },
     "contact & payments": {
-        "Work email": {
-            "link": "mailto:contact@danateagle.com",
-            "description": "contact [at] danateagle.com"
-        },
         "Personal email": {
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
+        },
+        "Work email": {
+            "link": "mailto:contact@danateagle.com",
+            "description": "contact [at] danateagle.com"
         },
         "Paypal": {
             "link": "/paypal",
