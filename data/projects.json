@@ -19,6 +19,7 @@
             "Hydrogen",
             "Shopify",
             "GraphQL",
+            "CSS",
             "SASS",
             "Strapi"
         ],
@@ -29,10 +30,11 @@
         "code": "/thb/repo"
     },
     "Sydney Gautreau, Editor & Writing Coach": {
-        "year": "2024",
+        "year": "2023",
         "tags": [
             "Jquery",
             "HTML",
+            "CSS",
             "SASS"
         ],
         "description": [
@@ -63,6 +65,7 @@
         "tags": [
             "TypeScript",
             "Angular",
+            "CSS",
             "SASS"
         ],
         "description": [
@@ -92,11 +95,11 @@
         "tags": [
             "Jquery",
             "HTML",
-            "CSS"
+            "CSS",
+            "SASS"
         ],
         "description": [
-            "This is an app for viewing photos of pigeons in different cities around the world built with jQuery and the Flickr API.",
-            "The site retrieves data objects representing photos of pigeons, either in the user's selected city or in a randomized city, and then it randomly selects one of the images and displays it on the page. I originally developed The Pigeon Hole in July 2022 during my time at Juno College, before later updating it in 2023."
+            "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and SASS, and using the Flickr API. The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page.", "I originally built this app in July 2022 during my time at Juno College, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
