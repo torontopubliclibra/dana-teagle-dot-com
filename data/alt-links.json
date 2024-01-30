@@ -5,24 +5,6 @@
             "description": "Web/software development portfolio"
         }
     },
-    "contact & payments": {
-        "Personal email": {
-            "link": "mailto:torontopubliclibra@gmail.com",
-            "description": "torontopubliclibra [at] gmail.com"
-        },
-        "Work email": {
-            "link": "mailto:contact@danateagle.com",
-            "description": "contact [at] danateagle.com"
-        },
-        "Paypal": {
-            "link": "/paypal",
-            "description": ""
-        },
-        "Kofi": {
-            "link": "/kofi",
-            "description": ""
-        }
-    },
     "socials": {
         "Instagram": {
             "link": "/instagram",
@@ -46,10 +28,6 @@
         },
         "Goodreads": {
             "link": "/goodreads",
-            "description": ""
-        },
-        "Discord": {
-            "link": "/discord",
             "description": ""
         },
         "Spotify": {
@@ -103,6 +81,28 @@
         "All the Walls Will Fall": {
             "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
             "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
+        }
+    },
+    "contact & payments": {
+        "Personal email": {
+            "link": "mailto:torontopubliclibra@gmail.com",
+            "description": "torontopubliclibra [at] gmail.com"
+        },
+        "Business email": {
+            "link": "mailto:contact@danateagle.com",
+            "description": "contact [at] danateagle.com"
+        },
+        "Discord": {
+            "link": "/discord",
+            "description": ""
+        },
+        "Paypal": {
+            "link": "/paypal",
+            "description": ""
+        },
+        "Kofi": {
+            "link": "/kofi",
+            "description": ""
         }
     }
 }
