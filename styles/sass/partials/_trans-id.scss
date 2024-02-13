@@ -22,7 +22,7 @@ html.trans-id {
         }
     }
     header, main, footer {
-        background-color: rgba($white, 0.75);
+        background-color: rgba($white, 0.75) !important;
         border: solid 3px $black;
         h1, h2, h3, p, a, .alt {
             color: $black !important;
