@@ -305,6 +305,9 @@ html {
 html.alt body {
   background-color: #282b2c;
 }
+html.alt header {
+  background: none !important;
+}
 html.alt #contact {
   background: none !important;
   padding: 0 !important;
