@@ -138,19 +138,19 @@ hr {
 
 // header section
 header {
-    // animation: 10s infinite ease-in-out gradient;
-    // background: linear-gradient(130deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, $white 60%, rgba($color2, 0.75) 98%, rgba($color2, 0.75) 100%);
-    // background-size: 400% 400%;
+    animation: 30s infinite ease-in-out gradient;
+    background: linear-gradient(120deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, $white 60%, rgba($color2, 0.5) 98%, rgba($color2, 0.5) 100%);
+    background-size: 400% 400%;
     @include positioning(relative);
     min-height: 500px;
     height: 100vh;
     max-height: 1000px;
 
     // responsive to tablet
-    // @media only screen and (max-width: $tablet) {
-    //     background-size: 250% 250%;
-    //     animation: 5s infinite ease-in-out gradient;
-    // }
+    @media only screen and (max-width: $tablet) {
+        background-size: 250% 250%;
+        animation: 15s infinite ease-in-out gradient;
+    }
 
     // navigation
     nav {

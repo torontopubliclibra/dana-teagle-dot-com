@@ -230,6 +230,17 @@ html {
   overflow: hidden;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes fade-in-alt {
   0% {
     opacity: 0;
@@ -1115,6 +1126,9 @@ hr {
 }
 
 header {
+  animation: 30s infinite ease-in-out gradient;
+  background: linear-gradient(120deg, rgba(122, 145, 177, 0.75) 0%, rgba(122, 145, 177, 0.75) 2%, #f3e8e9 60%, rgba(181, 126, 155, 0.5) 98%, rgba(181, 126, 155, 0.5) 100%);
+  background-size: 400% 400%;
   position: relative;
   top: initial;
   right: initial;
@@ -1123,6 +1137,12 @@ header {
   min-height: 500px;
   height: 100vh;
   max-height: 1000px;
+}
+@media only screen and (max-width: 970px) {
+  header {
+    background-size: 250% 250%;
+    animation: 15s infinite ease-in-out gradient;
+  }
 }
 header nav {
   opacity: 0;
