@@ -139,7 +139,7 @@ hr {
 // header section
 header {
     animation: 30s infinite ease-in-out gradient;
-    background: linear-gradient(120deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, rgba($color2, 0.25) 60%, rgba($color2, 0.5) 98%, rgba($color2, 0.5) 100%);
+    background: linear-gradient(120deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, rgba($color1, 0.25) 60%, rgba($color1, 0.5) 98%, rgba($color1, 0.5) 100%);
     background-size: 400% 400%;
     @include positioning(relative);
     min-height: 500px;
@@ -148,7 +148,7 @@ header {
 
     // responsive to tablet
     @media only screen and (max-width: $tablet) {
-        background: linear-gradient(120deg, rgba($color3, 0.9) 0%, rgba($color3, 0.9) 2%, rgba($color2, 0.25) 60%, rgba($color2, 0.9) 98%, rgba($color2, 0.9) 100%);
+        background: linear-gradient(120deg, rgba($color3, 0.9) 0%, rgba($color3, 0.9) 2%, rgba($color1, 0.25) 60%, rgba($color1, 0.9) 98%, rgba($color1, 0.9) 100%);
         background-size: 200% 200%;
         animation: 15s infinite ease-in-out gradient;
     }
@@ -189,7 +189,7 @@ header {
 
                     .menu-icon {
                         width: 30px;
-                        margin-top: 5px;
+                        margin-top: 12px;
                         transform: rotate(0deg);
                         transition: transform 0.75s;
                     }
@@ -842,7 +842,7 @@ footer .wrapper {
         background: rgba($color3, 0.75);
 
         &:hover, &:focus {
-            background: rgba($color2, 0.75);
+            background: rgba($color1, 0.75);
         }
 
         // responsive to tablet

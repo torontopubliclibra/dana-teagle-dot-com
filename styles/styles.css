@@ -232,13 +232,13 @@ html {
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
     background-position: 100% 50%;
   }
-  100% {
+  50% {
     background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }
 @keyframes fade-in-alt {
@@ -807,20 +807,9 @@ a:hover, a:focus {
   font-size: 75px;
   text-align: center;
   line-height: "";
-  color: #7a91b1;
+  color: "";
   cursor: pointer;
   transition: 0.75s;
-}
-.scroll-down:hover {
-  color: #84A59D;
-}
-@media only screen and (max-width: 970px) {
-  .scroll-down {
-    color: #84A59D;
-  }
-  .scroll-down:hover {
-    color: #84A59D;
-  }
 }
 
 .menu-icon {
@@ -870,7 +859,7 @@ nav ul li a {
 }
 nav ul li a:hover, nav ul li a:focus {
   color: #282b2c;
-  border-bottom: solid #84A59D 3px;
+  border-bottom: solid #B57E9B 3px;
   outline: initial;
   transition: 0.4s;
 }
@@ -1130,7 +1119,7 @@ hr {
 
 header {
   animation: 30s infinite ease-in-out gradient;
-  background: linear-gradient(120deg, rgba(122, 145, 177, 0.75) 0%, rgba(122, 145, 177, 0.75) 2%, rgba(181, 126, 155, 0.25) 60%, rgba(181, 126, 155, 0.5) 98%, rgba(181, 126, 155, 0.5) 100%);
+  background: linear-gradient(120deg, rgba(122, 145, 177, 0.75) 0%, rgba(122, 145, 177, 0.75) 2%, rgba(132, 165, 157, 0.25) 60%, rgba(132, 165, 157, 0.5) 98%, rgba(132, 165, 157, 0.5) 100%);
   background-size: 400% 400%;
   position: relative;
   top: initial;
@@ -1143,7 +1132,7 @@ header {
 }
 @media only screen and (max-width: 970px) {
   header {
-    background: linear-gradient(120deg, rgba(122, 145, 177, 0.9) 0%, rgba(122, 145, 177, 0.9) 2%, rgba(181, 126, 155, 0.25) 60%, rgba(181, 126, 155, 0.9) 98%, rgba(181, 126, 155, 0.9) 100%);
+    background: linear-gradient(120deg, rgba(122, 145, 177, 0.9) 0%, rgba(122, 145, 177, 0.9) 2%, rgba(132, 165, 157, 0.25) 60%, rgba(132, 165, 157, 0.9) 98%, rgba(132, 165, 157, 0.9) 100%);
     background-size: 200% 200%;
     animation: 15s infinite ease-in-out gradient;
   }
@@ -1185,7 +1174,7 @@ header nav .mobile-menu {
   }
   header nav .mobile-menu button .menu-icon {
     width: 30px;
-    margin-top: 5px;
+    margin-top: 12px;
     transform: rotate(0deg);
     transition: transform 0.75s;
   }
@@ -1812,7 +1801,7 @@ footer .wrapper .scroll-to-top {
   background: rgba(122, 145, 177, 0.75);
 }
 footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
-  background: rgba(181, 126, 155, 0.75);
+  background: rgba(132, 165, 157, 0.75);
 }
 @media only screen and (max-width: 970px) {
   footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {

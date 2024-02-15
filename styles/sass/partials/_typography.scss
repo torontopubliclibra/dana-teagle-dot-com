@@ -93,20 +93,9 @@ a {
 
 // scroll down button
 .scroll-down {
-  @include textStyle (75px, center, "", $color3);
+  @include textStyle (75px, center, "", "");
   cursor: pointer;
   transition: 0.75s;
-  &:hover {
-    color: $color1;
-  }
-
-  // responsive to tablet
-  @media only screen and (max-width: $tablet) {
-    color: $color1;
-    &:hover {
-      color: $color1;
-    }
-  }
 }
 
 // mobile menu buttons
@@ -151,7 +140,7 @@ nav {
 
     &:hover, &:focus {
       color: $black;
-      border-bottom: solid $color1 3px;
+      border-bottom: solid $color2 3px;
       outline: initial;
       transition: 0.4s;
     }
