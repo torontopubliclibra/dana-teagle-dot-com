@@ -27,6 +27,7 @@
             "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. I designed and developed the project in late 2023 and early 2024.",
             "The site is built with React and Remix, and uses Hydrogen as a headless Shopify storefront for online orders, with Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc)."
         ],
+        "site": "/thb",
         "code": "/thb/repo"
     },
     "Sydney Gautreau, Editor & Writing Coach": {

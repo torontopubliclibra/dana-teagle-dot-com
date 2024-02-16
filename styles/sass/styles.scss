@@ -510,7 +510,7 @@ header {
             width: 95%;
         }
 
-        .portrait {
+        .basic-info {
             display: flex;
             flex-flow: row wrap;
             justify-content: left;
@@ -518,16 +518,10 @@ header {
             width: 100%;
             min-height: 100%;
 
-            img {
-                border: solid $color3 4px;
-                width: 175px;
-                height: 175px;
-            }
-
-            .portrait-caption {
+            .basic-info-caption {
                 font-style: italic;
-                margin-left: 30px;
                 line-height: 30px;
+                margin: 0;
 
                 .item {
                     font-style: normal;
@@ -543,14 +537,7 @@ header {
                 width: 100%;
                 margin: 0;
 
-                img {
-                    width: 175px;
-                    height: auto;
-                    max-width: 40%;
-                }
-
-                .portrait-caption {
-                    margin-top: 0;
+                .basic-info-caption {
                     font-size: 14px;
                     line-height: 25px;
 
@@ -568,11 +555,9 @@ header {
                 margin: 0;
                 align-items: flex-start;
 
-                .portrait-caption {
+                .basic-info-caption {
                     width: 100%;
                     text-align: left;
-                    margin: 0;
-                    margin-top: 15px;
                 }
             }
         }

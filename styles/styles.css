@@ -1491,7 +1491,7 @@ header .scroll-down img {
   margin: 20px 0;
   width: 95%;
 }
-#about .about-content .portrait {
+#about .about-content .basic-info {
   display: flex;
   flex-flow: row wrap;
   justify-content: left;
@@ -1499,54 +1499,41 @@ header .scroll-down img {
   width: 100%;
   min-height: 100%;
 }
-#about .about-content .portrait img {
-  border: solid #7a91b1 4px;
-  width: 175px;
-  height: 175px;
-}
-#about .about-content .portrait .portrait-caption {
+#about .about-content .basic-info .basic-info-caption {
   font-style: italic;
-  margin-left: 30px;
   line-height: 30px;
+  margin: 0;
 }
-#about .about-content .portrait .portrait-caption .item {
+#about .about-content .basic-info .basic-info-caption .item {
   font-style: normal;
   margin: 4px 0;
   background-color: rgba(122, 145, 177, 0.25);
   padding: 1px 10px;
 }
 @media only screen and (max-width: 970px) {
-  #about .about-content .portrait {
+  #about .about-content .basic-info {
     order: -1;
     width: 100%;
     margin: 0;
   }
-  #about .about-content .portrait img {
-    width: 175px;
-    height: auto;
-    max-width: 40%;
-  }
-  #about .about-content .portrait .portrait-caption {
-    margin-top: 0;
+  #about .about-content .basic-info .basic-info-caption {
     font-size: 14px;
     line-height: 25px;
   }
-  #about .about-content .portrait .portrait-caption .item {
+  #about .about-content .basic-info .basic-info-caption .item {
     padding: 0 8px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #about .about-content .portrait {
+  #about .about-content .basic-info {
     flex-direction: column;
     width: 100%;
     margin: 0;
     align-items: flex-start;
   }
-  #about .about-content .portrait .portrait-caption {
+  #about .about-content .basic-info .basic-info-caption {
     width: 100%;
     text-align: left;
-    margin: 0;
-    margin-top: 15px;
   }
 }
 #about .about-content .bio-1 {
