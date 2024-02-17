@@ -45,8 +45,8 @@
     },
     "info & resources": {
         "Ontario Trans I.D. resources": {
-            "link": "/trans-id-resources",
-            "description": "Documents and resources I've personally collected and curated for changing your name and/or gender marker with governmental bodies and services in Ontario"
+            "link": "/trans-id",
+            "description": "Documents and resources I've collected for changing your name and/or gender marker with governmental bodies and services in Ontario"
         },
         "Justice Trans": {
             "link": "https://justicetrans.org/en/",
@@ -78,6 +78,10 @@
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         },
+        "House of Commons petition e-4788": {
+            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4788",
+            "description": "Petition to the Government of Canada to sustain its critical funding for the UNRWA amidst the worsening humanitarian crisis in Palestine [closes Mar 14, 2024]"
+        },
         "House of Commons petition e-4745": {
             "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4745",
             "description": "Petition to the Government of Canada to impose a two-way embargo on arms between Canada and Israel [closes Feb 19, 2024]"
@@ -95,6 +99,10 @@
         "Work email": {
             "link": "mailto:contact@danateagle.com",
             "description": "contact [at] danateagle.com"
+        },
+        "PGP key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": ""
         },
         "Discord": {
             "link": "/discord",

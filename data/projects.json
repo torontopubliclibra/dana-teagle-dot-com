@@ -7,7 +7,8 @@
         ],
         "description": [
             "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
-            "This web app has been in various stages of development since 2022, and I am currently working to acquire funding, either through grants or charitable donations. I'm hoping to hire a small development team at that point, and aim for a projected launch in late 2024 or early 2025."
+            "The site will include a step-by-step guide for each province and territory, as well as a list of resources for each region, and allow users to submit their own resources for review and inclusion. It will be built using Vue.js and a CMS for easy updating and maintenance. The site will be fully responsive and accessible, and will be available in both English and French.",
+            "This web app has been in various stages of development since late 2022. I am currently working to acquire funding, either through grants or charitable donations, and hoping to hire a small development team later this year, aiming for a projected launch in early 2025."
         ]
     },
     "True History Brewing": {
@@ -20,26 +21,27 @@
             "Shopify",
             "GraphQL",
             "CSS",
-            "SASS",
+            "SCSS",
             "Strapi"
         ],
         "description": [
-            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. I designed and developed the project in late 2023 and early 2024.",
-            "The site is built with React and Remix, and uses Hydrogen as a headless Shopify storefront for online orders, with Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc)."
+            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site is built with React and Remix, uses the Shopify Hydrogen framework to implement a storefront, with Strapi serving as a headless CMS for non-storefront related variable data (hours, events, menus, etc).",
+            "The custom designs were fully wireframed using Figma, and styled with SCSS. EmailJS and FullCalendar are also integrated into the site for contact forms and event listings, respectively.",
+            "I designed and developed the project in late 2023 and early 2024, and will continue to update and improve it periodically."
         ],
         "site": "/thb",
         "code": "/thb/repo"
     },
     "Sydney Gautreau, Editor & Writing Coach": {
-        "year": "2023",
+        "year": "2024",
         "tags": [
             "Jquery",
             "HTML",
             "CSS",
-            "SASS"
+            "SCSS"
         ],
         "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024."
+            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024. The site is fully responsive and includes a contact form."
         ],
         "site": "https://sydneygautreau.com",
         "code": "https://github.com/torontopubliclibra/sydney-gautreau"
@@ -55,8 +57,8 @@
             "CSS"
         ],
         "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React.js and using the open-source Pytheas framework.",
-            "The application guides users through a selected tour length, and displays text and photos for each historic location. I was the lead developer on the application, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React.js and using the open-source Pytheas framework. The application guides users through a selected tour length, and displays text and photos for each historic location.",
+            "I was the lead developer on Queer Walk, working from May to Aug 2023 alongside Haley Tibbitts and our project manager Zhenia Tomé, with funding and support from Parallel 42 Systems and Windsor Hackforge. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
@@ -67,11 +69,11 @@
             "TypeScript",
             "Angular",
             "CSS",
-            "SASS"
+            "SCSS"
         ],
         "description": [
             "This is a local storage notes app built with Angular. Users can save up to 50 text notes of 140 characters each in various colours. All inputted data is stored client-side and remains in the browser until the next time the cache is cleared. Notes can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file for archiving (using Filesaver.js).",
-            "I originally developed the site throughout 2023."
+            "I originally developed Note Taken throughout 2023. I continue to update and improve it periodically."
         ],
         "site": "/notes",
         "code": "/notes/repo"
@@ -84,9 +86,9 @@
             "CSS"
         ],
         "description": [
-            "This is an online stats-based card game built with React.js, using characters from Marvel Comics.",
-            "When the game starts, a set of data objects (each representing a character) are retrieved, shuffled, and divided into 2 decks of 10 cards each. Every round, you choose the statistic from your card that you believe to be larger than the other deck's, and the winner of the challenge gets both cards. The game continues until one of the players runs out of cards.",
-            "I originally built Superhero Showdown in 2022 during my time at Juno College."
+            "This is a 1-player turn-based card game built with React.js, using characters from Marvel Comics. Each round, the player draws a card from their deck and compares the statistics on their card to the statistics on their opponent (the computer)'s card. The player with the higher stat wins the round and takes both cards. The game continues until one player's deck runs out.",
+            "The game pulls data from Google's Firebase Realtime Database, and uses React Router for navigation. I integrated the CSSTransition component from React Transition Group to assist with the card flip animations.",
+            "I designed and developed Superhero Showdown in 2022 during my time at Juno College, and it is fully responsive and accessible."
         ],
         "site": "/superhero",
         "code": "/superhero/repo"
@@ -97,10 +99,12 @@
             "Jquery",
             "HTML",
             "CSS",
-            "SASS"
+            "SCSS"
         ],
         "description": [
-            "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and SASS, and using the Flickr API. The site retrieves JSON data objects representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page.", "I originally built this app in July 2022 during my time at Juno College, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
+            "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and SCSS, and using the Flickr API.",
+            "The site retrieves JSON data representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page.",
+            "I originally built the Pigeon Hole in July 2022 during my time at Juno College, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
