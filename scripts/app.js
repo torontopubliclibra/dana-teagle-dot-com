@@ -225,7 +225,7 @@ let app = {
                     formattedProject.description =
                         `<button class="button read-more" title="`
                         + project.title
-                        + ` project description">Description<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
+                        + ` project description">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
                         + formattedParagraph
                         + formattedProject.image
                         + `</p>`
@@ -293,7 +293,7 @@ let app = {
 
                 // reveal the paragraph and change the button text
                 button.classList.add("read-less");
-                button.innerHTML = `Description<img src="./assets/icons/collapse-up.svg" alt="collapse description icon">`;
+                button.innerHTML = `Read less<img src="./assets/icons/collapse-up.svg" alt="collapse description icon">`;
                 project.classList.add("active");
                 paragraph.style.maxHeight = (paragraph.scrollHeight + 30) + `px`;
 
@@ -302,7 +302,7 @@ let app = {
 
                 // hide the paragraph and change the button text
                 button.classList.remove("read-less");
-                button.innerHTML = `Description<img src="./assets/icons/expand-down.svg" alt="expand description icon">`;
+                button.innerHTML = `Read more<img src="./assets/icons/expand-down.svg" alt="expand description icon">`;
                 project.classList.remove("active");
                 paragraph.style.maxHeight = "";
                 document.activeElement.blur();

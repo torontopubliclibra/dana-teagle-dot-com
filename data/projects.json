@@ -8,7 +8,8 @@
         "description": [
             "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
             "The site will include a step-by-step guide for each province and territory, as well as a list of resources for each region, and allow users to submit their own resources for review and inclusion. It will be built using Vue.js and a CMS for easy updating and maintenance. The site will be fully responsive and accessible, and will be available in both English and French.",
-            "This web app has been in various stages of development since late 2022. I am currently working to acquire funding, either through grants or charitable donations, and hoping to hire a small development team later this year, aiming for a projected launch in early 2025."
+            "This web app has been in various stages of development since late 2022. I am currently working to acquire funding, either through grants or charitable donations, and hoping to hire a small development team later this year, aiming for a projected launch in early 2025.",
+            "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
     "True History Brewing": {
@@ -86,7 +87,7 @@
             "CSS"
         ],
         "description": [
-            "This is a 1-player turn-based card game built with React.js, using characters from Marvel Comics. Each round, the player draws a card from their deck and compares the statistics on their card to the statistics on their opponent (the computer)'s card. The player with the higher stat wins the round and takes both cards. The game continues until one player's deck runs out.",
+            "This is a single-player turn-based card game built with React.js, using characters from Marvel Comics. Each round, the player draws a card from their deck and compares the statistics on their card to the statistics on their opponent (the computer)'s card. The player with the higher stat wins the round and takes both cards. The game continues until one player's deck runs out.",
             "The game pulls data from Google's Firebase Realtime Database, and uses React Router for navigation. I integrated the CSSTransition component from React Transition Group to assist with the card flip animations.",
             "I designed and developed Superhero Showdown in 2022 during my time at Juno College, and it is fully responsive and accessible."
         ],
