@@ -1,5 +1,5 @@
 {
-    "work": {
+    "work stuff": {
         "Dana Teagle dot com": {
             "link": "/",
             "description": "Web/software development portfolio"
@@ -39,13 +39,7 @@
             "description": ""
         }
     },
-    "writing": {
-        "Weird Liquid": {
-            "link": "/weird-liquid",
-            "description": "Personal blog, writing archive, etc."
-        }
-    },
-    "resources": {
+    "links & resources": {
         "Ontario Trans I.D. resources": {
             "link": "/trans-id",
             "description": "Documents and resources I've collected for changing your name and/or gender marker with governmental bodies and services in Ontario"
