@@ -9,7 +9,15 @@
             "description": ""
         }
     },
-    "socials": {
+    "social profiles": {
+        "Letterboxd": {
+            "link": "/letterboxd",
+            "description": ""
+        },
+        "Goodreads": {
+            "link": "/goodreads",
+            "description": ""
+        },
         "Instagram": {
             "link": "/instagram",
             "description": ""
@@ -18,20 +26,12 @@
             "link": "/twitter",
             "description": ""
         },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": ""
-        },
         "Bluesky": {
             "link": "/bluesky",
             "description": ""
         },
-        "Letterboxd": {
-            "link": "/letterboxd",
-            "description": ""
-        },
-        "Goodreads": {
-            "link": "/goodreads",
+        "Tumblr": {
+            "link": "/tumblr",
             "description": ""
         },
         "Spotify": {
@@ -48,9 +48,9 @@
             "link": "https://justicetrans.org/en/",
             "description": "Justice & legal info for Two Spirit, trans, non-binary, and gender non-conforming individuals in Canada"
         },
-        "Anti-Trans Legislative Risk Map": {
-            "link": "https://celeste.lgbt/map",
-            "description": "Risk levels of anti-trans legislation and policy in Canadian provinces and territories [resource maintained by Celeste Trianon]"
+        "National Network of Abortion Funds": {
+            "link": "https://abortionfunds.org/",
+            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         },
         "Transfeminine Science": {
             "link": "https://transfemscience.org/",
@@ -67,20 +67,6 @@
         "All the Walls Will Fall": {
             "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
             "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
-        }
-    },
-    "actions": {
-        "House of Commons petition e-4666": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4666",
-            "description": "Petition to the Government of Canada to implement the recommendations from the White Paper on the Status of Trans and Gender Diverse People [closes Mar 7, 2024]"
-        },
-        "House of Commons petition e-4788": {
-            "link": "https://petitions.ourcommons.ca/en/Petition/Details?Petition=e-4788",
-            "description": "Petition to the Government of Canada to sustain its critical funding for the UNRWA amidst the worsening humanitarian crisis in Palestine [closes Mar 14, 2024]"
-        },
-        "National Network of Abortion Funds": {
-            "link": "https://abortionfunds.org/",
-            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         }
     },
     "contact": {
@@ -102,10 +88,6 @@
         },
         "Paypal": {
             "link": "/paypal",
-            "description": ""
-        },
-        "Kofi": {
-            "link": "/kofi",
             "description": ""
         }
     }

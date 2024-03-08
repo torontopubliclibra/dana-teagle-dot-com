@@ -1,9 +1,8 @@
 # Project sites and repos
 /repo https://github.com/torontopubliclibra/dana-teagle-dot-com/
-
+/thb/repo https://github.com/torontopubliclibra/true-history-brewing/
 /syd/repo https://github.com/torontopubliclibra/sydney-gautreau/
-
-/nina/repo https://github.com/torontopubliclibra/nina-milanovski
+/nina/repo https://github.com/torontopubliclibra/nina-milanovski/
 
 /notes https://note-taken-local.netlify.app/
 /notes/repo https://github.com/torontopubliclibra/note-taken/
@@ -13,8 +12,6 @@
 
 /superhero https://superhero-showdown.netlify.app/
 /superhero/repo https://github.com/torontopubliclibra/superhero-showdown/
-
-/thb/repo https://github.com/torontopubliclibra/true-history-brewing/
 
 # Websites and socials
 /discord https://discordapp.com/users/825447165915955200/
