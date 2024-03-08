@@ -21,8 +21,9 @@
             "SCSS"
         ],
         "description": [
-            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and created the site in February 2024. It is fully responsive and includes a JavaScript media carousel for portfolio projects, as well as a contact form."
+            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and created the site in February and March 2024. It is fully responsive and includes a JavaScript media carousel for portfolio projects, as well as a contact form."
         ],
+        "site": "https://ninamilanovski.com",
         "code": "/nina/repo"
     },
     "True History Brewing": {
