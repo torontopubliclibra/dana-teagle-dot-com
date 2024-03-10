@@ -240,7 +240,7 @@ h3 {
 }
 
 // project descriptions
-.project-description p {
+.project-description p, a {
   @include textStyle (18px, center);
 
   // responsive to tablet
