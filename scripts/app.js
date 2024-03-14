@@ -189,7 +189,7 @@ let app = {
                 };
 
                 // format the project heading
-                formattedProject.heading = `<h3>${project.title}</h3>`
+                formattedProject.heading = `<h3>${project.title} (${project.year})</h3>`
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
@@ -227,14 +227,13 @@ let app = {
                         + project.title
                         + ` project description">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
                         + formattedParagraph
-                        + formattedProject.image
                         + `</p>`
                 }
 
                 // if the project has a site link, format a site button
                 if (project.site) {
                     formattedProject.site =
-                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">Site<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
+                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">Website<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
                     };
 
                 // if the project has a code link, format a code button
@@ -246,11 +245,12 @@ let app = {
                 // stitch together all the html for the project
                 return `<div class="project">`
                 + formattedProject.heading
+                + formattedProject.tags
+                + formattedProject.image
                 + `<div class="project-description">`
                 + formattedProject.site
                 + formattedProject.code
                 + formattedProject.description
-                + formattedProject.tags
                 + `</div></div>`
             });
 

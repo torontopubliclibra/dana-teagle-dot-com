@@ -1,6 +1,6 @@
 {
     "Trans I.D.": {
-        "year": "2024",
+        "year": "2025",
         "tags": [
             "TypeScript",
             "Vue.js"
@@ -9,7 +9,8 @@
             "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
             "The site will include a step-by-step guide for each province and territory, as well as a list of resources for each region, and allow users to submit their own resources for review and inclusion. This web app has been in various stages of development since late 2022. I am currently working to acquire funding, either through grants or charitable donations, and hoping to hire a small development team later this year, aiming for a projected launch in early 2025.",
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
-        ]
+        ],
+        "image": "/assets/projects/trans-id.png"
     },
     "True History Brewing": {
         "year": "2024",
@@ -29,7 +30,8 @@
             "The project is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc.). The site's custom design was wireframed using Figma, and styled with SCSS."
         ],
         "site": "https://truehistorybeer.com",
-        "code": "/thb/repo"
+        "code": "/thb/repo",
+        "image": "/assets/projects/true-history-brewing.png"
     },
     "Nina Milanovski": {
         "year": "2024",
@@ -43,7 +45,8 @@
             "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and created the site in February and March 2024. It is fully responsive and includes a JavaScript media carousel for portfolio projects, as well as a contact form."
         ],
         "site": "https://ninamilanovski.com",
-        "code": "/nina/repo"
+        "code": "/nina/repo",
+        "image": "/assets/projects/nina-milanovski.png"
     },
     "Sydney Gautreau": {
         "year": "2024",
@@ -57,7 +60,8 @@
             "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024. The site is fully responsive and includes a contact form."
         ],
         "site": "https://sydneygautreau.com",
-        "code": "/syd/repo"
+        "code": "/syd/repo",
+        "image": "/assets/projects/sydney-gautreau.png"
     },
     "Queer Walk": {
         "year": "2023",
@@ -74,7 +78,8 @@
             "I was the lead developer on the application, working from May to Aug 2023 alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and our project manager Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>Parallel 42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
         "site": "https://queerwalk.ca",
-        "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
+        "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ",
+        "image": "/assets/projects/queer-walk.png"
     },
     "Note Taken": {
         "year": "2023",
@@ -88,7 +93,8 @@
             "This is a notes app built with Angular, Typescript, and SCSS, that stores all inputted data locally without sending anything to a database. Unless deleted, your notes remain secure in the browser on your device until you clear the cache. You can save up to 50 text notes of 140 characters each in various colours. They can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file. I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
         ],
         "site": "/notes",
-        "code": "/notes/repo"
+        "code": "/notes/repo",
+        "image": "/assets/projects/note-taken.png"
     },
     "Superhero Showdown": {
         "year": "2022",
@@ -103,7 +109,8 @@
             "I designed and developed Superhero Showdown in 2022 and have since updated the styling."
         ],
         "site": "/superhero",
-        "code": "/superhero/repo"
+        "code": "/superhero/repo",
+        "image": "/assets/projects/superhero-showdown.png"
     },
     "The Pigeon Hole": {
         "year": "2022",
@@ -118,6 +125,7 @@
             "I originally built the Pigeon Hole in July 2022 during my time at Juno College, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
         ],
         "site": "/pigeon",
-        "code": "/pigeon/repo"
+        "code": "/pigeon/repo",
+        "image": "/assets/projects/the-pigeon-hole.png"
     }
 }

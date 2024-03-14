@@ -919,7 +919,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 24px;
   text-align: center;
   line-height: 1.5;
   color: #282b2c;
@@ -1612,23 +1612,34 @@ header .scroll-down img {
   }
 }
 #projects .projects-container .project {
-  background: rgba(181, 126, 155, 0.8);
+  background: rgba(181, 126, 155, 0.5);
   border: solid #7a91b1 5px;
   margin: 0;
   height: 100%;
   width: calc(50% - 5px);
   max-width: 500px;
 }
+#projects .projects-container .project .project-image {
+  border: solid 4px #7a91b1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  width: calc(100% - 20px);
+  aspect-ratio: 16/7;
+  margin: 0 10px;
+  margin-bottom: 3px;
+}
 #projects .projects-container .project .tags {
-  min-width: 100%;
+  width: calc(100% - 20px);
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   gap: 10px;
   background-color: rgba(243, 232, 233, 0.8);
   border: solid 4px #7a91b1;
-  margin: 0 15px;
-  margin-top: 0px;
+  margin: 10px;
+  margin-top: 0;
   padding: 10px 15px;
 }
 #projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
@@ -1645,7 +1656,6 @@ header .scroll-down img {
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .tags {
-    margin: 0;
     justify-content: left;
   }
   #projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
@@ -1668,6 +1678,7 @@ header .scroll-down img {
   align-items: initial;
   padding: 10px;
   padding-top: 0;
+  margin-bottom: 2px;
   overflow: hidden;
   gap: 10px;
 }

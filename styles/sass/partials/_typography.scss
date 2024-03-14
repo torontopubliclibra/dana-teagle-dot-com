@@ -191,7 +191,7 @@ h2 {
 
 // project headings
 h3 {
-  @include textStyle (22px, center, 1.5);
+  @include textStyle (24px, center, 1.5);
   font-weight: 600;
   font-style: italic;
   margin: 0 auto;
