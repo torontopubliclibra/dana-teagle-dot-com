@@ -1,37 +1,33 @@
 {
     "work stuff": {
-        "Dana Teagle dot com": {
+        "Web/software development portfolio": {
             "link": "/",
-            "description": "Web/software development portfolio"
+            "description": "Dana Teagle dot com"
+        },
+        "Instagram": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
         },
         "Github": {
             "link": "/github",
-            "description": ""
+            "description": "torontopubliclibra"
         }
     },
     "social profiles": {
+        "Instagram": {
+            "link": "/tpl-insta",
+            "description": "[at] torontopubliclibra"
+        },
+        "Twitter": {
+            "link": "/twitter",
+            "description": "[at] rustbecomesher"
+        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": ""
         },
         "Goodreads": {
             "link": "/goodreads",
-            "description": ""
-        },
-        "Instagram": {
-            "link": "/instagram",
-            "description": ""
-        },
-        "Twitter": {
-            "link": "/twitter",
-            "description": ""
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": ""
-        },
-        "Tumblr": {
-            "link": "/tumblr",
             "description": ""
         },
         "Spotify": {
