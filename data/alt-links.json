@@ -1,19 +1,5 @@
 {
-    "work stuff": {
-        "Web/software development portfolio": {
-            "link": "/",
-            "description": "Dana Teagle dot com"
-        },
-        "Instagram": {
-            "link": "/dt-insta",
-            "description": "[at] danateagledotcom"
-        },
-        "Github": {
-            "link": "/github",
-            "description": "torontopubliclibra"
-        }
-    },
-    "social profiles": {
+        "social profiles": {
         "Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
@@ -35,7 +21,21 @@
             "description": ""
         }
     },
-    "links & resources": {
+        "work stuff": {
+        "Web/software development portfolio": {
+            "link": "/",
+            "description": "Dana Teagle dot com"
+        },
+        "Instagram": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
+        },
+        "Github": {
+            "link": "/github",
+            "description": "torontopubliclibra"
+        }
+    },
+        "links & resources": {
         "Ontario Trans I.D. resources": {
             "link": "/trans-id",
             "description": "Documents and resources I've collected for changing your name and/or gender marker with governmental bodies and services in Ontario"
