@@ -6,8 +6,8 @@
             "Vue.js"
         ],
         "description": [
-            "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
-            "The site will include a step-by-step guide for each province and territory, as well as a list of resources for each region, and allow users to submit their own resources for review and inclusion. This web app has been in various stages of development since late 2022. I am currently working to acquire funding, either through grants or charitable donations, and hoping to hire a small development team later this year, aiming for a projected launch in early 2025.",
+            "Trans I.D. will be an online hub serving transgender, Two-Spirit, non-binary, or otherwise gender non-conforming individuals living in Ontario. It will provide resources on all the steps required in changing one's name and/or legal gender marker with government services and various other organizations.",
+            "I have led workshops on name and gender marker changes for 2SLGBTQI+ folks in Ontario since 2021. I am currently working to acquire funding for this application, and hoping to hire a small development team later this year, aiming for a projected launch in 2025 or 2026.",
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
@@ -28,8 +28,7 @@
             "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024, and will be updated in the near future with full storefront functionality.",
             "The project is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc.). The site's custom design was wireframed using Figma, and styled with SCSS."
         ],
-        "site": "https://truehistorybeer.com",
-        "code": "/thb/repo"
+        "site": "https://truehistorybeer.com"
     },
     "Nina Milanovski": {
         "year": "2024",
