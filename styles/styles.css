@@ -437,14 +437,14 @@ html.alt main .alt-categories ul {
   justify-content: space-around;
   margin: 10px 0;
   padding: 0;
-  gap: 10px;
+  gap: 5px;
 }
 html.alt main .alt-categories ul li a {
   display: flex;
   align-items: center;
   border: solid #7a91b1 3px;
   padding: 5px 10px 8px 15px;
-  font-size: 14px;
+  font-size: 12px;
   color: #f3e8e9;
   text-decoration: none;
 }
