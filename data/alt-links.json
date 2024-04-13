@@ -1,5 +1,5 @@
 {
-        "social profiles": {
+    "social profiles": {
         "Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
@@ -21,7 +21,7 @@
             "description": ""
         }
     },
-        "work stuff": {
+    "work stuff": {
         "Web/software development portfolio": {
             "link": "/",
             "description": "Dana Teagle dot com"
@@ -35,7 +35,21 @@
             "description": "torontopubliclibra"
         }
     },
-        "links & resources": {
+    "fundraisers & petitions": {
+        "No Deal No AGO": {
+            "link": "http://nodealnoago.ca/",
+            "description": "Pledge to not cross the picket line of over 400 Art Gallery of Ontario (AGO) workers on strike for better hours, liveable wages, and a future at the gallery."
+        },
+        "Remy Hatfield-Gardner GoFundMe": {
+            "link": "https://www.gofundme.com/f/help-remy-unclench-their-jaw-and-fix-their-teeth",
+            "description": "Fundraiser to help Rémy unclench their jaw and fix their teeth"
+        },
+        "House of Commons petition e-4905": {
+            "link": "https://www.gofundme.com/f/help-remy-unclench-their-jaw-and-fix-their-teeth",
+            "description": "Petition calling upon the Minister of Immigration, Refugees and Citizenship to ensure Canadians in Gaza can seek refuge in Canada and expanding access to temporary resident visas, and implement a visa program akin to CUAET for Palestinians."
+        }
+    },
+    "links & resources": {
         "Ontario Trans I.D. resources": {
             "link": "/trans-id",
             "description": "Documents and resources I've collected for changing your name and/or gender marker with governmental bodies and services in Ontario"
@@ -47,10 +61,6 @@
         "National Network of Abortion Funds": {
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        },
-        "Transfeminine Science": {
-            "link": "https://transfemscience.org/",
-            "description": "Research & info on transfeminine hormone therapy"
         },
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
