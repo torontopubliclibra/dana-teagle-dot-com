@@ -8,6 +8,10 @@
             "link": "/twitter",
             "description": "[at] rustbecomesher"
         },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.bsky.social"
+        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": ""
@@ -71,7 +75,7 @@
             "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
         }
     },
-    "contact": {
+    "contact & pay": {
         "Personal email": {
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
@@ -86,6 +90,10 @@
         },
         "Paypal": {
             "link": "/paypal",
+            "description": ""
+        },
+        "Kofi": {
+            "link": "/kofi",
             "description": ""
         }
     }
