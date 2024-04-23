@@ -1515,10 +1515,13 @@ header .scroll-down img {
     margin: 0;
   }
   #about .about-content .basic-info .basic-info-caption {
+    width: 100%;
     font-size: 14px;
     line-height: 25px;
   }
   #about .about-content .basic-info .basic-info-caption .item {
+    display: block;
+    width: 100%;
     padding: 0 8px;
   }
 }
@@ -1530,7 +1533,6 @@ header .scroll-down img {
     align-items: flex-start;
   }
   #about .about-content .basic-info .basic-info-caption {
-    width: 100%;
     text-align: left;
   }
 }
