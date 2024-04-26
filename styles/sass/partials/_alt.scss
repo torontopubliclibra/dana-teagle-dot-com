@@ -146,7 +146,7 @@ html.alt {
         }
 
         .alt-categories {
-            width: 85%;
+            width: 100%;
             max-width: 900px;
 
             ul {
@@ -187,6 +187,7 @@ html.alt {
             }
             // responsive to mobile
             @media only screen and (max-width: $tablet) {
+                width: 85%;
                 margin: 0;
 
                 ul {

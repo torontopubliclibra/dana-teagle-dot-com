@@ -25,20 +25,6 @@
             "description": ""
         }
     },
-    "work stuff": {
-        "Web/software development portfolio": {
-            "link": "/",
-            "description": "Dana Teagle dot com"
-        },
-        "Instagram": {
-            "link": "/dt-insta",
-            "description": "[at] danateagledotcom"
-        },
-        "Github": {
-            "link": "/github",
-            "description": "torontopubliclibra"
-        }
-    },
     "fundraisers & petitions": {
         "No Deal No AGO": {
             "link": "http://nodealnoago.ca/",
@@ -73,6 +59,20 @@
         "All the Walls Will Fall": {
             "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
             "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
+        }
+    },
+    "work stuff": {
+        "Dana Teagle dot com": {
+            "link": "/",
+            "description": "Dana Teagle | Web designer & software developer"
+        },
+        "Instagram": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
+        },
+        "Github": {
+            "link": "/github",
+            "description": "torontopubliclibra"
         }
     },
     "contact & pay": {

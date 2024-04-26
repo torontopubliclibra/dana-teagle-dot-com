@@ -427,7 +427,7 @@ html.alt main hr:last-of-type {
   }
 }
 html.alt main .alt-categories {
-  width: 85%;
+  width: 100%;
   max-width: 900px;
 }
 html.alt main .alt-categories ul {
@@ -464,6 +464,7 @@ html.alt main .alt-categories ul li a img {
 }
 @media only screen and (max-width: 970px) {
   html.alt main .alt-categories {
+    width: 85%;
     margin: 0;
   }
   html.alt main .alt-categories ul {
