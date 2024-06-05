@@ -26,13 +26,13 @@
         }
     },
     "fundraisers & petitions": {
-        "No Deal No AGO": {
-            "link": "http://nodealnoago.ca/",
-            "description": "Pledge to not cross the picket line of over 400 Art Gallery of Ontario (AGO) workers on strike for better hours, liveable wages, and a future at the gallery."
+        "help dana rusty recover from surgery": {
+            "link": "https://www.gofundme.com/f/rusty-surgery-recovery",
+            "description": "Raising funds for a 6-8 week recovery period following my long-awaited transition-related surgery in Sept 2024"
         },
-        "House of Commons petition e-4905": {
-            "link": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-4905",
-            "description": "Petition calling upon the Minister of Immigration, Refugees and Citizenship to ensure Canadians in Gaza can seek refuge in Canada and expanding access to temporary resident visas, and implement a visa program akin to CUAET for Palestinians."
+        "Support for Tents in Gaza": {
+            "link": "https://www.gofundme.com/f/support-for-marginalized-refugees-in-jordan",
+            "description": "Aiming to secure, purchase, and distribute tents in Gaza"
         }
     },
     "links & resources": {
@@ -51,14 +51,6 @@
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
-        },
-        "Donate a Mask": {
-            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
-            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
-        },
-        "All the Walls Will Fall": {
-            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
-            "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
         }
     },
     "work stuff": {
@@ -90,10 +82,6 @@
         },
         "Paypal": {
             "link": "/paypal",
-            "description": ""
-        },
-        "Kofi": {
-            "link": "/kofi",
             "description": ""
         }
     }
