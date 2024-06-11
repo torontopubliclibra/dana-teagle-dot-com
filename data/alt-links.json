@@ -29,6 +29,20 @@
             "description": ""
         }
     },
+    "work stuff": {
+        "Dana Teagle dot com": {
+            "link": "/",
+            "description": "Dana Teagle | Designer & web/software developer"
+        },
+        "Instagram": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
+        },
+        "Github": {
+            "link": "/github",
+            "description": "torontopubliclibra"
+        }
+    },
     "fundraisers & petitions": {
         "help dana rusty recover from surgery": {
             "link": "https://www.gofundme.com/f/rusty-surgery-recovery",
@@ -55,20 +69,6 @@
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
-        }
-    },
-    "work stuff": {
-        "Dana Teagle dot com": {
-            "link": "/",
-            "description": "Dana Teagle | Web designer & software developer"
-        },
-        "Instagram": {
-            "link": "/dt-insta",
-            "description": "[at] danateagledotcom"
-        },
-        "Github": {
-            "link": "/github",
-            "description": "torontopubliclibra"
         }
     },
     "contact & pay": {
