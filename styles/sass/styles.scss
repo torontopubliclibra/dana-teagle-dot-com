@@ -159,24 +159,33 @@ header {
     }
 
     .view-toggle {
+        background-color: rgba($color2, 0.75);
         position: absolute;
         bottom: 20px;
         right: 20px;
         font-size: 0.9rem;
 
+        &:hover {
+            background-color: rgba($color3, 0.75);
+        }
+
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
+            top: 50px;
             bottom: unset;
-            top: 55px;
             max-height: 100%;
-            left: 20px;
+            left: 15px;
             right: unset;
             font-size: 0.8rem;
+
+            &:hover {
+                background-color: rgba($color2, 0.75);
+            }
         }
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            top: 75px;
+            top: 70px;
         }
         
     }

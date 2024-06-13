@@ -2,7 +2,7 @@ html {
   line-height: 1.75;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #282b2c;
+  background-color: #f3e6e7;
 }
 
 @font-face {
@@ -18,40 +18,56 @@ body {
 
 body, .button {
   font-family: "Source Code Pro", monospace;
-  font-weight: 300;
-  color: #f3e8e9;
+  font-weight: 600;
+  color: #282b2c;
   text-transform: lowercase;
+  font-size: 16px;
+
+  @media only screen and (max-width: 970px) {
+    font-size: 15px;
+  }
 }
 
 h1, h2, h3 {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h1 {
+  line-height: 1.15;
   margin: 0;
-  margin-top: 75px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   font-size: 50px;
   padding: 0;
-  border-bottom: solid 3px #B57E9B;
+  padding-bottom: 30px;
+  border-bottom: solid 4px #B57E9B;
   font-style: italic;
+
+  @media only screen and (max-width: 970px) {
+    font-size: 40px;
+  }
 }
 
 h2 {
   font-size: 30px;
+
+  @media only screen and (max-width: 970px) {
+    font-size: 25px;
+  }
 }
 
 h3 {
   font-size: 20px;
   margin: 15px 0;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 nav a {
-  color: #B57E9B;
+  color: #674256;
 }
 
 nav h3 {
-  margin-top: 75px;
+  margin-top: 20px;
 }
 
 a.view-toggle {
@@ -59,7 +75,7 @@ a.view-toggle {
 }
 
 a {
-  color: #7a91b1;
+  color: #4a5a70;
   font-weight: 500;
   font-style: italic;
 }
@@ -80,7 +96,7 @@ a {
 hr {
   margin: 30px 0;
   border: none;
-  border-top: 2px dotted #84A59D;
+  border-top: 4px dotted #84A59D;
 
   &.classic-hr:last-of-type {
     display: none;
@@ -88,9 +104,9 @@ hr {
 }
 
 section {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 footer {
-  margin: 75px 0;
+  margin: 50px 0;
 }

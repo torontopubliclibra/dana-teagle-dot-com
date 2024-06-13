@@ -1134,24 +1134,31 @@ header {
   }
 }
 header .view-toggle {
+  background-color: rgba(181, 126, 155, 0.75);
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 0.9rem;
 }
+header .view-toggle:hover {
+  background-color: rgba(122, 145, 177, 0.75);
+}
 @media only screen and (max-width: 970px) {
   header .view-toggle {
+    top: 50px;
     bottom: unset;
-    top: 55px;
     max-height: 100%;
-    left: 20px;
+    left: 15px;
     right: unset;
     font-size: 0.8rem;
+  }
+  header .view-toggle:hover {
+    background-color: rgba(181, 126, 155, 0.75);
   }
 }
 @media only screen and (max-width: 768px) {
   header .view-toggle {
-    top: 75px;
+    top: 70px;
   }
 }
 header nav {
