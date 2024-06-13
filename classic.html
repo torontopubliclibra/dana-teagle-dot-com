@@ -3,9 +3,9 @@
   <head>
 
     <!-- title, description, and browser metadata -->
-    <title>dana teagle | designer & web/software developer</title>
-    <meta name="title" content="dana teagle | designer & web/software developer" />
-    <meta property="og:title" content="dana teagle | designer & web/software developer" />
+    <title>dana teagle | designer & web/software developer [ classic view ]</title>
+    <meta name="title" content="dana teagle | designer & web/software developer [ classic view ]" />
+    <meta property="og:title" content="dana teagle | designer & web/software developer [ classic view ]" />
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="theme-color" content="#B57E9B"/>
@@ -24,42 +24,32 @@
     <!-- preloaded typeface -->
     <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
 
-    <!-- preloaded icons -->
-    <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/arrow-up.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/collapse-up.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/clipboard.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/clipboard-success.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/expand-down.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/external-link.svg" as="image" type="image/svg+xml" />
-    <link rel="preload" href="./assets/icons/menu-lines.svg" as="image" type="image/svg+xml" />
-
     <!-- preloaded scripts -->
     <link rel="preload" href="./scripts/jquery-3.7.0.min.js" as="script" />
     <link rel="preload" href="./scripts/app.js" as="script" />
 
     <!-- style import -->
-    <link rel="stylesheet" href="./styles/styles.css"/>
+    <link rel="stylesheet" href="./styles/classic-styles.css"/>
 
   </head>
-  <body>
+  <body id="plain-text">
 
     <!-- header section-->
     <header id="home">
       <div class="wrapper"> 
-        
+
+        <!-- title section -->
+        <div class="title">
+          <h1>dana teagle dot com</h1>
+        </div>
+
         <!-- nav section -->
         <nav>
 
-          <!-- mobile menu button -->
-          <div class="mobile-menu">
-            <button aria-label="Click to open navigation">
-              <img src="./assets/icons/menu-lines.svg" class="menu-icon" alt="mobile menu icon">
-            </button>
-            <p class="nav-name">dana teagle dot com</p>
-          </div>
+          <a class="button view-toggle" href="/">Default view</a>
 
           <!-- nav list -->
+          <h3>Jump to:</h3>
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -67,18 +57,6 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-
-        <!-- title section -->
-        <div class="title highlight">
-          <h1>dana teagle dot com</h1>
-        </div>
-
-        <!-- scroll down icon -->
-        <div class="scroll-down" title="Scroll down the page">
-          <img src="./assets/icons/arrow-down.svg" alt="scroll down icon" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
-        </div>
-
-        <a href="/classic" class="button view-toggle">Classic View</a>
         
       </div>
     </header>
@@ -105,7 +83,6 @@
               I've spent most of my life making neat things on the internet, between creating graphics, designing and developing websites and software, managing social media, and editing video content. These days, I primarily work as an independent contractor for businesses, freelance professionals, and non-profit organizations.</p>
             <p>
               I'm especially passionate about accessible equity-centered design, free and open-source software, and data privacy, as well as projects that intersect with advocacy (particularly for queer and trans communities).
-              <!-- Please feel free to check out my <a href="/data/DanaRosamundTeagleResume-100324.pdf" target="_blank" title="Download Dana's resume (last updated 10/03/24)">most recent resume</a>. -->
             </p>
             <hr>
             <p>
@@ -116,6 +93,7 @@
           </div>
         </div>
       </div>
+      <hr/>
     </section>
 
     <!-- projects section -->
@@ -124,17 +102,14 @@
 
         <!-- projects heading -->
         <h2>Some projects I've worked on</h2>
-        <hr/>
 
         <!-- javascript fallback error message -->
         <p class="js-disabled">Sorry, but this page isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason (and honestly I respect your choice). If that's not the case however, please check back later.</p>
 
-        <!-- projects navigation (injected by jquery) -->
-        <div class="projects-nav"></div>
-
         <!-- projects container (injected by jquery) -->
         <div class="projects-container"></div>
 
+        <hr/>
       </div>
     </section>
 
@@ -158,6 +133,7 @@
           </div>
         </div>
       </div>
+      <hr/>
     </section>
 
     <!-- contact section -->
@@ -175,22 +151,12 @@
         </div>
 
       </div>
+      <hr/>
     </section>
 
     <!-- footer section -->
     <footer>
-      <div class="wrapper">
-
-        <!-- scroll to top button -->
-        <div class="button scroll-to-top" title="Go back to top of page" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
-          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
-          <p class="button-label">Back to top</p>
-          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
-        </div>
-
-        <hr/>
-
-        <!-- development credit -->
+      <div class="wrapper"><!-- development credit -->
         <p class="credit">
           This site was developed by Dana Teagle and last updated in June 2024
           <br/><br/>

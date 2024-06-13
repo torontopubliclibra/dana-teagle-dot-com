@@ -1,0 +1,96 @@
+html {
+  line-height: 1.75;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #282b2c;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
+  font-display: swap;
+}
+
+body {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+body, .button {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  color: #f3e8e9;
+  text-transform: lowercase;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 75px;
+  font-size: 50px;
+  padding: 0;
+  border-bottom: solid 3px #B57E9B;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  margin-top: 30px;
+}
+
+nav a {
+  color: #B57E9B;
+}
+
+nav h3 {
+  margin-top: 75px;
+}
+
+a.view-toggle {
+  line-height: 5;
+}
+
+a {
+  color: #7a91b1;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+.read-more, .tags, a img {
+  display: none;
+}
+
+.button {
+  text-decoration: none;
+  margin-right: 10px;
+  border: 2px solid #B57E9B;
+  padding: 10px 15px;
+  line-height: 2.5;
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 2px dotted #84A59D;
+
+  &.classic-hr:last-of-type {
+    display: none;
+  }
+}
+
+section {
+  margin-top: 100px;
+}
+
+footer {
+  margin: 75px 0;
+}

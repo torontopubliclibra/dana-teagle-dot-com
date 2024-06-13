@@ -84,6 +84,10 @@ hr {
     width: 100%;
     border: solid $color1 2px;
 
+    &.classic-hr {
+        display: none;
+    }
+
     // responsive to mobile
     @media only screen and (max-width: $mobile) {
         width: 85%;
@@ -152,6 +156,29 @@ header {
         background: linear-gradient(120deg, rgba($color3, 0.9) 0%, rgba($color3, 0.9) 2%, rgba($color1, 0.25) 60%, rgba($color1, 0.9) 98%, rgba($color1, 0.9) 100%);
         background-size: 200% 200%;
         animation: 15s infinite ease-in-out gradient;
+    }
+
+    .view-toggle {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.9rem;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            bottom: unset;
+            top: 55px;
+            max-height: 100%;
+            left: 20px;
+            right: unset;
+            font-size: 0.8rem;
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            top: 75px;
+        }
+        
     }
 
     // navigation
@@ -359,10 +386,6 @@ header {
         .services-description {
             @include flex(column, 20px);
             gap: 20px;
-        }
-
-        .services-list p {
-            font-size: 17px;
         }
         
         .service {

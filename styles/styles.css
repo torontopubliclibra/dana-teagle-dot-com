@@ -44,8 +44,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 b, strong {
@@ -209,6 +208,8 @@ template {
 }
 
 html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -224,8 +225,7 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -328,9 +328,7 @@ html.alt h1 {
   font-style: normal;
   font-size: 40px;
   margin: 15px;
-  -webkit-user-select: initial;
-     -moz-user-select: initial;
-          user-select: initial;
+  user-select: initial;
 }
 html.alt h2, html.alt h3 {
   width: 85%;
@@ -792,9 +790,7 @@ a:hover, a:focus {
 }
 
 .button, nav ul li a {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 @media only screen and (max-width: 970px) {
   .button, nav ul li a {
@@ -871,9 +867,7 @@ h1 {
   font-weight: 600;
   width: 100%;
   margin: 0 auto;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 h1:hover, h1:focus {
   font-style: italic;
@@ -1072,6 +1066,9 @@ hr {
   width: 100%;
   border: solid #84A59D 2px;
 }
+hr.classic-hr {
+  display: none;
+}
 @media only screen and (max-width: 768px) {
   hr {
     width: 85%;
@@ -1136,6 +1133,27 @@ header {
     animation: 15s infinite ease-in-out gradient;
   }
 }
+header .view-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 970px) {
+  header .view-toggle {
+    bottom: unset;
+    top: 55px;
+    max-height: 100%;
+    left: 20px;
+    right: unset;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .view-toggle {
+    top: 75px;
+  }
+}
 header nav {
   opacity: 0;
   animation: fade-in 0.4s ease-in 0.4s forwards;
@@ -1182,9 +1200,7 @@ header nav .mobile-menu {
   }
   header nav .mobile-menu .nav-name {
     visibility: hidden;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     float: right;
     margin: 0 10px;
     min-height: 52px;
@@ -1350,9 +1366,6 @@ header .scroll-down img {
   justify-content: initial;
   align-items: initial;
   gap: 20px;
-}
-#services .services-content .services-list p {
-  font-size: 17px;
 }
 #services .services-content .service {
   background: rgba(132, 165, 157, 0.3);
