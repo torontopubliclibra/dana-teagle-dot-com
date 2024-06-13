@@ -1448,7 +1448,7 @@ header .scroll-down img {
     width: 85%;
     margin: 0;
   }
-  #services .services-content .services-description p, #services .services-content .services-description a {
+  #services .services-content .services-description p, #services .services-content .services-description a, #services .services-content .services-list p, #services .services-content .services-list a {
     font-size: 17px;
   }
   #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
