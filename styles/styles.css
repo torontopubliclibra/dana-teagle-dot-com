@@ -1642,7 +1642,7 @@ header .scroll-down img {
   margin: 0;
   height: 100%;
   width: calc(50% - 5px);
-  max-width: 500px;
+  max-width: 400px;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
