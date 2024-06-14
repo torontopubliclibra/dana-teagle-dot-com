@@ -11,10 +11,46 @@
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
+    "Connect Fund": {
+        "year": "2024",
+        "tags": [
+            "Webflow",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "description": [
+            "Connect Fund is a not-for-profit organization aiming to provide comprehensive and widespread funding to 2SLGBTQ+ communities in Ontario to access the healthcare they need, led by Dr. Kate Greenaway, and based in Toronto, Ontario.",
+            "I am currently working with their team to launch a new web platform for receiving donations and supporting clients, due to launch in summer 2024."
+        ]
+    },
+    "WEST83 Consulting": {
+        "year": "2024",
+        "tags": [
+            "Figma",
+            "Google-sites"
+        ],
+        "description": [
+            "This is a branding and website project I am currently working on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. The site is due to launch in summer 2024."
+        ]
+    },
+    "Naomi McCarroll-Butler": {
+        "year": "2024",
+        "tags": [
+            "Jquery",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a portfolio website I am designing and building for Naomi McCarroll-Butler, a saxophonist, clarinetist, and instrument maker based in Montréal and Toronto. The site is currently due to launch in summer 2024."
+        ]
+    },
     "True History Brewing": {
         "year": "2024",
         "tags": [
             "JavaScript",
+            "Figma",
             "React.js",
             "Remix",
             "Hydrogen",
@@ -118,5 +154,29 @@
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
+    },
+    "Body Stories Dance": {
+        "year": "2021",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for Body Stories Dance Education & Performance, a dance business based in Manitoulin, Ontario. The site was originally built with Squarespace and JavaScript in 2021."
+        ],
+        "site": "https://www.bodystoriesdance.com/",
+        "code": ""
+    },
+    "The Crevice": {
+        "year": "2021",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace and JavaScript in 2021."
+        ],
+        "site": "https://thecrevice.ca/",
+        "code": ""
     }
 }
