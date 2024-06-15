@@ -6,16 +6,52 @@
             "Vue.js"
         ],
         "description": [
-            "Trans I.D. will be an online hub providing resources for trans, non-binary, Two-Spirit, or otherwise gender non-conforming individuals living in Canada on how to change their name and/or legal gender marker with governments and services in Canada.",
-            "The site will include a step-by-step guide for each province and territory, as well as a list of resources for each region, and allow users to submit their own resources for review and inclusion. This web app has been in various stages of development since late 2022. I am currently working to acquire funding, either through grants or charitable donations, and hoping to hire a small development team later this year, aiming for a projected launch in early 2025.",
+            "Trans I.D. will be an online hub serving transgender, Two-Spirit, non-binary, or otherwise gender non-conforming individuals living in Ontario. It will provide resources on all the steps required in changing one's name and/or legal gender marker with government services and various other organizations.",
+            "I have led workshops on name and gender marker changes for 2SLGBTQI+ folks in Ontario since 2021. I am currently working to acquire funding for this application, and hoping to hire a small development team later this year, aiming for a projected launch in 2025 or 2026.",
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ],
         "image": "/assets/projects/trans-id.png"
+    },
+    "Connect Fund": {
+        "year": "2024",
+        "tags": [
+            "Webflow",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "description": [
+            "Connect Fund is a not-for-profit organization aiming to provide comprehensive and widespread funding to 2SLGBTQ+ communities in Ontario to access the healthcare they need, led by Dr. Kate Greenaway, and based in Toronto, Ontario.",
+            "I am currently working with their team to launch a new web platform for receiving donations and supporting clients, due to launch in summer 2024."
+        ]
+    },
+    "WEST83 Consulting": {
+        "year": "2024",
+        "tags": [
+            "Figma",
+            "Google-sites"
+        ],
+        "description": [
+            "This is a branding and website project I am currently working on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. The site is due to launch in summer 2024."
+        ]
+    },
+    "Naomi McCarroll-Butler": {
+        "year": "2024",
+        "tags": [
+            "Jquery",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a portfolio website I am designing and building for Naomi McCarroll-Butler, a saxophonist, clarinetist, and instrument maker based in Montréal and Toronto. The site is currently due to launch in summer 2024."
+        ]
     },
     "True History Brewing": {
         "year": "2024",
         "tags": [
             "JavaScript",
+            "Figma",
             "React.js",
             "Remix",
             "Hydrogen",
@@ -29,9 +65,7 @@
             "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024, and will be updated in the near future with full storefront functionality.",
             "The project is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc.). The site's custom design was wireframed using Figma, and styled with SCSS."
         ],
-        "site": "https://truehistorybeer.com",
-        "code": "/thb/repo",
-        "image": "/assets/projects/true-history-brewing.png"
+        "site": "https://truehistorybeer.com"
     },
     "Nina Milanovski": {
         "year": "2024",
@@ -125,7 +159,30 @@
             "I originally built the Pigeon Hole in July 2022 during my time at Juno College, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
         ],
         "site": "/pigeon",
-        "code": "/pigeon/repo",
-        "image": "/assets/projects/the-pigeon-hole.png"
+        "code": "/pigeon/repo"
+    },
+    "Body Stories Dance": {
+        "year": "2021",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for Body Stories Dance Education & Performance, a dance business based in Manitoulin, Ontario. The site was originally built with Squarespace and JavaScript in 2021."
+        ],
+        "site": "https://www.bodystoriesdance.com/",
+        "code": ""
+    },
+    "The Crevice": {
+        "year": "2021",
+        "tags": [
+            "Squarespace",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace and JavaScript in 2021."
+        ],
+        "site": "https://thecrevice.ca/",
+        "code": ""
     }
 }

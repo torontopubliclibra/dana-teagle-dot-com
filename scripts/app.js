@@ -251,7 +251,8 @@ let app = {
                 + formattedProject.site
                 + formattedProject.code
                 + formattedProject.description
-                + `</div></div>`
+                + formattedProject.tags
+                + `</div></div><hr class="classic-hr"/>`
             });
 
             // stitch the html for each of the projects together and add that the projects container

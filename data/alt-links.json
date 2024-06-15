@@ -1,42 +1,52 @@
 {
-    "work stuff": {
-        "Dana Teagle dot com": {
-            "link": "/",
-            "description": "Web/software development portfolio"
-        },
-        "Github": {
-            "link": "/github",
-            "description": ""
-        }
-    },
     "social profiles": {
+        "Instagram": {
+            "link": "/tpl-insta",
+            "description": "[at] torontopubliclibra"
+        },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.bsky.social"
+        },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "[at] torontopubliclibra"
+        },
         "Letterboxd": {
             "link": "/letterboxd",
-            "description": ""
+            "description": "[at] torontolibra"
         },
         "Goodreads": {
             "link": "/goodreads",
             "description": ""
         },
-        "Instagram": {
-            "link": "/instagram",
-            "description": ""
-        },
-        "Twitter": {
-            "link": "/twitter",
-            "description": ""
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": ""
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": ""
-        },
         "Spotify": {
             "link": "/spotify",
             "description": ""
+        }
+    },
+    "work stuff": {
+        "Dana Teagle dot com": {
+            "link": "/",
+            "description": "Dana Teagle | Designer & web/software developer"
+        },
+        "Instagram": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
+        },
+        "Github": {
+            "link": "/github",
+            "description": "torontopubliclibra"
+        }
+    },
+    "fundraisers & petitions": {
+        "help dana rusty recover from surgery": {
+            "link": "https://www.gofundme.com/f/rusty-surgery-recovery",
+            "description": "Raising funds for a 6-8 week recovery period following my long-awaited transition-related surgery in Sept 2024"
+        },
+        "Support for Tents in Gaza": {
+            "link": "https://www.gofundme.com/f/support-for-marginalized-refugees-in-jordan",
+            "description": "Aiming to secure, purchase, and distribute tents in Gaza"
         }
     },
     "links & resources": {
@@ -52,24 +62,12 @@
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         },
-        "Transfeminine Science": {
-            "link": "https://transfemscience.org/",
-            "description": "Research & info on transfeminine hormone therapy"
-        },
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
-        },
-        "Donate a Mask": {
-            "link": "https://ebsecan.atlassian.net/servicedesk/customer/portals/",
-            "description": "Free delivery of N95 masks and/or COVID rapid tests to individuals, familes, and organizations across Canada"
-        },
-        "All the Walls Will Fall": {
-            "link": "https://docs.google.com/document/d/1ol9GjNwTo99mPzXnRgL0ZLvs-fw0vc6MEPBJhuJHtbo/mobilebasic",
-            "description": "2023 Palestinian liberation resource list [curated by the Palestinian Youth Movement]"
         }
     },
-    "contact": {
+    "contact & pay": {
         "Personal email": {
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
@@ -80,10 +78,6 @@
         },
         "PGP key": {
             "link": "/data/rusty-pgp.asc",
-            "description": ""
-        },
-        "Discord": {
-            "link": "/discord",
             "description": ""
         },
         "Paypal": {
