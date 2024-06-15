@@ -676,7 +676,7 @@ header {
             margin: 0;
             height: 100%;
             width: calc(50% - 5px);
-            max-width: 400px;
+            max-width: 380px;
 
             .tags {
                 min-width: 100%;
@@ -730,6 +730,12 @@ header {
                 padding-top: 0;
                 overflow: hidden;
                 gap: 10px;
+
+                .project-img {
+                    max-width: 100%;
+                    border: solid $color2 4px;
+                    margin-bottom: 10px;
+                }
 
                 // buttons
                 .button {
