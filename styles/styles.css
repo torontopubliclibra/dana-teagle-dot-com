@@ -1642,7 +1642,7 @@ header .scroll-down img {
   margin: 0;
   height: 100%;
   width: calc(50% - 5px);
-  max-width: 400px;
+  max-width: 380px;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
@@ -1695,6 +1695,11 @@ header .scroll-down img {
   padding-top: 0;
   overflow: hidden;
   gap: 10px;
+}
+#projects .projects-container .project .project-description .project-img {
+  max-width: 100%;
+  border: solid #B57E9B 4px;
+  margin-bottom: 10px;
 }
 #projects .projects-container .project .project-description .button {
   display: flex;

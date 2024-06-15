@@ -28,6 +28,7 @@
         "year": "2024",
         "tags": [
             "Figma",
+            "Affinity-designer",
             "Google-sites"
         ],
         "description": [
@@ -37,6 +38,7 @@
     "Naomi McCarroll-Butler": {
         "year": "2024",
         "tags": [
+            "Figma",
             "Jquery",
             "HTML",
             "CSS",
@@ -53,9 +55,7 @@
             "Figma",
             "React.js",
             "Remix",
-            "Hydrogen",
             "Shopify",
-            "GraphQL",
             "CSS",
             "SCSS",
             "Strapi"

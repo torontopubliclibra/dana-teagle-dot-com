@@ -78,7 +78,7 @@ let app = {
             app.projects.filter = filter;
 
             // intialize the filters array with just 'all'
-            let projectFilters = ["All"];
+            let projectFilters = [];
 
             if (app.projects.data) {
                 app.elements.errorMessage.html(``);
@@ -94,26 +94,14 @@ let app = {
                     projectFilters = projectFilters.filter(filter => filter !== tag).concat([tag]);
                 });
             });
-
-            // sort the project filters
-            projectFilters = projectFilters.sort((a, b) => {
-
-                // put 'all' first
-                if (a === "All") {
-                    return -1;
-                } else if (b === "All") {
-                    return 1;
-                // and then sort the rest alphabetically
-                } else {
-                    return a > b;
-                };
-            });
+            
+            projectFilters = ["All", ...projectFilters.sort()]
 
             // if there are more than 3 project filters
             if (projectFilters.length > 3) {
                 
                 // map out those filters
-                projectFilters = projectFilters.sort().map((filter) => {
+                projectFilters = projectFilters.map((filter) => {
 
                     // set the filter name to an empty string
                     let filterName = '';
@@ -226,8 +214,8 @@ let app = {
                         `<button class="button read-more" title="`
                         + project.title
                         + ` project description">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
+                        // + `<img class="project-img" src="./assets/pigeon-hole.png"></img>`
                         + formattedParagraph
-                        + formattedProject.image
                         + `</p>`
                 }
 
