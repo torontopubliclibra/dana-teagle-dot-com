@@ -1,8 +1,30 @@
 {
+    "work/creative stuff": {
+        "Dana Teagle dot com": {
+            "link": "/",
+            "description": "Design & web/software development portfolio"
+        },
+        "Professional Instagram": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
+        },
+        "Posters & propaganda Instagram": {
+            "link": "/rp-insta",
+            "description": "[at] rustprop"
+        },
+        "Github": {
+            "link": "/github",
+            "description": "torontopubliclibra"
+        }
+    },
     "social profiles": {
-        "Instagram": {
+        "Personal Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
+        },
+        "Twitter": {
+            "link": "/twitter",
+            "description": "[at] rustbecomesher"
         },
         "Bluesky": {
             "link": "/bluesky",
@@ -23,20 +45,6 @@
         "Spotify": {
             "link": "/spotify",
             "description": ""
-        }
-    },
-    "work stuff": {
-        "Dana Teagle dot com": {
-            "link": "/",
-            "description": "Dana Teagle | Designer & web/software developer"
-        },
-        "Instagram": {
-            "link": "/dt-insta",
-            "description": "[at] danateagledotcom"
-        },
-        "Github": {
-            "link": "/github",
-            "description": "torontopubliclibra"
         }
     },
     "fundraisers & petitions": {
@@ -72,17 +80,17 @@
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
         },
-        "Work email": {
+        "Professional email": {
             "link": "mailto:contact@danateagle.com",
             "description": "contact [at] danateagle.com"
         },
-        "PGP key": {
+        "PGP [Pretty Good Privacy] key": {
             "link": "/data/rusty-pgp.asc",
-            "description": ""
+            "description": "ASCII text file"
         },
         "Paypal": {
             "link": "/paypal",
-            "description": ""
+            "description": "torontopubliclibra"
         }
     }
 }
