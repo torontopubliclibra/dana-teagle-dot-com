@@ -2,6 +2,8 @@
     "Trans I.D.": {
         "year": "2024",
         "tags": [
+            "Figma",
+            "Affinity-designer",
             "TypeScript",
             "Vue.js"
         ],
@@ -15,6 +17,7 @@
         "year": "2024",
         "tags": [
             "Webflow",
+            "Figma",
             "HTML",
             "CSS",
             "JavaScript"
@@ -99,9 +102,9 @@
         "tags": [
             "TypeScript",
             "React.js",
-            "Vite",
+            "Leaflet",
+            "GeoJSON",
             "Jotai",
-            "Emotion",
             "CSS"
         ],
         "description": [

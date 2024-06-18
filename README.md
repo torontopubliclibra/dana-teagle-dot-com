@@ -4,7 +4,7 @@
 This is the repository for a few different webpages that relate to my work and life. The websites are all built with jQuery, HTML, and SCSS.
 
 ### Web/software developer portfolio
-The [main page](https://danateagle.com/) is for my design and web/software development portfolio. The data for each of the projects is stored as JSON for ease of iterating, filtering, and updating.
+The main page is for my design and web/software development portfolio. The data for each of the projects is stored as JSON for ease of iterating, filtering, and updating. This page is available in both [default](https://danateagle.com/) and [classic](https://danateagle.com/classic) view.
 
 ### The Toronto Public Libra
 The [second page](https://danateagle.com/alt) is a list of various external links (all iterated from another JSON file).
