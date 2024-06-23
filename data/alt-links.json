@@ -22,18 +22,6 @@
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
         },
-        "Twitter": {
-            "link": "/twitter",
-            "description": "[at] rustbecomesher"
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": "[at] torontopubliclibra.bsky.social"
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "[at] torontopubliclibra"
-        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": "[at] torontolibra"
