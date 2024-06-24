@@ -22,6 +22,14 @@
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
         },
+        "Twitter": {
+            "link": "/twitter",
+            "description": "[at] rustbecomesher"
+        },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.bsky.social"
+        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": "[at] torontolibra"
