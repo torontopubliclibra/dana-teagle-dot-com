@@ -8,7 +8,7 @@
             "link": "/dt-insta",
             "description": "[at] danateagledotcom"
         },
-        "Posters & propaganda Instagram": {
+        "Poster design Instagram": {
             "link": "/rp-insta",
             "description": "[at] rustprop"
         },
@@ -74,11 +74,15 @@
         },
         "PGP [Pretty Good Privacy] key": {
             "link": "/data/rusty-pgp.asc",
-            "description": "ASCII text file"
+            "description": "ASCII text file download"
         },
         "Paypal": {
             "link": "/paypal",
-            "description": "torontopubliclibra"
+            "description": "send payments to torontopubliclibra"
+        },
+        "RUSTPROP Ko-fi": {
+            "link": "/kofi",
+            "description": "Support my poster design side project"
         }
     }
 }
