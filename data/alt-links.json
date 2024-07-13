@@ -44,25 +44,33 @@
         }
     },
     "fundraisers & petitions": {
-        "help dana rusty recover from surgery": {
-            "link": "https://www.gofundme.com/f/rusty-surgery-recovery",
-            "description": "Raising funds for a 6-8 week recovery period following my long-awaited transition-related surgery in Sept 2024"
+        "Mutual Aid for Life ": {
+            "link": "https://linktr.ee/mutualaidforlife",
+            "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
         },
         "Support for Tents in Gaza": {
             "link": "https://www.gofundme.com/f/support-for-marginalized-refugees-in-jordan",
             "description": "Aiming to secure, purchase, and distribute tents in Gaza"
         },
-        "Mutual Aid for Life ": {
-            "link": "https://linktr.ee/mutualaidforlife",
-            "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
+        "Help Nora receive gender affirming surgery": {
+            "link": "https://www.gofundme.com/f/help-nora-receive-life-saving-surgery",
+            "description": ""
         },
-        "House of Commons Petition e-4827": {
-            "link": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-4827",
-            "description": "Petition to the Government of Canada to make permanent the Sexual and Reproductive Health Fund for community-based projects, and mandate that provinces expand abortion and other sexual and reproductive health services"
+        "Winona's Surgery Recovery": {
+            "link": "https://www.gofundme.com/f/winonas-surgery-recovery",
+            "description": ""
+        },
+        "Help the Revue Cinema Film Society": {
+            "link": "http://longlivetherevue.ca",
+            "description": ""
         },
         "House of Commons Petition e-4934": {
             "link": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-4934",
-            "description": "Petition to the Government of Canada to Pass a motion in Parliament that condemns the deceptive and manipulative tactics of anti-abortion 'crisis pregnancy centres'"
+            "description": "Petition to the Government of Canada to Pass a motion in Parliament that condemns the deceptive and manipulative tactics of anti-abortion 'crisis pregnancy centres' [open for signatures until aug 16, 2024]"
+        },
+        "House of Commons Petition e-4827": {
+            "link": "https://www.ourcommons.ca/petitions/en/Petition/Details?Petition=e-4827",
+            "description": "Petition to the Government of Canada to make permanent the Sexual and Reproductive Health Fund for community-based projects, and mandate that provinces expand abortion and other sexual and reproductive health services [open for signatures until sept 3, 2024]"
         }
     },
     "links & resources": {
@@ -81,6 +89,10 @@
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
+        },
+        "Transfeminine Science": {
+            "link": "https://transfemscience.org/",
+            "description": "A resource for informational content on the subject of transfeminine hormone therapy"
         }
     },
     "contact & pay": {
@@ -98,7 +110,7 @@
         },
         "Paypal": {
             "link": "/paypal",
-            "description": "send payments to torontopubliclibra"
+            "description": "Send payments to [at] torontopubliclibra"
         },
         "RUSTPROP Ko-fi": {
             "link": "/kofi",
