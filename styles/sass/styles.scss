@@ -813,7 +813,7 @@ header {
     .contact-content {
         @include flex(column, 20px);
         @include borderedBox(rgba($white, 0.8), $color2);
-        padding: 20px;
+        padding: 50px;
         width: 95%;
         margin: 0 auto;
 
@@ -829,7 +829,6 @@ header {
         }
 
         p {
-            margin: 20px;
             &:first-of-type {
                 margin-bottom: 0;
             }
@@ -847,6 +846,7 @@ header {
         @media only screen and (max-width: $mobile) {
             width: 85%;
             margin-top: 20px;
+            padding: 20px;
         }
     }
 }
