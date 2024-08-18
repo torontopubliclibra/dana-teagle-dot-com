@@ -35,7 +35,7 @@
             "Google-sites"
         ],
         "description": [
-            "This is a branding and website project I am currently working on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. The site is due to launch in summer 2024."
+            "This is some branding and a website I worked on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. The site is due to launch in summer 2024."
         ]
     },
     "Naomi McCarroll-Butler": {
@@ -80,8 +80,7 @@
         "description": [
             "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and created the site in February and March 2024. It is fully responsive and includes a JavaScript media carousel for portfolio projects, as well as a contact form."
         ],
-        "site": "https://ninamilanovski.com",
-        "code": "/nina/repo"
+        "site": "https://ninamilanovski.com"
     },
     "Sydney Gautreau": {
         "year": "2024",
@@ -94,8 +93,7 @@
         "description": [
             "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024. The site is fully responsive and includes a contact form."
         ],
-        "site": "https://sydneygautreau.com",
-        "code": "/syd/repo"
+        "site": "https://sydneygautreau.com"
     },
     "Queer Walk": {
         "year": "2023",
@@ -167,8 +165,7 @@
         "description": [
             "This is a website for Body Stories Dance Education & Performance, a dance business based in Manitoulin, Ontario. The site was originally built with Squarespace and JavaScript in 2021."
         ],
-        "site": "https://www.bodystoriesdance.com/",
-        "code": ""
+        "site": "https://www.bodystoriesdance.com/"
     },
     "The Crevice": {
         "year": "2021",
@@ -179,7 +176,6 @@
         "description": [
             "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace and JavaScript in 2021."
         ],
-        "site": "https://thecrevice.ca/",
-        "code": ""
+        "site": "https://thecrevice.ca/"
     }
 }
