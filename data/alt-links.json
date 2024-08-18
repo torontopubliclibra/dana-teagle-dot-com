@@ -4,7 +4,7 @@
             "link": "/",
             "description": "Design & web/software development portfolio"
         },
-        "Professional Instagram": {
+        "Business Instagram": {
             "link": "/dt-insta",
             "description": "[at] danateagledotcom"
         },
@@ -18,7 +18,7 @@
         }
     },
     "social profiles": {
-        "Personal Instagram": {
+        "Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
         },
@@ -80,7 +80,7 @@
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
         },
-        "Professional email": {
+        "Business email": {
             "link": "mailto:contact@danateagle.com",
             "description": "contact [at] danateagle.com"
         },
