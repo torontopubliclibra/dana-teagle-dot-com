@@ -9,7 +9,7 @@
         ],
         "description": [
             "Trans I.D. will be an online hub serving transgender, Two-Spirit, non-binary, or otherwise gender non-conforming individuals living in Ontario. It will provide resources on all the steps required in changing one's name and/or legal gender marker with government services and various other organizations.",
-            "I have led workshops on name and gender marker changes for 2SLGBTQI+ folks in Ontario since 2021. I am currently working to acquire funding for this application, and hoping to hire a small development team later this year, aiming for a projected launch in 2025 or 2026.",
+            "I've led workshops on name and gender marker changes for 2SLGBTQI+ folks in Ontario since 2021. I'm currently working to acquire funding for this application, and hoping to hire a small development team later with a projected launch of 2025 or 2026.",
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
@@ -24,31 +24,18 @@
         ],
         "description": [
             "Connect Fund is a not-for-profit organization aiming to provide comprehensive and widespread funding to 2SLGBTQ+ communities in Ontario to access the healthcare they need, led by Dr. Kate Greenaway, and based in Toronto, Ontario.",
-            "I am currently working with their team to launch a new web platform for receiving donations and supporting clients, due to launch in summer 2024."
-        ]
-    },
-    "Naomi McCarroll-Butler": {
-        "year": "2024",
-        "tags": [
-            "Figma",
-            "Jquery",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients."
         ],
-        "description": [
-            "This is a portfolio website I am designing and building for Naomi McCarroll-Butler, a saxophonist, clarinetist, and instrument maker based in Montréal and Toronto. The site is currently due to launch in summer 2024."
-        ]
+        "site": "https://www.connectfund.org/"
     },
     "WEST83 Consulting": {
         "year": "2024",
         "tags": [
-            "Figma",
             "Affinity-designer",
             "Google-sites"
         ],
         "description": [
-            "This is some branding and a website I worked on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario."
+            "WEST83 is a business consulting and strategic planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. In summer 2024, I designed branding for the firm and helped them launch a basic website."
         ],
         "site": "https://www.west83.com/"
     },
