@@ -27,17 +27,6 @@
             "I am currently working with their team to launch a new web platform for receiving donations and supporting clients, due to launch in summer 2024."
         ]
     },
-    "WEST83 Consulting": {
-        "year": "2024",
-        "tags": [
-            "Figma",
-            "Affinity-designer",
-            "Google-sites"
-        ],
-        "description": [
-            "This is some branding and a website I worked on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. The site is due to launch in summer 2024."
-        ]
-    },
     "Naomi McCarroll-Butler": {
         "year": "2024",
         "tags": [
@@ -50,6 +39,18 @@
         "description": [
             "This is a portfolio website I am designing and building for Naomi McCarroll-Butler, a saxophonist, clarinetist, and instrument maker based in Montréal and Toronto. The site is currently due to launch in summer 2024."
         ]
+    },
+    "WEST83 Consulting": {
+        "year": "2024",
+        "tags": [
+            "Figma",
+            "Affinity-designer",
+            "Google-sites"
+        ],
+        "description": [
+            "This is some branding and a website I worked on for WEST83, a Business Consulting and Strategic Planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario."
+        ],
+        "site": "https://www.west83.com/"
     },
     "True History Brewing": {
         "year": "2024",
