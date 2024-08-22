@@ -13,6 +13,20 @@
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
+    "Michael Cloud Duguay": {
+        "year": "2024",
+        "tags": [
+            "Webflow",
+            "Figma",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "description": [
+            "This is a website for Michael Cloud Duguay—a composer, producer, improviser, and accordionist from Peterborough, Ontario—that I designed and built in summer 2024."
+        ],
+        "site": "https://www.michaelcduguay.com/"
+    },
     "Connect Fund": {
         "year": "2024",
         "tags": [
