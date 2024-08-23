@@ -40,17 +40,6 @@
         ],
         "site": "https://www.connectfund.org/"
     },
-    "WEST83 Consulting": {
-        "year": "2024",
-        "tags": [
-            "Affinity-designer",
-            "Google-sites"
-        ],
-        "description": [
-            "WEST83 is a business consulting and strategic planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. In summer 2024, I designed branding for the firm and helped them launch a basic website."
-        ],
-        "site": "https://www.west83.com/"
-    },
     "True History Brewing": {
         "year": "2024",
         "tags": [
@@ -95,6 +84,17 @@
         ],
         "site": "https://sydneygautreau.com"
     },
+    "WEST83 Consulting": {
+        "year": "2024",
+        "tags": [
+            "Affinity-designer",
+            "Google-sites"
+        ],
+        "description": [
+            "WEST83 is a business consulting and strategic planning firm led by Dr. Jessica Sartori and based in Windsor, Ontario. In summer 2024, I designed branding for the firm and helped them launch a basic website."
+        ],
+        "site": "https://www.west83.com/"
+    },
     "Queer Walk": {
         "year": "2023",
         "tags": [
@@ -126,21 +126,6 @@
         "site": "/notes",
         "code": "/notes/repo"
     },
-    "Superhero Showdown": {
-        "year": "2022",
-        "tags": [
-            "JavaScript",
-            "React.js",
-            "CSS"
-        ],
-        "description": [
-            "This is a statistics-based card game written in JavaScript and CSS using the React library.",
-            "The site uses a data set of superhero character objects stored in Firebase, each with statistics pulled from the Marvel Database Wiki. On game start, the character objects are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. Game play continues until one of the decks is empty.",
-            "I designed and developed Superhero Showdown in 2022 and have since updated the styling."
-        ],
-        "site": "/superhero",
-        "code": "/superhero/repo"
-    },
     "The Pigeon Hole": {
         "year": "2022",
         "tags": [
@@ -155,6 +140,21 @@
         ],
         "site": "/pigeon",
         "code": "/pigeon/repo"
+    },
+    "Superhero Showdown": {
+        "year": "2022",
+        "tags": [
+            "JavaScript",
+            "React.js",
+            "CSS"
+        ],
+        "description": [
+            "This is a statistics-based card game written in JavaScript and CSS using the React library.",
+            "The site uses a data set of superhero character objects stored in Firebase, each with statistics pulled from the Marvel Database Wiki. On game start, the character objects are retrieved, shuffled, and dealt into 2 decks of 10 cards each—one for you (the player) and one for your opponent (the computer). Each round, you choose the statistic from your card that you believe to be larger than your opponent's, and the winner of the challenge gets both cards. Game play continues until one of the decks is empty.",
+            "I designed and developed Superhero Showdown in 2022 and have since updated the styling."
+        ],
+        "site": "/superhero",
+        "code": "/superhero/repo"
     },
     "Body Stories Dance": {
         "year": "2021",
