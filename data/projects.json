@@ -163,15 +163,5 @@
         ],
         "image": "./assets/body-stories.png",
         "site": "https://www.bodystoriesdance.com/"
-    },
-    "The Crevice": {
-        "year": "2021",
-        "tags": [
-            "Squarespace"
-        ],
-        "description": [
-            "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace in 2021."
-        ],
-        "site": "https://thecrevice.ca/"
     }
 }
