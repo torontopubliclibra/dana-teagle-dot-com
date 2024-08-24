@@ -22,8 +22,9 @@
             "CSS"
         ],
         "description": [
-            "This is a website for Michael Cloud Duguay—a composer, producer, improviser, and accordionist from Peterborough, Ontario—that I designed and built in summer 2024."
+            "This is a website for Michael Cloud Duguay—a composer, producer, improviser, and accordionist from Peterborough, Ontario—that I designed and built in summer 2024, using Webflow and Figma."
         ],
+        "image": "./assets/michaelcduguay.jpg",
         "site": "https://www.michaelcduguay.com/"
     },
     "Connect Fund": {
@@ -31,13 +32,15 @@
         "tags": [
             "Webflow",
             "Figma",
+            "JavaScript",
             "HTML",
             "CSS"
         ],
         "description": [
             "Connect Fund is a not-for-profit organization aiming to provide comprehensive and widespread funding to 2SLGBTQ+ communities in Ontario to access the healthcare they need, led by Dr. Kate Greenaway, and based in Toronto, Ontario.",
-            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients."
+            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients, built in Webflow using designs wireframed in Figma."
         ],
+        "image": "./assets/connectfund.jpg",
         "site": "https://www.connectfund.org/"
     },
     "True History Brewing": {
@@ -53,9 +56,10 @@
             "Strapi"
         ],
         "description": [
-            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024, and will be updated in the near future with full storefront functionality.",
+            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024, and will be updated in the future with full storefront functionality.",
             "The project is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc.). The site's custom design was wireframed using Figma, and styled with SCSS."
         ],
+        "image": "./assets/truehistorybeer.jpg",
         "site": "https://truehistorybeer.com"
     },
     "Nina Milanovski": {
@@ -69,6 +73,7 @@
         "description": [
             "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and created the site in February and March 2024. It is fully responsive and includes a JavaScript media carousel for portfolio projects, as well as a contact form."
         ],
+        "image": "./assets/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
     },
     "Sydney Gautreau": {
@@ -82,6 +87,7 @@
         "description": [
             "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024. The site is fully responsive and includes a contact form."
         ],
+        "image": "./assets/sydneygautreau.jpg",
         "site": "https://sydneygautreau.com"
     },
     "WEST83": {
@@ -91,8 +97,9 @@
             "Google-sites"
         ],
         "description": [
-            "WEST83 is an organizational development practice led by Dr. Jessica Sartori, and based in Windsor, Ontario. In summer 2024, I designed their branding and helped them launch a basic web presence."
+            "WEST83 is an organizational development practice led by Dr. Jessica Sartori, and based in Windsor, Ontario. In summer 2024, I designed all of their branding with Affinity Designer, and helped them launch a basic web presence on Google Sites."
         ],
+        "image": "./assets/west83.jpg",
         "site": "https://www.west83.com/"
     },
     "Queer Walk": {
@@ -107,8 +114,9 @@
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and using the open-source Pytheas framework. The application guides users through a selected tour length, and displays text and photos for each historic location.",
-            "I was the lead developer on the application, working from May to Aug 2023 alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and our project manager Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>Parallel 42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "I was the lead developer on the application in summer 2023, working alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and our project manager Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>Parallel 42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
         ],
+        "image": "./assets/queerwalk.jpg",
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
     },
@@ -123,6 +131,7 @@
         "description": [
             "This is a notes app built with Angular, Typescript, and SCSS, that stores all inputted data locally without sending anything to a database. Unless deleted, your notes remain secure in the browser on your device until you clear the cache. You can save up to 50 text notes of 140 characters each in various colours. They can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file. I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
         ],
+        "image": "./assets/note-taken.png",
         "site": "/notes",
         "code": "/notes/repo"
     },
@@ -136,30 +145,32 @@
         ],
         "description": [
             "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and SCSS, and using the Flickr API. The site retrieves JSON data representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page.",
-            "I originally built the Pigeon Hole in July 2022 during my time at Juno College, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
+            "I originally built the Pigeon Hole in July 2022, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
         ],
+        "image": "./assets/pigeon-hole.png",
         "site": "/pigeon",
         "code": "/pigeon/repo"
     },
     "Body Stories Dance": {
         "year": "2021",
         "tags": [
+            "Adobe-illustrator",
             "Squarespace",
             "JavaScript"
         ],
         "description": [
-            "This is a website for Body Stories Dance Education & Performance, a dance business based in Manitoulin, Ontario. The site was originally built with Squarespace and JavaScript in 2021."
+            "Body Stories Dance Education & Performance is a dance business based in Manitoulin, Ontario. In 2021, I designed their branding using Adobe Illustrator, and helped them launch a web presence on Squarespace with custom JavaScript."
         ],
+        "image": "./assets/body-stories.png",
         "site": "https://www.bodystoriesdance.com/"
     },
     "The Crevice": {
         "year": "2021",
         "tags": [
-            "Squarespace",
-            "JavaScript"
+            "Squarespace"
         ],
         "description": [
-            "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace and JavaScript in 2021."
+            "This is a website for 'The Crevice', a live-streamed sitcom play performed at the Bus Stop Theatre in Halifax, Nova Scotia. The site was originally built with Squarespace in 2021."
         ],
         "site": "https://thecrevice.ca/"
     }

@@ -191,7 +191,6 @@ let app = {
                     return accumulator + tag}) + `</div>`;
                 
                 if (project.image) {
-                    console.log(project.image);
                     formattedProject.image = `<img src="`
                     + project.image
                     + `" class="project-image" alt="`
@@ -214,7 +213,7 @@ let app = {
                         `<button class="button read-more" title="`
                         + project.title
                         + ` project description">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
-                        // + `<img class="project-img" src="./assets/pigeon-hole.png"></img>`
+                        + formattedProject.image
                         + formattedParagraph
                         + `</p>`
                 }

@@ -1749,7 +1749,7 @@ header .scroll-down img {
 #projects .projects-container .project .project-description.active p .project-image {
   max-width: 100%;
   border: solid 4px #7a91b1;
-  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 #contact .contact-content {
