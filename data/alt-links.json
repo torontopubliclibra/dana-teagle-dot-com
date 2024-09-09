@@ -4,11 +4,11 @@
             "link": "/",
             "description": "Design & web/software development portfolio"
         },
-        "Business Instagram": {
+        "Design/web dev Instagram": {
             "link": "/dt-insta",
             "description": "[at] danateagledotcom"
         },
-        "Poster design Instagram": {
+        "Agitprop Instagram": {
             "link": "/rp-insta",
             "description": "[at] rustprop"
         },
@@ -94,7 +94,7 @@
         },
         "RUSTPROP Ko-fi": {
             "link": "/kofi",
-            "description": "Support my poster design side project"
+            "description": "Support my agitprop design side project"
         }
     }
 }
