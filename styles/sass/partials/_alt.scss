@@ -68,7 +68,7 @@ html.alt {
         width: 90%;
         max-width: 950px;
         margin: 0;
-        border: 1.5px solid $color2;
+        border: 1.5px solid $color3;
     }
 
     main, header, footer {
@@ -122,7 +122,7 @@ html.alt {
             img {
                 margin: 10px 0;
                 width: 300px;
-                border: solid $color1 3px;
+                border: solid $color2 3px;
             }
             p {
                 color: $white;
@@ -172,7 +172,7 @@ html.alt {
                     a {
                         display: flex;
                         align-items: center;
-                        border: solid $color3 3px;
+                        border: solid $color2 3px;
                         padding: 5px 10px 8px 15px;
                         font-size: 12px;
                         color: $white;
@@ -182,7 +182,7 @@ html.alt {
 
                             // responsive to mobile
                             @media only screen and (max-width: $mobile) {
-                                border: solid $color3 3px;
+                                border: solid $color2 3px;
                             }
                         }
 

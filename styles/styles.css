@@ -360,7 +360,7 @@ html.alt hr {
   width: 90%;
   max-width: 950px;
   margin: 0;
-  border: 1.5px solid #B57E9B;
+  border: 1.5px solid #7a91b1;
 }
 html.alt main, html.alt header, html.alt footer {
   opacity: 0;
@@ -408,7 +408,7 @@ html.alt main .rusty-welcome {
 html.alt main .rusty-welcome img {
   margin: 10px 0;
   width: 300px;
-  border: solid #84A59D 3px;
+  border: solid #B57E9B 3px;
 }
 html.alt main .rusty-welcome p {
   color: #f3e8e9;
@@ -451,7 +451,7 @@ html.alt main .alt-categories ul {
 html.alt main .alt-categories ul li a {
   display: flex;
   align-items: center;
-  border: solid #7a91b1 3px;
+  border: solid #B57E9B 3px;
   padding: 5px 10px 8px 15px;
   font-size: 12px;
   color: #f3e8e9;
@@ -462,7 +462,7 @@ html.alt main .alt-categories ul li a:hover {
 }
 @media only screen and (max-width: 768px) {
   html.alt main .alt-categories ul li a:hover {
-    border: solid #7a91b1 3px;
+    border: solid #B57E9B 3px;
   }
 }
 html.alt main .alt-categories ul li a img {
