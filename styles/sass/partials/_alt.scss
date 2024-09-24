@@ -149,7 +149,7 @@ html.alt {
                 flex-flow: column nowrap;
                 width: 85%;
                 img {
-                    width: 250px;
+                    width: 225px;
                 }
             }
         }
@@ -159,10 +159,14 @@ html.alt {
             .rusty-welcome {
                 align-items: flex-start;
                 img {
-                    width: 200px;
+                    width: 150px;
                 }
                 p {
                     text-align: left;
+                    font-size: 0.9rem;
+                }
+                .badges {
+                    gap: 5px;
                 }
             }
         }

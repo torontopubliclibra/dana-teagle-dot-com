@@ -433,7 +433,7 @@ html.alt main .rusty-welcome .badges img {
     width: 85%;
   }
   html.alt main .rusty-welcome img {
-    width: 250px;
+    width: 225px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -441,10 +441,14 @@ html.alt main .rusty-welcome .badges img {
     align-items: flex-start;
   }
   html.alt main .rusty-welcome img {
-    width: 200px;
+    width: 150px;
   }
   html.alt main .rusty-welcome p {
     text-align: left;
+    font-size: 0.9rem;
+  }
+  html.alt main .rusty-welcome .badges {
+    gap: 5px;
   }
 }
 html.alt main .alt-categories {
