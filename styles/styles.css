@@ -410,6 +410,7 @@ html.alt main .badges img {
 @media only screen and (max-width: 768px) {
   html.alt main .badges {
     width: 85%;
+    margin: 5px 0;
   }
   html.alt main .badges img {
     width: 105px;
@@ -448,6 +449,7 @@ html.alt main .rusty-welcome p {
 @media only screen and (max-width: 768px) {
   html.alt main .rusty-welcome {
     align-items: flex-start;
+    margin: 0;
   }
   html.alt main .rusty-welcome img {
     width: 175px;
