@@ -327,22 +327,7 @@ html.alt h1, html.alt h2, html.alt h3 {
 html.alt h1 {
   font-style: normal;
   font-size: 40px;
-  margin: 15px;
   user-select: initial;
-}
-html.alt h2, html.alt h3 {
-  width: 85%;
-  max-width: 1000px;
-  font-style: normal;
-  font-size: 20px;
-  padding: 0 5%;
-  margin: 0;
-}
-@media only screen and (max-width: 768px) {
-  html.alt h2, html.alt h3 {
-    font-size: 16px;
-    padding: 0;
-  }
 }
 html.alt h3 {
   font-size: 18px;
@@ -375,7 +360,7 @@ html.alt hr {
   width: 90%;
   max-width: 950px;
   margin: 0;
-  border: 1.5px solid #B57E9B;
+  border: 1.5px solid #7a91b1;
 }
 html.alt main, html.alt header, html.alt footer {
   opacity: 0;
@@ -393,35 +378,88 @@ html.alt header {
   height: auto;
   max-height: none;
   margin: 0;
+  margin-bottom: 10px;
   padding: 30px 0;
   padding-bottom: 0;
 }
 html.alt main {
   margin: 0 auto;
 }
-html.alt main hr:first-of-type {
-  margin-top: 40px;
+html.alt main hr {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-html.alt main hr:nth-of-type(2) {
-  margin-top: 10px;
-  margin-bottom: 40px;
+@media only screen and (max-width: 768px) {
+  html.alt main hr {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
 }
-html.alt main hr:last-of-type {
-  margin-top: 40px;
-  margin-bottom: 15px;
+html.alt main .badges {
+  max-width: 900px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+html.alt main .badges img {
+  margin: 0;
+  width: 88px;
+  border: none;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main hr:first-of-type {
-    margin-top: 30px;
-    margin-bottom: 10px;
+  html.alt main .badges {
+    width: 85%;
+    margin: 5px 0;
   }
-  html.alt main hr:nth-of-type(2) {
-    margin-top: 18px;
-    margin-bottom: 30px;
+  html.alt main .badges img {
+    width: 105px;
+    height: auto;
   }
-  html.alt main hr:last-of-type {
-    margin-top: 30px;
+}
+html.alt main .rusty-welcome {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+html.alt main .rusty-welcome img {
+  margin: 10px 0;
+  width: 275px;
+  border: solid #B57E9B 3px;
+}
+html.alt main .rusty-welcome p {
+  color: #f3e8e9;
+  font-size: 1rem;
+  text-align: center;
+}
+@media only screen and (max-width: 970px) {
+  html.alt main .rusty-welcome {
+    flex-flow: column nowrap;
+    width: 85%;
+  }
+  html.alt main .rusty-welcome img {
+    width: 225px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.alt main .rusty-welcome {
+    align-items: flex-start;
+    margin: 0;
+  }
+  html.alt main .rusty-welcome img {
+    width: 175px;
+  }
+  html.alt main .rusty-welcome p {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  html.alt main .rusty-welcome .badges {
+    gap: 5px;
   }
 }
 html.alt main .alt-categories {
@@ -440,7 +478,7 @@ html.alt main .alt-categories ul {
 html.alt main .alt-categories ul li a {
   display: flex;
   align-items: center;
-  border: solid #7a91b1 3px;
+  border: solid #B57E9B 3px;
   padding: 5px 10px 8px 15px;
   font-size: 12px;
   color: #f3e8e9;
@@ -451,7 +489,7 @@ html.alt main .alt-categories ul li a:hover {
 }
 @media only screen and (max-width: 768px) {
   html.alt main .alt-categories ul li a:hover {
-    border: solid #7a91b1 3px;
+    border: solid #B57E9B 3px;
   }
 }
 html.alt main .alt-categories ul li a img {
@@ -469,7 +507,6 @@ html.alt main .alt-categories ul li a img {
     flex-flow: column;
     gap: 0;
     margin: 0;
-    margin-top: 8px;
   }
   html.alt main .alt-categories ul li {
     margin: 5px 0;
