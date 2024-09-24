@@ -32,23 +32,7 @@ html.alt {
     h1 {
         font-style: normal;
         font-size: 40px;
-        margin: 15px;
         user-select: initial;
-    }
-
-    h2, h3 {
-        width: 85%;
-        max-width: 1000px;
-        font-style: normal;
-        font-size: 20px;
-        padding: 0 5%;
-        margin: 0;
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            font-size: 16px;
-            padding: 0;
-        }
     }
 
     h3 {
@@ -105,6 +89,7 @@ html.alt {
         height: auto;
         max-height: none;
         margin: 0;
+        margin-bottom: 10px;
         padding: 30px 0;
         padding-bottom: 0;
     }
@@ -112,36 +97,61 @@ html.alt {
     main {
         margin: 0 auto;
 
-        hr:first-of-type {
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        hr:nth-of-type(2) {
+        hr {
             margin-top: 10px;
-            margin-bottom: 40px;
-        }
-
-        hr:last-of-type {
-            margin-top: 40px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            hr:first-of-type {
-                margin-top: 30px;
-                margin-bottom: 10px;
-            }
-    
-            hr:nth-of-type(2) {
+            hr {
                 margin-top: 18px;
-                margin-bottom: 30px;
+                margin-bottom: 18px;
             }
-    
-            hr:last-of-type {
-                margin-top: 30px;
-                // margin-bottom: 15px;
+        }
+
+        .rusty-welcome {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            img {
+                margin: 10px 0;
+                width: 300px;
+                border: solid $color1 3px;
+            }
+            p {
+                color: $white;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            .rusty-welcome {
+                flex-flow: column nowrap;
+                width: 85%;
+                img {
+                    width: 250px;
+                }
+            }
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            .rusty-welcome {
+                align-items: flex-start;
+                img {
+                    width: 200px;
+                }
+                p {
+                    text-align: left;
+                }
             }
         }
 
@@ -194,7 +204,6 @@ html.alt {
                     flex-flow: column;
                     gap: 0;
                     margin: 0;
-                    margin-top: 8px;
 
                     li {
                         margin: 5px 0;
