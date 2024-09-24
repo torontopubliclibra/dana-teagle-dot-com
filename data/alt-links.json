@@ -76,6 +76,10 @@
         }
     },
     "contact & pay": {
+        "Discord": {
+            "link": "/discord",
+            "description": "torontopubliclibra on Discord"
+        },
         "Personal email": {
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
