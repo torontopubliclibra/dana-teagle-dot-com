@@ -415,6 +415,18 @@ html.alt main .rusty-welcome p {
   font-size: 1rem;
   text-align: center;
 }
+html.alt main .rusty-welcome .badges {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+html.alt main .rusty-welcome .badges img {
+  margin: 0;
+  max-width: 88px;
+  border: none;
+}
 @media only screen and (max-width: 970px) {
   html.alt main .rusty-welcome {
     flex-flow: column nowrap;

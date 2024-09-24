@@ -129,6 +129,18 @@ html.alt {
                 font-size: 1rem;
                 text-align: center;
             }
+            .badges {
+                display: flex;
+                flex-flow: row wrap;
+                gap: 10px;
+                max-width: 100%;
+                margin-top: 10px;
+                img {
+                    margin: 0;
+                    max-width: 88px;
+                    border: none;
+                }
+            }
         }
 
         // responsive to tablet
