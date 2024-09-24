@@ -395,6 +395,24 @@ html.alt main hr {
     margin-bottom: 18px;
   }
 }
+html.alt main .badges {
+  max-width: 900px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+html.alt main .badges img {
+  margin: 0;
+  max-width: 88px;
+  border: none;
+}
+@media only screen and (max-width: 768px) {
+  html.alt main .badges {
+    max-width: 85%;
+    gap: 5px;
+  }
+}
 html.alt main .rusty-welcome {
   width: 100%;
   max-width: 900px;
@@ -407,7 +425,7 @@ html.alt main .rusty-welcome {
 }
 html.alt main .rusty-welcome img {
   margin: 10px 0;
-  width: 300px;
+  width: 250px;
   border: solid #B57E9B 3px;
 }
 html.alt main .rusty-welcome p {
@@ -415,25 +433,13 @@ html.alt main .rusty-welcome p {
   font-size: 1rem;
   text-align: center;
 }
-html.alt main .rusty-welcome .badges {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 10px;
-  max-width: 100%;
-  margin-top: 10px;
-}
-html.alt main .rusty-welcome .badges img {
-  margin: 0;
-  max-width: 88px;
-  border: none;
-}
 @media only screen and (max-width: 970px) {
   html.alt main .rusty-welcome {
     flex-flow: column nowrap;
     width: 85%;
   }
   html.alt main .rusty-welcome img {
-    width: 225px;
+    width: 200px;
   }
 }
 @media only screen and (max-width: 768px) {
