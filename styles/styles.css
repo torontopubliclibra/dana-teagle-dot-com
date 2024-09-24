@@ -428,7 +428,7 @@ html.alt main .rusty-welcome {
 }
 html.alt main .rusty-welcome img {
   margin: 10px 0;
-  width: 250px;
+  width: 275px;
   border: solid #B57E9B 3px;
 }
 html.alt main .rusty-welcome p {
@@ -442,7 +442,7 @@ html.alt main .rusty-welcome p {
     width: 85%;
   }
   html.alt main .rusty-welcome img {
-    width: 200px;
+    width: 225px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -450,7 +450,7 @@ html.alt main .rusty-welcome p {
     align-items: flex-start;
   }
   html.alt main .rusty-welcome img {
-    width: 150px;
+    width: 175px;
   }
   html.alt main .rusty-welcome p {
     text-align: left;
