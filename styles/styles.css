@@ -404,13 +404,16 @@ html.alt main .badges {
 }
 html.alt main .badges img {
   margin: 0;
-  max-width: 88px;
+  width: 88px;
   border: none;
 }
 @media only screen and (max-width: 768px) {
   html.alt main .badges {
-    max-width: 85%;
-    gap: 5px;
+    width: 85%;
+  }
+  html.alt main .badges img {
+    width: 120px;
+    height: auto;
   }
 }
 html.alt main .rusty-welcome {

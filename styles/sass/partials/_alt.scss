@@ -118,7 +118,7 @@ html.alt {
             margin: 10px 0;
             img {
                 margin: 0;
-                max-width: 88px;
+                width: 88px;
                 border: none;
             }
         }
@@ -126,8 +126,12 @@ html.alt {
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             .badges {
-                max-width: 85%;
-                gap: 5px;
+                width: 85%;
+
+                img {
+                    width: 120px;
+                    height: auto;
+                }
             }
         }
 
