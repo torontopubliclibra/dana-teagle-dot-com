@@ -409,6 +409,7 @@ html.alt main .badges {
   max-width: 900px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 10px;
   margin: 10px 0;
 }
@@ -423,6 +424,7 @@ html.alt main .badges img {
   html.alt main .badges {
     width: 85%;
     margin: 5px 0;
+    justify-content: left;
   }
   html.alt main .badges img {
     width: 101px;

@@ -125,6 +125,7 @@ html.alt {
             max-width: 900px;
             display: flex;
             flex-flow: row wrap;
+            justify-content: center;
             gap: 10px;
             margin: 10px 0;
             img {
@@ -141,6 +142,7 @@ html.alt {
             .badges {
                 width: 85%;
                 margin: 5px 0;
+                justify-content: left;
 
                 img {
                     width: 101px;
