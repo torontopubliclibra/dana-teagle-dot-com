@@ -404,6 +404,28 @@ html.alt main hr {
     margin-bottom: 18px;
   }
 }
+html.alt main p.badge-code {
+  color: #f3e8e9;
+  font-size: 0.8rem;
+  max-width: 85%;
+  margin: 10px 0;
+}
+html.alt main textarea {
+  border: solid #f3e8e9 2px;
+  min-height: 40px;
+  max-height: 200px;
+  height: 40px;
+  font-family: "Source Code Pro", monospace;
+  word-break: break-all;
+  color: #f3e8e9;
+  width: 85%;
+  max-width: 700px;
+  min-width: 200px;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  background-color: #282b2c;
+  padding: 5px;
+}
 html.alt main .badges {
   width: 85%;
   max-width: 900px;
