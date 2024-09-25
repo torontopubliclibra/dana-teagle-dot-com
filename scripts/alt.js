@@ -65,7 +65,7 @@ let alt = {
                 }
             }
 
-            alt.altCategories.html(`<ul>` + linkCategories.reduce((accumulator, category) => {
+            alt.altCategories.html(`<h2>Jump to:</h2><ul>` + linkCategories.reduce((accumulator, category) => {
                 return accumulator + category;
             }) + `</ul>`);
 

@@ -329,6 +329,15 @@ html.alt h1 {
   font-size: 40px;
   user-select: initial;
 }
+html.alt h2 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+@media only screen and (max-width: 768px) {
+  html.alt h2 {
+    margin: 10px 0;
+  }
+}
 html.alt h3 {
   font-size: 18px;
 }
@@ -396,6 +405,7 @@ html.alt main hr {
   }
 }
 html.alt main .badges {
+  width: 85%;
   max-width: 900px;
   display: flex;
   flex-flow: row wrap;
@@ -405,7 +415,9 @@ html.alt main .badges {
 html.alt main .badges img {
   margin: 0;
   width: 88px;
+  height: 31px;
   border: none;
+  image-rendering: pixelated;
 }
 @media only screen and (max-width: 768px) {
   html.alt main .badges {
@@ -413,8 +425,8 @@ html.alt main .badges img {
     margin: 5px 0;
   }
   html.alt main .badges img {
-    width: 105px;
-    height: auto;
+    width: 101px;
+    height: 35px;
   }
 }
 html.alt main .rusty-welcome {
@@ -429,7 +441,7 @@ html.alt main .rusty-welcome {
 }
 html.alt main .rusty-welcome img {
   margin: 10px 0;
-  width: 275px;
+  width: 250px;
   border: solid #B57E9B 3px;
 }
 html.alt main .rusty-welcome p {
@@ -443,7 +455,7 @@ html.alt main .rusty-welcome p {
     width: 85%;
   }
   html.alt main .rusty-welcome img {
-    width: 225px;
+    width: 200px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -452,7 +464,7 @@ html.alt main .rusty-welcome p {
     margin: 0;
   }
   html.alt main .rusty-welcome img {
-    width: 175px;
+    width: 150px;
   }
   html.alt main .rusty-welcome p {
     text-align: left;
@@ -465,6 +477,10 @@ html.alt main .rusty-welcome p {
 html.alt main .alt-categories {
   width: 100%;
   max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 html.alt main .alt-categories ul {
   display: flex;
@@ -500,6 +516,7 @@ html.alt main .alt-categories ul li a img {
 }
 @media only screen and (max-width: 970px) {
   html.alt main .alt-categories {
+    display: block;
     width: 85%;
     margin: 0;
   }
