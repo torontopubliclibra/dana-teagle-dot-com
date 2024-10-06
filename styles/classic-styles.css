@@ -2,7 +2,7 @@ html {
   line-height: 1.75;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #f3e6e7;
+  background-color: #b3a7bd73;
 }
 
 @font-face {
@@ -109,10 +109,11 @@ section {
 
 .project-image {
   width: 90%;
-  max-width: 300px;
+  max-width: 350px;
   display: block;
   border: solid 3px #7a91b1;
   margin-bottom: 10px;
+  image-rendering: pixelated;
 }
 
 footer {
