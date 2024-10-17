@@ -589,11 +589,14 @@ html.alt main .alt-links h3 {
 }
 @media only screen and (max-width: 768px) {
   html.alt main .alt-links h3 {
-    max-width: 95%;
+    max-width: 90%;
     text-align: left;
     margin-right: auto;
     margin-left: auto;
   }
+}
+html.alt main .alt-links h3.h3-trans-id {
+  max-width: 95%;
 }
 html.alt main .alt-links .alt-link {
   background-color: #84A59D;

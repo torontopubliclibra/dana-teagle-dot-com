@@ -325,11 +325,15 @@ html.alt {
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
-                    max-width: 95%;
+                    max-width: 90%;
                     text-align: left;
                     margin-right: auto;
                     margin-left: auto;
                 }
+            }
+
+            h3.h3-trans-id {
+                max-width: 95%;
             }
     
             .alt-link {
