@@ -30,6 +30,10 @@
             "link": "/bluesky",
             "description": "[at] torontopubliclibra.bsky.social"
         },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "torontopubliclibra"
+        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": "[at] torontolibra"
