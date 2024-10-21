@@ -1,11 +1,10 @@
 {
     "Trans I.D.": {
-        "year": "2024",
+        "year": "2025",
         "tags": [
             "Figma",
             "Affinity-designer",
-            "TypeScript",
-            "Vue.js"
+            "TypeScript"
         ],
         "description": [
             "Trans I.D. will be an online hub serving transgender, Two-Spirit, non-binary, or otherwise gender non-conforming individuals living in Ontario. It will provide resources on all the steps required in changing one's name and/or legal gender marker with government services and various other organizations.",
@@ -48,8 +47,7 @@
         "tags": [
             "JavaScript",
             "Figma",
-            "React.js",
-            "Remix",
+            "React",
             "Shopify",
             "CSS",
             "SCSS",
@@ -106,7 +104,7 @@
         "year": "2023",
         "tags": [
             "TypeScript",
-            "React.js",
+            "React",
             "Leaflet",
             "GeoJSON",
             "Jotai",

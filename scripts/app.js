@@ -177,7 +177,7 @@ let app = {
                 };
 
                 // format the project heading
-                formattedProject.heading = `<h3>${project.title}</h3>`
+                formattedProject.heading = `<h3>${project.title} (${project.year})</h3>`
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {

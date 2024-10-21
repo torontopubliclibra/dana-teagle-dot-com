@@ -1732,7 +1732,7 @@ header .scroll-down img {
   margin: 0;
   height: 100%;
   width: calc(50% - 5px);
-  max-width: 380px;
+  max-width: 585px;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
