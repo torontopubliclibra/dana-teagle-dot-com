@@ -109,11 +109,10 @@ section {
 
 .project-image {
   width: 90%;
-  max-width: 350px;
+  max-width: 600px;
   display: block;
   border: solid 3px #7a91b1;
   margin-bottom: 10px;
-  image-rendering: pixelated;
 }
 
 footer {
