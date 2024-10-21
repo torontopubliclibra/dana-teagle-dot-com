@@ -1637,6 +1637,9 @@ header .scroll-down img {
     width: 100%;
     padding: 0 8px;
   }
+  #about .about-content .basic-info .basic-info-caption .item-year {
+    display: none;
+  }
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .basic-info {
