@@ -1574,6 +1574,7 @@ header .scroll-down img {
 
 #about.four-oh-four {
   padding-top: 75px !important;
+  animation: fade-in 0.75s ease-in 0.4s forwards;
 }
 #about .wrapper {
   display: flex;
