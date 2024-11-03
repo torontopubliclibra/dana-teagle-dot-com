@@ -158,11 +158,16 @@ header {
         max-height: 500px;
         margin-bottom: 40px;
 
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            margin-bottom: 10px;
+        }
+
         .title h1 {
             font-size: 3rem !important;
 
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
                 font-size: 2.5rem !important;
             }
         }

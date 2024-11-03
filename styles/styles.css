@@ -1223,10 +1223,15 @@ header.four-oh-four {
   max-height: 500px;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 768px) {
+  header.four-oh-four {
+    margin-bottom: 10px;
+  }
+}
 header.four-oh-four .title h1 {
   font-size: 3rem !important;
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 768px) {
   header.four-oh-four .title h1 {
     font-size: 2.5rem !important;
   }
