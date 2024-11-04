@@ -1243,39 +1243,6 @@ header.four-oh-four .title h1 {
     animation: 15s infinite ease-in-out gradient;
   }
 }
-header .tagline {
-  text-align: center;
-  padding: 6px 21px;
-  background-color: rgba(243, 232, 233, 0.25);
-  border: solid #B57E9B 4px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 0.9rem;
-  animation: fade-in 2.5s;
-}
-@media only screen and (max-width: 970px) {
-  header .tagline {
-    border-left: none;
-    border-right: none;
-    border-width: 5px;
-    display: block;
-    width: 50%;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    top: 28px;
-    bottom: unset;
-    left: 0;
-    width: 100%;
-    right: unset;
-    line-height: 1.5;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header .tagline {
-    top: 48px;
-  }
-}
 header .view-toggle {
   background-color: rgba(181, 126, 155, 0.75);
   position: absolute;
