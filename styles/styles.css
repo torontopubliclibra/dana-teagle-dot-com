@@ -1857,7 +1857,7 @@ header .scroll-down img {
   width: 14px;
 }
 #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus, #projects .projects-container .project .project-description .button.read-less {
-  background-color: rgba(122, 145, 177, 0.75);
+  background-color: rgba(181, 126, 155, 0.75);
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .project-description {
@@ -1874,7 +1874,7 @@ header .scroll-down img {
     background-color: #f3e8e9;
   }
   #projects .projects-container .project .project-description .button.read-less:hover, #projects .projects-container .project .project-description .button.read-less:focus {
-    background-color: rgba(122, 145, 177, 0.75);
+    background-color: rgba(181, 126, 155, 0.75);
   }
 }
 #projects .projects-container .project .project-description p {
@@ -1958,13 +1958,13 @@ footer .wrapper hr {
   border-color: #B57E9B;
 }
 footer .wrapper .scroll-to-top {
-  background: rgba(122, 145, 177, 0.75);
+  background: rgba(181, 126, 155, 0.75);
 }
 footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
-  background: rgba(132, 165, 157, 0.75);
+  background: rgba(122, 145, 177, 0.75);
 }
 @media only screen and (max-width: 970px) {
   footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
-    background: rgba(122, 145, 177, 0.75);
+    background: rgba(181, 126, 155, 0.75);
   }
 }

@@ -812,7 +812,7 @@ header {
                     padding: 10px 15px;
 
                     &:hover, &:focus, &.read-less {
-                        background-color: rgba($color3, 0.75);
+                        background-color: rgba($color2, 0.75);
                     }
                 }
 
@@ -832,7 +832,7 @@ header {
                             background-color: $white;
                         }
                         &.read-less:hover, &.read-less:focus {
-                            background-color: rgba($color3, 0.75);
+                            background-color: rgba($color2, 0.75);
                         }
                     }
                 }
@@ -929,17 +929,17 @@ footer .wrapper {
 
     // footer button
     .scroll-to-top {
-        background: rgba($color3, 0.75);
+        background: rgba($color2, 0.75);
 
         &:hover, &:focus {
-            background: rgba($color1, 0.75);
+            background: rgba($color3, 0.75);
         }
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
 
             &:hover, &:focus {
-                background: rgba($color3, 0.75);
+                background: rgba($color2, 0.75);
             }
         }
     }
