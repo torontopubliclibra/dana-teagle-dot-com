@@ -148,18 +148,5 @@
         "image": "./assets/projects/pigeon-hole.png",
         "site": "/pigeon",
         "code": "/pigeon/repo"
-    },
-    "Body Stories Dance": {
-        "year": "2021",
-        "tags": [
-            "Adobe-illustrator",
-            "Squarespace",
-            "JavaScript"
-        ],
-        "description": [
-            "Body Stories Dance Education & Performance is a dance business based in Manitoulin, Ontario. In 2021, I designed their branding using Adobe Illustrator, and helped them launch a web presence on Squarespace with custom JavaScript."
-        ],
-        "image": "./assets/projects/body-stories.png",
-        "site": "https://www.bodystoriesdance.com/"
     }
 }
