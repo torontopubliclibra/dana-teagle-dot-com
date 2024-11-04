@@ -189,6 +189,7 @@ header {
         bottom: 20px;
         left: 20px;
         font-size: 0.9rem;
+        animation: fade-in 2.5s;
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {

@@ -1252,6 +1252,7 @@ header .tagline {
   bottom: 20px;
   left: 20px;
   font-size: 0.9rem;
+  animation: fade-in 2.5s;
 }
 @media only screen and (max-width: 970px) {
   header .tagline {
