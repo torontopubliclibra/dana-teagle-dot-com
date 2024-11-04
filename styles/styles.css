@@ -1263,7 +1263,7 @@ header .tagline {
     width: 50%;
     padding: 10px 15px;
     margin-bottom: 20px;
-    top: 30px;
+    top: 28px;
     bottom: unset;
     left: 0;
     width: 100%;
@@ -1273,7 +1273,7 @@ header .tagline {
 }
 @media only screen and (max-width: 768px) {
   header .tagline {
-    top: 50px;
+    top: 48px;
   }
 }
 header .view-toggle {
