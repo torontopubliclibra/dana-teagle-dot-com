@@ -180,6 +180,40 @@ header {
         animation: 15s infinite ease-in-out gradient;
     }
 
+    .tagline {
+        text-align: center;
+        padding: 6px 21px;
+        background-color: rgba($white, 0.25);
+        border: solid $color2 4px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 0.9rem;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            border-left: none;
+            border-right: none;
+            border-width: 5px;
+            display: block;
+            width: 50%;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            top: 30px;
+            bottom: unset;
+            left: 0;
+            width: 100%;
+            right: unset;
+            line-height: 1.5;
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            top: 50px;
+        }
+        
+    }
+
     .view-toggle {
         background-color: rgba($color2, 0.75);
         position: absolute;
@@ -703,7 +737,7 @@ header {
 
         // individual projects
         .project {
-            @include borderedBox(rgba($color2, 0.8), $color3);
+            @include borderedBox(rgba($color3, 0.5), $color2);
             margin: 0;
             height: 100%;
             width: calc(50% - 5px);
@@ -716,7 +750,7 @@ header {
                 flex-flow: row wrap;
                 gap: 10px;
                 background-color: rgba($white, 0.8);
-                border: solid 4px $color3;
+                border: solid 4px $color2;
                 margin: 0 15px;
                 margin-top: 0px;
                 padding: 10px 15px;
@@ -819,7 +853,7 @@ header {
                 &.active {
                     p {
                         display: block;
-                        @include borderedBox(rgba($white, 0.8), $color3);
+                        @include borderedBox(rgba($white, 0.8), $color2);
                         border-width: 4px;
                         padding: 15px;
                         opacity: 1;

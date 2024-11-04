@@ -1243,6 +1243,38 @@ header.four-oh-four .title h1 {
     animation: 15s infinite ease-in-out gradient;
   }
 }
+header .tagline {
+  text-align: center;
+  padding: 6px 21px;
+  background-color: rgba(243, 232, 233, 0.25);
+  border: solid #B57E9B 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 970px) {
+  header .tagline {
+    border-left: none;
+    border-right: none;
+    border-width: 5px;
+    display: block;
+    width: 50%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    top: 30px;
+    bottom: unset;
+    left: 0;
+    width: 100%;
+    right: unset;
+    line-height: 1.5;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .tagline {
+    top: 50px;
+  }
+}
 header .view-toggle {
   background-color: rgba(181, 126, 155, 0.75);
   position: absolute;
@@ -1754,8 +1786,8 @@ header .scroll-down img {
   }
 }
 #projects .projects-container .project {
-  background: rgba(181, 126, 155, 0.8);
-  border: solid #7a91b1 5px;
+  background: rgba(122, 145, 177, 0.5);
+  border: solid #B57E9B 5px;
   margin: 0;
   height: 100%;
   width: calc(50% - 5px);
@@ -1768,7 +1800,7 @@ header .scroll-down img {
   flex-flow: row wrap;
   gap: 10px;
   background-color: rgba(243, 232, 233, 0.8);
-  border: solid 4px #7a91b1;
+  border: solid 4px #B57E9B;
   margin: 0 15px;
   margin-top: 0px;
   padding: 10px 15px;
@@ -1857,7 +1889,7 @@ header .scroll-down img {
 #projects .projects-container .project .project-description.active p {
   display: block;
   background: rgba(243, 232, 233, 0.8);
-  border: solid #7a91b1 5px;
+  border: solid #B57E9B 5px;
   border-width: 4px;
   padding: 15px;
   opacity: 1;
