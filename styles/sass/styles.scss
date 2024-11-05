@@ -215,21 +215,37 @@ header {
         
     // }
 
-    .social {
-        padding: 15px;
-        padding-bottom: 10px;
-        background-color: rgba($color2, 0.75);
+    .socials {
         position: absolute;
         bottom: 20px;
         right: 20px;
+        display: flex;
+        gap: 20px;
+
+        &.left {
+            right: unset;
+            left: 20px;
+        }
+    }
+
+    .social {
+        padding: 15px;
+        padding-bottom: 10px;
+        border-bottom: solid $color2 5px;
+        background-color: rgba($white, 0.5);
         font-size: 0.9rem;
 
         img {
-            height: 25px;
+            height: 20px;
         }
 
         &:hover {
-            background-color: rgba($color3, 0.75);
+            background-color: rgba($white, 0.5);
+            border-bottom: solid $color3 5px;
+
+            img {
+                transform: skew(-10deg);
+            }
         }
 
         // responsive to tablet

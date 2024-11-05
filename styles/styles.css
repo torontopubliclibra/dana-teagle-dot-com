@@ -1270,20 +1270,33 @@ header.four-oh-four .title h1 {
     animation: 15s infinite ease-in-out gradient;
   }
 }
-header .social {
-  padding: 15px;
-  padding-bottom: 10px;
-  background-color: rgba(181, 126, 155, 0.75);
+header .socials {
   position: absolute;
   bottom: 20px;
   right: 20px;
+  display: flex;
+  gap: 20px;
+}
+header .socials.left {
+  right: unset;
+  left: 20px;
+}
+header .social {
+  padding: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid #B57E9B 5px;
+  background-color: rgba(243, 232, 233, 0.5);
   font-size: 0.9rem;
 }
 header .social img {
-  height: 25px;
+  height: 20px;
 }
 header .social:hover {
-  background-color: rgba(122, 145, 177, 0.75);
+  background-color: rgba(243, 232, 233, 0.5);
+  border-bottom: solid #7a91b1 5px;
+}
+header .social:hover img {
+  transform: skew(-10deg);
 }
 @media only screen and (max-width: 970px) {
   header .social {
