@@ -180,51 +180,33 @@ header {
         animation: 15s infinite ease-in-out gradient;
     }
 
-    // .tagline {
-    //     text-align: center;
-    //     padding: 6px 21px;
-    //     background-color: rgba($white, 0.25);
-    //     border: solid $color2 4px;
-    //     position: absolute;
-    //     bottom: 20px;
-    //     left: 20px;
-    //     font-size: 0.9rem;
-    //     animation: fade-in 2.5s;
-
-    //     // responsive to tablet
-    //     @media only screen and (max-width: $tablet) {
-    //         border-left: none;
-    //         border-right: none;
-    //         border-width: 5px;
-    //         display: block;
-    //         width: 50%;
-    //         padding: 10px 15px;
-    //         margin-bottom: 20px;
-    //         top: 28px;
-    //         bottom: unset;
-    //         left: 0;
-    //         width: 100%;
-    //         right: unset;
-    //         line-height: 1.5;
-    //     }
-
-    //     // responsive to mobile
-    //     @media only screen and (max-width: $mobile) {
-    //         top: 48px;
-    //     }
-        
-    // }
+    nav ul {
+        position: relative;
+        min-height: 500px;
+        height: 100vh;
+        max-height: 1000px;
+    }
 
     .socials {
         position: absolute;
         bottom: 20px;
-        right: 20px;
+        right: 0;
         display: flex;
-        gap: 20px;
+        gap: 40px;
 
         &.left {
             right: unset;
-            left: 20px;
+            left: 0;
+        }
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            gap: 20px;
+            right: 20px;
+
+            &.left {
+                left: 20px;
+            }
         }
     }
 
@@ -239,7 +221,7 @@ header {
             height: 20px;
         }
 
-        &:hover {
+        &:hover, &:focus {
             background-color: rgba($white, 0.5);
             border-bottom: solid $color3 4px;
 
@@ -799,6 +781,7 @@ header {
                         display: block;
                         width: 100%;
                         padding: 0 8px;
+                        margin: 5px 0;
                     }
                 }
 
@@ -870,6 +853,7 @@ header {
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
                 width: 100%;
+                gap: 8px;
             }
         }
 
