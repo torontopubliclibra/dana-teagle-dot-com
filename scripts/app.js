@@ -135,11 +135,11 @@ let app = {
 
                 // stitch the html for each of the filters together and add it to the projects nav
                 app.elements.projectsNav.html(`
-                    <p>Filter by technology:</p><ul class="project-filters">`
+                    <p>Filter by technology:</p><ul class="project-filters">[ `
                     + projectFilters.reduce((accumulator, tag) => {
                         return accumulator + tag
                     })
-                    + `</ul></h3>`
+                    + ` ]</ul></h3>`
                 );
             };
 
@@ -168,6 +168,7 @@ let app = {
 
                 // intialize an empty object for the formatted project
                 let formattedProject = {
+                    id: "",
                     heading: "",
                     description: "",
                     image: "",
@@ -231,7 +232,7 @@ let app = {
                     };
 
                 // stitch together all the html for the project
-                return `<div class="project">`
+                return `<div class="project" id="${project.id}">`
                 + formattedProject.heading
                 + `<div class="project-description">`
                 + formattedProject.site
@@ -267,7 +268,6 @@ let app = {
         },
 
         allProjectsClick: () => {
-            console.log("clicked");
             app.functions.projectDisplay("All");
             app.functions.scroll("projects");
         },
@@ -276,7 +276,7 @@ let app = {
         readMore: (project, paragraph, button) => {
 
             // if the paragraph isn't showing
-            if (!paragraph.style.maxHeight){
+            if (!button.classList.contains('read-less')){
 
                 // reveal the paragraph and change the button text
                 button.classList.add("read-less");
@@ -291,9 +291,18 @@ let app = {
                 button.classList.remove("read-less");
                 button.innerHTML = `Read more<img src="./assets/icons/expand-down.svg" alt="expand description icon">`;
                 project.classList.remove("active");
-                paragraph.style.maxHeight = "";
+                paragraph.style.maxHeight = 0;
                 document.activeElement.blur();
             }
+        },
+
+        // read more by ID function 
+        readMoreByID: (id) => {
+
+            let project = document.getElementById(`${id}`);
+            let button = project.querySelector(".read-more");
+
+            button.click();
         }
     },
 
@@ -331,6 +340,7 @@ let app = {
                     // initialize a project object, setting the title to the object key
                     let project = {
                         "title": object,
+                        "id": "",
                         "year": "",
                         "image": "",
                         "tags": [],

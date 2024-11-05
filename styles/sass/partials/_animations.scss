@@ -87,3 +87,19 @@
         transform: translate(-50%, 0px);
     };
 };
+
+// ticker animation
+@keyframes ticker {
+    0% {
+        transform: translate3d(425%, 0, 0);
+        visibility: visible;
+    }
+
+    50% {
+        transform: translate3d(-425%, 0, 0);
+    }
+  
+    100% {
+        transform: translate3d(425%, 0, 0);
+    }
+  }
