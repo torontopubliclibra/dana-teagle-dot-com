@@ -1270,18 +1270,23 @@ header.four-oh-four .title h1 {
     animation: 15s infinite ease-in-out gradient;
   }
 }
-header .view-toggle {
+header .social {
+  padding: 15px;
+  padding-bottom: 10px;
   background-color: rgba(181, 126, 155, 0.75);
   position: absolute;
   bottom: 20px;
   right: 20px;
   font-size: 0.9rem;
 }
-header .view-toggle:hover {
+header .social img {
+  height: 25px;
+}
+header .social:hover {
   background-color: rgba(122, 145, 177, 0.75);
 }
 @media only screen and (max-width: 970px) {
-  header .view-toggle {
+  header .social {
     background-color: #f3e8e9;
     border-bottom: solid #84A59D 5px;
     font-style: italic;
@@ -1296,7 +1301,7 @@ header .view-toggle:hover {
     font-size: 1rem;
     line-height: 1.5;
   }
-  header .view-toggle:hover {
+  header .social:hover {
     background-color: #f3e8e9;
   }
 }
