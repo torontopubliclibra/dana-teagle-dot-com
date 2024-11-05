@@ -1,18 +1,19 @@
 {
     "Trans I.D.": {
+        "id": "trans-id",
         "year": "2025",
         "tags": [
             "Figma",
-            "Affinity-designer",
             "TypeScript"
         ],
         "description": [
             "Trans I.D. will be an online hub serving transgender, Two-Spirit, non-binary, or otherwise gender non-conforming individuals living in Ontario. It will provide resources on all the steps required in changing one's name and/or legal gender marker with government services and various other organizations.",
-            "I've led workshops on name and gender marker changes for 2SLGBTQI+ folks in Ontario since 2021. I'm currently working to acquire funding for this application, and hoping to hire a small development team later with a projected launch of 2025 or 2026.",
+            "I've led workshops on name and gender marker changes for 2SLGBTQI+ folks in Ontario since 2021. I'm currently working to acquire funding for this application for a projected launch of 2025 or 2026.",
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
     "Michael Cloud Duguay": {
+        "id": "michael-cloud-duguay",
         "year": "2024",
         "tags": [
             "Webflow",
@@ -21,12 +22,13 @@
             "CSS"
         ],
         "description": [
-            "This is a website for Michael Cloud Duguay—a composer, producer, improviser, and accordionist from Peterborough, Ontario—that I designed and built in summer 2024, using Webflow and Figma."
+            "This is a website for Michael Cloud Duguay — a composer, producer, improviser, and accordionist from Peterborough, Ontario — that I designed and built in 2024, using Webflow and Figma."
         ],
         "image": "./assets/projects/michaelcduguay.jpg",
         "site": "https://www.michaelcduguay.com/"
     },
     "Connect Fund": {
+        "id": "connect-fund",
         "year": "2024",
         "tags": [
             "Webflow",
@@ -43,6 +45,7 @@
         "site": "https://www.connectfund.org/"
     },
     "True History Brewing": {
+        "id": "true-history-brewing",
         "year": "2024",
         "tags": [
             "JavaScript",
@@ -61,46 +64,39 @@
         "site": "https://truehistorybeer.com"
     },
     "Nina Milanovski": {
+        "id": "nina-milanovski",
         "year": "2024",
         "tags": [
+            "JavaScript",
             "Jquery",
             "HTML",
             "CSS",
             "SCSS"
         ],
         "description": [
-            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and created the site in February and March 2024. It is fully responsive and includes a JavaScript media carousel for portfolio projects, as well as a contact form."
+            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and developed the site in February and March 2024."
         ],
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
     },
     "Sydney Gautreau": {
-        "year": "2024",
+        "id": "sydney-gautreau",
+        "year": "2022",
         "tags": [
+            "JavaScript",
             "Jquery",
             "HTML",
             "CSS",
             "SCSS"
         ],
         "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and created in 2022, and received style and functionality upgrades in 2023 and 2024. The site is fully responsive and includes a contact form."
+            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
         ],
         "image": "./assets/projects/sydneygautreau.jpg",
         "site": "https://sydneygautreau.com"
     },
-    "WEST83": {
-        "year": "2024",
-        "tags": [
-            "Affinity-designer",
-            "Google-sites"
-        ],
-        "description": [
-            "WEST83 is an organizational development practice led by Dr. Jessica Sartori, and based in Windsor, Ontario. In summer 2024, I designed all of their branding with Affinity Designer, and helped them launch a basic web presence on Google Sites."
-        ],
-        "image": "./assets/projects/west83.jpg",
-        "site": "https://www.west83.com/"
-    },
     "Queer Walk": {
+        "id": "queer-walk",
         "year": "2023",
         "tags": [
             "TypeScript",
@@ -119,6 +115,7 @@
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
     },
     "Note Taken": {
+        "id": "note-taken",
         "year": "2023",
         "tags": [
             "TypeScript",
@@ -134,8 +131,10 @@
         "code": "/notes/repo"
     },
     "The Pigeon Hole": {
+        "id": "pigeon-hole",
         "year": "2022",
         "tags": [
+            "JavaScript",
             "Jquery",
             "HTML",
             "CSS",
