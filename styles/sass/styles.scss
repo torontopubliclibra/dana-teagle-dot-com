@@ -445,6 +445,13 @@ header {
         max-width: 100%;
         width: 95%;
         margin: 0 auto;
+        background: -webkit-repeating-linear-gradient(
+            -75deg,
+            rgba($color3, 0.4),
+            rgba($color3, 0.3) 1px,
+            $black 1px,
+            $black 2px
+          );
         background: repeating-linear-gradient(
             -75deg,
             rgba($color3, 0.4),

@@ -1563,6 +1563,7 @@ header .scroll-down img {
   max-width: 100%;
   width: 95%;
   margin: 0 auto;
+  background: -webkit-repeating-linear-gradient(-75deg, rgba(122, 145, 177, 0.4), rgba(122, 145, 177, 0.3) 1px, #282b2c 1px, #282b2c 2px);
   background: repeating-linear-gradient(-75deg, rgba(122, 145, 177, 0.4), rgba(122, 145, 177, 0.3) 1px, #282b2c 1px, #282b2c 2px);
   border: solid rgba(181, 126, 155, 0.75) 5px;
   box-shadow: rgba(40, 43, 44, 0.25) inset 0px 20px 50px 5px;
