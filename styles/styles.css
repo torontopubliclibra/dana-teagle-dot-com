@@ -1679,6 +1679,11 @@ header .scroll-down img {
 #gallery .gallery-item .gallery-item-info a:hover {
   color: #B57E9B;
 }
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item .gallery-item-info a:hover {
+    color: #f3e8e9;
+  }
+}
 #gallery .gallery-item .gallery-item-info hr {
   margin-top: 25px;
   border-color: #7a91b1;

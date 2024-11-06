@@ -580,6 +580,11 @@ header {
             }
             a:hover {
                 color: $color2;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    color: $white;
+                }
             }
 
             hr {
