@@ -314,6 +314,48 @@ html {
     transform: translate3d(425%, 0, 0);
   }
 }
+@media only screen and (max-width: 970px) {
+  @keyframes ticker {
+    0% {
+      transform: translate3d(575%, 0, 0);
+      visibility: visible;
+    }
+    50% {
+      transform: translate3d(-575%, 0, 0);
+    }
+    100% {
+      transform: translate3d(575%, 0, 0);
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  @keyframes ticker {
+    0% {
+      transform: translate3d(800%, 0, 0);
+      visibility: visible;
+    }
+    50% {
+      transform: translate3d(-800%, 0, 0);
+    }
+    100% {
+      transform: translate3d(800%, 0, 0);
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  @keyframes ticker {
+    0% {
+      transform: translate3d(1000%, 0, 0);
+      visibility: visible;
+    }
+    50% {
+      transform: translate3d(-1000%, 0, 0);
+    }
+    100% {
+      transform: translate3d(1000%, 0, 0);
+    }
+  }
+}
 html.alt body {
   background-color: #282b2c;
 }
@@ -1036,10 +1078,6 @@ h3 {
   }
 }
 
-#gallery h2 {
-  margin: 0;
-}
-
 #gallery h3 {
   font-style: normal;
   font-size: 18px;
@@ -1048,6 +1086,13 @@ h3 {
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
+}
+@media only screen and (max-width: 970px) {
+  #gallery h3 {
+    max-width: 85%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
 }
 
 .project .button {
@@ -1436,9 +1481,6 @@ header nav ul li a {
     background: #7a91b1;
     z-index: 3;
   }
-  header nav ul li.desktop-only {
-    display: none;
-  }
   header nav ul li a, header nav ul li a:focus, header nav ul li a:hover {
     background: #f3e8e9;
     border-bottom: solid #B57E9B 5px;
@@ -1495,12 +1537,28 @@ header .scroll-down img {
   }
 }
 
+#gallery .pause-button {
+  cursor: pointer;
+}
+#gallery .pause-button a {
+  color: #282b2c;
+}
+#gallery .pause-button a:hover {
+  background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+  background-position: 0 95%;
+}
 @media only screen and (max-width: 970px) {
-  #gallery {
-    display: none;
+  #gallery .pause-button a {
+    font-style: normal;
+  }
+  #gallery .pause-button a:hover {
+    background: none;
   }
 }
 #gallery .gallery-container {
+  position: relative;
   overflow: hidden;
   max-width: 100%;
   width: 95%;
@@ -1508,6 +1566,11 @@ header .scroll-down img {
   background: repeating-linear-gradient(-75deg, rgba(122, 145, 177, 0.4), rgba(122, 145, 177, 0.3) 1px, #282b2c 1px, #282b2c 2px);
   border: solid rgba(181, 126, 155, 0.75) 5px;
   box-shadow: rgba(40, 43, 44, 0.25) inset 0px 20px 50px 5px;
+}
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-container {
+    max-width: 85%;
+  }
 }
 #gallery .gallery-content {
   overflow: visible;
@@ -1525,8 +1588,20 @@ header .scroll-down img {
   animation-iteration-count: infinite;
   animation-duration: 200s;
 }
-#gallery .gallery-content:hover {
+#gallery .gallery-content:hover, #gallery .gallery-content.paused {
   animation-play-state: paused;
+}
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-content {
+    width: 90%;
+    animation-duration: 150s;
+  }
+  #gallery .gallery-content:hover {
+    animation-play-state: running;
+  }
+  #gallery .gallery-content.paused:hover {
+    animation-play-state: paused;
+  }
 }
 #gallery .gallery-item {
   background-color: #282b2c;
@@ -1538,16 +1613,29 @@ header .scroll-down img {
   align-items: center;
   position: relative;
 }
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item {
+    flex-direction: column;
+  }
+}
 #gallery .gallery-item .gallery-spacing {
   width: 5px;
-}
-#gallery .gallery-item img {
-  image-rendering: pixelated;
 }
 #gallery .gallery-item img, #gallery .gallery-item .gallery-item-info {
   width: auto;
   height: 300px;
   object-fit: cover;
+}
+#gallery .gallery-item .images-container {
+  display: flex;
+}
+#gallery .gallery-item img {
+  image-rendering: pixelated;
+}
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item img {
+    height: 200px;
+  }
 }
 #gallery .gallery-item .gallery-item-info {
   min-width: 100%;
@@ -1563,6 +1651,19 @@ header .scroll-down img {
   position: absolute;
   padding: 20px;
 }
+#gallery .gallery-item .gallery-item-info.reveal {
+  display: flex;
+  opacity: 100%;
+}
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item .gallery-item-info {
+    height: 100px;
+    position: relative;
+    display: flex;
+    opacity: 100%;
+    padding: 5px;
+  }
+}
 #gallery .gallery-item .gallery-item-info p {
   font-size: 1.25rem;
   cursor: default;
@@ -1570,19 +1671,31 @@ header .scroll-down img {
 #gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a {
   color: #f3e8e9;
 }
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a {
+    font-size: 0.9rem;
+  }
+}
 #gallery .gallery-item .gallery-item-info a:hover {
   color: #B57E9B;
+}
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item .gallery-item-info a:hover {
+    color: #f3e8e9;
+  }
 }
 #gallery .gallery-item .gallery-item-info hr {
   margin-top: 25px;
   border-color: #7a91b1;
 }
+@media only screen and (max-width: 970px) {
+  #gallery .gallery-item .gallery-item-info hr {
+    display: none;
+  }
+}
 #gallery .gallery-item:hover .gallery-item-info {
   display: flex;
   opacity: 100%;
-}
-#gallery .gallery-item:hover img {
-  filter: blur(2px);
 }
 
 #services .wrapper {

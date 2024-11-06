@@ -14,6 +14,9 @@ let app = {
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
         errorMessage: $(".js-disabled"),
+        galleryContent: document.querySelector(".gallery-content"),
+        pauseButton: document.querySelector(".pause-button"),
+        galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
     },
 
     // projects data and selected filter
@@ -29,6 +32,26 @@ let app = {
         toggleNav: () => {
             app.elements.body.toggleClass("nav-open");
             app.elements.nav.toggleClass("active");
+        },
+
+        // pause gallery on button click
+        galleryPause: (playState) => {
+            if (playState === 'pause') {
+                app.elements.galleryContent.classList.add('paused');
+                app.elements.pauseButton.innerHTML = `<a onclick="app.functions.galleryPause('unpause')">Click here to unpause</a>`
+
+                app.elements.galleryInfoItems.forEach((item) => {
+                    item.classList.add('reveal');
+                })
+
+            } else if (playState === 'unpause') {
+                app.elements.galleryContent.classList.remove('paused');
+                app.elements.pauseButton.innerHTML = `<a onclick="app.functions.galleryPause('pause')">Click here to pause</a>`
+
+                app.elements.galleryInfoItems.forEach((item) => {
+                    item.classList.remove('reveal');
+                })
+            }
         },
 
         // smoothly scroll to location
