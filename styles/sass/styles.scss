@@ -340,10 +340,6 @@ header {
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
 
-                li.desktop-only {
-                    display: none;
-                }
-
                 @include flex (column, 0, start);
                 @include positioning (fixed, "", 0);
                 display: none;
@@ -420,12 +416,31 @@ header {
 
 #gallery {
 
-    // responsive to tablet
-    @media only screen and (max-width: $tablet) {
-        display: none;
+    .pause-button {
+        cursor: pointer;
+        a {
+            color: $black;
+
+            &:hover {
+                background: linear-gradient(120deg, $color3 0%, $color3 100%);
+                background-repeat: no-repeat;
+                background-size: 100% 20%;
+                background-position: 0 95%;
+            }
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                font-style: normal;
+                
+                &:hover {
+                    background: none;
+                }
+            }
+        }
     }
 
     .gallery-container {
+        position: relative;
         overflow: hidden;
         max-width: 100%;
         width: 95%;
@@ -439,6 +454,11 @@ header {
           );
         border: solid rgba($color2, 0.75) 5px;
         box-shadow: rgba($black, 0.25) inset 0px 20px 50px 5px;
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            max-width: 85%;
+        }
     }
     .gallery-content {
         overflow: visible;
@@ -455,8 +475,23 @@ header {
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-duration: 200s;
-        &:hover {
+
+        &:hover, &.paused {
             animation-play-state: paused;
+        }
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            width: 90%;
+            animation-duration: 150s;
+
+            &:hover {
+                animation-play-state: running;
+            }
+
+            &.paused:hover {
+                animation-play-state: paused;
+            }
         }
     }
     .gallery-item {
@@ -469,18 +504,32 @@ header {
         align-items: center;
         position: relative;
 
-        .gallery-spacing {
-            width: 5px;
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            flex-direction: column;
         }
 
-        img {
-            image-rendering: pixelated;
+        .gallery-spacing {
+            width: 5px;
         }
 
         img, .gallery-item-info {
             width: auto;
             height: 300px;
             object-fit: cover;
+        }
+
+        .images-container {
+            display: flex;
+        }
+
+        img {
+            image-rendering: pixelated;
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                height: 200px;
+            }
         }
 
         .gallery-item-info {
@@ -502,12 +551,32 @@ header {
               );
             position: absolute;
             padding: 20px;
+
+            &.reveal {
+                display: flex;
+                opacity: 100%;
+            }
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                height: 100px;
+                position: relative;
+                display: flex;
+                opacity: 100%;
+                padding: 5px;
+            }
+
             p {
                 font-size: 1.25rem;
                 cursor: default;
             }
             p, a {
                 color: $white;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    font-size: 0.9rem;
+                }
             }
             a:hover {
                 color: $color2;
@@ -516,15 +585,17 @@ header {
             hr {
                 margin-top: 25px;
                 border-color: $color3;
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    display: none;
+                }
             }
         }
         &:hover {
             .gallery-item-info {
                 display: flex;
                 opacity: 100%;
-            }
-            img {
-                filter: blur(2px);
             }
         }
     }
