@@ -39,5 +39,3 @@
 /alt /tpl
 http://torontopubliclibra.com/* https://www.danateagle.com/tpl/:splat 301!
 https://torontopubliclibra.com/* https://www.danateagle.com/tpl/:splat 301!
-http://www.torontopubliclibra.com/* https://www.danateagle.com/tpl/:splat 301!
-https://www.torontopubliclibra.com/* https://www.danateagle.com/tpl/:splat 301!
