@@ -165,7 +165,7 @@ html.tpl {
                     font-style: normal;
 
                     &:hover, &.selected {
-                        background-color: $color5;
+                        background-color: $color1;
                         color: $black;
                         font-style: italic;
                     }
@@ -183,7 +183,7 @@ html.tpl {
                     .button.selected:hover {
                         color: $black;
                         font-style: italic;
-                        background-color: $color5;
+                        background-color: $color1;
                     }
                 }
             }
@@ -407,7 +407,7 @@ html.tpl {
                         color: $white;
                         text-decoration: none;
                         &:hover {
-                            border: solid $color5 3px;
+                            border: solid $color1 3px;
 
                             // responsive to mobile
                             @media only screen and (max-width: $mobile) {
@@ -483,7 +483,7 @@ html.tpl {
     
             .tpl-link {
                 // background-color: $color1;
-                background: $color5;
+                background: $color1;
                 border: solid 3px $white;
                 min-width: 425px;
                 max-width: 500px;
@@ -531,7 +531,7 @@ html.tpl {
                   background: rgba($color3, 0.75);
                     // responsive to mobile
                     @media only screen and (max-width: $mobile) {
-                        background: $color5;
+                        background: $color1;
                     }
                 }
     

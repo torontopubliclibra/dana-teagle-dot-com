@@ -504,7 +504,7 @@ html.tpl nav ul li .button {
   font-style: normal;
 }
 html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
-  background-color: #82758E;
+  background-color: #84A59D;
   color: #282b2c;
   font-style: italic;
 }
@@ -519,7 +519,7 @@ html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
   html.tpl nav ul li .button.selected:hover {
     color: #282b2c;
     font-style: italic;
-    background-color: #82758E;
+    background-color: #84A59D;
   }
 }
 html.tpl main {
@@ -713,7 +713,7 @@ html.tpl main .tpl-categories ul li a {
   text-decoration: none;
 }
 html.tpl main .tpl-categories ul li a:hover {
-  border: solid #82758E 3px;
+  border: solid #84A59D 3px;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-categories ul li a:hover {
@@ -779,7 +779,7 @@ html.tpl main .tpl-links h3.h3-trans-id {
   max-width: 95%;
 }
 html.tpl main .tpl-links .tpl-link {
-  background: #82758E;
+  background: #84A59D;
   border: solid 3px #f3e8e9;
   min-width: 425px;
   max-width: 500px;
@@ -835,7 +835,7 @@ html.tpl main .tpl-links .tpl-link:hover {
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links .tpl-link:hover {
-    background: #82758E;
+    background: #84A59D;
   }
 }
 @media only screen and (max-width: 768px) {
