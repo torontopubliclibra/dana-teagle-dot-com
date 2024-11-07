@@ -22,7 +22,7 @@ let alt = {
             let formattedLinks = [];
 
             let linkCategories = [...Object.keys(alt.links)].map((category) => {
-                return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}<img src="./assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`;
+                return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`;
             });
 
             if (alt.links) {
@@ -41,7 +41,7 @@ let alt = {
 
                 alt.links[category].forEach((link) => {
 
-                    let title = `<span class="link-title"><p class="button-label">${link.title}</p><img src="./assets/icons/external-link.svg"  alt="external link icon"></span>`;
+                    let title = `<span class="link-title"><p class="button-label">${link.title}</p><img src="../assets/icons/external-link.svg"  alt="external link icon"></span>`;
                     let href = `href="${link.link}"`;
                     let description = ``;
 
