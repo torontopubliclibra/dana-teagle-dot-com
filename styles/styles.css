@@ -392,6 +392,13 @@ html.tpl h2 {
     margin: 10px 0;
   }
 }
+html.tpl h2.tpl-page-heading {
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: left;
+  border-bottom: solid #B57E9B 2px;
+  padding-bottom: 15px;
+}
 html.tpl h3 {
   font-size: 18px;
 }
@@ -425,7 +432,7 @@ html.tpl hr {
   margin: 0;
   border: 1.5px solid #7a91b1;
 }
-html.tpl main, html.tpl header, html.tpl footer {
+html.tpl main, html.tpl footer {
   opacity: 0;
   animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
 }
@@ -449,6 +456,60 @@ html.tpl header.trans-id-header {
   margin-bottom: 0;
   padding-bottom: 10px;
   padding-top: 30px;
+}
+html.tpl nav {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 950px;
+}
+html.tpl nav hr {
+  width: 100%;
+  max-width: 90vw;
+  margin: 30px auto;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl nav hr {
+    width: 90%;
+    margin: 35px auto;
+  }
+}
+html.tpl nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl nav ul {
+    width: 85%;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+html.tpl nav ul li {
+  margin: 0;
+  padding: 0;
+}
+html.tpl nav ul li .button {
+  font-size: 1rem;
+  border-bottom: none;
+  padding: 10px 40px;
+}
+html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
+  background-color: #84A59D;
+  font-style: italic;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl nav ul li .button, html.tpl nav ul li .button:hover {
+    font-style: normal;
+  }
+  html.tpl nav ul li .button:hover {
+    background-color: #f3e8e9;
+  }
 }
 html.tpl main {
   margin: 0 auto;
@@ -516,7 +577,7 @@ html.tpl main .badges img {
     height: 35px;
   }
 }
-html.tpl main .rusty-welcome {
+html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -526,39 +587,92 @@ html.tpl main .rusty-welcome {
   gap: 10px;
   margin: 10px 0;
 }
-html.tpl main .rusty-welcome img {
+html.tpl main .tpl-landing img, html.tpl main.tpl-subpage img {
   margin: 10px 0;
   width: 250px;
   border: solid #B57E9B 3px;
 }
-html.tpl main .rusty-welcome p {
+html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main .rusty-welcome {
+  html.tpl main .tpl-landing {
     flex-flow: column nowrap;
     width: 85%;
   }
-  html.tpl main .rusty-welcome img {
+  html.tpl main .tpl-landing img {
     width: 200px;
   }
 }
 @media only screen and (max-width: 768px) {
-  html.tpl main .rusty-welcome {
+  html.tpl main .tpl-landing {
     align-items: flex-start;
     margin: 0;
   }
-  html.tpl main .rusty-welcome img {
-    width: 150px;
-  }
-  html.tpl main .rusty-welcome p {
+  html.tpl main .tpl-landing p {
     text-align: left;
     font-size: 0.9rem;
   }
-  html.tpl main .rusty-welcome .badges {
+  html.tpl main .tpl-landing .badges {
     gap: 5px;
+  }
+}
+html.tpl main.tpl-subpage {
+  max-width: 950px;
+  margin: 30px auto;
+}
+html.tpl main.tpl-subpage hr {
+  width: 100%;
+  max-width: 90vw;
+  margin: 15px auto;
+}
+html.tpl main.tpl-subpage hr:first-of-type {
+  margin-top: 0;
+}
+html.tpl main.tpl-subpage hr:last-of-type {
+  margin-bottom: 0;
+}
+html.tpl main.tpl-subpage .tpl-page-content {
+  width: 80%;
+}
+html.tpl main.tpl-subpage .tpl-page-content p {
+  text-align: left;
+}
+html.tpl main.tpl-subpage .tpl-page-content a {
+  color: #f3e8e9;
+  font-size: 1rem;
+}
+html.tpl main.tpl-subpage .tpl-page-content a:hover {
+  color: #7a91b1;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content a:hover {
+    color: #f3e8e9;
+  }
+}
+html.tpl main.tpl-subpage .tpl-page-content .now-text {
+  margin-top: 15px;
+}
+html.tpl main.tpl-subpage .tpl-page-content .now-text p {
+  margin: 5px 0;
+}
+html.tpl main.tpl-subpage .tpl-page-content .now-text .sub {
+  margin-left: 20px;
+  padding-left: 10px;
+  background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
+  max-width: 85%;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main.tpl-subpage .tpl-page-content .now-text .sub {
+    max-width: 100%;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main.tpl-subpage .tpl-page-content {
+    width: 85%;
   }
 }
 html.tpl main .tpl-categories {

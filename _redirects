@@ -35,3 +35,8 @@
 # Misc
 /trans-id-resources /trans-id
 /alt /tpl
+/about /#about
+/gallery /#gallery
+/services /#services
+/contact /#contact
+/now /tpl/now

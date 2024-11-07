@@ -43,6 +43,14 @@ html.tpl {
         @media only screen and (max-width: $mobile) {
             margin: 10px 0;
         }
+
+        &.tpl-page-heading {
+            font-size: 1.25rem;
+            width: 100%;
+            text-align: left;
+            border-bottom: solid $color2 2px;
+            padding-bottom: 15px;
+        }
     }
 
     h3 {
@@ -81,7 +89,7 @@ html.tpl {
         border: 1.5px solid $color3;
     }
 
-    main, header, footer {
+    main, footer {
         opacity: 0;
         animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
     }
@@ -108,6 +116,67 @@ html.tpl {
         margin-bottom: 0;
         padding-bottom: 10px;
         padding-top: 30px;
+    }
+
+    nav {
+        margin: 20px auto;
+        width: 100%;
+        max-width: 950px;
+
+        hr {
+            width: 100%;
+            max-width: 90vw;
+            margin: 30px auto;
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                width: 90%;
+                margin: 35px auto;
+            }
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 900px;
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                width: 85%;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            li {
+                margin: 0;
+                padding: 0;
+
+                .button {
+                    font-size: 1rem;
+                    border-bottom: none;
+                    padding: 10px 40px;
+
+                    &:hover, &.selected {
+                        background-color: $color1;
+                        font-style: italic;
+                    }
+                }
+
+                // responsive to mobile
+                @media only screen and (max-width: $mobile) {
+                    .button, .button:hover {
+                        font-style: normal;
+                    }
+                    .button:hover {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
     }
 
     main {
@@ -186,7 +255,7 @@ html.tpl {
             }
         }
 
-        .rusty-welcome {
+        .tpl-landing, &.tpl-subpage {
             width: 100%;
             max-width: 900px;
             display: flex;
@@ -209,7 +278,7 @@ html.tpl {
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
-            .rusty-welcome {
+            .tpl-landing {
                 flex-flow: column nowrap;
                 width: 85%;
                 img {
@@ -220,18 +289,82 @@ html.tpl {
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            .rusty-welcome {
+            .tpl-landing {
                 align-items: flex-start;
                 margin: 0;
-                img {
-                    width: 150px;
-                }
                 p {
                     text-align: left;
                     font-size: 0.9rem;
                 }
                 .badges {
                     gap: 5px;
+                }
+            }
+        }
+
+        &.tpl-subpage {
+            max-width: 950px;
+            margin: 30px auto;
+
+            hr {
+                width: 100%;
+                max-width: 90vw;
+                margin: 15px auto;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            .tpl-page-content {
+                width: 80%;
+
+                p {
+                    text-align: left;
+                }
+
+                a {
+                    color: $white;
+                    font-size: 1rem;
+
+                    &:hover {
+                        color: $color3;
+
+                        // responsive to tablet
+                        @media only screen and (max-width: $tablet) {
+                            color: $white;
+                        }
+                    }
+                }
+
+                .now-text {
+                    margin-top: 15px;
+
+                    p {
+                        margin: 5px 0;
+                    }
+
+                    .sub {
+                        margin-left: 20px;
+                        padding-left: 10px;
+                        background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
+                        max-width: 85%;
+
+                        // responsive to mobile
+                        @media only screen and (max-width: $mobile) {
+                            max-width: 100%;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                // responsive to mobile
+                @media only screen and (max-width: $mobile) {
+                    width: 85%;
                 }
             }
         }
