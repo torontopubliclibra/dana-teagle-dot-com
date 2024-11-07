@@ -147,7 +147,7 @@ html.tpl {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 width: 85%;
-                justify-content: left;
+                justify-content: space-between;
                 gap: 25px;
             }
 
@@ -158,7 +158,7 @@ html.tpl {
                 .button {
                     font-size: 1rem;
                     border-bottom: none;
-                    padding: 10px 35px;
+                    padding: 7px 25px;
                     font-style: normal;
 
                     &:hover, &.selected {
@@ -337,7 +337,7 @@ html.tpl {
                     }
                 }
 
-                .now-text {
+                .tpl-page-text {
                     margin-top: 15px;
 
                     p {

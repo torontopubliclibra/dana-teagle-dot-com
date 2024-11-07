@@ -486,7 +486,7 @@ html.tpl nav ul {
 @media only screen and (max-width: 768px) {
   html.tpl nav ul {
     width: 85%;
-    justify-content: left;
+    justify-content: space-between;
     gap: 25px;
   }
 }
@@ -497,7 +497,7 @@ html.tpl nav ul li {
 html.tpl nav ul li .button {
   font-size: 1rem;
   border-bottom: none;
-  padding: 10px 35px;
+  padding: 7px 25px;
   font-style: normal;
 }
 html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
@@ -650,20 +650,20 @@ html.tpl main.tpl-subpage .tpl-page-content a:hover {
     color: #f3e8e9;
   }
 }
-html.tpl main.tpl-subpage .tpl-page-content .now-text {
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text {
   margin-top: 15px;
 }
-html.tpl main.tpl-subpage .tpl-page-content .now-text p {
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text p {
   margin: 5px 0;
 }
-html.tpl main.tpl-subpage .tpl-page-content .now-text .sub {
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub {
   margin-left: 20px;
   padding-left: 10px;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
   max-width: 85%;
 }
 @media only screen and (max-width: 768px) {
-  html.tpl main.tpl-subpage .tpl-page-content .now-text .sub {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub {
     max-width: 100%;
   }
 }
