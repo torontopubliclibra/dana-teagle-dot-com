@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "http://torontopubliclibra.com/*"
+  to = "https://www.danateagle.com/tpl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.torontopubliclibra.com/*"
+  to = "https://www.danateagle.com/tpl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://torontopubliclibra.com/*"
+  to = "https://www.danateagle.com/tpl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.torontopubliclibra.com/*"
+  to = "https://www.danateagle.com/tpl/:splat"
+  status = 301
+  force = true
