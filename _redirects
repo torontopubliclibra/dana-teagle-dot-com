@@ -34,3 +34,7 @@
 
 # Misc
 /trans-id-resources /trans-id
+
+# TPL pages
+http://torontopubliclibra.com/* https://www.danateagle.com/tpl/:splat 301!
+https://torontopubliclibra.com/* https://www.danateagle.com/tpl/:splat 301!

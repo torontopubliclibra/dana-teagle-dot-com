@@ -79,7 +79,7 @@ let alt = {
     init: () => {
 
         // fetch the projects from the json file and send the response
-        fetch('./data/alt-links.json').then(response => response.json())
+        fetch('../data/alt-links.json').then(response => response.json())
             // then with the data
             .then((data) => {
 
