@@ -637,6 +637,9 @@ html.tpl main.tpl-subpage hr {
   max-width: 90vw;
   margin: 15px auto;
 }
+html.tpl main.tpl-subpage hr:last-of-type {
+  margin-bottom: 0;
+}
 html.tpl main.tpl-subpage .tpl-page-content {
   width: 80%;
 }
