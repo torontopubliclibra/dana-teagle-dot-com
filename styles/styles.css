@@ -486,8 +486,8 @@ html.tpl nav ul {
 @media only screen and (max-width: 768px) {
   html.tpl nav ul {
     width: 85%;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: left;
+    gap: 25px;
   }
 }
 html.tpl nav ul li {
@@ -498,6 +498,7 @@ html.tpl nav ul li .button {
   font-size: 1rem;
   border-bottom: none;
   padding: 10px 35px;
+  font-style: normal;
 }
 html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
   background-color: #84A59D;
@@ -509,6 +510,10 @@ html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
   }
   html.tpl nav ul li .button:hover {
     background-color: #f3e8e9;
+  }
+  html.tpl nav ul li .button.selected:hover {
+    font-style: italic;
+    background-color: #84A59D;
   }
 }
 html.tpl main {
@@ -613,7 +618,6 @@ html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
   }
   html.tpl main .tpl-landing p {
     text-align: left;
-    font-size: 0.9rem;
   }
   html.tpl main .tpl-landing .badges {
     gap: 5px;

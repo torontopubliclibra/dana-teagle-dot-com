@@ -147,8 +147,8 @@ html.tpl {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 width: 85%;
-                justify-content: space-between;
-                gap: 10px;
+                justify-content: left;
+                gap: 25px;
             }
 
             li {
@@ -159,6 +159,7 @@ html.tpl {
                     font-size: 1rem;
                     border-bottom: none;
                     padding: 10px 35px;
+                    font-style: normal;
 
                     &:hover, &.selected {
                         background-color: $color1;
@@ -173,6 +174,10 @@ html.tpl {
                     }
                     .button:hover {
                         background-color: $white;
+                    }
+                    .button.selected:hover {
+                        font-style: italic;
+                        background-color: $color1;
                     }
                 }
             }
@@ -294,7 +299,6 @@ html.tpl {
                 margin: 0;
                 p {
                     text-align: left;
-                    font-size: 0.9rem;
                 }
                 .badges {
                     gap: 5px;
