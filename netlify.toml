@@ -1,4 +1,16 @@
 [[redirects]]
+  from = "http://www.torontopubliclibra.com/"
+  to = "https://www.danateagle.com/tpl/"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "https://www.torontopubliclibra.com/"
+  to = "https://www.danateagle.com/tpl/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "http://www.torontopubliclibra.com/*"
   to = "https://www.danateagle.com/tpl/:splat"
   status = 301
