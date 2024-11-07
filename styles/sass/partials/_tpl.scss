@@ -2,7 +2,7 @@
 @use 'variables' as *;
 @use 'animations';
 
-html.alt {
+html.tpl {
     body {
         background-color: $black;
     }
@@ -54,7 +54,7 @@ html.alt {
         }
     }
 
-    p.js-disabled-alt {
+    p.js-disabled-tpl {
         width: 65%;
         max-width: 850px;
         font-style: italic;
@@ -64,7 +64,7 @@ html.alt {
         color: $black;
         border: solid 3px $black;
         opacity: 0;
-        animation: fade-in-alt-error 0.75s ease-in 1.5s forwards;
+        animation: fade-in-tpl-error 0.75s ease-in 1.5s forwards;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
@@ -83,7 +83,7 @@ html.alt {
 
     main, header, footer {
         opacity: 0;
-        animation: fade-in-alt 0.4s ease-in 0.2s forwards;
+        animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
     }
 
     main, header {
@@ -236,7 +236,7 @@ html.alt {
             }
         }
 
-        .alt-categories {
+        .tpl-categories {
             width: 100%;
             max-width: 900px;
             display: flex;
@@ -310,7 +310,7 @@ html.alt {
             }
         }
     
-        .alt-links {
+        .tpl-links {
             margin-bottom: 20px;
 
             // responsive to mobile
@@ -336,7 +336,7 @@ html.alt {
                 max-width: 95%;
             }
     
-            .alt-link {
+            .tpl-link {
                 background-color: $color1;
                 border: solid 3px $white;
                 min-width: 425px;
@@ -421,7 +421,7 @@ html.alt {
             color: $white;
             font-size: 14px;
     
-            .alt {
+            .tpl {
                 color: $color2;
             }
 

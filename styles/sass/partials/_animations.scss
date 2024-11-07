@@ -16,7 +16,7 @@
 }
 
 // fade-in animation
-@keyframes fade-in-alt {
+@keyframes fade-in-tpl {
     0% {
         opacity: 0;
     };
@@ -26,7 +26,7 @@
 };
 
 // fade-in error animation
-@keyframes fade-in-alt-error {
+@keyframes fade-in-tpl-error {
     0% {
         opacity: 0;
         color: $black;

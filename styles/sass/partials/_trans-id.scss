@@ -25,7 +25,7 @@ html.trans-id {
     header, main, footer {
         background-color: rgba($white, 0.75) !important;
         border: solid 3px $black;
-        h1, h2, h3, p, a, .alt {
+        h1, h2, h3, p, a, .tpl {
             color: $black !important;
         }
         h2, h2 a {
@@ -54,10 +54,10 @@ html.trans-id {
         padding: 10px;
         border-top: none;
         border-bottom: none;
-        .alt-links {
+        .tpl-links {
             margin-bottom: 0;
         }
-        .alt-link {
+        .tpl-link {
             background-color: rgba($color2, 0.5) !important;
             border-color: $black !important;
             margin: 10px !important;

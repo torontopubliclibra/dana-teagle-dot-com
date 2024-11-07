@@ -1,19 +1,19 @@
-// alt object
-let alt = {
+// tpl object
+let tpl = {
 
     // categories element
-    altCategories: $(".alt-categories"),
+    tplCategories: $(".tpl-categories"),
 
     // error message element
-    errorMessage: $(".js-disabled-alt"),
+    errorMessage: $(".js-disabled-tpl"),
 
-    // alt links element
-    altLinks: $(".alt-links"),
+    // tpl links element
+    tplLinks: $(".tpl-links"),
 
     // links data
     links: {},
 
-    // alt functions
+    // tpl functions
     functions: {
         
         // displaying the projects
@@ -21,25 +21,25 @@ let alt = {
 
             let formattedLinks = [];
 
-            let linkCategories = [...Object.keys(alt.links)].map((category) => {
+            let linkCategories = [...Object.keys(tpl.links)].map((category) => {
                 return `<li class="link-category"><a href="#` + category.replace(/\s/g, "-") + `">${category}<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`;
             });
 
-            if (alt.links) {
-                alt.errorMessage.html(``);
-                alt.errorMessage.removeClass("js-disabled");
-                alt.errorMessage.addClass("js-enabled");
+            if (tpl.links) {
+                tpl.errorMessage.html(``);
+                tpl.errorMessage.removeClass("js-disabled");
+                tpl.errorMessage.addClass("js-enabled");
             }
 
             let categoryTag = "category-1";
 
-            for (let category in alt.links) {
+            for (let category in tpl.links) {
 
                 let heading = `<h3 id=` + category.replace(/\s/g, "-") + `>${category}</h3>`
 
                 let categoryLinks = [heading];
 
-                alt.links[category].forEach((link) => {
+                tpl.links[category].forEach((link) => {
 
                     let title = `<span class="link-title"><p class="button-label">${link.title}</p><img src="../assets/icons/external-link.svg"  alt="external link icon"></span>`;
                     let href = `href="${link.link}"`;
@@ -50,7 +50,7 @@ let alt = {
                     }
 
                     // stitch together all the html for the project
-                    categoryLinks.push(`<a class="button alt-link ${categoryTag}"${href} target="_blank">${title}${description}</a>`)
+                    categoryLinks.push(`<a class="button tpl-link ${categoryTag}"${href} target="_blank">${title}${description}</a>`)
 
                 })
 
@@ -65,21 +65,21 @@ let alt = {
                 }
             }
 
-            alt.altCategories.html(`<h2>Jump to</h2>` + `<ul>` + linkCategories.reduce((accumulator, category) => {
+            tpl.tplCategories.html(`<h2>Jump to</h2>` + `<ul>` + linkCategories.reduce((accumulator, category) => {
                 return accumulator + category;
             }) + `</ul>`);
 
-            alt.altLinks.html(formattedLinks.reduce((accumulator, category) => {
+            tpl.tplLinks.html(formattedLinks.reduce((accumulator, category) => {
                 return accumulator + `<br/>` + category;
             }));
         },
     },
     
-    // alt initializion
+    // tpl initializion
     init: () => {
 
         // fetch the projects from the json file and send the response
-        fetch('../data/alt-links.json').then(response => response.json())
+        fetch('../data/tpl-links.json').then(response => response.json())
             // then with the data
             .then((data) => {
 
@@ -112,17 +112,17 @@ let alt = {
                 }
 
                 // save the projects array to the project data
-                alt.links = links;
+                tpl.links = links;
 
                 // display the projects on the page using the default filter
-                alt.functions.linkDisplay();
+                tpl.functions.linkDisplay();
             })
             // console log any promise errors
             .catch(error => console.log(error));
     },
 };
 
-// initialize the alt
+// initialize the tpl
 $(document).ready(() => {
-    alt.init();
+    tpl.init();
 });

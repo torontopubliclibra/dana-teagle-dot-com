@@ -7,7 +7,7 @@ This is the repository for a few different webpages that relate to my work and l
 The main page is for my design and web/software development portfolio. The data for each of the projects is stored as JSON for ease of iterating, filtering, and updating. This page is available in both [default](https://danateagle.com/) and [classic](https://danateagle.com/classic) view.
 
 ### The Toronto Public Libra
-The [second page](https://danateagle.com/alt) is a list of various external files and links (all iterated from another JSON file).
+The [second page](https://danateagle.com/tpl) is a list of various external files and links (all iterated from another JSON file).
 
 ### Trans I.D. Resources
 The [third page](https://danateagle.com/trans-id) is a download hub for documents and resources regarding changing your name and/or gender marker in Ontario—this is an extension of my work running virtual presentations for the trans community since 2020. I'm currently in the early stages of developing a new permanent home for these resources, where users will be able to request info and submit their own suggestions to a team of moderators.

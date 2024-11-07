@@ -241,7 +241,7 @@ html {
     background-position: 100% 50%;
   }
 }
-@keyframes fade-in-alt {
+@keyframes fade-in-tpl {
   0% {
     opacity: 0;
   }
@@ -249,7 +249,7 @@ html {
     opacity: 1;
   }
 }
-@keyframes fade-in-alt-error {
+@keyframes fade-in-tpl-error {
   0% {
     opacity: 0;
     color: #282b2c;
@@ -356,17 +356,17 @@ html {
     }
   }
 }
-html.alt body {
+html.tpl body {
   background-color: #282b2c;
 }
-html.alt header {
+html.tpl header {
   background: none !important;
 }
-html.alt #contact {
+html.tpl #contact {
   background: none !important;
   padding: 0 !important;
 }
-html.alt h1, html.alt h2, html.alt h3 {
+html.tpl h1, html.tpl h2, html.tpl h3 {
   text-align: center;
   cursor: text;
   color: #f3e8e9;
@@ -374,33 +374,33 @@ html.alt h1, html.alt h2, html.alt h3 {
   max-width: 850px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt h1, html.alt h2, html.alt h3 {
+  html.tpl h1, html.tpl h2, html.tpl h3 {
     text-align: left;
   }
 }
-html.alt h1 {
+html.tpl h1 {
   font-style: normal;
   font-size: 40px;
   user-select: initial;
 }
-html.alt h2 {
+html.tpl h2 {
   font-size: 1rem;
   margin: 5px 0;
 }
 @media only screen and (max-width: 768px) {
-  html.alt h2 {
+  html.tpl h2 {
     margin: 10px 0;
   }
 }
-html.alt h3 {
+html.tpl h3 {
   font-size: 18px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt h3 {
+  html.tpl h3 {
     font-size: 15px;
   }
 }
-html.alt p.js-disabled-alt {
+html.tpl p.js-disabled-tpl {
   width: 65%;
   max-width: 850px;
   font-style: italic;
@@ -410,32 +410,32 @@ html.alt p.js-disabled-alt {
   color: #282b2c;
   border: solid 3px #282b2c;
   opacity: 0;
-  animation: fade-in-alt-error 0.75s ease-in 1.5s forwards;
+  animation: fade-in-tpl-error 0.75s ease-in 1.5s forwards;
 }
 @media only screen and (max-width: 768px) {
-  html.alt p.js-disabled-alt {
+  html.tpl p.js-disabled-tpl {
     text-align: left;
     width: 85%;
     padding: 30px 20px;
   }
 }
-html.alt hr {
+html.tpl hr {
   width: 90%;
   max-width: 950px;
   margin: 0;
   border: 1.5px solid #7a91b1;
 }
-html.alt main, html.alt header, html.alt footer {
+html.tpl main, html.tpl header, html.tpl footer {
   opacity: 0;
-  animation: fade-in-alt 0.4s ease-in 0.2s forwards;
+  animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
 }
-html.alt main, html.alt header {
+html.tpl main, html.tpl header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-html.alt header {
+html.tpl header {
   position: initial;
   min-height: auto;
   height: auto;
@@ -445,35 +445,35 @@ html.alt header {
   padding-top: 30px;
   margin-bottom: 10px;
 }
-html.alt header.trans-id-header {
+html.tpl header.trans-id-header {
   margin-bottom: 0;
   padding-bottom: 10px;
   padding-top: 30px;
 }
-html.alt main {
+html.tpl main {
   margin: 0 auto;
 }
-html.alt main hr {
+html.tpl main hr {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main hr {
+  html.tpl main hr {
     margin-top: 18px;
     margin-bottom: 18px;
   }
-  html.alt main hr.no-margin {
+  html.tpl main hr.no-margin {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-html.alt main p.badge-code {
+html.tpl main p.badge-code {
   color: #f3e8e9;
   font-size: 0.8rem;
   max-width: 85%;
   margin: 10px 0;
 }
-html.alt main textarea {
+html.tpl main textarea {
   border: solid #f3e8e9 2px;
   min-height: 40px;
   max-height: 200px;
@@ -489,7 +489,7 @@ html.alt main textarea {
   background-color: #282b2c;
   padding: 5px;
 }
-html.alt main .badges {
+html.tpl main .badges {
   width: 85%;
   max-width: 900px;
   display: flex;
@@ -498,7 +498,7 @@ html.alt main .badges {
   gap: 10px;
   margin: 10px 0;
 }
-html.alt main .badges img {
+html.tpl main .badges img {
   margin: 0;
   width: 88px;
   height: 31px;
@@ -506,17 +506,17 @@ html.alt main .badges img {
   image-rendering: pixelated;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .badges {
+  html.tpl main .badges {
     width: 85%;
     margin: 5px 0;
     justify-content: left;
   }
-  html.alt main .badges img {
+  html.tpl main .badges img {
     width: 101px;
     height: 35px;
   }
 }
-html.alt main .rusty-welcome {
+html.tpl main .rusty-welcome {
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -526,42 +526,42 @@ html.alt main .rusty-welcome {
   gap: 10px;
   margin: 10px 0;
 }
-html.alt main .rusty-welcome img {
+html.tpl main .rusty-welcome img {
   margin: 10px 0;
   width: 250px;
   border: solid #B57E9B 3px;
 }
-html.alt main .rusty-welcome p {
+html.tpl main .rusty-welcome p {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
 }
 @media only screen and (max-width: 970px) {
-  html.alt main .rusty-welcome {
+  html.tpl main .rusty-welcome {
     flex-flow: column nowrap;
     width: 85%;
   }
-  html.alt main .rusty-welcome img {
+  html.tpl main .rusty-welcome img {
     width: 200px;
   }
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .rusty-welcome {
+  html.tpl main .rusty-welcome {
     align-items: flex-start;
     margin: 0;
   }
-  html.alt main .rusty-welcome img {
+  html.tpl main .rusty-welcome img {
     width: 150px;
   }
-  html.alt main .rusty-welcome p {
+  html.tpl main .rusty-welcome p {
     text-align: left;
     font-size: 0.9rem;
   }
-  html.alt main .rusty-welcome .badges {
+  html.tpl main .rusty-welcome .badges {
     gap: 5px;
   }
 }
-html.alt main .alt-categories {
+html.tpl main .tpl-categories {
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -569,7 +569,7 @@ html.alt main .alt-categories {
   justify-content: center;
   align-items: center;
 }
-html.alt main .alt-categories ul {
+html.tpl main .tpl-categories ul {
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
@@ -578,7 +578,7 @@ html.alt main .alt-categories ul {
   padding: 0;
   gap: 5px;
 }
-html.alt main .alt-categories ul li a {
+html.tpl main .tpl-categories ul li a {
   display: flex;
   align-items: center;
   border: solid #B57E9B 3px;
@@ -587,72 +587,72 @@ html.alt main .alt-categories ul li a {
   color: #f3e8e9;
   text-decoration: none;
 }
-html.alt main .alt-categories ul li a:hover {
+html.tpl main .tpl-categories ul li a:hover {
   border: solid #84A59D 3px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .alt-categories ul li a:hover {
+  html.tpl main .tpl-categories ul li a:hover {
     border: solid #B57E9B 3px;
   }
 }
-html.alt main .alt-categories ul li a img {
+html.tpl main .tpl-categories ul li a img {
   width: 16px;
   margin-left: 5px;
   padding-top: 2px;
   filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
 }
 @media only screen and (max-width: 970px) {
-  html.alt main .alt-categories {
+  html.tpl main .tpl-categories {
     display: block;
     width: 85%;
     margin: 0;
   }
-  html.alt main .alt-categories ul {
+  html.tpl main .tpl-categories ul {
     flex-flow: column;
     gap: 0;
     margin: 0;
   }
-  html.alt main .alt-categories ul li {
+  html.tpl main .tpl-categories ul li {
     margin: 5px 0;
   }
-  html.alt main .alt-categories ul li a {
+  html.tpl main .tpl-categories ul li a {
     justify-content: space-between;
     padding: 5px 15px;
   }
-  html.alt main .alt-categories ul li a img {
+  html.tpl main .tpl-categories ul li a img {
     margin-left: 10px;
   }
 }
 @media only screen and (max-width: 970px) and (max-width: 768px) {
-  html.alt main .alt-categories ul {
+  html.tpl main .tpl-categories ul {
     justify-content: left;
   }
 }
-html.alt main .alt-links {
+html.tpl main .tpl-links {
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .alt-links {
+  html.tpl main .tpl-links {
     margin-bottom: 15px;
   }
 }
-html.alt main .alt-links h3 {
+html.tpl main .tpl-links h3 {
   text-align: center;
   width: auto;
   margin-bottom: 10px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .alt-links h3 {
+  html.tpl main .tpl-links h3 {
     max-width: 90%;
     text-align: left;
     margin-right: auto;
     margin-left: auto;
   }
 }
-html.alt main .alt-links h3.h3-trans-id {
+html.tpl main .tpl-links h3.h3-trans-id {
   max-width: 95%;
 }
-html.alt main .alt-links .alt-link {
+html.tpl main .tpl-links .tpl-link {
   background-color: #84A59D;
   border: solid 3px #f3e8e9;
   min-width: 425px;
@@ -671,7 +671,7 @@ html.alt main .alt-links .alt-link {
   margin: 5px;
   cursor: pointer;
 }
-html.alt main .alt-links .alt-link .link-title {
+html.tpl main .tpl-links .tpl-link .link-title {
   display: flex;
   gap: 10px;
   font-size: 16px;
@@ -680,40 +680,40 @@ html.alt main .alt-links .alt-link .link-title {
   color: #282b2c;
   min-width: 100%;
 }
-html.alt main .alt-links .alt-link .link-title p {
+html.tpl main .tpl-links .tpl-link .link-title p {
   width: calc(100% - 15px);
 }
-html.alt main .alt-links .alt-link .link-title img {
+html.tpl main .tpl-links .tpl-link .link-title img {
   width: 18px;
 }
-html.alt main .alt-links .alt-link .link-title i {
+html.tpl main .tpl-links .tpl-link .link-title i {
   font-size: 14px;
   display: flex;
   align-items: center;
   min-height: 15px;
   width: 10px;
 }
-html.alt main .alt-links .alt-link .button-description {
+html.tpl main .tpl-links .tpl-link .button-description {
   min-width: 100%;
   font-size: 12px;
   font-style: normal;
   text-align: left;
 }
-html.alt main .alt-links .alt-link hr {
+html.tpl main .tpl-links .tpl-link hr {
   border: solid 1px #f3e8e9;
   width: 100%;
   margin: 0;
 }
-html.alt main .alt-links .alt-link:hover {
+html.tpl main .tpl-links .tpl-link:hover {
   background: #7a91b1;
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .alt-links .alt-link:hover {
+  html.tpl main .tpl-links .tpl-link:hover {
     background: #84A59D;
   }
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .alt-links .alt-link {
+  html.tpl main .tpl-links .tpl-link {
     min-width: 85%;
     max-width: 85%;
     margin-left: auto;
@@ -721,40 +721,40 @@ html.alt main .alt-links .alt-link:hover {
   }
 }
 @media only screen and (max-width: 768px) {
-  html.alt main .alt-links {
+  html.tpl main .tpl-links {
     min-width: 85%;
   }
 }
-html.alt footer {
+html.tpl footer {
   padding-top: 20px;
   padding-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
-  html.alt footer {
+  html.tpl footer {
     padding-top: 10px;
     padding-bottom: 30px;
   }
 }
-html.alt footer p.credit, html.alt footer a {
+html.tpl footer p.credit, html.tpl footer a {
   width: 85%;
   max-width: 850px;
   margin: 0 auto;
   color: #f3e8e9;
   font-size: 14px;
 }
-html.alt footer p.credit .alt, html.alt footer a .alt {
+html.tpl footer p.credit .tpl, html.tpl footer a .tpl {
   color: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
-  html.alt footer p.credit, html.alt footer a {
+  html.tpl footer p.credit, html.tpl footer a {
     text-align: left;
   }
 }
-html.alt footer a:hover {
+html.tpl footer a:hover {
   color: #7a91b1;
 }
 @media only screen and (max-width: 768px) {
-  html.alt footer a:hover {
+  html.tpl footer a:hover {
     color: #f3e8e9;
   }
 }
@@ -785,7 +785,7 @@ html.trans-id header, html.trans-id main, html.trans-id footer {
   background-color: rgba(243, 232, 233, 0.75) !important;
   border: solid 3px #282b2c;
 }
-html.trans-id header h1, html.trans-id header h2, html.trans-id header h3, html.trans-id header p, html.trans-id header a, html.trans-id header .alt, html.trans-id main h1, html.trans-id main h2, html.trans-id main h3, html.trans-id main p, html.trans-id main a, html.trans-id main .alt, html.trans-id footer h1, html.trans-id footer h2, html.trans-id footer h3, html.trans-id footer p, html.trans-id footer a, html.trans-id footer .alt {
+html.trans-id header h1, html.trans-id header h2, html.trans-id header h3, html.trans-id header p, html.trans-id header a, html.trans-id header .tpl, html.trans-id main h1, html.trans-id main h2, html.trans-id main h3, html.trans-id main p, html.trans-id main a, html.trans-id main .tpl, html.trans-id footer h1, html.trans-id footer h2, html.trans-id footer h3, html.trans-id footer p, html.trans-id footer a, html.trans-id footer .tpl {
   color: #282b2c !important;
 }
 html.trans-id header h2, html.trans-id header h2 a, html.trans-id main h2, html.trans-id main h2 a, html.trans-id footer h2, html.trans-id footer h2 a {
@@ -813,33 +813,33 @@ html.trans-id main {
 html.trans-id main h3 {
   margin-top: 30px;
 }
-html.trans-id main .alt-links {
+html.trans-id main .tpl-links {
   margin-bottom: 0;
 }
-html.trans-id main .alt-link {
+html.trans-id main .tpl-link {
   background-color: rgba(181, 126, 155, 0.5) !important;
   border-color: #282b2c !important;
   margin: 10px !important;
 }
-html.trans-id main .alt-link hr {
+html.trans-id main .tpl-link hr {
   border-color: #282b2c !important;
 }
-html.trans-id main .alt-link:nth-of-type(even) {
+html.trans-id main .tpl-link:nth-of-type(even) {
   background-color: rgba(91, 150, 205, 0.5) !important;
 }
-html.trans-id main .alt-link:hover {
+html.trans-id main .tpl-link:hover {
   background-color: rgba(132, 165, 157, 0.5) !important;
 }
 @media only screen and (max-width: 768px) {
-  html.trans-id main .alt-link:hover {
+  html.trans-id main .tpl-link:hover {
     background-color: rgba(181, 126, 155, 0.5) !important;
   }
-  html.trans-id main .alt-link:hover:nth-of-type(even) {
+  html.trans-id main .tpl-link:hover:nth-of-type(even) {
     background-color: rgba(91, 150, 205, 0.5) !important;
   }
 }
 @media only screen and (max-width: 768px) {
-  html.trans-id main .alt-link {
+  html.trans-id main .tpl-link {
     min-width: 92% !important;
     max-width: 92% !important;
     margin-left: auto !important;
