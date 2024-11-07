@@ -271,6 +271,7 @@ html.tpl {
             margin: 10px 0;
             img {
                 margin: 10px 0;
+                margin-top: 0;
                 width: 250px;
                 border: solid $color2 3px;
             }
@@ -279,6 +280,10 @@ html.tpl {
                 font-size: 1rem;
                 text-align: center;
             }
+        }
+
+        .tpl-landing {
+            padding-bottom: 20px;
         }
 
         // responsive to tablet
@@ -439,6 +444,7 @@ html.tpl {
         }
     
         .tpl-links {
+            margin-top: 10px;
             margin-bottom: 20px;
 
             // responsive to mobile

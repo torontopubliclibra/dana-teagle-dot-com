@@ -594,6 +594,7 @@ html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
 }
 html.tpl main .tpl-landing img, html.tpl main.tpl-subpage img {
   margin: 10px 0;
+  margin-top: 0;
   width: 250px;
   border: solid #B57E9B 3px;
 }
@@ -601,6 +602,9 @@ html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
+}
+html.tpl main .tpl-landing {
+  padding-bottom: 20px;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-landing {
@@ -740,6 +744,7 @@ html.tpl main .tpl-categories ul li a img {
   }
 }
 html.tpl main .tpl-links {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
