@@ -50,6 +50,7 @@ html.tpl {
             text-align: left;
             border-bottom: solid $color2 2px;
             padding-bottom: 15px;
+            margin-top: 0;
         }
     }
 
@@ -344,6 +345,7 @@ html.tpl {
 
                 .tpl-page-text {
                     margin-top: 15px;
+                    padding-bottom: 10px;
 
                     p {
                         margin: 5px 0;

@@ -398,6 +398,7 @@ html.tpl h2.tpl-page-heading {
   text-align: left;
   border-bottom: solid #B57E9B 2px;
   padding-bottom: 15px;
+  margin-top: 0;
 }
 html.tpl h3 {
   font-size: 18px;
@@ -656,6 +657,7 @@ html.tpl main.tpl-subpage .tpl-page-content a:hover {
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text {
   margin-top: 15px;
+  padding-bottom: 10px;
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text p {
   margin: 5px 0;
