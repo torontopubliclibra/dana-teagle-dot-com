@@ -157,13 +157,16 @@ html.tpl {
                 padding: 0;
 
                 .button {
+                    color: $white;
+                    border: solid $white 3px;
+                    background: none;
                     font-size: 1rem;
-                    border-bottom: none;
                     padding: 7px 25px;
                     font-style: normal;
 
                     &:hover, &.selected {
-                        background-color: $color1;
+                        background-color: $color5;
+                        color: $black;
                         font-style: italic;
                     }
                 }
@@ -174,11 +177,13 @@ html.tpl {
                         font-style: normal;
                     }
                     .button:hover {
-                        background-color: $white;
+                        color: $white;
+                        background: none;
                     }
                     .button.selected:hover {
+                        color: $black;
                         font-style: italic;
-                        background-color: $color1;
+                        background-color: $color5;
                     }
                 }
             }
@@ -402,7 +407,7 @@ html.tpl {
                         color: $white;
                         text-decoration: none;
                         &:hover {
-                            border: solid $color1 3px;
+                            border: solid $color5 3px;
 
                             // responsive to mobile
                             @media only screen and (max-width: $mobile) {
@@ -477,7 +482,8 @@ html.tpl {
             }
     
             .tpl-link {
-                background-color: $color1;
+                // background-color: $color1;
+                background: $color5;
                 border: solid 3px $white;
                 min-width: 425px;
                 max-width: 500px;
@@ -485,6 +491,7 @@ html.tpl {
                 @include flex(column, 10px, center, center);
                 width: auto;
                 margin: 5px;
+
                 cursor: pointer;
               
                 .link-title {
@@ -521,10 +528,10 @@ html.tpl {
                 }
               
                 &:hover {
-                  background: $color3;
+                  background: rgba($color3, 0.75);
                     // responsive to mobile
                     @media only screen and (max-width: $mobile) {
-                        background: $color1;
+                        background: $color5;
                     }
                 }
     
