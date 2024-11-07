@@ -310,14 +310,6 @@ html.tpl {
                 width: 100%;
                 max-width: 90vw;
                 margin: 15px auto;
-
-                &:first-of-type {
-                    margin-top: 0;
-                }
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
             }
 
             .tpl-page-content {
