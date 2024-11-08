@@ -1426,6 +1426,9 @@ header.four-oh-four {
     margin-bottom: 10px;
   }
 }
+header.four-oh-four .title {
+  animation: fade-in 0.75s ease-in 0s forwards;
+}
 header.four-oh-four .title h1 {
   font-size: 3rem !important;
 }

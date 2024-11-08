@@ -163,6 +163,10 @@ header {
             margin-bottom: 10px;
         }
 
+        .title {
+            animation: fade-in 0.75s ease-in 0s forwards;
+        }
+
         .title h1 {
             font-size: 3rem !important;
 
