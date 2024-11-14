@@ -18,6 +18,10 @@
         }
     },
     "social profiles": {
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.com"
+        },
         "Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
@@ -25,14 +29,6 @@
         "Twitter": {
             "link": "/twitter",
             "description": "[at] rustbecomesher"
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": "[at] torontopubliclibra.bsky.social"
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "torontopubliclibra"
         },
         "Letterboxd": {
             "link": "/letterboxd",
@@ -45,6 +41,10 @@
         "Spotify": {
             "link": "/spotify",
             "description": ""
+        },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "torontopubliclibra"
         }
     },
     "fundraisers & petitions": {
