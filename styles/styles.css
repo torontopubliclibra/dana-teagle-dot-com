@@ -868,6 +868,9 @@ html.tpl footer p.credit, html.tpl footer a {
   color: #f3e8e9;
   font-size: 14px;
 }
+html.tpl footer p.credit .counter, html.tpl footer a .counter {
+  border: solid #f3e8e9 2px;
+}
 html.tpl footer p.credit .tpl, html.tpl footer a .tpl {
   color: #B57E9B;
 }

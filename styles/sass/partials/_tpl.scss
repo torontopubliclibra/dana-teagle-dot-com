@@ -567,6 +567,10 @@ html.tpl {
             margin: 0 auto;
             color: $white;
             font-size: 14px;
+
+            .counter {
+                border: solid $white 2px;
+            }
     
             .tpl {
                 color: $color2;
