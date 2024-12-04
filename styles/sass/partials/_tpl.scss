@@ -568,9 +568,11 @@ html.tpl {
             color: $white;
             font-size: 14px;
 
-            .counter {
-                border: solid $white 2px;
-            }
+            // .counter {
+            //     border: solid $white 2px;
+            //     // image-rendering: pixelated;
+            //     // transform: scale(1.25);
+            // }
     
             .tpl {
                 color: $color2;
