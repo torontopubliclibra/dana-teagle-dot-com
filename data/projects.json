@@ -12,6 +12,20 @@
             "You can find documents, resources, and presentation materials I've collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
+    "Chris Aino Pihlak": {
+        "id": "chris-pihlak",
+        "year": "2024",
+        "tags": [
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for social historian Chris Aino Pihlak, built with HTML and SCSS. It was originally designed and developed in November and December 2024."
+        ],
+        "image": "./assets/projects/chris-pihlak.jpg",
+        "site": "https://chrispihlak.com"
+    },
     "Michael Cloud Duguay": {
         "id": "michael-cloud-duguay",
         "year": "2024",
