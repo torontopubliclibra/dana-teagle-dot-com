@@ -835,16 +835,23 @@ header {
             flex-flow: row wrap;
             justify-content: left;
             align-items: center;
+            gap: 20px;
             width: 100%;
             min-height: 100%;
 
+            .headshot {
+                border: solid rgba($color3, 0.25) 10px;
+                width: 100%;
+                max-width: 250px;
+                image-rendering:  pixelated;
+            }
+
             .basic-info-caption {
                 font-style: italic;
-                line-height: 35px;
+                line-height: 40px;
                 margin: 0;
 
                 .item {
-                    line-height: 25px;
                     font-size: 14px;
                     font-style: normal;
                     background-color: rgba($color3, 0.25);
@@ -883,6 +890,10 @@ header {
 
                 .basic-info-caption {
                     text-align: left;
+                }
+
+                .headshot {
+                    max-width: 100%;
                 }
             }
         }
