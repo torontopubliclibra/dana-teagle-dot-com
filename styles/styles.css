@@ -2045,7 +2045,7 @@ header .scroll-down img {
   min-height: 100%;
 }
 #about .about-content .basic-info .headshot {
-  border: solid rgba(122, 145, 177, 0.25) 10px;
+  border: solid rgba(122, 145, 177, 0.25) 15px;
   width: 100%;
   max-width: 250px;
   image-rendering: pixelated;
