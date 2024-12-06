@@ -2079,6 +2079,9 @@ header .scroll-down img {
     padding: 0 8px;
     margin: 5px 0;
   }
+  #about .about-content .basic-info .headshot {
+    max-width: 300px;
+  }
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .basic-info {
@@ -2091,7 +2094,7 @@ header .scroll-down img {
     text-align: left;
   }
   #about .about-content .basic-info .headshot {
-    max-width: 100%;
+    max-width: 350px;
   }
 }
 #about .about-content .bio-1 {
