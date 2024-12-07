@@ -1909,10 +1909,10 @@ header .scroll-down img {
 @media only screen and (max-width: 768px) {
   #services .services-content .services-description .metrics {
     background-size: contain;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-position: 50% 55%;
     width: 100%;
-    height: 150px;
+    height: 100px;
   }
 }
 #services .services-content .service {
