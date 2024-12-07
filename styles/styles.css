@@ -1895,6 +1895,26 @@ header .scroll-down img {
   align-items: initial;
   gap: 20px;
 }
+#services .services-content .services-description .metrics {
+  background-color: #fff;
+  background-image: url("./../../assets/100s.png");
+  filter: opacity(80%);
+  background-size: 450px;
+  padding: 15px;
+  border: solid #84A59D 4px;
+  width: 96%;
+  height: 115px;
+  image-rendering: pixelated;
+}
+@media only screen and (max-width: 768px) {
+  #services .services-content .services-description .metrics {
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: 50% 55%;
+    width: 100%;
+    height: 150px;
+  }
+}
 #services .services-content .service {
   background: rgba(132, 165, 157, 0.3);
   border: solid #B57E9B 5px;
