@@ -93,22 +93,6 @@
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
     },
-    "Sydney Gautreau": {
-        "id": "sydney-gautreau",
-        "year": "2022",
-        "tags": [
-            "JavaScript",
-            "Jquery",
-            "HTML",
-            "CSS",
-            "SCSS"
-        ],
-        "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
-        ],
-        "image": "./assets/projects/sydneygautreau.jpg",
-        "site": "https://sydneygautreau.com"
-    },
     "Queer Walk": {
         "id": "queer-walk",
         "year": "2023",
@@ -143,6 +127,22 @@
         "image": "./assets/projects/note-taken.png",
         "site": "/notes",
         "code": "/notes/repo"
+    },
+    "Sydney Gautreau": {
+        "id": "sydney-gautreau",
+        "year": "2022",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
+        ],
+        "image": "./assets/projects/sydneygautreau.jpg",
+        "site": "https://sydneygautreau.com"
     },
     "The Pigeon Hole": {
         "id": "pigeon-hole",
