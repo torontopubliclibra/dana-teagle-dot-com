@@ -18,17 +18,13 @@
         }
     },
     "social profiles": {
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": "[at] torontopubliclibra.com"
-        },
         "Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
         },
-        "Twitter": {
-            "link": "/twitter",
-            "description": "[at] rustbecomesher"
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.com"
         },
         "Letterboxd": {
             "link": "/letterboxd",
@@ -52,13 +48,9 @@
             "link": "https://linktr.ee/mutualaidforlife",
             "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
         },
-        "Support for Tents in Gaza": {
-            "link": "https://www.gofundme.com/f/support-for-marginalized-refugees-in-jordan",
-            "description": "Aiming to secure, purchase, and distribute tents in Gaza"
-        },
-        "Hot Meals in Gaza": {
-            "link": "https://www.gofundme.com/f/Hot-meals-in-gaza-daily",
-            "description": "Providing hot meals to children in Gaza daily"
+        "Davenport Aid Brigade": {
+            "link": "https://linktr.ee/davenportaidbrigade",
+            "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
         }
     },
     "links & resources": {
