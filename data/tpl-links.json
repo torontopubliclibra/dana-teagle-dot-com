@@ -30,6 +30,10 @@
             "link": "/letterboxd",
             "description": "[at] torontolibra"
         },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "torontopubliclibra"
+        },
         "Goodreads": {
             "link": "/goodreads",
             "description": ""
@@ -37,13 +41,35 @@
         "Spotify": {
             "link": "/spotify",
             "description": ""
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "torontopubliclibra"
         }
     },
-    "fundraisers & petitions": {
+    "contact & pay": {
+        "Discord": {
+            "link": "/discord",
+            "description": "torontopubliclibra on Discord"
+        },
+        "Personal email": {
+            "link": "mailto:torontopubliclibra@gmail.com",
+            "description": "torontopubliclibra [at] gmail.com"
+        },
+        "Business email": {
+            "link": "mailto:contact@danateagle.com",
+            "description": "contact [at] danateagle.com"
+        },
+        "PGP [Pretty Good Privacy] key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "ASCII text file download"
+        },
+        "Paypal": {
+            "link": "/paypal",
+            "description": "Send payments to [at] torontopubliclibra"
+        },
+        "RUSTPROP Ko-fi": {
+            "link": "/kofi",
+            "description": "Support my agitprop design side project"
+        }
+    },
+    "mutual aid": {
         "Mutual Aid for Life": {
             "link": "https://linktr.ee/mutualaidforlife",
             "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
@@ -73,32 +99,6 @@
         "Transfeminine Science": {
             "link": "https://transfemscience.org/",
             "description": "A resource for informational content on the subject of transfeminine hormone therapy"
-        }
-    },
-    "contact & pay": {
-        "Discord": {
-            "link": "/discord",
-            "description": "torontopubliclibra on Discord"
-        },
-        "Personal email": {
-            "link": "mailto:torontopubliclibra@gmail.com",
-            "description": "torontopubliclibra [at] gmail.com"
-        },
-        "Business email": {
-            "link": "mailto:contact@danateagle.com",
-            "description": "contact [at] danateagle.com"
-        },
-        "PGP [Pretty Good Privacy] key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "ASCII text file download"
-        },
-        "Paypal": {
-            "link": "/paypal",
-            "description": "Send payments to [at] torontopubliclibra"
-        },
-        "RUSTPROP Ko-fi": {
-            "link": "/kofi",
-            "description": "Support my agitprop design side project"
         }
     }
 }
