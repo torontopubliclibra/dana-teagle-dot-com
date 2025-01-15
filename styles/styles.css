@@ -701,7 +701,7 @@ html.tpl main .tpl-categories ul {
   justify-content: space-around;
   margin: 10px 0;
   padding: 0;
-  gap: 5px;
+  gap: 25px;
 }
 html.tpl main .tpl-categories ul li a {
   display: flex;
