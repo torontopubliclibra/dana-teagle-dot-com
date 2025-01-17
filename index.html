@@ -66,11 +66,11 @@
 
           <!-- nav list -->
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="about">About</a></li>
+            <li><a href="#gallery" class="gallery">Gallery</a></li>
+            <li><a href="#projects" class="projects">Projects</a></li>
+            <li><a href="#services" class="services">Services</a></li>
+            <li><a href="#contact" class="contact">Contact</a></li>
             <div class="socials left">
               <a href="mailto:contact@danateagle.com" class="button social"><img src="./assets/icons/email.svg" alt="Email icon"></a>
               <a href="/github" target="_blank" title="Dana on Github" class="button social"><img src="./assets/icons/github.svg" alt="Github icon"></a>
@@ -90,9 +90,9 @@
         <!-- <p class="tagline">The official home for all things Dana Teagle</p> -->
 
         <!-- scroll down icon -->
-        <div class="scroll-down" title="Scroll down the page">
-          <img src="./assets/icons/arrow-down.svg" alt="scroll down icon" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
-        </div>
+        <a class="scroll-down" title="Scroll down the page" href="#about" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
+          <img src="./assets/icons/arrow-down.svg" alt="scroll down icon" tabindex="0">
+        </a>
         
       </div>
     </header>
@@ -129,7 +129,7 @@
             </p>
             <hr>
             <p>
-              You can find some examples of websites, applications, and designs I've worked on in <a href="#gallery">the sections below</a>, or on my <a href="/dt-insta" target="_blank" title="dana teagle dot com on Instagram">Instagram page</a>, and you can learn about the freelance services I offer <a href="#services">a bit further down this page</a>. Also feel free to check out my <a href="/data/danarosamundteagleresume-oct2024.pdf" target="_blank" title="Download Dana's resume (last updated October 2024)">most recent resume</a>.
+              You can find some examples of websites, applications, and designs I've worked on in <a href="#gallery" class="about-to-gallery">the sections below</a>, or on my <a href="/dt-insta" target="_blank" title="dana teagle dot com on Instagram">Instagram page</a>, and you can learn about the freelance services I offer <a href="#services" class="about-to-services">a bit further down this page</a>. Also feel free to check out my <a href="/data/danarosamundteagleresume-oct2024.pdf" target="_blank" title="Download Dana's resume (last updated October 2024)">most recent resume</a>.
             </p>
           </div>
         </div>
@@ -353,7 +353,7 @@
         <div class="services-content">
           <div class="services-description">
             <p>
-              I'm currently taking on freelance projects for graphic design, web and software development, digital content strategy, and website auditing. Please feel free to <a href="#contact">reach out</a> and we can discuss your goals, deadline, and budget in more detail. I'd love to help make your dream project a reality!
+              I'm currently taking on freelance projects for graphic design, web and software development, digital content strategy, and website auditing. Please feel free to <a href="#contact" class="services-to-contact">reach out</a> and we can discuss your goals, deadline, and budget in more detail. I'd love to help make your dream project a reality!
             </p>
           </div>
           <hr>
@@ -397,11 +397,11 @@
       <div class="wrapper">
 
         <!-- scroll to top button -->
-        <div class="button scroll-to-top" title="Go back to top of page" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
+        <a class="button scroll-to-top" title="Go back to top of page" href="#home" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
           <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
           <p class="button-label">Back to top</p>
           <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
-        </div>
+        </a>
 
         <hr/>
 
