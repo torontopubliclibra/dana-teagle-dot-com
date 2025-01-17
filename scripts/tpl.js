@@ -78,8 +78,10 @@ let tpl = {
     // tpl initializion
     init: () => {
 
-        // fetch the projects from the json file and send the response
-        fetch('../data/tpl-links.json').then(response => response.json())
+        if (window.location.pathname === "/tpl/" || window.location.pathname === "/tpl/index.html") {
+
+            // fetch the projects from the json file and send the response
+            fetch('../data/tpl-links.json').then(response => response.json())
             // then with the data
             .then((data) => {
 
@@ -119,6 +121,8 @@ let tpl = {
             })
             // console log any promise errors
             .catch(error => console.log(error));
+
+        };
     },
 };
 
