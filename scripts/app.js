@@ -4,10 +4,21 @@ let app = {
     // page elements
     elements: {
         body: $("body"),
-        about: $("#about"),
         nav: $("nav"),
-        projects: $("#projects"),
         mobileMenu: $(".mobile-menu"),
+        about: $("#about"),
+        gallery: $("#gallery"),
+        projects: $("#projects"),
+        services: $("#services"),
+        contact: $("#contact"),
+        aboutToGallery: $(".about-to-gallery"),
+        aboutToServices: $(".about-to-services"),
+        servicesToContact: $(".services-to-contact"),
+        aboutLink: $("nav .about"),
+        galleryLink: $("nav .gallery"),
+        projectsLink: $("nav .projects"),
+        servicesLink: $("nav .services"),
+        contactLink: $("nav .contact"),
         scrollDownButton: $(".scroll-down"),
         scrollTopButton: $(".scroll-to-top"),
         projectsContainer: $(".projects-container"),
@@ -338,19 +349,60 @@ let app = {
         // for each of the nav list item links, toggle the nav on click
         document.querySelectorAll("nav ul li a").forEach((link) => link.addEventListener("click", app.functions.toggleNav));
 
-        // scroll up to top of browser window on button click
-        app.elements.scrollTopButton.click(() => app.functions.scroll("top"));
+        // smooth scroll up to top of browser window on button click
+        app.elements.scrollTopButton.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("top");
+        });
 
-        // scroll down to top of about section on button click
-        app.elements.scrollDownButton.click(() => app.functions.scroll("about"));
+        // smooth scroll down to top of about section on button click
+        app.elements.scrollDownButton.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("about");
+        });
+
+        // smooth scroll to top of sections on nav link click
+        app.elements.aboutLink.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("about");
+        });
+        app.elements.galleryLink.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("gallery");
+        });
+        app.elements.projectsLink.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("projects");
+        });
+        app.elements.servicesLink.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("services");
+        });
+        app.elements.contactLink.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("contact");
+        });
+        app.elements.aboutToGallery.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("gallery");
+        });
+        app.elements.aboutToServices.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("services");
+        });
+        app.elements.servicesToContact.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("contact");
+        });
 
     },
     
     // app initializion
     init: () => {
 
-        // fetch the projects from the json file and send the response
-        fetch('./data/projects.json').then(response => response.json())
+        if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+            // fetch the projects from the json file and send the response
+            fetch('./data/projects.json').then(response => response.json())
             // then with the data
             .then((data) => {
 
@@ -389,6 +441,7 @@ let app = {
             })
             // console log any promise errors
             .catch(error => console.log(error));
+        }
 
         // add the event listeners
         app.events();
