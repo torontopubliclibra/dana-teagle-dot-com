@@ -605,6 +605,7 @@ html.tpl main .tpl-landing img, html.tpl main.tpl-subpage img {
   margin-top: 0;
   width: 250px;
   border: solid #B57E9B 3px;
+  pointer-events: none;
 }
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
   color: #f3e8e9;
@@ -977,6 +978,7 @@ html.rustprop main .img-gallery img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  pointer-events: none;
 }
 @media only screen and (max-width: 970px) {
   html.rustprop main .rp-landing {
@@ -2050,6 +2052,7 @@ header .scroll-down img {
   width: 95%;
   height: 80px;
   image-rendering: pixelated;
+  pointer-events: none;
 }
 @media only screen and (max-width: 768px) {
   #services .services-content .metrics {
@@ -2214,6 +2217,7 @@ header .scroll-down img {
   width: 100%;
   max-width: 250px;
   image-rendering: pixelated;
+  pointer-events: none;
 }
 #about .about-content .basic-info .basic-info-caption {
   font-style: italic;
@@ -2450,6 +2454,7 @@ header .scroll-down img {
   max-width: 100%;
   border: solid 4px #7a91b1;
   margin-bottom: 10px;
+  pointer-events: none;
 }
 
 #contact .contact-content {
