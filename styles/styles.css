@@ -887,6 +887,143 @@ html.tpl footer a:hover {
   }
 }
 
+html.rustprop body {
+  background-color: #282b2c;
+}
+html.rustprop body, html.rustprop .button {
+  text-transform: uppercase;
+}
+html.rustprop header {
+  background: none !important;
+}
+html.rustprop h1 {
+  text-align: center;
+  cursor: text;
+  color: #f3e8e9;
+  width: 85%;
+  max-width: 850px;
+  border-bottom: solid 2px #B57E9B;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop h1 {
+    text-align: left;
+  }
+}
+html.rustprop h1 {
+  font-style: normal;
+  font-size: 60px;
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+          user-select: initial;
+}
+html.rustprop main, html.rustprop footer {
+  opacity: 0;
+  animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
+}
+html.rustprop main, html.rustprop header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html.rustprop header {
+  position: initial;
+  min-height: auto;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+html.rustprop main {
+  margin: 0 auto;
+}
+html.rustprop main .rp-landing {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding-bottom: 20px;
+}
+html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
+  color: #f3e8e9;
+  font-size: 1rem;
+  text-align: center;
+}
+html.rustprop main .rp-landing a:hover {
+  color: #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-landing a:hover {
+    color: #f3e8e9;
+  }
+}
+html.rustprop main .img-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 85%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+html.rustprop main .img-gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 970px) {
+  html.rustprop main .rp-landing {
+    flex-flow: column nowrap;
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-landing {
+    align-items: flex-start;
+    margin: 0;
+  }
+  html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
+    text-align: left;
+  }
+}
+html.rustprop footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop footer {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+}
+html.rustprop footer p.credit, html.rustprop footer a {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #f3e8e9;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop footer p.credit, html.rustprop footer a {
+    text-align: left;
+  }
+}
+html.rustprop footer a:hover {
+  color: #B57E9B;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop footer a:hover {
+    color: #f3e8e9;
+  }
+}
+
 html.trans-id {
   display: flex;
   justify-content: center;

@@ -1,6 +1,7 @@
 // import all partials
 @use 'partials/setup';
 @use 'partials/tpl';
+@use 'partials/rustprop';
 // @use 'partials/weird-liquid';
 @use 'partials/trans-id';
 @use 'partials/variables' as *;
