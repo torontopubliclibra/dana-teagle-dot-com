@@ -139,6 +139,7 @@ html.tpl {
             list-style-type: none;
             display: flex;
             justify-content: center;
+            flex-flow: row wrap;
             gap: 50px;
             padding: 0;
             margin: 0 auto;
@@ -148,7 +149,6 @@ html.tpl {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 width: 85%;
-                justify-content: space-between;
                 gap: 25px;
             }
 
