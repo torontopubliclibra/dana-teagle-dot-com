@@ -8,9 +8,17 @@
             "link": "/dt-insta",
             "description": "[at] danateagledotcom"
         },
-        "Agitprop Instagram": {
+        "RUSTPROP site": {
+            "link": "/rustprop",
+            "description": "Agitprop design project"
+        },
+        "RUSTPROP Instagram": {
             "link": "/rp-insta",
             "description": "[at] rustprop"
+        },
+        "Creative writing newsletter": {
+            "link": "/substack",
+            "description": "the toronto public libra on Substack"
         },
         "Github": {
             "link": "/github",
