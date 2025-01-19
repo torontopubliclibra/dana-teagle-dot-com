@@ -71,7 +71,7 @@ let app = {
             // Add CSS properties to the galleryContent element
             if (galleryContent) {
                 const galleryItems = document.querySelectorAll('.gallery-item');
-                
+
                 let totalWidth = 0;
                 galleryItems.forEach(item => {
                     totalWidth += item.offsetWidth;
@@ -107,10 +107,10 @@ let app = {
                 style.id = 'ticker-animation';
                 document.head.appendChild(style);
 
-                galleryContent.style.animationName = 'ticker';
-                galleryContent.style.animationTimingFunction = 'linear';
-                galleryContent.style.animationIterationCount = 'infinite';
-                galleryContent.style.animationDuration = '200s';
+                setTimeout(() => {
+                    galleryContent.style.animation = 'ticker infinite 200s, fade-in 2s';
+                    galleryContent.style.animationTimingFunction = 'linear';
+                }, 500);
             }
         },
 
