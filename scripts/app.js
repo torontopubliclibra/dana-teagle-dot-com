@@ -203,7 +203,7 @@ let app = {
                     style.id = 'ticker-animation';
                     document.head.appendChild(style);
 
-                    app.elements.galleryContent.style.animation = `ticker infinite ${galleryTransform / 2}s, fade-in 2s`;
+                    app.elements.galleryContent.style.animation = `ticker infinite 225s, fade-in 2s`;
                     app.elements.galleryContent.style.animationTimingFunction = 'linear';
                     app.elements.galleryContent.style.animationPlayState = 'running';
                 }, 1000);
