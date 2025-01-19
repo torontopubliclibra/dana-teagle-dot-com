@@ -1048,6 +1048,9 @@ html.trans-id body {
     margin-bottom: 5%;
   }
 }
+html.trans-id body, html.trans-id .button {
+  text-transform: initial;
+}
 html.trans-id header, html.trans-id main, html.trans-id footer {
   background-color: rgba(243, 232, 233, 0.75) !important;
   border: solid 3px #282b2c;

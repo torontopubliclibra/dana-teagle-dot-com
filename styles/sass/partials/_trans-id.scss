@@ -22,6 +22,9 @@ html.trans-id {
             margin-bottom: 5%;
         }
     }
+    body, .button {
+        text-transform: initial;
+    }
     header, main, footer {
         background-color: rgba($white, 0.75) !important;
         border: solid 3px $black;
