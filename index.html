@@ -145,170 +145,11 @@
         <h3>[ <span class="pause-button"><button onclick="app.functions.galleryPause('pause')">Click here to pause</button></span> ]
         </h3>
         <div class="gallery-container">
+          
+          <!-- javascript fallback error message -->
+          <p class="js-disabled-gallery">Sorry, but the gallery section isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason (and honestly I respect your choice). If that's not the case however, please check back later.</p>
+
           <div class="gallery-content">
-            
-            <div class="gallery-item">
-              <img src="./assets/projects/truehistorybeer.jpg" alt="True History Brewing website screenshot">
-              <div class="gallery-item-info">
-                <p>True History Brewing (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#true-history-brewing" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('true-history-brewing')">Project info</a> | <a href="https://truehistorybeer.com" target="_blank" title="True History Brewing website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/michaelcduguay.jpg" alt="Michael Cloud Duguay website screenshot">
-              <div class="gallery-item-info">
-                <p>Michael Cloud Duguay (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#michael-cloud-duguay" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('michael-cloud-duguay')">Project info</a> | <a href="https://michaelcduguay.com" target="_blank" title="Michael Cloud Duguay website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/chris-pihlak.jpg" alt="Chris Pihlak website screenshot">
-              <div class="gallery-item-info">
-                <p>Chris Pihlak (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#chris-pihlak" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('chris-pihlak')">Project info</a> | <a href="https://chrispihlak.com" target="_blank" title="Chris Pihlak website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/connectfund.jpg" alt="Connect Fund website screenshot">
-              <div class="gallery-item-info">
-                <p>Connect Fund (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#connect-fund" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('connect-fund')">Project info</a> | <a href="https://connectfund.org" target="_blank" title="Connect Fund website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/kitschin-sink.png" alt="Kitschin Sink logo design">
-              <div class="gallery-item-info">
-                <p>Kitschin Sink (2021)</p>
-                <p>Logo design concept</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/ninamilanovski.jpg" alt="Nina Milanovski website screenshot">
-              <div class="gallery-item-info">
-                <p>Nina Milanovski (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#nina-milanovski" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('nina-milanovski')">Project info</a> | <a href="https://ninamilanovski.com" target="_blank" title="Nina Milanovski website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item multi">
-              <div class="images-container">
-                <img src="./assets/projects/michaelcduguay-2.jpg" alt="Michael Cloud Duguay website screenshot">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/michaelcduguay-4.jpg" alt="Michael Cloud Duguay website screenshot">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/michaelcduguay-3.jpg" alt="Michael Cloud Duguay website screenshot">
-              </div>
-              <div class="gallery-item-info">
-                <p>Michael Cloud Duguay (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#michael-cloud-duguay" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('michael-cloud-duguay')">Project info</a> | <a href="https://michaelcduguay.com" target="_blank" title="Michael Cloud Duguay website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item multi">
-              <div class="images-container">
-                <img src="./assets/projects/yrl-1.png" alt="Your Real Life Insurance social media post">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/yrl-3.png" alt="Your Real Life Insurance social media post">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/yrl-2.png" alt="Your Real Life Insurance social media post">
-              </div>
-              <div class="gallery-item-info">
-                <p>Your Real Life Insurance (2020-2021)</p>
-                <p>Graphic design & social media marketing</p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/west83.jpg" alt="West83 logo design">
-              <div class="gallery-item-info">
-                <p>West83 (2024)</p>
-                <p>Logo design</p>
-                <p><a href="https://www.west83.com/" target="_blank" title="West83 website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item multi">
-              <div class="images-container">
-                <img src="./assets/projects/connectfund-2.png" alt="Connect Fund website screenshot">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/connectfund-3.png" alt="Connect Fund website screenshot">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/connectfund-4.png" alt="Connect Fund website screenshot">
-              </div>
-              <div class="gallery-item-info">
-                <p>Connect Fund (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#connect-fund" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('connect-fund')">Project info</a> | <a href="https://connectfund.org" target="_blank" title="Connect Fund website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/sydneygautreau.jpg" alt="Sydney Gautreau website screenshot">
-              <div class="gallery-item-info">
-                <p>Sydney Gautreau (2022)</p>
-                <p>Web design & development</p>
-                <p><a href="#sydney-gautreau" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('sydney-gautreau')">Project info</a> | <a href="https://sydneygautreau.com" target="_blank" title="Sydney Gautreau website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item multi">
-              <div class="images-container">
-                <img src="./assets/rustprop/touchscreens.png" alt="RUSTPROP poster design">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/rustprop/sorry.png" alt="RUSTPROP poster design">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/rustprop/push-notifs.png" alt="RUSTPROP poster design">
-              </div>
-              <div class="gallery-item-info">
-                <p>RUSTPROP (2024)</p>
-                <p>Agitprop design project | <a href="/rustprop" target="_blank" title="RUSTPROP website">Site</a> | <a href="/rp-insta" target="_blank" title="@rustprop on Instagram">Instagram</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/note-taken.png" alt="Note Taken website screenshot">
-              <div class="gallery-item-info">
-                <p>Note Taken (2023)</p>
-                <p>Web design & development</p>
-                <p><a href="#note-taken" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('note-taken')">Project info</a> | <a href="/notes" target="_blank" title="Note Taken website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item multi">
-              <div class="images-container">
-                <img src="./assets/projects/truehistorybeer-2.jpg" alt="True History Brewing website screenshot">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/truehistorybeer-4.jpg" alt="True History Brewing website screenshot">
-                <div class="gallery-spacing"></div>
-                <img src="./assets/projects/truehistorybeer-3.png" alt="True History Brewing website screenshot">
-              </div>
-              <div class="gallery-item-info">
-                <p>True History Brewing (2024)</p>
-                <p>Web design & development</p>
-                <p><a href="#true-history-brewing" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('true-history-brewing')">Project info</a> | <a href="https://truehistorybeer.com" target="_blank" title="True History Brewing website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="./assets/projects/body-stories-2.png" alt="Body Stories Dance logo design">
-              <div class="gallery-item-info">
-                <p>Body Stories (2021)</p>
-                <p>Logo design</p>
-                <p><a href="https://bodystoriesdance.com" target="_blank" title="Body Stories Dance website">Site</a></p>
-                <hr/>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -323,7 +164,7 @@
         <hr/>
 
         <!-- javascript fallback error message -->
-        <p class="js-disabled">Sorry, but this page isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason (and honestly I respect your choice). If that's not the case however, please check back later.</p>
+        <p class="js-disabled-projects">Sorry, but the projects section isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason (and honestly I respect your choice). If that's not the case however, please check back later.</p>
 
         <!-- projects navigation (injected by jquery) -->
         <div class="projects-nav"></div>

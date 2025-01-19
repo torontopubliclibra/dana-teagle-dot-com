@@ -24,8 +24,9 @@ let app = {
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
-        errorMessage: $(".js-disabled"),
+        projectsErrorMessage: $(".js-disabled-projects"),
         galleryContent: document.querySelector(".gallery-content"),
+        galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
     },
@@ -48,6 +49,14 @@ let app = {
         toggleNav: () => {
             app.elements.body.toggleClass("nav-open");
             app.elements.nav.toggleClass("active");
+        },
+
+        shuffleArray: (array) => {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         },
 
         // pause gallery on button click
@@ -77,67 +86,80 @@ let app = {
             // initialize the gallery array
             let galleryArray = [];
 
-            // map out the sorted projects to the page
-            galleryArray = app.gallery.data.map((item) => {
+            if (app.gallery.data.length > 0) {
 
-                // intialize an empty object for the formatted project
-                let formattedItem = {
-                    images: "",
-                    info: "",
-                    multi: false,
-                };
+                app.elements.galleryErrorMessage.html(``);
+                app.elements.galleryErrorMessage.removeClass("js-disabled-gallery");
+                app.elements.galleryErrorMessage.addClass("js-enabled-gallery");
 
-                if (item.images && item.images.length > 1) {
+                // map out the gallery to the page
+                galleryArray = app.gallery.data.map((item) => {
 
-                    formattedItem.multi = true;
-                    let formattedImages = [];
-                    let imageCounter = 1;
+                    // intialize an empty object for the formatted project
+                    let formattedItem = {
+                        images: "",
+                        info: "",
+                        multi: false,
+                    };
 
-                    formattedImages = item.images.map(image => {
+                    if (item.images && item.images.length > 1) {
 
-                        let img = `<img src="${image}" alt="${item.title}">`
-                        let spacing = ``;
-                        
-                        if (imageCounter !== (item.images.length)) {
-                            spacing = `<div class="gallery-spacing"></div>`;
-                        }
+                        formattedItem.multi = true;
+                        let formattedImages = [];
+                        let imageCounter = 1;
 
-                        return img + spacing;
-                    });
+                        formattedImages = item.images.map(image => {
 
-                    formattedItem.images = `<div class="images-container">` + formattedImages.reduce((accumulator, item) => {
-                    return accumulator + item}) + `</div>`;
-                } else {
-                    formattedItem.images = `<img src="${image[0]}" alt="${item.title}">`
-                }
+                            let img = `<img src="${image}" alt="${item.title}">`
+                            let spacing = ``;
+                            
+                            if (imageCounter !== (item.images.length)) {
+                                spacing = `<div class="gallery-spacing"></div>`;
+                                imageCounter++
+                            }
 
-                let formattedTitle = `<p>${item.title}</p>`
-                let formattedService = `<p>${item.service}</p>`
-                let itemLinks = [];
+                            return img + spacing;
+                        });
 
-                if (item.site) {
-                    itemLinks.push(`<a href="${item.site}" target="_blank" title="${item.title} website">Site</a>`)
-                }
+                        formattedItem.images = `<div class="images-container">` + formattedImages.reduce((accumulator, item) => {
+                        return accumulator + item}) + `</div>`;
+                    } else {
+                        formattedItem.images = `<img src="${item.images[0]}" alt="${item.title}">`
+                    }
 
-                if (item.id) {
-                    itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('${item.id}')">Project info</a>`)
-                }
+                    let formattedTitle = `<p>${item.title} (${item.year})</p>`
+                    let formattedService = `<p>${item.service}</p>`
+                    let itemLinks = [];
+                    let formattedLinks = ``;
 
-                let formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + `|` + item}) + `</p>`
+                    if (item.site) {
+                        itemLinks.push(`<a href="${item.site}" target="_blank" title="${item.title} website">Site</a>`)
+                    }
 
-                // stitch together all the html for the item
-                if (formattedItem.multi) {
-                    return `<div class="gallery-item multi">` + formattedTitle + formattedService + formattedLinks + `<hr></div>`
-                } else {
-                    return `<div class="gallery-item">` + formattedTitle + formattedService + formattedLinks + `<hr></div>`
-                }
-            });
+                    if (item.instagram) {
+                        itemLinks.push(`<a href="${item.instagram}" target="_blank" title="${item.title} instagram">Instagram</a>`)
+                    }
 
-            // stitch the html for each of the gallery items together and add that the gallery container
-            if (galleryArray.length > 0) {
-                app.elements.galleryContent.html(galleryArray.reduce((accumulator, project) => {
-                    return accumulator + project;
-                }));
+                    if (item.id) {
+                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                    }
+
+                    if (itemLinks.length > 0) {
+                        formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + ` | ` + item}) + `</p>`
+                    }
+
+                    // stitch together all the html for the item
+                    if (formattedItem.multi) {
+                        return `<div class="gallery-item multi">` + formattedItem.images + `<div class="gallery-item-info">` + formattedTitle + formattedService + formattedLinks + `<hr></div></div>`
+                    } else {
+                        return `<div class="gallery-item">` + formattedItem.images + `<div class="gallery-item-info">` + formattedTitle + formattedService + formattedLinks + `<hr></div></div>`
+                    }
+                });
+
+                // stitch the html for each of the gallery items together and add that the gallery container
+                app.elements.galleryContent.innerHTML= galleryArray.reduce((accumulator, item) => {
+                    return accumulator + item;
+                });
             }
 
             // Add CSS properties to the galleryContent element
@@ -179,9 +201,7 @@ let app = {
                     // Set an id for the new style element and append it to the head
                     style.id = 'ticker-animation';
                     document.head.appendChild(style);
-                }, 500);
 
-                setTimeout(() => {
                     app.elements.galleryContent.style.animation = 'ticker infinite 200s, fade-in 2s';
                     app.elements.galleryContent.style.animationTimingFunction = 'linear';
                     app.elements.galleryContent.style.animationPlayState = 'running';
@@ -238,10 +258,10 @@ let app = {
             // intialize the filters array with just 'all'
             let projectFilters = [];
 
-            if (app.projects.data) {
-                app.elements.errorMessage.html(``);
-                app.elements.errorMessage.removeClass("js-disabled");
-                app.elements.errorMessage.addClass("js-enabled");
+            if (app.projects.data.length > 0) {
+                app.elements.projectsErrorMessage.html(``);
+                app.elements.projectsErrorMessage.removeClass("js-disabled-projects");
+                app.elements.projectsErrorMessage.addClass("js-enabled-projects");
             }
 
             // for each project
@@ -289,7 +309,7 @@ let app = {
                     }
                 });
 
-                let filterText = `<p>[ Select technology to filter ]</p>`;
+                let filterText = `<p>[ Select tag to filter ]</p>`;
 
                 if (app.projects.filter !== 'All') {
                     filterText = `<p>[ <button onclick="app.functions.projectDisplay('All')" title="Remove project filter" class="remove-filter-button">Click here to remove filter</button> ]</p>`;
@@ -575,45 +595,45 @@ let app = {
             })
             // console log any promise errors
             .catch(error => console.log(error));
-        }
 
-        // fetch the gallery data from the json file and send the response
-        fetch('./data/gallery.json').then(response => response.json())
-        // then with the data
-        .then((data) => {
+            // fetch the gallery data from the json file and send the response
+            fetch('./data/gallery.json').then(response => response.json())
+            // then with the data
+            .then((data) => {
 
-            // set the gallery to an empty array
-            let gallery = [];
+                // set the gallery to an empty array
+                let gallery = [];
 
-            // and for each item in the data
-            for (let object in data) {
+                // and for each item in the data
+                for (let object in data) {
 
-                // initialize an item object, setting the title to the object key
-                let item = {
-                    "title": "",
-                    "year": "",
-                    "service": "",
-                    "id": "",
-                    "site": "",
-                    "images": []
-                }
+                    // initialize an item object, setting the title to the object key
+                    let item = {
+                        "title": "",
+                        "year": "",
+                        "service": "",
+                        "id": "",
+                        "site": "",
+                        "images": []
+                    }
 
-                // then map each property in the initial object to the new object
-                for (let property in data[object]) {
-                    item[property] = data[object][property];
+                    // then map each property in the initial object to the new object
+                    for (let property in data[object]) {
+                        item[property] = data[object][property];
+                    };
+
+                    // and push each item into the gallery array
+                    gallery.push(item);
                 };
 
-                // and push each item into the gallery array
-                gallery.push(item);
-            };
+                // save the gallery array to the item data
+                app.gallery.data = app.functions.shuffleArray(gallery);
 
-            // save the gallery array to the item data
-            app.gallery.data = app.functions.shuffleArray(gallery);
-        })
-        // console log any promise errors
-        .catch(error => console.log(error));
-
-        app.functions.galleryDisplay();
+                app.functions.galleryDisplay();
+            })
+            // console log any promise errors
+            .catch(error => console.log(error));
+        }
 
         // add the event listeners
         app.events();
