@@ -1414,11 +1414,11 @@ body {
   }
 }
 
-.js-enabled-projects, .js-enabled-gallery {
+.js-enabled-projects, .js-enabled-gallery, .js-enabled {
   display: none;
 }
 
-.js-disabled-projects, .js-disabled-gallery {
+.js-disabled-projects, .js-disabled-gallery, .js-disabled {
   margin: 0 auto;
   margin-top: 80px;
   padding: 80px;
@@ -1433,7 +1433,7 @@ body {
   animation: fade-in-error 0.75s ease-in 1.5s forwards;
 }
 @media only screen and (max-width: 768px) {
-  .js-disabled-projects, .js-disabled-gallery {
+  .js-disabled-projects, .js-disabled-gallery, .js-disabled {
     width: 80%;
     font-size: 16px;
     margin-top: 120px;

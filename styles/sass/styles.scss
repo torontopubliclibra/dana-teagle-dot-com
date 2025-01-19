@@ -37,11 +37,11 @@ body {
 
 }
 
-.js-enabled-projects, .js-enabled-gallery {
+.js-enabled-projects, .js-enabled-gallery, .js-enabled {
     display: none;
 }
 
-.js-disabled-projects, .js-disabled-gallery {
+.js-disabled-projects, .js-disabled-gallery, .js-disabled {
     margin: 0 auto;
     margin-top: 80px;
     padding: 80px;
