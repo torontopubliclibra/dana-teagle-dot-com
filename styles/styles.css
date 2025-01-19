@@ -267,7 +267,6 @@ html {
   }
   100% {
     opacity: 1;
-    visibility: visible;
   }
 }
 @keyframes fade-in-error {
@@ -2280,6 +2279,9 @@ header .scroll-down img {
   align-items: initial;
   width: 100%;
   margin: 20px 0;
+}
+#projects .projects-nav br {
+  margin-bottom: 10px;
 }
 #projects .projects-nav .remove-filter-button {
   color: #282b2c;

@@ -35,6 +35,7 @@ let app = {
     projects: {
         data: [],
         filter: "All",
+        sort: "newest"
     },
 
     // gallery data
@@ -63,7 +64,7 @@ let app = {
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Click here to unpause</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">unpause the gallery</button>`
                 app.elements.galleryContent.style.animationPlayState = 'paused';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -72,7 +73,7 @@ let app = {
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Click here to pause</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">pause the gallery</button>`
                 app.elements.galleryContent.style.animationPlayState = 'running';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -141,7 +142,7 @@ let app = {
                     }
 
                     if (item.id) {
-                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.sort); app.functions.readMoreByID('${item.id}')">Project info</a>`)
                     }
 
                     if (itemLinks.length > 0) {
@@ -247,13 +248,16 @@ let app = {
         },
         
         // displaying the projects
-        projectDisplay: (filter) => {
+        projectDisplay: (filter, sort) => {
 
             // initialize the project array
             let projectArray = [];
 
-            // save the parameter as the filter
+            // save the filter parameter as the filter
             app.projects.filter = filter;
+
+            // save the sort parameter as the sort
+            app.projects.sort = sort;
 
             // intialize the filters array with just 'all'
             let projectFilters = [];
@@ -296,11 +300,11 @@ let app = {
 
                         // otherwise create a link that displays the projects of that filter
                         } else if (filter === "All") {
-                            return `<li><button onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" title="All projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('All'm app.projects.sort);app.functions.scroll('projects')" title="All projects">`
                             + filterName
                             + `</button></li>`;
                         } else {
-                            return `<li><button onclick="app.functions.projectDisplay('${filter}')" title="${filter} projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.sort)" title="${filter} projects">`
                             + filterName
                             + `</button></li>`;
                         };
@@ -309,20 +313,30 @@ let app = {
                     }
                 });
 
-                let filterText = `<p>[ Select tag to filter ]</p>`;
+                let filterText = `[ Select tag to filter ]`;
+
+                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest')" title="Sort oldest to newest" class="remove-filter-button">sort oldest to newest</button> ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `<p>[ <button onclick="app.functions.projectDisplay('All')" title="Remove project filter" class="remove-filter-button">Click here to remove filter</button> ]</p>`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort)" title="Remove project filter" class="remove-filter-button">remove filter</button> ]`;
+                }
+
+                if (app.projects.sort === 'oldest') {
+                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest')" title="Sort newest to oldest" class="remove-filter-button">sort newest to oldest</button> ]`;
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
                 app.elements.projectsNav.html(
-                    filterText +
-                    `<ul class="project-filters">`
+                    `<p>`
+                    + sortText
+                    + `<br/>`
+                    + filterText
+                    + `</p>`
+                    + `<ul class="project-filters">`
                     + projectFilters.reduce((accumulator, tag) => {
                         return accumulator + tag
                     })
-                    + `</ul></h3>`
+                    + `</ul>`
                 );
             };
 
@@ -336,6 +350,10 @@ let app = {
                     return 0;
                 };
             });
+
+            if (app.projects.sort === "oldest") {
+                sortedByYear = sortedByYear.reverse();
+            }
 
             // if the selected filter is 'all', fill the array with the sorted projects
             if (app.projects.filter == "All") {
@@ -365,9 +383,9 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<button onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('All', app.projects.sort);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
                     } else {
-                        return `<button onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.sort)" class="tag">#` + tag + `</button>`
                     }
                 })
 
@@ -451,7 +469,7 @@ let app = {
         },
 
         allProjectsClick: () => {
-            app.functions.projectDisplay("All");
+            app.functions.projectDisplay("All", app.projects.sort);
             app.functions.scroll("projects");
         },
 
@@ -591,7 +609,7 @@ let app = {
                 app.projects.data = projects;
 
                 // display the projects on the page using the default filter
-                app.functions.projectDisplay(app.projects.filter);
+                app.functions.projectDisplay(app.projects.filter, app.projects.sort);
             })
             // console log any promise errors
             .catch(error => console.log(error));
