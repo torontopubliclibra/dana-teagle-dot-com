@@ -35,12 +35,14 @@ let app = {
     projects: {
         data: [],
         filter: "All",
-        sort: "newest"
+        sort: "newest",
+        expand: false
     },
 
     // gallery data
     gallery: {
-        data: []
+        data: [],
+        paused: false,
     },
 
     // app functions
@@ -71,6 +73,9 @@ let app = {
                     item.classList.add('reveal');
                 })
 
+                app.gallery.paused = true;
+                console.log('paused');
+
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
                 app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery</button>`
@@ -79,6 +84,9 @@ let app = {
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.remove('reveal');
                 })
+
+                app.gallery.paused = false;
+                console.log('unpaused');
             }
         },
 
@@ -142,7 +150,7 @@ let app = {
                     }
 
                     if (item.id) {
-                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.sort); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand); app.functions.readMoreByID('${item.id}')">Project info</a>`)
                     }
 
                     if (itemLinks.length > 0) {
@@ -206,6 +214,10 @@ let app = {
                     app.elements.galleryContent.style.animation = `ticker infinite ${galleryItems.length * 15}s, fade-in 2s`;
                     app.elements.galleryContent.style.animationTimingFunction = 'linear';
                     app.elements.galleryContent.style.animationPlayState = 'running';
+
+                    if (app.gallery.paused === true) {
+                        app.elements.galleryContent.style.animationPlayState = 'paused';
+                    }
                 }, 1000);
             }
         },
@@ -248,7 +260,9 @@ let app = {
         },
         
         // displaying the projects
-        projectDisplay: (filter, sort) => {
+        projectDisplay: (filter, sort, expand) => {
+
+            app.projects.expand = expand;
 
             // initialize the project array
             let projectArray = [];
@@ -300,11 +314,11 @@ let app = {
 
                         // otherwise create a link that displays the projects of that filter
                         } else if (filter === "All") {
-                            return `<li><button onclick="app.functions.projectDisplay('All'm app.projects.sort);app.functions.scroll('projects')" title="All projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand);app.functions.scroll('projects')" title="All projects">`
                             + filterName
                             + `</button></li>`;
                         } else {
-                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.sort)" title="${filter} projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.sort, app.projects.expand)" title="${filter} projects">`
                             + filterName
                             + `</button></li>`;
                         };
@@ -315,21 +329,29 @@ let app = {
 
                 let filterText = `[ Select tag to filter ]`;
 
-                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest')" title="Sort oldest to newest" class="remove-filter-button">Sort oldest to newest</button> ]`;
-
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort)" title="Remove project filter" class="remove-filter-button">Remove filter</button> ]`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter</button> ]`;
                 }
 
+                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest', app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest</button> ]`;
+
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest')" title="Sort newest to oldest" class="remove-filter-button">Sort newest to oldest</button> ]`;
+                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest', app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest</button> ]`;
+                }
+
+                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, app.projects.sort, true)" title="Expand all projects" class="project-button expand">Expand all projects</button> ]`
+
+                if (expand === true) {
+                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, app.projects.sort, false)" title="Expand all projects" class="project-button expand">Collapse all projects</button> ]`
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
                 app.elements.projectsNav.html(
                     `<p>`
-                    + sortText
+                    + expandText
                     + `<br/>`
+                    + sortText
+                    + ` <br class="mobile-only"/>`
                     + filterText
                     + `</p>`
                     + `<ul class="project-filters">`
@@ -383,9 +405,9 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<button onclick="app.functions.projectDisplay('All', app.projects.sort);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
                     } else {
-                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.sort)" class="tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.sort, app.projects.expand)" class="tag">#` + tag + `</button>`
                     }
                 })
 
@@ -466,10 +488,14 @@ let app = {
             if (app.projects.filter !== "All") {
                 app.functions.scroll("projects");
             }
+
+            if (app.projects.expand === true) {
+                app.functions.readMoreAll();
+            }
         },
 
         allProjectsClick: () => {
-            app.functions.projectDisplay("All", app.projects.sort);
+            app.functions.projectDisplay("All", app.projects.sort, app.projects.expand);
             app.functions.scroll("projects");
         },
 
@@ -504,11 +530,27 @@ let app = {
             let button = project.querySelector(".read-more");
 
             button.click();
+        },
+
+        // read more all function 
+        readMoreAll: () => {
+
+            let projects = document.querySelectorAll(`.project`);
+
+            projects.forEach((project) => {
+                let button = project.querySelector(".read-more");
+                button.click();
+            })
         }
     },
 
     // app event listeners
     events: () => {
+
+        // watch the screen width and console log when it changes
+        window.addEventListener('resize', () => {
+            app.functions.galleryDisplay();
+        });
 
         // on the hamburger button click, run the hamburger function
         app.elements.mobileMenu.click(app.functions.toggleNav);
@@ -567,11 +609,6 @@ let app = {
     // app initializion
     init: () => {
 
-        // watch the screen width and console log when it changes
-        window.addEventListener('resize', () => {
-            app.functions.galleryDisplay();
-        });
-
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
             // fetch the projects from the json file and send the response
             fetch('./data/projects.json').then(response => response.json())
@@ -609,7 +646,7 @@ let app = {
                 app.projects.data = projects;
 
                 // display the projects on the page using the default filter
-                app.functions.projectDisplay(app.projects.filter, app.projects.sort);
+                app.functions.projectDisplay(app.projects.filter, app.projects.sort, app.projects.expand);
             })
             // console log any promise errors
             .catch(error => console.log(error));
