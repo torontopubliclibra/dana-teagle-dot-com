@@ -24,8 +24,9 @@ let app = {
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
-        errorMessage: $(".js-disabled"),
+        projectsErrorMessage: $(".js-disabled-projects"),
         galleryContent: document.querySelector(".gallery-content"),
+        galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
     },
@@ -34,6 +35,12 @@ let app = {
     projects: {
         data: [],
         filter: "All",
+        sort: "newest"
+    },
+
+    // gallery data
+    gallery: {
+        data: []
     },
 
     // app functions
@@ -45,11 +52,19 @@ let app = {
             app.elements.nav.toggleClass("active");
         },
 
+        shuffleArray: (array) => {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        },
+
         // pause gallery on button click
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Click here to unpause</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery</button>`
                 app.elements.galleryContent.style.animationPlayState = 'paused';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -58,7 +73,7 @@ let app = {
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Click here to pause</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery</button>`
                 app.elements.galleryContent.style.animationPlayState = 'running';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -67,52 +82,131 @@ let app = {
             }
         },
 
-        galleryTicker: () => {
+        galleryDisplay: () => {
+
+            // initialize the gallery array
+            let galleryArray = [];
+
+            if (app.gallery.data.length > 0) {
+
+                app.elements.galleryErrorMessage.html(``);
+                app.elements.galleryErrorMessage.removeClass("js-disabled-gallery");
+                app.elements.galleryErrorMessage.addClass("js-enabled-gallery");
+
+                // map out the gallery to the page
+                galleryArray = app.gallery.data.map((item) => {
+
+                    // intialize an empty object for the formatted project
+                    let formattedItem = {
+                        images: "",
+                        info: "",
+                        multi: false,
+                    };
+
+                    if (item.images && item.images.length > 1) {
+
+                        formattedItem.multi = true;
+                        let formattedImages = [];
+                        let imageCounter = 1;
+
+                        formattedImages = item.images.map(image => {
+
+                            let img = `<img src="${image}" alt="${item.title}">`
+                            let spacing = ``;
+                            
+                            if (imageCounter !== (item.images.length)) {
+                                spacing = `<div class="gallery-spacing"></div>`;
+                                imageCounter++
+                            }
+
+                            return img + spacing;
+                        });
+
+                        formattedItem.images = `<div class="images-container">` + formattedImages.reduce((accumulator, item) => {
+                        return accumulator + item}) + `</div>`;
+                    } else {
+                        formattedItem.images = `<img src="${item.images[0]}" alt="${item.title}">`
+                    }
+
+                    let formattedTitle = `<p>${item.title} (${item.year})</p>`
+                    let formattedService = `<p>${item.service}</p>`
+                    let itemLinks = [];
+                    let formattedLinks = ``;
+
+                    if (item.site) {
+                        itemLinks.push(`<a href="${item.site}" target="_blank" title="${item.title} website">Site</a>`)
+                    }
+
+                    if (item.instagram) {
+                        itemLinks.push(`<a href="${item.instagram}" target="_blank" title="${item.title} instagram">Instagram</a>`)
+                    }
+
+                    if (item.id) {
+                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.sort); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                    }
+
+                    if (itemLinks.length > 0) {
+                        formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + ` | ` + item}) + `</p>`
+                    }
+
+                    // stitch together all the html for the item
+                    if (formattedItem.multi) {
+                        return `<div class="gallery-item multi">` + formattedItem.images + `<div class="gallery-item-info">` + formattedTitle + formattedService + formattedLinks + `<hr></div></div>`
+                    } else {
+                        return `<div class="gallery-item">` + formattedItem.images + `<div class="gallery-item-info">` + formattedTitle + formattedService + formattedLinks + `<hr></div></div>`
+                    }
+                });
+
+                // stitch the html for each of the gallery items together and add that the gallery container
+                app.elements.galleryContent.innerHTML= galleryArray.reduce((accumulator, item) => {
+                    return accumulator + item;
+                });
+            }
 
             // Add CSS properties to the galleryContent element
             if (app.elements.galleryContent) {
-                const galleryItems = document.querySelectorAll('.gallery-item');
-
-                let totalWidth = 0;
-                galleryItems.forEach(item => {
-                    totalWidth += item.offsetWidth;
-                });
-
-                let galleryTransform = ((totalWidth / app.elements.galleryContent.offsetWidth) * 0.475) * 120;
-
-                // Create a new style element
-                let style = document.createElement('style');
-                let keyframes = `
-                    @keyframes ticker {
-                        0% {
-                            transform: translate3d(${galleryTransform}%, 0, 0);
-                            visibility: visible;
-                        }
-                        50% {
-                            transform: translate3d(-${galleryTransform}%, 0, 0);
-                        }
-                        100% {
-                            transform: translate3d(${galleryTransform}%, 0, 0);
-                        }
-                    }
-                `;
-                style.innerHTML = keyframes;
-
-                // Remove any existing ticker animation styles
-                const existingStyle = document.getElementById('ticker-animation');
-                if (existingStyle) {
-                    existingStyle.remove();
-                }
-
-                // Set an id for the new style element and append it to the head
-                style.id = 'ticker-animation';
-                document.head.appendChild(style);
-
                 setTimeout(() => {
+                    const galleryItems = document.querySelectorAll('.gallery-item');
+
+                    let totalWidth = 0;
+                    galleryItems.forEach(item => {
+                        totalWidth += item.offsetWidth;
+                    });
+
+                    let galleryTransform = ((totalWidth / app.elements.galleryContent.offsetWidth) * 0.475) * 120;
+
+                    // Create a new style element
+                    let style = document.createElement('style');
+                    let keyframes = `
+                        @keyframes ticker {
+                            0% {
+                                transform: translate3d(${galleryTransform}%, 0, 0);
+                                visibility: visible;
+                            }
+                            50% {
+                                transform: translate3d(-${galleryTransform}%, 0, 0);
+                            }
+                            100% {
+                                transform: translate3d(${galleryTransform}%, 0, 0);
+                            }
+                        }
+                    `;
+                    style.innerHTML = keyframes;
+
+                    // Remove any existing ticker animation styles
+                    const existingStyle = document.getElementById('ticker-animation');
+                    if (existingStyle) {
+                        existingStyle.remove();
+                    }
+
+                    // Set an id for the new style element and append it to the head
+                    style.id = 'ticker-animation';
+                    document.head.appendChild(style);
+
                     app.elements.galleryContent.style.animation = 'ticker infinite 200s, fade-in 2s';
                     app.elements.galleryContent.style.animationTimingFunction = 'linear';
                     app.elements.galleryContent.style.animationPlayState = 'running';
-                }, 500);
+                }, 1000);
             }
         },
 
@@ -154,21 +248,24 @@ let app = {
         },
         
         // displaying the projects
-        projectDisplay: (filter) => {
+        projectDisplay: (filter, sort) => {
 
             // initialize the project array
             let projectArray = [];
 
-            // save the parameter as the filter
+            // save the filter parameter as the filter
             app.projects.filter = filter;
+
+            // save the sort parameter as the sort
+            app.projects.sort = sort;
 
             // intialize the filters array with just 'all'
             let projectFilters = [];
 
-            if (app.projects.data) {
-                app.elements.errorMessage.html(``);
-                app.elements.errorMessage.removeClass("js-disabled");
-                app.elements.errorMessage.addClass("js-enabled");
+            if (app.projects.data.length > 0) {
+                app.elements.projectsErrorMessage.html(``);
+                app.elements.projectsErrorMessage.removeClass("js-disabled-projects");
+                app.elements.projectsErrorMessage.addClass("js-enabled-projects");
             }
 
             // for each project
@@ -203,11 +300,11 @@ let app = {
 
                         // otherwise create a link that displays the projects of that filter
                         } else if (filter === "All") {
-                            return `<li><button onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" title="All projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('All'm app.projects.sort);app.functions.scroll('projects')" title="All projects">`
                             + filterName
                             + `</button></li>`;
                         } else {
-                            return `<li><button onclick="app.functions.projectDisplay('${filter}')" title="${filter} projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.sort)" title="${filter} projects">`
                             + filterName
                             + `</button></li>`;
                         };
@@ -216,20 +313,30 @@ let app = {
                     }
                 });
 
-                let filterText = `<p>[ Select technology to filter ]</p>`;
+                let filterText = `[ Select tag to filter ]`;
+
+                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest')" title="Sort oldest to newest" class="remove-filter-button">Sort oldest to newest</button> ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `<p>[ <button onclick="app.functions.projectDisplay('All')" title="Remove project filter" class="remove-filter-button">Click here to remove filter</button> ]</p>`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort)" title="Remove project filter" class="remove-filter-button">Remove filter</button> ]`;
+                }
+
+                if (app.projects.sort === 'oldest') {
+                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest')" title="Sort newest to oldest" class="remove-filter-button">Sort newest to oldest</button> ]`;
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
                 app.elements.projectsNav.html(
-                    filterText +
-                    `<ul class="project-filters">`
+                    `<p>`
+                    + sortText
+                    + `<br/>`
+                    + filterText
+                    + `</p>`
+                    + `<ul class="project-filters">`
                     + projectFilters.reduce((accumulator, tag) => {
                         return accumulator + tag
                     })
-                    + `</ul></h3>`
+                    + `</ul>`
                 );
             };
 
@@ -243,6 +350,10 @@ let app = {
                     return 0;
                 };
             });
+
+            if (app.projects.sort === "oldest") {
+                sortedByYear = sortedByYear.reverse();
+            }
 
             // if the selected filter is 'all', fill the array with the sorted projects
             if (app.projects.filter == "All") {
@@ -272,9 +383,9 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<button onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('All', app.projects.sort);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
                     } else {
-                        return `<button onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.sort)" class="tag">#` + tag + `</button>`
                     }
                 })
 
@@ -358,7 +469,7 @@ let app = {
         },
 
         allProjectsClick: () => {
-            app.functions.projectDisplay("All");
+            app.functions.projectDisplay("All", app.projects.sort);
             app.functions.scroll("projects");
         },
 
@@ -456,11 +567,9 @@ let app = {
     // app initializion
     init: () => {
 
-        app.functions.galleryTicker();
-
         // watch the screen width and console log when it changes
         window.addEventListener('resize', () => {
-            app.functions.galleryTicker();
+            app.functions.galleryDisplay();
         });
 
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
@@ -500,7 +609,45 @@ let app = {
                 app.projects.data = projects;
 
                 // display the projects on the page using the default filter
-                app.functions.projectDisplay(app.projects.filter);
+                app.functions.projectDisplay(app.projects.filter, app.projects.sort);
+            })
+            // console log any promise errors
+            .catch(error => console.log(error));
+
+            // fetch the gallery data from the json file and send the response
+            fetch('./data/gallery.json').then(response => response.json())
+            // then with the data
+            .then((data) => {
+
+                // set the gallery to an empty array
+                let gallery = [];
+
+                // and for each item in the data
+                for (let object in data) {
+
+                    // initialize an item object, setting the title to the object key
+                    let item = {
+                        "title": "",
+                        "year": "",
+                        "service": "",
+                        "id": "",
+                        "site": "",
+                        "images": []
+                    }
+
+                    // then map each property in the initial object to the new object
+                    for (let property in data[object]) {
+                        item[property] = data[object][property];
+                    };
+
+                    // and push each item into the gallery array
+                    gallery.push(item);
+                };
+
+                // save the gallery array to the item data
+                app.gallery.data = app.functions.shuffleArray(gallery);
+
+                app.functions.galleryDisplay();
             })
             // console log any promise errors
             .catch(error => console.log(error));

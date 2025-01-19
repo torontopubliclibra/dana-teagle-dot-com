@@ -1,0 +1,116 @@
+{
+    "THB-1": {
+        "title": "True History Brewing",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "true-history-brewing",
+        "site": "https://truehistorybeer.com",
+        "images": ["./assets/projects/truehistorybeer.jpg"]
+    },
+    "THB-2": {
+        "title": "True History Brewing",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "true-history-brewing",
+        "site": "https://truehistorybeer.com",
+        "images": ["./assets/projects/truehistorybeer-2.jpg", "./assets/projects/truehistorybeer-3.png", "./assets/projects/truehistorybeer-4.jpg"]
+    },
+    "MCD-1": {
+        "title": "Michael Cloud Duguay",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "michael-cloud-duguay",
+        "site": "https://michaelcduguay.com",
+        "images": ["./assets/projects/michaelcduguay.jpg"]
+    },
+    "MCD-2": {
+        "title": "Michael Cloud Duguay",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "michael-cloud-duguay",
+        "site": "https://michaelcduguay.com",
+        "images": ["./assets/projects/michaelcduguay-2.jpg", "./assets/projects/michaelcduguay-3.jpg", "./assets/projects/michaelcduguay-4.jpg"]
+    },
+    "Chris Pihlak": {
+        "title": "Chris Pihlak",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "chris-pihlak",
+        "site": "https://chrispihlak.com",
+        "images": ["./assets/projects/chris-pihlak.jpg"]
+    },
+    "Connect Fund": {
+        "title": "Connect Fund",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "connect-fund",
+        "site": "https://connectfund.org",
+        "images": ["./assets/projects/connectfund.jpg"]
+    },
+    "Kitschin": {
+        "title": "Kitschin Sink",
+        "year": "2021",
+        "service": "Logo design",
+        "images": ["./assets/projects/kitschin-sink.png"]
+    },
+    "Nina": {
+        "title": "Nina Milanovski",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "nina-milanovski",
+        "site": "https://ninamilanovski.com",
+        "images": ["./assets/projects/ninamilanovski.jpg"]
+    },
+    "YRL": {
+        "title": "Your Real Life Insurance",
+        "year": "2020-2021",
+        "service": "Graphic design & social media marketing",
+        "images": ["./assets/projects/yrl-3.png", "./assets/projects/yrl-1.png", "./assets/projects/yrl-2.png"]
+    },
+    "West83": {
+        "title": "Your Real Life Insurance",
+        "year": "2024",
+        "service": "Logo design",
+        "site": "https://www.west83.com/",
+        "images": ["./assets/projects/west83.jpg"]
+    },
+    "Connect Fund 2": {
+        "title": "Connect Fund",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "connect-fund",
+        "site": "https://connectfund.org",
+        "images": ["./assets/projects/connectfund-2.png", "./assets/projects/connectfund-3.png", "./assets/projects/connectfund-4.png"]
+    },
+    "Sydney": {
+        "title": "Sydney Gautreau",
+        "year": "2022",
+        "service": "Web design & development",
+        "id": "sydney-gautreau",
+        "site": "https://sydneygautreau.com",
+        "images": ["./assets/projects/sydneygautreau.jpg"]
+    },
+    "RUSTPROP": {
+        "title": "RUSTPROP",
+        "year": "2024",
+        "service": "Agitprop design project",
+        "site": "/rustprop",
+        "instagram": "/rp-insta",
+        "images": ["./assets/rustprop/touchscreens.png", "./assets/rustprop/sorry.png", "./assets/rustprop/push-notifs.png"]
+    },
+    "Notes": {
+        "title": "Note Taken",
+        "year": "2023",
+        "service": "Web design & development",
+        "id": "note-taken",
+        "site": "/notes",
+        "images": ["./assets/projects/note-taken.png"]
+    },
+    "Body Stories": {
+        "title": "Body Stories",
+        "year": "2021",
+        "service": "Logo design",
+        "site": "https://bodystoriesdance.com",
+        "images": ["./assets/projects/body-stories-2.png"]
+    }
+}
