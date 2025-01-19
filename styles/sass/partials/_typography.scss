@@ -243,10 +243,11 @@ h3 {
   p {
     font-size: 18px;
   }
-  ul, li, li a {
+  ul, li, li button {
     font-size: 15px;
     list-style-type: none;
     margin: 0;
+    padding: 0;
   }
   .selected {
     font-style: italic;
@@ -257,7 +258,7 @@ h3 {
     p {
       font-size: 18px;
     }
-    ul, li, li a {
+    ul, li, li button {
       @include textStyle (14px, "", 1);
       font-style: normal;
     }

@@ -964,6 +964,26 @@ header {
         width: 100%;
         margin: 20px 0;
 
+        .remove-filter-button {
+            color: $black;
+    
+            &:hover {
+                background: linear-gradient(120deg, $color3 0%, $color3 100%);
+                background-repeat: no-repeat;
+                background-size: 100% 20%;
+                background-position: 0 95%;
+            }
+
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
+                font-style: normal;
+                
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             width: 85%;
@@ -1018,11 +1038,11 @@ header {
                 margin-top: 0px;
                 padding: 10px 15px;
 
-                a.tag, span.tag {
+                button.tag, span.tag {
                     font-size: 14px;
                 }
 
-                a.tag:hover {
+                button.tag:hover {
                     cursor: pointer;
                     font-style: italic;
                     color: $black;
@@ -1038,7 +1058,7 @@ header {
                     margin: 0;
                     justify-content: left;
 
-                    a.tag, span.tag {
+                    button.tag, span.tag {
                         font-size: 14px;
                     }
                 }

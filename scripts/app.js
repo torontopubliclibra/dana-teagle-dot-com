@@ -141,39 +141,44 @@ let app = {
                     let filterName = '';
 
                     // if the parameter is 'all', save that as the filter
-                    if (filter === "All") {
-                        filterName = filter;
-
-                    // if the filter is anything else, save that as the filter name with a hashtag in front of it
-                    } else {
+                    if (filter !== "All") {
                         filterName = `#` + filter;
-                    };
 
-                    // if the filter is already selected, create a span for it with the selected class
-                    if (filter === app.projects.filter) {
-                        return `<li class="selected">`
-                        + filterName
-                        + `</li>`;
+                        // if the filter is already selected, create a span for it with the selected class
+                        if (filter === app.projects.filter) {
+                            return `<li class="selected">`
+                            + filterName
+                            + `</li>`;
 
-                    // otherwise create a link that displays the projects of that filter
-                    } else if (filter === "All") {
-                        return `<li><a onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" title="All projects">`
-                        + filterName
-                        + `</a></li>`;
+                        // otherwise create a link that displays the projects of that filter
+                        } else if (filter === "All") {
+                            return `<li><button onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" title="All projects">`
+                            + filterName
+                            + `</button></li>`;
+                        } else {
+                            return `<li><button onclick="app.functions.projectDisplay('${filter}')" title="${filter} projects">`
+                            + filterName
+                            + `</button></li>`;
+                        };
                     } else {
-                        return `<li><a onclick="app.functions.projectDisplay('${filter}')" title="${filter} projects">`
-                        + filterName
-                        + `</a></li>`;
-                    };
+                        return ``;
+                    }
                 });
 
+                let filterText = `<p>[ Select technology to filter ]</p>`;
+
+                if (app.projects.filter !== 'All') {
+                    filterText = `<p>[ <button onclick="app.functions.projectDisplay('All')" title="Remove project filter" class="remove-filter-button">Click here to remove filter</button> ]</p>`;
+                }
+
                 // stitch the html for each of the filters together and add it to the projects nav
-                app.elements.projectsNav.html(`
-                    <p>Filter by technology:</p><ul class="project-filters">[ `
+                app.elements.projectsNav.html(
+                    filterText +
+                    `<ul class="project-filters">`
                     + projectFilters.reduce((accumulator, tag) => {
                         return accumulator + tag
                     })
-                    + ` ]</ul></h3>`
+                    + `</ul></h3>`
                 );
             };
 
@@ -216,9 +221,9 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<a onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" class="selected tag">#` + tag + `</a>`
+                        return `<button onclick="app.functions.projectDisplay('All');app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
                     } else {
-                        return `<a onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</a>`
+                        return `<button onclick="app.functions.projectDisplay('${tag}')" class="tag">#` + tag + `</button>`
                     }
                 })
 

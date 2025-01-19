@@ -1384,10 +1384,11 @@ h3 {
 .projects-nav p {
   font-size: 18px;
 }
-.projects-nav ul, .projects-nav li, .projects-nav li a {
+.projects-nav ul, .projects-nav li, .projects-nav li button {
   font-size: 15px;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 .projects-nav .selected {
   font-style: italic;
@@ -1396,7 +1397,7 @@ h3 {
   .projects-nav p {
     font-size: 18px;
   }
-  .projects-nav ul, .projects-nav li, .projects-nav li a {
+  .projects-nav ul, .projects-nav li, .projects-nav li button {
     font-size: 14px;
     text-align: "";
     line-height: 1;
@@ -2315,6 +2316,23 @@ header .scroll-down img {
   width: 100%;
   margin: 20px 0;
 }
+#projects .projects-nav .remove-filter-button {
+  color: #282b2c;
+}
+#projects .projects-nav .remove-filter-button:hover {
+  background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+  background-position: 0 95%;
+}
+@media only screen and (max-width: 970px) {
+  #projects .projects-nav .remove-filter-button {
+    font-style: normal;
+  }
+  #projects .projects-nav .remove-filter-button:hover {
+    background: none;
+  }
+}
 @media only screen and (max-width: 768px) {
   #projects .projects-nav {
     width: 85%;
@@ -2374,10 +2392,10 @@ header .scroll-down img {
   margin-top: 0px;
   padding: 10px 15px;
 }
-#projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
+#projects .projects-container .project .tags button.tag, #projects .projects-container .project .tags span.tag {
   font-size: 14px;
 }
-#projects .projects-container .project .tags a.tag:hover {
+#projects .projects-container .project .tags button.tag:hover {
   cursor: pointer;
   font-style: italic;
   color: #282b2c;
@@ -2391,7 +2409,7 @@ header .scroll-down img {
     margin: 0;
     justify-content: left;
   }
-  #projects .projects-container .project .tags a.tag, #projects .projects-container .project .tags span.tag {
+  #projects .projects-container .project .tags button.tag, #projects .projects-container .project .tags span.tag {
     font-size: 14px;
   }
 }
