@@ -36,6 +36,11 @@ let app = {
         filter: "All",
     },
 
+    // gallery data
+    gallery: {
+        data: []
+    },
+
     // app functions
     functions: {
 
