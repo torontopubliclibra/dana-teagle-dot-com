@@ -302,60 +302,6 @@ html {
     transform: translate(-50%, 0px);
   }
 }
-@keyframes ticker {
-  0% {
-    transform: translate3d(425%, 0, 0);
-    visibility: visible;
-  }
-  50% {
-    transform: translate3d(-425%, 0, 0);
-  }
-  100% {
-    transform: translate3d(425%, 0, 0);
-  }
-}
-@media only screen and (max-width: 970px) {
-  @keyframes ticker {
-    0% {
-      transform: translate3d(575%, 0, 0);
-      visibility: visible;
-    }
-    50% {
-      transform: translate3d(-575%, 0, 0);
-    }
-    100% {
-      transform: translate3d(575%, 0, 0);
-    }
-  }
-}
-@media only screen and (max-width: 700px) {
-  @keyframes ticker {
-    0% {
-      transform: translate3d(800%, 0, 0);
-      visibility: visible;
-    }
-    50% {
-      transform: translate3d(-800%, 0, 0);
-    }
-    100% {
-      transform: translate3d(800%, 0, 0);
-    }
-  }
-}
-@media only screen and (max-width: 600px) {
-  @keyframes ticker {
-    0% {
-      transform: translate3d(1000%, 0, 0);
-      visibility: visible;
-    }
-    50% {
-      transform: translate3d(-1000%, 0, 0);
-    }
-    100% {
-      transform: translate3d(1000%, 0, 0);
-    }
-  }
-}
 html.tpl body {
   background-color: #282b2c;
 }
@@ -1875,10 +1821,8 @@ header .scroll-down img {
   align-items: center;
   gap: 40px;
   padding: 20px;
-  animation-name: ticker;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 200s;
+  visibility: hidden;
+  transform: translate3d(425%, 0, 0);
 }
 #gallery .gallery-content:hover, #gallery .gallery-content.paused {
   animation-play-state: paused;

@@ -483,10 +483,8 @@ header {
         align-items: center;
         gap: 40px;
         padding: 20px;
-        animation-name: ticker;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-duration: 200s;
+        visibility: hidden;
+        transform: translate3d(425%, 0, 0);
 
         &:hover, &.paused {
             animation-play-state: paused;

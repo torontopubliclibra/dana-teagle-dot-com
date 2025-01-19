@@ -65,6 +65,53 @@ let app = {
             }
         },
 
+        galleryTicker: () => {
+            const galleryContent = document.querySelector('.gallery-content');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            let totalWidth = 0;
+            galleryItems.forEach(item => {
+                totalWidth += item.offsetWidth;
+            });
+
+            let galleryTransform = ((totalWidth / galleryContent.offsetWidth) * 0.475) * 120;
+
+            // Create a new style element
+            let style = document.createElement('style');
+            let keyframes = `
+                @keyframes ticker {
+                    0% {
+                        transform: translate3d(${galleryTransform}%, 0, 0);
+                        visibility: visible;
+                    }
+                    50% {
+                        transform: translate3d(-${galleryTransform}%, 0, 0);
+                    }
+                    100% {
+                        transform: translate3d(${galleryTransform}%, 0, 0);
+                    }
+                }
+            `;
+            style.innerHTML = keyframes;
+
+            // Remove any existing ticker animation styles
+            const existingStyle = document.getElementById('ticker-animation');
+            if (existingStyle) {
+                existingStyle.remove();
+            }
+
+            // Set an id for the new style element and append it to the head
+            style.id = 'ticker-animation';
+            document.head.appendChild(style);
+
+            // Add CSS properties to the galleryContent element
+            if (galleryContent) {
+                galleryContent.style.animationName = 'ticker';
+                galleryContent.style.animationTimingFunction = 'linear';
+                galleryContent.style.animationIterationCount = 'infinite';
+                galleryContent.style.animationDuration = '200s';
+            }
+        },
+
         // smoothly scroll to location
         scroll: (direction) => {
 
@@ -404,6 +451,13 @@ let app = {
     
     // app initializion
     init: () => {
+
+        app.functions.galleryTicker();
+
+        // watch the screen width and console log when it changes
+        window.addEventListener('resize', () => {
+            app.functions.galleryTicker();
+        });
 
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
             // fetch the projects from the json file and send the response
