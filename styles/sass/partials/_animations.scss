@@ -87,3 +87,7 @@
         transform: translate(-50%, 0px);
     };
 };
+
+.about-content, .gallery-container, .projects-container, .services-content, .contact-content {
+    animation: fade-in 2s;
+}
