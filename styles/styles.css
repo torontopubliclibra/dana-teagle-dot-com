@@ -2283,20 +2283,28 @@ header .scroll-down img {
 #projects .projects-nav br {
   margin-bottom: 10px;
 }
-#projects .projects-nav .remove-filter-button {
+#projects .projects-nav br.mobile-only {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  #projects .projects-nav br.mobile-only {
+    display: block;
+  }
+}
+#projects .projects-nav .project-button {
   color: #282b2c;
 }
-#projects .projects-nav .remove-filter-button:hover {
+#projects .projects-nav .project-button:hover {
   background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
 }
 @media only screen and (max-width: 970px) {
-  #projects .projects-nav .remove-filter-button {
+  #projects .projects-nav .project-button {
     font-style: normal;
   }
-  #projects .projects-nav .remove-filter-button:hover {
+  #projects .projects-nav .project-button:hover {
     background: none;
   }
 }

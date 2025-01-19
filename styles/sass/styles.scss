@@ -978,9 +978,20 @@ header {
 
         br {
             margin-bottom: 10px;
+
+            &.mobile-only {
+                display: none;
+            }
+
+            // responsive to tablet
+            @media only screen and (max-width: $mobile) {
+                &.mobile-only {
+                    display: block;
+                }
+            }
         }
 
-        .remove-filter-button {
+        .project-button {
             color: $black;
     
             &:hover {
