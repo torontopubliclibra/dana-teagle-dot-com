@@ -69,6 +69,70 @@ let app = {
 
         galleryTicker: () => {
 
+            // initialize the gallery array
+            let galleryArray = [];
+
+            // map out the sorted projects to the page
+            galleryArray = app.gallery.data.map((item) => {
+
+                // intialize an empty object for the formatted project
+                let formattedItem = {
+                    images: "",
+                    info: "",
+                    multi: false,
+                };
+
+                if (item.images && item.images.length > 1) {
+
+                    formattedItem.multi = true;
+                    let formattedImages = [];
+                    let imageCounter = 1;
+
+                    formattedImages = item.images.map(image => {
+
+                        let img = `<img src="${image}" alt="${item.title}">`
+                        let spacing = ``;
+                        
+                        if (imageCounter !== (item.images.length)) {
+                            spacing = `<div class="gallery-spacing"></div>`;
+                        }
+
+                        return img + spacing;
+                    });
+
+                    formattedItem.images = `<div class="images-container">` + formattedImages.reduce((accumulator, item) => {
+                    return accumulator + item}) + `</div>`;
+                } else {
+                    formattedItem.images = `<img src="${image[0]}" alt="${item.title}">`
+                }
+
+                let formattedTitle = `<p>${item.title}</p>`
+                let formattedService = `<p>${item.service}</p>`
+                let itemLinks = [];
+
+                if (item.site) {
+                    itemLinks.push(`<a href="${item.site}" target="_blank" title="${item.title} website">Site</a>`)
+                }
+
+                if (item.id) {
+                    itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All'); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                }
+
+                let formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + `|` + item}) + `</p>`
+
+                // stitch together all the html for the item
+                if (formattedItem.multi) {
+                    return `<div class="gallery-item multi">` + formattedTitle + formattedService + formattedLinks + `<hr></div>`
+                } else {
+                    return `<div class="gallery-item">` + formattedTitle + formattedService + formattedLinks + `<hr></div>`
+                }
+            });
+
+            // stitch the html for each of the gallery items together and add that the gallery container
+            app.elements.galleryContent.html(formattedGallery.reduce((accumulator, project) => {
+                return accumulator + project;
+            }));
+
             // Add CSS properties to the galleryContent element
             if (app.elements.galleryContent) {
                 setTimeout(() => {
@@ -458,8 +522,6 @@ let app = {
     // app initializion
     init: () => {
 
-        app.functions.galleryTicker();
-
         // watch the screen width and console log when it changes
         window.addEventListener('resize', () => {
             app.functions.galleryTicker();
@@ -507,6 +569,8 @@ let app = {
             // console log any promise errors
             .catch(error => console.log(error));
         }
+
+        app.functions.galleryTicker();
 
         // add the event listeners
         app.events();
