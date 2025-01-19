@@ -71,48 +71,50 @@ let app = {
 
             // Add CSS properties to the galleryContent element
             if (app.elements.galleryContent) {
-                const galleryItems = document.querySelectorAll('.gallery-item');
+                setTimeout(() => {
+                    const galleryItems = document.querySelectorAll('.gallery-item');
 
-                let totalWidth = 0;
-                galleryItems.forEach(item => {
-                    totalWidth += item.offsetWidth;
-                });
+                    let totalWidth = 0;
+                    galleryItems.forEach(item => {
+                        totalWidth += item.offsetWidth;
+                    });
 
-                let galleryTransform = ((totalWidth / app.elements.galleryContent.offsetWidth) * 0.475) * 120;
+                    let galleryTransform = ((totalWidth / app.elements.galleryContent.offsetWidth) * 0.475) * 120;
 
-                // Create a new style element
-                let style = document.createElement('style');
-                let keyframes = `
-                    @keyframes ticker {
-                        0% {
-                            transform: translate3d(${galleryTransform}%, 0, 0);
-                            visibility: visible;
+                    // Create a new style element
+                    let style = document.createElement('style');
+                    let keyframes = `
+                        @keyframes ticker {
+                            0% {
+                                transform: translate3d(${galleryTransform}%, 0, 0);
+                                visibility: visible;
+                            }
+                            50% {
+                                transform: translate3d(-${galleryTransform}%, 0, 0);
+                            }
+                            100% {
+                                transform: translate3d(${galleryTransform}%, 0, 0);
+                            }
                         }
-                        50% {
-                            transform: translate3d(-${galleryTransform}%, 0, 0);
-                        }
-                        100% {
-                            transform: translate3d(${galleryTransform}%, 0, 0);
-                        }
+                    `;
+                    style.innerHTML = keyframes;
+
+                    // Remove any existing ticker animation styles
+                    const existingStyle = document.getElementById('ticker-animation');
+                    if (existingStyle) {
+                        existingStyle.remove();
                     }
-                `;
-                style.innerHTML = keyframes;
 
-                // Remove any existing ticker animation styles
-                const existingStyle = document.getElementById('ticker-animation');
-                if (existingStyle) {
-                    existingStyle.remove();
-                }
-
-                // Set an id for the new style element and append it to the head
-                style.id = 'ticker-animation';
-                document.head.appendChild(style);
+                    // Set an id for the new style element and append it to the head
+                    style.id = 'ticker-animation';
+                    document.head.appendChild(style);
+                }, 500);
 
                 setTimeout(() => {
                     app.elements.galleryContent.style.animation = 'ticker infinite 200s, fade-in 2s';
                     app.elements.galleryContent.style.animationTimingFunction = 'linear';
                     app.elements.galleryContent.style.animationPlayState = 'running';
-                }, 500);
+                }, 1000);
             }
         },
 
