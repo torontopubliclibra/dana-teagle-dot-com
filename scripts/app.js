@@ -150,7 +150,7 @@ let app = {
                     }
 
                     if (item.id) {
-                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.expand); app.functions.readMoreByID('${item.id}')">Project info</a>`)
                     }
 
                     if (itemLinks.length > 0) {
@@ -260,7 +260,7 @@ let app = {
         },
         
         // displaying the projects
-        projectDisplay: (filter, sort, expand) => {
+        projectDisplay: (filter, expand) => {
 
             app.projects.expand = expand;
 
@@ -269,9 +269,6 @@ let app = {
 
             // save the filter parameter as the filter
             app.projects.filter = filter;
-
-            // save the sort parameter as the sort
-            app.projects.sort = sort;
 
             // intialize the filters array with just 'all'
             let projectFilters = [];
@@ -314,11 +311,11 @@ let app = {
 
                         // otherwise create a link that displays the projects of that filter
                         } else if (filter === "All") {
-                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand);app.functions.scroll('projects')" title="All projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" title="All projects">`
                             + filterName
                             + `</button></li>`;
                         } else {
-                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.sort, app.projects.expand)" title="${filter} projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.expand)" title="${filter} projects">`
                             + filterName
                             + `</button></li>`;
                         };
@@ -330,19 +327,19 @@ let app = {
                 let filterText = `[ Select tag to filter ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter</button> ]`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter</button> ]`;
                 }
 
-                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest', app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest</button> ]`;
+                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest</button> ]`;
 
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest', app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest</button> ]`;
+                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest</button> ]`;
                 }
 
-                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, app.projects.sort, true)" title="Expand all projects" class="project-button expand">Expand all projects</button> ]`
+                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true)" title="Expand all projects" class="project-button expand">Expand all projects</button> ]`
 
                 if (expand === true) {
-                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, app.projects.sort, false)" title="Expand all projects" class="project-button expand">Collapse all projects</button> ]`
+                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false)" title="Expand all projects" class="project-button expand">Collapse all projects</button> ]`
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
@@ -362,28 +359,13 @@ let app = {
                 );
             };
 
-            // sort the projects by year
-            let sortedByYear = app.projects.data.sort((a, b) => {
-                if (b.year > a.year) {
-                    return 1;
-                } if (a.year < b.year) {
-                    return -1;
-                } else {
-                    return 0;
-                };
-            });
-
-            if (app.projects.sort === "oldest") {
-                sortedByYear = sortedByYear.reverse();
-            }
-
             // if the selected filter is 'all', fill the array with the sorted projects
             if (app.projects.filter == "All") {
-                projectArray = sortedByYear;
+                projectArray = app.projects.data;
 
             // if the selected filter is anything else, fill the array with the sorted projects, filtered by the selected filter
             } else {
-                projectArray = sortedByYear.filter((project) => project.tags.includes(app.projects.filter));
+                projectArray = app.projects.data.filter((project) => project.tags.includes(app.projects.filter));
             };
 
             // map out the sorted projects to the page
@@ -405,9 +387,9 @@ let app = {
 
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
-                        return `<button onclick="app.functions.projectDisplay('All', app.projects.sort, app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
                     } else {
-                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.sort, app.projects.expand)" class="tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.expand)" class="tag">#` + tag + `</button>`
                     }
                 })
 
@@ -495,7 +477,7 @@ let app = {
         },
 
         allProjectsClick: () => {
-            app.functions.projectDisplay("All", app.projects.sort, app.projects.expand);
+            app.functions.projectDisplay("All", app.projects.expand);
             app.functions.scroll("projects");
         },
 
@@ -646,7 +628,7 @@ let app = {
                 app.projects.data = projects;
 
                 // display the projects on the page using the default filter
-                app.functions.projectDisplay(app.projects.filter, app.projects.sort, app.projects.expand);
+                app.functions.projectDisplay(app.projects.filter, app.projects.expand);
             })
             // console log any promise errors
             .catch(error => console.log(error));
