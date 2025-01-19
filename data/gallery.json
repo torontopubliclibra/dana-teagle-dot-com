@@ -13,7 +13,7 @@
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
-        "images": ["./assets/projects/truehistorybeer-2.jpg", "./assets/projects/truehistorybeer-3.jpg", "./assets/projects/truehistorybeer-3.jpg"]
+        "images": ["./assets/projects/truehistorybeer-2.jpg", "./assets/projects/truehistorybeer-3.png", "./assets/projects/truehistorybeer-4.jpg"]
     },
     "MCD-1": {
         "title": "Michael Cloud Duguay",
@@ -65,7 +65,7 @@
         "title": "Your Real Life Insurance",
         "year": "2020-2021",
         "service": "Graphic design & social media marketing",
-        "images": ["./assets/projects/yrl-1.png", "./assets/projects/yrl-3.png", "./assets/projects/yrl-2.png"]
+        "images": ["./assets/projects/yrl-3.png", "./assets/projects/yrl-1.png", "./assets/projects/yrl-2.png"]
     },
     "West83": {
         "title": "Your Real Life Insurance",
@@ -80,7 +80,7 @@
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
-        "images": ["./assets/projects/cpnnectfund-2.png", "./assets/projects/connect-und-3.jpg", "./assets/projects/connectfund-4.jpg"]
+        "images": ["./assets/projects/connectfund-2.png", "./assets/projects/connectfund-3.png", "./assets/projects/connectfund-4.png"]
     },
     "Sydney": {
         "title": "Sydney Gautreau",
@@ -95,6 +95,7 @@
         "year": "2024",
         "service": "Agitprop design project",
         "site": "/rustprop",
+        "instagram": "/rp-insta",
         "images": ["./assets/rustprop/touchscreens.png", "./assets/rustprop/sorry.png", "./assets/rustprop/push-notifs.png"]
     },
     "Notes": {
