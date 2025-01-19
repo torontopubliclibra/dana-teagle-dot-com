@@ -244,13 +244,17 @@ h3 {
     font-size: 18px;
   }
   ul, li, li button {
-    font-size: 15px;
+    font-size: 16px;
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
+  li button {
+    padding-bottom: 5px;
+  }
   .selected {
     font-style: italic;
+    padding-bottom: 3px;
   }
 
   // responsive to mobile
@@ -259,8 +263,12 @@ h3 {
       font-size: 18px;
     }
     ul, li, li button {
-      @include textStyle (14px, "", 1);
+      @include textStyle (15px, "", 1);
       font-style: normal;
+    }
+    li button, .selected {
+      padding: 3px 0;
+      padding-right: 5px;
     }
   }
 }
