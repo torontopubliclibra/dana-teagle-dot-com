@@ -486,8 +486,8 @@ header {
         visibility: hidden;
         transform: translate3d(425%, 0, 0);
 
-        &:hover, &.paused {
-            animation-play-state: paused;
+        &:hover {
+            animation-play-state: paused !important;
         }
 
         // responsive to tablet
@@ -496,11 +496,11 @@ header {
             animation-duration: 150s;
 
             &:hover {
-                animation-play-state: running;
+                animation-play-state: running !important;
             }
 
             &.paused:hover {
-                animation-play-state: paused;
+                animation-play-state: paused !important;
             }
         }
     }

@@ -50,6 +50,7 @@ let app = {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
                 app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Click here to unpause</button>`
+                app.elements.galleryContent.style.animationPlayState = 'paused';
 
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.add('reveal');
@@ -58,6 +59,7 @@ let app = {
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
                 app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Click here to pause</button>`
+                app.elements.galleryContent.style.animationPlayState = 'running';
 
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.remove('reveal');
@@ -66,10 +68,9 @@ let app = {
         },
 
         galleryTicker: () => {
-            const galleryContent = document.querySelector('.gallery-content');
 
             // Add CSS properties to the galleryContent element
-            if (galleryContent) {
+            if (app.elements.galleryContent) {
                 const galleryItems = document.querySelectorAll('.gallery-item');
 
                 let totalWidth = 0;
@@ -77,7 +78,7 @@ let app = {
                     totalWidth += item.offsetWidth;
                 });
 
-                let galleryTransform = ((totalWidth / galleryContent.offsetWidth) * 0.475) * 120;
+                let galleryTransform = ((totalWidth / app.elements.galleryContent.offsetWidth) * 0.475) * 120;
 
                 // Create a new style element
                 let style = document.createElement('style');
@@ -108,8 +109,9 @@ let app = {
                 document.head.appendChild(style);
 
                 setTimeout(() => {
-                    galleryContent.style.animation = 'ticker infinite 200s, fade-in 2s';
-                    galleryContent.style.animationTimingFunction = 'linear';
+                    app.elements.galleryContent.style.animation = 'ticker infinite 200s, fade-in 2s';
+                    app.elements.galleryContent.style.animationTimingFunction = 'linear';
+                    app.elements.galleryContent.style.animationPlayState = 'running';
                 }, 500);
             }
         },

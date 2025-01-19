@@ -1824,8 +1824,8 @@ header .scroll-down img {
   visibility: hidden;
   transform: translate3d(425%, 0, 0);
 }
-#gallery .gallery-content:hover, #gallery .gallery-content.paused {
-  animation-play-state: paused;
+#gallery .gallery-content:hover {
+  animation-play-state: paused !important;
 }
 @media only screen and (max-width: 970px) {
   #gallery .gallery-content {
@@ -1833,10 +1833,10 @@ header .scroll-down img {
     animation-duration: 150s;
   }
   #gallery .gallery-content:hover {
-    animation-play-state: running;
+    animation-play-state: running !important;
   }
   #gallery .gallery-content.paused:hover {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
   }
 }
 #gallery .gallery-item {
