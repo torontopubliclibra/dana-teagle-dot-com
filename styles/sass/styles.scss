@@ -517,6 +517,11 @@ header {
                 animation-play-state: paused !important;
             }
         }
+
+        &.paused .gallery-item .gallery-item-info {
+            display: flex;
+            opacity: 100%;
+        }
     }
     .gallery-item {
         background-color: $black;

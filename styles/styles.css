@@ -1854,6 +1854,10 @@ header .scroll-down img {
     animation-play-state: paused !important;
   }
 }
+#gallery .gallery-content.paused .gallery-item .gallery-item-info {
+  display: flex;
+  opacity: 100%;
+}
 #gallery .gallery-item {
   background-color: #282b2c;
   border: solid rgba(40, 43, 44, 0.25) 5px;
