@@ -64,7 +64,7 @@ let app = {
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">unpause the gallery</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery</button>`
                 app.elements.galleryContent.style.animationPlayState = 'paused';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -73,7 +73,7 @@ let app = {
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">pause the gallery</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery</button>`
                 app.elements.galleryContent.style.animationPlayState = 'running';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -315,14 +315,14 @@ let app = {
 
                 let filterText = `[ Select tag to filter ]`;
 
-                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest')" title="Sort oldest to newest" class="remove-filter-button">sort oldest to newest</button> ]`;
+                let sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'oldest')" title="Sort oldest to newest" class="remove-filter-button">Sort oldest to newest</button> ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort)" title="Remove project filter" class="remove-filter-button">remove filter</button> ]`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.sort)" title="Remove project filter" class="remove-filter-button">Remove filter</button> ]`;
                 }
 
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest')" title="Sort newest to oldest" class="remove-filter-button">sort newest to oldest</button> ]`;
+                    sortText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, 'newest')" title="Sort newest to oldest" class="remove-filter-button">Sort newest to oldest</button> ]`;
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
