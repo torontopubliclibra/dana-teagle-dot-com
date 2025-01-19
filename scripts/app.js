@@ -49,7 +49,7 @@ let app = {
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<a onclick="app.functions.galleryPause('unpause')">Click here to unpause</a>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Click here to unpause</button>`
 
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.add('reveal');
@@ -57,7 +57,7 @@ let app = {
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<a onclick="app.functions.galleryPause('pause')">Click here to pause</a>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Click here to pause</button>`
 
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.remove('reveal');

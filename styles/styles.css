@@ -1129,7 +1129,7 @@ html.trans-id hr {
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
-body, .button {
+body, button, .button {
   font-size: 18px;
   text-align: left;
   line-height: 1.25;
@@ -1140,6 +1140,13 @@ body, .button {
   line-height: 1.6;
   text-transform: lowercase;
   text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .selected, .highlight {
@@ -1185,31 +1192,31 @@ p {
   }
 }
 
-a {
+a, button {
   font-size: 18px;
   text-align: left;
   line-height: 1.25;
   color: #282b2c;
   transition: 0.4s color, 0.4s font-style;
 }
-a:hover, a:focus {
+a:hover, a:focus, button:hover, button:focus {
   cursor: pointer;
   color: #7a91b1;
   font-style: italic;
 }
 @media only screen and (max-width: 970px) {
-  a {
+  a, button {
     font-style: italic;
   }
 }
 
-.button, nav ul li a {
+button, .button, nav ul li a {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 @media only screen and (max-width: 970px) {
-  .button, nav ul li a {
+  button, .button, nav ul li a {
     font-style: italic;
   }
 }
@@ -1819,20 +1826,20 @@ header .scroll-down img {
 #gallery .pause-button {
   cursor: pointer;
 }
-#gallery .pause-button a {
+#gallery .pause-button button {
   color: #282b2c;
 }
-#gallery .pause-button a:hover {
+#gallery .pause-button button:hover {
   background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .pause-button a {
+  #gallery .pause-button button {
     font-style: normal;
   }
-  #gallery .pause-button a:hover {
+  #gallery .pause-button button:hover {
     background: none;
   }
 }
