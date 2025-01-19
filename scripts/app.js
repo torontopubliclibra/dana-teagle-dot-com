@@ -235,7 +235,7 @@ let app = {
                     + project.image
                     + `" class="project-image" alt="`
                     + project.title
-                    + ` screenshot">`
+                    + ` website screenshot">`
                 }
 
                 // if the project description exists
