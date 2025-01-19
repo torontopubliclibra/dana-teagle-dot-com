@@ -72,7 +72,7 @@ let app = {
             }
         },
 
-        galleryTicker: () => {
+        galleryDisplay: () => {
 
             // initialize the gallery array
             let galleryArray = [];
@@ -134,9 +134,11 @@ let app = {
             });
 
             // stitch the html for each of the gallery items together and add that the gallery container
-            app.elements.galleryContent.html(formattedGallery.reduce((accumulator, project) => {
-                return accumulator + project;
-            }));
+            if (galleryArray.length > 0) {
+                app.elements.galleryContent.html(galleryArray.reduce((accumulator, project) => {
+                    return accumulator + project;
+                }));
+            }
 
             // Add CSS properties to the galleryContent element
             if (app.elements.galleryContent) {
@@ -529,7 +531,7 @@ let app = {
 
         // watch the screen width and console log when it changes
         window.addEventListener('resize', () => {
-            app.functions.galleryTicker();
+            app.functions.galleryDisplay();
         });
 
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
@@ -575,7 +577,43 @@ let app = {
             .catch(error => console.log(error));
         }
 
-        app.functions.galleryTicker();
+        // fetch the gallery data from the json file and send the response
+        fetch('./data/gallery.json').then(response => response.json())
+        // then with the data
+        .then((data) => {
+
+            // set the gallery to an empty array
+            let gallery = [];
+
+            // and for each item in the data
+            for (let object in data) {
+
+                // initialize an item object, setting the title to the object key
+                let item = {
+                    "title": "",
+                    "year": "",
+                    "service": "",
+                    "id": "",
+                    "site": "",
+                    "images": []
+                }
+
+                // then map each property in the initial object to the new object
+                for (let property in data[object]) {
+                    item[property] = data[object][property];
+                };
+
+                // and push each item into the gallery array
+                gallery.push(item);
+            };
+
+            // save the gallery array to the item data
+            app.gallery.data = app.functions.shuffleArray(gallery);
+        })
+        // console log any promise errors
+        .catch(error => console.log(error));
+
+        app.functions.galleryDisplay();
 
         // add the event listeners
         app.events();
