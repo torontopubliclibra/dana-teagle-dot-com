@@ -569,16 +569,6 @@ html.tpl {
             color: $white;
             font-size: 14px;
 
-            // .counter {
-            //     border: solid $white 2px;
-            //     // image-rendering: pixelated;
-            //     // transform: scale(1.25);
-            // }
-    
-            .tpl {
-                color: $color2;
-            }
-
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 text-align: left;
