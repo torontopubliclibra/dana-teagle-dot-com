@@ -55,11 +55,42 @@ let app = {
         },
 
         shuffleArray: (array) => {
-            for (let i = array.length - 1; i > 0; i--) {
+
+            // Group items by title
+            const groups = array.reduce((acc, item) => {
+                acc[item.title] = acc[item.title] || [];
+                acc[item.title].push(item);
+                return acc;
+            }, {});
+
+            // Shuffle each group individually
+            Object.values(groups).forEach(group => {
+                for (let i = group.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [group[i], group[j]] = [group[j], group[i]];
+                }
+            });
+
+            // Convert groups object to an array and shuffle the array of groups
+            const shuffledGroups = Object.values(groups);
+            for (let i = shuffledGroups.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
+                [shuffledGroups[i], shuffledGroups[j]] = [shuffledGroups[j], shuffledGroups[i]];
             }
-            return array;
+
+            // Interleave the groups to ensure items with the same title are far apart
+            const result = [];
+            const maxGroupSize = Math.max(...Object.values(shuffledGroups).map(group => group.length));
+            for (let i = 0; i < maxGroupSize; i++) {
+                for (const group of Object.values(shuffledGroups)) {
+                    if (group[i]) {
+                        result.push(group[i]);
+                    }
+                }
+            }
+
+            return result;
+
         },
 
         // pause gallery on button click
@@ -150,7 +181,7 @@ let app = {
                     }
 
                     if (item.id) {
-                        itemLinks.push(`<a href="#${item.id}" onclick="app.functions.projectDisplay('All', app.projects.expand); app.functions.readMoreByID('${item.id}')">Project info</a>`)
+                        itemLinks.push(`<button onclick="app.functions.projectDisplay('All', app.projects.expand); app.functions.readMoreByID('${item.id}'); app.functions.scroll('${item.id}')">Project info</button>`)
                     }
 
                     if (itemLinks.length > 0) {
@@ -231,13 +262,21 @@ let app = {
             // if the direction is "top", set the location to the top of the page
             if (direction === "top") {
                 location = 0;
+                window.scrollTo({top: location, behavior: "smooth"});
+                history.pushState(null, null, ' ');
+
             // if the direction is anything else, set the location to the top of that section
             } else {
-                location = app.elements[direction].offset().top;
-            };
+                // location = app.elements[direction].offset().top;
+                location = $(`#${direction}`).offset().top;
+                window.scrollTo({top: location, behavior: "smooth"});
 
-            // smoothly scroll to the location
-            window.scrollTo({top: location, behavior: "smooth"});
+                console.log(location);
+                
+                setTimeout(() => {
+                    history.pushState(null, null, `#${direction}`);
+                }, 300);
+            };
 
             // blur the button after scroll
             document.activeElement.blur();
