@@ -89,7 +89,6 @@ html.rustprop {
         .img-gallery {
             display: flex;
             flex-direction: column;
-            gap: 40px;
             width: 85%;
             max-width: 600px;
             margin-bottom: 20px;
@@ -98,6 +97,33 @@ html.rustprop {
                 height: 100%;
                 object-fit: cover;
                 pointer-events: none;
+                margin-top: 40px;
+
+                &:first-of-type, &.slide-x {
+                    margin: 0;
+                }
+
+                &.slide-x {
+                    border-top: solid rgba($white, 0.75) 5px;
+                }
+            }
+            .img-caption {
+                background-color: rgba($white, 0.75);
+                text-align: center;
+                font-size: 0.85rem;
+                padding: 20px 10px;
+
+                a {
+                    font-size: 0.85rem;
+
+                    &:hover {
+                        color: #5f1f47;
+                        // responsive to mobile
+                        @media only screen and (max-width: $mobile) {
+                            color: $black;
+                        }
+                    }
+                }
             }
         }
 

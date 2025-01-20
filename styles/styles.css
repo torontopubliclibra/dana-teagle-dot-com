@@ -915,7 +915,6 @@ html.rustprop main .rp-landing a:hover {
 html.rustprop main .img-gallery {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   width: 85%;
   max-width: 600px;
   margin-bottom: 20px;
@@ -926,6 +925,30 @@ html.rustprop main .img-gallery img {
   -o-object-fit: cover;
      object-fit: cover;
   pointer-events: none;
+  margin-top: 40px;
+}
+html.rustprop main .img-gallery img:first-of-type, html.rustprop main .img-gallery img.slide-x {
+  margin: 0;
+}
+html.rustprop main .img-gallery img.slide-x {
+  border-top: solid rgba(243, 232, 233, 0.75) 5px;
+}
+html.rustprop main .img-gallery .img-caption {
+  background-color: rgba(243, 232, 233, 0.75);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 20px 10px;
+}
+html.rustprop main .img-gallery .img-caption a {
+  font-size: 0.85rem;
+}
+html.rustprop main .img-gallery .img-caption a:hover {
+  color: #5f1f47;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .img-gallery .img-caption a:hover {
+    color: #282b2c;
+  }
 }
 @media only screen and (max-width: 970px) {
   html.rustprop main .rp-landing {
