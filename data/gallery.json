@@ -68,7 +68,7 @@
         "images": ["./assets/projects/yrl-3.png", "./assets/projects/yrl-1.png", "./assets/projects/yrl-2.png"]
     },
     "West83": {
-        "title": "Your Real Life Insurance",
+        "title": "West83",
         "year": "2024",
         "service": "Logo design",
         "site": "https://www.west83.com/",
@@ -97,6 +97,14 @@
         "site": "/rustprop",
         "instagram": "/rp-insta",
         "images": ["./assets/rustprop/touchscreens.png", "./assets/rustprop/sorry.png", "./assets/rustprop/push-notifs.png"]
+    },
+    "RUSTPROP 2": {
+        "title": "RUSTPROP",
+        "year": "2024",
+        "service": "Agitprop design project",
+        "site": "/rustprop",
+        "instagram": "/rp-insta",
+        "images": ["./assets/rustprop/girlunions.png", "./assets/rustprop/streaming-sucks.jpeg", "./assets/rustprop/queer-lib.png"]
     },
     "Notes": {
         "title": "Note Taken",
