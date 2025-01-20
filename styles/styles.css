@@ -1928,19 +1928,22 @@ header .scroll-down img {
   font-size: 1.25rem;
   cursor: default;
 }
-#gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a {
+#gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a, #gallery .gallery-item .gallery-item-info button {
   color: #f3e8e9;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a {
+  #gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a, #gallery .gallery-item .gallery-item-info button {
     font-size: 0.9rem;
   }
 }
-#gallery .gallery-item .gallery-item-info a:hover {
+#gallery .gallery-item .gallery-item-info a, #gallery .gallery-item .gallery-item-info button {
+  text-decoration: underline;
+}
+#gallery .gallery-item .gallery-item-info a:hover, #gallery .gallery-item .gallery-item-info button:hover {
   color: #B57E9B;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .gallery-item .gallery-item-info a:hover {
+  #gallery .gallery-item .gallery-item-info a:hover, #gallery .gallery-item .gallery-item-info button:hover {
     color: #f3e8e9;
   }
 }

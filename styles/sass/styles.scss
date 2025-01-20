@@ -599,7 +599,7 @@ header {
                 font-size: 1.25rem;
                 cursor: default;
             }
-            p, a {
+            p, a, button {
                 color: $white;
 
                 // responsive to tablet
@@ -607,7 +607,10 @@ header {
                     font-size: 0.9rem;
                 }
             }
-            a:hover {
+            a, button {
+                text-decoration: underline;
+            }
+            a:hover, button:hover {
                 color: $color2;
 
                 // responsive to tablet
