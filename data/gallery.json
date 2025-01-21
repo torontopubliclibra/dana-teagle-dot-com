@@ -70,7 +70,8 @@
     "West83": {
         "title": "West83",
         "year": "2024",
-        "service": "Logo design",
+        "service": "Logo design & branding",
+        "id": "west83",
         "site": "https://www.west83.com/",
         "images": ["./assets/projects/west83.jpg"]
     },
@@ -117,7 +118,7 @@
     "Body Stories": {
         "title": "Body Stories",
         "year": "2021",
-        "service": "Logo design",
+        "service": "Logo design & branding",
         "site": "https://bodystoriesdance.com",
         "images": ["./assets/projects/body-stories-2.png"]
     }
