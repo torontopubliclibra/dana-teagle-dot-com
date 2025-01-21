@@ -39,6 +39,11 @@ html.tpl {
         font-size: 1rem;
         margin: 5px 0;
 
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
+        }
+
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             margin: 10px 0;
@@ -146,10 +151,14 @@ html.tpl {
             width: 100%;
             max-width: 900px;
 
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+            // responsive to tablet
+            @media only screen and (max-width: $tablet) {
                 width: 85%;
                 gap: 25px;
+            }
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
                 justify-content: left;
             }
 
