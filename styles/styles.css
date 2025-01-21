@@ -441,6 +441,7 @@ html.tpl nav ul {
   html.tpl nav ul {
     width: 85%;
     gap: 25px;
+    justify-content: left;
   }
 }
 html.tpl nav ul li {
@@ -461,6 +462,12 @@ html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
   font-style: italic;
 }
 @media only screen and (max-width: 768px) {
+  html.tpl nav ul li:first-of-type, html.tpl nav ul li:nth-of-type(2), html.tpl nav ul li:nth-of-type(3) {
+    margin-bottom: 5px;
+  }
+  html.tpl nav ul li .button {
+    padding: 7px 25px;
+  }
   html.tpl nav ul li .button, html.tpl nav ul li .button:hover {
     font-style: normal;
   }
