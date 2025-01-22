@@ -97,7 +97,7 @@
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
-        "images": ["./assets/rustprop/touchscreens.png", "./assets/rustprop/sorry.png", "./assets/rustprop/push-notifs.png"]
+        "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/sorry.png", "./rustprop/images/push-notifs.png"]
     },
     "RUSTPROP 2": {
         "title": "RUSTPROP",
@@ -105,7 +105,7 @@
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
-        "images": ["./assets/rustprop/girlunions.png", "./assets/rustprop/streaming-sucks.jpeg", "./assets/rustprop/queer-lib.png"]
+        "images": ["./rustprop/images/girlunions.png", "./rustprop/images/streaming-sucks.jpeg", "./rustprop/images/queer-lib.png"]
     },
     "Notes": {
         "title": "Note Taken",
