@@ -1,0 +1,104 @@
+{
+    "Naomi McCarroll-Butler": {
+        "id": "naomicmccb",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for saxophonist, clarinetist, whistle player, and instrument maker Naomi McCarroll-Butler, built with jQuery, HTML, and SCSS. I developed the site in 2024 and 2025, using designs wireframed in Figma."
+        ],
+        "image": "",
+        "site": "https://naomimccb.com/"
+    },
+    "Poe Allphin": {
+        "id": "poe-allphin",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for PhD musicology student Poe M. Allphin, built with jQuery, HTML, and SCSS. I developed the site in February and March 2025, using designs wireframed in Figma."
+        ],
+        "image": "",
+        "site": ""
+    },
+   "Amalion Consulting": {
+        "id": "amalion",
+        "year": "2025",
+        "tags": [
+            "Affinity-designer",
+            "Webflow",
+            "Figma",
+            "HTML",
+            "CSS"
+        ],
+        "description": [
+            "Amalion is a consulting business taht offers professional heritage advice and community-centred support to libraries, archives, museums, historical societies, and cultural/heritage institutions in Canada, run by Raegan Mary Swanson, the Executive Director of The ArQuives.",
+            "In early 2025, I worked with Raegan to design Amalion's branding, as well as building the business' website using Webflow and Figma."
+        ],
+        "image": "",
+        "site": ""
+    },
+    "Mara Knöcklein": {
+        "id": "mara-knocklein",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for graduate teaching assistant Mara Knöcklein, built with jQuery, HTML, and SCSS. I developed the site in January and February 2025, using designs wireframed in Figma."
+        ],
+        "image": "",
+        "site": ""
+    },
+    "Hazel Henry Audio": {
+        "id": "hazel-henry",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for audio engineer and producer Hazel Henry, built with jQuery, HTML, and SCSS. I developed the site in January and February 2025, using designs wireframed in Figma."
+        ],
+        "image": "",
+        "site": "https://hazelhenryaudio.com/"
+    },
+    "Ryan Perks": {
+        "id": "ryan-perks",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for book editor Ryan Perks, built with jQuery, HTML, and SCSS. I developed the site in December 2024 and January 2025, using designs wireframed in Figma."
+        ],
+        "image": "",
+        "site": ""
+    }
+}
