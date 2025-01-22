@@ -21,7 +21,7 @@
             "SCSS"
         ],
         "description": [
-            "This is a website for social historian Chris Aino Pihlak, built with HTML and SCSS. It was originally designed and developed in November and December 2024."
+            "This is a website for social historian Chris Aino Pihlak, built with HTML and SCSS. I designed and developed the site in November and December 2024."
         ],
         "image": "./assets/projects/chris-pihlak.jpg",
         "site": "https://chrispihlak.com"
@@ -60,8 +60,8 @@
         "year": "2024",
         "tags": [
             "Webflow",
-            "Figma",
             "JavaScript",
+            "Figma",
             "HTML",
             "CSS"
         ],
