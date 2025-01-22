@@ -913,6 +913,7 @@ html.rustprop main .rp-landing {
   align-items: center;
   gap: 10px;
   margin: 10px 0;
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
