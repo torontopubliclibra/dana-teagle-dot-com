@@ -53,6 +53,10 @@ html.trans-id {
     main {
         h3 {
             margin-top: 30px;
+
+            &.h3-trans-id {
+                margin-top: 0;
+            }
         }
         padding: 10px;
         border-top: none;

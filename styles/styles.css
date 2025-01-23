@@ -343,6 +343,9 @@ html.tpl h2 {
   html.tpl h2 {
     width: 100%;
   }
+  html.tpl h2.width {
+    width: 85% !important;
+  }
 }
 @media only screen and (max-width: 768px) {
   html.tpl h2 {
@@ -1079,6 +1082,9 @@ html.trans-id main {
 }
 html.trans-id main h3 {
   margin-top: 30px;
+}
+html.trans-id main h3.h3-trans-id {
+  margin-top: 0;
 }
 html.trans-id main .tpl-links {
   margin-bottom: 0;

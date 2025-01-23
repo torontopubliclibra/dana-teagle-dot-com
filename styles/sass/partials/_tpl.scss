@@ -42,6 +42,10 @@ html.tpl {
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
             width: 100%;
+
+            &.width {
+                width: 85% !important;
+            }
         }
 
         // responsive to mobile
