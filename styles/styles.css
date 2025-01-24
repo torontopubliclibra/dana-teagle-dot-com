@@ -908,21 +908,25 @@ html.rustprop main {
   margin: 0 auto;
 }
 html.rustprop main .rp-landing {
-  width: 100%;
-  max-width: 900px;
+  width: 85%;
+  max-width: 850px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  margin: 10px 0;
   padding-top: 10px;
   padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: solid 2px #B57E9B;
 }
 html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
+}
+html.rustprop main .rp-landing p {
+  width: 80%;
 }
 html.rustprop main .rp-landing a:hover {
   color: #B57E9B;
@@ -985,11 +989,14 @@ html.rustprop main .img-gallery .item .img-caption a:hover {
     flex-flow: column nowrap;
     width: 85%;
   }
+  html.rustprop main .rp-landing p {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-landing {
     align-items: flex-start;
-    margin: 0;
+    margin-bottom: 25px;
   }
   html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
     text-align: left;
