@@ -1,28 +1,28 @@
 {
-    "work/creative": {
-        "Dana Teagle dot com": {
+    "work & creative": {
+        "Design/web dev portfolio": {
             "link": "/",
-            "description": "Design & web/software development portfolio"
+            "description": "dana teagle dot com"
         },
         "Design/web dev Instagram": {
             "link": "/dt-insta",
             "description": "[at] danateagledotcom"
         },
-        "RUSTPROP site": {
-            "link": "/rustprop",
-            "description": "Agitprop design project"
+        "Github": {
+            "link": "/github",
+            "description": "torontopubliclibra"
         },
-        "RUSTPROP Instagram": {
+        "Agitprop page": {
+            "link": "/rustprop",
+            "description": "RUSTPROP"
+        },
+        "Agitprop Instagram": {
             "link": "/rp-insta",
             "description": "[at] rustprop"
         },
         "Creative writing newsletter": {
             "link": "/substack",
             "description": "the toronto public libra on Substack"
-        },
-        "Github": {
-            "link": "/github",
-            "description": "torontopubliclibra"
         }
     },
     "social profiles": {
@@ -46,16 +46,16 @@
             "link": "/goodreads",
             "description": ""
         },
+        "The Storygraph": {
+            "link": "/storygraph",
+            "description": ""
+        },
         "Spotify": {
             "link": "/spotify",
             "description": ""
         }
     },
     "contact & pay": {
-        "Discord": {
-            "link": "/discord",
-            "description": "torontopubliclibra on Discord"
-        },
         "Personal email": {
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
@@ -68,13 +68,17 @@
             "link": "/data/rusty-pgp.asc",
             "description": "ASCII text file download"
         },
+        "Discord": {
+            "link": "/discord",
+            "description": "torontopubliclibra on Discord"
+        },
         "Paypal": {
             "link": "/paypal",
             "description": "Send payments to [at] torontopubliclibra"
         },
         "RUSTPROP Ko-fi": {
             "link": "/kofi",
-            "description": "Support my agitprop design side project"
+            "description": "Support my agitprop design project"
         }
     },
     "mutual aid": {
@@ -85,12 +89,16 @@
         "Davenport Aid Brigade": {
             "link": "https://linktr.ee/davenportaidbrigade",
             "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
+        },
+        "L.A. Fire Mutual Aid": {
+            "link": "https://tinyurl.com/lafiremutualaid",
+            "description": "Resources to seek and support for those affected by the California wildfires"
         }
     },
     "links & resources": {
         "Ontario Trans I.D. resources": {
             "link": "/trans-id",
-            "description": "Documents and resources I've collected for changing your name and/or gender marker with governmental bodies and services in Ontario"
+            "description": "Documents and resources I've collected for changing your name and/or gender marker with the governments of Ontario and Canada"
         },
         "Justice Trans": {
             "link": "https://justicetrans.org/en/",
@@ -100,13 +108,25 @@
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         },
+        "The Internet Archive": {
+            "link": "https://archive.org/",
+            "description": "Non-profit library of millions of free texts, movies, software, music, websites, and more."
+        },
         "Digital Transgender Archive": {
             "link": "https://www.digitaltransgenderarchive.net/",
             "description": "Archive of digitized and born-digital materials relating to the history of trans people"
         },
         "Transfeminine Science": {
             "link": "https://transfemscience.org/",
-            "description": "A resource for informational content on the subject of transfeminine hormone therapy"
+            "description": "Resource for informational content on the subject of transfeminine hormone therapy"
+        },
+        "Cobalt": {
+            "link": "https://cobalt.tools/",
+            "description": "Helpful tool for saving media from your websites, including video, audio, photos, or gifs"
+        },
+        "Metadata cleaner": {
+            "link": "https://metadata.systemli.org/",
+            "description": "Helpful tool for scrubbing hidden metadata from files"
         }
     }
 }
