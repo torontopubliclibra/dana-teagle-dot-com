@@ -28,8 +28,6 @@ let rssFormatter = {
                     title = title.replace(`&`, `&amp;`);
                 }
 
-                console.log(formattedDate);
-
                 let formattedItem = `
                 <item>
                     <title>${title}</title>
