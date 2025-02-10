@@ -651,6 +651,9 @@ html.tpl main .badges img {
   height: 31px;
   border: none;
   image-rendering: pixelated;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .badges {
