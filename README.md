@@ -15,9 +15,12 @@ The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON t
     - /tpl
         - /now
         - /uses
+        - /404
     - /rustprop
         - /rss.xml
     - /trans-id
+    - /404
+    - /sitemap.xml
 ```
 [XML Sitemap](https://danateagle.com/sitemap.xml)
 
