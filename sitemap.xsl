@@ -41,13 +41,7 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>URL</th>
-                        <xsl:if test="sitemap:url/sitemap:changefreq">
-                        <th>Change Frequency</th>
-                        </xsl:if>
-                        <xsl:if test="sitemap:url/sitemap:priority">
-                        <th>Priority</th>
-                        </xsl:if>
+                        <th>Page URL</th>
                         <xsl:if test="sitemap:url/sitemap:lastmod">
                         <th>Last Modified</th>
                         </xsl:if>
@@ -75,8 +69,6 @@
                             <xsl:apply-templates select="image:*"/>
                             <xsl:apply-templates select="video:*"/>
                         </td>
-                        <xsl:apply-templates select="sitemap:changefreq"/>
-                        <xsl:apply-templates select="sitemap:priority"/>
                         <xsl:if test="sitemap:lastmod">
                         <td>
                             <xsl:value-of select="concat(substring(sitemap:lastmod, 0, 11), concat(' ', substring(sitemap:lastmod, 12, 5)), concat(' ', substring(sitemap:lastmod, 20, 6)))"/>
@@ -90,12 +82,6 @@
     </xsl:template>
 
     <xsl:template match="sitemap:loc|sitemap:lastmod|image:loc|image:caption|video:*">
-    </xsl:template>
-
-    <xsl:template match="sitemap:changefreq|sitemap:priority">
-        <td>
-            <xsl:apply-templates/>
-        </td>
     </xsl:template>
 
 </xsl:stylesheet>

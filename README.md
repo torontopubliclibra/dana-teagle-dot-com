@@ -19,7 +19,7 @@ The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON t
         - /rss.xml
     - /trans-id
 ```
-- [XML Sitemap](https://danateagle.com/sitemap.xml)
+[XML Sitemap](https://danateagle.com/sitemap.xml)
 
 ## Development
 I originally built my portfolio page in Oct 2022. I did a major redesign and refactor of the website in Aug and Sept 2023, and I continue to update and improve it pretty regularly.
