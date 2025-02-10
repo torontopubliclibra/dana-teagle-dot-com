@@ -47,6 +47,14 @@
         "site": "https://connectfund.org",
         "images": ["./assets/projects/connectfund.jpg"]
     },
+    "Connect Fund 2": {
+        "title": "Connect Fund",
+        "year": "2024",
+        "service": "Web design & development",
+        "id": "connect-fund",
+        "site": "https://connectfund.org",
+        "images": ["./assets/projects/connectfund-2.png", "./assets/projects/connectfund-3.png", "./assets/projects/connectfund-4.png"]
+    },
     "Kitschin": {
         "title": "Kitschin Sink",
         "year": "2021",
@@ -75,14 +83,6 @@
         "site": "https://www.west83.com/",
         "images": ["./assets/projects/west83.jpg"]
     },
-    "Connect Fund 2": {
-        "title": "Connect Fund",
-        "year": "2024",
-        "service": "Web design & development",
-        "id": "connect-fund",
-        "site": "https://connectfund.org",
-        "images": ["./assets/projects/connectfund-2.png", "./assets/projects/connectfund-3.png", "./assets/projects/connectfund-4.png"]
-    },
     "Sydney": {
         "title": "Sydney Gautreau",
         "year": "2022",
@@ -97,15 +97,7 @@
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
-        "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/sorry.png", "./rustprop/images/push-notifs.png"]
-    },
-    "RUSTPROP 2": {
-        "title": "RUSTPROP",
-        "year": "2024",
-        "service": "Agitprop design project",
-        "site": "/rustprop",
-        "instagram": "/rp-insta",
-        "images": ["./rustprop/images/girlunions.png", "./rustprop/images/streaming-sucks.jpeg", "./rustprop/images/queer-lib.png"]
+        "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/streaming-sucks.jpeg", "./rustprop/images/push-notifs.png"]
     },
     "Notes": {
         "title": "Note Taken",
