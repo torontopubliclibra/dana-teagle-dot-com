@@ -882,13 +882,13 @@ header {
             width: 100%;
             min-height: 100%;
 
-            .headshot {
-                border: solid rgba($color3, 0.25) 15px;
-                width: 100%;
-                max-width: 250px;
-                image-rendering:  pixelated;
-                pointer-events: none;
-            }
+            // .headshot {
+            //     border: solid rgba($color3, 0.25) 15px;
+            //     width: 100%;
+            //     max-width: 250px;
+            //     image-rendering:  pixelated;
+            //     pointer-events: none;
+            // }
 
             .basic-info-caption {
                 font-style: italic;
@@ -923,9 +923,9 @@ header {
                     }
                 }
 
-                .headshot {
-                    max-width: 300px;
-                }
+                // .headshot {
+                //     max-width: 300px;
+                // }
 
             }
 
@@ -940,9 +940,9 @@ header {
                     text-align: left;
                 }
 
-                .headshot {
-                    max-width: 350px;
-                }
+                // .headshot {
+                //     max-width: 350px;
+                // }
             }
         }
 

@@ -1,17 +1,10 @@
 # dana teagle dot com | designer & web/software developer
-#
-#
-#
-#
-#
-#
-#
-#
-#
+# -------------------------------------------------------
+
 User-agent: *
+Disallow: /assets/
 Disallow: /data/
 Disallow: /fonts/
 Disallow: /scripts/
-Disallow: /trans-id.html
 
 Sitemap: https://danateagle.com/sitemap.xml

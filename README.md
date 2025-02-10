@@ -7,7 +7,7 @@ This is the repository for a few different webpages that relate to my work and l
 - [RUSTPROP](https://danateagle.com/rustprop)—an agitprop design project, and 
 - [Ontario Trans I.D. Resources](https://danateagle.com/trans-id)—a collection of resources for changing one's name and legal gender.
 
-The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON to store data and efficiently render repeated components.
+The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON to store data and efficiently render repeated components. RUSTPROP also has an [XML RSS webfeed](https://danateagle.com/rustprop/rss.xml).
 
 ## Sitemap
 ```
@@ -22,7 +22,7 @@ The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON t
     - /404
     - /sitemap.xml
 ```
-[XML Sitemap](https://danateagle.com/sitemap.xml)
+[XML sitemap available here](https://danateagle.com/sitemap.xml)
 
 ## Development
 I originally built my portfolio page in Oct 2022. I did a major redesign and refactor of the website in Aug and Sept 2023, and I continue to update and improve it pretty regularly.

@@ -2365,13 +2365,6 @@ header .scroll-down img {
   width: 100%;
   min-height: 100%;
 }
-#about .about-content .basic-info .headshot {
-  border: solid rgba(122, 145, 177, 0.25) 15px;
-  width: 100%;
-  max-width: 250px;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
 #about .about-content .basic-info .basic-info-caption {
   font-style: italic;
   line-height: 40px;
@@ -2401,9 +2394,6 @@ header .scroll-down img {
     padding: 0 8px;
     margin: 5px 0;
   }
-  #about .about-content .basic-info .headshot {
-    max-width: 300px;
-  }
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .basic-info {
@@ -2414,9 +2404,6 @@ header .scroll-down img {
   }
   #about .about-content .basic-info .basic-info-caption {
     text-align: left;
-  }
-  #about .about-content .basic-info .headshot {
-    max-width: 350px;
   }
 }
 #about .about-content .bio-1 {
