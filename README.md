@@ -9,6 +9,18 @@ This is the repository for a few different webpages that relate to my work and l
 
 The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON to store data and efficiently render repeated components.
 
+## Sitemap
+```
+- danateagle.com/
+    - /tpl
+        - /now
+        - /uses
+    - /rustprop
+        - /rss.xml
+    - /trans-id
+```
+- [XML Sitemap](https://danateagle.com/sitemap.xml)
+
 ## Development
 I originally built my portfolio page in Oct 2022. I did a major redesign and refactor of the website in Aug and Sept 2023, and I continue to update and improve it pretty regularly.
 
