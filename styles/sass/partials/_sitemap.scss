@@ -6,6 +6,9 @@ body.sitemap {
     justify-content: center;
     align-items: center;
     color: $black;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
 
     a:hover, a:focus {
         color: $black;
@@ -41,11 +44,12 @@ body.sitemap {
             line-height: 1.25;
             margin: 0;
 
-            @media only screen and (max-width: $tablet) {
-                font-size: 2rem;
+            &:hover {
+                font-style: normal;
             }
 
-            &:hover {
+            @media only screen and (max-width: $tablet) {
+                font-size: 2rem;
                 font-style: normal;
             }
         }
