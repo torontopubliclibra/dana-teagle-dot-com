@@ -32,12 +32,6 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://danateagle.com/rustprop/rss.xml</loc>
-        <lastmod>2025-01-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://danateagle.com/trans-id</loc>
         <lastmod>2025-02-09</lastmod>
         <changefreq>monthly</changefreq>
