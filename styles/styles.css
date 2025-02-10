@@ -230,6 +230,106 @@ html {
   overflow: hidden;
 }
 
+body.sitemap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #282b2c;
+}
+body.sitemap a:hover, body.sitemap a:focus {
+  color: #282b2c;
+}
+body.sitemap header, body.sitemap main, body.sitemap footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+body.sitemap header {
+  background: rgba(132, 165, 157, 0.6);
+  position: initial;
+  height: auto;
+  min-height: auto;
+  padding: 50px;
+  gap: 10px;
+}
+@media only screen and (max-width: 970px) {
+  body.sitemap header {
+    padding: 25px;
+  }
+}
+body.sitemap header h1, body.sitemap header p {
+  color: #282b2c;
+  text-align: center;
+}
+body.sitemap header h1 {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin: 0;
+}
+@media only screen and (max-width: 970px) {
+  body.sitemap header h1 {
+    font-size: 2rem;
+  }
+}
+body.sitemap header h1:hover {
+  font-style: normal;
+}
+body.sitemap header hr {
+  border-color: #B57E9B;
+  border-width: 3px;
+  margin: 25px;
+}
+body.sitemap main {
+  padding: 50px;
+}
+@media only screen and (max-width: 970px) {
+  body.sitemap main {
+    padding: 25px 0;
+  }
+}
+body.sitemap main table {
+  width: 80%;
+  background: #f3e8e9;
+  border: solid #7a91b1 5px;
+  border-collapse: collapse;
+}
+@media only screen and (max-width: 970px) {
+  body.sitemap main table {
+    width: 100%;
+    border: none;
+    border-bottom: solid #7a91b1 5px;
+  }
+}
+body.sitemap main table, body.sitemap main table a {
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 970px) {
+  body.sitemap main table, body.sitemap main table a {
+    font-size: 0.8rem;
+  }
+}
+body.sitemap main th {
+  background: rgba(122, 145, 177, 0.25);
+  border-bottom: solid #7a91b1 5px;
+  height: 75px;
+  padding: 10px;
+}
+@media only screen and (max-width: 970px) {
+  body.sitemap main th {
+    border-top: solid #7a91b1 5px;
+  }
+}
+body.sitemap main tr:nth-of-type(even) {
+  background: rgba(122, 145, 177, 0.15);
+}
+body.sitemap main td {
+  padding: 10px;
+  height: 50px;
+}
+
 @keyframes gradient {
   0% {
     background-position: 100% 50%;

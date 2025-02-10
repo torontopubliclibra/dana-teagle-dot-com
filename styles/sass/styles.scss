@@ -1,8 +1,8 @@
 // import all partials
 @use 'partials/setup';
+@use 'partials/sitemap';
 @use 'partials/tpl';
 @use 'partials/rustprop';
-// @use 'partials/weird-liquid';
 @use 'partials/trans-id';
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
