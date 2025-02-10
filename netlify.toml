@@ -1,37 +1,37 @@
 [[redirects]]
   from = "http://www.torontopubliclibra.com/"
   to = "https://www.danateagle.com/tpl/"
-  status = 301
+  status = 200
   force = true
 
-  [[redirects]]
+[[redirects]]
   from = "https://www.torontopubliclibra.com/"
   to = "https://www.danateagle.com/tpl/"
-  status = 301
+  status = 200
   force = true
 
 [[redirects]]
   from = "http://www.torontopubliclibra.com/*"
   to = "https://www.danateagle.com/tpl/:splat"
-  status = 301
+  status = 200
   force = true
 
-  [[redirects]]
+[[redirects]]
   from = "https://www.torontopubliclibra.com/*"
   to = "https://www.danateagle.com/tpl/:splat"
-  status = 301
+  status = 200
   force = true
   
-  [[redirects]]
+[[redirects]]
   from = "http://torontopubliclibra.com/*"
   to = "https://www.danateagle.com/tpl/:splat"
-  status = 301
+  status = 200
   force = true
 
 [[redirects]]
   from = "https://torontopubliclibra.com/*"
   to = "https://www.danateagle.com/tpl/:splat"
-  status = 301
+  status = 200
   force = true
 
 [[redirects]]
