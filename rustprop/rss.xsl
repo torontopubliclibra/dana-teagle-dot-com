@@ -12,15 +12,12 @@
       </head>
       <body style="background-color: #282b2c; color: #f3e8e9">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body" style="margin-bottom: 0 !important;">
-          <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1" style="background-color: #5f1f47 !important; padding: 15px !important; margin-bottom: 20px !important;">
-            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader.
-          </p>
-          <p class="text-gray" style="color: #f3e8e9 !important;">
-            Visit <a href="https://aboutfeeds.com" style="color: #B57E9B;">About Feeds</a> to get started with newsreaders and subscribing. It’s free.
+          <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1" style="background-color: #5f1f47 !important; padding: 15px !important;">
+            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader. Visit <a href="https://aboutfeeds.com" style="color: #f3e8e9; text-decoration: underline;">About Feeds</a> to get started with newsreaders and subscribing.
           </p>
         </nav>
         <div class="container-md px-3 py-3 markdown-body" style="margin-top: 0 !important; padding-top: 0 !important;">
-          <header class="py-5">
+          <header class="py-5" style="padding-top: 20px !important; padding-bottom: 10px !important;" >
             <h1 class="border-0">
               <!-- https://commons.wikimedia.org/wiki/File:Feed-icon.svg -->
               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="vertical-align: text-bottom; width: 1.2em; height: 1.2em;" class="pr-1" id="RSSicon" viewBox="0 0 256 256">
@@ -48,7 +45,7 @@
               <xsl:attribute name="href">
                 <xsl:value-of select="/rss/channel/link"/>
               </xsl:attribute>
-              Visit Website &#x2192;
+              Visit Webpage &#x2192;
             </a>
           </header>
           <h2>Recent Items</h2>
