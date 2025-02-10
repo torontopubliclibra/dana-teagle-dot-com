@@ -314,7 +314,7 @@ body.sitemap main table, body.sitemap main table a {
 body.sitemap main th {
   background: rgba(122, 145, 177, 0.25);
   border-bottom: solid #7a91b1 5px;
-  height: 75px;
+  height: 50px;
   padding: 10px;
 }
 @media only screen and (max-width: 970px) {
