@@ -30,6 +30,8 @@
     <!-- preloaded icons -->
     <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/arrow-up.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/checkbox.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/checkbox-blank.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/collapse-up.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/email.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/expand-down.svg" as="image" type="image/svg+xml" />
@@ -51,6 +53,17 @@
 
     <!-- header section-->
     <header id="home">
+
+      <div class="toggles">
+        <p class="pr">[</p>
+        <p>Toggle on/off:</p>
+        <ul>
+          <li><button class="button selected" id="animations-toggle" onclick="app.functions.toggleAnimations()"><img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations</button></li>
+          <li><button class="button" id="darkmode-toggle" onclick="app.functions.toggleDarkMode()"><img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode</button></li>
+        </ul>
+        <p class="pr">]</p>
+      </div>
+
       <div class="wrapper"> 
         
         <!-- nav section -->
@@ -93,6 +106,7 @@
         </a>
         
       </div>
+
     </header>
 
     <!-- about section -->

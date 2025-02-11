@@ -4,6 +4,7 @@ let app = {
     // page elements
     elements: {
         body: $("body"),
+        header: $("header"),
         nav: $("nav"),
         mobileMenu: $(".mobile-menu"),
         about: $("#about"),
@@ -21,6 +22,8 @@ let app = {
         contactLink: $("nav .contact"),
         scrollDownButton: $(".scroll-down"),
         scrollTopButton: $(".scroll-to-top"),
+        darkModeToggle: $("#darkmode-toggle"),
+        animationsToggle: $("#animations-toggle"),
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
@@ -29,6 +32,11 @@ let app = {
         galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
+    },
+
+    toggles: {
+        animations: true,
+        darkMode: false,
     },
 
     // projects data and selected filter
@@ -47,6 +55,41 @@ let app = {
 
     // app functions
     functions: {
+
+        toggleAnimations: () => {
+            app.elements.animationsToggle.toggleClass('selected');
+            app.toggles.animations = !app.toggles.animations;
+
+            if (app.toggles.animations === false) {
+                app.elements.header.css('animation', 'none');
+                app.elements.scrollDownButton.css('animation', 'none');
+                app.elements.scrollDownButton.css('transform', 'translate(-50%, 0px)');
+                app.functions.galleryPause('pause');
+                app.elements.animationsToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Animations');
+            } else {
+                app.elements.header.css('animation', '30s infinite ease-in-out gradient');
+                app.elements.scrollDownButton.css('transform', 'none');
+                app.elements.scrollDownButton.css('animation', '4s infinite ease-in-out pulse');
+                app.functions.galleryPause('unpause');
+                app.elements.animationsToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations');
+            }
+
+            localStorage['animations'] = `${app.toggles.animations}`;
+        },
+
+        toggleDarkMode: () => {
+            app.elements.body.toggleClass("dark-mode");
+            app.elements.darkModeToggle.toggleClass('selected');
+            app.toggles.darkMode = !app.toggles.darkMode;
+
+            if (app.toggles.darkMode === true) {
+                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
+            } else {
+                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode');
+            }
+
+            localStorage['dark-mode'] = `${app.toggles.darkMode}`;
+        },
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
@@ -105,7 +148,6 @@ let app = {
                 })
 
                 app.gallery.paused = true;
-                console.log('paused');
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
@@ -117,7 +159,6 @@ let app = {
                 })
 
                 app.gallery.paused = false;
-                console.log('unpaused');
             }
         },
 
@@ -270,8 +311,6 @@ let app = {
                 // location = app.elements[direction].offset().top;
                 location = $(`#${direction}`).offset().top;
                 window.scrollTo({top: location, behavior: "smooth"});
-
-                console.log(location);
                 
                 setTimeout(() => {
                     history.pushState(null, null, `#${direction}`);
@@ -713,6 +752,13 @@ let app = {
 
         // add the event listeners
         app.events();
+    
+        if (localStorage['animations'] === 'false') {
+            app.functions.toggleAnimations();
+        }
+        if (localStorage['dark-mode'] === 'true') {
+            app.functions.toggleDarkMode();
+        }
     },
 };
 
