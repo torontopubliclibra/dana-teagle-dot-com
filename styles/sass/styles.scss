@@ -26,12 +26,23 @@
 // body background and overflow
 body {
     background: $white;
+    // filter: grayscale(100%);
+    // filter: contrast(1000%) invert(100%);
 
     &.nav-open {
         
-        // responsive to mobile
         @media only screen and (max-width: $tablet) {
             overflow-y: hidden;
+        }
+
+        .toggles {
+            @media only screen and (max-width: $tablet) {
+                display: flex;
+                position: fixed;
+                border-bottom: solid $color1 5px;
+                opacity: 1;
+                animation: fade-in 0.4s;
+            }
         }
     }
 
@@ -152,7 +163,7 @@ hr {
             }
 
             &.read-less, &.read-less:hover, &.read-less:focus {
-                background: $color2;
+                background: $white;
             }
         }
     }
@@ -163,7 +174,7 @@ header {
     background: linear-gradient(120deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, rgba($color1, 0.25) 60%, rgba($color1, 0.5) 98%, rgba($color1, 0.5) 100%);
     background-size: 400% 400%;
     @include positioning(relative);
-    min-height: 500px;
+    min-height: 750px;
     height: 100vh;
     max-height: 1000px;
 
@@ -202,31 +213,165 @@ header {
 
     nav ul {
         position: relative;
-        min-height: 500px;
+        min-height: 750px;
         height: 100vh;
         max-height: 1000px;
     }
 
+    .toggles {
+        z-index: 100;
+        position: absolute;
+        bottom: 25px;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        color: $black;
+        font-size: 0.9rem;
+        padding: 0;
+        margin: 0 25vw;
+        gap: 15px;
+
+        p {
+            margin-bottom: 1px;
+        }
+
+        .mr {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding: 0;
+            gap: 15px;
+
+            li {
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background: none;
+                    font-size: 0.9rem;
+                    color: $black;
+                    margin: 0;
+                    padding: 10px 0;
+                    transition: 0.4s color, 0.4s font-style;
+
+                    img {
+                        height: 18px;
+                        margin-top: 2px;
+                        transition: 0.4s filter;
+                    }
+
+                    &:focus {
+                        background: none;
+                        font-style: normal;
+                    }
+
+                    &:hover, &.selected, &.selected:hover, &.selected:focus {
+                        background: linear-gradient(120deg, $color2 0%, $color2 100%);
+                        background-repeat: no-repeat;
+                        background-size: 100% 7%;
+                        background-position: 0 66%;
+                        font-style: italic;
+                    }
+
+                    &.selected, &:hover {
+                        transition: 0.4s color, 0.4s font-style;
+
+                        img {
+                            transition: 0.4s filter;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: $tablet) {
+            background-color: $white;
+            display: none;
+            opacity: 0;
+            width: 100vw;
+            margin: 0;
+            padding: 25px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            top: 510px;
+            height: 125px;
+
+            .mr {
+                display: inline;
+            }
+
+            .pr {
+                display: none;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 0;
+
+                li {
+                    button {
+                        padding: 0;
+                        font-size: 1rem;
+    
+                        &:hover {
+                            background: none;
+                        }
+
+                        &.selected, &.selected:hover, &.selected:focus {
+                            background: linear-gradient(120deg, $color2 0%, $color2 100%);
+                            background-repeat: no-repeat;
+                            background-size: 100% 15%;
+                            background-position: 0 80%;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media only screen and (max-width: $mobile) {
+            top: 475px;
+        }
+    }
+
     .socials {
+        z-index: 150;
         position: absolute;
         bottom: 20px;
         right: 0;
         display: flex;
-        gap: 40px;
+        gap: 20px;
 
         &.left {
             right: unset;
             left: 0;
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             gap: 20px;
             right: 20px;
+            bottom: 40px;
+            height: 70px;
 
             &.left {
                 left: 20px;
             }
+        }
+
+        @media only screen and (max-width: $mobile) {
+            bottom: 20px;
         }
     }
 
@@ -259,7 +404,7 @@ header {
             width: 50%;
             padding: 15px 20px;
             padding-bottom: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             bottom: 20px;
             left: 0;
             width: 100%;
@@ -274,16 +419,12 @@ header {
             &:hover {
                 background-color: $white;
                 border-bottom: solid $color2 4px;
+                margin-bottom: 10px;
 
                 img {
-                    transform: unset;
+                    transform: skew(0deg);
                 }
             }
-        }
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            margin-bottom: 10px;
         }
         
     }
@@ -366,7 +507,7 @@ header {
                 opacity: 0;
                 width: 100%;
                 height: 100vh;
-                padding-top: 120px;
+                padding-top: 80px;
                 background: $color3;
                 z-index: 3;
 
@@ -423,10 +564,13 @@ header {
         @include positioning (absolute, "", "", 10%, 50%);
         animation: 4s infinite ease-in-out pulse;
 
+        @media only screen and (max-width: $tablet) {
+            bottom: 15%;
+        }
+
         img {
             width: 75px;
 
-            // responsive to tablet
             @media only screen and (max-width: $tablet) {
                 width: 60px;
             }
@@ -446,6 +590,11 @@ header {
                 background-repeat: no-repeat;
                 background-size: 100% 20%;
                 background-position: 0 95%;
+            }
+
+            img {
+                height: 20px;
+                margin-bottom: -5px;
             }
 
             // responsive to tablet
@@ -999,6 +1148,11 @@ header {
             }
         }
 
+        img {
+            height: 18px;
+            margin-bottom: -4px;
+        }
+
         .project-button {
             color: $black;
     
@@ -1116,18 +1270,19 @@ header {
 
                 // buttons
                 .button {
-
                     display: flex;
                     gap: 5px;
+                    padding: 10px 15px;
+                    padding-bottom: 7px;
+                    border-bottom: solid $white 4px;
 
                     img {
                         width: 14px;
                     }
 
-                    padding: 10px 15px;
-
                     &:hover, &:focus, &.read-less {
-                        background-color: rgba($color2, 0.75);
+                        background-color: $white;
+                        border-bottom: solid $color2 4px;
                     }
                 }
 
@@ -1137,6 +1292,7 @@ header {
 
                     .button {
                         padding: 10px;
+                        padding-bottom: 7px;
                         gap: 4px;
 
                         img {
@@ -1145,9 +1301,11 @@ header {
                         
                         &:hover, &:focus {
                             background-color: $white;
+                            border-color: $white;
                         }
                         &.read-less:hover, &.read-less:focus {
-                            background-color: rgba($color2, 0.75);
+                            background-color: $white;
+                            border-color: $color2;
                         }
                     }
                 }
@@ -1237,26 +1395,196 @@ footer .wrapper {
     margin: 20px auto;
     width: 95%;
 
-    // horizontal line
-    hr {
-        width: 85%;
-        margin: 30px 0;
-        border-color: $color2;
+    .credit {
+        margin-top: 30px;
     }
 
     // footer button
     .scroll-to-top {
-        background: rgba($color2, 0.75);
+        background-color: $white;
+        border-bottom: solid $color2 4px;
+        padding-bottom: 14px;
 
         &:hover, &:focus {
-            background: rgba($color3, 0.75);
+            background-color: $white;
+            border-bottom: solid $color3 4px;
         }
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
 
             &:hover, &:focus {
-                background: rgba($color2, 0.75);
+                border-bottom: solid $color2 4px;
+            }
+        }
+    }
+}
+
+body.dark-mode {
+    background: $black;
+    
+    header {
+        background: linear-gradient(120deg, rgba($color3, 0.6) 0%, rgba($color3, 0.6) 2%, rgba($color1, 0.75) 60%, rgba($color1, 0.5) 98%, rgba($color1, 0.5) 100%);
+        background-size: 400% 400%;
+        h1, nav ul li a {
+            color: $white;
+        }
+        nav ul li.socials a {
+            background-color: $black;
+
+            img {
+                filter: invert(1);
+            }
+        }
+        .toggles {
+            p, button {
+                color: $white;
+
+                img {
+                    filter: invert(1);
+                }
+            }
+
+            @media only screen and (max-width: $tablet) {
+                background-color: $black;
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            nav ul {
+                background-color: #59687C;
+            }
+            nav ul li a {
+                background-color: $black;
+            }
+            .mobile-menu {
+                border-color: $color3;
+                background-color: $black;
+                color: $white;
+
+                img {
+                    filter: invert(1);
+                }
+            }
+            nav.active .mobile-menu {
+                border-color: $color1;
+            }
+        }
+    }
+
+    #about {
+        .about-content, h2, a {
+            color: $white;
+        }
+        .about-content {
+            background-color: rgba($black, 0.8);
+        }
+    }
+
+    #gallery {
+        background-color: rgba($color3, 0.6);
+        h2, h3, button {
+            color: $white;
+        }
+        .gallery-item {
+            border-color: rgba($white, 0.75);
+        }
+        .pause-button img {
+            filter: invert(1);
+        }
+    }
+
+    #projects {
+        h2, .projects-nav p, .projects-nav button, h3, .project-filters .selected {
+            color: $white;
+        }
+        .projects-nav img {
+            filter: invert(1);
+        }
+        .projects-container .project {
+            background-color: rgba($color3, 0.4);
+
+            .project-description {
+                button, a {
+                    background-color: rgba($black, 0.8);
+                    border-color: rgba($black, 0);
+                    color: $white;
+
+                    img {
+                        filter: invert(1);
+                    }
+
+                    &:hover, &:focus, &.read-less {
+                        background-color: rgba($black, 0.8);
+                    }
+
+                    &.read-less:hover, &.read-less:focus {
+                        background-color: rgba($black, 0.8);
+                    }
+
+                    @media only screen and (max-width: $tablet) {
+                        &:hover, &:focus, &.read-less {
+                            background-color: rgba($black, 0.8);
+                            border-color: rgba($black, 0);
+                            color: $white;
+
+                            img {
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+
+                p, .tags {
+                    background-color: rgba($black, 0.8);
+                    color: $white;
+    
+                    button, a {
+                        background-color: rgba($black, 0);
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    #services {
+        background-color: rgba($color3, 0.6);
+        h2, p, a {
+            color: $white;
+        }
+        .services-content {
+            background-color: rgba($black, 0.8);
+
+            .metrics {
+                filter: invert(1) hue-rotate(200deg) saturate(0.5);
+            }
+        }
+    }
+
+    #contact {
+        .contact-content {
+            background-color: rgba($black, 0.8);
+        }
+        h2, p, a {
+            color: $white;
+        }
+    }
+
+    footer {
+        p, a {
+            color: $white;
+        }
+        .button {
+            background-color: $black;
+            p {
+                color: $white;
+            }
+            img {
+                filter: invert(1);
+            }
+
+            &:hover, &:focus {
+                background-color: $black;
             }
         }
     }

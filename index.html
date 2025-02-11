@@ -30,14 +30,22 @@
     <!-- preloaded icons -->
     <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/arrow-up.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/checkbox.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/checkbox-blank.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/collapse-up.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/email.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/expand-down.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/external-link.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/filter.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/filter-off.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/github.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/instagram.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/linkedin.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/menu-lines.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/pause.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/play.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/sort-asc.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/sort-desc.svg" as="image" type="image/svg+xml" />
 
     <!-- preloaded scripts -->
     <link rel="preload" href="./scripts/jquery-3.7.0.min.js" as="script" />
@@ -51,6 +59,17 @@
 
     <!-- header section-->
     <header id="home">
+
+      <div class="toggles">
+        <p class="pr">[</p>
+        <p><span class="mr">[ </span>Toggle on/off<span class="pr">:</span><span class="mr"> ]</span></p>
+        <ul>
+          <li><button class="button selected" id="animations-toggle" onclick="app.functions.toggleAnimations()"><img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations</button></li>
+          <li><button class="button" id="darkmode-toggle" onclick="app.functions.toggleDarkMode()"><img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode</button></li>
+        </ul>
+        <p class="pr">]</p>
+      </div>
+
       <div class="wrapper"> 
         
         <!-- nav section -->
@@ -93,6 +112,7 @@
         </a>
         
       </div>
+
     </header>
 
     <!-- about section -->
@@ -143,7 +163,7 @@
         <h2>My design gallery</h2>
         <hr/>
 
-        <h3>[ <span class="pause-button"><button onclick="app.functions.galleryPause('pause')">pause the gallery</button></span> ]
+        <h3>[ <span class="pause-button"><button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button></span> ]
         </h3>
         <div class="gallery-container">
           
@@ -230,12 +250,9 @@
 
         <!-- scroll to top button -->
         <a class="button scroll-to-top" title="Go back to top of page" href="#home" tabindex="0" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'top')">
-          <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
           <p class="button-label">Back to top</p>
           <img src="./assets/icons/arrow-up.svg" alt="scroll up icon">
         </a>
-
-        <hr/>
 
         <!-- development credit -->
         <p class="credit">

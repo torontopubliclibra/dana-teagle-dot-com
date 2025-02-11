@@ -4,6 +4,7 @@ let app = {
     // page elements
     elements: {
         body: $("body"),
+        header: $("header"),
         nav: $("nav"),
         mobileMenu: $(".mobile-menu"),
         about: $("#about"),
@@ -21,6 +22,8 @@ let app = {
         contactLink: $("nav .contact"),
         scrollDownButton: $(".scroll-down"),
         scrollTopButton: $(".scroll-to-top"),
+        darkModeToggle: $("#darkmode-toggle"),
+        animationsToggle: $("#animations-toggle"),
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
@@ -29,6 +32,11 @@ let app = {
         galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
+    },
+
+    toggles: {
+        animations: true,
+        darkMode: false,
     },
 
     // projects data and selected filter
@@ -47,6 +55,41 @@ let app = {
 
     // app functions
     functions: {
+
+        toggleAnimations: () => {
+            app.elements.animationsToggle.toggleClass('selected');
+            app.toggles.animations = !app.toggles.animations;
+
+            if (app.toggles.animations === false) {
+                app.elements.header.css('animation', 'none');
+                app.elements.scrollDownButton.css('animation', 'none');
+                app.elements.scrollDownButton.css('transform', 'translate(-50%, 0px)');
+                app.functions.galleryPause('pause');
+                app.elements.animationsToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Animations');
+            } else {
+                app.elements.header.css('animation', '30s infinite ease-in-out gradient');
+                app.elements.scrollDownButton.css('transform', 'none');
+                app.elements.scrollDownButton.css('animation', '4s infinite ease-in-out pulse');
+                app.functions.galleryPause('unpause');
+                app.elements.animationsToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations');
+            }
+
+            localStorage['animations'] = `${app.toggles.animations}`;
+        },
+
+        toggleDarkMode: () => {
+            app.elements.body.toggleClass("dark-mode");
+            app.elements.darkModeToggle.toggleClass('selected');
+            app.toggles.darkMode = !app.toggles.darkMode;
+
+            if (app.toggles.darkMode === true) {
+                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
+            } else {
+                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode');
+            }
+
+            localStorage['dark-mode'] = `${app.toggles.darkMode}`;
+        },
 
         // toggle classes to hide or show the nav
         toggleNav: () => {
@@ -97,7 +140,7 @@ let app = {
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery <img src="./assets/icons/play.svg" alt="unpause gallery icon" style="pointer-events: auto;"></button>`
                 app.elements.galleryContent.style.animationPlayState = 'paused';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -105,11 +148,10 @@ let app = {
                 })
 
                 app.gallery.paused = true;
-                console.log('paused');
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button>`
                 app.elements.galleryContent.style.animationPlayState = 'running';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -117,7 +159,6 @@ let app = {
                 })
 
                 app.gallery.paused = false;
-                console.log('unpaused');
             }
         },
 
@@ -270,8 +311,6 @@ let app = {
                 // location = app.elements[direction].offset().top;
                 location = $(`#${direction}`).offset().top;
                 window.scrollTo({top: location, behavior: "smooth"});
-
-                console.log(location);
                 
                 setTimeout(() => {
                     history.pushState(null, null, `#${direction}`);
@@ -363,22 +402,22 @@ let app = {
                     }
                 });
 
-                let filterText = `[ Select tag to filter ]`;
+                let filterText = `[ Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"> ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter</button> ]`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest</button> ]`;
+                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest <img src="./assets/icons/sort-desc.svg" alt="sort descending icon" style="pointer-events: auto;"></button> ]`;
 
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest</button> ]`;
+                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true)" title="Expand all projects" class="project-button expand">Expand all projects</button> ]`
+                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true)" title="Expand all projects" class="project-button expand">Expand all projects <img src="./assets/icons/expand-down.svg" alt="expand all project descriptions icon" style="pointer-events: auto;"></button> ]`
 
                 if (expand === true) {
-                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false)" title="Expand all projects" class="project-button expand">Collapse all projects</button> ]`
+                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false)" title="Collapse all projects" class="project-button expand">Collapse all projects <img src="./assets/icons/collapse-up.svg" alt="collapse all project descriptions icon" style="pointer-events: auto;"></button> ]`
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
@@ -713,6 +752,13 @@ let app = {
 
         // add the event listeners
         app.events();
+    
+        if (localStorage['animations'] === 'false') {
+            app.functions.toggleAnimations();
+        }
+        if (localStorage['dark-mode'] === 'true') {
+            app.functions.toggleDarkMode();
+        }
     },
 };
 

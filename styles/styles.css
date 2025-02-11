@@ -1370,7 +1370,7 @@ button, .button, nav ul li a {
   cursor: pointer;
 }
 .scroll-to-top img {
-  width: 20px;
+  height: 15px;
 }
 @media only screen and (max-width: 970px) {
   .scroll-to-top img {
@@ -1587,6 +1587,15 @@ body {
     overflow-y: hidden;
   }
 }
+@media only screen and (max-width: 970px) {
+  body.nav-open .toggles {
+    display: flex;
+    position: fixed;
+    border-bottom: solid #84A59D 5px;
+    opacity: 1;
+    animation: fade-in 0.4s;
+  }
+}
 
 .js-enabled-projects, .js-enabled-gallery, .js-enabled {
   display: none;
@@ -1694,7 +1703,7 @@ hr.classic-hr {
     background: #f3e8e9;
   }
   .button.read-less, .button.read-less:hover, .button.read-less:focus {
-    background: #B57E9B;
+    background: #f3e8e9;
   }
 }
 
@@ -1707,7 +1716,7 @@ header {
   right: initial;
   bottom: initial;
   left: initial;
-  min-height: 500px;
+  min-height: 750px;
   height: 100vh;
   max-height: 1000px;
 }
@@ -1743,16 +1752,126 @@ header.four-oh-four .title h1 {
 }
 header nav ul {
   position: relative;
-  min-height: 500px;
+  min-height: 750px;
   height: 100vh;
   max-height: 1000px;
 }
+header .toggles {
+  z-index: 100;
+  position: absolute;
+  bottom: 25px;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #282b2c;
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 0 25vw;
+  gap: 15px;
+}
+header .toggles p {
+  margin-bottom: 1px;
+}
+header .toggles .mr {
+  display: none;
+}
+header .toggles ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  gap: 15px;
+}
+header .toggles ul li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  font-size: 0.9rem;
+  color: #282b2c;
+  margin: 0;
+  padding: 10px 0;
+  transition: 0.4s color, 0.4s font-style;
+}
+header .toggles ul li button img {
+  height: 18px;
+  margin-top: 2px;
+  transition: 0.4s filter;
+}
+header .toggles ul li button:focus {
+  background: none;
+  font-style: normal;
+}
+header .toggles ul li button:hover, header .toggles ul li button.selected, header .toggles ul li button.selected:hover, header .toggles ul li button.selected:focus {
+  background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 7%;
+  background-position: 0 66%;
+  font-style: italic;
+}
+header .toggles ul li button.selected, header .toggles ul li button:hover {
+  transition: 0.4s color, 0.4s font-style;
+}
+header .toggles ul li button.selected img, header .toggles ul li button:hover img {
+  transition: 0.4s filter;
+}
+@media only screen and (max-width: 970px) {
+  header .toggles {
+    background-color: #f3e8e9;
+    display: none;
+    opacity: 0;
+    width: 100vw;
+    margin: 0;
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    top: 510px;
+    height: 125px;
+  }
+  header .toggles .mr {
+    display: inline;
+  }
+  header .toggles .pr {
+    display: none;
+  }
+  header .toggles ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  header .toggles ul li button {
+    padding: 0;
+    font-size: 1rem;
+  }
+  header .toggles ul li button:hover {
+    background: none;
+  }
+  header .toggles ul li button.selected, header .toggles ul li button.selected:hover, header .toggles ul li button.selected:focus {
+    background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 15%;
+    background-position: 0 80%;
+  }
+  header .toggles p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .toggles {
+    top: 475px;
+  }
+}
 header .socials {
+  z-index: 150;
   position: absolute;
   bottom: 20px;
   right: 0;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 header .socials.left {
   right: unset;
@@ -1762,9 +1881,16 @@ header .socials.left {
   header .socials {
     gap: 20px;
     right: 20px;
+    bottom: 40px;
+    height: 70px;
   }
   header .socials.left {
     left: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header .socials {
+    bottom: 20px;
   }
 }
 header .social {
@@ -1793,7 +1919,7 @@ header .social:hover img, header .social:focus img {
     width: 50%;
     padding: 15px 20px;
     padding-bottom: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     bottom: 20px;
     left: 0;
     width: 100%;
@@ -1807,14 +1933,10 @@ header .social:hover img, header .social:focus img {
   header .social:hover {
     background-color: #f3e8e9;
     border-bottom: solid #B57E9B 4px;
+    margin-bottom: 10px;
   }
   header .social:hover img {
-    transform: unset;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header .social {
-    margin-bottom: 10px;
+    transform: skew(0deg);
   }
 }
 header nav {
@@ -1905,7 +2027,7 @@ header nav ul li a {
     opacity: 0;
     width: 100%;
     height: 100vh;
-    padding-top: 120px;
+    padding-top: 80px;
     background: #7a91b1;
     z-index: 3;
   }
@@ -1956,6 +2078,11 @@ header .scroll-down {
   left: 50%;
   animation: 4s infinite ease-in-out pulse;
 }
+@media only screen and (max-width: 970px) {
+  header .scroll-down {
+    bottom: 15%;
+  }
+}
 header .scroll-down img {
   width: 75px;
 }
@@ -1976,6 +2103,10 @@ header .scroll-down img {
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
+}
+#gallery .pause-button button img {
+  height: 20px;
+  margin-bottom: -5px;
 }
 @media only screen and (max-width: 970px) {
   #gallery .pause-button button {
@@ -2459,6 +2590,10 @@ header .scroll-down img {
     display: block;
   }
 }
+#projects .projects-nav img {
+  height: 18px;
+  margin-bottom: -4px;
+}
 #projects .projects-nav .project-button {
   color: #282b2c;
 }
@@ -2579,12 +2714,15 @@ header .scroll-down img {
   display: flex;
   gap: 5px;
   padding: 10px 15px;
+  padding-bottom: 7px;
+  border-bottom: solid #f3e8e9 4px;
 }
 #projects .projects-container .project .project-description .button img {
   width: 14px;
 }
 #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus, #projects .projects-container .project .project-description .button.read-less {
-  background-color: rgba(181, 126, 155, 0.75);
+  background-color: #f3e8e9;
+  border-bottom: solid #B57E9B 4px;
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .project-description {
@@ -2592,6 +2730,7 @@ header .scroll-down img {
   }
   #projects .projects-container .project .project-description .button {
     padding: 10px;
+    padding-bottom: 7px;
     gap: 4px;
   }
   #projects .projects-container .project .project-description .button img {
@@ -2599,9 +2738,11 @@ header .scroll-down img {
   }
   #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus {
     background-color: #f3e8e9;
+    border-color: #f3e8e9;
   }
   #projects .projects-container .project .project-description .button.read-less:hover, #projects .projects-container .project .project-description .button.read-less:focus {
-    background-color: rgba(181, 126, 155, 0.75);
+    background-color: #f3e8e9;
+    border-color: #B57E9B;
   }
 }
 #projects .projects-container .project .project-description p {
@@ -2681,19 +2822,159 @@ footer .wrapper {
   margin: 20px auto;
   width: 95%;
 }
-footer .wrapper hr {
-  width: 85%;
-  margin: 30px 0;
-  border-color: #B57E9B;
+footer .wrapper .credit {
+  margin-top: 30px;
 }
 footer .wrapper .scroll-to-top {
-  background: rgba(181, 126, 155, 0.75);
+  background-color: #f3e8e9;
+  border-bottom: solid #B57E9B 4px;
+  padding-bottom: 14px;
 }
 footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
-  background: rgba(122, 145, 177, 0.75);
+  background-color: #f3e8e9;
+  border-bottom: solid #7a91b1 4px;
 }
 @media only screen and (max-width: 970px) {
   footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
-    background: rgba(181, 126, 155, 0.75);
+    border-bottom: solid #B57E9B 4px;
   }
+}
+
+body.dark-mode {
+  background: #282b2c;
+}
+body.dark-mode header {
+  background: linear-gradient(120deg, rgba(122, 145, 177, 0.6) 0%, rgba(122, 145, 177, 0.6) 2%, rgba(132, 165, 157, 0.75) 60%, rgba(132, 165, 157, 0.5) 98%, rgba(132, 165, 157, 0.5) 100%);
+  background-size: 400% 400%;
+}
+body.dark-mode header h1, body.dark-mode header nav ul li a {
+  color: #f3e8e9;
+}
+body.dark-mode header nav ul li.socials a {
+  background-color: #282b2c;
+}
+body.dark-mode header nav ul li.socials a img {
+  filter: invert(1);
+}
+body.dark-mode header .toggles p, body.dark-mode header .toggles button {
+  color: #f3e8e9;
+}
+body.dark-mode header .toggles p img, body.dark-mode header .toggles button img {
+  filter: invert(1);
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode header .toggles {
+    background-color: #282b2c;
+  }
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode header nav ul {
+    background-color: #59687C;
+  }
+  body.dark-mode header nav ul li a {
+    background-color: #282b2c;
+  }
+  body.dark-mode header .mobile-menu {
+    border-color: #7a91b1;
+    background-color: #282b2c;
+    color: #f3e8e9;
+  }
+  body.dark-mode header .mobile-menu img {
+    filter: invert(1);
+  }
+  body.dark-mode header nav.active .mobile-menu {
+    border-color: #84A59D;
+  }
+}
+body.dark-mode #about .about-content, body.dark-mode #about h2, body.dark-mode #about a {
+  color: #f3e8e9;
+}
+body.dark-mode #about .about-content {
+  background-color: rgba(40, 43, 44, 0.8);
+}
+body.dark-mode #gallery {
+  background-color: rgba(122, 145, 177, 0.6);
+}
+body.dark-mode #gallery h2, body.dark-mode #gallery h3, body.dark-mode #gallery button {
+  color: #f3e8e9;
+}
+body.dark-mode #gallery .gallery-item {
+  border-color: rgba(243, 232, 233, 0.75);
+}
+body.dark-mode #gallery .pause-button img {
+  filter: invert(1);
+}
+body.dark-mode #projects h2, body.dark-mode #projects .projects-nav p, body.dark-mode #projects .projects-nav button, body.dark-mode #projects h3, body.dark-mode #projects .project-filters .selected {
+  color: #f3e8e9;
+}
+body.dark-mode #projects .projects-nav img {
+  filter: invert(1);
+}
+body.dark-mode #projects .projects-container .project {
+  background-color: rgba(122, 145, 177, 0.4);
+}
+body.dark-mode #projects .projects-container .project .project-description button, body.dark-mode #projects .projects-container .project .project-description a {
+  background-color: rgba(40, 43, 44, 0.8);
+  border-color: rgba(40, 43, 44, 0);
+  color: #f3e8e9;
+}
+body.dark-mode #projects .projects-container .project .project-description button img, body.dark-mode #projects .projects-container .project .project-description a img {
+  filter: invert(1);
+}
+body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description button.read-less, body.dark-mode #projects .projects-container .project .project-description a:hover, body.dark-mode #projects .projects-container .project .project-description a:focus, body.dark-mode #projects .projects-container .project .project-description a.read-less {
+  background-color: rgba(40, 43, 44, 0.8);
+}
+body.dark-mode #projects .projects-container .project .project-description button.read-less:hover, body.dark-mode #projects .projects-container .project .project-description button.read-less:focus, body.dark-mode #projects .projects-container .project .project-description a.read-less:hover, body.dark-mode #projects .projects-container .project .project-description a.read-less:focus {
+  background-color: rgba(40, 43, 44, 0.8);
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description button.read-less, body.dark-mode #projects .projects-container .project .project-description a:hover, body.dark-mode #projects .projects-container .project .project-description a:focus, body.dark-mode #projects .projects-container .project .project-description a.read-less {
+    background-color: rgba(40, 43, 44, 0.8);
+    border-color: rgba(40, 43, 44, 0);
+    color: #f3e8e9;
+  }
+  body.dark-mode #projects .projects-container .project .project-description button:hover img, body.dark-mode #projects .projects-container .project .project-description button:focus img, body.dark-mode #projects .projects-container .project .project-description button.read-less img, body.dark-mode #projects .projects-container .project .project-description a:hover img, body.dark-mode #projects .projects-container .project .project-description a:focus img, body.dark-mode #projects .projects-container .project .project-description a.read-less img {
+    filter: invert(1);
+  }
+}
+body.dark-mode #projects .projects-container .project .project-description p, body.dark-mode #projects .projects-container .project .project-description .tags {
+  background-color: rgba(40, 43, 44, 0.8);
+  color: #f3e8e9;
+}
+body.dark-mode #projects .projects-container .project .project-description p button, body.dark-mode #projects .projects-container .project .project-description p a, body.dark-mode #projects .projects-container .project .project-description .tags button, body.dark-mode #projects .projects-container .project .project-description .tags a {
+  background-color: rgba(40, 43, 44, 0);
+  color: #f3e8e9;
+}
+body.dark-mode #services {
+  background-color: rgba(122, 145, 177, 0.6);
+}
+body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a {
+  color: #f3e8e9;
+}
+body.dark-mode #services .services-content {
+  background-color: rgba(40, 43, 44, 0.8);
+}
+body.dark-mode #services .services-content .metrics {
+  filter: invert(1) hue-rotate(200deg) saturate(0.5);
+}
+body.dark-mode #contact .contact-content {
+  background-color: rgba(40, 43, 44, 0.8);
+}
+body.dark-mode #contact h2, body.dark-mode #contact p, body.dark-mode #contact a {
+  color: #f3e8e9;
+}
+body.dark-mode footer p, body.dark-mode footer a {
+  color: #f3e8e9;
+}
+body.dark-mode footer .button {
+  background-color: #282b2c;
+}
+body.dark-mode footer .button p {
+  color: #f3e8e9;
+}
+body.dark-mode footer .button img {
+  filter: invert(1);
+}
+body.dark-mode footer .button:hover, body.dark-mode footer .button:focus {
+  background-color: #282b2c;
 }
