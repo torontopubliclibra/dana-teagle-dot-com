@@ -140,7 +140,7 @@ let app = {
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery <img src="./assets/icons/play.svg" alt="unpause gallery icon" style="pointer-events: auto;"></button>`
                 app.elements.galleryContent.style.animationPlayState = 'paused';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -151,7 +151,7 @@ let app = {
 
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery</button>`
+                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button>`
                 app.elements.galleryContent.style.animationPlayState = 'running';
 
                 app.elements.galleryInfoItems.forEach((item) => {
@@ -402,22 +402,22 @@ let app = {
                     }
                 });
 
-                let filterText = `[ Select tag to filter ]`;
+                let filterText = `[ Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"> ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter</button> ]`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest</button> ]`;
+                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest <img src="./assets/icons/sort-desc.svg" alt="sort descending icon" style="pointer-events: auto;"></button> ]`;
 
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest</button> ]`;
+                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true)" title="Expand all projects" class="project-button expand">Expand all projects</button> ]`
+                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true)" title="Expand all projects" class="project-button expand">Expand all projects <img src="./assets/icons/expand-down.svg" alt="expand all project descriptions icon" style="pointer-events: auto;"></button> ]`
 
                 if (expand === true) {
-                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false)" title="Expand all projects" class="project-button expand">Collapse all projects</button> ]`
+                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false)" title="Collapse all projects" class="project-button expand">Collapse all projects <img src="./assets/icons/collapse-up.svg" alt="collapse all project descriptions icon" style="pointer-events: auto;"></button> ]`
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav

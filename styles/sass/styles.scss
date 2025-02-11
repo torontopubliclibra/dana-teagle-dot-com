@@ -36,10 +36,12 @@ body {
         }
 
         .toggles {
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 display: flex;
                 position: fixed;
                 border-bottom: solid $color1 5px;
+                opacity: 1;
+                animation: fade-in 0.4s;
             }
         }
     }
@@ -161,7 +163,7 @@ hr {
             }
 
             &.read-less, &.read-less:hover, &.read-less:focus {
-                background: $color2;
+                background: $white;
             }
         }
     }
@@ -220,7 +222,7 @@ header {
         z-index: 100;
         position: absolute;
         bottom: 25px;
-        width: 70vw;
+        width: 50vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -228,11 +230,15 @@ header {
         color: $black;
         font-size: 0.9rem;
         padding: 0;
-        margin: 0 15vw;
+        margin: 0 25vw;
         gap: 15px;
 
         p {
             margin-bottom: 1px;
+        }
+
+        .mr {
+            display: none;
         }
 
         ul {
@@ -254,10 +260,12 @@ header {
                     color: $black;
                     margin: 0;
                     padding: 10px 0;
+                    transition: 0.4s color, 0.4s font-style;
 
                     img {
                         height: 18px;
                         margin-top: 2px;
+                        transition: 0.4s filter;
                     }
 
                     &:focus {
@@ -272,32 +280,38 @@ header {
                         background-position: 0 66%;
                         font-style: italic;
                     }
+
+                    &.selected, &:hover {
+                        transition: 0.4s color, 0.4s font-style;
+
+                        img {
+                            transition: 0.4s filter;
+                        }
+                    }
                 }
             }
         }
 
         @media only screen and (max-width: $tablet) {
-            bottom: 35px;
-            width: 90vw;
-            margin: 0 5vw;
-            margin-bottom: 10px;
-
-            .pr {
-                display: none;
-            }
-        }
-
-        @media only screen and (max-width: $mobile) {
             background-color: $white;
             display: none;
+            opacity: 0;
             width: 100vw;
             margin: 0;
             padding: 25px;
             flex-direction: column;
             align-items: flex-start;
             gap: 5px;
-            top: 475px;
+            top: 510px;
             height: 125px;
+
+            .mr {
+                display: inline;
+            }
+
+            .pr {
+                display: none;
+            }
 
             ul {
                 flex-direction: column;
@@ -326,9 +340,14 @@ header {
                 font-size: 1rem;
             }
         }
+
+        @media only screen and (max-width: $mobile) {
+            top: 475px;
+        }
     }
 
     .socials {
+        z-index: 150;
         position: absolute;
         bottom: 20px;
         right: 0;
@@ -571,6 +590,11 @@ header {
                 background-repeat: no-repeat;
                 background-size: 100% 20%;
                 background-position: 0 95%;
+            }
+
+            img {
+                height: 20px;
+                margin-bottom: -5px;
             }
 
             // responsive to tablet
@@ -1124,6 +1148,11 @@ header {
             }
         }
 
+        img {
+            height: 18px;
+            margin-bottom: -4px;
+        }
+
         .project-button {
             color: $black;
     
@@ -1241,18 +1270,19 @@ header {
 
                 // buttons
                 .button {
-
                     display: flex;
                     gap: 5px;
+                    padding: 10px 15px;
+                    padding-bottom: 7px;
+                    border-bottom: solid $white 4px;
 
                     img {
                         width: 14px;
                     }
 
-                    padding: 10px 15px;
-
                     &:hover, &:focus, &.read-less {
-                        background-color: rgba($color2, 0.75);
+                        background-color: $white;
+                        border-bottom: solid $color2 4px;
                     }
                 }
 
@@ -1262,6 +1292,7 @@ header {
 
                     .button {
                         padding: 10px;
+                        padding-bottom: 7px;
                         gap: 4px;
 
                         img {
@@ -1270,9 +1301,11 @@ header {
                         
                         &:hover, &:focus {
                             background-color: $white;
+                            border-color: $white;
                         }
                         &.read-less:hover, &.read-less:focus {
-                            background-color: rgba($color2, 0.75);
+                            background-color: $white;
+                            border-color: $color2;
                         }
                     }
                 }
@@ -1362,26 +1395,26 @@ footer .wrapper {
     margin: 20px auto;
     width: 95%;
 
-    // horizontal line
-    hr {
-        width: 85%;
-        margin: 30px 0;
-        border-color: $color2;
+    .credit {
+        margin-top: 30px;
     }
 
     // footer button
     .scroll-to-top {
-        background: rgba($color2, 0.75);
+        background-color: $white;
+        border-bottom: solid $color2 4px;
+        padding-bottom: 14px;
 
         &:hover, &:focus {
-            background: rgba($color3, 0.75);
+            background-color: $white;
+            border-bottom: solid $color3 4px;
         }
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
 
             &:hover, &:focus {
-                background: rgba($color2, 0.75);
+                border-bottom: solid $color2 4px;
             }
         }
     }
@@ -1412,7 +1445,7 @@ body.dark-mode {
                 }
             }
 
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 background-color: $black;
             }
         }
@@ -1455,11 +1488,17 @@ body.dark-mode {
         .gallery-item {
             border-color: rgba($white, 0.75);
         }
+        .pause-button img {
+            filter: invert(1);
+        }
     }
 
     #projects {
         h2, .projects-nav p, .projects-nav button, h3, .project-filters .selected {
             color: $white;
+        }
+        .projects-nav img {
+            filter: invert(1);
         }
         .projects-container .project {
             background-color: rgba($color3, 0.4);
@@ -1467,23 +1506,25 @@ body.dark-mode {
             .project-description {
                 button, a {
                     background-color: rgba($black, 0.8);
+                    border-color: rgba($black, 0);
                     color: $white;
 
                     img {
                         filter: invert(1);
                     }
 
-                    &:hover, &.read-less {
-                        color: $black;
+                    &:hover, &:focus, &.read-less {
+                        background-color: rgba($black, 0.8);
+                    }
 
-                        img {
-                            filter: invert(0);
-                        }
+                    &.read-less:hover, &.read-less:focus {
+                        background-color: rgba($black, 0.8);
                     }
 
                     @media only screen and (max-width: $tablet) {
-                        &:hover, &.read-less {
+                        &:hover, &:focus, &.read-less {
                             background-color: rgba($black, 0.8);
+                            border-color: rgba($black, 0);
                             color: $white;
 
                             img {
@@ -1534,8 +1575,16 @@ body.dark-mode {
             color: $white;
         }
         .button {
+            background-color: $black;
             p {
-                color: $black;
+                color: $white;
+            }
+            img {
+                filter: invert(1);
+            }
+
+            &:hover, &:focus {
+                background-color: $black;
             }
         }
     }
