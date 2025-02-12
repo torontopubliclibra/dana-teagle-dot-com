@@ -1418,6 +1418,12 @@ footer .wrapper {
             }
         }
     }
+
+    a:hover {
+        @media only screen and (max-width: $tablet) {
+            color: $black;
+        }
+    }
 }
 
 body.dark-mode {
@@ -1475,6 +1481,13 @@ body.dark-mode {
         .about-content, h2, a {
             color: $white;
         }
+        a:hover {
+            color: $color3;
+
+            @media only screen and (max-width: $tablet) {
+                color: $white;
+            }
+        }
         .about-content {
             background-color: rgba($black, 0.8);
         }
@@ -1496,6 +1509,13 @@ body.dark-mode {
     #projects {
         h2, .projects-nav p, .projects-nav button, h3, .project-filters .selected {
             color: $white;
+        }
+        .project-filters li button:hover {
+            color: $color3;
+
+            @media only screen and (max-width: $tablet) {
+                color: $white;
+            }
         }
         .projects-nav img {
             filter: invert(1);
@@ -1538,9 +1558,23 @@ body.dark-mode {
                     background-color: rgba($black, 0.8);
                     color: $white;
     
-                    button, a {
+                    button {
                         background-color: rgba($black, 0);
                         color: $white;
+                    }
+
+                    a {
+                        background: none;
+                        color: $white;
+                    }
+
+                    a:hover {
+                        background: none;
+                        color: $color3;
+            
+                        @media only screen and (max-width: $tablet) {
+                            color: $white;
+                        }
                     }
                 }
             }
@@ -1559,6 +1593,13 @@ body.dark-mode {
                 filter: invert(1) hue-rotate(200deg) saturate(0.5);
             }
         }
+        a:hover {
+            color: $color3;
+
+            @media only screen and (max-width: $tablet) {
+                color: $white;
+            }
+        }
     }
 
     #contact {
@@ -1567,6 +1608,13 @@ body.dark-mode {
         }
         h2, p, a {
             color: $white;
+        }
+        a:hover {
+            color: $color3;
+
+            @media only screen and (max-width: $tablet) {
+                color: $white;
+            }
         }
     }
 
@@ -1585,6 +1633,11 @@ body.dark-mode {
 
             &:hover, &:focus {
                 background-color: $black;
+            }
+        }
+        a:hover {
+            @media only screen and (max-width: $tablet) {
+                color: $white;
             }
         }
     }

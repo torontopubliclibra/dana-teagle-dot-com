@@ -1327,6 +1327,12 @@ a:hover, a:focus, button:hover, button:focus {
   }
 }
 
+@media only screen and (max-width: 970px) {
+  a:hover {
+    color: #282b2c;
+  }
+}
+
 button, .button, nav ul li a {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2839,6 +2845,11 @@ footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
     border-bottom: solid #B57E9B 4px;
   }
 }
+@media only screen and (max-width: 970px) {
+  footer .wrapper a:hover {
+    color: #282b2c;
+  }
+}
 
 body.dark-mode {
   background: #282b2c;
@@ -2889,6 +2900,14 @@ body.dark-mode header .toggles p img, body.dark-mode header .toggles button img 
 body.dark-mode #about .about-content, body.dark-mode #about h2, body.dark-mode #about a {
   color: #f3e8e9;
 }
+body.dark-mode #about a:hover {
+  color: #7a91b1;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #about a:hover {
+    color: #f3e8e9;
+  }
+}
 body.dark-mode #about .about-content {
   background-color: rgba(40, 43, 44, 0.8);
 }
@@ -2906,6 +2925,14 @@ body.dark-mode #gallery .pause-button img {
 }
 body.dark-mode #projects h2, body.dark-mode #projects .projects-nav p, body.dark-mode #projects .projects-nav button, body.dark-mode #projects h3, body.dark-mode #projects .project-filters .selected {
   color: #f3e8e9;
+}
+body.dark-mode #projects .project-filters li button:hover {
+  color: #7a91b1;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #projects .project-filters li button:hover {
+    color: #f3e8e9;
+  }
 }
 body.dark-mode #projects .projects-nav img {
   filter: invert(1);
@@ -2941,9 +2968,22 @@ body.dark-mode #projects .projects-container .project .project-description p, bo
   background-color: rgba(40, 43, 44, 0.8);
   color: #f3e8e9;
 }
-body.dark-mode #projects .projects-container .project .project-description p button, body.dark-mode #projects .projects-container .project .project-description p a, body.dark-mode #projects .projects-container .project .project-description .tags button, body.dark-mode #projects .projects-container .project .project-description .tags a {
+body.dark-mode #projects .projects-container .project .project-description p button, body.dark-mode #projects .projects-container .project .project-description .tags button {
   background-color: rgba(40, 43, 44, 0);
   color: #f3e8e9;
+}
+body.dark-mode #projects .projects-container .project .project-description p a, body.dark-mode #projects .projects-container .project .project-description .tags a {
+  background: none;
+  color: #f3e8e9;
+}
+body.dark-mode #projects .projects-container .project .project-description p a:hover, body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
+  background: none;
+  color: #7a91b1;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #projects .projects-container .project .project-description p a:hover, body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
+    color: #f3e8e9;
+  }
 }
 body.dark-mode #services {
   background-color: rgba(122, 145, 177, 0.6);
@@ -2957,11 +2997,27 @@ body.dark-mode #services .services-content {
 body.dark-mode #services .services-content .metrics {
   filter: invert(1) hue-rotate(200deg) saturate(0.5);
 }
+body.dark-mode #services a:hover {
+  color: #7a91b1;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #services a:hover {
+    color: #f3e8e9;
+  }
+}
 body.dark-mode #contact .contact-content {
   background-color: rgba(40, 43, 44, 0.8);
 }
 body.dark-mode #contact h2, body.dark-mode #contact p, body.dark-mode #contact a {
   color: #f3e8e9;
+}
+body.dark-mode #contact a:hover {
+  color: #7a91b1;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #contact a:hover {
+    color: #f3e8e9;
+  }
 }
 body.dark-mode footer p, body.dark-mode footer a {
   color: #f3e8e9;
@@ -2977,4 +3033,9 @@ body.dark-mode footer .button img {
 }
 body.dark-mode footer .button:hover, body.dark-mode footer .button:focus {
   background-color: #282b2c;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode footer a:hover {
+    color: #f3e8e9;
+  }
 }
