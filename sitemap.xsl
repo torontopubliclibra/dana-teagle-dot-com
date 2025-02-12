@@ -22,10 +22,9 @@
             <body class="sitemap">
                 <header>
                     <h1>dana teagle dot com sitemap</h1>
-                    <hr/>
-                    <p>
-                        This is an XML sitemap, meant for consumption by search engines.<br/>
-                        You can find more information about XML sitemaps on <a href="https://sitemaps.org" target="_blank">sitemaps.org</a>.
+                    <hr style="max-width: 1400px"/>
+                    <p style="max-width: 1200px; margin: 0 auto;">
+                        This is an XML sitemap for <a href="https://danateagle.com" target="_blank">danateagle.com</a>, meant for consumption by search engines. You can find more info about XML sitemaps on <a href="https://sitemaps.org" target="_blank">sitemaps.org</a>.
                     </p>
                 </header>
 
@@ -37,7 +36,7 @@
 
     <xsl:template match="sitemap:urlset">
         <main>
-            <table cellspacing="0">
+            <table cellspacing="0" style="max-width: 1200px">
                 <thead>
                     <tr>
                         <th></th>
