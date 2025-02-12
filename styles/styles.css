@@ -2858,6 +2858,9 @@ body.dark-mode header {
   background: linear-gradient(120deg, rgba(122, 145, 177, 0.6) 0%, rgba(122, 145, 177, 0.6) 2%, rgba(132, 165, 157, 0.75) 60%, rgba(132, 165, 157, 0.5) 98%, rgba(132, 165, 157, 0.5) 100%);
   background-size: 400% 400%;
 }
+body.dark-mode header.four-oh-four {
+  background: #282b2c;
+}
 body.dark-mode header h1, body.dark-mode header nav ul li a {
   color: #f3e8e9;
 }

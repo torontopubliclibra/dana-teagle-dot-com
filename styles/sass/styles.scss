@@ -1432,6 +1432,10 @@ body.dark-mode {
     header {
         background: linear-gradient(120deg, rgba($color3, 0.6) 0%, rgba($color3, 0.6) 2%, rgba($color1, 0.75) 60%, rgba($color1, 0.5) 98%, rgba($color1, 0.5) 100%);
         background-size: 400% 400%;
+
+        &.four-oh-four {
+            background: $black;
+        }
         h1, nav ul li a {
             color: $white;
         }
