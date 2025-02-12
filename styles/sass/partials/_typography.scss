@@ -88,6 +88,12 @@ a, button {
   }
 }
 
+a:hover {
+  @media only screen and (max-width: $tablet) {
+    color: $black;
+  }
+}
+
 // buttons and nav links
 button, .button, nav ul li a {
   user-select: none;
