@@ -797,6 +797,14 @@ header {
             flex-direction: column;
         }
 
+        h2 {
+            margin-bottom: 0;
+
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 0;
+            }
+        }
+
         hr {
             border-color: $color2;
         }

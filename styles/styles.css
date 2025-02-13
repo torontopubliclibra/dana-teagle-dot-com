@@ -2281,6 +2281,14 @@ header .scroll-down img {
     flex-direction: column;
   }
 }
+#services .wrapper h2 {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  #services .wrapper h2 {
+    margin-bottom: 0;
+  }
+}
 #services .wrapper hr {
   border-color: #B57E9B;
 }
