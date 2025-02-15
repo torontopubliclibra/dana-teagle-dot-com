@@ -1285,6 +1285,7 @@ header {
                     border-bottom: solid $white 4px;
 
                     img {
+                        margin-top: 3px;
                         width: 14px;
                     }
 
@@ -1554,9 +1555,18 @@ body.dark-mode {
                     }
 
                     @media only screen and (max-width: $tablet) {
-                        &:hover, &:focus, &.read-less {
+                        &:hover, &:focus {
                             background-color: rgba($black, 0.8);
                             border-color: rgba($black, 0);
+                            color: $white;
+
+                            img {
+                                filter: invert(1);
+                            }
+                        }
+                        &.read-less:hover {
+                            background-color: rgba($black, 0.8);
+                            border-color: $color2;
                             color: $white;
 
                             img {

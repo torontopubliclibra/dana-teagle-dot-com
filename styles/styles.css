@@ -2732,6 +2732,7 @@ header .scroll-down img {
   border-bottom: solid #f3e8e9 4px;
 }
 #projects .projects-container .project .project-description .button img {
+  margin-top: 3px;
   width: 14px;
 }
 #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus, #projects .projects-container .project .project-description .button.read-less {
@@ -2966,12 +2967,20 @@ body.dark-mode #projects .projects-container .project .project-description butto
   background-color: rgba(40, 43, 44, 0.8);
 }
 @media only screen and (max-width: 970px) {
-  body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description button.read-less, body.dark-mode #projects .projects-container .project .project-description a:hover, body.dark-mode #projects .projects-container .project .project-description a:focus, body.dark-mode #projects .projects-container .project .project-description a.read-less {
+  body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description a:hover, body.dark-mode #projects .projects-container .project .project-description a:focus {
     background-color: rgba(40, 43, 44, 0.8);
     border-color: rgba(40, 43, 44, 0);
     color: #f3e8e9;
   }
-  body.dark-mode #projects .projects-container .project .project-description button:hover img, body.dark-mode #projects .projects-container .project .project-description button:focus img, body.dark-mode #projects .projects-container .project .project-description button.read-less img, body.dark-mode #projects .projects-container .project .project-description a:hover img, body.dark-mode #projects .projects-container .project .project-description a:focus img, body.dark-mode #projects .projects-container .project .project-description a.read-less img {
+  body.dark-mode #projects .projects-container .project .project-description button:hover img, body.dark-mode #projects .projects-container .project .project-description button:focus img, body.dark-mode #projects .projects-container .project .project-description a:hover img, body.dark-mode #projects .projects-container .project .project-description a:focus img {
+    filter: invert(1);
+  }
+  body.dark-mode #projects .projects-container .project .project-description button.read-less:hover, body.dark-mode #projects .projects-container .project .project-description a.read-less:hover {
+    background-color: rgba(40, 43, 44, 0.8);
+    border-color: #B57E9B;
+    color: #f3e8e9;
+  }
+  body.dark-mode #projects .projects-container .project .project-description button.read-less:hover img, body.dark-mode #projects .projects-container .project .project-description a.read-less:hover img {
     filter: invert(1);
   }
 }
