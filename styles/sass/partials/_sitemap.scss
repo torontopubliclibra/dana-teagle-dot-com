@@ -1,110 +1,112 @@
 @use 'variables' as *;
 
-body.sitemap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $black;
-    width: 100vw;
-    max-width: 100vw;
-    overflow-x: hidden;
-
-    a:hover, a:focus {
-        color: $black;
-    }
-
-    header, main, footer {
+html.sitemap {
+    body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: $black;
         width: 100vw;
-    }
-
-    header {
-        background: rgba($color1, 0.6);
-        position: initial;
-        height: auto;
-        min-height: auto;
-        padding: 50px;
-        gap: 10px;
-
-        @media only screen and (max-width: $tablet) {
-            padding: 25px;
-        }
-
-        h1, p {
+        max-width: 100vw;
+        overflow-x: hidden;
+    
+        a:hover, a:focus {
             color: $black;
-            text-align: center;
         }
-
-        h1 {
-            font-size: 3rem;
-            line-height: 1.25;
-            margin: 0;
-
-            &:hover {
-                font-style: normal;
-            }
-
+    
+        header, main, footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+        }
+    
+        header {
+            background: rgba($color1, 0.6);
+            position: initial;
+            height: auto;
+            min-height: auto;
+            padding: 50px;
+            gap: 10px;
+    
             @media only screen and (max-width: $tablet) {
-                font-size: 2rem;
-                font-style: normal;
+                padding: 25px;
+            }
+    
+            h1, p {
+                color: $black;
+                text-align: center;
+            }
+    
+            h1 {
+                font-size: 3rem;
+                line-height: 1.25;
+                margin: 0;
+    
+                &:hover {
+                    font-style: normal;
+                }
+    
+                @media only screen and (max-width: $tablet) {
+                    font-size: 2rem;
+                    font-style: normal;
+                }
+            }
+    
+            hr {
+                border-color: $color2;
+                border-width: 3px;
+                margin: 25px;
             }
         }
-
-        hr {
-            border-color: $color2;
-            border-width: 3px;
-            margin: 25px;
-        }
-    }
-    main {
-        padding: 50px;
-
-        @media only screen and (max-width: $tablet) {
-            padding: 25px 0;
-        }
-
-        table {
-            width: 80%;
-            background: $white;
-            border: solid $color3 5px;
-            border-collapse: collapse;
-
+        main {
+            padding: 50px;
+    
             @media only screen and (max-width: $tablet) {
-                width: 100%;
-                border: none;
+                padding: 25px 0;
+            }
+    
+            table {
+                width: 80%;
+                background: $white;
+                border: solid $color3 5px;
+                border-collapse: collapse;
+    
+                @media only screen and (max-width: $tablet) {
+                    width: 100%;
+                    border: none;
+                    border-bottom: solid $color3 5px;
+                }
+            }
+            table, table a {
+                font-size: 0.9rem;
+    
+                @media only screen and (max-width: $tablet) {
+                    font-size: 0.8rem;
+                }
+            }
+            th {
+                background: rgba($color3, 0.25);
                 border-bottom: solid $color3 5px;
+                height: 50px;
+                padding: 10px;
+    
+                @media only screen and (max-width: $tablet) {
+                    border-top: solid $color3 5px;
+                }
             }
-        }
-        table, table a {
-            font-size: 0.9rem;
-
-            @media only screen and (max-width: $tablet) {
-                font-size: 0.8rem;
+            tr {
+    
+                &:nth-of-type(even) {
+                    background: rgba($color3, 0.15);
+                }
             }
-        }
-        th {
-            background: rgba($color3, 0.25);
-            border-bottom: solid $color3 5px;
-            height: 50px;
-            padding: 10px;
-
-            @media only screen and (max-width: $tablet) {
-                border-top: solid $color3 5px;
+            td {
+                padding: 10px;
+                height: 50px;
             }
-        }
-        tr {
-
-            &:nth-of-type(even) {
-                background: rgba($color3, 0.15);
-            }
-        }
-        td {
-            padding: 10px;
-            height: 50px;
         }
     }
 }

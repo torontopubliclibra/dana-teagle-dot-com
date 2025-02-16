@@ -10,7 +10,7 @@
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
 
     <xsl:template match="/">
-        <html>
+        <html class="sitemap">
             <head>
                 <title>
                     dana teagle dot com | sitemap
@@ -19,7 +19,7 @@
                 <link rel="stylesheet" href="./styles/styles.css"/>
                 <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/> -->
             </head>
-            <body class="sitemap">
+            <body>
                 <header>
                     <h1>dana teagle dot com sitemap</h1>
                     <hr style="max-width: 1400px"/>
