@@ -25,7 +25,7 @@
     <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
 
     <!-- preloaded images -->
-    <link rel="preload" href="./assets/headshot.webp" as="image"/>
+    <link rel="preload" href="./assets/100s.png" as="image"/>
 
     <!-- preloaded icons -->
     <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
@@ -60,6 +60,7 @@
     <!-- header section-->
     <header id="home">
 
+      <!-- animations/dark mode toggles -->
       <div class="toggles">
         <p class="pr">[</p>
         <p><span class="mr">[ </span>Toggle on/off<span class="pr">:</span><span class="mr"> ]</span></p>
@@ -90,6 +91,8 @@
             <li><a href="#projects" class="projects">Projects</a></li>
             <li><a href="#services" class="services">Services</a></li>
             <li><a href="#contact" class="contact">Contact</a></li>
+
+            <!-- social icons -->
             <li class="socials left">
               <a href="mailto:contact@danateagle.com" class="button social"><img src="./assets/icons/email.svg" alt="Email icon"></a>
               <a href="/github" target="_blank" title="Dana on Github" class="button social"><img src="./assets/icons/github.svg" alt="Github icon"></a>
@@ -98,6 +101,7 @@
               <a href="/dt-insta" target="_blank" title="dana teagle dot com on Instagram" class="button social"><img src="./assets/icons/instagram.svg" alt="Instagram icon"></a>
               <a href="/linkedin" target="_blank" title="Dana on LinkedIn" class="button social"><img src="./assets/icons/linkedin.svg" alt="LinkedIn icon"></a>
             </li>
+
           </ul>
         </nav>
 
@@ -110,9 +114,7 @@
         <a class="scroll-down" title="Scroll down the page" href="#about" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
           <img src="./assets/icons/arrow-down.svg" alt="scroll down icon" tabindex="0">
         </a>
-        
       </div>
-
     </header>
 
     <!-- about section -->
@@ -123,7 +125,6 @@
         <h2>A few things to know about me</h2>
         <div class="about-content">
           <div class="basic-info">
-            <!-- <img src="./assets/headshot.webp" class="headshot" alt="Neck-up photo of Dana Rosamund Teagle— a blonde white woman with her hair in an up-do."> -->
             <p class="basic-info-caption">
               <span class="item">[ Name ]</span> Dana Rosamund Teagle<br/>
               <span class="item">[ Pronouns ]</span> she/her<br/>
@@ -163,16 +164,20 @@
         <h2>My design gallery</h2>
         <hr/>
 
+        <!-- gallery pause/unpause button -->
         <h3>[ <span class="pause-button"><button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button></span> ]
         </h3>
+
         <div class="gallery-container">
           
           <!-- javascript fallback error message -->
           <p class="js-disabled-gallery">Sorry, but the gallery section isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason (and honestly I respect your choice). If that's not the case however, please check back later.</p>
 
+          <!-- animated gallery carousel (injected by jquery) -->
           <div class="gallery-content">
           </div>
         </div>
+
       </div>
     </section>
 
@@ -192,7 +197,6 @@
 
         <!-- projects container (injected by jquery) -->
         <div class="projects-container"></div>
-
       </div>
     </section>
 
@@ -240,7 +244,6 @@
             I can be reached by email at <a href="mailto:contact@danateagle.com">contact [at] danateagle.com</a>. If you want to send me encrypted messages, here's <a href="/data/rusty-pgp.asc" target="_blank" title="Dana's PGP public key">my PGP key</a>. Please feel free to get in touch if you have a question about any of my apps or websites, or if there's a project or opportunity you think I'd be a particularly good fit for. You can also find me on <a href="/dt-insta" target="_blank" title="dana teagle dot com on Instagram">Instagram</a>, <a href="/github" target="_blank" title="Dana on Github">Github</a>, <a href="/linkedin" target="_blank" title="Dana on LinkedIn">LinkedIn</a>, and <a href="/tpl/" target="_blank" title="The Toronto Public Libra">various other places online</a>.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -260,7 +263,6 @@
           <br/><br/>
           [ <a href="/repo" target="_blank" title="This site's repo on Github">Source code</a> | <a href="/sitemap.xml" target="_blank" title="This site's XML sitemap">Sitemap</a> ]
         </p>
-
       </div>
     </footer>
 
