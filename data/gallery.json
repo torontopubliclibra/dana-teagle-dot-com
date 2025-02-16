@@ -104,7 +104,7 @@
         "year": "2023",
         "service": "Web design & development",
         "id": "note-taken",
-        "site": "/notes",
+        "site": "https://notes.danateagle.com",
         "images": ["./assets/projects/note-taken.png"]
     },
     "Body Stories": {
