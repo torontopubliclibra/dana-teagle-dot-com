@@ -126,6 +126,17 @@ body.dark-mode {
     animation: fade-black-in-to-black 1.5s;
 }
 
+html.tpl, html.rustprop, html.sitemap {
+    body {
+        animation: none;
+    }
+    &.trans-id {
+        body {
+            animation: fade-black-in-to-white 1.5s;
+        }
+    }
+}
+
 .about-content, .gallery-container, .projects-container, .services-content, .contact-content {
     animation: fade-in 2s;
 }
