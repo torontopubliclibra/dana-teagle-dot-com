@@ -242,13 +242,26 @@ h3 {
   text-align: left;
   min-width: 100%;
   padding: 0;
-  margin-top: -10px !important;
+  margin-top: -10px;
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    margin-top: -5px;
+  }
 }
 
 #services h4 {
   font-weight: 600;
   margin: 0;
   margin-top: -10px;
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px !important;
+    button {
+      font-size: 16px !important;
+    }
+  }
 }
 
 #services blockquote {
@@ -268,6 +281,13 @@ h3 {
 
   cite {
     font-style: normal;
+  }
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    p, a, cite {
+      font-size: 16px !important;
+    }
   }
 }
 

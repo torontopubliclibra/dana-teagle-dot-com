@@ -1544,13 +1544,26 @@ h3 {
   text-align: left;
   min-width: 100%;
   padding: 0;
-  margin-top: -10px !important;
+  margin-top: -10px;
+}
+@media only screen and (max-width: 768px) {
+  #services h3 {
+    margin-top: -5px;
+  }
 }
 
 #services h4 {
   font-weight: 600;
   margin: 0;
   margin-top: -10px;
+}
+@media only screen and (max-width: 768px) {
+  #services h4 {
+    font-size: 16px !important;
+  }
+  #services h4 button {
+    font-size: 16px !important;
+  }
 }
 
 #services blockquote {
@@ -1569,6 +1582,11 @@ h3 {
 }
 #services blockquote cite {
   font-style: normal;
+}
+@media only screen and (max-width: 768px) {
+  #services blockquote p, #services blockquote a, #services blockquote cite {
+    font-size: 16px !important;
+  }
 }
 
 .project .button {
@@ -3081,7 +3099,7 @@ body.dark-mode #projects .projects-container .project .project-description p a:h
 body.dark-mode #services {
   background-color: rgba(122, 145, 177, 0.6);
 }
-body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a {
+body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a, body.dark-mode #services h3, body.dark-mode #services h4, body.dark-mode #services h4 button, body.dark-mode #services blockquote, body.dark-mode #services cite {
   color: #f3e8e9;
 }
 body.dark-mode #services .services-content {
