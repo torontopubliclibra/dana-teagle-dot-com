@@ -759,6 +759,10 @@ let app = {
         if (localStorage['dark-mode'] === 'true') {
             app.functions.toggleDarkMode();
         }
+
+        setTimeout(() => {
+            app.elements.body.toggleClass("loaded");
+        }, 1000);
     },
 };
 

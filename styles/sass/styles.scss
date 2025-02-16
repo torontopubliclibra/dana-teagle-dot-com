@@ -26,8 +26,11 @@
 // body background and overflow
 body {
     background: $white;
-    // filter: grayscale(100%);
-    // filter: contrast(1000%) invert(100%);
+
+    &.loaded {
+        animation: none !important;
+        transition: all 1s !important;
+    }
 
     &.nav-open {
         
