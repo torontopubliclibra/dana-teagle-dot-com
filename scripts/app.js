@@ -32,8 +32,11 @@ let app = {
         galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
+        testimonial: $("#services blockquote"),
+        testimonialsButton: document.querySelector(".testimonials-button")
     },
 
+    // toggle values
     toggles: {
         animations: true,
         darkMode: false,
@@ -47,6 +50,12 @@ let app = {
         expand: false
     },
 
+    // testimonials data
+    testimonials: {
+        data: [],
+        index: 0,
+    },
+
     // gallery data
     gallery: {
         data: [],
@@ -56,10 +65,14 @@ let app = {
     // app functions
     functions: {
 
+        // toggle animations function
         toggleAnimations: () => {
+
+            // add selected class to toggle and flip the boolean value
             app.elements.animationsToggle.toggleClass('selected');
             app.toggles.animations = !app.toggles.animations;
 
+            // pause or unpause the animations and swap the toggle html
             if (app.toggles.animations === false) {
                 app.elements.header.css('animation', 'none');
                 app.elements.scrollDownButton.css('animation', 'none');
@@ -74,20 +87,26 @@ let app = {
                 app.elements.animationsToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations');
             }
 
+            // store value locally in cache
             localStorage['animations'] = `${app.toggles.animations}`;
         },
 
+        // toggle dark mode function
         toggleDarkMode: () => {
+
+            // add dark-mode class to body, selected class to toggle, and flip the boolean value
             app.elements.body.toggleClass("dark-mode");
             app.elements.darkModeToggle.toggleClass('selected');
             app.toggles.darkMode = !app.toggles.darkMode;
 
+            // swap the toggle html
             if (app.toggles.darkMode === true) {
                 app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
             } else {
                 app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode');
             }
 
+            // store value locally in cache
             localStorage['dark-mode'] = `${app.toggles.darkMode}`;
         },
 
@@ -97,6 +116,7 @@ let app = {
             app.elements.nav.toggleClass("active");
         },
 
+        // shuffle array function
         shuffleArray: (array) => {
 
             // Group items by title
@@ -136,7 +156,7 @@ let app = {
 
         },
 
-        // pause gallery on button click
+        // pause or unpause gallery on button click
         galleryPause: (playState) => {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
@@ -292,6 +312,20 @@ let app = {
                     }
                 }, 1000);
             }
+        },
+
+        testimonialDisplay: () => {
+
+            app.elements.testimonial.html(`<p>${app.testimonials.data[app.testimonials.index].quote}</p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`)
+        },
+
+        nextTestimonial: () => {
+            if (app.testimonials.index < (app.testimonials.data.length - 1)) {
+                app.testimonials.index++;
+            } else {
+                app.testimonials.index = 0;
+            }
+            app.functions.testimonialDisplay();
         },
 
         // smoothly scroll to location
@@ -670,6 +704,7 @@ let app = {
     init: () => {
 
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+
             // fetch the projects from the json file and send the response
             fetch('./data/projects.json').then(response => response.json())
             // then with the data
@@ -745,6 +780,42 @@ let app = {
                 app.gallery.data = app.functions.shuffleArray(gallery);
 
                 app.functions.galleryDisplay();
+            })
+            // console log any promise errors
+            .catch(error => console.log(error));
+
+            // fetch the testimonials from the json file and send the response
+            fetch('./data/testimonials.json').then(response => response.json())
+            // then with the data
+            .then((data) => {
+
+                // set the testimonials to an empty array
+                let testimonials = [];
+
+                // and for each testimonial in the data
+                for (let object in data) {
+
+                    // initialize a testimonial object
+                    let testimonial = {
+                        "quote": "",
+                        "cite": ""
+                    }
+
+                    // then map each property in the initial object to the new object
+                    for (let property in data[object]) {
+                        testimonial[property] = data[object][property];
+                    };
+
+                    // and push each testimonial object into the testimonials array
+                    testimonials.push(testimonial);
+                };
+
+                // save the testimonials array to the testimonial data and the index to the first testimonial
+                app.testimonials.data = app.functions.shuffleArray(testimonials);
+                app.testimonials.index = 0;
+
+                // display a testimonial on the page
+                app.functions.testimonialDisplay();
             })
             // console log any promise errors
             .catch(error => console.log(error));
