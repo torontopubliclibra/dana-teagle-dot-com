@@ -316,7 +316,9 @@ let app = {
 
         testimonialDisplay: () => {
 
-            app.elements.testimonial.html(`<p>${app.testimonials.data[app.testimonials.index].quote}</p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`)
+            app.elements.testimonial.html(`<p>${app.testimonials.data[app.testimonials.index].quote}</p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`);
+
+            app.functions.scrollUp('testimonial');
         },
 
         nextTestimonial: () => {
@@ -350,6 +352,27 @@ let app = {
                     history.pushState(null, null, `#${direction}`);
                 }, 300);
             };
+
+            // blur the button after scroll
+            document.activeElement.blur();
+        },
+
+        // smoothly scroll to location (only up)
+        scrollUp: (direction) => {
+
+            // establish an empty variable
+            let location = "";
+
+            // if the direction is above the current top, set the location to the top of that section
+            location = $(`#${direction}`).offset().top;
+
+            if (window.scrollY > location) {
+                window.scrollTo({top: location, behavior: "smooth"});
+            }
+            
+            setTimeout(() => {
+                history.pushState(null, null, `#${direction}`);
+            }, 300);
 
             // blur the button after scroll
             document.activeElement.blur();
@@ -579,18 +602,16 @@ let app = {
                 };
             });
 
-            if (app.projects.filter !== "All") {
-                app.functions.scroll("projects");
-            }
-
             if (app.projects.expand === true) {
                 app.functions.readMoreAll();
             }
+
+            app.functions.scrollUp("projects");
         },
 
         allProjectsClick: () => {
             app.functions.projectDisplay("All", app.projects.expand);
-            app.functions.scroll("projects");
+            app.functions.scrollUp("projects");
         },
 
         // read more function
