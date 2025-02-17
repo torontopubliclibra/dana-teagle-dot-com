@@ -791,6 +791,7 @@ header {
 }
 
 #services {
+
     // wrapper
     .wrapper {
         @include flex(row, 5%, "", center);
@@ -800,43 +801,38 @@ header {
             flex-direction: column;
         }
 
-        h2 {
-            margin-bottom: 0;
-
-            @media only screen and (max-width: $mobile) {
-                margin-bottom: 0;
-            }
-        }
-
         hr {
             border-color: $color2;
         }
 
         h4 {
             cursor: pointer;
-        button {
-            color: $black;
 
-            &:hover {
-                background: linear-gradient(120deg, $color3 0%, $color3 100%);
-                background-repeat: no-repeat;
-                background-size: 100% 20%;
-                background-position: 0 95%;
-            }
+            button {
+                color: $black;
+                margin-top: 15px;
 
-            img {
-                height: 20px;
-                margin-bottom: -5px;
-            }
-
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
-                font-style: normal;
-                
                 &:hover {
-                    background: none;
+                    background: linear-gradient(120deg, $color3 0%, $color3 100%);
+                    background-repeat: no-repeat;
+                    background-size: 100% 20%;
+                    background-position: 0 95%;
                 }
-            }
+
+                img {
+                    height: 20px;
+                    margin-bottom: -5px;
+                }
+
+                // responsive to tablet
+                @media only screen and (max-width: $tablet) {
+                    font-style: normal;
+                    margin-top: 20px;
+                    
+                    &:hover {
+                        background: none;
+                    }
+                }
             }
         }
 
@@ -880,6 +876,11 @@ header {
         .services-description {
             @include flex(column, 20px);
             gap: 20px;
+
+            // responsive to mobile
+            @media only screen and (max-width: $mobile) {
+                gap: 15px;
+            }
         }
         
         .service {
@@ -897,16 +898,6 @@ header {
             h3, h4, li {
                 width: 100%;
                 text-align: left;
-            }
-
-            h3 {
-                max-width: unset;
-                margin: 0;
-                padding: 10px;
-                font-size: 26px;
-                padding-bottom: 0;
-                padding-top: 20px;
-                padding-left: 15px;
             }
 
             h4 {

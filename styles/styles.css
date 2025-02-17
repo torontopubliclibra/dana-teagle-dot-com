@@ -1543,27 +1543,19 @@ h3 {
 #services h3 {
   text-align: left;
   min-width: 100%;
-  padding: 0;
-  margin-top: -10px;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   #services h3 {
-    margin-top: -5px;
+    padding: 5px 0 !important;
   }
 }
 
 #services h4 {
   font-weight: 600;
   margin: 0;
-  margin-top: -10px;
-}
-@media only screen and (max-width: 768px) {
-  #services h4 {
-    font-size: 16px !important;
-  }
-  #services h4 button {
-    font-size: 16px !important;
-  }
+  margin-top: -15px;
 }
 
 #services blockquote {
@@ -2375,14 +2367,6 @@ header .scroll-down img {
     flex-direction: column;
   }
 }
-#services .wrapper h2 {
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 768px) {
-  #services .wrapper h2 {
-    margin-bottom: 0;
-  }
-}
 #services .wrapper hr {
   border-color: #B57E9B;
 }
@@ -2391,6 +2375,7 @@ header .scroll-down img {
 }
 #services .wrapper h4 button {
   color: #282b2c;
+  margin-top: 15px;
 }
 #services .wrapper h4 button:hover {
   background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
@@ -2405,6 +2390,7 @@ header .scroll-down img {
 @media only screen and (max-width: 970px) {
   #services .wrapper h4 button {
     font-style: normal;
+    margin-top: 20px;
   }
   #services .wrapper h4 button:hover {
     background: none;
@@ -2455,6 +2441,11 @@ header .scroll-down img {
   align-items: initial;
   gap: 20px;
 }
+@media only screen and (max-width: 768px) {
+  #services .services-content .services-description {
+    gap: 15px;
+  }
+}
 #services .services-content .service {
   background: rgba(132, 165, 157, 0.3);
   border: solid #B57E9B 5px;
@@ -2475,15 +2466,6 @@ header .scroll-down img {
 #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
   width: 100%;
   text-align: left;
-}
-#services .services-content .service h3 {
-  max-width: unset;
-  margin: 0;
-  padding: 10px;
-  font-size: 26px;
-  padding-bottom: 0;
-  padding-top: 20px;
-  padding-left: 15px;
 }
 #services .services-content .service h4 {
   font-weight: 600;

@@ -241,27 +241,19 @@ h3 {
 #services h3 {
   text-align: left;
   min-width: 100%;
-  padding: 0;
-  margin-top: -10px;
+  padding: 0 !important;
+  margin: 0 !important;
 
-  // responsive to mobile
-  @media only screen and (max-width: $mobile) {
-    margin-top: -5px;
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    padding: 5px 0 !important;
   }
 }
 
 #services h4 {
   font-weight: 600;
   margin: 0;
-  margin-top: -10px;
-
-  // responsive to mobile
-  @media only screen and (max-width: $mobile) {
-    font-size: 16px !important;
-    button {
-      font-size: 16px !important;
-    }
-  }
+  margin-top: -15px;
 }
 
 #services blockquote {
