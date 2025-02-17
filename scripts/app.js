@@ -14,6 +14,7 @@ let app = {
         contact: $("#contact"),
         aboutToGallery: $(".about-to-gallery"),
         aboutToServices: $(".about-to-services"),
+        aboutToTestimonial: $(".about-to-testimonial"),
         servicesToContact: $(".services-to-contact"),
         aboutLink: $("nav .about"),
         galleryLink: $("nav .gallery"),
@@ -713,6 +714,10 @@ let app = {
         app.elements.aboutToServices.click((e) => {
             e.preventDefault();
             app.functions.scroll("services");
+        });
+        app.elements.aboutToTestimonial.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("testimonial");
         });
         app.elements.servicesToContact.click((e) => {
             e.preventDefault();
