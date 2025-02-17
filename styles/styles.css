@@ -447,6 +447,10 @@ html.tpl.trans-id body, html.rustprop.trans-id body, html.sitemap.trans-id body 
   animation: fade-black-in-to-white 1.5s;
 }
 
+html.sitemap body {
+  animation: fade-in 1s;
+}
+
 .about-content, .gallery-container, .projects-container, .services-content, .contact-content {
   animation: fade-in 2s;
 }

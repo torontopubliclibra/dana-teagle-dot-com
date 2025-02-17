@@ -137,6 +137,12 @@ html.tpl, html.rustprop, html.sitemap {
     }
 }
 
+html.sitemap {
+    body {
+        animation: fade-in 1s;
+    }
+}
+
 .about-content, .gallery-container, .projects-container, .services-content, .contact-content {
     animation: fade-in 2s;
 }
