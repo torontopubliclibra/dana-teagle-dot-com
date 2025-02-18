@@ -447,6 +447,10 @@ html.tpl.trans-id body, html.rustprop.trans-id body, html.sitemap.trans-id body 
   animation: fade-black-in-to-white 1.5s;
 }
 
+html.sitemap body {
+  animation: fade-in 1s;
+}
+
 .about-content, .gallery-container, .projects-container, .services-content, .contact-content {
   animation: fade-in 2s;
 }
@@ -1540,6 +1544,48 @@ h3 {
   }
 }
 
+#services h3 {
+  text-align: left;
+  min-width: 100%;
+  padding: 0 !important;
+  margin-top: -20px;
+  padding-top: 10px !important;
+}
+@media only screen and (max-width: 970px) {
+  #services h3 {
+    padding: 5px 0 !important;
+  }
+}
+
+#services h4 {
+  font-weight: 600;
+  margin: 0;
+  margin-top: -15px;
+}
+
+#services blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(181, 126, 155, 0.25);
+  font-style: italic;
+  text-align: left;
+  min-width: 100%;
+  margin: 0;
+  padding: 25px;
+}
+#services blockquote a {
+  display: inline;
+}
+#services blockquote cite {
+  font-style: normal;
+}
+@media only screen and (max-width: 768px) {
+  #services blockquote p, #services blockquote a, #services blockquote cite {
+    font-size: 16px !important;
+  }
+}
+
 .project .button {
   font-size: 14px;
   text-align: center;
@@ -1776,12 +1822,9 @@ header.four-oh-four {
   min-height: 200px;
   height: 30vh;
   max-height: 500px;
-  margin-bottom: 40px;
-}
-@media only screen and (max-width: 768px) {
-  header.four-oh-four {
-    margin-bottom: 10px;
-  }
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
 }
 header.four-oh-four .title {
   animation: fade-in 0.75s ease-in 0s forwards;
@@ -2326,28 +2369,40 @@ header .scroll-down img {
     flex-direction: column;
   }
 }
-#services .wrapper h2 {
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 768px) {
-  #services .wrapper h2 {
-    margin-bottom: 0;
-  }
-}
 #services .wrapper hr {
   border-color: #B57E9B;
 }
-#services .wrapper h3 {
-  font-size: 20px;
-  text-align: left;
-  margin: 0 auto;
-  max-width: 100%;
+#services .wrapper h4 {
+  cursor: pointer;
 }
-#services .wrapper h3 a {
-  font-size: 20px;
+#services .wrapper h4 button {
+  color: #282b2c;
+  margin-top: 15px;
 }
-#services .wrapper h3 a:hover {
-  color: #B57E9B;
+#services .wrapper h4 button:hover {
+  background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+  background-position: 0 95%;
+}
+#services .wrapper h4 button img {
+  height: 20px;
+  margin-bottom: -5px;
+}
+@media only screen and (max-width: 970px) {
+  #services .wrapper h4 button {
+    font-style: normal;
+    margin-top: 20px;
+  }
+  #services .wrapper h4 button:hover {
+    background: none;
+  }
+}
+#services .wrapper blockquote * {
+  animation: fade-in 1s;
+}
+#services .wrapper blockquote * a {
+  animation: none;
 }
 @media only screen and (max-width: 768px) {
   #services .wrapper h3 {
@@ -2388,25 +2443,9 @@ header .scroll-down img {
   align-items: initial;
   gap: 20px;
 }
-#services .services-content .metrics {
-  background-color: #fff;
-  background-image: url("./../../assets/100s.png");
-  filter: opacity(80%);
-  background-size: 315px;
-  padding: 15px;
-  border: solid #84A59D 4px;
-  width: 95%;
-  height: 80px;
-  image-rendering: pixelated;
-  pointer-events: none;
-}
 @media only screen and (max-width: 768px) {
-  #services .services-content .metrics {
-    background-size: contain;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100px;
+  #services .services-content .services-description {
+    gap: 15px;
   }
 }
 #services .services-content .service {
@@ -2429,15 +2468,6 @@ header .scroll-down img {
 #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
   width: 100%;
   text-align: left;
-}
-#services .services-content .service h3 {
-  max-width: unset;
-  margin: 0;
-  padding: 10px;
-  font-size: 26px;
-  padding-bottom: 0;
-  padding-top: 20px;
-  padding-left: 15px;
 }
 #services .services-content .service h4 {
   font-weight: 600;
@@ -3053,7 +3083,7 @@ body.dark-mode #projects .projects-container .project .project-description p a:h
 body.dark-mode #services {
   background-color: rgba(122, 145, 177, 0.6);
 }
-body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a {
+body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a, body.dark-mode #services h3, body.dark-mode #services h4, body.dark-mode #services h4 button, body.dark-mode #services blockquote, body.dark-mode #services cite {
   color: #f3e8e9;
 }
 body.dark-mode #services .services-content {

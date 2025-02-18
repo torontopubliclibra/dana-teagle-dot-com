@@ -238,6 +238,52 @@ h3 {
   }
 }
 
+#services h3 {
+  text-align: left;
+  min-width: 100%;
+  padding: 0 !important;
+  margin-top: -20px;
+  padding-top: 10px !important;
+
+  // responsive to tablet
+  @media only screen and (max-width: $tablet) {
+    padding: 5px 0 !important;
+  }
+}
+
+#services h4 {
+  font-weight: 600;
+  margin: 0;
+  margin-top: -15px;
+}
+
+#services blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba($color2, 0.25);
+  font-style: italic;
+  text-align: left;
+  min-width: 100%;
+  margin: 0;
+  padding: 25px;
+
+  a {
+    display: inline;
+  }
+
+  cite {
+    font-style: normal;
+  }
+
+  // responsive to mobile
+  @media only screen and (max-width: $mobile) {
+    p, a, cite {
+      font-size: 16px !important;
+    }
+  }
+}
+
 // project buttons
 .project .button {
   font-size: 14px;
