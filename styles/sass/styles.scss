@@ -186,12 +186,9 @@ header {
         min-height: 200px;
         height: 30vh;
         max-height: 500px;
-        margin-bottom: 40px;
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            margin-bottom: 10px;
-        }
+        padding-top: 40px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
 
         .title {
             animation: fade-in 0.75s ease-in 0s forwards;
