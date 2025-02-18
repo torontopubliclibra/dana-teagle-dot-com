@@ -14,10 +14,16 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://danateagle.com/tpl/now</loc>
-        <lastmod>2025-02-09</lastmod>
+        <loc>https://danateagle.com/tpl/now/</loc>
+        <lastmod>2025-02-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
+    </url>
+        <url>
+        <loc>https://danateagle.com/tpl/now/archive</loc>
+        <lastmod>2025-02-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
     </url>
     <url>
         <loc>https://danateagle.com/tpl/uses</loc>

@@ -517,6 +517,11 @@ html.tpl h3 {
     font-size: 15px;
   }
 }
+html.tpl h3.previously-datestamp {
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+  text-align: left;
+}
 html.tpl p.js-disabled-tpl {
   width: 65%;
   max-width: 850px;
@@ -541,6 +546,12 @@ html.tpl hr {
   max-width: 950px;
   margin: 0;
   border: 1.5px solid #7a91b1;
+}
+html.tpl hr.no-margin {
+  margin: 0 !important;
+}
+html.tpl hr.alt-color {
+  border-color: #B57E9B;
 }
 html.tpl main, html.tpl footer {
   opacity: 0;
@@ -568,6 +579,7 @@ html.tpl header.trans-id-header {
   padding-top: 30px;
 }
 html.tpl nav {
+  min-width: 100%;
   margin: 20px auto;
   width: 100%;
   max-width: 950px;
@@ -581,6 +593,62 @@ html.tpl nav hr {
   html.tpl nav hr {
     width: 90%;
     margin: 35px auto;
+  }
+}
+html.tpl nav .button {
+  color: #f3e8e9;
+  border: solid #f3e8e9 3px;
+  background: none;
+  font-size: 1rem;
+  padding: 7px 25px;
+  font-style: normal;
+}
+html.tpl nav .button:hover, html.tpl nav .button.selected {
+  background-color: #84A59D;
+  color: #282b2c;
+  font-style: italic;
+}
+html.tpl nav .button.back {
+  display: flex;
+  margin: -8px;
+  margin-bottom: -8px;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  gap: 10px;
+}
+html.tpl nav .button.back img {
+  height: 25px;
+  padding-top: 2px;
+  filter: invert(1);
+}
+html.tpl nav .button.back:hover img {
+  filter: invert(0);
+}
+@media only screen and (max-width: 768px) {
+  html.tpl nav:first-of-type, html.tpl nav:nth-of-type(2), html.tpl nav:nth-of-type(3) {
+    margin-bottom: 5px;
+  }
+  html.tpl nav .button {
+    padding: 7px 25px;
+  }
+  html.tpl nav .button, html.tpl nav .button:hover {
+    font-style: normal;
+  }
+  html.tpl nav .button:hover {
+    color: #f3e8e9;
+    background: none;
+  }
+  html.tpl nav .button.selected:hover {
+    color: #282b2c;
+    font-style: italic;
+    background-color: #84A59D;
+  }
+  html.tpl nav .button.back {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+  html.tpl nav .button.back:hover img {
+    filter: invert(1);
   }
 }
 html.tpl nav ul {
@@ -608,39 +676,6 @@ html.tpl nav ul {
 html.tpl nav ul li {
   margin: 0;
   padding: 0;
-}
-html.tpl nav ul li .button {
-  color: #f3e8e9;
-  border: solid #f3e8e9 3px;
-  background: none;
-  font-size: 1rem;
-  padding: 7px 25px;
-  font-style: normal;
-}
-html.tpl nav ul li .button:hover, html.tpl nav ul li .button.selected {
-  background-color: #84A59D;
-  color: #282b2c;
-  font-style: italic;
-}
-@media only screen and (max-width: 768px) {
-  html.tpl nav ul li:first-of-type, html.tpl nav ul li:nth-of-type(2), html.tpl nav ul li:nth-of-type(3) {
-    margin-bottom: 5px;
-  }
-  html.tpl nav ul li .button {
-    padding: 7px 25px;
-  }
-  html.tpl nav ul li .button, html.tpl nav ul li .button:hover {
-    font-style: normal;
-  }
-  html.tpl nav ul li .button:hover {
-    color: #f3e8e9;
-    background: none;
-  }
-  html.tpl nav ul li .button.selected:hover {
-    color: #282b2c;
-    font-style: italic;
-    background-color: #84A59D;
-  }
 }
 html.tpl main {
   margin: 0 auto;

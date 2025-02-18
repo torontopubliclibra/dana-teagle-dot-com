@@ -70,6 +70,12 @@ html.tpl {
         @media only screen and (max-width: $mobile) {
             font-size: 15px;
         }
+
+        &.previously-datestamp {
+            margin: 0 !important;
+            padding-bottom: 0 !important;
+            text-align: left;
+        }
     }
 
     p.js-disabled-tpl {
@@ -97,6 +103,14 @@ html.tpl {
         max-width: 950px;
         margin: 0;
         border: 1.5px solid $color3;
+
+        &.no-margin {
+            margin: 0 !important;
+        }
+
+        &.alt-color {
+            border-color: $color2;
+        }
     }
 
     main, footer {
@@ -129,6 +143,7 @@ html.tpl {
     }
 
     nav {
+        min-width: 100%;
         margin: 20px auto;
         width: 100%;
         max-width: 950px;
@@ -144,6 +159,79 @@ html.tpl {
                 margin: 35px auto;
             }
         }
+
+        .button {
+            color: $white;
+            border: solid $white 3px;
+            background: none;
+            font-size: 1rem;
+            padding: 7px 25px;
+            font-style: normal;
+
+            &:hover, &.selected {
+                background-color: $color1;
+                color: $black;
+                font-style: italic;
+            }
+
+            &.back {
+                display: flex;
+                margin: -8px;
+                margin-bottom: -8px;
+                margin-left: calc(50% - 150px);
+                width: 300px;
+                gap: 10px;
+
+                img {
+                    height: 25px;
+                    padding-top: 2px;
+                    filter: invert(1);
+                }
+
+                &:hover {
+                    img {
+                        filter: invert(0);
+                    }
+                }
+            }
+        }
+
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+
+            &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
+                margin-bottom: 5px;
+            }
+
+            .button {
+                padding: 7px 25px;
+            }
+
+            .button, .button:hover {
+                font-style: normal;
+            }
+            .button:hover {
+                color: $white;
+                background: none;
+            }
+            .button.selected:hover {
+                color: $black;
+                font-style: italic;
+                background-color: $color1;
+            }
+
+            .button.back {
+                width: 85%;
+                margin-left: 7.5%;
+
+                &:hover {
+                    img {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+
         ul {
             list-style-type: none;
             display: flex;
@@ -170,45 +258,45 @@ html.tpl {
                 margin: 0;
                 padding: 0;
 
-                .button {
-                    color: $white;
-                    border: solid $white 3px;
-                    background: none;
-                    font-size: 1rem;
-                    padding: 7px 25px;
-                    font-style: normal;
+                // .button {
+                //     color: $white;
+                //     border: solid $white 3px;
+                //     background: none;
+                //     font-size: 1rem;
+                //     padding: 7px 25px;
+                //     font-style: normal;
 
-                    &:hover, &.selected {
-                        background-color: $color1;
-                        color: $black;
-                        font-style: italic;
-                    }
-                }
+                //     &:hover, &.selected {
+                //         background-color: $color1;
+                //         color: $black;
+                //         font-style: italic;
+                //     }
+                // }
 
-                // responsive to mobile
-                @media only screen and (max-width: $mobile) {
+                // // responsive to mobile
+                // @media only screen and (max-width: $mobile) {
 
-                    &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
-                        margin-bottom: 5px;
-                    }
+                //     &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
+                //         margin-bottom: 5px;
+                //     }
 
-                    .button {
-                        padding: 7px 25px;
-                    }
+                //     .button {
+                //         padding: 7px 25px;
+                //     }
 
-                    .button, .button:hover {
-                        font-style: normal;
-                    }
-                    .button:hover {
-                        color: $white;
-                        background: none;
-                    }
-                    .button.selected:hover {
-                        color: $black;
-                        font-style: italic;
-                        background-color: $color1;
-                    }
-                }
+                //     .button, .button:hover {
+                //         font-style: normal;
+                //     }
+                //     .button:hover {
+                //         color: $white;
+                //         background: none;
+                //     }
+                //     .button.selected:hover {
+                //         color: $black;
+                //         font-style: italic;
+                //         background-color: $color1;
+                //     }
+                // }
             }
         }
     }
