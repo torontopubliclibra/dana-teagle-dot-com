@@ -318,8 +318,6 @@ let app = {
         testimonialDisplay: () => {
 
             app.elements.testimonial.html(`<p>${app.testimonials.data[app.testimonials.index].quote}</p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`);
-
-            app.functions.scrollUp('testimonial');
         },
 
         nextTestimonial: () => {
@@ -329,6 +327,7 @@ let app = {
                 app.testimonials.index = 0;
             }
             app.functions.testimonialDisplay();
+            app.functions.scrollUp('testimonial');
         },
 
         // smoothly scroll to location
