@@ -446,7 +446,7 @@ let app = {
 
                         // otherwise create a link that displays the projects of that filter
                         } else if (filter === "All") {
-                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" title="All projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="All projects">`
                             + filterName
                             + `</button></li>`;
                         } else {
@@ -605,8 +605,6 @@ let app = {
             if (app.projects.expand === true) {
                 app.functions.readMoreAll();
             }
-
-            app.functions.scrollUp("projects");
         },
 
         allProjectsClick: () => {
