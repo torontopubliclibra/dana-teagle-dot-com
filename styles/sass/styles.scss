@@ -1643,6 +1643,9 @@ body.dark-mode {
         h2, p, a, h3, h4, h4 button, blockquote, cite {
             color: $white;
         }
+        h4 button img {
+            filter: invert(1);
+        }
         .services-content {
             background-color: rgba($black, 0.8);
 

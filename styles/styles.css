@@ -3163,6 +3163,9 @@ body.dark-mode #services {
 body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a, body.dark-mode #services h3, body.dark-mode #services h4, body.dark-mode #services h4 button, body.dark-mode #services blockquote, body.dark-mode #services cite {
   color: #f3e8e9;
 }
+body.dark-mode #services h4 button img {
+  filter: invert(1);
+}
 body.dark-mode #services .services-content {
   background-color: rgba(40, 43, 44, 0.8);
 }
