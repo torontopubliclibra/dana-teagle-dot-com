@@ -590,6 +590,10 @@ header {
                 background-repeat: no-repeat;
                 background-size: 100% 20%;
                 background-position: 0 95%;
+
+                img {
+                    transform: skew(-10deg);
+                }
             }
 
             img {
@@ -603,6 +607,10 @@ header {
                 
                 &:hover {
                     background: none;
+
+                    img {
+                        transform: skew(0deg);
+                    }
                 }
             }
         }
@@ -808,25 +816,38 @@ header {
                 color: $black;
                 margin-top: 15px;
 
+                img {
+                    height: 18px;
+                    margin-bottom: -4px;
+                    transform: rotate(90deg);
+                    transition: transform 0.5s;
+                }
+
                 &:hover {
                     background: linear-gradient(120deg, $color3 0%, $color3 100%);
                     background-repeat: no-repeat;
                     background-size: 100% 20%;
                     background-position: 0 95%;
-                }
 
-                img {
-                    height: 20px;
-                    margin-bottom: -5px;
+                    img {
+                        transform: rotate(135deg) skew(-10deg);
+                    }
                 }
 
                 // responsive to tablet
                 @media only screen and (max-width: $tablet) {
-                    font-style: normal;
                     margin-top: 20px;
+
+                    img {
+                        transform: rotate(115deg) skew(-10deg);
+                    }
                     
                     &:hover {
                         background: none;
+
+                        img {
+                            transform: rotate(115deg) skew(-10deg);
+                        }
                     }
                 }
             }
@@ -1159,11 +1180,19 @@ header {
                 background-repeat: no-repeat;
                 background-size: 100% 20%;
                 background-position: 0 95%;
+
+                img {
+                    transform: skew(-10deg);
+                }
             }
 
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
-                font-style: normal;
+                font-style: italic;
+
+                img {
+                    transform: skew(-10deg);
+                }
                 
                 &:hover {
                     background: none;
@@ -1282,6 +1311,10 @@ header {
                     &:hover, &:focus, &.read-less {
                         background-color: $white;
                         border-bottom: solid $color2 4px;
+
+                        img {
+                            transform: skew(-10deg);
+                        }
                     }
                 }
 
@@ -1295,12 +1328,16 @@ header {
                         gap: 4px;
 
                         img {
-                            padding-top: 2px;
+                            transform: skew(-10deg);
                         }
                         
                         &:hover, &:focus {
                             background-color: $white;
                             border-color: $white;
+
+                            img {
+                                transform: skew(-10deg);
+                            }
                         }
                         &.read-less:hover, &.read-less:focus {
                             background-color: $white;
@@ -1407,10 +1444,18 @@ footer .wrapper {
         &:hover, &:focus {
             background-color: $white;
             border-bottom: solid $color3 4px;
+
+            img {
+                transform: skew(-10deg);
+            }
         }
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
+
+            img {
+                transform: skew(-10deg);
+            }
 
             &:hover, &:focus {
                 border-bottom: solid $color2 4px;

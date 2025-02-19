@@ -550,6 +550,14 @@ html.tpl hr {
 html.tpl hr.no-margin {
   margin: 0 !important;
 }
+html.tpl hr.margin-bottom {
+  margin-bottom: 5px !important;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl hr.margin-bottom {
+    margin-bottom: 10px !important;
+  }
+}
 html.tpl hr.alt-color {
   border-color: #B57E9B;
 }
@@ -610,6 +618,7 @@ html.tpl nav .button:hover, html.tpl nav .button.selected {
 }
 html.tpl nav .button.back {
   display: flex;
+  justify-content: center;
   margin: -8px;
   margin-bottom: -8px;
   margin-left: calc(50% - 150px);
@@ -623,6 +632,7 @@ html.tpl nav .button.back img {
 }
 html.tpl nav .button.back:hover img {
   filter: invert(0);
+  transform: skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
   html.tpl nav:first-of-type, html.tpl nav:nth-of-type(2), html.tpl nav:nth-of-type(3) {
@@ -649,6 +659,7 @@ html.tpl nav .button.back:hover img {
   }
   html.tpl nav .button.back:hover img {
     filter: invert(1);
+    transform: skew(0deg);
   }
 }
 html.tpl nav ul {
@@ -2233,6 +2244,9 @@ header .scroll-down img {
   background-size: 100% 20%;
   background-position: 0 95%;
 }
+#gallery .pause-button button:hover img {
+  transform: skew(-10deg);
+}
 #gallery .pause-button button img {
   height: 20px;
   margin-bottom: -5px;
@@ -2243,6 +2257,9 @@ header .scroll-down img {
   }
   #gallery .pause-button button:hover {
     background: none;
+  }
+  #gallery .pause-button button:hover img {
+    transform: skew(0deg);
   }
 }
 #gallery .gallery-container {
@@ -2411,23 +2428,33 @@ header .scroll-down img {
   color: #282b2c;
   margin-top: 15px;
 }
+#services .wrapper h4 button img {
+  height: 18px;
+  margin-bottom: -4px;
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
 #services .wrapper h4 button:hover {
   background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
 }
-#services .wrapper h4 button img {
-  height: 20px;
-  margin-bottom: -5px;
+#services .wrapper h4 button:hover img {
+  transform: rotate(135deg) skew(-10deg);
 }
 @media only screen and (max-width: 970px) {
   #services .wrapper h4 button {
-    font-style: normal;
     margin-top: 20px;
+  }
+  #services .wrapper h4 button img {
+    transform: rotate(115deg) skew(-10deg);
   }
   #services .wrapper h4 button:hover {
     background: none;
+  }
+  #services .wrapper h4 button:hover img {
+    transform: rotate(115deg) skew(-10deg);
   }
 }
 #services .wrapper blockquote * {
@@ -2724,9 +2751,15 @@ header .scroll-down img {
   background-size: 100% 20%;
   background-position: 0 95%;
 }
+#projects .projects-nav .project-button:hover img {
+  transform: skew(-10deg);
+}
 @media only screen and (max-width: 970px) {
   #projects .projects-nav .project-button {
-    font-style: normal;
+    font-style: italic;
+  }
+  #projects .projects-nav .project-button img {
+    transform: skew(-10deg);
   }
   #projects .projects-nav .project-button:hover {
     background: none;
@@ -2846,6 +2879,9 @@ header .scroll-down img {
   background-color: #f3e8e9;
   border-bottom: solid #B57E9B 4px;
 }
+#projects .projects-container .project .project-description .button:hover img, #projects .projects-container .project .project-description .button:focus img, #projects .projects-container .project .project-description .button.read-less img {
+  transform: skew(-10deg);
+}
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .project-description {
     justify-content: left;
@@ -2856,11 +2892,14 @@ header .scroll-down img {
     gap: 4px;
   }
   #projects .projects-container .project .project-description .button img {
-    padding-top: 2px;
+    transform: skew(-10deg);
   }
   #projects .projects-container .project .project-description .button:hover, #projects .projects-container .project .project-description .button:focus {
     background-color: #f3e8e9;
     border-color: #f3e8e9;
+  }
+  #projects .projects-container .project .project-description .button:hover img, #projects .projects-container .project .project-description .button:focus img {
+    transform: skew(-10deg);
   }
   #projects .projects-container .project .project-description .button.read-less:hover, #projects .projects-container .project .project-description .button.read-less:focus {
     background-color: #f3e8e9;
@@ -2956,7 +2995,13 @@ footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
   background-color: #f3e8e9;
   border-bottom: solid #7a91b1 4px;
 }
+footer .wrapper .scroll-to-top:hover img, footer .wrapper .scroll-to-top:focus img {
+  transform: skew(-10deg);
+}
 @media only screen and (max-width: 970px) {
+  footer .wrapper .scroll-to-top img {
+    transform: skew(-10deg);
+  }
   footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
     border-bottom: solid #B57E9B 4px;
   }
