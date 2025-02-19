@@ -1405,7 +1405,7 @@ a, button {
   text-align: left;
   line-height: 1.25;
   color: #282b2c;
-  transition: 0.4s color, 0.4s font-style;
+  transition: 0.4s color;
 }
 a:hover, a:focus, button:hover, button:focus {
   cursor: pointer;
@@ -2252,14 +2252,11 @@ header .scroll-down img {
   margin-bottom: -5px;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .pause-button button {
-    font-style: normal;
+  #gallery .pause-button button img {
+    transform: skew(-10deg);
   }
   #gallery .pause-button button:hover {
     background: none;
-  }
-  #gallery .pause-button button:hover img {
-    transform: skew(0deg);
   }
 }
 #gallery .gallery-container {

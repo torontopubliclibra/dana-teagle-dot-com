@@ -74,7 +74,7 @@ p {
 // links
 a, button {
   @include textStyle (18px);
-  transition: 0.4s color, 0.4s font-style;
+  transition: 0.4s color;
 
   &:hover, &:focus {
     cursor: pointer;

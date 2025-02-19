@@ -603,14 +603,12 @@ header {
 
             // responsive to tablet
             @media only screen and (max-width: $tablet) {
-                font-style: normal;
+                img {
+                    transform: skew(-10deg);
+                }
                 
                 &:hover {
                     background: none;
-
-                    img {
-                        transform: skew(0deg);
-                    }
                 }
             }
         }
