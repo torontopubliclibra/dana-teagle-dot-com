@@ -108,6 +108,14 @@ html.tpl {
             margin: 0 !important;
         }
 
+        &.margin-bottom {
+            margin-bottom: 5px !important;
+
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 10px !important;
+            }
+        }
+
         &.alt-color {
             border-color: $color2;
         }
@@ -176,6 +184,7 @@ html.tpl {
 
             &.back {
                 display: flex;
+                justify-content: center;
                 margin: -8px;
                 margin-bottom: -8px;
                 margin-left: calc(50% - 150px);
@@ -191,6 +200,7 @@ html.tpl {
                 &:hover {
                     img {
                         filter: invert(0);
+                        transform: skew(-10deg);
                     }
                 }
             }
@@ -227,6 +237,7 @@ html.tpl {
                 &:hover {
                     img {
                         filter: invert(1);
+                        transform: skew(0deg);
                     }
                 }
             }
