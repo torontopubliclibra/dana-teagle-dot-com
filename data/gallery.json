@@ -78,7 +78,7 @@
     "West83": {
         "title": "West83",
         "year": "2024",
-        "service": "Logo design & branding",
+        "service": "Logo design",
         "id": "west83",
         "site": "https://www.west83.com/",
         "images": ["./assets/projects/west83.jpg"]
@@ -99,18 +99,10 @@
         "instagram": "/rp-insta",
         "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/streaming-sucks.jpeg", "./rustprop/images/push-notifs.png"]
     },
-    "Notes": {
-        "title": "Note Taken",
-        "year": "2023",
-        "service": "Web design & development",
-        "id": "note-taken",
-        "site": "https://notes.danateagle.com",
-        "images": ["./assets/projects/note-taken.png"]
-    },
     "Body Stories": {
         "title": "Body Stories",
         "year": "2021",
-        "service": "Logo design & branding",
+        "service": "Logo design",
         "site": "https://bodystoriesdance.com",
         "images": ["./assets/projects/body-stories-2.png"]
     }
