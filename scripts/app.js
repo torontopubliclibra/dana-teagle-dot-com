@@ -327,7 +327,7 @@ let app = {
                 app.testimonials.index = 0;
             }
             app.functions.testimonialDisplay();
-            app.functions.scroll('testimonial');
+            app.functions.scrollUp('testimonial');
         },
 
         // smoothly scroll to location
