@@ -327,7 +327,7 @@ let app = {
                 app.testimonials.index = 0;
             }
             app.functions.testimonialDisplay();
-            app.functions.scrollUp('testimonial');
+            app.functions.scroll('testimonial');
         },
 
         // smoothly scroll to location
@@ -446,11 +446,11 @@ let app = {
 
                         // otherwise create a link that displays the projects of that filter
                         } else if (filter === "All") {
-                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="All projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scrollUp('projects')" title="All projects">`
                             + filterName
                             + `</button></li>`;
                         } else {
-                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.expand)" title="${filter} projects">`
+                            return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.expand);app.functions.scrollUp('projects')" title="${filter} projects">`
                             + filterName
                             + `</button></li>`;
                         };
@@ -462,19 +462,19 @@ let app = {
                 let filterText = `[ Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"> ]`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand)" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button> ]`;
+                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scrollUp('projects')" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest <img src="./assets/icons/sort-desc.svg" alt="sort descending icon" style="pointer-events: auto;"></button> ]`;
+                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest <img src="./assets/icons/sort-desc.svg" alt="sort descending icon" style="pointer-events: auto;"></button> ]`;
 
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand)" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button> ]`;
+                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true)" title="Expand all projects" class="project-button expand">Expand all projects <img src="./assets/icons/expand-down.svg" alt="expand all project descriptions icon" style="pointer-events: auto;"></button> ]`
+                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true);app.functions.scrollUp('projects')" title="Expand all projects" class="project-button expand">Expand all projects <img src="./assets/icons/expand-down.svg" alt="expand all project descriptions icon" style="pointer-events: auto;"></button> ]`
 
                 if (expand === true) {
-                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false)" title="Collapse all projects" class="project-button expand">Collapse all projects <img src="./assets/icons/collapse-up.svg" alt="collapse all project descriptions icon" style="pointer-events: auto;"></button> ]`
+                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false);app.functions.scrollUp('projects')" title="Collapse all projects" class="project-button expand">Collapse all projects <img src="./assets/icons/collapse-up.svg" alt="collapse all project descriptions icon" style="pointer-events: auto;"></button> ]`
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav
@@ -524,7 +524,7 @@ let app = {
                     if (tag === app.projects.filter) {
                         return `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
                     } else {
-                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.expand)" class="tag">#` + tag + `</button>`
+                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.expand);app.functions.scrollUp('projects')" class="tag">#` + tag + `</button>`
                     }
                 })
 
@@ -605,11 +605,6 @@ let app = {
             if (app.projects.expand === true) {
                 app.functions.readMoreAll();
             }
-        },
-
-        allProjectsClick: () => {
-            app.functions.projectDisplay("All", app.projects.expand);
-            app.functions.scrollUp("projects");
         },
 
         // read more function
