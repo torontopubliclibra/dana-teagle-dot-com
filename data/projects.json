@@ -12,6 +12,23 @@
             "You can find documents, resources, and presentation materials I've previously collected for Ontario Trans I.D. at <a href='https://danateagle.com/trans-id' target='_blank'>this link</a>."
         ]
     },
+    "Ryan Perks": {
+        "id": "ryan-perks",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for book editor Ryan Perks, built with jQuery, HTML, and SCSS. I designed and developed the site between December 2024 and February 2025."
+        ],
+        "image": "./assets/projects/ryanperks.png",
+        "site": "https://ryanperks.com"
+    },
     "Chris Aino Pihlak": {
         "id": "chris-pihlak",
         "year": "2024",

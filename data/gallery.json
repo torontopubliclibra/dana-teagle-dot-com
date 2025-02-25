@@ -105,5 +105,13 @@
         "service": "Logo design",
         "site": "https://bodystoriesdance.com",
         "images": ["./assets/projects/body-stories-2.png"]
+    },
+    "Ryan Perks": {
+        "title": "Ryan Perks",
+        "year": "2025",
+        "service": "Web design & development",
+        "id": "ryan-perks",
+        "site": "https://ryanperks.com",
+        "images": ["./assets/projects/ryanperks.png"]
     }
 }

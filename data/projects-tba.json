@@ -83,22 +83,5 @@
         ],
         "image": "",
         "site": "https://hazelhenryaudio.com/"
-    },
-    "Ryan Perks": {
-        "id": "ryan-perks",
-        "year": "2025",
-        "tags": [
-            "JavaScript",
-            "Jquery",
-            "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
-        ],
-        "description": [
-            "This is a website for book editor Ryan Perks, built with jQuery, HTML, and SCSS. I developed the site in December 2024 and January 2025, using designs wireframed in Figma."
-        ],
-        "image": "",
-        "site": ""
     }
 }
