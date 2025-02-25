@@ -89,7 +89,7 @@
         "service": "Web design & development",
         "id": "sydney-gautreau",
         "site": "https://sydneygautreau.com",
-        "images": ["./assets/projects/sydneygautreau.jpg"]
+        "images": ["./assets/projects/sydneygautreau.png"]
     },
     "RUSTPROP": {
         "title": "RUSTPROP",

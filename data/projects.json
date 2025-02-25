@@ -152,7 +152,7 @@
         "description": [
             "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
         ],
-        "image": "./assets/projects/sydneygautreau.jpg",
+        "image": "./assets/projects/sydneygautreau.png",
         "site": "https://sydneygautreau.com"
     },
     "The Pigeon Hole": {
