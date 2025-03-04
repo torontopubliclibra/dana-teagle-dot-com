@@ -58,20 +58,6 @@
         "image": "./assets/projects/michaelcduguay.jpg",
         "site": "https://www.michaelcduguay.com/"
     },
-    "West83": {
-        "id": "west83",
-        "year": "2024",
-        "tags": [
-            "Affinity-designer",
-            "Google-sites"
-        ],
-        "description": [
-            "West83 is an organizational development practice led by Dr. Jessica Sartori, an experienced leader in Ontario's public sector.",
-            "In summer 2024, I worked with Jessica to design West83's branding and set up a basic Google Sites webpage for them."
-        ],
-        "image": "./assets/projects/west83.jpg",
-        "site": "https://www.west83.com/"
-    },
     "Connect Fund": {
         "id": "connect-fund",
         "year": "2024",
