@@ -186,7 +186,7 @@
             "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and SCSS, and using the Flickr API. The site retrieves JSON data representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page.",
             "I originally built the Pigeon Hole in July 2022, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
         ],
-        "image": "./assets/projects/pigeon-hole.png",
+        "image": "./assets/projects/pigeon-hole.jpg",
         "site": "https://pigeon.danateagle.com",
         "code": "/pigeon/repo"
     }
