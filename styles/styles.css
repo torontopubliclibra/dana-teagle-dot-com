@@ -411,6 +411,18 @@ html.sitemap body main td {
     border: solid #B57E9B 5px;
   }
 }
+@keyframes fade-in-error-dark {
+  0% {
+    opacity: 0;
+    color: #282b2c;
+    border: solid #282b2c 5px;
+  }
+  100% {
+    opacity: 1;
+    color: #f3e8e9;
+    border: solid #B57E9B 5px;
+  }
+}
 @keyframes fade-out {
   0% {
     opacity: 1;
@@ -3011,6 +3023,9 @@ footer .wrapper .scroll-to-top:hover img, footer .wrapper .scroll-to-top:focus i
 
 body.dark-mode {
   background: #282b2c;
+}
+body.dark-mode .js-disabled-projects, body.dark-mode .js-disabled-gallery, body.dark-mode .js-disabled {
+  animation: fade-in-error-dark 0.75s ease-in 1.5s forwards;
 }
 body.dark-mode header {
   background: linear-gradient(120deg, rgba(122, 145, 177, 0.6) 0%, rgba(122, 145, 177, 0.6) 2%, rgba(132, 165, 157, 0.75) 60%, rgba(132, 165, 157, 0.5) 98%, rgba(132, 165, 157, 0.5) 100%);

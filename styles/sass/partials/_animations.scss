@@ -93,6 +93,19 @@
     };
 };
 
+@keyframes fade-in-error-dark {
+    0% {
+        opacity: 0;
+        color: $black;
+        border: solid $black 5px;
+    };
+    100% {
+        opacity: 1;
+        color: $white;
+        border: solid $color2 5px;
+    };
+};
+
 // fade-out animation
 @keyframes fade-out {
     0% {

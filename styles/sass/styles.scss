@@ -1470,6 +1470,10 @@ footer .wrapper {
 
 body.dark-mode {
     background: $black;
+
+    .js-disabled-projects, .js-disabled-gallery, .js-disabled {
+        animation: fade-in-error-dark 0.75s ease-in 1.5s forwards;
+    }
     
     header {
         background: linear-gradient(120deg, rgba($color3, 0.6) 0%, rgba($color3, 0.6) 2%, rgba($color1, 0.75) 60%, rgba($color1, 0.5) 98%, rgba($color1, 0.5) 100%);
