@@ -1073,6 +1073,11 @@ html.rustprop body, html.rustprop .button {
 html.rustprop header {
   background: none !important;
 }
+html.rustprop .rp-hr {
+  border: solid 1px #B57E9B;
+  margin-top: 30px;
+  max-width: 850px;
+}
 html.rustprop h1 {
   text-align: center;
   cursor: text;
@@ -1146,13 +1151,73 @@ html.rustprop main .rp-landing a:hover {
     color: #f3e8e9;
   }
 }
+html.rustprop main .rp-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f3e8e9;
+  font-size: 1rem;
+  gap: 15px;
+}
+html.rustprop main .rp-nav .rp-nav-btn {
+  color: #f3e8e9;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html.rustprop main .rp-nav .rp-nav-btn img {
+  margin-top: 2px;
+  width: 25px;
+  filter: invert(1);
+}
+html.rustprop main .rp-nav .rp-nav-btn img.right {
+  transform: rotate(180deg);
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-nav .rp-nav-btn img {
+    transform: skew(-12deg);
+  }
+  html.rustprop main .rp-nav .rp-nav-btn img.right {
+    transform: rotate(180deg) skew(-12deg);
+  }
+}
+html.rustprop main .rp-nav .rp-nav-btn:hover {
+  color: #B57E9B;
+}
+html.rustprop main .rp-nav .rp-nav-btn:hover img {
+  transform: skew(-12deg);
+}
+html.rustprop main .rp-nav .rp-nav-btn:hover img.right {
+  transform: rotate(180deg) skew(-12deg);
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-nav .rp-nav-btn:hover {
+    color: #f3e8e9;
+  }
+}
+html.rustprop main .rp-nav .rp-nav-btn.disabled {
+  opacity: 0.25;
+  text-decoration: underline;
+  font-style: italic;
+}
+html.rustprop main .rp-nav .rp-nav-btn.disabled img {
+  transform: skew(-12deg);
+}
+html.rustprop main .rp-nav .rp-nav-btn.disabled img.right {
+  transform: rotate(180deg) skew(-12deg);
+}
+html.rustprop main .rp-nav .rp-nav-btn.disabled:hover {
+  color: #f3e8e9;
+}
 html.rustprop main .img-gallery {
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 85%;
   max-width: 600px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 html.rustprop main .img-gallery .item {
   display: flex;
