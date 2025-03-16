@@ -8,13 +8,17 @@ let redirectsFormatter = {
         let items = document.querySelectorAll(`div.item`);
         let formattedItems = ``;
 
-        items.forEach((item) => {
-            let id = `#` + item.id;
-
-            let formattedItem = `/rustprop/${id} /rustprop/${bodyID}${id}`;
-
-            formattedItems += formattedItem + `\n`;
-        });
+        if (bodyID === '1') {
+            items.forEach((item) => {
+                let formattedItem = `/rustprop/${item.id} /rustprop/#${item.id}`;
+                formattedItems += formattedItem + `\n`;
+            });
+        } else {
+            items.forEach((item) => {
+                let formattedItem = `/rustprop/${item.id} /rustprop/${bodyID}#${item.id}`;
+                formattedItems += formattedItem + `\n`;
+            });
+        }
 
         console.log(formattedItems);
     },
