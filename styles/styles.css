@@ -1081,7 +1081,6 @@ html.rustprop .rp-hr {
 html.rustprop h1 {
   text-align: center;
   cursor: text;
-  color: #f3e8e9;
   width: 85%;
   max-width: 850px;
   border-bottom: solid 2px #B57E9B;
@@ -1092,7 +1091,9 @@ html.rustprop h1 {
     text-align: left;
   }
 }
-html.rustprop h1 {
+html.rustprop h1 a {
+  text-decoration: none;
+  color: #f3e8e9;
   font-style: normal;
   font-size: 60px;
   -webkit-user-select: initial;

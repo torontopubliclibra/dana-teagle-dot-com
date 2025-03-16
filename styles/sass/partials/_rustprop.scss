@@ -24,7 +24,6 @@ html.rustprop {
     h1 {
         text-align: center;
         cursor: text;
-        color: $white;
         width: 85%;
         max-width: 850px;
         border-bottom: solid 2px $color2;
@@ -36,7 +35,9 @@ html.rustprop {
         }
     }
 
-    h1 {
+    h1 a {
+        text-decoration: none;
+        color: $white;
         font-style: normal;
         font-size: 60px;
         user-select: initial;
