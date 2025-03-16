@@ -43,7 +43,7 @@ html.rustprop {
         user-select: initial;
     }
 
-    main, footer {
+    .img-gallery, footer {
         opacity: 0;
         animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
     }

@@ -1100,7 +1100,7 @@ html.rustprop h1 a {
      -moz-user-select: initial;
           user-select: initial;
 }
-html.rustprop main, html.rustprop footer {
+html.rustprop .img-gallery, html.rustprop footer {
   opacity: 0;
   animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
 }
