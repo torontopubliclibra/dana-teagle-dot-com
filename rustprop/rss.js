@@ -28,16 +28,15 @@ let rssFormatter = {
                     title = title.replace(`&`, `&amp;`);
                 }
 
-                let formattedItem = `
-                <item>
-                    <title>${title}</title>
-                    <link>https://www.danateagle.com/rustprop${id}</link>
-                    <guid>https://www.danateagle.com/rustprop${id}</guid>
-                    <pubDate>${formattedDate}</pubDate>
-                    <description><![CDATA[<img src="https://www.danateagle.com/rustprop/images/${image}" alt="${title}"/><br/>${headline}]]></description>
-                </item>`;
-
-                formattedItems += formattedItem;
+                let formattedItem =
+`<item>
+    <title>${title}</title>
+    <link>https://www.danateagle.com/rustprop${id}</link>
+    <guid>https://www.danateagle.com/rustprop${id}</guid>
+    <pubDate>${formattedDate}</pubDate>
+    <description><![CDATA[<img src="https://www.danateagle.com/rustprop/images/${image}" alt="${title}"/><br/>${headline}]]></description>
+</item>`;
+                formattedItems += formattedItem + `\n`;
             }
         });
 
