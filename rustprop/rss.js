@@ -16,7 +16,6 @@ let rssFormatter = {
 
         items.forEach((item, index) => {
             if (index < 11) {
-                let id = `#` + item.id;
                 let date = item.querySelector(`.datestamp`).innerText;
                 let formattedDate = rssFormatter.formatDate(date);
                 let headline = item.querySelector('.headline').innerHTML;
@@ -31,8 +30,8 @@ let rssFormatter = {
                 let formattedItem =
 `<item>
     <title>${title}</title>
-    <link>https://www.danateagle.com/rustprop${id}</link>
-    <guid>https://www.danateagle.com/rustprop${id}</guid>
+    <link>https://www.danateagle.com/rustprop${item.id}</link>
+    <guid>https://www.danateagle.com/rustprop${item.id}</guid>
     <pubDate>${formattedDate}</pubDate>
     <description><![CDATA[<img src="https://www.danateagle.com/rustprop/images/${image}" alt="${title}"/><br/>${headline}]]></description>
 </item>`;
