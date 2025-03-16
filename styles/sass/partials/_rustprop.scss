@@ -65,6 +65,26 @@ html.rustprop {
         margin-bottom: 10px;
     }
 
+    .btn-container {
+        width: 50%;
+
+        .kofi-button {
+            min-width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: $tablet) {
+        .btn-container {
+            width: 75%;
+        }
+    }
+
+    @media only screen and (max-width: $mobile) {
+        .btn-container {
+            width: 100%;
+        }
+    }
+
     main {
         margin: 0 auto;
 
@@ -90,7 +110,6 @@ html.rustprop {
             }
             a:hover {
                 color: $color2;
-                // responsive to mobile
                 @media only screen and (max-width: $mobile) {
                     color: $white;
                 }
@@ -104,6 +123,11 @@ html.rustprop {
             color: $white;
             font-size: 1rem;
             gap: 15px;
+
+            @media only screen and (max-width: $mobile) {
+                width: 85%;
+                justify-content: space-between;
+            }
     
             .rp-nav-btn {
                 color: $white;

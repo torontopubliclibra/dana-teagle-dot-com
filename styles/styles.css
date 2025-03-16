@@ -1119,6 +1119,22 @@ html.rustprop header {
   padding-top: 30px;
   margin-bottom: 10px;
 }
+html.rustprop .btn-container {
+  width: 50%;
+}
+html.rustprop .btn-container .kofi-button {
+  min-width: 100%;
+}
+@media only screen and (max-width: 970px) {
+  html.rustprop .btn-container {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop .btn-container {
+    width: 100%;
+  }
+}
 html.rustprop main {
   margin: 0 auto;
 }
@@ -1158,6 +1174,12 @@ html.rustprop main .rp-nav {
   color: #f3e8e9;
   font-size: 1rem;
   gap: 15px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-nav {
+    width: 85%;
+    justify-content: space-between;
+  }
 }
 html.rustprop main .rp-nav .rp-nav-btn {
   color: #f3e8e9;

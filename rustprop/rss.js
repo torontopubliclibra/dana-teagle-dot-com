@@ -15,7 +15,7 @@ let rssFormatter = {
         let formattedItems = ``;
 
         items.forEach((item, index) => {
-            if (index < 10) {
+            if (index < 11) {
                 let id = `#` + item.id;
                 let date = item.querySelector(`.datestamp`).innerText;
                 let formattedDate = rssFormatter.formatDate(date);
