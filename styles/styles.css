@@ -1160,11 +1160,11 @@ html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
 html.rustprop main .rp-landing p {
   width: 80%;
 }
-html.rustprop main .rp-landing a:hover {
+html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
   color: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing a:hover {
+  html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
     color: #f3e8e9;
   }
 }
@@ -1205,17 +1205,17 @@ html.rustprop main .rp-nav .rp-nav-btn img.right {
     transform: rotate(180deg) skew(-12deg);
   }
 }
-html.rustprop main .rp-nav .rp-nav-btn:hover {
+html.rustprop main .rp-nav .rp-nav-btn:hover, html.rustprop main .rp-nav .rp-nav-btn:focus {
   color: #B57E9B;
 }
-html.rustprop main .rp-nav .rp-nav-btn:hover img {
+html.rustprop main .rp-nav .rp-nav-btn:hover img, html.rustprop main .rp-nav .rp-nav-btn:focus img {
   transform: skew(-12deg);
 }
-html.rustprop main .rp-nav .rp-nav-btn:hover img.right {
+html.rustprop main .rp-nav .rp-nav-btn:hover img.right, html.rustprop main .rp-nav .rp-nav-btn:focus img.right {
   transform: rotate(180deg) skew(-12deg);
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-nav .rp-nav-btn:hover {
+  html.rustprop main .rp-nav .rp-nav-btn:hover, html.rustprop main .rp-nav .rp-nav-btn:focus {
     color: #f3e8e9;
   }
 }
@@ -1230,7 +1230,7 @@ html.rustprop main .rp-nav .rp-nav-btn.disabled img {
 html.rustprop main .rp-nav .rp-nav-btn.disabled img.right {
   transform: rotate(180deg) skew(-12deg);
 }
-html.rustprop main .rp-nav .rp-nav-btn.disabled:hover {
+html.rustprop main .rp-nav .rp-nav-btn.disabled:hover, html.rustprop main .rp-nav .rp-nav-btn.disabled:focus {
   color: #f3e8e9;
 }
 html.rustprop main .img-gallery {
@@ -1274,11 +1274,11 @@ html.rustprop main .img-gallery .item .img-caption br {
 html.rustprop main .img-gallery .item .img-caption a {
   font-size: 0.85rem;
 }
-html.rustprop main .img-gallery .item .img-caption a:hover {
+html.rustprop main .img-gallery .item .img-caption a:hover, html.rustprop main .img-gallery .item .img-caption a:focus {
   color: #5f1f47;
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .img-gallery .item .img-caption a:hover {
+  html.rustprop main .img-gallery .item .img-caption a:hover, html.rustprop main .img-gallery .item .img-caption a:focus {
     color: #282b2c;
   }
 }
@@ -1322,11 +1322,11 @@ html.rustprop footer p.credit, html.rustprop footer a {
     text-align: left;
   }
 }
-html.rustprop footer a:hover {
+html.rustprop footer a:hover, html.rustprop footer a:focus {
   color: #B57E9B;
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop footer a:hover {
+  html.rustprop footer a:hover, html.rustprop footer a:focus {
     color: #f3e8e9;
   }
 }

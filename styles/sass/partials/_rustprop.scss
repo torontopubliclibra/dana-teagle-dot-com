@@ -109,7 +109,7 @@ html.rustprop {
             p {
                 width: 80%;
             }
-            a:hover {
+            a:hover, a:focus {
                 color: $color2;
                 @media only screen and (max-width: $mobile) {
                     color: $white;
@@ -155,7 +155,7 @@ html.rustprop {
                     }
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     color: $color2;
 
                     img {
@@ -184,7 +184,7 @@ html.rustprop {
                         }
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
                         color: $white;
                     }
                 }
@@ -231,7 +231,7 @@ html.rustprop {
                     a {
                         font-size: 0.85rem;
     
-                        &:hover {
+                        &:hover, &:focus {
                             color: #5f1f47;
                             // responsive to mobile
                             @media only screen and (max-width: $mobile) {
@@ -289,7 +289,7 @@ html.rustprop {
             }
         }
 
-        a:hover {
+        a:hover, a:focus {
             color: $color2;
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
