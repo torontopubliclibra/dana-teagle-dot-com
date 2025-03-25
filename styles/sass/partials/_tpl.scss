@@ -33,6 +33,23 @@ html.tpl {
         font-style: normal;
         font-size: 40px;
         user-select: initial;
+
+        &.four-oh-four {
+            margin-bottom: -15px;
+
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: -10px;
+            }
+        }
+    }
+
+    h1 a {
+        text-decoration: none;
+        color: $white;
+        font-style: normal;
+        font-size: 40px;
+        user-select: initial;
+        line-height: 1;
     }
 
     h2 {

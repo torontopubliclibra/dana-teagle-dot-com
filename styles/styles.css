@@ -496,6 +496,24 @@ html.tpl h1 {
      -moz-user-select: initial;
           user-select: initial;
 }
+html.tpl h1.four-oh-four {
+  margin-bottom: -15px;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl h1.four-oh-four {
+    margin-bottom: -10px;
+  }
+}
+html.tpl h1 a {
+  text-decoration: none;
+  color: #f3e8e9;
+  font-style: normal;
+  font-size: 40px;
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+          user-select: initial;
+  line-height: 1;
+}
 html.tpl h2 {
   font-size: 1rem;
   margin: 5px 0;
