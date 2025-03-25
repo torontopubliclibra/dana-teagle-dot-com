@@ -30,8 +30,8 @@ let rssFormatter = {
                 let formattedItem =
 `<item>
     <title>${title}</title>
-    <link>https://www.danateagle.com/rustprop${item.id}</link>
-    <guid>https://www.danateagle.com/rustprop${item.id}</guid>
+    <link>https://www.danateagle.com/rustprop/${item.id}</link>
+    <guid>https://www.danateagle.com/rustprop/${item.id}</guid>
     <pubDate>${formattedDate}</pubDate>
     <description><![CDATA[<img src="https://www.danateagle.com/rustprop/images/${image}" alt="${title}"/><br/>${headline}]]></description>
 </item>`;
