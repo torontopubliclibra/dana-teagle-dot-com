@@ -1117,6 +1117,7 @@ html.rustprop h1 a {
   -webkit-user-select: initial;
      -moz-user-select: initial;
           user-select: initial;
+  line-height: 1;
 }
 html.rustprop .img-gallery, html.rustprop footer {
   opacity: 0;
@@ -1135,7 +1136,7 @@ html.rustprop header {
   max-height: none;
   margin: 0;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 20px;
   margin-bottom: 10px;
 }
 html.rustprop .btn-container {
