@@ -46,10 +46,6 @@
             "link": "/goodreads",
             "description": ""
         },
-        "The Storygraph": {
-            "link": "/storygraph",
-            "description": ""
-        },
         "Spotify": {
             "link": "/spotify",
             "description": ""
@@ -64,10 +60,6 @@
             "link": "mailto:contact@danateagle.com",
             "description": "contact [at] danateagle.com"
         },
-        "PGP [Pretty Good Privacy] key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "ASCII text file download"
-        },
         "Discord": {
             "link": "/discord",
             "description": "torontopubliclibra on Discord"
@@ -79,6 +71,10 @@
         "RUSTPROP Ko-fi": {
             "link": "/kofi",
             "description": "Support my agitprop design project"
+        },
+        "PGP [Pretty Good Privacy] key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "ASCII text file download"
         }
     },
     "mutual aid": {
@@ -89,16 +85,12 @@
         "Davenport Aid Brigade": {
             "link": "https://linktr.ee/davenportaidbrigade",
             "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
-        },
-        "L.A. Fire Mutual Aid": {
-            "link": "https://tinyurl.com/lafiremutualaid",
-            "description": "Resources to seek and support for those affected by the California wildfires"
         }
     },
     "links & resources": {
         "TG I.D.": {
             "link": "https://tg-id.ca/",
-            "description": "Online hub I created, providing documents and resources about how to change your name and gender marker in Ontario, Canada."
+            "description": "Online hub providing documents and resources about how to change your name and gender marker in Ontario, Canada"
         },
         "Justice Trans": {
             "link": "https://justicetrans.org/en/",
@@ -122,11 +114,11 @@
         },
         "Cobalt": {
             "link": "https://cobalt.tools/",
-            "description": "Helpful tool for saving media (including video, audio, photos, or gifs) from websites"
+            "description": "Tool for saving media (including video, audio, photos, or gifs) from websites"
         },
         "Metadata cleaner": {
             "link": "https://metadata.systemli.org/",
-            "description": "Helpful tool for scrubbing hidden metadata from files"
+            "description": "Tool for scrubbing hidden metadata from files"
         }
     }
 }
