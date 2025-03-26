@@ -8,9 +8,10 @@
             "SCSS"
         ],
         "description": [
-            "TG I.D. is an online hub providing documents and resources about how to change your legal name and gender marker with the federal and provincial governments as a trans, non-binary, Two-Spirit, or gender non-conforming individual living in Ontario, Canada.",
-            "I have led workshops on Ontario name and gender marker changes since 2021."
+            "TG I.D. is an online resource collecting information on how to update legal names, gender markers, and identity documents as a trans, non-binary, Two-Spirit, or gender non-conforming individual living in Ontario, Canada.",
+            "I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years. The current version was initially launched in March 2025."
         ],
+        "image": "./assets/projects/tg-id.png",
         "site": "https://tg-id.ca"
     },
     "Ryan Perks": {
