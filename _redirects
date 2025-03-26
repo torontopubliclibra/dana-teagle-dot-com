@@ -32,7 +32,6 @@
 
 # Misc
 /sitemap /sitemap.xml
-/trans-id-resources /trans-id
 /alt /tpl
 /about /#about
 /gallery /#gallery
@@ -41,6 +40,8 @@
 /contact /#contact
 https://danateagle.com/now /tpl/now
 https://danateagle.com/uses /tpl/uses
+/trans-id-resources https://tg-id.ca
+/trans-id https://tg-id.ca
 
 # RUSTPROP redirects
 /rustprop/the-people-united /rustprop/#the-people-united

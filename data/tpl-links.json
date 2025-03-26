@@ -96,9 +96,9 @@
         }
     },
     "links & resources": {
-        "Ontario Trans I.D. resources": {
-            "link": "/trans-id",
-            "description": "Documents and resources I've collected for changing your name and/or gender marker with the governments of Ontario and Canada"
+        "TG I.D.": {
+            "link": "https://tg-id.ca/",
+            "description": "Online hub I created, providing documents and resources about how to change your name and gender marker in Ontario, Canada."
         },
         "Justice Trans": {
             "link": "https://justicetrans.org/en/",
