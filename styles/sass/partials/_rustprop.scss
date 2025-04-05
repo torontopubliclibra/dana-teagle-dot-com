@@ -228,6 +228,10 @@ html.rustprop {
                     br {
                         margin-bottom: 10px;
                     }
+
+                    .headline a {
+                        word-break: break-all;
+                    }
     
                     a {
                         font-size: 0.85rem;

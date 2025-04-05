@@ -1290,6 +1290,9 @@ html.rustprop main .img-gallery .item .img-caption {
 html.rustprop main .img-gallery .item .img-caption br {
   margin-bottom: 10px;
 }
+html.rustprop main .img-gallery .item .img-caption .headline a {
+  word-break: break-all;
+}
 html.rustprop main .img-gallery .item .img-caption a {
   font-size: 0.85rem;
 }
