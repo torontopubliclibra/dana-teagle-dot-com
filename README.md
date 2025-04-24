@@ -16,6 +16,8 @@ The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON t
         - /uses
         - /404
     - /rustprop
+        - /2
+        - /3
         - /rss.xml
     - /404
     - /sitemap.xml
