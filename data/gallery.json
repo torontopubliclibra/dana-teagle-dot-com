@@ -31,13 +31,13 @@
         "site": "https://michaelcduguay.com",
         "images": ["./assets/projects/michaelcduguay-2.jpg", "./assets/projects/michaelcduguay-3.jpg", "./assets/projects/michaelcduguay-4.jpg"]
     },
-    "Chris Pihlak": {
-        "title": "Chris Pihlak",
+    "Aino Pihlak": {
+        "title": "Aino Pihlak",
         "year": "2024",
         "service": "Web design & development",
-        "id": "chris-pihlak",
+        "id": "aino-pihlak",
         "site": "https://chrispihlak.com",
-        "images": ["./assets/projects/chris-pihlak.jpg"]
+        "images": ["./assets/projects/aino-pihlak.png"]
     },
     "Connect Fund": {
         "title": "Connect Fund",

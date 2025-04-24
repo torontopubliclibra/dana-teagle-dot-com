@@ -28,13 +28,13 @@
             "SCSS"
         ],
         "description": [
-            "This is a website for book editor Ryan Perks, built with jQuery, HTML, and SCSS. I designed and developed the site between December 2024 and February 2025."
+            "This is a website for book editor Ryan Perks, built with jQuery, HTML, and SCSS. I designed and developed the site for him between December 2024 and February 2025."
         ],
         "image": "./assets/projects/ryanperks.png",
         "site": "https://ryanperks.com"
     },
-    "Chris Aino Pihlak": {
-        "id": "chris-pihlak",
+    "Aino Pihlak": {
+        "id": "aino-pihlak",
         "year": "2024",
         "tags": [
             "HTML",
@@ -42,9 +42,9 @@
             "SCSS"
         ],
         "description": [
-            "This is a website for social historian Chris Aino Pihlak, built with HTML and SCSS. I designed and developed the site in November and December 2024."
+            "This is a website for social historian Aino Pihlak, built with HTML and SCSS. I designed and developed the site for her in November and December 2024."
         ],
-        "image": "./assets/projects/chris-pihlak.jpg",
+        "image": "./assets/projects/aino-pihlak.png",
         "site": "https://chrispihlak.com"
     },
     "Michael Cloud Duguay": {
@@ -74,7 +74,8 @@
         ],
         "description": [
             "Connect Fund is a not-for-profit organization aiming to provide comprehensive and widespread funding to 2SLGBTQ+ communities in Ontario to access the healthcare they need, led by Dr. Kate Greenaway, and based in Toronto, Ontario.",
-            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients, built in Webflow using designs wireframed in Figma."
+            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients, built in Webflow using designs wireframed in Figma.",
+            "I have continued to work with Connect Fund for periodic updates to the website as well as miscellaneous graphic design work."
         ],
         "image": "./assets/projects/connectfund.jpg",
         "site": "https://www.connectfund.org/"
@@ -109,7 +110,7 @@
             "SCSS"
         ],
         "description": [
-            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and developed the site in February and March 2024."
+            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and developed the site for her in February and March 2024."
         ],
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
@@ -124,27 +125,12 @@
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and using the open-source Pytheas framework. The application guides users through a selected tour length, and displays text and photos for each historic location.",
-            "I was the lead developer on the application in summer 2023, working alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and our project manager Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>Parallel 42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "I was the lead developer on the application in summer 2023, working alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and our project manager Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>Parallel 42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
+            "I have since continued to work with Hackforge on further implementations of Pytheas."
         ],
         "image": "./assets/projects/queerwalk.jpg",
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
-    },
-    "Note Taken": {
-        "id": "note-taken",
-        "year": "2023",
-        "tags": [
-            "TypeScript",
-            "Angular",
-            "CSS",
-            "SCSS"
-        ],
-        "description": [
-            "This is a notes app built with Angular, Typescript, and SCSS, that stores all inputted data locally without sending anything to a database. Unless deleted, your notes remain secure in the browser on your device until you clear the cache. You can save up to 50 text notes of 140 characters each in various colours. They can be sorted, filtered, searched, edited, and deleted, as well as exported to a .txt file. I originally developed the site in Feb 2023 as Pigeon Pad, and then relaunched it as Note Taken in Sept 2023 with improved functionality and an updated design."
-        ],
-        "image": "./assets/projects/note-taken.png",
-        "site": "https://notes.danateagle.com",
-        "code": "/notes/repo"
     },
     "Sydney Gautreau": {
         "id": "sydney-gautreau",
@@ -161,23 +147,5 @@
         ],
         "image": "./assets/projects/sydneygautreau.png",
         "site": "https://sydneygautreau.com"
-    },
-    "The Pigeon Hole": {
-        "id": "pigeon-hole",
-        "year": "2022",
-        "tags": [
-            "JavaScript",
-            "Jquery",
-            "HTML",
-            "CSS",
-            "SCSS"
-        ],
-        "description": [
-            "This is an application for viewing images of pigeons in different cities around the world, written in HTML, jQuery, and SCSS, and using the Flickr API. The site retrieves JSON data representing photos of pigeons, either in the user's selected city or in a random city, it shuffles through those image objects, and then it displays one of the photos on the page.",
-            "I originally built the Pigeon Hole in July 2022, relaunched it with improved scripts and updated styles in Sept 2023, and I continue to update and improve it periodically."
-        ],
-        "image": "./assets/projects/pigeon-hole.jpg",
-        "site": "https://pigeon.danateagle.com",
-        "code": "/pigeon/repo"
     }
 }
