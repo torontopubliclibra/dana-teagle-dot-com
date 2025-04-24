@@ -66,22 +66,5 @@
         ],
         "image": "",
         "site": ""
-    },
-    "Hazel Henry Audio": {
-        "id": "hazel-henry",
-        "year": "2025",
-        "tags": [
-            "JavaScript",
-            "Jquery",
-            "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
-        ],
-        "description": [
-            "This is a website for audio engineer and producer Hazel Henry, built with jQuery, HTML, and SCSS. I developed the site in January and February 2025, using designs wireframed in Figma."
-        ],
-        "image": "",
-        "site": "https://hazelhenryaudio.com/"
     }
 }

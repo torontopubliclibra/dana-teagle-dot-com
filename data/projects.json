@@ -16,6 +16,23 @@
         "image": "./assets/projects/tg-id.png",
         "site": "https://tg-id.ca"
     },
+    "Hazel Henry Audio": {
+        "id": "hazel-henry",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for Hazel Henry — a dynamic rock producer based in Portland, Oregon — that I designed and built between January and April 2025, using jQuery, HTML, and SCSS."
+        ],
+        "image": "./assets/projects/hazel-henry-audio.png",
+        "site": "https://hazelhenryaudio.com/"
+    },
     "Ryan Perks": {
         "id": "ryan-perks",
         "year": "2025",
