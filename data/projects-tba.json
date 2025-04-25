@@ -16,23 +16,6 @@
         "image": "",
         "site": "https://naomimccb.com/"
     },
-    "Poe Allphin": {
-        "id": "poe-allphin",
-        "year": "2025",
-        "tags": [
-            "JavaScript",
-            "Jquery",
-            "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
-        ],
-        "description": [
-            "This is a website for PhD musicology student Poe M. Allphin, built with jQuery, HTML, and SCSS. I developed the site in February and March 2025, using designs wireframed in Figma."
-        ],
-        "image": "",
-        "site": ""
-    },
    "Amalion Consulting": {
         "id": "amalion",
         "year": "2025",

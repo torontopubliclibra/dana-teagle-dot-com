@@ -16,6 +16,23 @@
         "image": "./assets/projects/tg-id.png",
         "site": "https://tg-id.ca"
     },
+    "Poe M. Allphin": {
+        "id": "poe-m-allphin",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for Poe M. Allphin — a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College — built with jQuery, HTML, and SCSS. I designed and developed the site between February and April 2025."
+        ],
+        "image": "./assets/projects/poe-m-allphin.png",
+        "site": "https://poemallphin.com"
+    },
     "Hazel Henry Audio": {
         "id": "hazel-henry-audio",
         "year": "2025",
@@ -54,6 +71,7 @@
         "id": "aino-pihlak",
         "year": "2024",
         "tags": [
+            "Figma",
             "HTML",
             "CSS",
             "SCSS"
