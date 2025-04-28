@@ -1,5 +1,5 @@
 {
-    "THB-1": {
+    "THB 1": {
         "title": "True History Brewing",
         "year": "2024",
         "service": "Web design & development",
@@ -7,7 +7,7 @@
         "site": "https://truehistorybeer.com",
         "images": ["./assets/projects/truehistorybeer.jpg"]
     },
-    "THB-2": {
+    "THB 2": {
         "title": "True History Brewing",
         "year": "2024",
         "service": "Web design & development",
@@ -15,7 +15,7 @@
         "site": "https://truehistorybeer.com",
         "images": ["./assets/projects/truehistorybeer-2.jpg", "./assets/projects/truehistorybeer-3.png", "./assets/projects/truehistorybeer-4.jpg"]
     },
-    "MCD-1": {
+    "MCD 1": {
         "title": "Michael Cloud Duguay",
         "year": "2024",
         "service": "Web design & development",
@@ -23,7 +23,7 @@
         "site": "https://michaelcduguay.com",
         "images": ["./assets/projects/michaelcduguay.jpg"]
     },
-    "MCD-2": {
+    "MCD 2": {
         "title": "Michael Cloud Duguay",
         "year": "2024",
         "service": "Web design & development",
@@ -90,7 +90,7 @@
         "site": "https://sydneygautreau.com",
         "images": ["./assets/projects/sydneygautreau.png"]
     },
-    "RUSTPROP": {
+    "RUSTPROP 1": {
         "title": "RUSTPROP",
         "year": "2024",
         "service": "Agitprop design project",
@@ -98,10 +98,18 @@
         "instagram": "/rp-insta",
         "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/streaming-sucks.jpeg", "./rustprop/images/push-notifs.png"]
     },
+    "RUSTPROP 2": {
+        "title": "RUSTPROP",
+        "year": "2024",
+        "service": "Agitprop design project",
+        "site": "/rustprop",
+        "instagram": "/rp-insta",
+        "images": ["./rustprop/images/the-people-united-1.jpeg", "./rustprop/images/tomato-needs.png", "./rustprop/images/obsessed-2.jpeg"]
+    },
     "TG I.D.": {
         "title": "TG I.D.",
         "year": "2025",
-        "service": "Web development & maintenance",
+        "service": "Web development & management",
         "id": "tg-id",
         "site": "https://tg-id.ca",
         "images": ["./assets/projects/tg-id.png"]
@@ -120,5 +128,21 @@
         "id": "ryan-perks",
         "site": "https://ryanperks.com",
         "images": ["./assets/projects/ryanperks.png"]
+    },
+    "Poe M. Allphin": {
+        "title": "Poe M. Allphin",
+        "year": "2025",
+        "service": "Web design & development",
+        "id": "poe-m-allphin",
+        "site": "https://poemallphin.com/",
+        "images": ["./assets/projects/poe-m-allphin.png"]
+    },
+    "Hazel Henry Audio": {
+        "title": "Hazel Henry Audio",
+        "year": "2025",
+        "service": "Web design & development",
+        "id": "hazel-henry-audio",
+        "site": "https://hazelhenryaudio.com/",
+        "images": ["./assets/projects/hazel-henry-audio.png"]
     }
 }

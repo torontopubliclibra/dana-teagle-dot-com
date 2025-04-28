@@ -1,4 +1,36 @@
 {
+    "Jupiter Wildwood": {
+        "id": "jupiter-wildwood",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            ""
+        ],
+        "image": "",
+        "site": ""
+    },
+    "Tony Matthews": {
+        "id": "tony-matthews",
+        "year": "2025",
+        "tags": [
+            "Webflow",
+            "Figma",
+            "HTML",
+            "CSS"
+        ],
+        "description": [
+            ""
+        ],
+        "image": "",
+        "site": ""
+    },
     "Naomi McCarroll-Butler": {
         "id": "naomicmccb",
         "year": "2025",
@@ -11,7 +43,7 @@
             "SCSS"
         ],
         "description": [
-            "This is a website for saxophonist, clarinetist, whistle player, and instrument maker Naomi McCarroll-Butler, built with jQuery, HTML, and SCSS. I developed the site in 2024 and 2025, using designs wireframed in Figma."
+            "This is a website for saxophonist, clarinetist, whistle player, and instrument maker Naomi McCarroll-Butler, that I designed and developed throughout 2024 and 2025."
         ],
         "image": "",
         "site": "https://naomimccb.com/"
