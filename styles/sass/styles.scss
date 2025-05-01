@@ -876,7 +876,7 @@ header {
     }
     .services-content {
         @include flex(column, 20px);
-        @include borderedBox(rgba($white, 0.8), $color1);
+        @include borderedBox(rgba($white, 0.8), $color2);
         max-width: 100%;
         width: 95%;
         padding: 50px;
@@ -1034,7 +1034,7 @@ header {
         margin: 0 auto 20px auto;
         
         hr {
-            border-color: $color2;
+            border-color: $color3;
             margin: 20px 0;
             width: 95%;
         }
@@ -1247,7 +1247,7 @@ header {
                 flex-flow: row wrap;
                 gap: 10px;
                 background-color: rgba($white, 0.8);
-                border: solid 4px $color2;
+                border: solid 4px $color1;
                 margin: 0 15px;
                 margin-top: 0px;
                 padding: 10px 15px;
