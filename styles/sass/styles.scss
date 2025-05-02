@@ -302,7 +302,7 @@ header {
             flex-direction: column;
             align-items: flex-start;
             gap: 5px;
-            top: 510px;
+            top: 575px;
             height: 125px;
 
             .mr {
@@ -342,7 +342,7 @@ header {
         }
 
         @media only screen and (max-width: $mobile) {
-            top: 475px;
+            top: 550px;
         }
     }
 
@@ -362,7 +362,7 @@ header {
         @media only screen and (max-width: $tablet) {
             gap: 20px;
             right: 20px;
-            bottom: 40px;
+            top: 465px;
             height: 70px;
 
             &.left {
@@ -371,7 +371,7 @@ header {
         }
 
         @media only screen and (max-width: $mobile) {
-            bottom: 20px;
+            top: 460px;
         }
     }
 

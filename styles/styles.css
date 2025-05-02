@@ -2103,7 +2103,7 @@ header .toggles ul li button.selected img, header .toggles ul li button:hover im
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-    top: 510px;
+    top: 575px;
     height: 125px;
   }
   header .toggles .mr {
@@ -2135,7 +2135,7 @@ header .toggles ul li button.selected img, header .toggles ul li button:hover im
 }
 @media only screen and (max-width: 768px) {
   header .toggles {
-    top: 475px;
+    top: 550px;
   }
 }
 header .socials {
@@ -2154,7 +2154,7 @@ header .socials.left {
   header .socials {
     gap: 20px;
     right: 20px;
-    bottom: 40px;
+    top: 465px;
     height: 70px;
   }
   header .socials.left {
@@ -2163,7 +2163,7 @@ header .socials.left {
 }
 @media only screen and (max-width: 768px) {
   header .socials {
-    bottom: 20px;
+    top: 460px;
   }
 }
 header .social {
