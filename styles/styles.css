@@ -1745,6 +1745,17 @@ h3 {
 #services blockquote a {
   display: inline;
 }
+#services blockquote .quote-marks {
+  font-size: 1.5rem;
+}
+#services blockquote .quote-marks:first-of-type {
+  padding-right: 4px;
+}
+@media only screen and (max-width: 768px) {
+  #services blockquote .quote-marks {
+    font-size: 1.25rem;
+  }
+}
 #services blockquote cite {
   font-style: normal;
 }

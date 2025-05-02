@@ -317,7 +317,7 @@ let app = {
 
         testimonialDisplay: () => {
 
-            app.elements.testimonial.html(`<p>${app.testimonials.data[app.testimonials.index].quote}</p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`);
+            app.elements.testimonial.html(`<p><span class="quote-marks">“</span>${app.testimonials.data[app.testimonials.index].quote}<span class="quote-marks">”</span></p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`);
         },
 
         nextTestimonial: () => {

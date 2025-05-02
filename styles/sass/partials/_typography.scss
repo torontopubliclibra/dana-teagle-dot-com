@@ -272,6 +272,18 @@ h3 {
     display: inline;
   }
 
+  .quote-marks {
+    font-size: 1.5rem;
+    
+    &:first-of-type {
+      padding-right: 4px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 1.25rem;
+    }
+  }
+
   cite {
     font-style: normal;
   }
