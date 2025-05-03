@@ -530,20 +530,11 @@ html.tpl h2 {
   }
 }
 html.tpl h2.tpl-page-heading {
-  font-size: 1.25rem;
   width: 100%;
   text-align: left;
-  border-bottom: solid #B57E9B 2px;
+  border-bottom: solid #B57E9B 4px;
   padding-bottom: 15px;
   margin-top: 0;
-}
-html.tpl h3 {
-  font-size: 18px;
-}
-@media only screen and (max-width: 768px) {
-  html.tpl h3 {
-    font-size: 15px;
-  }
 }
 html.tpl h3.previously-datestamp {
   margin: 0 !important;
@@ -573,7 +564,7 @@ html.tpl hr {
   width: 90%;
   max-width: 950px;
   margin: 0;
-  border: 1.5px solid #7a91b1;
+  border: 2px solid #7a91b1;
 }
 html.tpl hr.no-margin {
   margin: 0 !important;
@@ -623,7 +614,6 @@ html.tpl nav {
 html.tpl nav hr {
   border-color: #B57E9B;
   width: 100%;
-  max-width: 90vw;
   margin: 30px auto;
 }
 @media only screen and (max-width: 768px) {
@@ -641,7 +631,7 @@ html.tpl nav .button {
   font-style: normal;
 }
 html.tpl nav .button:hover, html.tpl nav .button.selected {
-  border: solid #84A59D 3px;
+  border: solid #7a91b1 3px;
   font-style: italic;
 }
 html.tpl nav .button.back {
@@ -659,7 +649,6 @@ html.tpl nav .button.back img {
   filter: invert(1);
 }
 html.tpl nav .button.back:hover img {
-  filter: invert(0);
   transform: skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
@@ -677,7 +666,7 @@ html.tpl nav .button.back:hover img {
   }
   html.tpl nav .button.selected:hover {
     font-style: italic;
-    border-color: #84A59D;
+    border-color: #7a91b1;
   }
   html.tpl nav .button.back {
     width: 85%;
@@ -746,7 +735,7 @@ html.tpl main textarea {
   word-break: break-all;
   color: #f3e8e9;
   width: 85%;
-  max-width: 700px;
+  max-width: 875px;
   min-width: 200px;
   margin-bottom: 20px;
   font-size: 0.75rem;
@@ -845,6 +834,17 @@ html.tpl main.tpl-subpage .tpl-page-content {
 }
 html.tpl main.tpl-subpage .tpl-page-content p {
   text-align: left;
+}
+html.tpl main.tpl-subpage .tpl-page-content .four-oh-four p {
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main.tpl-subpage .tpl-page-content .four-oh-four p {
+    text-align: left;
+  }
+}
+html.tpl main.tpl-subpage .tpl-page-content h2 a {
+  font-size: 1.25rem;
 }
 html.tpl main.tpl-subpage .tpl-page-content a {
   color: #f3e8e9;
@@ -961,6 +961,10 @@ html.tpl main .tpl-links h3 {
   text-align: center;
   width: auto;
   margin-bottom: 10px;
+  padding-top: 0;
+}
+html.tpl main .tpl-links h3:first-of-type {
+  padding-top: 15px;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links h3 {
@@ -1024,7 +1028,7 @@ html.tpl main .tpl-links .tpl-link hr {
   margin: 0;
 }
 html.tpl main .tpl-links .tpl-link:hover {
-  border: solid 3px #7a91b1;
+  border: solid 3px #B57E9B;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links .tpl-link:hover {
@@ -1085,32 +1089,41 @@ html.rustprop header {
   background: none !important;
 }
 html.rustprop .rp-hr {
-  border: solid 1px #B57E9B;
+  border: solid 2px rgba(243, 232, 233, 0.75);
   margin-top: 30px;
-  max-width: 850px;
+  max-width: 950px;
 }
 html.rustprop h1 {
   text-align: center;
   cursor: text;
   width: 85%;
-  max-width: 850px;
-  border-bottom: solid 2px #B57E9B;
+  max-width: 950px;
+  border-bottom: solid 4px rgba(243, 232, 233, 0.75);
   padding-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 {
     text-align: left;
+    width: 85%;
+    display: flex;
   }
 }
 html.rustprop h1 a {
+  background-color: rgb(95, 31, 71);
   text-decoration: none;
   color: #f3e8e9;
   font-style: normal;
-  font-size: 60px;
+  font-weight: 400;
   -webkit-user-select: initial;
      -moz-user-select: initial;
           user-select: initial;
   line-height: 1;
+  padding: 0 25px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop h1 a {
+    width: 100%;
+  }
 }
 html.rustprop .img-gallery, html.rustprop footer {
   opacity: 0;
@@ -1153,7 +1166,7 @@ html.rustprop main {
 }
 html.rustprop main .rp-landing {
   width: 85%;
-  max-width: 850px;
+  max-width: 950px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -1162,22 +1175,56 @@ html.rustprop main .rp-landing {
   padding-top: 10px;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: solid 2px #B57E9B;
+  border-bottom: solid 4px rgba(243, 232, 233, 0.75);
 }
 html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
+  text-decoration: none;
+}
+html.rustprop main .rp-landing a {
+  color: #282b2c;
+  background-color: #B57E9B;
+  padding: 2px 5px;
+}
+html.rustprop main .rp-landing a img {
+  height: 0.9rem;
+  margin-left: 10px;
+  margin-bottom: -0.3%;
+}
+html.rustprop main .rp-landing a img.lrg {
+  transform: scale(1.15);
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-landing a img {
+    transform: skew(-10deg);
+  }
+  html.rustprop main .rp-landing a img.lrg {
+    transform: scale(1.15) skew(-10deg);
+  }
 }
 html.rustprop main .rp-landing p {
   width: 80%;
 }
 html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
-  color: #B57E9B;
+  background-color: rgba(243, 232, 233, 0.75);
+}
+html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img {
+  transform: skew(-10deg);
+}
+html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg {
+  transform: scale(1.15) skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
-    color: #f3e8e9;
+    background-color: #B57E9B;
+  }
+  html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img {
+    transform: skew(-10deg);
+  }
+  html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg {
+    transform: scale(1.15) skew(-10deg);
   }
 }
 html.rustprop main .rp-nav {
@@ -1195,19 +1242,25 @@ html.rustprop main .rp-nav {
   }
 }
 html.rustprop main .rp-nav .rp-nav-btn {
-  color: #f3e8e9;
+  color: #282b2c;
+  background-color: #B57E9B;
+  padding: 3px 10px;
   font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 html.rustprop main .rp-nav .rp-nav-btn img {
-  margin-top: 2px;
-  width: 25px;
-  filter: invert(1);
+  height: 1.15rem;
+  margin-bottom: -0.3%;
+  margin-right: 10px;
+  margin-left: -5px;
 }
 html.rustprop main .rp-nav .rp-nav-btn img.right {
   transform: rotate(180deg);
+  margin-left: 10px;
+  margin-right: -5px;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-nav .rp-nav-btn img {
@@ -1218,7 +1271,8 @@ html.rustprop main .rp-nav .rp-nav-btn img.right {
   }
 }
 html.rustprop main .rp-nav .rp-nav-btn:hover, html.rustprop main .rp-nav .rp-nav-btn:focus {
-  color: #B57E9B;
+  background-color: rgba(243, 232, 233, 0.75);
+  color: #282b2c;
 }
 html.rustprop main .rp-nav .rp-nav-btn:hover img, html.rustprop main .rp-nav .rp-nav-btn:focus img {
   transform: skew(-12deg);
@@ -1228,13 +1282,14 @@ html.rustprop main .rp-nav .rp-nav-btn:hover img.right, html.rustprop main .rp-n
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-nav .rp-nav-btn:hover, html.rustprop main .rp-nav .rp-nav-btn:focus {
-    color: #f3e8e9;
+    background-color: #B57E9B;
   }
 }
 html.rustprop main .rp-nav .rp-nav-btn.disabled {
   opacity: 0.25;
-  text-decoration: underline;
   font-style: italic;
+  font-size: 1rem;
+  padding: 0px 10px;
 }
 html.rustprop main .rp-nav .rp-nav-btn.disabled img {
   transform: skew(-12deg);
@@ -1243,7 +1298,7 @@ html.rustprop main .rp-nav .rp-nav-btn.disabled img.right {
   transform: rotate(180deg) skew(-12deg);
 }
 html.rustprop main .rp-nav .rp-nav-btn.disabled:hover, html.rustprop main .rp-nav .rp-nav-btn.disabled:focus {
-  color: #f3e8e9;
+  background-color: #B57E9B;
 }
 html.rustprop main .img-gallery {
   display: flex;
@@ -1288,14 +1343,10 @@ html.rustprop main .img-gallery .item .img-caption .headline a {
 }
 html.rustprop main .img-gallery .item .img-caption a {
   font-size: 0.85rem;
-}
-html.rustprop main .img-gallery .item .img-caption a:hover, html.rustprop main .img-gallery .item .img-caption a:focus {
-  color: #5f1f47;
-}
-@media only screen and (max-width: 768px) {
-  html.rustprop main .img-gallery .item .img-caption a:hover, html.rustprop main .img-gallery .item .img-caption a:focus {
-    color: #282b2c;
-  }
+  color: #f3e8e9;
+  background-color: rgba(40, 43, 44, 0.75);
+  padding: 0 10px;
+  text-decoration: none;
 }
 @media only screen and (max-width: 970px) {
   html.rustprop main .rp-landing {
@@ -1325,11 +1376,13 @@ html.rustprop footer {
     padding-bottom: 30px;
   }
 }
+html.rustprop footer p.credit {
+  color: #f3e8e9;
+}
 html.rustprop footer p.credit, html.rustprop footer a {
   width: 85%;
-  max-width: 850px;
+  max-width: 950px;
   margin: 0 auto;
-  color: #f3e8e9;
   font-size: 14px;
 }
 @media only screen and (max-width: 768px) {
@@ -1337,12 +1390,31 @@ html.rustprop footer p.credit, html.rustprop footer a {
     text-align: left;
   }
 }
+html.rustprop footer a {
+  color: #282b2c;
+  background-color: #B57E9B;
+  padding: 2px 5px;
+  text-decoration: none;
+}
 html.rustprop footer a:hover, html.rustprop footer a:focus {
-  color: #B57E9B;
+  background-color: rgba(243, 232, 233, 0.75);
+  color: #282b2c;
+}
+html.rustprop footer a:hover img, html.rustprop footer a:focus img {
+  transform: skew(-10deg);
+}
+html.rustprop footer a:hover img.lrg, html.rustprop footer a:focus img.lrg {
+  transform: scale(1.15) skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
   html.rustprop footer a:hover, html.rustprop footer a:focus {
-    color: #f3e8e9;
+    background-color: #B57E9B;
+  }
+  html.rustprop footer a:hover img, html.rustprop footer a:focus img {
+    transform: skew(-10deg);
+  }
+  html.rustprop footer a:hover img.lrg, html.rustprop footer a:focus img.lrg {
+    transform: scale(1.15) skew(-10deg);
   }
 }
 
@@ -1455,6 +1527,11 @@ html.trans-id hr {
 @font-face {
   font-family: "Old English Text MT";
   src: url(/fonts/old_english_text_mt/old-english-text-mt.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "VT323";
+  src: url(/fonts/vt323/vt323.ttf) format("truetype");
   font-display: swap;
 }
 body, button, .button {
@@ -1656,6 +1733,11 @@ html.tpl h1, html.tpl h2, html.tpl h3 {
   letter-spacing: 5%;
   font-weight: 400;
 }
+@media only screen and (max-width: 768px) {
+  html.tpl h1 {
+    margin-bottom: -5px;
+  }
+}
 html.tpl h1 a {
   font-size: 3.75rem;
 }
@@ -1663,9 +1745,24 @@ html.tpl h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
-html.tpl .tpl-links h3 {
+html.tpl h2.tpl-page-heading {
+  font-size: 1.6rem;
+}
+html.tpl h3, html.tpl .tpl-links h3 {
   font-size: 1.6rem;
   font-style: normal;
+}
+
+html.rustprop h1 {
+  font-family: "VT323", monospace;
+}
+html.rustprop h1 a {
+  font-size: 12rem;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop h1 a {
+    font-size: 6rem;
+  }
 }
 
 h2 {

@@ -16,32 +16,40 @@ html.rustprop {
     }
 
     .rp-hr {
-        border: solid 1px $color2;
+        border: solid 2px rgba($white, 0.75);
         margin-top: 30px;
-        max-width: 850px;
+        max-width: 950px;
     }
 
     h1 {
         text-align: center;
         cursor: text;
         width: 85%;
-        max-width: 850px;
-        border-bottom: solid 2px $color2;
+        max-width: 950px;
+        border-bottom: solid 4px rgba($white, 0.75);
         padding-bottom: 20px;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             text-align: left;
+            width: 85%;
+            display: flex;
         }
     }
 
     h1 a {
+        background-color: rgb(95, 31, 71);
         text-decoration: none;
         color: $white;
         font-style: normal;
-        font-size: 60px;
+        font-weight: 400;
         user-select: initial;
         line-height: 1;
+        padding: 0 25px;
+
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
     }
 
     .img-gallery, footer {
@@ -92,7 +100,7 @@ html.rustprop {
 
         .rp-landing {
             width: 85%;
-            max-width: 850px;
+            max-width: 950px;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
@@ -101,19 +109,57 @@ html.rustprop {
             padding-top: 10px;
             padding-bottom: 20px;
             margin-bottom: 30px;
-            border-bottom: solid 2px $color2;
+            border-bottom: solid 4px rgba($white, 0.75);
             p, a {
                 color: $white;
                 font-size: 1rem;
                 text-align: center;
+                text-decoration: none;
+            }
+            a {
+                color: $black;
+                background-color: $color2;
+                padding: 2px 5px;
+            }
+            a img {
+                height: 0.9rem;
+                margin-left: 10px;
+                margin-bottom: -0.3%;
+
+                &.lrg {
+                    transform: scale(1.15)
+                }
+
+                @media only screen and (max-width: $mobile) {
+                    transform: skew(-10deg);
+    
+                    &.lrg {
+                        transform: scale(1.15) skew(-10deg);
+                    }
+                }
             }
             p {
                 width: 80%;
             }
             a:hover, a:focus {
-                color: $color2;
+                background-color: rgba($white, 0.75);
+                img {
+                    transform: skew(-10deg);
+
+                    &.lrg {
+                        transform: scale(1.15) skew(-10deg);
+                    }
+                }
                 @media only screen and (max-width: $mobile) {
-                    color: $white;
+                    background-color: $color2;
+
+                    img {
+                        transform: skew(-10deg);
+    
+                        &.lrg {
+                            transform: scale(1.15) skew(-10deg);
+                        }
+                    }
                 }
             }
         }
@@ -132,19 +178,25 @@ html.rustprop {
             }
     
             .rp-nav-btn {
-                color: $white;
+                color: $black;
+                background-color: $color2;
+                padding: 3px 10px;
                 font-size: 1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-decoration: none;
         
                 img {
-                    margin-top: 2px;
-                    width: 25px;
-                    filter: invert(1);
+                    height: 1.15rem;
+                    margin-bottom: -0.3%;
+                    margin-right: 10px;
+                    margin-left: -5px;
         
                     &.right {
                         transform: rotate(180deg);
+                        margin-left: 10px;
+                        margin-right: -5px;
                     }
 
                     @media only screen and (max-width: $mobile) {
@@ -157,7 +209,8 @@ html.rustprop {
                 }
 
                 &:hover, &:focus {
-                    color: $color2;
+                    background-color: rgba($white, 0.75);
+                    color: $black;
 
                     img {
                         transform: skew(-12deg);
@@ -168,14 +221,15 @@ html.rustprop {
                     }
 
                     @media only screen and (max-width: $mobile) {
-                        color: $white;
+                        background-color: $color2;
                     }
                 }
 
                 &.disabled {
                     opacity: 0.25;
-                    text-decoration: underline;
                     font-style: italic;
+                    font-size: 1rem;
+                    padding: 0px 10px;
 
                     img {
                         transform: skew(-12deg);
@@ -186,7 +240,7 @@ html.rustprop {
                     }
 
                     &:hover, &:focus {
-                        color: $white;
+                        background-color: $color2;
                     }
                 }
             }
@@ -232,17 +286,13 @@ html.rustprop {
                     .headline a {
                         word-break: break-all;
                     }
-    
+
                     a {
                         font-size: 0.85rem;
-    
-                        &:hover, &:focus {
-                            color: #5f1f47;
-                            // responsive to mobile
-                            @media only screen and (max-width: $mobile) {
-                                color: $black;
-                            }
-                        }
+                        color: $white;
+                        background-color: rgba($black, 0.75);
+                        padding: 0 10px;
+                        text-decoration: none
                     }
                 }
             }
@@ -280,12 +330,15 @@ html.rustprop {
             padding-top: 10px;
             padding-bottom: 30px;
         }
+        
+        p.credit {
+            color: $white;
+        }
 
         p.credit, a {
             width: 85%;
-            max-width: 850px;
+            max-width: 950px;
             margin: 0 auto;
-            color: $white;
             font-size: 14px;
 
             // responsive to mobile
@@ -293,12 +346,32 @@ html.rustprop {
                 text-align: left;
             }
         }
-
+        a {
+            color: $black;
+            background-color: $color2;
+            padding: 2px 5px;
+            text-decoration: none;
+        }
         a:hover, a:focus {
-            color: $color2;
-            // responsive to mobile
+            background-color: rgba($white, 0.75);
+            color: $black;
+            img {
+                transform: skew(-10deg);
+
+                &.lrg {
+                    transform: scale(1.15) skew(-10deg);
+                }
+            }
             @media only screen and (max-width: $mobile) {
-                color: $white;
+                background-color: $color2;
+
+                img {
+                    transform: skew(-10deg);
+
+                    &.lrg {
+                        transform: scale(1.15) skew(-10deg);
+                    }
+                }
             }
         }
     }

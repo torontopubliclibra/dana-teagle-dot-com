@@ -2,17 +2,20 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// font import
+// font imports
 @font-face {
   font-family: "Source Code Pro";
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
-
-// font import
 @font-face {
   font-family: "Old English Text MT";
   src: url(/fonts/old_english_text_mt/old-english-text-mt.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "VT323";
+  src: url(/fonts/vt323/vt323.ttf) format("truetype");
   font-display: swap;
 }
 
@@ -200,6 +203,12 @@ html.tpl {
     font-weight: 400;
   }
 
+  @media only screen and (max-width: $mobile) {
+    h1 {
+      margin-bottom: -5px;
+    }
+  }
+
   h1 a {
     font-size: 3.75rem;
   }
@@ -207,11 +216,29 @@ html.tpl {
   h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+
+    &.tpl-page-heading {
+      font-size: 1.6rem;
+    }
   }
 
-  .tpl-links h3 {
+  h3, .tpl-links h3 {
     font-size: 1.6rem;
     font-style: normal;
+  }
+}
+
+html.rustprop {
+  h1 {
+    font-family: "VT323", monospace;
+
+    a {
+      font-size: 12rem;
+
+      @media only screen and (max-width: $mobile) {
+        font-size: 6rem;
+      }
+    }
   }
 }
 

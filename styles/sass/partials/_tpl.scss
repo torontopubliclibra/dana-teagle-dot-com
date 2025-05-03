@@ -69,23 +69,15 @@ html.tpl {
         }
 
         &.tpl-page-heading {
-            font-size: 1.25rem;
             width: 100%;
             text-align: left;
-            border-bottom: solid $color2 2px;
+            border-bottom: solid $color2 4px;
             padding-bottom: 15px;
             margin-top: 0;
         }
     }
 
     h3 {
-        font-size: 18px;
-
-        // responsive to mobile
-        @media only screen and (max-width: $mobile) {
-            font-size: 15px;
-        }
-
         &.previously-datestamp {
             margin: 0 !important;
             padding-bottom: 0 !important;
@@ -117,7 +109,7 @@ html.tpl {
         width: 90%;
         max-width: 950px;
         margin: 0;
-        border: 1.5px solid $color3;
+        border: 2px solid $color3;
 
         &.no-margin {
             margin: 0 !important;
@@ -174,7 +166,6 @@ html.tpl {
         hr {
             border-color: $color2;
             width: 100%;
-            max-width: 90vw;
             margin: 30px auto;
 
             // responsive to mobile
@@ -193,7 +184,7 @@ html.tpl {
             font-style: normal;
 
             &:hover, &.selected {
-                border: solid $color1 3px;
+                border: solid $color3 3px;
                 font-style: italic;
             }
 
@@ -214,7 +205,6 @@ html.tpl {
 
                 &:hover {
                     img {
-                        filter: invert(0);
                         transform: skew(-10deg);
                     }
                 }
@@ -240,7 +230,7 @@ html.tpl {
             }
             .button.selected:hover {
                 font-style: italic;
-                border-color: $color1;
+                border-color: $color3;
             }
 
             .button.back {
@@ -362,7 +352,7 @@ html.tpl {
             word-break: break-all;
             color: $white;
             width: 85%;
-            max-width: 700px;
+            max-width: 875px;
             min-width: 200px;
             margin-bottom: 20px;
             font-size: 0.75rem;
@@ -476,6 +466,20 @@ html.tpl {
                     text-align: left;
                 }
 
+                .four-oh-four {
+                    p {
+                        text-align: center;
+
+                        @media only screen and (max-width: $mobile) {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                h2 a {
+                    font-size: 1.25rem;
+                }
+
                 a {
                     color: $white;
                     font-size: 1rem;
@@ -483,7 +487,6 @@ html.tpl {
                     &:hover {
                         color: $color3;
 
-                        // responsive to tablet
                         @media only screen and (max-width: $tablet) {
                             color: $white;
                         }
@@ -605,6 +608,11 @@ html.tpl {
                 text-align: center;
                 width: auto;
                 margin-bottom: 10px;
+                padding-top: 0;
+
+                &:first-of-type {
+                    padding-top: 15px;
+                }
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
@@ -620,7 +628,6 @@ html.tpl {
             }
     
             .tpl-link {
-                // background-color: $color1;
                 background: $black;
                 border: solid 3px $color1;
                 min-width: 425px;
@@ -664,7 +671,7 @@ html.tpl {
                 }
               
                 &:hover {
-                    border: solid 3px $color3;
+                    border: solid 3px $color2;
 
                     @media only screen and (max-width: $mobile) {
                         border: solid 3px $color1;
