@@ -491,7 +491,7 @@ html.tpl h1, html.tpl h2, html.tpl h3 {
 }
 html.tpl h1 {
   font-style: normal;
-  font-size: 40px;
+  font-size: 45px;
   -webkit-user-select: initial;
      -moz-user-select: initial;
           user-select: initial;
@@ -508,14 +508,12 @@ html.tpl h1 a {
   text-decoration: none;
   color: #f3e8e9;
   font-style: normal;
-  font-size: 40px;
   -webkit-user-select: initial;
      -moz-user-select: initial;
           user-select: initial;
   line-height: 1;
 }
 html.tpl h2 {
-  font-size: 1rem;
   margin: 5px 0;
 }
 @media only screen and (max-width: 970px) {
@@ -623,6 +621,7 @@ html.tpl nav {
   max-width: 950px;
 }
 html.tpl nav hr {
+  border-color: #B57E9B;
   width: 100%;
   max-width: 90vw;
   margin: 30px auto;
@@ -637,13 +636,12 @@ html.tpl nav .button {
   color: #f3e8e9;
   border: solid #f3e8e9 3px;
   background: none;
-  font-size: 1rem;
   padding: 7px 25px;
+  font-size: 1rem;
   font-style: normal;
 }
 html.tpl nav .button:hover, html.tpl nav .button.selected {
-  background-color: #84A59D;
-  color: #282b2c;
+  border: solid #84A59D 3px;
   font-style: italic;
 }
 html.tpl nav .button.back {
@@ -675,13 +673,11 @@ html.tpl nav .button.back:hover img {
     font-style: normal;
   }
   html.tpl nav .button:hover {
-    color: #f3e8e9;
-    background: none;
+    border-color: #f3e8e9;
   }
   html.tpl nav .button.selected:hover {
-    color: #282b2c;
     font-style: italic;
-    background-color: #84A59D;
+    border-color: #84A59D;
   }
   html.tpl nav .button.back {
     width: 85%;
@@ -801,7 +797,6 @@ html.tpl main .tpl-landing img, html.tpl main.tpl-subpage img {
   margin: 10px 0;
   margin-top: 0;
   width: 250px;
-  border: solid #B57E9B 3px;
   pointer-events: none;
 }
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
@@ -979,8 +974,8 @@ html.tpl main .tpl-links h3.h3-trans-id {
   max-width: 95%;
 }
 html.tpl main .tpl-links .tpl-link {
-  background: #84A59D;
-  border: solid 3px #f3e8e9;
+  background: #282b2c;
+  border: solid 3px #84A59D;
   min-width: 425px;
   max-width: 500px;
   font-size: 20px;
@@ -995,6 +990,7 @@ html.tpl main .tpl-links .tpl-link {
   align-items: center;
   width: auto;
   margin: 5px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 html.tpl main .tpl-links .tpl-link .link-title {
@@ -1005,25 +1001,22 @@ html.tpl main .tpl-links .tpl-link .link-title {
   line-height: 1.25;
   color: #282b2c;
   min-width: 100%;
+  color: #f3e8e9;
 }
 html.tpl main .tpl-links .tpl-link .link-title p {
   width: calc(100% - 15px);
+  color: #f3e8e9;
 }
 html.tpl main .tpl-links .tpl-link .link-title img {
   width: 18px;
-}
-html.tpl main .tpl-links .tpl-link .link-title i {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  min-height: 15px;
-  width: 10px;
+  filter: invert(1);
 }
 html.tpl main .tpl-links .tpl-link .button-description {
   min-width: 100%;
   font-size: 12px;
   font-style: normal;
   text-align: left;
+  color: #f3e8e9;
 }
 html.tpl main .tpl-links .tpl-link hr {
   border: solid 1px #f3e8e9;
@@ -1031,11 +1024,11 @@ html.tpl main .tpl-links .tpl-link hr {
   margin: 0;
 }
 html.tpl main .tpl-links .tpl-link:hover {
-  background: rgba(122, 145, 177, 0.75);
+  border: solid 3px #7a91b1;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links .tpl-link:hover {
-    background: #84A59D;
+    border: solid 3px #84A59D;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1459,6 +1452,11 @@ html.trans-id hr {
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: "Old English Text MT";
+  src: url(/fonts/old_english_text_mt/old-english-text-mt.ttf) format("truetype");
+  font-display: swap;
+}
 body, button, .button {
   font-size: 18px;
   text-align: left;
@@ -1651,6 +1649,23 @@ h1:hover, h1:focus {
     color: #282b2c;
     max-width: 400px;
   }
+}
+
+html.tpl h1, html.tpl h2, html.tpl h3 {
+  font-family: "Old English Text MT", serif;
+  letter-spacing: 5%;
+  font-weight: 400;
+}
+html.tpl h1 a {
+  font-size: 3.75rem;
+}
+html.tpl h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+html.tpl .tpl-links h3 {
+  font-size: 1.6rem;
+  font-style: normal;
 }
 
 h2 {

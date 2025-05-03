@@ -31,7 +31,7 @@ html.tpl {
 
     h1 {
         font-style: normal;
-        font-size: 40px;
+        font-size: 45px;
         user-select: initial;
 
         &.four-oh-four {
@@ -47,13 +47,11 @@ html.tpl {
         text-decoration: none;
         color: $white;
         font-style: normal;
-        font-size: 40px;
         user-select: initial;
         line-height: 1;
     }
 
     h2 {
-        font-size: 1rem;
         margin: 5px 0;
 
         // responsive to tablet
@@ -174,6 +172,7 @@ html.tpl {
         max-width: 950px;
 
         hr {
+            border-color: $color2;
             width: 100%;
             max-width: 90vw;
             margin: 30px auto;
@@ -189,13 +188,12 @@ html.tpl {
             color: $white;
             border: solid $white 3px;
             background: none;
-            font-size: 1rem;
             padding: 7px 25px;
+            font-size: 1rem;
             font-style: normal;
 
             &:hover, &.selected {
-                background-color: $color1;
-                color: $black;
+                border: solid $color1 3px;
                 font-style: italic;
             }
 
@@ -238,13 +236,11 @@ html.tpl {
                 font-style: normal;
             }
             .button:hover {
-                color: $white;
-                background: none;
+                border-color: $white;
             }
             .button.selected:hover {
-                color: $black;
                 font-style: italic;
-                background-color: $color1;
+                border-color: $color1;
             }
 
             .button.back {
@@ -421,7 +417,6 @@ html.tpl {
                 margin: 10px 0;
                 margin-top: 0;
                 width: 250px;
-                border: solid $color2 3px;
                 pointer-events: none;
             }
             p {
@@ -626,14 +621,15 @@ html.tpl {
     
             .tpl-link {
                 // background-color: $color1;
-                background: $color1;
-                border: solid 3px $white;
+                background: $black;
+                border: solid 3px $color1;
                 min-width: 425px;
                 max-width: 500px;
                 @include textStyle (20px, left);
                 @include flex(column, 10px, center, center);
                 width: auto;
                 margin: 5px;
+                margin-bottom: 10px;
 
                 cursor: pointer;
               
@@ -642,18 +638,14 @@ html.tpl {
                     gap: 10px;
                     @include textStyle (16px, left);
                     min-width: 100%;
+                    color: $white;
                     p {
                         width: calc(100% - 15px);
+                        color: $white;
                     }
                     img {
                         width: 18px;
-                    }
-                    i {
-                        font-size: 14px;
-                        display: flex;
-                        align-items: center;
-                        min-height: 15px;
-                        width: 10px;
+                        filter: invert(1);
                     }
                 }
     
@@ -662,6 +654,7 @@ html.tpl {
                     font-size: 12px;
                     font-style: normal;
                     text-align: left;
+                    color: $white;
                 }
     
                 hr {
@@ -671,10 +664,10 @@ html.tpl {
                 }
               
                 &:hover {
-                  background: rgba($color3, 0.75);
-                    // responsive to mobile
+                    border: solid 3px $color3;
+
                     @media only screen and (max-width: $mobile) {
-                        background: $color1;
+                        border: solid 3px $color1;
                     }
                 }
     

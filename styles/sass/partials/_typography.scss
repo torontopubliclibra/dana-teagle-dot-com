@@ -9,6 +9,13 @@
   font-display: swap;
 }
 
+// font import
+@font-face {
+  font-family: "Old English Text MT";
+  src: url(/fonts/old_english_text_mt/old-english-text-mt.ttf) format("truetype");
+  font-display: swap;
+}
+
 // default typography
 body, button, .button {
   @include textStyle (18px);
@@ -183,6 +190,28 @@ h1 {
   @media only screen and (max-width: $mobile) {
     @include textStyle (50px, center, 1);
     max-width: 400px;
+  }
+}
+
+html.tpl {
+  h1, h2, h3 {
+    font-family: "Old English Text MT", serif;
+    letter-spacing: 5%;
+    font-weight: 400;
+  }
+
+  h1 a {
+    font-size: 3.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .tpl-links h3 {
+    font-size: 1.6rem;
+    font-style: normal;
   }
 }
 
