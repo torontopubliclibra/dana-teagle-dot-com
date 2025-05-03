@@ -71,7 +71,7 @@ html.tpl {
         &.tpl-page-heading {
             width: 100%;
             text-align: left;
-            border-bottom: solid $color2 4px;
+            border-bottom: solid $color3 3.5px;
             padding-bottom: 15px;
             margin-top: 0;
         }
@@ -193,8 +193,9 @@ html.tpl {
                 justify-content: center;
                 margin: -8px;
                 margin-bottom: -8px;
-                margin-left: calc(50% - 150px);
-                width: 300px;
+                margin-left: calc(50% - 105px);
+                padding-left: 15px;
+                width: 210px;
                 gap: 10px;
 
                 img {
@@ -234,7 +235,6 @@ html.tpl {
             }
 
             .button.back {
-                width: 85%;
                 margin-left: 7.5%;
 
                 &:hover {

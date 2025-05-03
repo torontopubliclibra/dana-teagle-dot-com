@@ -532,7 +532,7 @@ html.tpl h2 {
 html.tpl h2.tpl-page-heading {
   width: 100%;
   text-align: left;
-  border-bottom: solid #B57E9B 4px;
+  border-bottom: solid #7a91b1 3.5px;
   padding-bottom: 15px;
   margin-top: 0;
 }
@@ -639,8 +639,9 @@ html.tpl nav .button.back {
   justify-content: center;
   margin: -8px;
   margin-bottom: -8px;
-  margin-left: calc(50% - 150px);
-  width: 300px;
+  margin-left: calc(50% - 105px);
+  padding-left: 15px;
+  width: 210px;
   gap: 10px;
 }
 html.tpl nav .button.back img {
@@ -669,7 +670,6 @@ html.tpl nav .button.back:hover img {
     border-color: #7a91b1;
   }
   html.tpl nav .button.back {
-    width: 85%;
     margin-left: 7.5%;
   }
   html.tpl nav .button.back:hover img {
