@@ -177,7 +177,7 @@ html.tpl {
 
         .button {
             color: $white;
-            border: solid $white 3px;
+            border: solid rgba($white, 0.75) 3px;
             background: none;
             padding: 7px 25px;
             font-size: 1rem;
@@ -226,7 +226,7 @@ html.tpl {
                 font-style: normal;
             }
             .button:hover {
-                border-color: $white;
+                border-color: rgba($white, 0.75);
             }
             .button.selected:hover {
                 font-style: italic;
@@ -271,46 +271,6 @@ html.tpl {
             li {
                 margin: 0;
                 padding: 0;
-
-                // .button {
-                //     color: $white;
-                //     border: solid $white 3px;
-                //     background: none;
-                //     font-size: 1rem;
-                //     padding: 7px 25px;
-                //     font-style: normal;
-
-                //     &:hover, &.selected {
-                //         background-color: $color1;
-                //         color: $black;
-                //         font-style: italic;
-                //     }
-                // }
-
-                // // responsive to mobile
-                // @media only screen and (max-width: $mobile) {
-
-                //     &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
-                //         margin-bottom: 5px;
-                //     }
-
-                //     .button {
-                //         padding: 7px 25px;
-                //     }
-
-                //     .button, .button:hover {
-                //         font-style: normal;
-                //     }
-                //     .button:hover {
-                //         color: $white;
-                //         background: none;
-                //     }
-                //     .button.selected:hover {
-                //         color: $black;
-                //         font-style: italic;
-                //         background-color: $color1;
-                //     }
-                // }
             }
         }
     }
@@ -344,7 +304,7 @@ html.tpl {
         }
 
         textarea {
-            border: solid $white 2px;
+            border: solid rgba($white, 0.75) 2px;
             min-height: 40px;
             max-height: 200px;
             height: 40px;
@@ -404,6 +364,7 @@ html.tpl {
             gap: 10px;
             margin: 10px 0;
             img {
+                border: solid 3px rgba($white, 0.75);
                 margin: 10px 0;
                 margin-top: 0;
                 width: 250px;
@@ -665,7 +626,7 @@ html.tpl {
                 }
     
                 hr {
-                    border: solid 1px $white;
+                    border: solid 1px rgba($white, 0.75);
                     width: 100%;
                     margin: 0;
                 }
