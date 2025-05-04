@@ -633,11 +633,16 @@ let app = {
 
         // read more by ID function 
         readMoreByID: (id) => {
-
             let project = document.getElementById(`${id}`);
             let button = project.querySelector(".read-more");
 
-            button.click();
+            setTimeout(() => {
+                let project = document.getElementById(`${id}`);
+                let button = project.querySelector(".read-more");
+                button.click();
+                console.log('log')
+            }, 200);
+            app.functions.projectDisplay(app.projects.filter, false);
         },
 
         // read more all function 

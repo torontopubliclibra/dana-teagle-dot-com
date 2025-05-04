@@ -1856,6 +1856,9 @@ h3 {
   margin: 0;
   padding: 25px;
 }
+#services blockquote p {
+  line-height: 1.75rem;
+}
 #services blockquote a {
   display: inline;
 }
@@ -3169,9 +3172,9 @@ header .scroll-down img {
 #projects .projects-container .project .project-description.active p .project-image {
   image-rendering: pixelated;
   max-width: 100%;
-  border: solid 4px #7a91b1;
   margin-bottom: 10px;
   pointer-events: none;
+  border: solid rgba(40, 43, 44, 0.4) 4px;
 }
 
 #contact .contact-content {
@@ -3350,6 +3353,9 @@ body.dark-mode #projects .projects-nav img {
 }
 body.dark-mode #projects .projects-container .project {
   background-color: rgba(122, 145, 177, 0.4);
+}
+body.dark-mode #projects .projects-container .project .project-description .project-image {
+  border: solid rgba(243, 232, 233, 0.8) 4px;
 }
 body.dark-mode #projects .projects-container .project .project-description button, body.dark-mode #projects .projects-container .project .project-description a {
   background-color: rgba(40, 43, 44, 0.8);
