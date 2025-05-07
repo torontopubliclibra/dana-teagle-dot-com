@@ -1194,6 +1194,7 @@ html.rustprop main .rp-landing a img {
   height: 0.9rem;
   margin-left: 10px;
   margin-bottom: -0.3%;
+  filter: invert(12%) sepia(7%) saturate(472%) hue-rotate(149deg) brightness(98%) contrast(89%);
 }
 html.rustprop main .rp-landing a img.lrg {
   transform: scale(1.15);
@@ -1258,6 +1259,7 @@ html.rustprop main .rp-nav .rp-nav-btn img {
   margin-bottom: -0.3%;
   margin-right: 10px;
   margin-left: -5px;
+  filter: invert(12%) sepia(7%) saturate(472%) hue-rotate(149deg) brightness(98%) contrast(89%);
 }
 html.rustprop main .rp-nav .rp-nav-btn img.right {
   transform: rotate(180deg);
