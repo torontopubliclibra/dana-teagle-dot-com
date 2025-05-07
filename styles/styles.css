@@ -1187,7 +1187,7 @@ html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
 }
 html.rustprop main .rp-landing a {
   color: #282b2c;
-  background-color: #B57E9B;
+  background-color: #D4B3C2;
   padding: 2px 5px;
 }
 html.rustprop main .rp-landing a img {
@@ -1220,7 +1220,7 @@ html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
-    background-color: #B57E9B;
+    background-color: #D4B3C2;
   }
   html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img {
     transform: skew(-10deg);
@@ -1245,7 +1245,7 @@ html.rustprop main .rp-nav {
 }
 html.rustprop main .rp-nav .rp-nav-btn {
   color: #282b2c;
-  background-color: #B57E9B;
+  background-color: #D4B3C2;
   padding: 3px 10px;
   font-size: 1rem;
   display: flex;
@@ -1284,7 +1284,7 @@ html.rustprop main .rp-nav .rp-nav-btn:hover img.right, html.rustprop main .rp-n
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-nav .rp-nav-btn:hover, html.rustprop main .rp-nav .rp-nav-btn:focus {
-    background-color: #B57E9B;
+    background-color: #D4B3C2;
   }
 }
 html.rustprop main .rp-nav .rp-nav-btn.disabled {
@@ -1300,7 +1300,7 @@ html.rustprop main .rp-nav .rp-nav-btn.disabled img.right {
   transform: rotate(180deg) skew(-12deg);
 }
 html.rustprop main .rp-nav .rp-nav-btn.disabled:hover, html.rustprop main .rp-nav .rp-nav-btn.disabled:focus {
-  background-color: #B57E9B;
+  background-color: #D4B3C2;
 }
 html.rustprop main .img-gallery {
   display: flex;
@@ -1394,7 +1394,7 @@ html.rustprop footer p.credit, html.rustprop footer a {
 }
 html.rustprop footer a {
   color: #282b2c;
-  background-color: #B57E9B;
+  background-color: #D4B3C2;
   padding: 2px 5px;
   text-decoration: none;
 }
@@ -1410,7 +1410,7 @@ html.rustprop footer a:hover img.lrg, html.rustprop footer a:focus img.lrg {
 }
 @media only screen and (max-width: 768px) {
   html.rustprop footer a:hover, html.rustprop footer a:focus {
-    background-color: #B57E9B;
+    background-color: #D4B3C2;
   }
   html.rustprop footer a:hover img, html.rustprop footer a:focus img {
     transform: skew(-10deg);

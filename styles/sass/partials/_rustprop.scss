@@ -119,7 +119,7 @@ html.rustprop {
             }
             a {
                 color: $black;
-                background-color: $color2;
+                background-color: $color6;
                 padding: 2px 5px;
             }
             a img {
@@ -152,7 +152,7 @@ html.rustprop {
                     }
                 }
                 @media only screen and (max-width: $mobile) {
-                    background-color: $color2;
+                    background-color: $color6;
 
                     img {
                         transform: skew(-10deg);
@@ -180,7 +180,7 @@ html.rustprop {
     
             .rp-nav-btn {
                 color: $black;
-                background-color: $color2;
+                background-color: $color6;
                 padding: 3px 10px;
                 font-size: 1rem;
                 display: flex;
@@ -222,7 +222,7 @@ html.rustprop {
                     }
 
                     @media only screen and (max-width: $mobile) {
-                        background-color: $color2;
+                        background-color: $color6;
                     }
                 }
 
@@ -241,7 +241,7 @@ html.rustprop {
                     }
 
                     &:hover, &:focus {
-                        background-color: $color2;
+                        background-color: $color6;
                     }
                 }
             }
@@ -349,7 +349,7 @@ html.rustprop {
         }
         a {
             color: $black;
-            background-color: $color2;
+            background-color: $color6;
             padding: 2px 5px;
             text-decoration: none;
         }
@@ -364,7 +364,7 @@ html.rustprop {
                 }
             }
             @media only screen and (max-width: $mobile) {
-                background-color: $color2;
+                background-color: $color6;
 
                 img {
                     transform: skew(-10deg);
