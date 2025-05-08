@@ -12,7 +12,17 @@ html.rustprop {
     }
 
     header {
-        background: none !important;
+        min-height: auto;
+        height: auto;
+        max-height: none;
+        margin: 0;
+        padding: 0;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        position: sticky;
+        top: 0px;
+        background: $black;
+        z-index: 100;
     }
 
     .rp-hr {
@@ -63,17 +73,6 @@ html.rustprop {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-
-    header {
-        position: initial;
-        min-height: auto;
-        height: auto;
-        max-height: none;
-        margin: 0;
-        padding: 0;
-        padding-top: 20px;
-        margin-bottom: 10px;
     }
 
     .btn-container {
@@ -254,7 +253,7 @@ html.rustprop {
             flex-direction: column;
             gap: 40px;
             width: 85%;
-            max-width: 600px;
+            max-width: 500px;
             margin-top: 30px;
             margin-bottom: 30px;
             .item {

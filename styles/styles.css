@@ -496,6 +496,12 @@ html.tpl h1 {
      -moz-user-select: initial;
           user-select: initial;
 }
+@media only screen and (max-width: 768px) {
+  html.tpl h1 {
+    max-width: 450px;
+    margin-left: 7%;
+  }
+}
 html.tpl h1.four-oh-four {
   margin-bottom: -15px;
 }
@@ -512,6 +518,7 @@ html.tpl h1 a {
      -moz-user-select: initial;
           user-select: initial;
   line-height: 1;
+  width: 90%;
 }
 html.tpl h2 {
   margin: 5px 0;
@@ -596,9 +603,11 @@ html.tpl header {
   height: auto;
   max-height: none;
   margin: 0;
-  padding: 0;
-  padding-top: 30px;
-  margin-bottom: 10px;
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  background-color: #282b2c !important;
+  z-index: 100;
 }
 html.tpl header.trans-id-header {
   margin-bottom: 0;
@@ -608,13 +617,26 @@ html.tpl header.trans-id-header {
 html.tpl nav {
   min-width: 100%;
   margin: 20px auto;
+  margin-top: 0;
   width: 100%;
   max-width: 950px;
+  position: sticky;
+  top: 120px;
+  background: #282b2c;
+  z-index: 100;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl nav {
+    top: 175px;
+  }
 }
 html.tpl nav hr {
   border-color: #B57E9B;
   width: 100%;
   margin: 30px auto;
+}
+html.tpl nav hr:first-of-type {
+  margin-top: 0;
 }
 @media only screen and (max-width: 768px) {
   html.tpl nav hr {
@@ -963,6 +985,7 @@ html.tpl main .tpl-links h3 {
   width: auto;
   margin-bottom: 10px;
   padding-top: 0;
+  scroll-margin-top: 235px;
 }
 html.tpl main .tpl-links h3:first-of-type {
   padding-top: 15px;
@@ -973,6 +996,7 @@ html.tpl main .tpl-links h3:first-of-type {
     text-align: left;
     margin-right: auto;
     margin-left: auto;
+    scroll-margin-top: 300px;
   }
 }
 html.tpl main .tpl-links h3.h3-trans-id {
@@ -1087,7 +1111,17 @@ html.rustprop body, html.rustprop .button {
   text-transform: uppercase;
 }
 html.rustprop header {
-  background: none !important;
+  min-height: auto;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0px;
+  background: #282b2c;
+  z-index: 100;
 }
 html.rustprop .rp-hr {
   border: solid 2px rgba(243, 232, 233, 0.75);
@@ -1136,16 +1170,6 @@ html.rustprop main, html.rustprop header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-html.rustprop header {
-  position: initial;
-  min-height: auto;
-  height: auto;
-  max-height: none;
-  margin: 0;
-  padding: 0;
-  padding-top: 20px;
-  margin-bottom: 10px;
 }
 html.rustprop .btn-container {
   width: 50%;
@@ -1309,7 +1333,7 @@ html.rustprop main .img-gallery {
   flex-direction: column;
   gap: 40px;
   width: 85%;
-  max-width: 600px;
+  max-width: 500px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -1761,7 +1785,7 @@ html.rustprop h1 {
   font-family: "VT323", monospace;
 }
 html.rustprop h1 a {
-  font-size: 12rem;
+  font-size: 11rem;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 a {

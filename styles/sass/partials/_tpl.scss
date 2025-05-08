@@ -23,7 +23,6 @@ html.tpl {
         width: 85%;
         max-width: 850px;
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             text-align: left;
         }
@@ -33,6 +32,11 @@ html.tpl {
         font-style: normal;
         font-size: 45px;
         user-select: initial;
+
+        @media only screen and (max-width: $mobile) {
+            max-width: 450px;
+            margin-left: 7%;
+        }
 
         &.four-oh-four {
             margin-bottom: -15px;
@@ -49,6 +53,7 @@ html.tpl {
         font-style: normal;
         user-select: initial;
         line-height: 1;
+        width: 90%;
     }
 
     h2 {
@@ -146,9 +151,11 @@ html.tpl {
         height: auto;
         max-height: none;
         margin: 0;
-        padding: 0;
-        padding-top: 30px;
-        margin-bottom: 10px;
+        padding: 30px 0;
+        position: sticky;
+        top: 0;
+        background-color: #282b2c !important;
+        z-index: 100;
     }
 
     header.trans-id-header {
@@ -160,15 +167,27 @@ html.tpl {
     nav {
         min-width: 100%;
         margin: 20px auto;
+        margin-top: 0;
         width: 100%;
         max-width: 950px;
+        position: sticky;
+        top: 120px;
+        background: #282b2c;
+        z-index: 100;
+
+        @media only screen and (max-width: $mobile) {
+            top: 175px;
+        }
 
         hr {
             border-color: $color2;
             width: 100%;
             margin: 30px auto;
 
-            // responsive to mobile
+            &:first-of-type {
+                margin-top: 0;
+            }
+
             @media only screen and (max-width: $mobile) {
                 width: 90%;
                 margin: 35px auto;
@@ -570,6 +589,7 @@ html.tpl {
                 width: auto;
                 margin-bottom: 10px;
                 padding-top: 0;
+                scroll-margin-top: 235px;
 
                 &:first-of-type {
                     padding-top: 15px;
@@ -581,6 +601,7 @@ html.tpl {
                     text-align: left;
                     margin-right: auto;
                     margin-left: auto;
+                    scroll-margin-top: 300px;
                 }
             }
 
