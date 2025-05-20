@@ -259,6 +259,12 @@ html.rustprop {
             .item {
                 display: flex;
                 flex-direction: column;
+                scroll-margin-top: 250px;
+
+                @media only screen and (max-width: $mobile) {
+                    scroll-margin-top: 150px;
+                }
+
                 img {
                     width: 100%;
                     height: 100%;

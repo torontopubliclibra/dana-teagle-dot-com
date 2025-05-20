@@ -1340,6 +1340,12 @@ html.rustprop main .img-gallery {
 html.rustprop main .img-gallery .item {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 250px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .img-gallery .item {
+    scroll-margin-top: 150px;
+  }
 }
 html.rustprop main .img-gallery .item img {
   width: 100%;
