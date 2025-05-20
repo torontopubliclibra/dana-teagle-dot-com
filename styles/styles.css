@@ -2760,6 +2760,7 @@ header .scroll-down img {
   width: 95%;
   padding: 50px;
   margin: 20px auto;
+  margin-top: 0;
 }
 #services .services-content hr {
   border-color: #84A59D;
@@ -3268,7 +3269,7 @@ footer .wrapper {
   width: 95%;
 }
 footer .wrapper .credit {
-  width: 90%;
+  width: 95%;
   margin: 15px 0;
   font-size: 0.9rem;
 }
