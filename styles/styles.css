@@ -1340,6 +1340,12 @@ html.rustprop main .img-gallery {
 html.rustprop main .img-gallery .item {
   display: flex;
   flex-direction: column;
+  scroll-margin-top: 250px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .img-gallery .item {
+    scroll-margin-top: 150px;
+  }
 }
 html.rustprop main .img-gallery .item img {
   width: 100%;
@@ -2760,6 +2766,7 @@ header .scroll-down img {
   width: 95%;
   padding: 50px;
   margin: 20px auto;
+  margin-top: 0;
 }
 #services .services-content hr {
   border-color: #84A59D;
@@ -2919,6 +2926,17 @@ header .scroll-down img {
   gap: 20px;
   width: 100%;
   min-height: 100%;
+}
+#about .about-content .basic-info .headshot {
+  border: solid rgba(122, 145, 177, 0.25) 15px;
+  width: 100%;
+  max-width: 275px;
+  pointer-events: none;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .basic-info .headshot {
+    max-width: 100%;
+  }
 }
 #about .about-content .basic-info .basic-info-caption {
   font-style: italic;
@@ -3257,7 +3275,12 @@ footer .wrapper {
   width: 95%;
 }
 footer .wrapper .credit {
-  margin-top: 30px;
+  width: 95%;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+footer .wrapper .credit a {
+  font-size: 0.9rem;
 }
 footer .wrapper .scroll-to-top {
   background-color: #f3e8e9;
