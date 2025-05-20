@@ -1048,13 +1048,16 @@ header {
             width: 100%;
             min-height: 100%;
 
-            // .headshot {
-            //     border: solid rgba($color3, 0.25) 15px;
-            //     width: 100%;
-            //     max-width: 250px;
-            //     image-rendering:  pixelated;
-            //     pointer-events: none;
-            // }
+            .headshot {
+                border: solid rgba($color3, 0.25) 15px;
+                width: 100%;
+                max-width: 275px;
+                pointer-events: none;
+
+                @media only screen and (max-width: $mobile) {
+                    max-width: 100%;
+                }
+            }
 
             .basic-info-caption {
                 font-style: italic;
@@ -1430,7 +1433,13 @@ footer .wrapper {
     width: 95%;
 
     .credit {
-        margin-top: 30px;
+        width: 90%;
+        margin: 15px 0;
+        font-size: 0.9rem;
+
+        a {
+            font-size: 0.9rem;
+        }
     }
 
     // footer button

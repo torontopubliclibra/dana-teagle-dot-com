@@ -2920,6 +2920,17 @@ header .scroll-down img {
   width: 100%;
   min-height: 100%;
 }
+#about .about-content .basic-info .headshot {
+  border: solid rgba(122, 145, 177, 0.25) 15px;
+  width: 100%;
+  max-width: 275px;
+  pointer-events: none;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .basic-info .headshot {
+    max-width: 100%;
+  }
+}
 #about .about-content .basic-info .basic-info-caption {
   font-style: italic;
   line-height: 40px;
@@ -3257,7 +3268,12 @@ footer .wrapper {
   width: 95%;
 }
 footer .wrapper .credit {
-  margin-top: 30px;
+  width: 90%;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+footer .wrapper .credit a {
+  font-size: 0.9rem;
 }
 footer .wrapper .scroll-to-top {
   background-color: #f3e8e9;
