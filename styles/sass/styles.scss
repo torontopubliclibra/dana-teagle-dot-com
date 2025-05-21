@@ -1051,36 +1051,32 @@ header {
 
             .headshot {
                 border: solid rgba($color3, 0.25) 15px;
-                width: 275px;
-                height: 275px;
+                width: 100%;
+                max-width: 275px;
+                max-height: 275px;
                 pointer-events: none;
                 transition: opacity 0.5s;
-
-                @media only screen and (max-width: $mobile) {
-                    width: 300px;
-                    height: 300px;
-                }
             }
 
             .headshot-ascii {
                 position: absolute;
+                overflow: hidden;
                 top: 0;
                 opacity: 0;
                 border: solid rgba($color3, 0) 15px;
                 background-color: rgba($color3, 0.25);
                 font-size: 4.25px;
                 letter-spacing: 1.1px;
-
-                @media only screen and (max-width: $mobile) {
-                    font-size: 4.75px;
-                    letter-spacing: 1.15px;
-                }
             }
 
             .headshot-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
                 position: relative;
                 height: auto;
                 width: auto;
+                overflow: hidden;
                 cursor: pointer;
 
                 &:hover, &.clicked {
@@ -1092,15 +1088,61 @@ header {
                     }
                 }
 
-                @media only screen and (max-width: $tablet) {
+                .ascii-toggle-wrapper, .button {
+                    display: none;
+                }
+
+                @media only screen and (max-width: $mobile) {
+                    border: solid rgba($color3, 0) 10px;
+                    background-color: rgba($color3, 0.25);
                     cursor: default;
 
-                    .headshot-ascii {
-                        opacity: 0;
-                        display: none;
+                    .headshot {
+                        background: none;
+                        border: none;
+                        width: 200px;
+                        height: auto;
+                        aspect-ratio: 1/1;
                     }
 
-                    &:hover, &.clicked {
+                    .headshot-ascii {
+                        background-color: rgba($white, 0.6);
+                        color: $black;
+                        font-size: 2.5px;
+                        line-height: 2.25;
+                        letter-spacing: 1.475px;
+                    }
+
+                    .ascii-toggle-wrapper {
+                        display: block;
+                        font-size: 0.9rem;
+                    }
+
+                    .button {
+                        background: rgba($white, 0);
+                        display: inline-flex;
+                        align-items: flex-end;
+                        flex-direction: row-reverse;
+                        font-size: 0.75rem;
+                        line-height: 1.15;
+                        height: 30px;
+                        gap: 10px;
+                        padding-left: 0;
+                        padding-right: 0;
+                        padding-bottom: 0;
+                        img {
+                            width: 15px;
+                        }
+                    }
+
+                    .highlight {
+                        background: linear-gradient(120deg, $color2 0%, $color2 100%);
+                        background-repeat: no-repeat;
+                        background-size: 100% 12%;
+                        background-position: 50% 97%;
+                    }
+
+                    &:hover {
                         .headshot {
                             opacity: 1;
                         }
@@ -1108,13 +1150,14 @@ header {
                             opacity: 0;
                         }
                     }
-                }
 
-                @media only screen and (max-width: $mobile) {
-                    .headshot {
-                        width: 100%;
-                        height: auto;
-                        aspect-ratio: 1/1;
+                    &.clicked:hover {
+                        .headshot {
+                            opacity: 0;
+                        }
+                        .headshot-ascii {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -1605,6 +1648,18 @@ body.dark-mode {
 
             @media only screen and (max-width: $tablet) {
                 color: $white;
+            }
+        }
+        .button {
+            color: $white;
+            img {
+                filter: invert(1);
+            }
+        }
+        @media only screen and (max-width: $mobile) {
+            .headshot-ascii {
+                background-color: rgba($black, 0.6) !important;
+                color: $white !important;
             }
         }
         .about-content {
