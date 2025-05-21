@@ -2929,19 +2929,15 @@ header .scroll-down img {
 }
 #about .about-content .basic-info .headshot {
   border: solid rgba(122, 145, 177, 0.25) 15px;
-  width: 275px;
-  height: 275px;
+  width: 100%;
+  max-width: 275px;
+  max-height: 275px;
   pointer-events: none;
   transition: opacity 0.5s;
 }
-@media only screen and (max-width: 768px) {
-  #about .about-content .basic-info .headshot {
-    width: 300px;
-    height: 300px;
-  }
-}
 #about .about-content .basic-info .headshot-ascii {
   position: absolute;
+  overflow: hidden;
   top: 0;
   opacity: 0;
   border: solid rgba(122, 145, 177, 0) 15px;
@@ -2949,16 +2945,14 @@ header .scroll-down img {
   font-size: 4.25px;
   letter-spacing: 1.1px;
 }
-@media only screen and (max-width: 768px) {
-  #about .about-content .basic-info .headshot-ascii {
-    font-size: 4.75px;
-    letter-spacing: 1.15px;
-  }
-}
 #about .about-content .basic-info .headshot-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   position: relative;
   height: auto;
   width: auto;
+  overflow: hidden;
   cursor: pointer;
 }
 #about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot {
@@ -2967,26 +2961,61 @@ header .scroll-down img {
 #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
   opacity: 1;
 }
-@media only screen and (max-width: 970px) {
-  #about .about-content .basic-info .headshot-wrapper {
-    cursor: default;
-  }
-  #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
-    opacity: 0;
-    display: none;
-  }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot {
-    opacity: 1;
-  }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
-    opacity: 0;
-  }
+#about .about-content .basic-info .headshot-wrapper .button {
+  display: none;
 }
 @media only screen and (max-width: 768px) {
-  #about .about-content .basic-info .headshot-wrapper .headshot {
+  #about .about-content .basic-info .headshot-wrapper {
+    border: solid rgba(122, 145, 177, 0) 15px;
+    background-color: rgba(122, 145, 177, 0.25);
+    cursor: default;
     width: 100%;
+  }
+  #about .about-content .basic-info .headshot-wrapper .headshot {
+    background: none;
+    border: none;
+    width: 125px;
     height: auto;
     aspect-ratio: 1/1;
+  }
+  #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
+    font-size: 1.25px;
+    line-height: 2.8;
+    letter-spacing: 1.1px;
+  }
+  #about .about-content .basic-info .headshot-wrapper .button {
+    background: rgba(243, 232, 233, 0);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    font-size: 0.75rem;
+    line-height: 1.15;
+    height: 30px;
+    gap: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  #about .about-content .basic-info .headshot-wrapper .button img {
+    width: 15px;
+  }
+  #about .about-content .basic-info .headshot-wrapper .highlight {
+    background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+    background-repeat: no-repeat;
+    background-size: 80% 12%;
+    background-position: 50% 97%;
+  }
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot {
+    opacity: 1;
+  }
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii {
+    opacity: 0;
+  }
+  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot {
+    opacity: 0;
+  }
+  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot-ascii {
+    opacity: 1;
   }
 }
 #about .about-content .basic-info .basic-info-caption {
@@ -3421,6 +3450,12 @@ body.dark-mode #about a:hover {
   body.dark-mode #about a:hover {
     color: #f3e8e9;
   }
+}
+body.dark-mode #about .button {
+  color: #f3e8e9;
+}
+body.dark-mode #about .button img {
+  filter: invert(1);
 }
 body.dark-mode #about .about-content {
   background-color: rgba(40, 43, 44, 0.8);
