@@ -1111,6 +1111,22 @@ header {
                         }
                     }
                 }
+
+                @media only screen and (max-width: 380px) {
+                    .headshot {
+                        max-width: 100%;
+                        height: auto;
+                        aspect-ratio: 1/1;
+                    }
+                   &:hover, &.clicked, &.clicked:hover {
+                        .headshot {
+                            opacity: 1;
+                        }
+                        .headshot-ascii {
+                            opacity: 0;
+                        }
+                    }
+                }
             }
 
             .basic-info-caption {
