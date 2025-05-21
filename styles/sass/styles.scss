@@ -1092,39 +1092,29 @@ header {
                     }
                 }
 
-                @media only screen and (max-width: $mobile) {
-                   &:hover {
-                        .headshot {
-                            opacity: 1;
-                        }
-                        .headshot-ascii {
-                            opacity: 0;
-                        }
+                @media only screen and (max-width: $tablet) {
+                    cursor: default;
+
+                    .headshot-ascii {
+                        opacity: 0;
+                        display: none;
                     }
 
-                    &.clicked:hover {
+                    &:hover, &.clicked {
                         .headshot {
-                            opacity: 0;
+                            opacity: 1;
                         }
                         .headshot-ascii {
-                            opacity: 1;
+                            opacity: 0;
                         }
                     }
                 }
 
-                @media only screen and (max-width: 380px) {
+                @media only screen and (max-width: $mobile) {
                     .headshot {
-                        max-width: 100%;
+                        width: 100%;
                         height: auto;
                         aspect-ratio: 1/1;
-                    }
-                   &:hover, &.clicked, &.clicked:hover {
-                        .headshot {
-                            opacity: 1;
-                        }
-                        .headshot-ascii {
-                            opacity: 0;
-                        }
                     }
                 }
             }
