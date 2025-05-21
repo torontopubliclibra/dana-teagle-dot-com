@@ -2942,8 +2942,8 @@ header .scroll-down img {
   opacity: 0;
   border: solid rgba(122, 145, 177, 0) 15px;
   background-color: rgba(122, 145, 177, 0.25);
-  font-size: 4.25px;
-  letter-spacing: 1.1px;
+  font-size: 4.25px !important;
+  letter-spacing: 1.1px !important;
 }
 #about .about-content .basic-info .headshot-wrapper {
   display: flex;
@@ -2980,9 +2980,9 @@ header .scroll-down img {
   #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
     background-color: rgba(243, 232, 233, 0.6);
     color: #282b2c;
-    font-size: 2.5px;
-    line-height: 2.25;
-    letter-spacing: 1.475px;
+    font-size: 2.5px !important;
+    line-height: 2.25 !important;
+    letter-spacing: 1.475px !important;
   }
   #about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper {
     display: block;
