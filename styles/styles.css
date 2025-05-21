@@ -2967,31 +2967,26 @@ header .scroll-down img {
 #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
   opacity: 1;
 }
-@media only screen and (max-width: 768px) {
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot {
+@media only screen and (max-width: 970px) {
+  #about .about-content .basic-info .headshot-wrapper {
+    cursor: default;
+  }
+  #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
+    opacity: 0;
+    display: none;
+  }
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot {
     opacity: 1;
   }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii {
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
     opacity: 0;
-  }
-  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot {
-    opacity: 0;
-  }
-  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot-ascii {
-    opacity: 1;
   }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 768px) {
   #about .about-content .basic-info .headshot-wrapper .headshot {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     aspect-ratio: 1/1;
-  }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot, #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot {
-    opacity: 1;
-  }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot-ascii {
-    opacity: 0;
   }
 }
 #about .about-content .basic-info .basic-info-caption {
