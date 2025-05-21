@@ -1088,7 +1088,7 @@ header {
                     }
                 }
 
-                .button {
+                .ascii-toggle-wrapper, .button {
                     display: none;
                 }
 
@@ -1114,6 +1114,7 @@ header {
                     }
 
                     .ascii-toggle-wrapper {
+                        display: block;
                         font-size: 0.9rem;
                     }
 

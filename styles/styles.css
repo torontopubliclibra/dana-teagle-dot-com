@@ -2961,7 +2961,7 @@ header .scroll-down img {
 #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
   opacity: 1;
 }
-#about .about-content .basic-info .headshot-wrapper .button {
+#about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper, #about .about-content .basic-info .headshot-wrapper .button {
   display: none;
 }
 @media only screen and (max-width: 768px) {
@@ -2985,6 +2985,7 @@ header .scroll-down img {
     letter-spacing: 1.475px;
   }
   #about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper {
+    display: block;
     font-size: 0.9rem;
   }
   #about .about-content .basic-info .headshot-wrapper .button {
