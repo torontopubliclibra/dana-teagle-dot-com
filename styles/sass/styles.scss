@@ -1054,9 +1054,32 @@ header {
                 width: 100%;
                 max-width: 275px;
                 pointer-events: none;
+                transition: opacity 0.5s;
+            }
 
-                @media only screen and (max-width: $mobile) {
-                    max-width: 100%;
+            .headshot-ascii {
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                border: solid rgba($color3, 0) 15px;
+                background-color: rgba($color3, 0.25);
+                font-size: 4.25px;
+                letter-spacing: 1.12px;
+            }
+
+            .headshot-wrapper {
+                position: relative;
+                height: auto;
+                width: auto;
+                cursor: pointer;
+
+                &:hover, &.clicked {
+                    .headshot {
+                        opacity: 0;
+                    }
+                    .headshot-ascii {
+                        opacity: 1;
+                    }
                 }
             }
 

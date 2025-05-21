@@ -29,6 +29,7 @@ let app = {
         projectsNav: $(".projects-nav"),
         projectDescription: $(".project-description"),
         projectsErrorMessage: $(".js-disabled-projects"),
+        headshotWrapper: $(".headshot-wrapper"),
         galleryContent: document.querySelector(".gallery-content"),
         galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
@@ -681,6 +682,10 @@ let app = {
         app.elements.scrollDownButton.click((e) => {
             e.preventDefault();
             app.functions.scroll("about");
+        });
+
+        app.elements.headshotWrapper.click((e) => {
+            app.elements.headshotWrapper.toggleClass("clicked");
         });
 
         // smooth scroll to top of sections on nav link click
