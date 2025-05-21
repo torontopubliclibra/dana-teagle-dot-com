@@ -1071,8 +1071,8 @@ header {
 
             .headshot-wrapper {
                 display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
+                flex-direction: column;
+                align-items: flex-start;
                 position: relative;
                 height: auto;
                 width: auto;
@@ -1101,15 +1101,17 @@ header {
                     .headshot {
                         background: none;
                         border: none;
-                        width: 125px;
+                        width: 200px;
                         height: auto;
                         aspect-ratio: 1/1;
                     }
 
                     .headshot-ascii {
-                        font-size: 1.25px;
-                        line-height: 2.8;
-                        letter-spacing: 1.1px;
+                        background-color: rgba($white, 0.6);
+                        color: $black;
+                        font-size: 2.5px;
+                        line-height: 2.25;
+                        letter-spacing: 1.475px;
                     }
 
                     .button {
@@ -1649,6 +1651,10 @@ body.dark-mode {
             img {
                 filter: invert(1);
             }
+        }
+        .headshot-ascii {
+            background-color: rgba($black, 0.6) !important;
+            color: $white !important;
         }
         .about-content {
             background-color: rgba($black, 0.8);
