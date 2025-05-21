@@ -3462,9 +3462,11 @@ body.dark-mode #about .button {
 body.dark-mode #about .button img {
   filter: invert(1);
 }
-body.dark-mode #about .headshot-ascii {
-  background-color: rgba(40, 43, 44, 0.6) !important;
-  color: #f3e8e9 !important;
+@media only screen and (max-width: 768px) {
+  body.dark-mode #about .headshot-ascii {
+    background-color: rgba(40, 43, 44, 0.6) !important;
+    color: #f3e8e9 !important;
+  }
 }
 body.dark-mode #about .about-content {
   background-color: rgba(40, 43, 44, 0.8);

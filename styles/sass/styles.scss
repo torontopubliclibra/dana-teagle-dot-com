@@ -1656,9 +1656,11 @@ body.dark-mode {
                 filter: invert(1);
             }
         }
-        .headshot-ascii {
-            background-color: rgba($black, 0.6) !important;
-            color: $white !important;
+        @media only screen and (max-width: $mobile) {
+            .headshot-ascii {
+                background-color: rgba($black, 0.6) !important;
+                color: $white !important;
+            }
         }
         .about-content {
             background-color: rgba($black, 0.8);
