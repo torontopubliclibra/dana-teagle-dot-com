@@ -1091,6 +1091,26 @@ header {
                         opacity: 1;
                     }
                 }
+
+                @media only screen and (max-width: $mobile) {
+                   &:hover {
+                        .headshot {
+                            opacity: 1;
+                        }
+                        .headshot-ascii {
+                            opacity: 0;
+                        }
+                    }
+
+                    &.clicked:hover {
+                        .headshot {
+                            opacity: 0;
+                        }
+                        .headshot-ascii {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
 
             .basic-info-caption {
