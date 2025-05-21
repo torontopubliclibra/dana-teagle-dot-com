@@ -1093,10 +1093,9 @@ header {
                 }
 
                 @media only screen and (max-width: $mobile) {
-                    border: solid rgba($color3, 0) 15px;
+                    border: solid rgba($color3, 0) 10px;
                     background-color: rgba($color3, 0.25);
                     cursor: default;
-                    width: 100%;
 
                     .headshot {
                         background: none;
@@ -1114,9 +1113,13 @@ header {
                         letter-spacing: 1.475px;
                     }
 
+                    .ascii-toggle-wrapper {
+                        font-size: 0.9rem;
+                    }
+
                     .button {
                         background: rgba($white, 0);
-                        display: flex;
+                        display: inline-flex;
                         align-items: flex-end;
                         flex-direction: row-reverse;
                         font-size: 0.75rem;
@@ -1134,7 +1137,7 @@ header {
                     .highlight {
                         background: linear-gradient(120deg, $color2 0%, $color2 100%);
                         background-repeat: no-repeat;
-                        background-size: 80% 12%;
+                        background-size: 100% 12%;
                         background-position: 50% 97%;
                     }
 

@@ -2966,10 +2966,9 @@ header .scroll-down img {
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .basic-info .headshot-wrapper {
-    border: solid rgba(122, 145, 177, 0) 15px;
+    border: solid rgba(122, 145, 177, 0) 10px;
     background-color: rgba(122, 145, 177, 0.25);
     cursor: default;
-    width: 100%;
   }
   #about .about-content .basic-info .headshot-wrapper .headshot {
     background: none;
@@ -2985,9 +2984,12 @@ header .scroll-down img {
     line-height: 2.25;
     letter-spacing: 1.475px;
   }
+  #about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper {
+    font-size: 0.9rem;
+  }
   #about .about-content .basic-info .headshot-wrapper .button {
     background: rgba(243, 232, 233, 0);
-    display: flex;
+    display: inline-flex;
     align-items: flex-end;
     flex-direction: row-reverse;
     font-size: 0.75rem;
@@ -3004,7 +3006,7 @@ header .scroll-down img {
   #about .about-content .basic-info .headshot-wrapper .highlight {
     background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
     background-repeat: no-repeat;
-    background-size: 80% 12%;
+    background-size: 100% 12%;
     background-position: 50% 97%;
   }
   #about .about-content .basic-info .headshot-wrapper:hover .headshot {

@@ -688,9 +688,9 @@ let app = {
             app.elements.headshotWrapper.toggleClass("clicked");
             $("#ascii-toggle").toggleClass("highlight");
             if (app.elements.headshotWrapper.hasClass("clicked")) {
-                $("#ascii-toggle").html(`]<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">[ IMG to ASCII`);
+                $("#ascii-toggle").html(`<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">IMG to ASCII`);
             } else {
-                $("#ascii-toggle").html(`]<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">[ IMG to ASCII`);
+                $("#ascii-toggle").html(`<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">IMG to ASCII`);
             }
         });
 
