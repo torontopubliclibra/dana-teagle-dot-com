@@ -2929,8 +2929,8 @@ header .scroll-down img {
 }
 #about .about-content .basic-info .headshot {
   border: solid rgba(122, 145, 177, 0.25) 15px;
-  width: 100%;
-  max-width: 275px;
+  width: 275px;
+  height: 275px;
   pointer-events: none;
   transition: opacity 0.5s;
 }

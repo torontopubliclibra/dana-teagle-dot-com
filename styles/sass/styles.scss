@@ -1051,8 +1051,8 @@ header {
 
             .headshot {
                 border: solid rgba($color3, 0.25) 15px;
-                width: 100%;
-                max-width: 275px;
+                width: 275px;
+                height: 275px;
                 pointer-events: none;
                 transition: opacity 0.5s;
             }
