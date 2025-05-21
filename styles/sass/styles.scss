@@ -1051,12 +1051,81 @@ header {
 
             .headshot {
                 border: solid rgba($color3, 0.25) 15px;
-                width: 100%;
-                max-width: 275px;
+                width: 275px;
+                height: 275px;
                 pointer-events: none;
+                transition: opacity 0.5s;
 
                 @media only screen and (max-width: $mobile) {
-                    max-width: 100%;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            .headshot-ascii {
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                border: solid rgba($color3, 0) 15px;
+                background-color: rgba($color3, 0.25);
+                font-size: 4.25px;
+                letter-spacing: 1.1px;
+
+                @media only screen and (max-width: $mobile) {
+                    font-size: 4.75px;
+                    letter-spacing: 1.15px;
+                }
+            }
+
+            .headshot-wrapper {
+                position: relative;
+                height: auto;
+                width: auto;
+                cursor: pointer;
+
+                &:hover, &.clicked {
+                    .headshot {
+                        opacity: 0;
+                    }
+                    .headshot-ascii {
+                        opacity: 1;
+                    }
+                }
+
+                @media only screen and (max-width: $mobile) {
+                   &:hover {
+                        .headshot {
+                            opacity: 1;
+                        }
+                        .headshot-ascii {
+                            opacity: 0;
+                        }
+                    }
+
+                    &.clicked:hover {
+                        .headshot {
+                            opacity: 0;
+                        }
+                        .headshot-ascii {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                @media only screen and (max-width: 380px) {
+                    .headshot {
+                        max-width: 100%;
+                        height: auto;
+                        aspect-ratio: 1/1;
+                    }
+                   &:hover, &.clicked, &.clicked:hover {
+                        .headshot {
+                            opacity: 1;
+                        }
+                        .headshot-ascii {
+                            opacity: 0;
+                        }
+                    }
                 }
             }
 

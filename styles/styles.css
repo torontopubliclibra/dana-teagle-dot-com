@@ -2929,13 +2929,69 @@ header .scroll-down img {
 }
 #about .about-content .basic-info .headshot {
   border: solid rgba(122, 145, 177, 0.25) 15px;
-  width: 100%;
-  max-width: 275px;
+  width: 275px;
+  height: 275px;
   pointer-events: none;
+  transition: opacity 0.5s;
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .basic-info .headshot {
+    width: 300px;
+    height: 300px;
+  }
+}
+#about .about-content .basic-info .headshot-ascii {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  border: solid rgba(122, 145, 177, 0) 15px;
+  background-color: rgba(122, 145, 177, 0.25);
+  font-size: 4.25px;
+  letter-spacing: 1.1px;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .basic-info .headshot-ascii {
+    font-size: 4.75px;
+    letter-spacing: 1.15px;
+  }
+}
+#about .about-content .basic-info .headshot-wrapper {
+  position: relative;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+}
+#about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot {
+  opacity: 0;
+}
+#about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot {
+    opacity: 1;
+  }
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii {
+    opacity: 0;
+  }
+  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot {
+    opacity: 0;
+  }
+  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot-ascii {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 380px) {
+  #about .about-content .basic-info .headshot-wrapper .headshot {
     max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot, #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot {
+    opacity: 1;
+  }
+  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot-ascii {
+    opacity: 0;
   }
 }
 #about .about-content .basic-info .basic-info-caption {
