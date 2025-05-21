@@ -2934,6 +2934,12 @@ header .scroll-down img {
   pointer-events: none;
   transition: opacity 0.5s;
 }
+@media only screen and (max-width: 768px) {
+  #about .about-content .basic-info .headshot {
+    width: 300px;
+    height: 300px;
+  }
+}
 #about .about-content .basic-info .headshot-ascii {
   position: absolute;
   top: 0;
@@ -2941,7 +2947,13 @@ header .scroll-down img {
   border: solid rgba(122, 145, 177, 0) 15px;
   background-color: rgba(122, 145, 177, 0.25);
   font-size: 4.25px;
-  letter-spacing: 1.12px;
+  letter-spacing: 1.1px;
+}
+@media only screen and (max-width: 768px) {
+  #about .about-content .basic-info .headshot-ascii {
+    font-size: 4.75px;
+    letter-spacing: 1.15px;
+  }
 }
 #about .about-content .basic-info .headshot-wrapper {
   position: relative;

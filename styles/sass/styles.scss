@@ -1055,6 +1055,11 @@ header {
                 height: 275px;
                 pointer-events: none;
                 transition: opacity 0.5s;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 300px;
+                    height: 300px;
+                }
             }
 
             .headshot-ascii {
@@ -1064,7 +1069,12 @@ header {
                 border: solid rgba($color3, 0) 15px;
                 background-color: rgba($color3, 0.25);
                 font-size: 4.25px;
-                letter-spacing: 1.12px;
+                letter-spacing: 1.1px;
+
+                @media only screen and (max-width: $mobile) {
+                    font-size: 4.75px;
+                    letter-spacing: 1.15px;
+                }
             }
 
             .headshot-wrapper {
