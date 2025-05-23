@@ -2252,7 +2252,7 @@ header .toggles ul li button.selected img, header .toggles ul li button:hover im
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-    top: 575px;
+    top: 64px;
     height: 125px;
   }
   header .toggles .mr {
@@ -2282,11 +2282,6 @@ header .toggles ul li button.selected img, header .toggles ul li button:hover im
     font-size: 1rem;
   }
 }
-@media only screen and (max-width: 768px) {
-  header .toggles {
-    top: 550px;
-  }
-}
 header .socials {
   z-index: 150;
   position: absolute;
@@ -2303,7 +2298,7 @@ header .socials.left {
   header .socials {
     gap: 20px;
     right: 20px;
-    top: 465px;
+    top: 570px;
     height: 70px;
   }
   header .socials.left {
@@ -2312,7 +2307,7 @@ header .socials.left {
 }
 @media only screen and (max-width: 768px) {
   header .socials {
-    top: 460px;
+    top: 580px;
   }
 }
 header .social {
@@ -2449,7 +2444,7 @@ header nav ul li a {
     opacity: 0;
     width: 100%;
     height: 100vh;
-    padding-top: 80px;
+    padding-top: 180px;
     background: #7a91b1;
     z-index: 3;
   }
@@ -2463,10 +2458,14 @@ header nav ul li a {
     margin-bottom: 20px;
   }
 }
+@media only screen and (max-width: 768px) {
+  header nav ul {
+    padding-top: 200px;
+  }
+}
 @media only screen and (max-width: 970px) {
   header nav.active .mobile-menu {
     background-color: #84A59D;
-    border-color: #f3e8e9;
   }
   header nav.active .mobile-menu button .menu-icon {
     transform: rotate(90deg);
@@ -3440,9 +3439,6 @@ body.dark-mode header .toggles p img, body.dark-mode header .toggles button img 
   }
   body.dark-mode header .mobile-menu img {
     filter: invert(1);
-  }
-  body.dark-mode header nav.active .mobile-menu {
-    border-color: #84A59D;
   }
 }
 body.dark-mode #about .about-content, body.dark-mode #about h2, body.dark-mode #about a {
