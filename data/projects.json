@@ -50,6 +50,23 @@
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
     },
+    "OrbWitch": {
+        "id": "orbwitch",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for Jupiter Autumn Wildwood (a.k.a. OrbWitch) — a maker, writer, and witch based in Tkaronto/Toronto, Ontario — that I designed and built between February and May 2025, using jQuery, HTML, and SCSS."
+        ],
+        "image": "./assets/projects/orbwitch.png",
+        "site": "https://orbwitch.com/"
+    },
     "Ryan Perks": {
         "id": "ryan-perks",
         "year": "2025",
