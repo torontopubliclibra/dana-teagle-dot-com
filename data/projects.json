@@ -3,15 +3,17 @@
         "id": "tg-id",
         "year": "2025",
         "tags": [
+            "Web design/development",
+            "Graphic design",
+            "2SLGBTQ+ Advocacy",
+            "Figma",
             "JavaScript",
-            "Jquery",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "jQuery",
+            "HTML"
         ],
         "description": [
             "TG I.D. is an online resource collecting information on how to update legal names, gender markers, and identity documents as a trans, non-binary, Two-Spirit, or gender non-conforming individual living in Ontario, Canada. I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years.",
-            "The current version is built with jQuery, HTML, and SCSS, and was initially launched in March 2025. I now serve as TG I.D.'s webmaster, maintaining the site for free in my spare time."
+            "The current version was initially launched in March 2025. I now serve as TG I.D.'s webmaster, maintaining the site for free in my spare time."
         ],
         "image": "./assets/projects/tg-id.png",
         "site": "https://tg-id.ca"
@@ -20,15 +22,16 @@
         "id": "poe-m-allphin",
         "year": "2025",
         "tags": [
-            "JavaScript",
-            "Jquery",
+            "Web design/development",
+            "Academic",
+            "Music/Audio",
             "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "JavaScript",
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College—built with jQuery, HTML, and SCSS. I designed and developed the site between February and April 2025."
+            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College. I designed and developed the site between February and April 2025."
         ],
         "image": "./assets/projects/poe-m-allphin.png",
         "site": "https://poemallphin.com"
@@ -37,15 +40,15 @@
         "id": "sam-sanchinel",
         "year": "2025",
         "tags": [
-            "JavaScript",
-            "Jquery",
+            "Web design/development",
+            "Academic",
             "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "JavaScript",
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a website for Samantha Dolores Sanchinel—a PhD candidate and course instructor in the Women and Gender Studies program at the University of Toronto—built with jQuery, HTML, and SCSS. I designed and developed the site between February and May 2025."
+            "This is a website for Samantha Dolores Sanchinel—a PhD candidate and course instructor in the Women and Gender Studies program at the University of Toronto. I designed and developed the site between February and May 2025."
         ],
         "image": "./assets/projects/sam-sanchinel.png",
         "site": "https://samsanchinel.ca/"
@@ -54,15 +57,16 @@
         "id": "orbwitch",
         "year": "2025",
         "tags": [
-            "JavaScript",
-            "Jquery",
+            "Web design/development",
+            "Artist/Creative",
+            "Writing/Editing",
             "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "JavaScript",
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a website for Jupiter Autumn Wildwood (a.k.a. OrbWitch)—a maker, writer, and witch based in Tkaronto/Toronto, Ontario—that I designed and built between February and May 2025, using jQuery, HTML, and SCSS."
+            "This is a website for Jupiter Autumn Wildwood (a.k.a. OrbWitch)—a maker, writer, and witch based in Tkaronto/Toronto, Ontario—that I designed and built between February and May 2025."
         ],
         "image": "./assets/projects/orbwitch.png",
         "site": "https://orbwitch.com/"
@@ -71,15 +75,15 @@
         "id": "hazel-henry-audio",
         "year": "2025",
         "tags": [
-            "JavaScript",
-            "Jquery",
+            "Web design/development",
+            "Music/Audio",
             "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "JavaScript",
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a website for Hazel Henry—a dynamic rock producer based in Portland, Oregon—that I designed and built between January and April 2025, using jQuery, HTML, and SCSS."
+            "This is a website for Hazel Henry—a dynamic rock producer based in Portland, Oregon—that I designed and built between January and April 2025."
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
@@ -88,15 +92,15 @@
         "id": "ryan-perks",
         "year": "2025",
         "tags": [
-            "JavaScript",
-            "Jquery",
+            "Web design/development",
+            "Writing/Editing",
             "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "JavaScript",
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a website for book editor Ryan Perks, built with jQuery, HTML, and SCSS. I designed and developed the site for him between December 2024 and February 2025."
+            "This is a website for book editor Ryan Perks. I designed and developed the site between December 2024 and February 2025."
         ],
         "image": "./assets/projects/ryanperks.png",
         "site": "https://ryanperks.com"
@@ -105,10 +109,11 @@
         "id": "aino-pihlak",
         "year": "2024",
         "tags": [
-            "Figma",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "Web design/development",
+            "Academic",
+            "JavaScript",
+            "jQuery",
+            "HTML"
         ],
         "description": [
             "This is a website for social historian Aino Pihlak, built with HTML and SCSS. I designed and developed the site for her in November and December 2024."
@@ -120,10 +125,11 @@
         "id": "michael-cloud-duguay",
         "year": "2024",
         "tags": [
-            "Webflow",
+            "Web design/development",
+            "Artist/Creative",
+            "Music/Audio",
             "Figma",
-            "HTML",
-            "CSS"
+            "Webflow"
         ],
         "description": [
             "This is a website for Michael Cloud Duguay—a composer, producer, improviser, and accordionist from Peterborough, Ontario—that I designed and built in 2024, using Webflow and Figma."
@@ -135,15 +141,16 @@
         "id": "connect-fund",
         "year": "2024",
         "tags": [
-            "Webflow",
-            "JavaScript",
+            "Web design/development",
+            "Graphic design",
+            "Non-profit",
+            "2SLGBTQ+ Advocacy",
             "Figma",
-            "HTML",
-            "CSS"
+            "Webflow"
         ],
         "description": [
             "Connect Fund is a not-for-profit organization aiming to provide comprehensive and widespread funding to 2SLGBTQ+ communities in Ontario to access the healthcare they need, led by Dr. Kate Greenaway, and based in Toronto, Ontario.",
-            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients, built in Webflow using designs wireframed in Figma.",
+            "In summer 2024, I worked with the Connect Fund team to launch a web platform for receiving charitable donations and supporting clients.",
             "I have since continued to work with Connect Fund for periodic updates to the website as well as miscellaneous graphic design work."
         ],
         "image": "./assets/projects/connectfund.jpg",
@@ -153,17 +160,15 @@
         "id": "true-history-brewing",
         "year": "2024",
         "tags": [
-            "JavaScript",
+            "Web design/development",
+            "Business/Storefront",
             "Figma",
-            "React",
-            "Shopify",
-            "CSS",
-            "SCSS",
-            "Strapi"
+            "JavaScript",
+            "React.js",
+            "Shopify"
         ],
         "description": [
-            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024, and will be updated in the future with full storefront functionality.",
-            "The project is built with React Remix, and uses Hydrogen as a headless Shopify storefront for online orders, and Strapi as a headless CMS for non-storefront related variable data (hours, events, menus, etc.). The site's custom design was wireframed using Figma, and styled with SCSS."
+            "This is a website and online shop for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024."
         ],
         "image": "./assets/projects/truehistorybeer.jpg",
         "site": "https://truehistorybeer.com"
@@ -172,14 +177,14 @@
         "id": "nina-milanovski",
         "year": "2024",
         "tags": [
+            "Web design/development",
+            "Artist/Creative",
             "JavaScript",
-            "Jquery",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a portfolio website for Nina Milanovski, dance artist and producer, built with jQuery, HTML, and SCSS. I designed and developed the site for her in February and March 2024."
+            "This is a portfolio website for Nina Milanovski, dance artist and producer. I designed and developed the site for her in February and March 2024."
         ],
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
@@ -188,12 +193,14 @@
         "id": "queer-walk",
         "year": "2023",
         "tags": [
+            "Web design/development",
+            "Non-profit",
+            "2SLGBTQ+ Advocacy",
             "TypeScript",
-            "React",
-            "CSS"
+            "React"
         ],
         "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and using the open-source Pytheas framework. The application guides users through a selected tour length, and displays text and photos for each historic location.",
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built using the open-source Pytheas framework. The application guides users through a selected tour length, and displays text and photos for each historic location.",
             "I was the lead developer on the application in summer 2023, working alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and our project manager Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>Parallel 42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. The research and organizing for the tour was provided by Walter Cassidy of the Windsor-Essex Rainbow Alliance.",
             "I have since continued to work with Hackforge on further implementations of Pytheas."
         ],
@@ -205,14 +212,14 @@
         "id": "sydney-gautreau",
         "year": "2022",
         "tags": [
+            "Web design/development",
+            "Writing/Editing",
             "JavaScript",
-            "Jquery",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "jQuery",
+            "HTML"
         ],
         "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business, built with jQuery, HTML, and SCSS. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
+            "This is a website for Sydney Gautreau's editing & writing coaching business. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
         ],
         "image": "./assets/projects/sydneygautreau.png",
         "site": "https://sydneygautreau.com"
