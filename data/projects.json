@@ -3,10 +3,9 @@
         "id": "tg-id",
         "year": "2025",
         "tags": [
-            "Web design/development",
-            "Graphic design",
-            "2SLGBTQ+ Advocacy",
-            "Figma",
+            "Web_design/development",
+            "Graphic_design",
+            "2SLGBTQ+_advocacy",
             "JavaScript",
             "jQuery",
             "HTML"
@@ -22,10 +21,9 @@
         "id": "poe-m-allphin",
         "year": "2025",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Academic",
             "Music/Audio",
-            "Figma",
             "JavaScript",
             "jQuery",
             "HTML"
@@ -40,9 +38,8 @@
         "id": "sam-sanchinel",
         "year": "2025",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Academic",
-            "Figma",
             "JavaScript",
             "jQuery",
             "HTML"
@@ -57,10 +54,9 @@
         "id": "orbwitch",
         "year": "2025",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Artist/Creative",
             "Writing/Editing",
-            "Figma",
             "JavaScript",
             "jQuery",
             "HTML"
@@ -75,9 +71,9 @@
         "id": "hazel-henry-audio",
         "year": "2025",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
+            "Freelancer",
             "Music/Audio",
-            "Figma",
             "JavaScript",
             "jQuery",
             "HTML"
@@ -92,9 +88,9 @@
         "id": "ryan-perks",
         "year": "2025",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
+            "Freelancer",
             "Writing/Editing",
-            "Figma",
             "JavaScript",
             "jQuery",
             "HTML"
@@ -109,7 +105,7 @@
         "id": "aino-pihlak",
         "year": "2024",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Academic",
             "JavaScript",
             "jQuery",
@@ -125,10 +121,9 @@
         "id": "michael-cloud-duguay",
         "year": "2024",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Artist/Creative",
             "Music/Audio",
-            "Figma",
             "Webflow"
         ],
         "description": [
@@ -141,11 +136,10 @@
         "id": "connect-fund",
         "year": "2024",
         "tags": [
-            "Web design/development",
-            "Graphic design",
+            "Web_design/development",
+            "Graphic_design",
             "Non-profit",
-            "2SLGBTQ+ Advocacy",
-            "Figma",
+            "2SLGBTQ+_advocacy",
             "Webflow"
         ],
         "description": [
@@ -160,9 +154,8 @@
         "id": "true-history-brewing",
         "year": "2024",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Business/Storefront",
-            "Figma",
             "JavaScript",
             "React.js",
             "Shopify"
@@ -177,7 +170,7 @@
         "id": "nina-milanovski",
         "year": "2024",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Artist/Creative",
             "JavaScript",
             "jQuery",
@@ -193,9 +186,9 @@
         "id": "queer-walk",
         "year": "2023",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
             "Non-profit",
-            "2SLGBTQ+ Advocacy",
+            "2SLGBTQ+_advocacy",
             "TypeScript",
             "React"
         ],
@@ -212,7 +205,8 @@
         "id": "sydney-gautreau",
         "year": "2022",
         "tags": [
-            "Web design/development",
+            "Web_design/development",
+            "Freelancer",
             "Writing/Editing",
             "JavaScript",
             "jQuery",
