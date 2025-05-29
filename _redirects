@@ -44,6 +44,7 @@ https://danateagle.com/uses /tpl/uses
 /trans-id https://tg-id.ca
 
 # RUSTPROP redirects
+/rustprop/pride-2025 /rustprop/#pride-2025
 /rustprop/tg-id /rustprop/#tg-id
 /rustprop/no-one-is-mad /rustprop/#no-one-is-mad
 /rustprop/spring-lamb /rustprop/#spring-lamb
@@ -53,8 +54,8 @@ https://danateagle.com/uses /tpl/uses
 /rustprop/class-traitors /rustprop/#class-traitors
 /rustprop/obsessed /rustprop/#obsessed
 /rustprop/pagination /rustprop/#pagination
-/rustprop/means-of-computation /rustprop/#means-of-computation
 
+/rustprop/means-of-computation /rustprop/2#means-of-computation
 /rustprop/nye /rustprop/2#nye
 /rustprop/conceding-humanity /rustprop/2#conceding-humanity
 /rustprop/too-hot /rustprop/2#too-hot
@@ -64,8 +65,8 @@ https://danateagle.com/uses /tpl/uses
 /rustprop/sorry /rustprop/2#sorry
 /rustprop/queer-lib /rustprop/2#queer-lib
 /rustprop/ttc /rustprop/2#ttc
-/rustprop/great-part /rustprop/2#great-part
 
+/rustprop/great-part /rustprop/3#great-part
 /rustprop/streaming-sucks /rustprop/3#streaming-sucks
 /rustprop/girlunions /rustprop/3#girlunions
 /rustprop/modern-house /rustprop/3#modern-house
