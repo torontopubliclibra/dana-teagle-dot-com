@@ -1341,7 +1341,7 @@ header {
             @include borderedBox(rgba($color3, 0.5), $color2);
             margin: 0;
             height: 100%;
-            width: calc(50% - 5px);
+            width: calc(31% - 5px);
             max-width: 585px;
 
             .tags {
