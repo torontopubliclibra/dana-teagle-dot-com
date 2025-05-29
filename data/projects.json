@@ -28,13 +28,13 @@
             "SCSS"
         ],
         "description": [
-            "This is a website for Poe M. Allphin — a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College — built with jQuery, HTML, and SCSS. I designed and developed the site between February and April 2025."
+            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College—built with jQuery, HTML, and SCSS. I designed and developed the site between February and April 2025."
         ],
         "image": "./assets/projects/poe-m-allphin.png",
         "site": "https://poemallphin.com"
     },
-    "Hazel Henry Audio": {
-        "id": "hazel-henry-audio",
+    "Sam Sanchinel": {
+        "id": "sam-sanchinel",
         "year": "2025",
         "tags": [
             "JavaScript",
@@ -45,10 +45,10 @@
             "SCSS"
         ],
         "description": [
-            "This is a website for Hazel Henry — a dynamic rock producer based in Portland, Oregon — that I designed and built between January and April 2025, using jQuery, HTML, and SCSS."
+            "This is a website for Samantha Dolores Sanchinel—a PhD candidate and course instructor in the Women and Gender Studies program at the University of Toronto—built with jQuery, HTML, and SCSS. I designed and developed the site between February and May 2025."
         ],
-        "image": "./assets/projects/hazel-henry-audio.png",
-        "site": "https://hazelhenryaudio.com/"
+        "image": "./assets/projects/sam-sanchinel.png",
+        "site": "https://samsanchinel.ca/"
     },
     "OrbWitch": {
         "id": "orbwitch",
@@ -66,6 +66,23 @@
         ],
         "image": "./assets/projects/orbwitch.png",
         "site": "https://orbwitch.com/"
+    },
+    "Hazel Henry Audio": {
+        "id": "hazel-henry-audio",
+        "year": "2025",
+        "tags": [
+            "JavaScript",
+            "Jquery",
+            "Figma",
+            "HTML",
+            "CSS",
+            "SCSS"
+        ],
+        "description": [
+            "This is a website for Hazel Henry — a dynamic rock producer based in Portland, Oregon — that I designed and built between January and April 2025, using jQuery, HTML, and SCSS."
+        ],
+        "image": "./assets/projects/hazel-henry-audio.png",
+        "site": "https://hazelhenryaudio.com/"
     },
     "Ryan Perks": {
         "id": "ryan-perks",
