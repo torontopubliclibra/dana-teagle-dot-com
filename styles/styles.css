@@ -1124,6 +1124,7 @@ html.rustprop header {
   z-index: 100;
 }
 html.rustprop .rp-hr {
+  width: 85%;
   border: solid 2px rgba(243, 232, 233, 0.75);
   margin-top: 30px;
   max-width: 950px;
@@ -1161,6 +1162,18 @@ html.rustprop h1 a {
     width: 100%;
   }
 }
+html.rustprop h2 {
+  width: 85%;
+  text-align: center;
+  color: #f3e8e9 !important;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop h2 {
+    text-align: left;
+  }
+}
 html.rustprop .img-gallery, html.rustprop footer {
   opacity: 0;
   animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
@@ -1170,6 +1183,31 @@ html.rustprop main, html.rustprop header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+html.rustprop .pdf-viewer {
+  display: flex;
+  background: rgba(243, 232, 233, 0.9);
+  height: 700px;
+  width: 85%;
+  max-width: 500px;
+  padding: 5px;
+  margin-top: 25px;
+}
+html.rustprop .pdf-viewer:first-of-type {
+  margin-top: 0;
+}
+html.rustprop .pdf-viewer p {
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop .pdf-viewer {
+    height: auto;
+    padding: 20px 25px;
+  }
+  html.rustprop .pdf-viewer p {
+    margin: 0;
+    margin-bottom: 5px;
+  }
 }
 html.rustprop .btn-container {
   width: 50%;
@@ -1190,6 +1228,18 @@ html.rustprop .btn-container .kofi-button {
 html.rustprop main {
   margin: 0 auto;
 }
+html.rustprop main a {
+  text-decoration: none;
+  color: #282b2c;
+  background-color: #D4B3C2;
+  padding: 2px 5px;
+}
+html.rustprop main a.pdf-link {
+  margin-top: 10px;
+  width: 85%;
+  max-width: 500px;
+  padding: 10px 25px;
+}
 html.rustprop main .rp-landing {
   width: 85%;
   max-width: 950px;
@@ -1208,6 +1258,7 @@ html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
+  line-height: 1.8;
 }
 html.rustprop main .rp-landing a {
   color: #282b2c;
@@ -2513,30 +2564,30 @@ header .scroll-down img {
   }
 }
 
-#gallery .pause-button {
+#gallery .pause-button, #gallery .remote-button {
   cursor: pointer;
 }
-#gallery .pause-button button {
+#gallery .pause-button button, #gallery .remote-button button {
   color: #282b2c;
 }
-#gallery .pause-button button:hover {
+#gallery .pause-button button:hover, #gallery .remote-button button:hover {
   background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
 }
-#gallery .pause-button button:hover img {
+#gallery .pause-button button:hover img, #gallery .remote-button button:hover img {
   transform: skew(-10deg);
 }
-#gallery .pause-button button img {
+#gallery .pause-button button img, #gallery .remote-button button img {
   height: 20px;
   margin-bottom: -5px;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .pause-button button img {
+  #gallery .pause-button button img, #gallery .remote-button button img {
     transform: skew(-10deg);
   }
-  #gallery .pause-button button:hover {
+  #gallery .pause-button button:hover, #gallery .remote-button button:hover {
     background: none;
   }
 }
@@ -2596,6 +2647,7 @@ header .scroll-down img {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: transform 0.5s;
 }
 @media only screen and (max-width: 970px) {
   #gallery .gallery-item {
@@ -3476,7 +3528,7 @@ body.dark-mode #gallery h2, body.dark-mode #gallery h3, body.dark-mode #gallery 
 body.dark-mode #gallery .gallery-item {
   border-color: rgba(243, 232, 233, 0.75);
 }
-body.dark-mode #gallery .pause-button img {
+body.dark-mode #gallery .pause-button img, body.dark-mode #gallery .remote-button img {
   filter: invert(1);
 }
 body.dark-mode #projects h2, body.dark-mode #projects .projects-nav p, body.dark-mode #projects .projects-nav button, body.dark-mode #projects h3, body.dark-mode #projects .project-filters .selected {

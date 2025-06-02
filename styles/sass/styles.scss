@@ -578,7 +578,7 @@ header {
 
 #gallery {
 
-    .pause-button {
+    .pause-button, .remote-button {
         cursor: pointer;
         button {
             color: $black;
@@ -685,6 +685,7 @@ header {
         justify-content: center;
         align-items: center;
         position: relative;
+        transition: transform 0.5s;
 
         // responsive to tablet
         @media only screen and (max-width: $tablet) {
@@ -1670,7 +1671,7 @@ body.dark-mode {
         .gallery-item {
             border-color: rgba($white, 0.75);
         }
-        .pause-button img {
+        .pause-button img, .remote-button img {
             filter: invert(1);
         }
     }
