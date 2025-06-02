@@ -1201,12 +1201,11 @@ html.rustprop .pdf-viewer p {
 }
 @media only screen and (max-width: 768px) {
   html.rustprop .pdf-viewer {
-    height: auto;
-    padding: 20px 25px;
+    height: 400px;
   }
   html.rustprop .pdf-viewer p {
-    margin: 0;
-    margin-bottom: 5px;
+    margin: 20px;
+    margin-bottom: 20px;
   }
 }
 html.rustprop .btn-container {
