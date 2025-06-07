@@ -2980,8 +2980,8 @@ header .scroll-down img {
 #about .about-content .basic-info .headshot {
   border: solid rgba(122, 145, 177, 0.25) 15px;
   width: 100%;
-  max-width: 275px;
-  max-height: 275px;
+  max-width: 250px;
+  max-height: 250px;
   pointer-events: none;
   transition: opacity 0.5s;
 }
@@ -2992,8 +2992,9 @@ header .scroll-down img {
   opacity: 0;
   border: solid rgba(122, 145, 177, 0) 15px;
   background-color: rgba(122, 145, 177, 0.25);
-  font-size: 4.25px !important;
+  font-size: 3.67px !important;
   letter-spacing: 1.1px !important;
+  line-height: 1.65;
 }
 #about .about-content .basic-info .headshot-wrapper {
   display: flex;
@@ -3023,16 +3024,16 @@ header .scroll-down img {
   #about .about-content .basic-info .headshot-wrapper .headshot {
     background: none;
     border: none;
-    width: 200px;
+    width: 150px;
     height: auto;
     aspect-ratio: 1/1;
   }
   #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
     background-color: rgba(243, 232, 233, 0.6);
     color: #282b2c;
-    font-size: 2.5px !important;
+    font-size: 1.85px !important;
     line-height: 2.25 !important;
-    letter-spacing: 1.475px !important;
+    letter-spacing: 1.12px !important;
   }
   #about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper {
     display: block;
