@@ -72,10 +72,10 @@
 
 [[redirects]]
   from = "/tpl/*"
-  to = "/tpl/404.html"
+  to = "https://danateagle.com/tpl/404.html"
   status = 404
 
 [[redirects]]
   from = "/rustprop/*"
-  to = "/tpl/404.html"
+  to = "https://danateagle.com/tpl/404.html"
   status = 404
