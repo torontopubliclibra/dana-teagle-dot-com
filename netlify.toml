@@ -35,6 +35,42 @@
   force = true
 
 [[redirects]]
+  from = "http://www.rustprop.org/"
+  to = "https://www.danateagle.com/rustprop/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.rustprop.org/"
+  to = "https://www.danateagle.com/rustprop/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://www.rustprop.org/*"
+  to = "https://www.danateagle.com/rustprop/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.rustprop.org/*"
+  to = "https://www.danateagle.com/rustprop/:splat"
+  status = 200
+  force = true
+  
+[[redirects]]
+  from = "http://rustprop.org/*"
+  to = "https://www.danateagle.com/rustprop/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://rustprop.org/*"
+  to = "https://www.danateagle.com/rustprop/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/tpl/*"
   to = "/tpl/404.html"
   status = 404
