@@ -1,4 +1,17 @@
 {
+    "Tony Matthews": {
+        "id": "tony-matthews",
+        "year": "2025",
+        "tags": [
+            "Artist/Creative",
+            "Professional"
+        ],
+        "description": [
+            "This is the website for Tony Matthews, a seasoned producer and studio leader with 25+ years of experience in animation, digital media, and immersive storytelling. I designed and developed the site between March and June 2025."
+        ],
+        "image": "./assets/projects/tony-matthews.jpg",
+        "site": "https://www.tony-matthews.com/"
+    },
     "TG I.D.": {
         "id": "tg-id",
         "year": "2025",
@@ -10,31 +23,6 @@
         ],
         "image": "./assets/projects/tg-id.png",
         "site": "https://tg-id.ca"
-    },
-    "Sam Sanchinel": {
-        "id": "sam-sanchinel",
-        "year": "2025",
-        "tags": [
-            "Academic"
-        ],
-        "description": [
-            "This is a website for Samantha Dolores Sanchinel—a PhD candidate and course instructor in the Women and Gender Studies program at the University of Toronto. I designed and developed the site between February and May 2025."
-        ],
-        "image": "./assets/projects/sam-sanchinel.png",
-        "site": "https://samsanchinel.ca/"
-    },
-    "OrbWitch": {
-        "id": "orbwitch",
-        "year": "2025",
-        "tags": [
-            "Artist/Creative",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for Jupiter Autumn Wildwood (a.k.a. OrbWitch)—a maker, writer, and witch based in Tkaronto/Toronto, Ontario—that I designed and developed between February and May 2025."
-        ],
-        "image": "./assets/projects/orbwitch.png",
-        "site": "https://orbwitch.com/"
     },
     "Poe M. Allphin": {
         "id": "poe-m-allphin",
@@ -61,6 +49,31 @@
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
+    },
+    "Sam Sanchinel": {
+        "id": "sam-sanchinel",
+        "year": "2025",
+        "tags": [
+            "Academic"
+        ],
+        "description": [
+            "This is a website for Samantha Dolores Sanchinel—a PhD candidate and course instructor in the Women and Gender Studies program at the University of Toronto. I designed and developed the site between February and May 2025."
+        ],
+        "image": "./assets/projects/sam-sanchinel.png",
+        "site": "https://samsanchinel.ca/"
+    },
+    "OrbWitch": {
+        "id": "orbwitch",
+        "year": "2025",
+        "tags": [
+            "Artist/Creative",
+            "Writing/Editing"
+        ],
+        "description": [
+            "This is a website for Jupiter Autumn Wildwood (a.k.a. OrbWitch)—a maker, writer, and witch based in Tkaronto/Toronto, Ontario—that I designed and developed between February and May 2025."
+        ],
+        "image": "./assets/projects/orbwitch.png",
+        "site": "https://orbwitch.com/"
     },
     "Aino Pihlak": {
         "id": "aino-pihlak",

@@ -144,5 +144,13 @@
         "id": "hazel-henry-audio",
         "site": "https://hazelhenryaudio.com/",
         "images": ["./assets/projects/hazel-henry-audio.png"]
+    },
+    "Tony Matthews": {
+        "title": "Tony Matthews",
+        "year": "2025",
+        "service": "Web design & development",
+        "id": "tony-matthews",
+        "site": "https://www.tony-matthews.com/",
+        "images": ["./assets/projects/tony-matthews.jpg"]
     }
 }
