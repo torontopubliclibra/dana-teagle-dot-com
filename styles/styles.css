@@ -632,7 +632,7 @@ html.tpl nav {
 }
 html.tpl nav hr {
   border-color: #B57E9B;
-  width: 100%;
+  width: 90%;
   margin: 30px auto;
 }
 html.tpl nav hr:first-of-type {
