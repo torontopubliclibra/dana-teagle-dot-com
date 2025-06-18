@@ -152,7 +152,7 @@ html.rustprop {
             }
         }
 
-        .rp-landing {
+        .rp-landing, .four-oh-four {
             width: 85%;
             max-width: 950px;
             display: flex;
@@ -170,6 +170,10 @@ html.rustprop {
                 text-align: center;
                 text-decoration: none;
                 line-height: 1.8;
+
+                @media only screen and (max-width: $mobile) {
+                    text-align: left;
+                }
             }
             a {
                 color: $black;

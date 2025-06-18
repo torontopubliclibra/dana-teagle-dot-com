@@ -1239,7 +1239,7 @@ html.rustprop main a.pdf-link {
   max-width: 500px;
   padding: 10px 25px;
 }
-html.rustprop main .rp-landing {
+html.rustprop main .rp-landing, html.rustprop main .four-oh-four {
   width: 85%;
   max-width: 950px;
   display: flex;
@@ -1252,55 +1252,60 @@ html.rustprop main .rp-landing {
   margin-bottom: 30px;
   border-bottom: solid 4px rgba(243, 232, 233, 0.75);
 }
-html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
+html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustprop main .four-oh-four p, html.rustprop main .four-oh-four a {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
   line-height: 1.8;
 }
-html.rustprop main .rp-landing a {
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustprop main .four-oh-four p, html.rustprop main .four-oh-four a {
+    text-align: left;
+  }
+}
+html.rustprop main .rp-landing a, html.rustprop main .four-oh-four a {
   color: #282b2c;
   background-color: #D4B3C2;
   padding: 2px 5px;
 }
-html.rustprop main .rp-landing a img {
+html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
   height: 0.9rem;
   margin-left: 10px;
   margin-bottom: -0.3%;
   filter: invert(12%) sepia(7%) saturate(472%) hue-rotate(149deg) brightness(98%) contrast(89%);
 }
-html.rustprop main .rp-landing a img.lrg {
+html.rustprop main .rp-landing a img.lrg, html.rustprop main .four-oh-four a img.lrg {
   transform: scale(1.15);
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing a img {
+  html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
     transform: skew(-10deg);
   }
-  html.rustprop main .rp-landing a img.lrg {
+  html.rustprop main .rp-landing a img.lrg, html.rustprop main .four-oh-four a img.lrg {
     transform: scale(1.15) skew(-10deg);
   }
 }
-html.rustprop main .rp-landing p {
+html.rustprop main .rp-landing p, html.rustprop main .four-oh-four p {
   width: 80%;
 }
-html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
+html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus, html.rustprop main .four-oh-four a:hover, html.rustprop main .four-oh-four a:focus {
   background-color: rgba(243, 232, 233, 0.75);
 }
-html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img {
+html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img, html.rustprop main .four-oh-four a:hover img, html.rustprop main .four-oh-four a:focus img {
   transform: skew(-10deg);
 }
-html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg {
+html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg, html.rustprop main .four-oh-four a:hover img.lrg, html.rustprop main .four-oh-four a:focus img.lrg {
   transform: scale(1.15) skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus {
+  html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus, html.rustprop main .four-oh-four a:hover, html.rustprop main .four-oh-four a:focus {
     background-color: #D4B3C2;
   }
-  html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img {
+  html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img, html.rustprop main .four-oh-four a:hover img, html.rustprop main .four-oh-four a:focus img {
     transform: skew(-10deg);
   }
-  html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg {
+  html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg, html.rustprop main .four-oh-four a:hover img.lrg, html.rustprop main .four-oh-four a:focus img.lrg {
     transform: scale(1.15) skew(-10deg);
   }
 }
