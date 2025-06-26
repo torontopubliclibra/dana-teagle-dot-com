@@ -152,5 +152,13 @@
         "id": "tony-matthews",
         "site": "https://www.tony-matthews.com/",
         "images": ["./assets/projects/tony-matthews.jpg"]
+    },
+    "Therapy with Andrea": {
+        "title": "Therapy with Andrea",
+        "year": "2025",
+        "service": "Web design & development",
+        "id": "andrea-lynn-ferguson",
+        "site": "https://andrealynnferguson.com/",
+        "images": ["./assets/projects/andrea-lynn-ferguson.png"]
     }
 }

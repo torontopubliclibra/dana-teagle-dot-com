@@ -1,4 +1,16 @@
 {
+    "Therapy with Andrea": {
+        "id": "andrea-lynn-ferguson",
+        "year": "2025",
+        "tags": [
+            "Professional"
+        ],
+        "description": [
+            "This is the website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). I designed and developed the site between May and June 2025."
+        ],
+        "image": "./assets/projects/andrea-lynn-ferguson.png",
+        "site": "https://andrealynnferguson.com/"
+    },
     "Tony Matthews": {
         "id": "tony-matthews",
         "year": "2025",
