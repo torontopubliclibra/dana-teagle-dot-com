@@ -1104,6 +1104,36 @@ html.tpl footer a:hover {
   }
 }
 
+html.mini {
+  background: #282b2c;
+}
+html.mini body, html.mini header, html.mini section, html.mini footer {
+  background: #282b2c !important;
+  height: auto !important;
+  min-height: unset !important;
+}
+html.mini .wrapper {
+  width: 90% !important;
+}
+html.mini h1, html.mini h2, html.mini h3 {
+  text-align: center;
+  cursor: text;
+  color: #f3e8e9;
+  width: 100%;
+  max-width: 850px;
+}
+@media only screen and (max-width: 768px) {
+  html.mini h1, html.mini h2, html.mini h3 {
+    text-align: left;
+  }
+}
+html.mini h1 {
+  font-size: 2rem;
+}
+html.mini h2 {
+  font-size: 1.25rem;
+}
+
 html.rustprop body {
   background-color: #282b2c;
 }
@@ -2997,9 +3027,12 @@ header .scroll-down img {
   opacity: 0;
   border: solid rgba(122, 145, 177, 0) 15px;
   background-color: rgba(122, 145, 177, 0.25);
-  font-size: 3.67px !important;
-  letter-spacing: 1.1px !important;
-  line-height: 1.65;
+  font-size: 6.15px;
+  letter-spacing: 1.325px !important;
+  line-height: 1.5;
+}
+#about .about-content .basic-info .headshot-ascii.mobile {
+  display: none;
 }
 #about .about-content .basic-info .headshot-wrapper {
   display: flex;
@@ -3034,11 +3067,15 @@ header .scroll-down img {
     aspect-ratio: 1/1;
   }
   #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
-    background-color: rgba(243, 232, 233, 0.6);
+    display: none;
+  }
+  #about .about-content .basic-info .headshot-wrapper .headshot-ascii.mobile {
+    display: block;
+    background-color: rgba(122, 145, 177, 0.25);
     color: #282b2c;
-    font-size: 1.85px !important;
-    line-height: 2.25 !important;
-    letter-spacing: 1.12px !important;
+    font-size: 8px !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.95px !important;
   }
   #about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper {
     display: block;
