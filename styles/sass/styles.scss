@@ -2,6 +2,7 @@
 @use 'partials/setup';
 @use 'partials/sitemap';
 @use 'partials/tpl';
+@use 'partials/mini';
 @use 'partials/rustprop';
 @use 'partials/trans-id';
 @use 'partials/variables' as *;
@@ -1064,9 +1065,13 @@ header {
                 opacity: 0;
                 border: solid rgba($color3, 0) 15px;
                 background-color: rgba($color3, 0.25);
-                font-size: 3.67px !important;
-                letter-spacing: 1.1px !important;
-                line-height: 1.65;
+                font-size: 6.15px;
+                letter-spacing: 1.325px !important;
+                line-height: 1.5;
+
+                &.mobile {
+                    display: none;
+                }
             }
 
             .headshot-wrapper {
@@ -1106,11 +1111,16 @@ header {
                     }
 
                     .headshot-ascii {
-                        background-color: rgba($white, 0.6);
-                        color: $black;
-                        font-size: 1.85px !important;
-                        line-height: 2.25 !important;
-                        letter-spacing: 1.12px !important;
+                        display: none;
+
+                        &.mobile {
+                            display: block;
+                            background-color: rgba($color3, 0.25);
+                            color: $black;
+                            font-size: 8px !important;
+                            line-height: 1.35 !important;
+                            letter-spacing: 0.95px !important;
+                        }
                     }
 
                     .ascii-toggle-wrapper {
