@@ -2,26 +2,22 @@
     "work & creative": {
         "dana teagle dot com": {
             "link": "/",
-            "description": "Design/web dev portfolio"
+            "description": "My design & web development portfolio"
         },
-        "RUSTPROP archive": {
+        "RUSTPROP dot org": {
             "link": "/rustprop",
             "description": "Political messaging with varying degrees of importance"
         },
         "TG I.D.": {
             "link": "https://tg-id.ca/",
-            "description": "Online hub providing documents and resources about how to change your name and gender marker in Ontario, Canada"
+            "description": "An online hub providing documents and resources about how to change your name and gender marker in Canada"
         },
         "Github": {
             "link": "/github",
-            "description": "torontopubliclibra"
+            "description": ""
         }
     },
     "social profiles": {
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": "[at] torontopubliclibra.com"
-        },
         "Personal Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
@@ -41,6 +37,10 @@
         "Tumblr": {
             "link": "/tumblr",
             "description": "torontopubliclibra"
+        },
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.com"
         },
         "Goodreads": {
             "link": "/goodreads",
@@ -89,6 +89,10 @@
         "Davenport Aid Brigade": {
             "link": "https://linktr.ee/davenportaidbrigade",
             "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
+        },
+        "Fundraising for Majd in 🍉": {
+            "link": "https://chuffed.org/project/135726-fundraising-for-majd-in",
+            "description": "From Majd in Gaza — 'I want to collect $100,000 to buy food and drink. I also need it to get out of Gaza to search for safety.'"
         }
     },
     "resources & tools": {
