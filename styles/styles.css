@@ -1104,36 +1104,6 @@ html.tpl footer a:hover {
   }
 }
 
-html.mini {
-  background: #282b2c;
-}
-html.mini body, html.mini header, html.mini section, html.mini footer {
-  background: #282b2c !important;
-  height: auto !important;
-  min-height: unset !important;
-}
-html.mini .wrapper {
-  width: 90% !important;
-}
-html.mini h1, html.mini h2, html.mini h3 {
-  text-align: center;
-  cursor: text;
-  color: #f3e8e9;
-  width: 100%;
-  max-width: 850px;
-}
-@media only screen and (max-width: 768px) {
-  html.mini h1, html.mini h2, html.mini h3 {
-    text-align: left;
-  }
-}
-html.mini h1 {
-  font-size: 2rem;
-}
-html.mini h2 {
-  font-size: 1.25rem;
-}
-
 html.rustprop body {
   background-color: #282b2c;
 }
