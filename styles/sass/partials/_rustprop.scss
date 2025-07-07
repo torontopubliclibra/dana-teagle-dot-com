@@ -15,6 +15,7 @@ html.rustprop {
         min-height: auto;
         height: auto;
         max-height: none;
+        min-width: 380px;
         margin: 0;
         padding: 0;
         padding-top: 20px;
@@ -120,6 +121,7 @@ html.rustprop {
 
         .kofi-button {
             min-width: 100%;
+            margin-top: 10px;
         }
     }
 
@@ -137,6 +139,7 @@ html.rustprop {
 
     main {
         margin: 0 auto;
+        min-width: 380px;
 
         a {
             text-decoration: none;
@@ -366,7 +369,6 @@ html.rustprop {
             }
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             .rp-landing {
                 flex-flow: column nowrap;
@@ -374,10 +376,12 @@ html.rustprop {
                 p {
                     width: 100%;
                 }
+                .new-line {
+                    margin-top: 5px;
+                }
             }
         }
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             .rp-landing {
                 align-items: flex-start;
@@ -387,9 +391,20 @@ html.rustprop {
                 }
             }
         }
+
+        @media only screen and (max-width: 520px) {
+            .rp-landing {
+                .new-line {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+                        
     }
     
     footer {
+        min-width: 380px;
         padding-top: 20px;
         padding-bottom: 40px;
 
@@ -419,6 +434,7 @@ html.rustprop {
             background-color: $color6;
             padding: 2px 5px;
             text-decoration: none;
+            margin: 5px -2px;
         }
         a:hover, a:focus {
             background-color: rgba($white, 0.75);

@@ -9,6 +9,7 @@ html.tpl {
 
     header {
         background: none !important;
+        min-width: 380px;
     }
 
     #contact {
@@ -165,7 +166,7 @@ html.tpl {
     }
 
     nav {
-        min-width: 100%;
+        min-width: 380px;
         margin: 20px auto;
         margin-top: 0;
         width: 100%;
@@ -297,6 +298,7 @@ html.tpl {
 
     main {
         margin: 0 auto;
+        min-width: 380px;
 
         hr {
             margin-top: 10px;
@@ -683,6 +685,7 @@ html.tpl {
     footer {
         padding-top: 20px;
         padding-bottom: 40px;
+        min-width: 380px;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
