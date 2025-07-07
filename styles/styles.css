@@ -1280,6 +1280,9 @@ html.rustprop main .rp-landing a, html.rustprop main .four-oh-four a {
   background-color: #D4B3C2;
   padding: 0 8px;
 }
+html.rustprop main .rp-landing .new-line, html.rustprop main .four-oh-four .new-line {
+  margin-top: 5px;
+}
 html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
   height: 0.9rem;
   margin-left: 10px;
@@ -1455,9 +1458,6 @@ html.rustprop main .img-gallery .item .img-caption a {
   }
   html.rustprop main .rp-landing p {
     width: 100%;
-  }
-  html.rustprop main .rp-landing .new-line {
-    margin-top: 5px;
   }
 }
 @media only screen and (max-width: 768px) {

@@ -184,6 +184,9 @@ html.rustprop {
                 background-color: $color6;
                 padding: 0 8px;
             }
+            .new-line {
+                    margin-top: 5px;
+                }
             a img {
                 height: 0.9rem;
                 margin-left: 10px;
@@ -375,9 +378,6 @@ html.rustprop {
                 width: 85%;
                 p {
                     width: 100%;
-                }
-                .new-line {
-                    margin-top: 5px;
                 }
             }
         }
