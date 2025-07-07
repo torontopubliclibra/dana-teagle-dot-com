@@ -142,7 +142,8 @@ html.rustprop {
             text-decoration: none;
             color: $black;
             background-color: $color6;
-            padding: 2px 5px;
+            display: inline-block;
+            padding: 0 8px;
 
             &.pdf-link {
                 margin-top: 10px;
@@ -178,7 +179,7 @@ html.rustprop {
             a {
                 color: $black;
                 background-color: $color6;
-                padding: 2px 5px;
+                padding: 0 8px;
             }
             a img {
                 height: 0.9rem;
@@ -240,9 +241,9 @@ html.rustprop {
             .rp-nav-btn {
                 color: $black;
                 background-color: $color6;
-                padding: 3px 10px;
+                padding: 5px 8px;
                 font-size: 1rem;
-                display: flex;
+                display: inline-flex;
                 justify-content: center;
                 align-items: center;
                 text-decoration: none;
@@ -290,7 +291,7 @@ html.rustprop {
                     opacity: 0.25;
                     font-style: italic;
                     font-size: 1rem;
-                    padding: 0px 10px;
+                    padding: 2.2px 8px;
 
                     img {
                         transform: skew(-12deg);
@@ -358,7 +359,7 @@ html.rustprop {
                         font-size: 0.85rem;
                         color: $white;
                         background-color: rgba($black, 0.75);
-                        padding: 0 10px;
+                        padding: 2px 10px;
                         text-decoration: none
                     }
                 }

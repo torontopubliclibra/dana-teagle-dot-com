@@ -1235,7 +1235,8 @@ html.rustprop main a {
   text-decoration: none;
   color: #282b2c;
   background-color: #D4B3C2;
-  padding: 2px 5px;
+  display: inline-block;
+  padding: 0 8px;
 }
 html.rustprop main a.pdf-link {
   margin-top: 10px;
@@ -1271,7 +1272,7 @@ html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustpro
 html.rustprop main .rp-landing a, html.rustprop main .four-oh-four a {
   color: #282b2c;
   background-color: #D4B3C2;
-  padding: 2px 5px;
+  padding: 0 8px;
 }
 html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
   height: 0.9rem;
@@ -1330,9 +1331,9 @@ html.rustprop main .rp-nav {
 html.rustprop main .rp-nav .rp-nav-btn {
   color: #282b2c;
   background-color: #D4B3C2;
-  padding: 3px 10px;
+  padding: 5px 8px;
   font-size: 1rem;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -1376,7 +1377,7 @@ html.rustprop main .rp-nav .rp-nav-btn.disabled {
   opacity: 0.25;
   font-style: italic;
   font-size: 1rem;
-  padding: 0px 10px;
+  padding: 2.2px 8px;
 }
 html.rustprop main .rp-nav .rp-nav-btn.disabled img {
   transform: skew(-12deg);
@@ -1438,7 +1439,7 @@ html.rustprop main .img-gallery .item .img-caption a {
   font-size: 0.85rem;
   color: #f3e8e9;
   background-color: rgba(40, 43, 44, 0.75);
-  padding: 0 10px;
+  padding: 2px 10px;
   text-decoration: none;
 }
 @media only screen and (max-width: 970px) {
