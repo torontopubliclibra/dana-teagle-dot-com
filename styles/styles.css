@@ -647,7 +647,8 @@ html.tpl nav hr:first-of-type {
 html.tpl nav .button {
   color: #f3e8e9;
   border: solid rgba(243, 232, 233, 0.75) 3px;
-  background: none;
+  background: #282b2c;
+  background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.05) 50%, rgba(181, 126, 155, 0.05) 100%);
   padding: 7px 25px;
   font-size: 1rem;
   font-style: normal;
@@ -924,6 +925,8 @@ html.tpl main .tpl-categories ul {
 html.tpl main .tpl-categories ul li a {
   display: flex;
   align-items: center;
+  background: #282b2c;
+  background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.05) 50%, rgba(181, 126, 155, 0.05) 100%);
   border: solid #B57E9B 3px;
   padding: 5px 10px 8px 15px;
   font-size: 12px;
@@ -1004,6 +1007,7 @@ html.tpl main .tpl-links h3.h3-trans-id {
 }
 html.tpl main .tpl-links .tpl-link {
   background: #282b2c;
+  background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.05) 50%, rgba(181, 126, 155, 0.05) 100%);
   border: solid 3px #84A59D;
   min-width: 425px;
   max-width: 500px;
