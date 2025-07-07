@@ -1223,6 +1223,9 @@ html.rustprop .btn-container .kofi-button {
   min-width: 100%;
   margin-top: 10px;
 }
+html.rustprop .btn-container .kofi-button .kofitext {
+  padding-bottom: 5px;
+}
 @media only screen and (max-width: 970px) {
   html.rustprop .btn-container {
     width: 75%;
