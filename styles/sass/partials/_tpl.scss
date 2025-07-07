@@ -197,7 +197,8 @@ html.tpl {
         .button {
             color: $white;
             border: solid rgba($white, 0.75) 3px;
-            background: none;
+            background: $black;
+            background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
             padding: 7px 25px;
             font-size: 1rem;
             font-style: normal;
@@ -522,6 +523,8 @@ html.tpl {
                     a {
                         display: flex;
                         align-items: center;
+                        background: $black;
+                        background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
                         border: solid $color2 3px;
                         padding: 5px 10px 8px 15px;
                         font-size: 12px;
@@ -611,6 +614,7 @@ html.tpl {
     
             .tpl-link {
                 background: $black;
+                background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
                 border: solid 3px $color1;
                 min-width: 425px;
                 max-width: 500px;
