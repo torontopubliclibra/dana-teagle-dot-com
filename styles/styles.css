@@ -472,6 +472,7 @@ html.tpl body {
 }
 html.tpl header {
   background: none !important;
+  min-width: 380px;
 }
 html.tpl #contact {
   background: none !important;
@@ -615,7 +616,7 @@ html.tpl header.trans-id-header {
   padding-top: 30px;
 }
 html.tpl nav {
-  min-width: 100%;
+  min-width: 380px;
   margin: 20px auto;
   margin-top: 0;
   width: 100%;
@@ -728,6 +729,7 @@ html.tpl nav ul li {
 }
 html.tpl main {
   margin: 0 auto;
+  min-width: 380px;
 }
 html.tpl main hr {
   margin-top: 10px;
@@ -1080,6 +1082,7 @@ html.tpl main .tpl-links .tpl-link:hover {
 html.tpl footer {
   padding-top: 20px;
   padding-bottom: 40px;
+  min-width: 380px;
 }
 @media only screen and (max-width: 768px) {
   html.tpl footer {
@@ -1118,6 +1121,7 @@ html.rustprop header {
   min-height: auto;
   height: auto;
   max-height: none;
+  min-width: 380px;
   margin: 0;
   padding: 0;
   padding-top: 20px;
@@ -1217,6 +1221,7 @@ html.rustprop .btn-container {
 }
 html.rustprop .btn-container .kofi-button {
   min-width: 100%;
+  margin-top: 10px;
 }
 @media only screen and (max-width: 970px) {
   html.rustprop .btn-container {
@@ -1230,6 +1235,7 @@ html.rustprop .btn-container .kofi-button {
 }
 html.rustprop main {
   margin: 0 auto;
+  min-width: 380px;
 }
 html.rustprop main a {
   text-decoration: none;
@@ -1450,6 +1456,9 @@ html.rustprop main .img-gallery .item .img-caption a {
   html.rustprop main .rp-landing p {
     width: 100%;
   }
+  html.rustprop main .rp-landing .new-line {
+    margin-top: 5px;
+  }
 }
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-landing {
@@ -1460,7 +1469,13 @@ html.rustprop main .img-gallery .item .img-caption a {
     text-align: left;
   }
 }
+@media only screen and (max-width: 520px) {
+  html.rustprop main .rp-landing .new-line {
+    margin-top: 10px;
+  }
+}
 html.rustprop footer {
+  min-width: 380px;
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -1489,6 +1504,7 @@ html.rustprop footer a {
   background-color: #D4B3C2;
   padding: 2px 5px;
   text-decoration: none;
+  margin: 5px -2px;
 }
 html.rustprop footer a:hover, html.rustprop footer a:focus {
   background-color: rgba(243, 232, 233, 0.75);
