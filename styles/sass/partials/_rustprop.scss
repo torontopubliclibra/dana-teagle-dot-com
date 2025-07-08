@@ -39,7 +39,8 @@ html.rustprop {
         width: 85%;
         max-width: 950px;
         border-bottom: solid 4px rgba($white, 0.75);
-        padding-bottom: 20px;
+        padding-bottom: 25px;
+        padding-top: 5px;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
@@ -122,6 +123,7 @@ html.rustprop {
         .kofi-button {
             min-width: 100%;
             margin-top: 10px;
+            margin-bottom: 5px;
 
             .kofitext {
                 padding-bottom: 5px;
@@ -410,12 +412,11 @@ html.rustprop {
     footer {
         min-width: 380px;
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 15px;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
-            padding-top: 10px;
-            padding-bottom: 30px;
+            padding-top: 15px;
         }
         
         p.credit {

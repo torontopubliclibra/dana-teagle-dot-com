@@ -1143,7 +1143,8 @@ html.rustprop h1 {
   width: 85%;
   max-width: 950px;
   border-bottom: solid 4px rgba(243, 232, 233, 0.75);
-  padding-bottom: 20px;
+  padding-bottom: 25px;
+  padding-top: 5px;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 {
@@ -1222,6 +1223,7 @@ html.rustprop .btn-container {
 html.rustprop .btn-container .kofi-button {
   min-width: 100%;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 html.rustprop .btn-container .kofi-button .kofitext {
   padding-bottom: 5px;
@@ -1480,12 +1482,11 @@ html.rustprop main .img-gallery .item .img-caption a {
 html.rustprop footer {
   min-width: 380px;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop footer {
-    padding-top: 10px;
-    padding-bottom: 30px;
+    padding-top: 15px;
   }
 }
 html.rustprop footer p.credit {
