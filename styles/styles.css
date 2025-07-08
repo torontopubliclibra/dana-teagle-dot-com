@@ -520,6 +520,7 @@ html.tpl h1 a {
           user-select: initial;
   line-height: 1;
   width: 90%;
+  margin-bottom: 20px;
 }
 html.tpl h2 {
   margin: 5px 0;
@@ -613,6 +614,7 @@ html.tpl header.trans-id-header {
 html.tpl nav {
   min-width: 380px;
   margin: 20px auto;
+  padding-top: 10px;
   margin-top: 0;
   width: 100%;
   max-width: 950px;
@@ -624,6 +626,7 @@ html.tpl nav {
 @media only screen and (max-width: 768px) {
   html.tpl nav {
     top: 175px;
+    padding-top: 20px;
   }
 }
 html.tpl nav hr {
