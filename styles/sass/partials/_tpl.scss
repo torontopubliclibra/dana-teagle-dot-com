@@ -79,14 +79,14 @@ html.tpl {
             text-align: left;
             border-bottom: solid $color3 3.5px;
             padding-bottom: 15px;
-            margin-top: 0;
+            margin-top: -5px;
         }
     }
 
     h3 {
         &.previously-datestamp {
             margin: 0 !important;
-            padding-bottom: 0 !important;
+            padding: 0 !important;
             text-align: left;
         }
     }
@@ -113,7 +113,7 @@ html.tpl {
 
     hr {
         width: 90%;
-        max-width: 950px;
+        max-width: 900px;
         margin: 0;
         border: 2px solid $color3;
 
@@ -122,11 +122,7 @@ html.tpl {
         }
 
         &.margin-bottom {
-            margin-bottom: 5px !important;
-
-            @media only screen and (max-width: $mobile) {
-                margin-bottom: 10px !important;
-            }
+            margin-bottom: 15px !important;
         }
 
         &.alt-color {
@@ -384,7 +380,7 @@ html.tpl {
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
-            margin: 10px 0;
+            margin: 0;
             img {
                 border: solid 3px rgba($white, 0.75);
                 margin: 10px 0;
@@ -400,7 +396,11 @@ html.tpl {
         }
 
         .tpl-landing {
-            padding-bottom: 20px;
+            padding-bottom: 15px;
+        }
+
+        &.tpl-subpage {
+            margin-bottom: 15px !important;
         }
 
         // responsive to tablet
@@ -444,6 +444,7 @@ html.tpl {
 
             .tpl-page-content {
                 width: 80%;
+                margin-bottom: 10px;
 
                 p {
                     text-align: left;
@@ -507,6 +508,7 @@ html.tpl {
         .tpl-categories {
             width: 100%;
             max-width: 900px;
+            margin-bottom: 5px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -554,7 +556,7 @@ html.tpl {
             @media only screen and (max-width: $tablet) {
                 display: block;
                 width: 85%;
-                margin: 0;
+                margin-bottom: 15px;
 
                 ul {
                     flex-flow: column;
@@ -595,10 +597,6 @@ html.tpl {
                 margin-bottom: 10px;
                 padding-top: 0;
                 scroll-margin-top: 235px;
-
-                &:first-of-type {
-                    padding-top: 15px;
-                }
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
@@ -684,13 +682,12 @@ html.tpl {
     
     footer {
         padding-top: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 15px;
         min-width: 380px;
 
         // responsive to mobile
         @media only screen and (max-width: $mobile) {
             padding-top: 10px;
-            padding-bottom: 30px;
         }
 
         p.credit, a {
