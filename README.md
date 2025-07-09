@@ -2,7 +2,7 @@
 
 ## About
 This is the repository for a few different webpages that relate to my work and life:
-- [dana teagle dot com](https://danateagle.com)—my design and web/software development portfolio,
+- [dana teagle dot com](https://danateagle.com)—my design and web/software development portfolio (and a [mini version](https://danateagle.com/mini) of this site),
 - [the toronto public libra](https://danateagle.com/tpl)—a landing page for my various links and projects, and
 - [RUSTPROP](https://danateagle.com/rustprop)—an agitprop design project.
 
@@ -11,6 +11,7 @@ The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON t
 ## Sitemap
 ```
 - danateagle.com/
+    - /mini
     - /tpl
         - /now
         - /uses
