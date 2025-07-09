@@ -181,14 +181,14 @@ html.tpl {
 
         hr {
             border-color: $color2;
-            width: 90%;
+            width: 100%;
             margin: 30px auto;
 
             &:first-of-type {
                 margin-top: 0;
             }
 
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 width: 90%;
                 margin: 35px auto;
             }

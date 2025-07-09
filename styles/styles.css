@@ -631,13 +631,13 @@ html.tpl nav {
 }
 html.tpl nav hr {
   border-color: #B57E9B;
-  width: 90%;
+  width: 100%;
   margin: 30px auto;
 }
 html.tpl nav hr:first-of-type {
   margin-top: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   html.tpl nav hr {
     width: 90%;
     margin: 35px auto;
