@@ -285,6 +285,10 @@ header, main, footer {
   margin: 0 auto;
 }
 
+header {
+  margin-top: 30px;
+}
+
 footer {
   margin-bottom: 30px;
 }
