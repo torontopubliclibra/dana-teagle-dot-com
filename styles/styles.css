@@ -1973,6 +1973,9 @@ h3 {
 #services blockquote a {
   display: inline;
 }
+#services blockquote a:hover {
+  color: #B57E9B;
+}
 #services blockquote .quote-marks {
   font-size: 1.5rem;
 }
@@ -2745,7 +2748,7 @@ header .scroll-down img {
   text-decoration: underline;
 }
 #gallery .gallery-item .gallery-item-info a:hover, #gallery .gallery-item .gallery-item-info button:hover {
-  color: #B57E9B;
+  color: #d39cb9;
 }
 @media only screen and (max-width: 970px) {
   #gallery .gallery-item .gallery-item-info a:hover, #gallery .gallery-item .gallery-item-info button:hover {
@@ -3533,7 +3536,7 @@ body.dark-mode #about .about-content, body.dark-mode #about h2, body.dark-mode #
   color: #f3e8e9;
 }
 body.dark-mode #about a:hover {
-  color: #7a91b1;
+  color: #99b1d3;
 }
 @media only screen and (max-width: 970px) {
   body.dark-mode #about a:hover {
@@ -3633,7 +3636,7 @@ body.dark-mode #projects .projects-container .project .project-description p a, 
 }
 body.dark-mode #projects .projects-container .project .project-description p a:hover, body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
   background: none;
-  color: #7a91b1;
+  color: #99b1d3;
 }
 @media only screen and (max-width: 970px) {
   body.dark-mode #projects .projects-container .project .project-description p a:hover, body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
@@ -3656,10 +3659,18 @@ body.dark-mode #services .services-content .metrics {
   filter: invert(1) hue-rotate(200deg) saturate(0.5);
 }
 body.dark-mode #services a:hover {
-  color: #7a91b1;
+  color: #99b1d3;
 }
 @media only screen and (max-width: 970px) {
   body.dark-mode #services a:hover {
+    color: #f3e8e9;
+  }
+}
+body.dark-mode #services blockquote a:hover {
+  color: #d39cb9;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #services blockquote a:hover {
     color: #f3e8e9;
   }
 }
@@ -3670,7 +3681,7 @@ body.dark-mode #contact h2, body.dark-mode #contact p, body.dark-mode #contact a
   color: #f3e8e9;
 }
 body.dark-mode #contact a:hover {
-  color: #7a91b1;
+  color: #99b1d3;
 }
 @media only screen and (max-width: 970px) {
   body.dark-mode #contact a:hover {
@@ -3691,6 +3702,9 @@ body.dark-mode footer .button img {
 }
 body.dark-mode footer .button:hover, body.dark-mode footer .button:focus {
   background-color: #282b2c;
+}
+body.dark-mode footer a:hover {
+  color: #d39cb9;
 }
 @media only screen and (max-width: 970px) {
   body.dark-mode footer a:hover {

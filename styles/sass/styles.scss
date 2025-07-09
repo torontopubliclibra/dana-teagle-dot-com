@@ -765,7 +765,7 @@ header {
                 text-decoration: underline;
             }
             a:hover, button:hover {
-                color: $color2;
+                color: #d39cb9;
 
                 // responsive to tablet
                 @media only screen and (max-width: $tablet) {
@@ -1650,7 +1650,7 @@ body.dark-mode {
             color: $white;
         }
         a:hover {
-            color: $color3;
+            color: #99b1d3;
 
             @media only screen and (max-width: $tablet) {
                 color: $white;
@@ -1762,7 +1762,7 @@ body.dark-mode {
 
                     a:hover {
                         background: none;
-                        color: $color3;
+                        color: #99b1d3;
             
                         @media only screen and (max-width: $tablet) {
                             color: $white;
@@ -1789,7 +1789,15 @@ body.dark-mode {
             }
         }
         a:hover {
-            color: $color3;
+            color: #99b1d3;
+
+            @media only screen and (max-width: $tablet) {
+                color: $white;
+            }
+        }
+
+        blockquote a:hover {
+            color: #d39cb9;
 
             @media only screen and (max-width: $tablet) {
                 color: $white;
@@ -1805,7 +1813,7 @@ body.dark-mode {
             color: $white;
         }
         a:hover {
-            color: $color3;
+            color: #99b1d3;
 
             @media only screen and (max-width: $tablet) {
                 color: $white;
@@ -1831,6 +1839,7 @@ body.dark-mode {
             }
         }
         a:hover {
+            color: #d39cb9;
             @media only screen and (max-width: $tablet) {
                 color: $white;
             }

@@ -330,6 +330,9 @@ h3 {
 
   a {
     display: inline;
+    &:hover {
+      color: $color2;
+    }
   }
 
   .quote-marks {
