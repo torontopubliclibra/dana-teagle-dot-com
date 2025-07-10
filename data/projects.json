@@ -1,4 +1,41 @@
 {
+    "TG I.D.": {
+        "id": "tg-id",
+        "year": "2025",
+        "tags": [
+            "2SLGBTQ+_advocacy"
+        ],
+        "description": [
+            "This is an online resource collecting information on how to update legal names, gender markers, and identity documents in Ontario, Canada. I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years. The current version was initially launched in March 2025."
+        ],
+        "image": "./assets/projects/tg-id.png",
+        "site": "https://tg-id.ca"
+    },
+    "Point Pelee Planner": {
+        "id": "point-pelee-planner",
+        "year": "2025",
+        "tags": [
+            "Non-profit"
+        ],
+        "description": [
+            "This is a guided walking tour app for Point Pelee National Park and Leamington, Ontario, developed using the open-source Pytheas framework. In the summer of 2025, I developed the application working alongside Randy Topliffe and Doug Sartori, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a>, <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>, and the Leamington BIA. Research and curation by Doug Sartori and Kat Sartori."
+        ],
+        "image": "./assets/projects/point-pelee-planner.png",
+        "site": "https://pointpeleeplanner.com/"
+    },
+    "Connect Fund": {
+        "id": "connect-fund",
+        "year": "2024",
+        "tags": [
+            "Non-profit",
+            "2SLGBTQ+_advocacy"
+        ],
+        "description": [
+            "This is a website for Connect Fund—a not-for-profit organization funding healthcare for 2SLGBTQ+ communities in Canada. The site launched in summer 2024, and I remain on-call for periodic updates and support as well as miscellaneous graphic design work."
+        ],
+        "image": "./assets/projects/connectfund.jpg",
+        "site": "https://www.connectfund.org/"
+    },
     "Therapy with Andrea": {
         "id": "andrea-lynn-ferguson",
         "year": "2025",
@@ -23,30 +60,6 @@
         ],
         "image": "./assets/projects/tony-matthews.jpg",
         "site": "https://www.tony-matthews.com/"
-    },
-    "Point Pelee Planner": {
-        "id": "point-pelee-planner",
-        "year": "2025",
-        "tags": [
-            "Non-profit"
-        ],
-        "description": [
-            "This is a guided walking tour app for Point Pelee National Park and Leamington, Ontario, developed using the open-source Pytheas framework. In the summer of 2025, I developed the application working alongside Randy Topliffe and Doug Sartori, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a>, <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>, and the Leamington BIA. Research and curation by Doug Sartori and Kat Sartori."
-        ],
-        "image": "./assets/projects/point-pelee-planner.png",
-        "site": "https://pointpeleeplanner.com/"
-    },
-    "TG I.D.": {
-        "id": "tg-id",
-        "year": "2025",
-        "tags": [
-            "2SLGBTQ+_advocacy"
-        ],
-        "description": [
-            "This is an online resource collecting information on how to update legal names, gender markers, and identity documents in Ontario, Canada. I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years. The current version was initially launched in March 2025."
-        ],
-        "image": "./assets/projects/tg-id.png",
-        "site": "https://tg-id.ca"
     },
     "Poe M. Allphin": {
         "id": "poe-m-allphin",
@@ -73,31 +86,6 @@
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
-    },
-    "Sam Sanchinel": {
-        "id": "sam-sanchinel",
-        "year": "2025",
-        "tags": [
-            "Academic"
-        ],
-        "description": [
-            "This is a website for Samantha Dolores Sanchinel—a PhD candidate and course instructor in the Women and Gender Studies program at the University of Toronto. I designed and developed the site between February and May 2025."
-        ],
-        "image": "./assets/projects/sam-sanchinel.png",
-        "site": "https://samsanchinel.ca/"
-    },
-    "OrbWitch": {
-        "id": "orbwitch",
-        "year": "2025",
-        "tags": [
-            "Artist/Creative",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for Jupiter Autumn Wildwood (a.k.a. OrbWitch)—a maker, writer, and witch based in Tkaronto/Toronto, Ontario—that I designed and developed between February and May 2025."
-        ],
-        "image": "./assets/projects/orbwitch.png",
-        "site": "https://orbwitch.com/"
     },
     "Aino Pihlak": {
         "id": "aino-pihlak",
@@ -136,19 +124,6 @@
         ],
         "image": "./assets/projects/michaelcduguay.jpg",
         "site": "https://www.michaelcduguay.com/"
-    },
-    "Connect Fund": {
-        "id": "connect-fund",
-        "year": "2024",
-        "tags": [
-            "Non-profit",
-            "2SLGBTQ+_advocacy"
-        ],
-        "description": [
-            "This is a website for Connect Fund—a not-for-profit organization funding healthcare for 2SLGBTQ+ communities in Canada. The site launched in summer 2024, and I remain on-call for periodic updates and support as well as miscellaneous graphic design work."
-        ],
-        "image": "./assets/projects/connectfund.jpg",
-        "site": "https://www.connectfund.org/"
     },
     "True History Brewing": {
         "id": "true-history-brewing",
