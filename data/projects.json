@@ -24,6 +24,18 @@
         "image": "./assets/projects/tony-matthews.jpg",
         "site": "https://www.tony-matthews.com/"
     },
+    "Point Pelee Planner": {
+        "id": "point-pelee-planner",
+        "year": "2025",
+        "tags": [
+            "Non-profit"
+        ],
+        "description": [
+            "This is a guided walking tour app for Point Pelee National Park and Leamington, Ontario, developed using the open-source Pytheas framework. In the summer of 2025, I developed the application working alongside Randy Topliffe and Doug Sartori, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a>, <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>, and the Leamington BIA. Research and curation by Doug Sartori and Kat Sartori."
+        ],
+        "image": "./assets/projects/point-pelee-planner.png",
+        "site": "https://pointpeleeplanner.com/"
+    },
     "TG I.D.": {
         "id": "tg-id",
         "year": "2025",
