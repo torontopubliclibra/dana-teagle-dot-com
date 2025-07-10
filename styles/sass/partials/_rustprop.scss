@@ -30,14 +30,14 @@ html.rustprop {
         width: 85%;
         border: solid 2px rgba($white, 0.75);
         margin-top: 30px;
-        max-width: 950px;
+        max-width: 900px;
     }
 
     h1 {
         text-align: center;
         cursor: text;
         width: 85%;
-        max-width: 950px;
+        max-width: 900px;
         border-bottom: solid 4px rgba($white, 0.75);
         padding-bottom: 25px;
         padding-top: 5px;
@@ -164,7 +164,7 @@ html.rustprop {
 
         .rp-landing, .four-oh-four {
             width: 85%;
-            max-width: 950px;
+            max-width: 900px;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
@@ -342,7 +342,7 @@ html.rustprop {
                     height: 100%;
                     object-fit: cover;
                     pointer-events: none;
-                    border-top: solid rgba($white, 0.75) 5px;
+                    border-top: solid rgba($white, 0.75) 4px;
     
                     &:first-of-type {
                         border-top: none;
@@ -425,7 +425,7 @@ html.rustprop {
 
         p.credit, a {
             width: 85%;
-            max-width: 950px;
+            max-width: 900px;
             margin: 0 auto;
             font-size: 14px;
 

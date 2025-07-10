@@ -1134,13 +1134,13 @@ html.rustprop .rp-hr {
   width: 85%;
   border: solid 2px rgba(243, 232, 233, 0.75);
   margin-top: 30px;
-  max-width: 950px;
+  max-width: 900px;
 }
 html.rustprop h1 {
   text-align: center;
   cursor: text;
   width: 85%;
-  max-width: 950px;
+  max-width: 900px;
   border-bottom: solid 4px rgba(243, 232, 233, 0.75);
   padding-bottom: 25px;
   padding-top: 5px;
@@ -1256,7 +1256,7 @@ html.rustprop main a.pdf-link {
 }
 html.rustprop main .rp-landing, html.rustprop main .four-oh-four {
   width: 85%;
-  max-width: 950px;
+  max-width: 900px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -1426,7 +1426,7 @@ html.rustprop main .img-gallery .item img {
   -o-object-fit: cover;
      object-fit: cover;
   pointer-events: none;
-  border-top: solid rgba(243, 232, 233, 0.75) 5px;
+  border-top: solid rgba(243, 232, 233, 0.75) 4px;
 }
 html.rustprop main .img-gallery .item img:first-of-type {
   border-top: none;
@@ -1493,7 +1493,7 @@ html.rustprop footer p.credit {
 }
 html.rustprop footer p.credit, html.rustprop footer a {
   width: 85%;
-  max-width: 950px;
+  max-width: 900px;
   margin: 0 auto;
   font-size: 14px;
 }
