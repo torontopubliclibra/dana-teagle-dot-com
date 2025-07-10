@@ -199,35 +199,12 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: "";
-  clear: both;
-  height: 0;
-}
-
 html {
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 @keyframes fade-in {
@@ -238,6 +215,7 @@ html {
     opacity: 1;
   }
 }
+
 @font-face {
   font-family: "Source Code Pro";
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
@@ -281,7 +259,9 @@ a:hover {
 }
 
 header, main, footer {
+  overflow: hidden;
   width: 85vw;
+  min-width: 350px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -300,6 +280,14 @@ footer {
 hr {
   border: solid #84A59D 2px;
   margin: 30px 0;
+}
+
+header hr {
+  margin-bottom: 0;
+}
+
+main {
+  margin-top: 30px;
 }
 
 hr.highlight {
