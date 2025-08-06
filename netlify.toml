@@ -81,13 +81,13 @@
   status = 404
 
 [[redirects]]
-  from = "https://danatgirl.com/*"
+  from = "https://danatgirl.com/"
   to = "https://danateagle.com/"
   status = 200
   force = true
 
 [[redirects]]
-  from = "https://www.danatgirl.com/*"
+  from = "https://www.danatgirl.com/"
   to = "https://www.danateagle.com/"
   status = 200
   force = true
