@@ -81,25 +81,13 @@
   status = 404
 
 [[redirects]]
-  from = "http://danatgirl.com/"
-  to = "http://www.danateagle.com/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "http://www.danatgirl.com/"
-  to = "http://www.danateagle.com/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "https://danatgirl.com/"
-  to = "https://www.danateagle.com/"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "https://www.danatgirl.com/"
   to = "https://www.danateagle.com/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://danatgirl.com/*"
+  to = "https://www.danateagle.com/:splat"
   status = 200
   force = true
