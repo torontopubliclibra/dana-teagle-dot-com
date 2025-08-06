@@ -83,11 +83,11 @@
 [[redirects]]
   from = "https://www.danatgirl.com/"
   to = "https://www.danateagle.com/"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "http://danatgirl.com/*"
   to = "https://www.danateagle.com/:splat"
-  status = 200
+  status = 301
   force = true
