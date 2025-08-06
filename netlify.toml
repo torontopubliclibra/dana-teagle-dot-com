@@ -79,3 +79,9 @@
   from = "/rustprop/*"
   to = "https://danateagle.com/rustprop/404.html"
   status = 404
+
+[[redirects]]
+  from = "https://danatgirl.com/*"
+  to = "https://danateagle.com/"
+  status = 200
+  force = true
