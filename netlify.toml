@@ -1,4 +1,14 @@
 [[redirects]]
+  from = "/tpl/*"
+  to = "https://danateagle.com/tpl/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/rustprop/*"
+  to = "https://danateagle.com/rustprop/404.html"
+  status = 404
+  
+[[redirects]]
   from = "http://www.torontopubliclibra.com/"
   to = "https://www.danateagle.com/tpl/"
   status = 200
@@ -71,23 +81,25 @@
   force = true
 
 [[redirects]]
-  from = "/tpl/*"
-  to = "https://danateagle.com/tpl/404.html"
-  status = 404
-
-[[redirects]]
-  from = "/rustprop/*"
-  to = "https://danateagle.com/rustprop/404.html"
-  status = 404
-
-[[redirects]]
   from = "https://www.danatgirl.com/"
   to = "https://www.danateagle.com/"
-  status = 301
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://danatgirl.com/"
+  to = "https://www.danateagle.com/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://danatgirl.com/*"
+  to = "https://www.danateagle.com/:splat"
+  status = 200
   force = true
 
 [[redirects]]
   from = "http://danatgirl.com/*"
   to = "https://www.danateagle.com/:splat"
-  status = 301
+  status = 200
   force = true
