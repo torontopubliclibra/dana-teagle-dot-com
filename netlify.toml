@@ -85,3 +85,9 @@
   to = "https://danateagle.com/"
   status = 200
   force = true
+
+[[redirects]]
+  from = "https://www.danatgirl.com/*"
+  to = "https://www.danateagle.com/"
+  status = 200
+  force = true
