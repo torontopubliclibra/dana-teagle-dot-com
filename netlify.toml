@@ -82,24 +82,24 @@
 
 [[redirects]]
   from = "https://www.danatgirl.com/"
-  to = "https://www.danateagle.com/"
+  to = "https://www.danateagle.com/mini"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://danatgirl.com/"
-  to = "https://www.danateagle.com/"
+  to = "https://www.danateagle.com/mini"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://danatgirl.com/*"
-  to = "https://www.danateagle.com/:splat"
+  to = "https://www.danateagle.com/mini/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "http://danatgirl.com/*"
-  to = "https://www.danateagle.com/:splat"
+  to = "https://www.danateagle.com/mini/:splat"
   status = 200
   force = true
