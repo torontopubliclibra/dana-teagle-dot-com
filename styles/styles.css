@@ -224,8 +224,7 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -993,7 +992,7 @@ html.tpl main .tpl-links h3 {
   width: auto;
   margin-bottom: 10px;
   padding-top: 0;
-  scroll-margin-top: 235px;
+  scroll-margin-top: 245px;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links h3 {
@@ -1001,7 +1000,7 @@ html.tpl main .tpl-links h3 {
     text-align: left;
     margin-right: auto;
     margin-left: auto;
-    scroll-margin-top: 300px;
+    scroll-margin-top: 320px;
   }
 }
 html.tpl main .tpl-links h3.h3-trans-id {
