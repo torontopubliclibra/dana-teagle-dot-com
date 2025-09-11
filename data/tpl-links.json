@@ -4,13 +4,13 @@
             "link": "/",
             "description": "My design & web development portfolio"
         },
-        "RUSTPROP dot org": {
-            "link": "/rustprop",
-            "description": "Political messaging with varying degrees of importance"
-        },
         "TG I.D.": {
             "link": "https://tg-id.ca/",
             "description": "An online hub providing documents and resources about how to change your name and gender marker in Canada"
+        },
+        "RUSTPROP dot org": {
+            "link": "/rustprop",
+            "description": "Political messaging with varying degrees of importance"
         },
         "Github": {
             "link": "/github",
@@ -34,21 +34,21 @@
             "link": "/letterboxd",
             "description": "[at] torontolibra"
         },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "torontopubliclibra"
-        },
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": "[at] torontopubliclibra.com"
-        },
         "Goodreads": {
             "link": "/goodreads",
             "description": ""
         },
-        "Spotify": {
-            "link": "/spotify",
+        "Discogs": {
+            "link": "/discogs",
             "description": ""
+        },
+        "Tidal": {
+            "link": "/tidal",
+            "description": ""
+        },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "torontopubliclibra"
         }
     },
     "contact & pay": {
@@ -96,21 +96,9 @@
         }
     },
     "resources & tools": {
-        "Justice Trans": {
-            "link": "https://justicetrans.org/en/",
-            "description": "Justice & legal info for Two Spirit, trans, non-binary, and gender non-conforming individuals in Canada"
-        },
         "National Network of Abortion Funds": {
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        },
-        "The Internet Archive": {
-            "link": "https://archive.org/",
-            "description": "Non-profit library of millions of free texts, movies, software, music, websites, and more."
-        },
-        "Digital Transgender Archive": {
-            "link": "https://www.digitaltransgenderarchive.net/",
-            "description": "Archive of digitized and born-digital materials relating to the history of trans people"
         },
         "Transfeminine Science": {
             "link": "https://transfemscience.org/",
