@@ -3,7 +3,7 @@
         "id": "tg-id",
         "year": "2025",
         "tags": [
-            "2SLGBTQ+_advocacy"
+            "Advocacy"
         ],
         "description": [
             "This is an online resource collecting information on how to update legal names, gender markers, and identity documents in Ontario, Canada. I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years. The current version was initially launched in March 2025."
@@ -28,12 +28,12 @@
         "year": "2024",
         "tags": [
             "Non-profit",
-            "2SLGBTQ+_advocacy"
+            "Advocacy"
         ],
         "description": [
             "This is a website for Connect Fund—a not-for-profit organization funding healthcare for 2SLGBTQ+ communities in Canada. The site launched in summer 2024, and I remain on-call for periodic updates and support as well as miscellaneous graphic design work."
         ],
-        "image": "./assets/projects/connectfund.jpg",
+        "image": "./assets/projects/connectfund.png",
         "site": "https://www.connectfund.org/"
     },
     "Therapy with Andrea": {
@@ -134,7 +134,7 @@
         "description": [
             "This is a website for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024."
         ],
-        "image": "./assets/projects/truehistorybeer.jpg",
+        "image": "./assets/projects/truehistory.png",
         "site": "https://truehistorybeer.com"
     },
     "Nina Milanovski": {
@@ -154,7 +154,7 @@
         "year": "2023",
         "tags": [
             "Non-profit",
-            "2SLGBTQ+_advocacy"
+            "Advocacy"
         ],
         "description": [
             "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, developed using the open-source Pytheas framework. In 2023, I was the lead developer on the application, working alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. Research for the tour was provided by Walter Cassidy."

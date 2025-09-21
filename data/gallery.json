@@ -1,23 +1,23 @@
 {
     "THB 1": {
         "title": "True History Brewing",
-        "year": "2024",
+        "year": "2024—2025",
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
-        "images": ["./assets/projects/truehistorybeer.jpg"]
+        "images": ["./assets/projects/truehistory.png"]
     },
     "THB 2": {
         "title": "True History Brewing",
-        "year": "2024",
+        "year": "2024—2025",
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
-        "images": ["./assets/projects/truehistorybeer-2.jpg", "./assets/projects/truehistorybeer-3.png", "./assets/projects/truehistorybeer-4.jpg"]
+        "images": ["./assets/projects/truehistory-2.png", "./assets/projects/truehistory-3.png", "./assets/projects/truehistory-4.png"]
     },
     "MCD 1": {
         "title": "Michael Cloud Duguay",
-        "year": "2024",
+        "year": "2024—2025",
         "service": "Web design & development",
         "id": "michael-cloud-duguay",
         "site": "https://michaelcduguay.com",
@@ -25,31 +25,23 @@
     },
     "MCD 2": {
         "title": "Michael Cloud Duguay",
-        "year": "2024",
+        "year": "2024—2025",
         "service": "Web design & development",
         "id": "michael-cloud-duguay",
         "site": "https://michaelcduguay.com",
         "images": ["./assets/projects/michaelcduguay-2.jpg", "./assets/projects/michaelcduguay-3.jpg", "./assets/projects/michaelcduguay-4.jpg"]
     },
-    "Aino Pihlak": {
-        "title": "Aino Pihlak",
-        "year": "2024",
-        "service": "Web design & development",
-        "id": "aino-pihlak",
-        "site": "https://ainopihlak.com",
-        "images": ["./assets/projects/aino-pihlak.png"]
-    },
     "Connect Fund": {
         "title": "Connect Fund",
-        "year": "2024",
+        "year": "2024—2025",
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
-        "images": ["./assets/projects/connectfund.jpg"]
+        "images": ["./assets/projects/connectfund.png"]
     },
     "Connect Fund 2": {
         "title": "Connect Fund",
-        "year": "2024",
+        "year": "2024—2025",
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
@@ -71,20 +63,13 @@
     },
     "YRL": {
         "title": "Your Real Life Insurance",
-        "year": "2020-2021",
+        "year": "2020—2021",
         "service": "Graphic design & social media marketing",
-        "images": ["./assets/projects/yrl-3.png", "./assets/projects/yrl-1.png", "./assets/projects/yrl-2.png"]
-    },
-    "West83": {
-        "title": "West83",
-        "year": "2024",
-        "service": "Logo design",
-        "site": "https://www.west83.com/",
-        "images": ["./assets/projects/west83.jpg"]
+        "images": ["./assets/projects/yrl-1.png", "./assets/projects/yrl-2.png"]
     },
     "Sydney": {
         "title": "Sydney Gautreau",
-        "year": "2022",
+        "year": "2022—2025",
         "service": "Web design & development",
         "id": "sydney-gautreau",
         "site": "https://sydneygautreau.com",
@@ -92,7 +77,7 @@
     },
     "RUSTPROP 1": {
         "title": "RUSTPROP",
-        "year": "2024-2025",
+        "year": "2024—2025",
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
@@ -100,7 +85,7 @@
     },
     "RUSTPROP 2": {
         "title": "RUSTPROP",
-        "year": "2024-2025",
+        "year": "2024—2025",
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
@@ -136,14 +121,6 @@
         "id": "poe-m-allphin",
         "site": "https://poemallphin.com/",
         "images": ["./assets/projects/poe-m-allphin.png"]
-    },
-    "Hazel Henry Audio": {
-        "title": "Hazel Henry Audio",
-        "year": "2025",
-        "service": "Web design & development",
-        "id": "hazel-henry-audio",
-        "site": "https://hazelhenryaudio.com/",
-        "images": ["./assets/projects/hazel-henry-audio.png"]
     },
     "Tony Matthews": {
         "title": "Tony Matthews",
