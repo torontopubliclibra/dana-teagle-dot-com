@@ -4,9 +4,17 @@
             "link": "/",
             "description": "My design & web development portfolio"
         },
+        "dt dot com mini site": {
+            "link": "/mini",
+            "description": "A simplified version of my portfolio"
+        },
         "TG I.D.": {
             "link": "https://tg-id.ca/",
-            "description": "An online hub providing documents and resources about how to change your name and gender marker in Canada"
+            "description": "An online hub I run providing documents and resources about how to change your name and gender marker in Ontario"
+        },
+        "TG I.D. workshops": {
+            "link": "https://tg-id.ca/workshops",
+            "description": "Info about booking me for name change workshops"
         },
         "RUSTPROP dot org": {
             "link": "/rustprop",
@@ -14,7 +22,7 @@
         },
         "Github": {
             "link": "/github",
-            "description": ""
+            "description": "torontopubliclibra"
         }
     },
     "social profiles": {

@@ -17,6 +17,16 @@ h1 {
   margin: 0.67em 0;
 }
 
+.title {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title:hover {
+  color: inherit;
+  font-style: normal;
+}
+
 figcaption, figure, main {
   display: block;
 }
