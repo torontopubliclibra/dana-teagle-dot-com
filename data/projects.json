@@ -9,7 +9,8 @@
             "This is an online resource collecting information on how to update legal names, gender markers, and identity documents in Ontario, Canada. I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years. The current version was initially launched in March 2025."
         ],
         "image": "./assets/projects/tg-id.png",
-        "site": "https://tg-id.ca"
+        "site": "https://tg-id.ca",
+        "code": "https://github.com/torontopubliclibra/tg-id"
     },
     "Point Pelee Planner": {
         "id": "point-pelee-planner",
@@ -21,7 +22,8 @@
             "This is a guided walking tour app for Point Pelee National Park and Leamington, Ontario, developed using the open-source Pytheas framework. In the summer of 2025, I developed the application working alongside Randy Topliffe and Doug Sartori, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a>, <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>, and the Leamington BIA. Research and curation by Doug Sartori and Kat Sartori."
         ],
         "image": "./assets/projects/point-pelee-planner.png",
-        "site": "https://pointpeleeplanner.com/"
+        "site": "https://pointpeleeplanner.com/",
+        "code": "https://github.com/p42systems/pytheas-pelee/"
     },
     "Connect Fund": {
         "id": "connect-fund",
