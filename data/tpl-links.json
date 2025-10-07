@@ -26,6 +26,10 @@
         }
     },
     "social profiles": {
+        "Bluesky": {
+            "link": "/bluesky",
+            "description": "[at] torontopubliclibra.com"
+        },
         "Personal Instagram": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
@@ -42,6 +46,10 @@
             "link": "/letterboxd",
             "description": "[at] torontolibra"
         },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "torontopubliclibra"
+        },
         "Goodreads": {
             "link": "/goodreads",
             "description": ""
@@ -53,10 +61,6 @@
         "Tidal": {
             "link": "/tidal",
             "description": ""
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "torontopubliclibra"
         }
     },
     "contact & pay": {
@@ -97,10 +101,6 @@
         "Davenport Aid Brigade": {
             "link": "https://linktr.ee/davenportaidbrigade",
             "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
-        },
-        "Fundraising for Majd in 🍉": {
-            "link": "https://chuffed.org/project/135726-fundraising-for-majd-in",
-            "description": "From Majd in Gaza — 'I want to collect $100,000 to buy food and drink. I also need it to get out of Gaza to search for safety.'"
         }
     },
     "resources & tools": {

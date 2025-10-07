@@ -12,19 +12,6 @@
         "site": "https://tg-id.ca",
         "code": "https://github.com/torontopubliclibra/tg-id"
     },
-    "Point Pelee Planner": {
-        "id": "point-pelee-planner",
-        "year": "2025",
-        "tags": [
-            "Non-profit"
-        ],
-        "description": [
-            "This is a guided walking tour app for Point Pelee National Park and Leamington, Ontario, developed using the open-source Pytheas framework. In the summer of 2025, I developed the application working alongside Randy Topliffe and Doug Sartori, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a>, <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>, and the Leamington BIA. Research and curation by Doug Sartori and Kat Sartori."
-        ],
-        "image": "./assets/projects/point-pelee-planner.png",
-        "site": "https://pointpeleeplanner.com/",
-        "code": "https://github.com/p42systems/pytheas-pelee/"
-    },
     "Connect Fund": {
         "id": "connect-fund",
         "year": "2024",
@@ -37,82 +24,6 @@
         ],
         "image": "./assets/projects/connectfund.png",
         "site": "https://www.connectfund.org/"
-    },
-    "Therapy with Andrea": {
-        "id": "andrea-lynn-ferguson",
-        "year": "2025",
-        "tags": [
-            "Professional"
-        ],
-        "description": [
-            "This is the website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). I designed and developed the site between May and June 2025."
-        ],
-        "image": "./assets/projects/andrea-lynn-ferguson.png",
-        "site": "https://andrealynnferguson.com/"
-    },
-    "Tony Matthews": {
-        "id": "tony-matthews",
-        "year": "2025",
-        "tags": [
-            "Artist/Creative",
-            "Professional"
-        ],
-        "description": [
-            "This is the website for Tony Matthews, a seasoned producer and studio leader with 25+ years of experience in animation, digital media, and immersive storytelling. I designed and developed the site between March and June 2025."
-        ],
-        "image": "./assets/projects/tony-matthews.jpg",
-        "site": "https://www.tony-matthews.com/"
-    },
-    "Poe M. Allphin": {
-        "id": "poe-m-allphin",
-        "year": "2025",
-        "tags": [
-            "Academic",
-            "Music/Audio"
-        ],
-        "description": [
-            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College. I designed and developed the site between February and April 2025."
-        ],
-        "image": "./assets/projects/poe-m-allphin.png",
-        "site": "https://poemallphin.com"
-    },
-    "Hazel Henry Audio": {
-        "id": "hazel-henry-audio",
-        "year": "2025",
-        "tags": [
-            "Freelancer",
-            "Music/Audio"
-        ],
-        "description": [
-            "This is a website for Hazel Henry—a dynamic rock producer based in Portland, Oregon—that I designed and developed between January and April 2025."
-        ],
-        "image": "./assets/projects/hazel-henry-audio.png",
-        "site": "https://hazelhenryaudio.com/"
-    },
-    "Aino Pihlak": {
-        "id": "aino-pihlak",
-        "year": "2024",
-        "tags": [
-            "Academic"
-        ],
-        "description": [
-            "This is a website for social historian Aino Pihlak. I designed and developed the site in November and December 2024."
-        ],
-        "image": "./assets/projects/aino-pihlak.png",
-        "site": "https://ainopihlak.com"
-    },
-    "Ryan Perks": {
-        "id": "ryan-perks",
-        "year": "2025",
-        "tags": [
-            "Freelancer",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for book editor Ryan Perks. I designed and developed the site between December 2024 and February 2025."
-        ],
-        "image": "./assets/projects/ryanperks.png",
-        "site": "https://ryanperks.com"
     },
     "Michael Cloud Duguay": {
         "id": "michael-cloud-duguay",
@@ -139,6 +50,32 @@
         "image": "./assets/projects/truehistory.png",
         "site": "https://truehistorybeer.com"
     },
+    "Tony Matthews": {
+        "id": "tony-matthews",
+        "year": "2025",
+        "tags": [
+            "Artist/Creative",
+            "Professional"
+        ],
+        "description": [
+            "This is the website for Tony Matthews, a seasoned producer and studio leader with 25+ years of experience in animation, digital media, and immersive storytelling. I designed and developed the site between March and June 2025."
+        ],
+        "image": "./assets/projects/tony-matthews.jpg",
+        "site": "https://www.tony-matthews.com/"
+    },
+    "Ryan Perks": {
+        "id": "ryan-perks",
+        "year": "2025",
+        "tags": [
+            "Freelancer",
+            "Writing/Editing"
+        ],
+        "description": [
+            "This is a website for book editor Ryan Perks. I designed and developed the site between December 2024 and February 2025."
+        ],
+        "image": "./assets/projects/ryanperks.png",
+        "site": "https://ryanperks.com"
+    },
     "Nina Milanovski": {
         "id": "nina-milanovski",
         "year": "2024",
@@ -150,6 +87,82 @@
         ],
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
+    },
+    "Sydney Gautreau": {
+        "id": "sydney-gautreau",
+        "year": "2022",
+        "tags": [
+            "Freelancer",
+            "Writing/Editing"
+        ],
+        "description": [
+            "This is a website for Sydney Gautreau's editing & writing coaching business. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
+        ],
+        "image": "./assets/projects/sydneygautreau.png",
+        "site": "https://sydneygautreau.com"
+    },
+    "Poe M. Allphin": {
+        "id": "poe-m-allphin",
+        "year": "2025",
+        "tags": [
+            "Academic",
+            "Music/Audio"
+        ],
+        "description": [
+            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College. I designed and developed the site between February and April 2025."
+        ],
+        "image": "./assets/projects/poe-m-allphin.png",
+        "site": "https://poemallphin.com"
+    },
+    "Therapy with Andrea": {
+        "id": "andrea-lynn-ferguson",
+        "year": "2025",
+        "tags": [
+            "Professional"
+        ],
+        "description": [
+            "This is the website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). I designed and developed the site between May and June 2025."
+        ],
+        "image": "./assets/projects/andrea-lynn-ferguson.png",
+        "site": "https://andrealynnferguson.com/"
+    },
+    "Hazel Henry Audio": {
+        "id": "hazel-henry-audio",
+        "year": "2025",
+        "tags": [
+            "Freelancer",
+            "Music/Audio"
+        ],
+        "description": [
+            "This is a website for Hazel Henry—a dynamic rock producer based in Portland, Oregon—that I designed and developed between January and April 2025."
+        ],
+        "image": "./assets/projects/hazel-henry-audio.png",
+        "site": "https://hazelhenryaudio.com/"
+    },
+    "Aino Pihlak": {
+        "id": "aino-pihlak",
+        "year": "2024",
+        "tags": [
+            "Academic"
+        ],
+        "description": [
+            "This is a website for social historian Aino Pihlak. I designed and developed the site in November and December 2024."
+        ],
+        "image": "./assets/projects/aino-pihlak.png",
+        "site": "https://ainopihlak.com"
+    },
+    "Point Pelee Planner": {
+        "id": "point-pelee-planner",
+        "year": "2025",
+        "tags": [
+            "Non-profit"
+        ],
+        "description": [
+            "This is a guided walking tour app for Point Pelee National Park and Leamington, Ontario, developed using the open-source Pytheas framework. In the summer of 2025, I developed the application working alongside Randy Topliffe and Doug Sartori, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a>, <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>, and the Leamington BIA. Research and curation by Doug Sartori and Kat Sartori."
+        ],
+        "image": "./assets/projects/point-pelee-planner.png",
+        "site": "https://pointpeleeplanner.com/",
+        "code": "https://github.com/p42systems/pytheas-pelee/"
     },
     "Queer Walk": {
         "id": "queer-walk",
@@ -164,18 +177,5 @@
         "image": "./assets/projects/queerwalk.jpg",
         "site": "https://queerwalk.ca",
         "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
-    },
-    "Sydney Gautreau": {
-        "id": "sydney-gautreau",
-        "year": "2022",
-        "tags": [
-            "Freelancer",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for Sydney Gautreau's editing & writing coaching business. It was originally designed and developed in 2022, and received style and functionality upgrades in 2023 and 2024."
-        ],
-        "image": "./assets/projects/sydneygautreau.png",
-        "site": "https://sydneygautreau.com"
     }
 }
