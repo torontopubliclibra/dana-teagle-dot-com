@@ -26,14 +26,6 @@
         }
     },
     "social profiles": {
-        "Bluesky": {
-            "link": "/bluesky",
-            "description": "[at] torontopubliclibra.com"
-        },
-        "Personal Instagram": {
-            "link": "/tpl-insta",
-            "description": "[at] torontopubliclibra"
-        },
         "Business Instagram": {
             "link": "/dt-insta",
             "description": "[at] danateagledotcom"
