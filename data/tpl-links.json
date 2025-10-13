@@ -25,6 +25,24 @@
             "description": "torontopubliclibra"
         }
     },
+    "mutual aid": {
+        "Funds for Gaza": {
+            "link": "https://linktr.ee/fundsforgaza",
+            "description": "A rotating list of fundraisers for Gazans"
+        },
+        "Mutual Aid for Life": {
+            "link": "https://linktr.ee/mutualaidforlife",
+            "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
+        },
+        "Davenport Aid Brigade": {
+            "link": "https://linktr.ee/davenportaidbrigade",
+            "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
+        },
+        "National Network of Abortion Funds": {
+            "link": "https://abortionfunds.org/",
+            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
+        }
+    },
     "social profiles": {
         "Business Instagram": {
             "link": "/dt-insta",
@@ -79,38 +97,6 @@
         "PGP [Pretty Good Privacy] key": {
             "link": "/data/rusty-pgp.asc",
             "description": "ASCII text file download"
-        }
-    },
-    "mutual aid": {
-        "Funds for Gaza": {
-            "link": "https://linktr.ee/fundsforgaza",
-            "description": "A rotating list of fundraisers for Gazans"
-        },
-        "Mutual Aid for Life": {
-            "link": "https://linktr.ee/mutualaidforlife",
-            "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
-        },
-        "Davenport Aid Brigade": {
-            "link": "https://linktr.ee/davenportaidbrigade",
-            "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
-        }
-    },
-    "resources & tools": {
-        "National Network of Abortion Funds": {
-            "link": "https://abortionfunds.org/",
-            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        },
-        "Transfeminine Science": {
-            "link": "https://transfemscience.org/",
-            "description": "Resource for informational content on the subject of transfeminine hormone therapy"
-        },
-        "Cobalt": {
-            "link": "https://cobalt.tools/",
-            "description": "Tool for saving media (including video, audio, photos, or gifs) from websites"
-        },
-        "Metadata cleaner": {
-            "link": "https://metadata.systemli.org/",
-            "description": "Tool for scrubbing hidden metadata from files"
         }
     }
 }
