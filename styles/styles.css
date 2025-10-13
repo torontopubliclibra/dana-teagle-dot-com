@@ -887,7 +887,8 @@ html.tpl main.tpl-subpage .tpl-page-content a:hover {
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text {
   margin-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  margin-bottom: -10px;
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text p {
   margin: 10px 0;

@@ -482,7 +482,8 @@ html.tpl {
 
                 .tpl-page-text {
                     margin-top: 15px;
-                    padding-bottom: 10px;
+                    padding-bottom: 0px;
+                    margin-bottom: -10px;
 
                     p {
                         margin: 10px 0;
