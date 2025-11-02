@@ -1,29 +1,28 @@
 {
-    "Tony Matthews": {
-        "id": "tony-matthews",
+    "True History Brewing": {
+        "id": "true-history-brewing",
         "year": "2025",
         "tags": [
-            "Artist/Creative",
-            "Professional"
+            "Business/Storefront"
         ],
         "description": [
-            "This is the website for Tony Matthews, a seasoned producer and studio leader with 25+ years of experience in animation, digital media, and immersive storytelling. I designed and developed the site between March and June 2025."
+            "This is a website for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024, and revamped with a new design in October 2025."
         ],
-        "image": "./assets/projects/tony-matthews.jpg",
-        "site": "https://www.tony-matthews.com/"
+        "image": "./assets/projects/truehistory.png",
+        "site": "https://truehistorybeer.com"
     },
-    "Poe M. Allphin": {
-        "id": "poe-m-allphin",
+    "Ryan Perks": {
+        "id": "ryan-perks",
         "year": "2025",
         "tags": [
-            "Academic",
-            "Music/Audio"
+            "Freelancer",
+            "Writing/Editing"
         ],
         "description": [
-            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College. I designed and developed the site between February and April 2025."
+            "This is a website for book editor Ryan Perks. I designed and developed the site between December 2024 and February 2025."
         ],
-        "image": "./assets/projects/poe-m-allphin.png",
-        "site": "https://poemallphin.com"
+        "image": "./assets/projects/ryanperks.png",
+        "site": "https://ryanperks.com"
     },
     "Therapy with Andrea": {
         "id": "andrea-lynn-ferguson",
@@ -37,18 +36,18 @@
         "image": "./assets/projects/andrea-lynn-ferguson.png",
         "site": "https://andrealynnferguson.com/"
     },
-    "TG I.D.": {
-        "id": "tg-id",
+    "Tony Matthews": {
+        "id": "tony-matthews",
         "year": "2025",
         "tags": [
-            "Advocacy"
+            "Artist/Creative",
+            "Professional"
         ],
         "description": [
-            "This is an online resource collecting information on how to update legal names, gender markers, and identity documents in Ontario, Canada. I have led workshops on name and gender marker changes since 2021, and have worked on versions of this platform for several years. The current version was initially launched in March 2025."
+            "This is the website for Tony Matthews, a seasoned producer and studio leader with 25+ years of experience in animation, digital media, and immersive storytelling. I designed and developed the site between March and June 2025."
         ],
-        "image": "./assets/projects/tg-id.png",
-        "site": "https://tg-id.ca",
-        "code": "https://github.com/torontopubliclibra/tg-id"
+        "image": "./assets/projects/tony-matthews.jpg",
+        "site": "https://www.tony-matthews.com/"
     },
     "Hazel Henry Audio": {
         "id": "hazel-henry-audio",
@@ -63,18 +62,18 @@
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
     },
-    "Ryan Perks": {
-        "id": "ryan-perks",
-        "year": "2024",
+    "Poe M. Allphin": {
+        "id": "poe-m-allphin",
+        "year": "2025",
         "tags": [
-            "Freelancer",
-            "Writing/Editing"
+            "Academic",
+            "Music/Audio"
         ],
         "description": [
-            "This is a website for book editor Ryan Perks. I designed and developed the site between December 2024 and February 2025."
+            "This is a website for Poe M. Allphin—a PhD student in musicology at the CUNY Graduate Center and an adjunct lecturer at Queens College. I designed and developed the site between February and April 2025."
         ],
-        "image": "./assets/projects/ryanperks.png",
-        "site": "https://ryanperks.com"
+        "image": "./assets/projects/poe-m-allphin.png",
+        "site": "https://poemallphin.com"
     },
     "Connect Fund": {
         "id": "connect-fund",
@@ -99,20 +98,8 @@
         "description": [
             "This is a website for Michael Cloud Duguay—a composer, producer, improviser, and accordionist from Peterborough, Ontario—that I designed and developed in 2024."
         ],
-        "image": "./assets/projects/michaelcduguay.jpg",
+        "image": "./assets/projects/michaelcduguay.png",
         "site": "https://www.michaelcduguay.com/"
-    },
-    "True History Brewing": {
-        "id": "true-history-brewing",
-        "year": "2024",
-        "tags": [
-            "Business/Storefront"
-        ],
-        "description": [
-            "This is a website for True History Brewing, a brewery and taproom in Toronto, Ontario, Canada. The site was initially launched in March 2024."
-        ],
-        "image": "./assets/projects/truehistory.png",
-        "site": "https://truehistorybeer.com"
     },
     "Nina Milanovski": {
         "id": "nina-milanovski",
@@ -126,23 +113,9 @@
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
     },
-    "Queer Walk": {
-        "id": "queer-walk",
-        "year": "2023",
-        "tags": [
-            "Non-profit",
-            "Advocacy"
-        ],
-        "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, developed using the open-source Pytheas framework. In 2023, I was the lead developer on the application, working alongside <a href='https://haleytibbitts.com/' target='_blank'>Haley Tibbitts</a> and Zhenia Tomé, with funding and support from <a href='https://www.p42systems.com/' target='_blank'>P42 Systems</a> and <a href='https://www.hackf.org/' target='_blank'>Windsor Hackforge</a>. Research for the tour was provided by Walter Cassidy."
-        ],
-        "image": "./assets/projects/queerwalk.jpg",
-        "site": "https://queerwalk.ca",
-        "code": "https://github.com/p42systems/pytheas-WindsorLGBTQ"
-    },
     "Sydney Gautreau": {
         "id": "sydney-gautreau",
-        "year": "2022",
+        "year": "2024",
         "tags": [
             "Freelancer",
             "Writing/Editing"
