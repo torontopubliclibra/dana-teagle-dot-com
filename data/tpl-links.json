@@ -25,24 +25,6 @@
             "description": "Political messaging with varying degrees of importance"
         }
     },
-    "mutual aid": {
-        "Funds for Gaza": {
-            "link": "https://linktr.ee/fundsforgaza",
-            "description": "A rotating list of fundraisers for Gazans"
-        },
-        "Mutual Aid for Life": {
-            "link": "https://linktr.ee/mutualaidforlife",
-            "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
-        },
-        "Davenport Aid Brigade": {
-            "link": "https://linktr.ee/davenportaidbrigade",
-            "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
-        },
-        "National Network of Abortion Funds": {
-            "link": "https://abortionfunds.org/",
-            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        }
-    },
     "social profiles": {
         "Letterboxd": {
             "link": "/letterboxd",
@@ -75,6 +57,24 @@
         "Instagram (III)": {
             "link": "/rp-insta",
             "description": "[at] rustprop"
+        }
+    },
+    "mutual aid": {
+        "Funds for Gaza": {
+            "link": "https://linktr.ee/fundsforgaza",
+            "description": "A rotating list of fundraisers for Gazans"
+        },
+        "Mutual Aid for Life": {
+            "link": "https://linktr.ee/mutualaidforlife",
+            "description": "Linktree of various fundraisers to provide mutual aid support to displaced Gazans"
+        },
+        "Davenport Aid Brigade": {
+            "link": "https://linktr.ee/davenportaidbrigade",
+            "description": "Linktree for Toronto-based mutual aid collective supporting displaced families in Egypt and Gaza"
+        },
+        "National Network of Abortion Funds": {
+            "link": "https://abortionfunds.org/",
+            "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
         }
     },
     "contact & pay": {
