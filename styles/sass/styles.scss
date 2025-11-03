@@ -213,6 +213,8 @@ header {
 
         .title {
             animation: fade-in 0.75s ease-in 0s forwards;
+            display: flex;
+            justify-content: center;
         }
 
         .title h1 {
@@ -220,7 +222,9 @@ header {
 
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                font-size: 2.5rem !important;
+                font-size: 7vw !important;
+                margin: 0 auto;
+                width: 75vw;
             }
         }
     }

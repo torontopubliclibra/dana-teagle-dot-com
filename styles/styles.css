@@ -2258,13 +2258,17 @@ header.four-oh-four {
 }
 header.four-oh-four .title {
   animation: fade-in 0.75s ease-in 0s forwards;
+  display: flex;
+  justify-content: center;
 }
 header.four-oh-four .title h1 {
   font-size: 3rem !important;
 }
 @media only screen and (max-width: 768px) {
   header.four-oh-four .title h1 {
-    font-size: 2.5rem !important;
+    font-size: 7vw !important;
+    margin: 0 auto;
+    width: 75vw;
   }
 }
 @media only screen and (max-width: 970px) {

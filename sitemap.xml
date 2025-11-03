@@ -3,37 +3,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://danateagle.com/</loc>
-        <lastmod>2025-10-12</lastmod>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://danateagle.com/mini</loc>
-        <lastmod>2025-09-25</lastmod>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://danateagle.com/tpl/</loc>
-        <lastmod>2025-10-12</lastmod>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://danateagle.com/tpl/now/</loc>
-        <lastmod>2025-10-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-        <url>
-        <loc>https://danateagle.com/tpl/now/archive</loc>
-        <lastmod>2025-10-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    <url>
-        <loc>https://danateagle.com/tpl/uses</loc>
-        <lastmod>2025-09-11</lastmod>
+        <loc>https://danateagle.com/tpl/now</loc>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>

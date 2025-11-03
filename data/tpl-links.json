@@ -16,13 +16,13 @@
             "link": "https://tg-id.ca/workshops",
             "description": "Info about booking me for name change workshops"
         },
-        "RUSTPROP dot org": {
-            "link": "/rustprop",
-            "description": "Political messaging with varying degrees of importance"
-        },
         "Github": {
             "link": "/github",
             "description": "torontopubliclibra"
+        },
+        "RUSTPROP dot org": {
+            "link": "/rustprop",
+            "description": "Political messaging with varying degrees of importance"
         }
     },
     "mutual aid": {
@@ -44,10 +44,6 @@
         }
     },
     "social profiles": {
-        "Instagram": {
-            "link": "/dt-insta",
-            "description": "[at] danateagledotcom"
-        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": "[at] torontolibra"
@@ -56,10 +52,6 @@
             "link": "/tumblr",
             "description": "torontopubliclibra"
         },
-        "Goodreads": {
-            "link": "/goodreads",
-            "description": ""
-        },
         "Discogs": {
             "link": "/discogs",
             "description": ""
@@ -67,9 +59,37 @@
         "Tidal": {
             "link": "/tidal",
             "description": ""
+        },
+        "Goodreads": {
+            "link": "/goodreads",
+            "description": ""
+        },
+        "Instagram (I)": {
+            "link": "/tpl-insta",
+            "description": "[at] torontopubliclibra"
+        },
+        "Instagram (II)": {
+            "link": "/dt-insta",
+            "description": "[at] danateagledotcom"
+        },
+        "Instagram (III)": {
+            "link": "/rp-insta",
+            "description": "[at] rustprop"
         }
     },
     "contact & pay": {
+        "RUSTPROP Ko-fi": {
+            "link": "/kofi",
+            "description": "Support my agitprop design project"
+        },
+        "PayPal": {
+            "link": "/paypal",
+            "description": "Send payments via PayPal"
+        },
+        "Wise": {
+            "link": "/wise",
+            "description": "Send payments via Wise"
+        },
         "Personal email": {
             "link": "mailto:torontopubliclibra@gmail.com",
             "description": "torontopubliclibra [at] gmail.com"
@@ -82,15 +102,7 @@
             "link": "/discord",
             "description": "torontopubliclibra on Discord"
         },
-        "Paypal": {
-            "link": "/paypal",
-            "description": "Send payments to [at] torontopubliclibra"
-        },
-        "RUSTPROP Ko-fi": {
-            "link": "/kofi",
-            "description": "Support my agitprop design project"
-        },
-        "PGP [Pretty Good Privacy] key": {
+        "PGP key": {
             "link": "/data/rusty-pgp.asc",
             "description": "ASCII text file download"
         }
