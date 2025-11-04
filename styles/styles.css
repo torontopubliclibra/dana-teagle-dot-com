@@ -911,6 +911,53 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub {
     max-width: 100%;
   }
 }
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.1) 50%, rgba(122, 145, 177, 0.1) 100%);
+  max-width: 100%;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix {
+    font-style: normal;
+  }
+}
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
+  text-align: left;
+  min-width: calc(100% - 120px);
+  padding-bottom: 5px;
+  border-bottom: solid 3px rgba(243, 232, 233, 0.5);
+  line-height: 1.5;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
+    padding-bottom: 10px;
+  }
+}
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover {
+  background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.2) 50%, rgba(122, 145, 177, 0.2) 100%);
+  transition: background-image 0.5s;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover {
+    background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.1) 50%, rgba(122, 145, 177, 0.1) 100%);
+  }
+}
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
+  width: 75px;
+  margin: 10px 0;
+  border: solid 3px rgba(243, 232, 233, 0.5);
+}
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon {
+  border: none;
+  width: 18px;
+  filter: invert(1);
+}
 @media only screen and (max-width: 768px) {
   html.tpl main.tpl-subpage .tpl-page-content {
     width: 85%;
