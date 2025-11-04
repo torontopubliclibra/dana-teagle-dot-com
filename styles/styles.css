@@ -712,8 +712,8 @@ html.tpl nav ul {
   html.tpl nav ul {
     width: 90%;
     gap: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
     justify-content: left;
     align-items: center;
   }
