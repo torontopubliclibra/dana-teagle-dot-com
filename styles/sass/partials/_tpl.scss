@@ -519,19 +519,15 @@ html.tpl {
 
                             @media only screen and (max-width: $tablet) {
                                 font-style: normal;
+                                margin-left: 0;
+                                margin-right: 0;
                             }
                         }
 
                         &.mix p {
                             text-align: left;
                             min-width: calc(100% - 120px);
-                            padding-bottom: 5px;
-                            border-bottom: solid 3px rgba($white, 0.5);
                             line-height: 1.5;
-
-                            @media only screen and (max-width: $mobile) {
-                                padding-bottom: 10px;
-                            }
                         }
 
                         &.mix:hover {
