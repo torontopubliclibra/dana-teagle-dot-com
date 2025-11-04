@@ -36,13 +36,13 @@
 # Misc
 /sitemap /sitemap.xml
 /alt /tpl
+/tpl/logs /tpl/logs/2025
 /about /#about
 /gallery /#gallery
 /projects /#projects
 /services /#services
 /contact /#contact
 https://danateagle.com/now /tpl/now
-https://danateagle.com/uses /tpl/uses
 /trans-id-resources https://tg-id.ca
 /trans-id https://tg-id.ca
 
