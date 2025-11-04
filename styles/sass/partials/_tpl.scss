@@ -163,12 +163,9 @@ html.tpl {
     }
 
     nav {
-        min-width: 380px;
-        margin: 20px auto;
+        margin: 0;
         padding-top: 10px;
-        margin-top: 0;
-        width: 100%;
-        max-width: 950px;
+        width: auto;
         position: sticky;
         top: 120px;
         background: #282b2c;
@@ -182,7 +179,7 @@ html.tpl {
         hr {
             border-color: $color2;
             width: 100%;
-            margin: 30px auto;
+            margin: 0 auto;
 
             &:first-of-type {
                 margin-top: 0;
@@ -190,7 +187,6 @@ html.tpl {
 
             @media only screen and (max-width: $tablet) {
                 width: 90%;
-                margin: 35px auto;
             }
         }
 
@@ -243,14 +239,14 @@ html.tpl {
                 padding: 7px 25px;
             }
 
-            .button, .button:hover {
+            .button, .button:hover, .button.selected, .button.selected:hover {
                 font-style: normal;
             }
             .button:hover {
                 border-color: rgba($white, 0.75);
             }
             .button.selected:hover {
-                font-style: italic;
+                font-style: normal;
                 border-color: $color3;
             }
 
@@ -270,27 +266,33 @@ html.tpl {
             list-style-type: none;
             display: flex;
             justify-content: center;
-            flex-flow: row wrap;
-            gap: 50px;
-            padding: 0;
+            flex-flow: row nowrap;
+            gap: 25px;
+            padding: 30px 0;
             margin: 0 auto;
             width: 100%;
             max-width: 900px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
 
-            // responsive to tablet
             @media only screen and (max-width: $tablet) {
-                width: 85%;
+                width: 90%;
                 gap: 25px;
-            }
-
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+                padding-left: 25px;
+                padding-right: 25px;
                 justify-content: left;
+                align-items: center;
             }
 
             li {
                 margin: 0;
                 padding: 0;
+                
+                .button {
+                    display: flex;
+                    text-wrap: nowrap;
+                }
             }
         }
     }
@@ -384,7 +386,8 @@ html.tpl {
             align-items: center;
             gap: 10px;
             margin: 0;
-            img {
+            padding-top: 15px;
+            img.rusty {
                 border: solid 3px rgba($white, 0.75);
                 margin: 10px 0;
                 margin-top: 0;
@@ -400,10 +403,7 @@ html.tpl {
 
         .tpl-landing {
             padding-bottom: 15px;
-        }
-
-        &.tpl-subpage {
-            margin-bottom: 15px !important;
+            padding-top: 30px;
         }
 
         // responsive to tablet
@@ -411,7 +411,7 @@ html.tpl {
             .tpl-landing {
                 flex-flow: column nowrap;
                 width: 85%;
-                img {
+                img.rusty {
                     width: 200px;
                 }
             }
@@ -433,7 +433,7 @@ html.tpl {
 
         &.tpl-subpage {
             max-width: 950px;
-            margin: 30px auto;
+            margin: 15px auto;
 
             hr {
                 width: 100%;
@@ -480,8 +480,14 @@ html.tpl {
                     }
                 }
 
+                .year-selected {
+                    color: $color2;
+                    font-size: 1rem;
+                    font-style: italic;
+                }
+
                 .tpl-page-text {
-                    margin-top: 15px;
+                    margin-top: 0;
                     padding-bottom: 0px;
                     margin-bottom: -10px;
 
@@ -600,7 +606,7 @@ html.tpl {
                 width: auto;
                 margin-bottom: 10px;
                 padding-top: 0;
-                scroll-margin-top: 245px;
+                scroll-margin-top: 255px;
 
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
@@ -608,7 +614,7 @@ html.tpl {
                     text-align: left;
                     margin-right: auto;
                     margin-left: auto;
-                    scroll-margin-top: 320px;
+                    scroll-margin-top: 325px;
                 }
             }
 

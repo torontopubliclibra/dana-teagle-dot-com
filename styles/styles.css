@@ -611,12 +611,9 @@ html.tpl header.trans-id-header {
   padding-top: 30px;
 }
 html.tpl nav {
-  min-width: 380px;
-  margin: 20px auto;
+  margin: 0;
   padding-top: 10px;
-  margin-top: 0;
-  width: 100%;
-  max-width: 950px;
+  width: auto;
   position: sticky;
   top: 120px;
   background: #282b2c;
@@ -631,7 +628,7 @@ html.tpl nav {
 html.tpl nav hr {
   border-color: #B57E9B;
   width: 100%;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 html.tpl nav hr:first-of-type {
   margin-top: 0;
@@ -639,7 +636,6 @@ html.tpl nav hr:first-of-type {
 @media only screen and (max-width: 970px) {
   html.tpl nav hr {
     width: 90%;
-    margin: 35px auto;
   }
 }
 html.tpl nav .button {
@@ -680,14 +676,14 @@ html.tpl nav .button.back:hover img {
   html.tpl nav .button {
     padding: 7px 25px;
   }
-  html.tpl nav .button, html.tpl nav .button:hover {
+  html.tpl nav .button, html.tpl nav .button:hover, html.tpl nav .button.selected, html.tpl nav .button.selected:hover {
     font-style: normal;
   }
   html.tpl nav .button:hover {
     border-color: rgba(243, 232, 233, 0.75);
   }
   html.tpl nav .button.selected:hover {
-    font-style: italic;
+    font-style: normal;
     border-color: #7a91b1;
   }
   html.tpl nav .button.back {
@@ -702,27 +698,33 @@ html.tpl nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
-  gap: 50px;
-  padding: 0;
+  flex-flow: row nowrap;
+  gap: 25px;
+  padding: 30px 0;
   margin: 0 auto;
   width: 100%;
   max-width: 900px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
 @media only screen and (max-width: 970px) {
   html.tpl nav ul {
-    width: 85%;
+    width: 90%;
     gap: 25px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  html.tpl nav ul {
+    padding-left: 25px;
+    padding-right: 25px;
     justify-content: left;
+    align-items: center;
   }
 }
 html.tpl nav ul li {
   margin: 0;
   padding: 0;
+}
+html.tpl nav ul li .button {
+  display: flex;
+  text-wrap: nowrap;
 }
 html.tpl main {
   margin: 0 auto;
@@ -803,8 +805,9 @@ html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
   align-items: center;
   gap: 10px;
   margin: 0;
+  padding-top: 15px;
 }
-html.tpl main .tpl-landing img, html.tpl main.tpl-subpage img {
+html.tpl main .tpl-landing img.rusty, html.tpl main.tpl-subpage img.rusty {
   border: solid 3px rgba(243, 232, 233, 0.75);
   margin: 10px 0;
   margin-top: 0;
@@ -818,16 +821,14 @@ html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
 }
 html.tpl main .tpl-landing {
   padding-bottom: 15px;
-}
-html.tpl main.tpl-subpage {
-  margin-bottom: 15px !important;
+  padding-top: 30px;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-landing {
     flex-flow: column nowrap;
     width: 85%;
   }
-  html.tpl main .tpl-landing img {
+  html.tpl main .tpl-landing img.rusty {
     width: 200px;
   }
 }
@@ -845,7 +846,7 @@ html.tpl main.tpl-subpage {
 }
 html.tpl main.tpl-subpage {
   max-width: 950px;
-  margin: 30px auto;
+  margin: 15px auto;
 }
 html.tpl main.tpl-subpage hr {
   width: 100%;
@@ -885,8 +886,13 @@ html.tpl main.tpl-subpage .tpl-page-content a:hover {
     color: #f3e8e9;
   }
 }
+html.tpl main.tpl-subpage .tpl-page-content .year-selected {
+  color: #B57E9B;
+  font-size: 1rem;
+  font-style: italic;
+}
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text {
-  margin-top: 15px;
+  margin-top: 0;
   padding-bottom: 0px;
   margin-bottom: -10px;
 }
@@ -993,7 +999,7 @@ html.tpl main .tpl-links h3 {
   width: auto;
   margin-bottom: 10px;
   padding-top: 0;
-  scroll-margin-top: 245px;
+  scroll-margin-top: 255px;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links h3 {
@@ -1001,7 +1007,7 @@ html.tpl main .tpl-links h3 {
     text-align: left;
     margin-right: auto;
     margin-left: auto;
-    scroll-margin-top: 320px;
+    scroll-margin-top: 325px;
   }
 }
 html.tpl main .tpl-links h3.h3-trans-id {
