@@ -2,27 +2,23 @@
     "work & creative": {
         "dana teagle dot com": {
             "link": "/",
-            "description": "My design & web development portfolio"
-        },
-        "dana teagle dot com mini": {
-            "link": "/mini",
-            "description": "A simplified version of my portfolio"
+            "description": "My design & web/software development portfolio"
         },
         "TG I.D.": {
             "link": "https://tg-id.ca/",
-            "description": "An online hub I run providing documents and resources about how to change your name and gender marker in Ontario"
+            "description": "Documents and resources about how to change your name and gender marker in Ontario"
         },
-        "TG I.D. workshops": {
-            "link": "https://tg-id.ca/workshops",
-            "description": "Info about booking me for name change workshops"
+        "RUSTPROP": {
+            "link": "/rustprop",
+            "description": "Political messaging with varying degrees of importance"
         },
         "Github": {
             "link": "/github",
             "description": "torontopubliclibra"
         },
-        "RUSTPROP dot org": {
-            "link": "/rustprop",
-            "description": "Political messaging with varying degrees of importance"
+        "Substack": {
+            "link": "/substack",
+            "description": "the toronto public libra"
         }
     },
     "social profiles": {
