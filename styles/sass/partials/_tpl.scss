@@ -526,8 +526,12 @@ html.tpl {
 
                         &.mix p {
                             text-align: left;
-                            min-width: calc(100% - 120px);
+                            min-width: calc(100% - 145px);
                             line-height: 1.5;
+
+                            @media only screen and (max-width: $tablet) {
+                                min-width: calc(100% - 120px);
+                            }
                         }
 
                         &.mix:hover {
@@ -540,7 +544,7 @@ html.tpl {
                         }
 
                         &.mix img {
-                            width: 75px;
+                            width: 100px;
                             margin: 10px 0;
                             border: solid 3px rgba($white, 0.5);
 
@@ -548,6 +552,10 @@ html.tpl {
                                 border: none;
                                 width: 18px;
                                 filter: invert(1);
+                            }
+
+                            @media only screen and (max-width: $tablet) {
+                                width: 75px;
                             }
                         }
                     }

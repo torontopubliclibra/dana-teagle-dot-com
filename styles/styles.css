@@ -931,8 +931,13 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix {
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
   text-align: left;
-  min-width: calc(100% - 120px);
+  min-width: calc(100% - 145px);
   line-height: 1.5;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
+    min-width: calc(100% - 120px);
+  }
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover {
   background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.2) 50%, rgba(122, 145, 177, 0.2) 100%);
@@ -944,7 +949,7 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover {
   }
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
-  width: 75px;
+  width: 100px;
   margin: 10px 0;
   border: solid 3px rgba(243, 232, 233, 0.5);
 }
@@ -952,6 +957,11 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon {
   border: none;
   width: 18px;
   filter: invert(1);
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
+    width: 75px;
+  }
 }
 @media only screen and (max-width: 768px) {
   html.tpl main.tpl-subpage .tpl-page-content {
