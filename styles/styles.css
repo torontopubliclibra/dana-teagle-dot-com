@@ -853,15 +853,16 @@ html.tpl main.tpl-subpage hr {
   max-width: 90vw;
   margin: 15px auto;
 }
-html.tpl main.tpl-subpage hr:last-of-type {
-  margin-bottom: 0;
-}
 html.tpl main.tpl-subpage .tpl-page-content {
   width: 80%;
   margin-bottom: 10px;
 }
 html.tpl main.tpl-subpage .tpl-page-content p {
   text-align: left;
+}
+html.tpl main.tpl-subpage .tpl-page-content hr {
+  border-color: rgba(243, 232, 233, 0.75);
+  margin-top: 25px;
 }
 html.tpl main.tpl-subpage .tpl-page-content .four-oh-four p {
   text-align: center;

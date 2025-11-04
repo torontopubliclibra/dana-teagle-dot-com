@@ -439,10 +439,6 @@ html.tpl {
                 width: 100%;
                 max-width: 90vw;
                 margin: 15px auto;
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
             }
 
             .tpl-page-content {
@@ -451,6 +447,11 @@ html.tpl {
 
                 p {
                     text-align: left;
+                }
+
+                hr {
+                    border-color: rgba($white, 0.75);
+                    margin-top: 25px;
                 }
 
                 .four-oh-four {
