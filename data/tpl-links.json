@@ -26,26 +26,6 @@
         }
     },
     "social profiles": {
-        "Letterboxd": {
-            "link": "/letterboxd",
-            "description": "[at] torontolibra"
-        },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "torontopubliclibra"
-        },
-        "Discogs": {
-            "link": "/discogs",
-            "description": ""
-        },
-        "Tidal": {
-            "link": "/tidal",
-            "description": ""
-        },
-        "Goodreads": {
-            "link": "/goodreads",
-            "description": ""
-        },
         "Instagram (I)": {
             "link": "/tpl-insta",
             "description": "[at] torontopubliclibra"
@@ -57,6 +37,26 @@
         "Instagram (III)": {
             "link": "/rp-insta",
             "description": "[at] rustprop"
+        },
+        "Letterboxd": {
+            "link": "/letterboxd",
+            "description": "[at] torontolibra"
+        },
+        "Tumblr": {
+            "link": "/tumblr",
+            "description": "torontopubliclibra"
+        },
+        "Goodreads": {
+            "link": "/goodreads",
+            "description": ""
+        },
+        "Discogs": {
+            "link": "/discogs",
+            "description": ""
+        },
+        "Tidal": {
+            "link": "/tidal",
+            "description": ""
         }
     },
     "mutual aid": {
