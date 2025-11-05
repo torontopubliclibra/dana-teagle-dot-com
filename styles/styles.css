@@ -1080,6 +1080,7 @@ html.tpl main .tpl-links .tpl-link {
   cursor: pointer;
 }
 html.tpl main .tpl-links .tpl-link.photo {
+  max-width: 95%;
   margin: 10px auto;
   margin-bottom: 15px;
 }
