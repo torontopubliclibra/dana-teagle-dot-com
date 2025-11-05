@@ -66,8 +66,8 @@ let tplNow = {
             let movies = [];
             let books = [];
             for (let object in data) {
-                movies.push(data[object]["movies"]);
-                books.push(data[object]["books"]);
+                movies.push(data["2025"]["movies"]);
+                books.push(data["2025"]["books"]);
             }
             tplNow.movies = movies[0].slice(0,3);
             tplNow.books = books[0].slice(0,3);

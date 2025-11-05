@@ -29,7 +29,18 @@ let tplLogs = {
         logsDisplay: () => {
             let year = tplLogs.year;
             let yearSelect = tplLogs.yearSelect;
-            let formattedLogs = [yearSelect, `<hr class="no-top"><p id="watched">>> watched (<a href="/letterboxd" target="_blank">letterboxd</a>)</p>`];
+            let movieCount, bookCount;
+            switch(year) {
+                case "2025":
+                    movieCount = tplLogs.twentyFive.movies[0].length;
+                    bookCount = tplLogs.twentyFive.books[0].length;
+                    break;
+                case "2024":
+                    movieCount =  tplLogs.twentyFour.movies[0].length;
+                    bookCount = tplLogs.twentyFour.books[0].length;
+                    break;
+            }
+            let formattedLogs = [yearSelect, `<hr class="no-top"><p id="watched">>> watched (${movieCount}) | <a href="/letterboxd" target="_blank">letterboxd</a></p>`];
 
             switch(year) {
                 case "2025":
@@ -40,7 +51,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="read">>> read (<a href="/goodreads" target="_blank">goodreads</a>)</p>`);
+                    formattedLogs.push(`<hr><p id="read">>> read (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
                     for (let list in tplLogs.twentyFive.books) {
                         let array = [ ...tplLogs.twentyFive.books[list]];
                         array.forEach(book => {
@@ -57,7 +68,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="read">>> read (<a href="/goodreads" target="_blank">goodreads</a>)</p>`);
+                    formattedLogs.push(`<hr><p id="read">>> read (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
                     for (let list in tplLogs.twentyFour.books) {
                         let array = [ ...tplLogs.twentyFour.books[list]];
                         array.forEach(book => {
