@@ -26,7 +26,7 @@ let tplLogs = {
             let year = tplLogs.year;
             // let yearSelect = tplLogs.yearSelect;
             // let formattedLogs = [yearSelect, `<hr><p id="movies">>> movies watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>):</p>`];
-            let formattedLogs = [`<p id="movies">>> watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>):</p>`];
+            let formattedLogs = [`<p id="movies">>> watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>)</p>`];
 
             switch(year) {
                 case "2025":
@@ -37,7 +37,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="books">>> read in 2025 (<a href="/goodreads" target="_blank">goodreads</a>):</p>`);
+                    formattedLogs.push(`<hr><p id="books">>> read in 2025 (<a href="/goodreads" target="_blank">goodreads</a>)</p>`);
                     for (let list in tplLogs.books) {
                         let array = [ ...tplLogs.books[list]];
                         array.forEach(book => {

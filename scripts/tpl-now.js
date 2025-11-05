@@ -17,7 +17,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<hr><p>>> last watched ( <a href="/letterboxd" target="_blank">letterboxd</a> | <a href="/tpl/logs#movies">see more</a> ):</p>`);
+            formattedNow.push(`<hr><p>>> last watched (<a href="/tpl/logs#movies">see more</a>)</p>`);
             for (let list in tplNow.movies) {
                 let array = [tplNow.movies[list]];
                 array.forEach(movie => {
@@ -26,7 +26,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> last read ( <a href="/goodreads" target="_blank">goodreads</a> | <a href="/tpl/logs#books">see more</a> ):</p>`);
+            formattedNow.push(`<p>>> last read (<a href="/tpl/logs#books">see more</a>:</p>`);
             for (let list in tplNow.books) {
                 let array = [tplNow.books[list]];
                 array.forEach(book => {
@@ -35,7 +35,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> latest mixes ( <a href="/tidal" target="_blank">tidal</a> | <a href="/tpl/mixes">see more</a> ):</p>`);
+            formattedNow.push(`<p>>> latest mixes (<a href="/tpl/mixes">see more</a>)</p>`);
             for (let mix in tplNow.mixes) {
                 let object = tplNow.mixes[mix];
                 let link = object["tidal"];
