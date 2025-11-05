@@ -916,7 +916,7 @@ html.tpl main.tpl-subpage .tpl-page-content button.range:hover {
   }
 }
 html.tpl main.tpl-subpage .tpl-page-content .year-selected, html.tpl main.tpl-subpage .tpl-page-content .range-selected {
-  color: #B57E9B;
+  color: #84A59D;
   font-size: 1rem;
   font-style: italic;
 }
