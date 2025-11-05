@@ -4,17 +4,17 @@ let tplMixes = {
     range: "4",
     stream: "tidal",
     streamSelect: `<p>streaming links: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
-    rangeSelect: `<p>>> <span class="range-selected">#196-151</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#150-101</button></p>`,
+    rangeSelect: `<p>>> <span class="range-selected">#196-151</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#150-101</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#100-51</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#50-1</button></p>`,
     functions: {
         rangeSet: (range) => {
             switch(range) {
                 case "4":
                     tplMixes.range = "4";
-                    tplMixes.rangeSelect = `<p>>> <span class="range-selected">#196-151</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#150-101</button></p>`
+                    tplMixes.rangeSelect = `<p>>> <span class="range-selected">#196-151</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#150-101</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#100-51</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#50-1</button></p>`
                     break;
                 case "3":
                     tplMixes.range = "3";
-                    tplMixes.rangeSelect = `<p>>> <button class="range" onclick="tplMixes.functions.rangeSet('4')">#196-151</button> | <span class="range-selected">#150-101</span></p>`
+                    tplMixes.rangeSelect = `<p>>> <button class="range" onclick="tplMixes.functions.rangeSet('4')">#196-151</button> | <span class="range-selected">#150-101</span> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#100-51</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#50-1</button></p>`
                     break;
                 case "2":
                     tplMixes.range = "2";
@@ -111,6 +111,7 @@ let tplMixes = {
                     for (let mix in tplMixes.mixes) {
                         let object = tplMixes.mixes[mix];
                         let count = Number(object.number);
+                        let link = object[stream];
 
                         if (count >= 1 && count <= 50 && link) {
                             let title = `<p><small>#${object.number} \\\\</small><br/>${object.title}</p><img src="../assets/icons/external-link.svg" class="icon" alt="external link icon">`;

@@ -574,5 +574,323 @@
         "tidal": "https://tidal.com/playlist/a14d06d7-3fe6-4a65-afa9-b474bd44a830",
         "spotify": "https://open.spotify.com/playlist/07O8JRqqEJDixyTEZ85Gm2",
         "image": "https://resources.tidal.com/images/e1f9dfb7/182c/4c7b/8e18/a0766940856d/1080x1080.jpg"
+    },
+    "sunflower (apollo)": {
+        "number": "100",
+        "tidal": "https://tidal.com/playlist/ec95057c-2b2a-4165-b724-4422b0d49296",
+        "spotify": "https://open.spotify.com/playlist/0RAo6fW8gasnDwj3uHS0M8",
+        "image": "https://resources.tidal.com/images/932c4927/f3a2/4380/823f/c3e7b44f1edb/1080x1080.jpg"
+    },
+    "anxious type (that kind of girl)": {
+        "number": "99",
+        "tidal": "https://tidal.com/playlist/5c96ae24-ad52-47ae-9ec5-1ab77bea7bf1",
+        "spotify": "https://open.spotify.com/playlist/4tYoRm0YfQX8hKauswH99b",
+        "image": "https://resources.tidal.com/images/df7840e2/c43c/4d3c/94f3/4a8e2ecdfd8b/1080x1080.jpg"
+    },
+    "me and the devil (the emperor)": {
+        "number": "98",
+        "tidal": "https://tidal.com/playlist/798ef93f-8479-41ce-b1ee-6586b59458b6",
+        "spotify": "https://open.spotify.com/playlist/3hjnGAOG6ZlvJWEu3DpBiz",
+        "image": "https://resources.tidal.com/images/ac14c97a/e1ee/4a57/b0cc/deced5255c2c/1080x1080.jpg"
+    },
+    "marrow (lift up yr voices)": {
+        "number": "97",
+        "tidal": "https://tidal.com/playlist/0d6ac890-eb32-4213-9a5b-acf0a174288f",
+        "spotify": "https://open.spotify.com/playlist/5ODRrnN83eZjcSzxcxEAon",
+        "image": "https://resources.tidal.com/images/f3fd49c8/18c2/4a98/ad20/079e4f55a877/1080x1080.jpg"
+    },
+    "time moves slow (more of the same)": {
+        "number": "96",
+        "tidal": "https://tidal.com/playlist/6d7978e8-7dd3-47b5-a921-5706ce0fe7be",
+        "spotify": "https://open.spotify.com/playlist/3TbLnwNGnQxxQNBxtqmF0p",
+        "image": "https://resources.tidal.com/images/81e10bfa/e1df/4b50/8ab7/a1452f27f308/1080x1080.jpg"
+    },
+    "leaning on you (clear blue morning)": {
+        "number": "95",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/63vKzDAYpoMwsIOzx1VuHC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9d00e48035b0c3d4a9807691"
+    },
+    "boyfriend (summer girl)": {
+        "number": "94",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/2murzVPtFVf2mQNdISaVwB",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c2e5003f4b9689e963eba7853"
+    },
+    "say you love me (you still believe in me)": {
+        "number": "93",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/4di0NTG482WLGtXq8lAWiP",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c836832ef4c6cd5577b6ea8ef"
+    },
+    "why can't we (take care)": {
+        "number": "92",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/1QMsGJvGNCrpUV8l5vZud9",
+        "image": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c1ab6bb8c87babe3218e7bce5"
+    },
+    "about damn time (lost track)": {
+        "number": "91",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/6NWVy2H4NE7PSXRF6cBaRA",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c4162db94432285b5923af8a8"
+    },
+    "havin' a hard time (what's mine is yours)": {
+        "number": "90",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/3F6dt6hhUBvVUDytnsFj4u",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c570fba2c3e2e7b4a6e4682fe"
+    },
+    "wildflowers (all my little words)": {
+        "number": "89",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "folsom prison blues (mean old world)": {
+        "number": "88",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/5e5HzvdV3BeXTUeXkpS2wy",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "fare thee well (alone again)": {
+        "number": "87",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "the way it goes (the solitude)": {
+        "number": "86",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "close my eyes (inside of you)": {
+        "number": "85",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "I don't wanna lie (tell the truth)": {
+        "number": "84",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "screamy dreamy (in the craters on the moon)": {
+        "number": "83",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "a little respect (I touch myself)": {
+        "number": "82",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/7frtZvhHVXG1KTgGsBgcXC",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cb999d4414e912ea19cef7fcc"
+    },
+    "rebel girl (if it makes you happy)": {
+        "number": "81",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/2pIYMcw3ztRffUNNikzRh8",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cd8d89113b125c9a32191ade4"
+    },
+    "young hearts (belong to me)": {
+        "number": "80",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/3W9ScS2GGkjMWIBx3dFBaG",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c2b0c571387ec8f2704513395"
+    },
+    "wicked rad (cunt)": {
+        "number": "79",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/1db86e7q1J6iCYMli83jXT?si=f-ZuNHI6SXalXJlU5tjOcQ",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9dd4974f7d9a58fecb96bf98"
+    },
+    "goth kid (going ghost)": {
+        "number": "78",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/0Gw8mGiu8CG8OYW1ZfWXbg",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cd73099d09a12e08836cf6479"
+    },
+    "craving drama (wrestling)": {
+        "number": "77",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/1ojYTDzfwn3Dknib6eXmE4",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cfc4c9866840765b6e15b1d39"
+    },
+    "I need you (hallelujah)": {
+        "number": "76",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/1kwpFtoKQRpSNX7XUbLFUd",
+        "image": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c259da81c6145b153f2c91ed7"
+    },
+    "midnight sun (fly away)": {
+        "number": "75",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/4IkKGW0XblEyWaF3mcJVAv",
+        "image": "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72ca28421003a2e84cd842ab2de"
+    },
+    "lay me low (it was never the same)": {
+        "number": "74",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/3ZBJSjCf38UcaVWd3IYVN8",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72ca99485a61515266ea729e4c1"
+    },
+    "scorpio rising (through dana's eyes)": {
+        "number": "73",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/5oTy215xWn5B7HPm285q8N",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c71ad25bb731f6beb4e4582ae"
+    },
+    "strong hand (I know a place)": {
+        "number": "72",
+        "tidal": "",
+        "spotify": "https://open.spotify.com/playlist/4TiiVQu4fqaLebWpGT0Dzz",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c1bbbbeb07e651e508077ae3c"
+    },
+    "lay all your love (cruel summer)": {
+        "number": "24",
+        "tidal": "https://tidal.com/playlist/fa564d4b-7642-485e-a029-d5dad2fe5c0f",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/f98202ff/b664/434e/bcfb/cf28a37ce569/1080x1080.jpg"
+    },
+    "alright (let me love ya)": {
+        "number": "23",
+        "tidal": "https://tidal.com/playlist/599a8dc7-0187-4bae-b324-8951c305b37c",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/41515922/dfc4/437a/b4e8/c26784ba89df/1080x1080.jpg"
+    },
+    "long long time (what is life)": {
+        "number": "22",
+        "tidal": "https://tidal.com/playlist/05f76d0e-b177-4b19-a2b8-f98414c88aec",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/06623265/79a2/4870/8301/3b881d44f88e/1080x1080.jpg"
+    },
+    "higher and higher (for once in my life)": {
+        "number": "21",
+        "tidal": "https://tidal.com/playlist/d290edaf-a920-4dd8-8199-f8f0357e25fb",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/5cc3ac80/ea38/418d/bd72/af1184666dc6/1080x1080.jpg"
+    },
+    "work it out (get into my life)": {
+        "number": "20",
+        "tidal": "https://tidal.com/playlist/05d2e929-266b-4c1b-bbd5-f8bdce12eb8a",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/6974521f/30fa/4ae8/80df/e3059e61a7e0/1080x1080.jpg"
+    },
+    "happy together (my baby)": {
+        "number": "19",
+        "tidal": "https://tidal.com/playlist/4adcfc60-61e2-4f7e-af7a-b6f408edc266",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/fbb7e794/5da2/40c1/bf28/4f6b7cceff47/1080x1080.jpg"
+    },
+    "feeling good (on the surface)": {
+        "number": "18",
+        "tidal": "https://tidal.com/playlist/553df4c6-f408-4baf-99db-308d603f621b",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/682516a8/f41b/4b83/8a9c/0662e6ff55b8/1080x1080.jpg"
+    },
+    "cough cough (my number)": {
+        "number": "17",
+        "tidal": "https://tidal.com/playlist/b7973450-38c7-46df-91de-dc8b01111fb4",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/3a61721c/2548/4e21/8ca1/a5f0eae08635/1080x1080.jpg"
+    },
+    "don't start now (heaven help me)": {
+        "number": "16",
+        "tidal": "https://tidal.com/playlist/f31cff0f-d7a8-4c54-bd1d-6d4383664a55",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/3cddc780/c8f0/445a/a194/2b507e8175c0/1080x1080.jpg"
+    },
+    "cherry pie (black coffee)": {
+        "number": "15",
+        "tidal": "https://tidal.com/playlist/30f0db35-3d1a-477f-834a-32097f07dcff",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/d3e37311/41be/4643/82ae/5f4b8ff61d1d/1080x1080.jpg"
+    },
+    "best to you (summer girl)": {
+        "number": "14",
+        "tidal": "https://tidal.com/playlist/574d84f2-308b-4b03-927f-229ef59197a7",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/599d71f3/4cd0/4220/9879/d3ac6d679d1b/1080x1080.jpg"
+    },
+    "autumn in new york (april in paris)": {
+        "number": "13",
+        "tidal": "https://tidal.com/playlist/b9ae4000-8cfd-4fb3-9567-3e08c71b5fa4",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/8fc3d510/928b/4918/af45/001b1c1c63f4/1080x1080.jpg"
+    },
+    "ain't it a sin (protect ya neck)": {
+        "number": "12",
+        "tidal": "https://tidal.com/playlist/809e3a3f-17c2-4845-a21f-aa95b8cd4036",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/e405b667/a135/4d0f/89d7/e47e3da6ae00/1080x1080.jpg"
+    },
+    "time (wind cries mary)": {
+        "number": "11",
+        "tidal": "https://tidal.com/playlist/1e94e5c1-96c4-4ba6-bd20-80811e1d9fe1",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/eaf1a109/f15c/4b54/9988/819050bb3493/1080x1080.jpg"
+    },
+    "feel for you (between the sheets)": {
+        "number": "10",
+        "tidal": "https://tidal.com/playlist/26119db9-58ca-45aa-a49a-23d0f58f9155",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/c667e6b3/4875/4f7c/8899/5cb7d97efc63/1080x1080.jpg"
+    },
+    "bring it on home (your heart belongs to me)": {
+        "number": "9",
+        "tidal": "https://tidal.com/playlist/59168ea7-2fae-4e6f-b0cd-3ba169f24e05",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/c667e6b3/4875/4f7c/8899/5cb7d97efc63/1080x1080.jpg"
+    },
+    "talia (honey)": {
+        "number": "8",
+        "tidal": "https://tidal.com/playlist/c2fb8d22-c524-4187-a0dd-539dc14cf7f7",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/d5e1f07d/5b90/4b11/b3d0/465828147118/1080x1080.jpg"
+    },
+    "dancing in the moonlight (california dreamin)": {
+        "number": "7",
+        "tidal": "https://tidal.com/playlist/3b5adec4-8701-489d-8140-e1e16a6a47a1",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/0287183e/f4d8/4edb/8a48/aca42601ed87/1080x1080.jpg"
+    },
+    "rather be with you (strawberry)": {
+        "number": "6",
+        "tidal": "https://tidal.com/playlist/0050922c-ab7e-4b37-b086-1ef0780a8459",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/4fd9a81e/b0dc/4a19/bf48/77f96dcec73a/1080x1080.jpg"
+    },
+    "happy place (breathe deeper)": {
+        "number": "5",
+        "tidal": "https://tidal.com/playlist/badedd41-83f1-4341-a47b-464340943e62",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/351148ad/8fc3/4278/8958/bb58baa549c7/1080x1080.jpg"
+    },
+    "keep movin on (lean on me)": {
+        "number": "4",
+        "tidal": "https://tidal.com/playlist/0a194881-a276-448d-a242-28bf6e6842e9",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/a004abaf/5731/4d19/bb25/066cb3777113/1080x1080.jpg"
+    },
+    "93 til infinity (good day)": {
+        "number": "3",
+        "tidal": "https://tidal.com/playlist/cb56315f-ffdc-48e1-af3d-b594944eaf48",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/1e658775/fe1b/4c96/9aa8/05d46ecb9498/1080x1080.jpg"
+    },
+    "lost in music (lost)": {
+        "number": "2",
+        "tidal": "https://tidal.com/playlist/aa8372b3-8a53-4f9b-875e-16367763229f",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/00c77981/5ae6/43f9/9504/1ff75cd51db5/1080x1080.jpg"
+    },
+    "stop this flame (pretty please)": {
+        "number": "1",
+        "tidal": "https://tidal.com/playlist/64adbbf6-d1f6-4cd8-aa16-2f3cf1fb4c47",
+        "spotify": "",
+        "image": "https://resources.tidal.com/images/2dcc08a7/8cf6/4054/a9ee/4784b8794e5c/1080x1080.jpg"
     }
 }
