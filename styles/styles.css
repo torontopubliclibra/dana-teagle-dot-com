@@ -1095,7 +1095,7 @@ html.tpl main .tpl-links .tpl-link {
   margin: 5px auto;
   margin-bottom: 10px;
   transition: background-image 0.5s;
-  padding: 15px 20px;
+  padding: 10px 15px;
   cursor: pointer;
 }
 html.tpl main .tpl-links .tpl-link.photo {
