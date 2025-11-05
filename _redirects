@@ -36,7 +36,7 @@
 # Misc
 /sitemap /sitemap.xml
 /alt /tpl
-/tpl/logs /tpl/logs/2025
+/tpl/logs
 /about /#about
 /gallery /#gallery
 /projects /#projects
