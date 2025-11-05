@@ -963,29 +963,24 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix.disabled {
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
   text-align: left;
-  min-width: calc(100% - 145px);
+  min-width: calc(100% - 120px);
   line-height: 1.5;
 }
-@media only screen and (max-width: 970px) {
-  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
-    min-width: calc(100% - 120px);
-  }
-}
-html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover {
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover, html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:focus {
   background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.2) 50%, rgba(122, 145, 177, 0.2) 100%);
   transition: background-image 0.5s;
 }
-html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover.disabled {
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover.disabled, html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:focus.disabled {
   background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.1) 50%, rgba(122, 145, 177, 0.1) 100%);
 }
 @media only screen and (max-width: 768px) {
-  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover, html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:focus {
     background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.1) 50%, rgba(122, 145, 177, 0.1) 100%);
   }
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   margin: 10px 0;
   border: solid 3px rgba(243, 232, 233, 0.5);
 }
@@ -997,15 +992,17 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon {
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon.disabled {
   visibility: hidden;
 }
-@media only screen and (max-width: 970px) {
-  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
-    width: 75px;
-    height: 75px;
-  }
-}
 @media only screen and (max-width: 768px) {
   html.tpl main.tpl-subpage .tpl-page-content {
     width: 85%;
+  }
+}
+html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
+  scroll-margin-top: 255px;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
+    scroll-margin-top: 325px;
   }
 }
 html.tpl main .tpl-categories {

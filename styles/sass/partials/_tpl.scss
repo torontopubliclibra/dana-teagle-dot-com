@@ -555,15 +555,11 @@ html.tpl {
 
                         &.mix p {
                             text-align: left;
-                            min-width: calc(100% - 145px);
+                            min-width: calc(100% - 120px);
                             line-height: 1.5;
-
-                            @media only screen and (max-width: $tablet) {
-                                min-width: calc(100% - 120px);
-                            }
                         }
 
-                        &.mix:hover {
+                        &.mix:hover, &.mix:focus {
                             background-image: linear-gradient(120deg, rgba($color2, 0.2) 50%, rgba($color3, 0.2) 100%);
                             transition: background-image 0.5s;
 
@@ -577,8 +573,8 @@ html.tpl {
                         }
 
                         &.mix img {
-                            width: 100px;
-                            height: 100px;
+                            width: 75px;
+                            height: 75px;
                             margin: 10px 0;
                             border: solid 3px rgba($white, 0.5);
 
@@ -591,11 +587,6 @@ html.tpl {
                                     visibility: hidden;
                                 }
                             }
-
-                            @media only screen and (max-width: $tablet) {
-                                width: 75px;
-                                height: 75px;
-                            }
                         }
                     }
                 }
@@ -603,6 +594,13 @@ html.tpl {
                 // responsive to mobile
                 @media only screen and (max-width: $mobile) {
                     width: 85%;
+                }
+            }
+
+            #books, #movies, #tv {
+                scroll-margin-top: 255px;
+                @media only screen and (max-width: $mobile) {
+                    scroll-margin-top: 325px;
                 }
             }
         }
