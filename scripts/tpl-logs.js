@@ -67,6 +67,15 @@ let tplLogs = {
             tplLogs.functions.logsDisplay();
         })
         .catch(error => console.log(error));
+
+                if (window.location.hash) {
+            let hash = window.location.hash;
+            if (hash === "#movies" || hash === "#books") {
+                setTimeout(() => {
+                    document.querySelector(hash).scrollIntoView();
+                }, 100);
+            }
+        }
     },
 };
 $(document).ready(() => {
