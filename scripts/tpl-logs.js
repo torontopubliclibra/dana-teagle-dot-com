@@ -9,12 +9,10 @@ let tplLogs = {
     functions: {
         // yearSet: (year) => {
         //     switch(year) {
-        //         case "2":
-        //             tplLogs.year = "2025";
+        //         case "2025":
         //             tplLogs.yearSelect = `<p><span class="year-selected">2025</span> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`
         //             break;
-        //         case "1":
-        //             tplLogs.year = "2024";
+        //         case "2024":
         //             tplLogs.yearSelect = `<p><button class="range" onclick="tplLogs.functions.yearSet('2025')">2025</button> | <span class="year-selected">2024</span></p>`
         //             break;
         //     }
@@ -24,9 +22,9 @@ let tplLogs = {
         // },
         logsDisplay: () => {
             let year = tplLogs.year;
-            // let yearSelect = tplLogs.yearSelect;
-            // let formattedLogs = [yearSelect, `<hr><p id="movies">>> movies watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>):</p>`];
-            let formattedLogs = [`<p id="movies">>> watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>)</p>`];
+            let yearSelect = tplLogs.yearSelect;
+            // let formattedLogs = [yearSelect, `<hr class="no-top"><p id="watched">>> movies watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>):</p>`];
+            let formattedLogs = [`<p id="watched">>> watched in 2025 (<a href="/letterboxd" target="_blank">letterboxd</a>)</p>`];
 
             switch(year) {
                 case "2025":
@@ -37,7 +35,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="books">>> read in 2025 (<a href="/goodreads" target="_blank">goodreads</a>)</p>`);
+                    formattedLogs.push(`<hr><p id="read">>> read in 2025 (<a href="/goodreads" target="_blank">goodreads</a>)</p>`);
                     for (let list in tplLogs.books) {
                         let array = [ ...tplLogs.books[list]];
                         array.forEach(book => {
@@ -70,7 +68,7 @@ let tplLogs = {
 
                 if (window.location.hash) {
             let hash = window.location.hash;
-            if (hash === "#movies" || hash === "#books") {
+            if (hash === "#watched" || hash === "#read") {
                 setTimeout(() => {
                     document.querySelector(hash).scrollIntoView();
                 }, 100);

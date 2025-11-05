@@ -37,7 +37,7 @@ let tpl = {
                     categoryTag = "category-1";
                 }
             }
-            tpl.tplCategories.html(`<h2>Jump to:</h2>` + `<ul>` + linkCategories.reduce((accumulator, category) => {
+            tpl.tplCategories.html(`<ul>` + linkCategories.reduce((accumulator, category) => {
                 return accumulator + category;
             }) + `</ul>`);
             tpl.tplLinks.html(formattedLinks.reduce((accumulator, category) => {

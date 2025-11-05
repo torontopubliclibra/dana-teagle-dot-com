@@ -435,23 +435,31 @@ html.tpl {
             max-width: 950px;
             margin: 15px auto;
 
-            hr {
-                width: 100%;
-                max-width: 90vw;
-                margin: 15px auto;
-            }
-
             .tpl-page-content {
                 width: 80%;
                 margin-bottom: 10px;
+
+                hr {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
 
                 p {
                     text-align: left;
                 }
 
-                hr {
-                    border-color: rgba($white, 0.75);
-                    margin-top: 25px;
+                .tpl-page-text {
+                    hr {
+                        width: 100%;
+                        max-width: 90vw;
+                        margin: 15px auto;
+                        border-color: rgba($white, 0.75);
+                        margin-top: 25px;
+
+                        &.no-top {
+                            margin-top: 15px;
+                        }
+                    }
                 }
 
                 .four-oh-four {
@@ -597,87 +605,10 @@ html.tpl {
                 }
             }
 
-            #books, #movies {
+            #read, #watched {
                 scroll-margin-top: 255px;
                 @media only screen and (max-width: $mobile) {
                     scroll-margin-top: 320px;
-                }
-            }
-        }
-
-        .tpl-categories {
-            width: 100%;
-            max-width: 900px;
-            margin-bottom: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            ul {
-                display: flex;
-                flex-flow: row wrap;
-                list-style-type: none;
-                justify-content: space-around;
-                margin: 10px 0;
-                padding: 0;
-                gap: 25px;
-
-                li {
-                    a {
-                        display: flex;
-                        align-items: center;
-                        background: $black;
-                        background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
-                        border: solid $color2 3px;
-                        padding: 5px 10px 8px 15px;
-                        font-size: 12px;
-                        color: $white;
-                        text-decoration: none;
-                        &:hover {
-                            border: solid $color1 3px;
-
-                            // responsive to mobile
-                            @media only screen and (max-width: $mobile) {
-                                border: solid $color2 3px;
-                            }
-                        }
-
-                        img {
-                            width: 16px;
-                            margin-left: 5px;
-                            padding-top: 2px;
-                            filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
-                        }
-                    }
-                }
-            }
-            // responsive to mobile
-            @media only screen and (max-width: $tablet) {
-                display: block;
-                width: 85%;
-                margin-bottom: 15px;
-
-                ul {
-                    flex-flow: column;
-                    gap: 0;
-                    margin: 0;
-
-                    li {
-                        margin: 5px 0;
-
-                        a {
-                            justify-content: space-between;
-                            padding: 5px 15px;
-
-                            img {
-                                margin-left: 10px;
-                            }
-                        }
-                    }
-                    @media only screen and (max-width: $mobile) {
-                        justify-content: left;
-                    }
                 }
             }
         }
@@ -776,6 +707,86 @@ html.tpl {
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 min-width: 85%;
+            }
+        }
+    }
+
+    .tpl-categories {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &.left {
+            align-items: flex-start;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            list-style-type: none;
+            justify-content: space-around;
+            margin: 10px 0;
+            padding: 0;
+            gap: 25px;
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    background: $black;
+                    background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
+                    border: solid $color2 3px;
+                    padding: 5px 10px 8px 15px;
+                    font-size: 12px !important;
+                    color: $white;
+                    text-decoration: none;
+                    &:hover {
+                        color: $white !important;
+                        border: solid $color1 3px;
+
+                        // responsive to mobile
+                        @media only screen and (max-width: $mobile) {
+                            border: solid $color2 3px;
+                        }
+                    }
+
+                    img {
+                        width: 16px;
+                        margin-left: 5px;
+                        padding-top: 2px;
+                        filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
+                    }
+                }
+            }
+        }
+        // responsive to mobile
+        @media only screen and (max-width: $tablet) {
+            display: block;
+            width: 85%;
+
+            ul {
+                flex-flow: column;
+                gap: 0;
+                margin: 0;
+
+                li {
+                    margin: 5px 0;
+
+                    a {
+                        justify-content: space-between;
+                        padding: 5px 15px;
+
+                        img {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                @media only screen and (max-width: $mobile) {
+                    justify-content: left;
+                }
             }
         }
     }
