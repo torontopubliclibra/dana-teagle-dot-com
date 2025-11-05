@@ -371,6 +371,16 @@ html.tpl {
                 image-rendering: crisp-edges;
                 image-rendering: -webkit-optimize-contrast;
             }
+
+            a:hover img, button:hover img {
+                filter:contrast(1.15);
+                border: solid 2px rgba($white, 0.5);
+
+                @media only screen and (max-width: $tablet) {
+                    filter: none;
+                    border: none;
+                }
+            }
         }
 
         @media only screen and (max-width: $tablet) {
@@ -560,6 +570,7 @@ html.tpl {
                             max-width: 100%;
                             margin-right: 20px;
                             cursor: pointer;
+                            transition: background-image 0.5s;
 
                             @media only screen and (max-width: $tablet) {
                                 font-style: normal;
@@ -580,7 +591,6 @@ html.tpl {
 
                         &.mix:hover, &.mix:focus {
                             background-image: linear-gradient(120deg, rgba($color2, 0.2) 50%, rgba($color3, 0.2) 100%);
-                            transition: background-image 0.5s;
 
                             &.disabled {
                                 background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
@@ -655,7 +665,7 @@ html.tpl {
     
             .tpl-link {
                 background: $black;
-                background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
+                background-image: linear-gradient(120deg, rgba($color1, 0.05) 50%, rgba($color3, 0.05) 100%);
                 border: solid 3px rgba($color1, 0.75);
                 min-width: 425px;
                 max-width: 600px;
@@ -664,6 +674,7 @@ html.tpl {
                 width: auto;
                 margin: 5px auto;
                 margin-bottom: 10px;
+                transition: background-image 0.5s;
 
                 &.photo {
                     max-width: 95%;
@@ -729,10 +740,12 @@ html.tpl {
                     margin: 0;
                 }
               
-                &:hover {
+                &:hover, &:focus {
+                    background-image: linear-gradient(120deg, rgba($color1, 0.1) 50%, rgba($color3, 0.1) 100%);
                     border: solid 3px rgba($color2, 0.75);
 
                     @media only screen and (max-width: $tablet) {
+                        background-image: linear-gradient(120deg, rgba($color1, 0.05) 50%, rgba($color3, 0.05) 100%);
                         border: solid 3px rgba($color1, 0.75);
                     }
                 }

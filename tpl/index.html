@@ -61,12 +61,19 @@
         </a>
         <img src="../assets/badges/machine_kills_fascists-88x31.jpg" alt="this machine kills fascists 88x31">
         <img src="../assets/badges/i-like-computer-88x31.png" alt="I like computer 88x31">
-        <img src="../assets/badges/hand-coded-88x31.gif" alt="hand coded 88x31">
-        <img src="../assets/badges/bookmark-88x31.gif" alt="bookmark 88x31">
-        <img src="../assets/badges/the-void-88x31.gif" alt="the void 88x31">
-        <img src="../assets/badges/free-palestine-88x31.gif" alt="free palestine now 88x31">
-        <img src="../assets/badges/trans-rights-now-88x31.gif" alt="trans rights now 88x31">
-        <a href="https://www.retrogames.cz/play_882-SNES.php?emulator=EJS" target="_blank" title="Earthbound">
+        <a href="/repo" target="_blank" title="This site's repo on Github">
+          <img src="../assets/badges/hand-coded-88x31.gif" alt="hand coded 88x31">
+        </a>
+        <button id="bookmark">
+          <img src="../assets/badges/bookmark-88x31.gif" alt="bookmark 88x31">
+        </button>
+        <a href="https://www.palestinianyouthmovement.com/" target="_blank" title="Palestinian Youth Movement">
+          <img src="../assets/badges/free-palestine-88x31.gif" alt="free palestine now 88x31">
+        </a>
+        <a href="https://justicetrans.org/" target="_blank" title="JusticeTrans">
+          <img src="../assets/badges/trans-rights-now-88x31.gif" alt="trans rights now 88x31">
+        </a>
+        <a href="https://www.retrogames.cz/play_882-SNES.php?emulator=EJS" target="_blank" title="Earthbound emulator">
           <img src="../assets/badges/earthbound-88x31.gif" alt="earthbound 88x31">
         </a>
         <a href="https://lexfeathers.ca" target="_blank" title="Lex Feathers">
@@ -93,5 +100,19 @@
     </footer>
     <script src="../scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
     <script src="../scripts/tpl.js" type="text/javascript"></script>
+    <script>
+      document.getElementById("bookmark").addEventListener("click", function() {
+        if (window.sidebar && window.sidebar.addPanel) { // Firefox version
+          window.sidebar.addPanel(document.title, window.location.href, "");
+        } else if(window.external && ('AddFavorite' in window.external)) { // IE Favorite
+          window.external.AddFavorite(location.href,document.title);
+        } else if(window.opera && window.print) { // Opera Hotlist
+          this.title=document.title;
+          return true;
+        } else { // webkit - safari/chrome
+          alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+        }
+      });
+    </script>
   </body>
 </html>
