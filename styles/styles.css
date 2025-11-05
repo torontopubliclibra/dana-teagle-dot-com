@@ -824,7 +824,7 @@ html.tpl main .tpl-landing img.rusty, html.tpl main.tpl-subpage img.rusty {
   border: solid 3px rgba(243, 232, 233, 0.75);
   margin: 10px 0;
   margin-top: 0;
-  width: 250px;
+  width: 225px;
   pointer-events: none;
 }
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
@@ -848,7 +848,7 @@ html.tpl main .tpl-landing {
     max-width: 85%;
   }
   html.tpl main .tpl-landing img.rusty {
-    width: 200px;
+    width: 175px;
   }
 }
 @media only screen and (max-width: 970px) {
