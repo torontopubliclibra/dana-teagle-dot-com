@@ -17,7 +17,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<hr><p>>> last watched (<a href="/tpl/logs#movies">see more</a>)</p>`);
+            formattedNow.push(`<hr><p>>> last watched (<a href="/tpl/logs#watched">see more</a>)</p>`);
             for (let list in tplNow.movies) {
                 let array = [tplNow.movies[list]];
                 array.forEach(movie => {
@@ -26,7 +26,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> last read (<a href="/tpl/logs#books">see more</a>)</p>`);
+            formattedNow.push(`<p>>> last read (<a href="/tpl/logs#read">see more</a>)</p>`);
             for (let list in tplNow.books) {
                 let array = [tplNow.books[list]];
                 array.forEach(book => {
