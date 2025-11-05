@@ -83,7 +83,7 @@ let tplMixes = {
                     }
                     break;
             }
-            formattedMixes.push(rangeSelect);
+            formattedMixes.push(`<hr>` + rangeSelect);
             tplMixes.content.html(formattedMixes.reduce((accumulator, mix) => {
                 return accumulator + mix;
             }));

@@ -24,7 +24,7 @@ html.tpl {
         width: 85%;
         max-width: 850px;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             text-align: left;
         }
     }
@@ -34,7 +34,7 @@ html.tpl {
         font-size: 45px;
         user-select: initial;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             max-width: 450px;
             margin-left: 7%;
         }
@@ -42,7 +42,7 @@ html.tpl {
         &.four-oh-four {
             margin-bottom: -15px;
 
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 margin-bottom: -10px;
             }
         }
@@ -61,6 +61,10 @@ html.tpl {
     h2 {
         margin: 5px 0;
 
+        &.width {
+            max-width: 610px;
+        }
+
         @media only screen and (max-width: $tablet) {
             width: 100%;
 
@@ -69,16 +73,20 @@ html.tpl {
             }
         }
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             margin: 10px 0;
         }
 
         &.tpl-page-heading {
             width: 100%;
-            text-align: left;
+            text-align: center;
             border-bottom: solid $color3 3.5px;
             padding-bottom: 15px;
             margin-top: -5px;
+
+            @media only screen and (max-width: $tablet) {
+                text-align: left;
+            }
         }
     }
 
@@ -102,7 +110,7 @@ html.tpl {
         opacity: 0;
         animation: fade-in-tpl-error 0.75s ease-in 1.5s forwards;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             text-align: left;
             width: 85%;
             padding: 30px 20px;
@@ -110,13 +118,16 @@ html.tpl {
     }
 
     hr {
-        width: 90%;
         max-width: 900px;
         margin: 0;
         border: 2px solid $color3;
 
         &.alt {
             border: solid 2px rgba($white, 0.75);
+        }
+
+        &.small {
+            max-width: 750px;
         }
 
         &.no-margin {
@@ -172,7 +183,7 @@ html.tpl {
         background: #282b2c;
         z-index: 100;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             top: 175px;
             padding-top: 20px;
         }
@@ -229,7 +240,7 @@ html.tpl {
             }
         }
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
 
             &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
                 margin-bottom: 5px;
@@ -306,7 +317,7 @@ html.tpl {
             margin-bottom: 10px;
         }
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             hr {
                 margin-top: 18px;
                 margin-bottom: 18px;
@@ -334,7 +345,7 @@ html.tpl {
             word-break: break-all;
             color: $white;
             width: 85%;
-            max-width: 875px;
+            max-width: 750px;
             min-width: 200px;
             margin-bottom: 20px;
             font-size: 0.75rem;
@@ -344,7 +355,7 @@ html.tpl {
 
         .badges {
             width: 85%;
-            max-width: 900px;
+            max-width: 750px;
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
@@ -362,7 +373,7 @@ html.tpl {
             }
         }
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             .badges {
                 width: 85%;
                 margin: 5px 0;
@@ -376,8 +387,8 @@ html.tpl {
         }
 
         .tpl-landing, &.tpl-subpage {
-            width: 100%;
-            max-width: 900px;
+            width: 90%;
+            max-width: unset;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
@@ -396,6 +407,10 @@ html.tpl {
                 color: $white;
                 font-size: 1rem;
                 text-align: center;
+
+                @media only screen and (max-width: $tablet) {
+                    text-align: left;
+                }
             }
         }
 
@@ -408,13 +423,14 @@ html.tpl {
             .tpl-landing {
                 flex-flow: column nowrap;
                 width: 85%;
+                max-width: 85%;
                 img.rusty {
                     width: 200px;
                 }
             }
         }
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             .tpl-landing {
                 align-items: flex-start;
                 margin: 0;
@@ -428,11 +444,12 @@ html.tpl {
         }
 
         &.tpl-subpage {
-            max-width: 950px;
+            width: 100%;
             margin: 15px auto;
 
             .tpl-page-content {
-                width: 80%;
+                width: 100%;
+                max-width: 750px;
                 margin-bottom: 10px;
 
                 hr {
@@ -525,14 +542,11 @@ html.tpl {
                     }
 
                     .sub {
-                        margin-left: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
                         padding: 0 10px;
                         background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
-                        max-width: 85%;
-
-                        @media only screen and (max-width: $mobile) {
-                            max-width: 100%;
-                        }
+                        max-width: 650px;
 
                         &.mix {
                             display: flex;
@@ -572,7 +586,7 @@ html.tpl {
                                 background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
                             }
 
-                            @media only screen and (max-width: $mobile) {
+                            @media only screen and (max-width: $tablet) {
                                 background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
                             }
                         }
@@ -595,27 +609,27 @@ html.tpl {
                         }
                     }
                 }
-
-                // responsive to mobile
-                @media only screen and (max-width: $mobile) {
+                @media only screen and (max-width: $tablet) {
                     width: 85%;
                 }
             }
 
             #read, #watched {
                 scroll-margin-top: 255px;
-                @media only screen and (max-width: $mobile) {
+                @media only screen and (max-width: $tablet) {
                     scroll-margin-top: 320px;
                 }
             }
         }
     
         .tpl-links {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
             margin-top: 10px;
             margin-bottom: 20px;
 
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 margin-bottom: 15px;
             }
     
@@ -626,8 +640,7 @@ html.tpl {
                 padding-top: 0;
                 scroll-margin-top: 255px;
 
-                // responsive to mobile
-                @media only screen and (max-width: $mobile) {
+                @media only screen and (max-width: $tablet) {
                     max-width: 90%;
                     text-align: left;
                     margin-right: auto;
@@ -645,15 +658,14 @@ html.tpl {
                 background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
                 border: solid 3px rgba($color1, 0.75);
                 min-width: 425px;
-                max-width: 500px;
+                max-width: 600px;
                 @include textStyle (20px, left);
                 @include flex(column, 10px, center, center);
                 width: auto;
-                margin: 5px;
+                margin: 5px auto;
                 margin-bottom: 10px;
 
                 &.photo {
-                    max-width: 95%;
                     margin: 10px auto;
                     margin-bottom: 15px;
 
@@ -697,13 +709,12 @@ html.tpl {
                 &:hover {
                     border: solid 3px rgba($color2, 0.75);
 
-                    @media only screen and (max-width: $mobile) {
+                    @media only screen and (max-width: $tablet) {
                         border: solid 3px rgba($color1, 0.75);
                     }
                 }
     
-                // responsive to mobile
-                @media only screen and (max-width: $mobile) {
+                @media only screen and (max-width: $tablet) {
                     min-width: 85%;
                     max-width: 85%;
                     margin-left: auto;
@@ -711,8 +722,7 @@ html.tpl {
                 }
             }
 
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 min-width: 85%;
             }
         }
@@ -720,7 +730,7 @@ html.tpl {
 
     .tpl-categories {
         width: 100%;
-        max-width: 900px;
+        max-width: 750px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -750,7 +760,7 @@ html.tpl {
                         color: $white !important;
                         border: solid rgba($color1, 0.75) 3px;
 
-                        @media only screen and (max-width: $mobile) {
+                        @media only screen and (max-width: $tablet) {
                             border: solid rgba($color2, 0.75) 3px;
                         }
                     }
@@ -765,15 +775,11 @@ html.tpl {
             }
         }
 
-        &.left {
+        &.logs {
             width: 95%;
             margin: 0 auto;
             margin-top: -5px;
-            align-items: flex-start;
-
-            @media only screen and (max-width: $mobile) {
-                align-items: center;
-            }
+            align-items: center;
 
             ul {
                 gap: 15px;
@@ -785,7 +791,7 @@ html.tpl {
 
             ul {
                 flex-flow: column;
-                gap: 0;
+                gap: 0 !important;
                 margin: 0;
 
                 li {
@@ -800,7 +806,7 @@ html.tpl {
                         }
                     }
                 }
-                @media only screen and (max-width: $mobile) {
+                @media only screen and (max-width: $tablet) {
                     justify-content: left;
                 }
             }
@@ -821,7 +827,7 @@ html.tpl {
         padding-bottom: 15px;
         min-width: 380px;
 
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet) {
             padding-top: 10px;
         }
 
@@ -832,16 +838,14 @@ html.tpl {
             color: $white;
             font-size: 14px;
 
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 text-align: left;
             }
         }
 
         a:hover {
             color: $color3;
-            // responsive to mobile
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 color: $white;
             }
         }
