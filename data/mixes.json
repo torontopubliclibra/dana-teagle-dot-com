@@ -1,0 +1,496 @@
+{
+    "solitary daughter (many friends)": {
+        "number": "196",
+        "tidal": "https://tidal.com/playlist/f5ca6e84-47cc-44ad-8c9f-6a425c793f46",
+        "image": "https://resources.tidal.com/images/0092e502/c9ef/4bbd/a75f/25566d7b7f85/1080x1080.jpg"
+    },
+    "end of summer (daffodil)": {
+        "number": "195",
+        "tidal": "https://tidal.com/playlist/b83c7195-f350-455a-974a-72b4ff5f3516",
+        "image": "https://resources.tidal.com/images/c30ed06d/9aaa/416b/93db/3e7fc2f10bda/1080x1080.jpg"
+    },
+    "just walk away (coming home)": {
+        "number": "194",
+        "tidal": "https://tidal.com/playlist/8e08a280-41f4-409a-b2dc-bfc40110ef2e",
+        "spotify": "https://open.spotify.com/playlist/5OgPFXCoUSDjtMUgRg3Xog",
+        "image": "https://resources.tidal.com/images/3144a550/6035/4960/b985/05fc4011d7c5/1080x1080.jpg"
+    },
+    "love you all the way (a new decade)": {
+        "number": "193",
+        "tidal": "https://tidal.com/playlist/ba00bfe1-a438-43ab-a8de-bc9075f1984a",
+        "spotify": "https://open.spotify.com/playlist/0SvfUhBMt9egpDTIWIggjH",
+        "image": "https://resources.tidal.com/images/a4d8263f/b090/4657/88fc/70d10110a694/1080x1080.jpg"
+    },
+    "I am unwritten (lucky)": {
+        "number": "192",
+        "tidal": "https://tidal.com/playlist/a16fd5a0-d08b-4cd6-9402-82b42ef99301",
+        "spotify": "https://open.spotify.com/playlist/5l0nPDEkgUBWzjFj1cyS0e",
+        "image": "https://resources.tidal.com/images/befe6c07/6aaf/4219/b9ab/48ed2d3a7f78/1080x1080.jpg"
+    },
+    "shitty and tragic (silently)": {
+        "number": "191",
+        "tidal": "https://tidal.com/playlist/de787c06-6447-416a-a091-ff6ef547042c",
+        "spotify": "https://open.spotify.com/playlist/4DWh83ITTrtK7X1CERO9qA",
+        "image": "https://resources.tidal.com/images/76c2199d/3cab/42ff/a081/75931226196a/1080x1080.jpg"
+    },
+    "relationships (give and take)": {
+        "number": "190",
+        "tidal": "https://tidal.com/playlist/c22459aa-62df-4f4f-a4e5-f1ba9be15113",
+        "spotify": "https://open.spotify.com/playlist/2FA0e2FKtjq8AUnibgqqI0",
+        "image": "https://resources.tidal.com/images/7d87f2ad/e847/4860/87ab/004267be000d/1080x1080.jpg"
+    },
+    "venice, 1980 (true faith)": {
+        "number": "189",
+        "tidal": "https://tidal.com/playlist/5677d50f-ea3c-4294-8c4c-098d5f5638fa",
+        "spotify": "https://open.spotify.com/playlist/2467rTI0sDj2sUjXRknwKl",
+        "image": "https://resources.tidal.com/images/132b1347/86b2/4dbb/8226/b149f166cfa0/1080x1080.jpg"
+    },
+    "why can't I (nothing to prove)": {
+        "number": "188",
+        "tidal": "https://tidal.com/playlist/1fed6df0-ad33-4d08-a216-688780b1f515",
+        "spotify": "https://open.spotify.com/playlist/5BWvOJAIZN5zN8Y5rAxxdb",
+        "image": "https://resources.tidal.com/images/f329d435/0b4d/46aa/842b/4ed83ea64823/1080x1080.jpg"
+    },
+    "how does it feel (for balance)": {
+        "number": "187",
+        "tidal": "https://tidal.com/playlist/d950a093-ff4e-41c6-adac-3abbc821f2be",
+        "spotify": "https://open.spotify.com/playlist/0wFxTLloVg3J744Mj2djh0",
+        "image": "https://resources.tidal.com/images/8121375f/6ebc/4f49/b6d8/c54ef2018fc0/1080x1080.jpg"
+    },
+    "us against the world (for dal)": {
+        "number": "186",
+        "tidal": "https://tidal.com/playlist/07c63f47-50bc-48c8-b7ae-abb353af857c",
+        "spotify": "https://open.spotify.com/playlist/4ub9DLaeVQhvxT3rEN3IDI",
+        "image": "https://resources.tidal.com/images/11554ccb/a707/4d65/a941/26e144a289a6/1080x1080.jpg"
+    },
+    "I'm with you (for katharine)": {
+        "number": "185",
+        "tidal": "https://tidal.com/playlist/1fb39fb8-6cf5-4319-aecf-b161b772f7b0",
+        "spotify": "https://open.spotify.com/playlist/0MSURt8whrFxzTYMdnCBfu",
+        "image": "https://resources.tidal.com/images/3aff4950/0bc6/4688/a5bc/4d45b73dcc78/1080x1080.jpg"
+    },
+    "walking side by side (for naomi)": {
+        "number": "184",
+        "tidal": "https://tidal.com/playlist/bd860cec-cba3-46bc-9ee4-00779425053f",
+        "spotify": "https://open.spotify.com/playlist/4xc3xa1OfLgxevDI5FzilL",
+        "image": "https://resources.tidal.com/images/1490685d/d913/4169/907d/4b4aadb3d89d/1080x1080.jpg"
+    },
+    "don't have the words (for julia)": {
+        "number": "183",
+        "tidal": "https://tidal.com/playlist/9da2d7c1-f934-40a3-a6a6-b18e12f9dc0b",
+        "spotify": "https://open.spotify.com/playlist/0hF6uffEOQWgJECSCkW3xl",
+        "image": "https://resources.tidal.com/images/03f9f6c6/2930/47a9/bae7/65cb9b818208/1080x1080.jpg"
+    },
+    "death & romance (falling together)": {
+        "number": "182",
+        "tidal": "https://tidal.com/playlist/94da372f-14dd-43c1-91d0-71359cc40f65",
+        "spotify": "https://open.spotify.com/playlist/6OQo2MVoPsBxTbxFympcZy",
+        "image": "https://resources.tidal.com/images/7284a7b1/d65a/4795/8408/fe2609ae49d8/1080x1080.jpg"
+    },
+    "end of an era (anthems for a thirty-year-old woman)": {
+        "number": "181",
+        "tidal": "https://tidal.com/playlist/77583b44-34db-4c56-845c-54098bd216f9",
+        "image": "https://resources.tidal.com/images/f351c04b/8139/4205/87c7/431487b4a9ee/1080x1080.jpg"
+    },
+    "just a girl (aftertaste)": {
+        "number": "180",
+        "tidal": "https://tidal.com/playlist/5ea88459-3e79-4b8c-a0d1-9cca9c5be4c2",
+        "image": "https://resources.tidal.com/images/f0ef3cb9/5278/480d/9b6d/fb2276f92c4d/1080x1080.jpg"
+    },
+    "smalltown boy (a nice mover)": {
+        "number": "179",
+        "tidal": "https://tidal.com/playlist/d8d59eaf-8e2b-455e-9af2-9f9be03d0290",
+        "image": "https://resources.tidal.com/images/d598504b/f99d/4e40/8ce4/5b13526eef26/1080x1080.jpg"
+    },
+    "challengers (mood swings)": {
+        "number": "178",
+        "tidal": "https://tidal.com/playlist/b9839d79-584a-4266-82d3-70af38b037e6",
+        "image": "https://resources.tidal.com/images/066a7bc2/46da/48d3/a4a8/90ef510e7b6f/1080x1080.jpg"
+    },
+    "illusion (pain relief)": {
+        "number": "177",
+        "tidal": "https://tidal.com/playlist/15c7cdd6-ab98-45f8-9feb-482c635e1942",
+        "image": "https://resources.tidal.com/images/c3957ce7/fe44/4462/895f/348de14b756b/1080x1080.jpg"
+    },
+    "little bit of rain (can we pretend)": {
+        "number": "176",
+        "tidal": "https://tidal.com/playlist/226d2d03-0047-4d01-92c5-47ef8d704a6d",
+        "image": "https://resources.tidal.com/images/9110b880/acc0/4c89/a874/c923075b489f/1080x1080.jpg"
+    },
+    "if I could do it again (didn't I)": {
+        "number": "175",
+        "tidal": "https://tidal.com/playlist/2059a72c-5667-4c90-b8fa-cf0acfb28e74",
+        "image": "https://resources.tidal.com/images/35a7e06a/3370/4fe9/a379/5f994a52bf75/1080x1080.jpg"
+    },
+    "come back hither (while I'm here)": {
+        "number": "174",
+        "tidal": "https://tidal.com/playlist/2388c6a5-d0d5-49ee-8e8a-577be687e841",
+        "image": "https://resources.tidal.com/images/e1e0459b/02ae/4009/b890/8b4149bb277b/1080x1080.jpg"
+    },
+    "will you tell me (haunt me)": {
+        "number": "173",
+        "tidal": "https://tidal.com/playlist/d9d38cb2-1867-40e9-ae19-ad196ff86dc9",
+        "image": "https://resources.tidal.com/images/06bdd2bd/3d12/4401/a6d7/4b8953c80c4f/1080x1080.jpg"
+    },
+    "go outside (right back to it)": {
+        "number": "172",
+        "tidal": "https://tidal.com/playlist/8ff4dd2b-ba11-484e-bbaf-954264eab8d4",
+        "image": "https://resources.tidal.com/images/a869c4ec/4500/41b1/991d/225c0b4de995/1080x1080.jpg"
+    },
+    "kick me (up from below)": {
+        "number": "171",
+        "tidal": "https://tidal.com/playlist/2e2aa0d9-1fec-42fa-9581-2acf3c5eb672",
+        "image": "https://resources.tidal.com/images/bc37ea0a/36a3/4c18/980c/eb0602247755/1080x1080.jpg"
+    },
+    "you are tired (take my hand)": {
+        "number": "170",
+        "tidal": "https://tidal.com/playlist/225ae511-215c-4da7-9dad-6ec15eab5994",
+        "image": "https://resources.tidal.com/images/feb46751/86f5/4017/ba41/04ff822d3588/1080x1080.jpg"
+    },
+    "just the same (too good to be true)": {
+        "number": "169",
+        "tidal": "https://tidal.com/playlist/31675694-a311-4b09-b6fa-24412f85d992",
+        "image": "https://resources.tidal.com/images/2bc428e8/06ce/4a57/a965/a394e5d135f8/1080x1080.jpg"
+    },
+    "all you've got is everyone (solitude)": {
+        "number": "168",
+        "tidal": "https://tidal.com/playlist/c2bf2818-d993-4119-8d23-0fe5f689f7c2",
+        "image": "https://resources.tidal.com/images/42b146ed/9eeb/481c/ba26/de7094a691a1/1080x1080.jpg"
+    },
+    "nothing's free (wild and unruly)": {
+        "number": "167",
+        "tidal": "https://tidal.com/playlist/166bd4a6-80bb-43d1-8e88-09e44c45aa8e",
+        "image": "https://resources.tidal.com/images/00aa662a/0435/4b81/be91/87923ce267b9/1080x1080.jpg"
+    },
+    "the boy genius (not strong enough)": {
+        "number": "166",
+        "tidal": "https://tidal.com/playlist/e0140bd7-fbe7-4212-be6a-34b9ce7f3589",
+        "image": "https://resources.tidal.com/images/c3edd12a/0658/4b39/85ac/0e2e3f9bdf1d/1080x1080.jpg"
+    },
+    "spider-man (on a slow night)": {
+        "number": "165",
+        "tidal": "https://tidal.com/playlist/95093708-a48a-488d-b8eb-513d08805cf7",
+        "image": "https://resources.tidal.com/images/f3159275/d44e/485b/a3f4/81e741e266b3/1080x1080.jpg"
+    },
+    "mystery of love (april come)": {
+        "number": "164",
+        "tidal": "https://tidal.com/playlist/730b64c1-aa29-4f10-92c7-f16cda69579e",
+        "image": "https://resources.tidal.com/images/9cc66475/4ff5/41fa/a7e9/8ae43fc42341/1080x1080.jpg"
+    },
+    "boundaries (don't take no threats)": {
+        "number": "163",
+        "tidal": "https://tidal.com/playlist/6df14064-f420-433d-9a96-8787392510d0",
+        "image": "https://resources.tidal.com/images/e3eb32b5/15cd/4afa/8eac/c81fd8226ce8/1080x1080.jpg"
+    },
+    "the wind (my love)": {
+        "number": "162",
+        "tidal": "https://tidal.com/playlist/79cd1d3a-a08e-4838-b7e4-1fc9ab15a614",
+        "image": "https://resources.tidal.com/images/e32846f7/c6fb/4d9d/a8e6/a9f9f7a66af8/1080x1080.jpg"
+    },
+    "I will always love you (will you still)": {
+        "number": "161",
+        "tidal": "https://tidal.com/playlist/75f44d97-0272-4a2a-ba69-021bc5fe19f9",
+        "image": "https://resources.tidal.com/images/b7f6a4ae/cfcd/484b/9be3/3d0c540872c9/1080x1080.jpg"
+    },
+    "memories that grip (the night she fell)": {
+        "number": "160",
+        "tidal": "https://tidal.com/playlist/7e9adbe6-6dd4-4a67-921e-ddcedd885471",
+        "image": "https://resources.tidal.com/images/582806c7/3332/4cfe/85f2/9a4b99a320ea/1080x1080.jpg"
+    },
+    "half of you (more of you)": {
+        "number": "159",
+        "tidal": "https://tidal.com/playlist/00de7963-b7c5-4a25-905a-e1125ce94549",
+        "image": "https://resources.tidal.com/images/5c8a7cec/d3ee/42ec/88f1/3b83e612c085/1080x1080.jpg"
+    },
+    "to be loved (a place to start)": {
+        "number": "158",
+        "tidal": "https://tidal.com/playlist/1ff5b9e5-130a-45f1-801f-7dbfaa3df358",
+        "image": "https://resources.tidal.com/images/575f1219/099d/4dfb/96f3/10ab68bb0437/1080x1080.jpg"
+    },
+    "woman (she wail and she moan)": {
+        "number": "157",
+        "tidal": "https://tidal.com/playlist/de8a02b0-69b7-49e6-a912-bdcc396b88b2",
+        "image": "https://resources.tidal.com/images/53883017/cc18/47b9/a7b0/af8cbb3987b8/1080x1080.jpg"
+    },
+    "new day (miss her so)": {
+        "number": "156",
+        "tidal": "https://tidal.com/playlist/2ddd05eb-4f81-4518-8d81-3031965939c5",
+        "image": "https://resources.tidal.com/images/54d4fc54/f9df/4b2f/9486/23acd203bd54/1080x1080.jpg"
+    },
+    "more peace (heart on fire)": {
+        "number": "155",
+        "tidal": "https://tidal.com/playlist/4599a6d6-d718-4fe9-a966-940709b047f0",
+        "image": "https://resources.tidal.com/images/b2eef3e8/0891/4d44/a902/2d5cf2809638/1080x1080.jpg"
+    },
+    "coffee for breakfast (essentially)": {
+        "number": "154",
+        "tidal": "https://tidal.com/playlist/620378c9-2a85-49ac-b6e0-7c1d320cf436",
+        "image": "https://resources.tidal.com/images/1ab37bd3/9596/4175/b080/2a68d10f2b3a/1080x1080.jpg"
+    },
+    "good words (take flight)": {
+        "number": "153",
+        "tidal": "https://tidal.com/playlist/d76acc3d-935c-4276-8067-874fd131e1f9",
+        "image": "https://resources.tidal.com/images/04d1dbd0/d926/4101/ac7a/96ecf033149a/1080x1080.jpg"
+    },
+    "the way I feel (bitter with the sweet)": {
+        "number": "152",
+        "tidal": "https://tidal.com/playlist/da1af7f1-43d7-41f4-b280-3eba89c3bdcd",
+        "image": "https://resources.tidal.com/images/777623d3/9377/4e75/856e/8f2fb2513cd4/1080x1080.jpg"
+    },
+    "body and soul (dream of spring)": {
+        "number": "151",
+        "tidal": "https://tidal.com/playlist/9b1bd0f5-bea1-46b0-bdb3-159a1eaf427b",
+        "image": "https://resources.tidal.com/images/23daf346/c298/4a7f/955e/4af983d6f2df/1080x1080.jpg"
+    },
+    "those that sail (loose ends surround)": {
+        "number": "150",
+        "tidal": "https://tidal.com/playlist/cc8fc08b-a4d3-4dd2-81d1-d339b26b0a35",
+        "image": "https://resources.tidal.com/images/c6f60032/c379/4d11/9c5d/f2bfa0ca25bf/1080x1080.jpg"
+    },
+    "it's always you (true blue)": {
+        "number": "149",
+        "tidal": "https://tidal.com/playlist/d1cf1710-7eec-4353-b2f4-d592dc707100",
+        "image": "https://resources.tidal.com/images/b69f4448/4cf5/4a4a/a6ab/5a70882e23a8/1080x1080.jpg"
+    },
+    "tender history (pitter patter)": {
+        "number": "148",
+        "tidal": "https://tidal.com/playlist/165c6947-4774-44c1-9e4c-dab9335f673b",
+        "image": "https://resources.tidal.com/images/c5b7e952/d9c5/409f/912a/b6c70fd84747/1080x1080.jpg"
+    },
+    "smoke break (stay high)": {
+        "number": "147",
+        "tidal": "https://tidal.com/playlist/8c7da24a-578b-4082-bb58-a1d49a0e0f9a",
+        "image": "https://resources.tidal.com/images/6e41e56b/6d3e/4cbc/bb4d/33ea5a7bd906/1080x1080.jpg"
+    },
+    "sinner (trouble)": {
+        "number": "146",
+        "tidal": "https://tidal.com/playlist/7f0ad47c-d947-4149-a692-faf5abe349de",
+        "image": "https://resources.tidal.com/images/6c11fdf6/a331/405f/aa9e/588d30c1f569/1080x1080.jpg"
+    },
+    "day chokes the night (grapevine)": {
+        "number": "145",
+        "tidal": "https://tidal.com/playlist/ffccc732-00be-44ad-b4d4-369935df0499",
+        "image": "https://resources.tidal.com/images/f5a312aa/bca8/42bf/bd55/6eaa60831fa8/1080x1080.jpg"
+    },
+    "many things to say (romance is boring)": {
+        "number": "144",
+        "tidal": "https://tidal.com/playlist/b7d86ed6-3096-4a0a-ac61-0ba56b64c80c",
+        "image": "https://resources.tidal.com/images/906e500b/9175/40fc/a187/4c100a69d075/1080x1080.jpg"
+    },
+    "too pretty (step forward)": {
+        "number": "143",
+        "tidal": "https://tidal.com/playlist/37163efa-9041-4572-85f6-efdcad908c46",
+        "image": "https://resources.tidal.com/images/6e35a61a/80b5/4271/aeeb/00b2837437b0/1080x1080.jpg"
+    },
+    "lovebomb (heads up)": {
+        "number": "142",
+        "tidal": "https://tidal.com/playlist/fa9ff91b-e337-45b6-82c6-c357e1dbc13e",
+        "image": "https://resources.tidal.com/images/a6f8536e/c36a/4708/9a4d/281b99aed436/1080x1080.jpg"
+    },
+    "fishy sounds (red planet)": {
+        "number": "141",
+        "tidal": "https://tidal.com/playlist/d696df76-9884-49b6-b6b0-319cfb40df0c",
+        "image": "https://resources.tidal.com/images/48901d1f/a36f/480e/9b3d/c691931fcc5d/1080x1080.jpg"
+    },
+    "ancestress (young eucharists)": {
+        "number": "140",
+        "tidal": "https://tidal.com/playlist/1f997713-8e80-4c66-bed9-ec844aad23d7",
+        "image": "https://resources.tidal.com/images/7a00a0ee/7572/4ff9/8dc0/6f3881168020/1080x1080.jpg"
+    },
+    "come over (low)": {
+        "number": "139",
+        "tidal": "https://tidal.com/playlist/1c292e86-412f-4a05-bc0d-a1ca727e9aa4",
+        "image": "https://resources.tidal.com/images/77ac0481/b509/4058/b4c7/02133a5bfc24/1080x1080.jpg"
+    },
+    "sensitive (feel no pain)": {
+        "number": "138",
+        "tidal": "https://tidal.com/playlist/0f0be67f-8692-4526-ab2c-6daf3aa7de39",
+        "image": "https://resources.tidal.com/images/3540a1e6/66b7/4327/939c/038ac980ce33/1080x1080.jpg"
+    },
+    "little death (little fire)": {
+        "number": "137",
+        "tidal": "https://tidal.com/playlist/359c1d8b-ab98-48a7-b15e-f1ea853b72ca",
+        "image": "https://resources.tidal.com/images/a6c03a4b/6df4/4781/b582/2a2a479181f2/1080x1080.jpg"
+    },
+    "echo party (false dichotomy)": {
+        "number": "136",
+        "tidal": "https://tidal.com/playlist/66da2004-12a5-4987-abd6-74c0e7494717",
+        "image": "https://resources.tidal.com/images/7b99502f/3d4f/4aa7/8831/7036b601af55/1080x1080.jpg"
+    },
+    "mornin (this time tomorrow)": {
+        "number": "135",
+        "tidal": "https://tidal.com/playlist/80a7ccb3-d960-413c-865b-4f1f2cd0913d",
+        "image": "https://resources.tidal.com/images/ebe5512f/18bf/4f04/aa27/0b8c545ac62b/1080x1080.jpg"
+    },
+    "bloodshot (saccharine)": {
+        "number": "134",
+        "tidal": "https://tidal.com/playlist/d5e06da8-64c4-4ef3-86b0-7972a2f5513e",
+        "image": "https://resources.tidal.com/images/bae9e4cf/bb45/45df/8e9e/689d261300e6/1080x1080.jpg"
+    },
+    "coldest days (gay messiah)": {
+        "number": "133",
+        "tidal": "https://tidal.com/playlist/da5372e3-cbfb-45d3-9a62-ac3eec9baa54",
+        "image": "https://resources.tidal.com/images/26db7606/305a/401a/a54f/f08dfefa122b/1080x1080.jpg"
+    },
+    "cold summer (who are you)": {
+        "number": "132",
+        "tidal": "https://tidal.com/playlist/55f5e9be-5850-4cc8-b6c0-73d763a62ca2",
+        "image": "https://resources.tidal.com/images/476d4ab3/d0d9/4679/a84b/bdab20cad799/1080x1080.jpg"
+    },
+    "want me back (overheated)": {
+        "number": "131",
+        "tidal": "https://tidal.com/playlist/f4d249c1-1698-4795-ac7c-d65ae90d3885",
+        "image": "https://resources.tidal.com/images/92635afd/d63e/4991/a703/f6fbcd429341/1080x1080.jpg"
+    },
+    "joke's on you (head is on backwards)": {
+        "number": "130",
+        "tidal": "https://tidal.com/playlist/b08fb11e-4568-4c1b-a573-dabc4ad7f45f",
+        "image": "https://resources.tidal.com/images/f7cb58de/5b52/4cf9/a46d/b4e51a6c45d8/1080x1080.jpg"
+    },
+    "into the dark (never going back again)": {
+        "number": "129",
+        "tidal": "https://tidal.com/playlist/6c73a201-21b1-448a-a3e1-d954be3754e9",
+        "image": "https://resources.tidal.com/images/694c8d76/e093/4659/bf2f/6d0577106929/1080x1080.jpg"
+    },
+    "favourite time of year (xmas eve)": {
+        "number": "128",
+        "tidal": "https://tidal.com/playlist/d88958dd-a20d-41d8-90a3-23e81d36a068",
+        "image": "https://resources.tidal.com/images/1f4db1b4/a468/4735/9a8b/cbae1feb9d25/1080x1080.jpg"
+    },
+    "one more year (time will tell)": {
+        "number": "127",
+        "tidal": "https://tidal.com/playlist/2a6cf891-1775-478c-9ad9-b9ae983b47e3",
+        "image": "https://resources.tidal.com/images/b83cfd1a/bbff/4bdd/841f/b2178ea16020/1080x1080.jpg"
+    },
+    "cowboy (midnight rider)": {
+        "number": "126",
+        "tidal": "https://tidal.com/playlist/1bed864f-6c30-4931-b726-cb1b6ca432e9",
+        "image": "https://resources.tidal.com/images/abb3d1ae/e3af/4436/9bcf/032c24b5eccb/1080x1080.jpg"
+    },
+    "so sorry (regret)": {
+        "number": "125",
+        "tidal": "https://tidal.com/playlist/c27caaa9-4b09-4674-a34d-51b1de836b4d",
+        "image": "https://resources.tidal.com/images/bc0a9f11/73a5/4c7c/87aa/489ec9ccc271/1080x1080.jpg"
+    },
+    "sign of the times (tonight)": {
+        "number": "124",
+        "tidal": "https://tidal.com/playlist/41bbae0e-6a5d-436b-81a1-5a94f4472f29",
+        "image": "https://resources.tidal.com/images/ae2413e6/577e/4f11/9bed/9fd5e996717a/1080x1080.jpg"
+    },
+    "alarm (shotgun)": {
+        "number": "123",
+        "tidal": "https://tidal.com/playlist/3b816efa-96d0-45a6-8181-c2f4aee436a5",
+        "image": "https://resources.tidal.com/images/a4d4a0f6/d1f2/4e02/a170/97ea9458546c/1080x1080.jpg"
+    },
+    "glimpse of us (tv)": {
+        "number": "122",
+        "tidal": "https://tidal.com/playlist/cefae1e3-1a4f-43fc-9c53-614fe3d09ec9",
+        "image": "https://resources.tidal.com/images/3c4e6ce3/b6d7/4a69/a463/f88e4f6608cf/1080x1080.jpg"
+    },
+    "madness (runaway)": {
+        "number": "121",
+        "tidal": "https://tidal.com/playlist/a1b67ba0-5d82-4b88-8812-0ec8a4af3b0c",
+        "image": "https://resources.tidal.com/images/e98e5352/c042/4cb7/b64f/194a18bce26e/1080x1080.jpg"
+    },
+    "balloon (charcoal)": {
+        "number": "120",
+        "tidal": "https://tidal.com/playlist/2b8b4888-da12-4a27-a192-669ce64cc756",
+        "image": "https://resources.tidal.com/images/e6e71132/e38b/42e8/9d60/75a5677bf752/1080x1080.jpg"
+    },
+    "paranoia (where it belongs)": {
+        "number": "119",
+        "tidal": "https://tidal.com/playlist/ef2a93c1-bac9-41a4-8aa5-9585b9d3eba0",
+        "image": "https://resources.tidal.com/images/e4b2d305/5219/4328/9849/077656fe082c/1080x1080.jpg"
+    },
+    "virtua (low)": {
+        "number": "118",
+        "tidal": "https://tidal.com/playlist/8d1b53a9-8bad-41d7-9e3e-6cd3f673b3c8",
+        "image": "https://resources.tidal.com/images/2fec420e/d23a/4cac/b3c3/540d53824bc6/1080x1080.jpg"
+    },
+    "caves (the answer)": {
+        "number": "117",
+        "tidal": "https://tidal.com/playlist/00bedc8e-11db-4fbd-81ef-8d200d8b4b36",
+        "image": "https://resources.tidal.com/images/d84d3df5/9def/4223/919a/6f8d10a64500/1080x1080.jpg"
+    },
+    "blacktop (this is how)": {
+        "number": "116",
+        "tidal": "https://tidal.com/playlist/f992debe-535c-4dca-9e51-39ea97798d26",
+        "image": "https://resources.tidal.com/images/fa9deab4/f840/4913/8409/5d51387c03eb/1080x1080.jpg"
+    },
+    "blank slate (god wants us to wait)": {
+        "number": "115",
+        "tidal": "https://tidal.com/playlist/e6839a93-4e28-4396-8c40-6308b6fc60af",
+        "image": "https://resources.tidal.com/images/6efc2043/1cda/4ed5/a3cc/ee192505876a/1080x1080.jpg"
+    },
+    "alpha desperation (stunted)": {
+        "number": "114",
+        "tidal": "https://tidal.com/playlist/33646c32-c57b-4756-862e-0a901c473366",
+        "image": "https://resources.tidal.com/images/8916af0f/134b/46e2/b6df/aa8c9e6623e5/1080x1080.jpg"
+    },
+    "prog (new wave or truth)": {
+        "number": "113",
+        "tidal": "https://tidal.com/playlist/b53f26f1-d8c6-47c0-917f-86e51b7999cf",
+        "spotify": "https://open.spotify.com/playlist/3XZSb2pgfIg0NWeEvcVJeb",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9c0be0a21ac81aff632ca033"
+    },
+    "call the doctor (means nothing)": {
+        "number": "112",
+        "tidal": "https://tidal.com/playlist/677cae76-dd90-4ba2-8b81-fcf77f28ceba",
+        "image": "https://resources.tidal.com/images/bc3c162d/dcbd/4e9d/8ff1/c92ecdbdb73a/1080x1080.jpg"
+    },
+    "today (future games)": {
+        "number": "111",
+        "tidal": "https://tidal.com/playlist/307ef8ab-6578-46c5-acaf-98a604ad1cc0",
+        "image": "https://resources.tidal.com/images/ba74709e/786c/4798/894c/53938b7876b9/1080x1080.jpg"
+    },
+    "oh no (don't want it)": {
+        "number": "110",
+        "tidal": "https://tidal.com/playlist/d6a23c67-8cb3-4bb0-bc9c-bd2a1b9623bb",
+        "image": "https://resources.tidal.com/images/50f1ac92/b2ff/4842/8407/7980710d2e91/1080x1080.jpg"
+    },
+    "come over (this mess)": {
+        "number": "109",
+        "tidal": "https://tidal.com/playlist/66defc22-9fff-4180-bae9-875af4e89772",
+        "image": "https://resources.tidal.com/images/47c4ecfc/2210/45d5/b064/297485ef678c/1080x1080.jpg"
+    },
+    "wet dream (oom sha la la)": {
+        "number": "108",
+        "tidal": "https://tidal.com/playlist/dbb7110d-8735-4468-9236-246e1f915e07",
+        "image": "https://resources.tidal.com/images/a91924f9/6461/42b4/bc4e/d56393fd0739/1080x1080.jpg"
+    },
+    "one summer night (on my radio)": {
+        "number": "107",
+        "tidal": "https://tidal.com/playlist/a2eeee35-c920-447f-af59-237be7e2a82f",
+        "image": "https://resources.tidal.com/images/9eebf541/23fb/46bb/b7b7/14d7679a6783/1080x1080.jpg"
+    },
+    "red right hand (would you fight?)": {
+        "number": "106",
+        "tidal": "https://tidal.com/playlist/5ec751fd-0e2a-4849-a834-997891bfac32",
+        "image": "https://resources.tidal.com/images/cf07090e/9643/4992/b744/79ab42ad5187/1080x1080.jpg"
+    },
+    "all the good times (like exploding stones)": {
+        "number": "105",
+        "tidal": "https://tidal.com/playlist/c4556ccd-e142-4022-9465-39a4663ffca0",
+        "image": "https://resources.tidal.com/images/9dbed829/b0d5/43ed/bcdd/7389bd478b51/1080x1080.jpg"
+    },
+    "sleeping sickness (do you realise??)": {
+        "number": "104",
+        "tidal": "https://tidal.com/playlist/3c029860-c0ca-4335-b7db-6d248c4f0507",
+        "image": "https://resources.tidal.com/images/f52694bf/9847/43a9/8abb/4a368d623052/1080x1080.jpg"
+    },
+    "parentheses (one more night)": {
+        "number": "103",
+        "tidal": "https://tidal.com/playlist/73e334f1-91e6-48e5-8da1-bedb3c33f23e",
+        "image": "https://resources.tidal.com/images/75e0d5e5/fd64/44a1/8ea8/fd022a3cc643/1080x1080.jpg"
+    },
+    "ghosting (working woman)": {
+        "number": "102",
+        "tidal": "https://tidal.com/playlist/6c196a7f-755f-4467-ab7b-99821d1237bf",
+        "image": "https://resources.tidal.com/images/d5c3b1d0/fdc3/4c51/adb0/7b1c9ce92518/1080x1080.jpg"
+    },
+    "over my head (don't bring me down)": {
+        "number": "101",
+        "tidal": "https://tidal.com/playlist/a14d06d7-3fe6-4a65-afa9-b474bd44a830",
+        "image": "https://resources.tidal.com/images/e1f9dfb7/182c/4c7b/8e18/a0766940856d/1080x1080.jpg"
+    }
+}

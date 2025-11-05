@@ -479,12 +479,36 @@ html.tpl {
                             color: $white;
                         }
                     }
+                    @media only screen and (max-width: $tablet) {
+                        font-style: normal;
+                    }
                 }
 
-                .year-selected {
+                button.range {
+                    color: $white;
+                    text-decoration: underline;
+                    font-size: 1rem;
+
+                    &:hover {
+                        color: $color3;
+
+                        @media only screen and (max-width: $tablet) {
+                            color: $white;
+                        }
+                    }
+                    @media only screen and (max-width: $tablet) {
+                        font-style: normal;
+                    }
+                }
+
+                .year-selected, .range-selected {
                     color: $color2;
                     font-size: 1rem;
                     font-style: italic;
+
+                    @media only screen and (max-width: $tablet) {
+                        font-style: normal;
+                    }
                 }
 
                 .tpl-page-text {
@@ -516,11 +540,16 @@ html.tpl {
                             background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
                             max-width: 100%;
                             margin-right: 20px;
+                            cursor: pointer;
 
                             @media only screen and (max-width: $tablet) {
                                 font-style: normal;
                                 margin-left: 0;
                                 margin-right: 0;
+                            }
+
+                            &.disabled {
+                                cursor: default;
                             }
                         }
 
@@ -538,6 +567,10 @@ html.tpl {
                             background-image: linear-gradient(120deg, rgba($color2, 0.2) 50%, rgba($color3, 0.2) 100%);
                             transition: background-image 0.5s;
 
+                            &.disabled {
+                                background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
+                            }
+
                             @media only screen and (max-width: $mobile) {
                                 background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
                             }
@@ -545,6 +578,7 @@ html.tpl {
 
                         &.mix img {
                             width: 100px;
+                            height: 100px;
                             margin: 10px 0;
                             border: solid 3px rgba($white, 0.5);
 
@@ -552,10 +586,15 @@ html.tpl {
                                 border: none;
                                 width: 18px;
                                 filter: invert(1);
+
+                                &.disabled {
+                                    visibility: hidden;
+                                }
                             }
 
                             @media only screen and (max-width: $tablet) {
                                 width: 75px;
+                                height: 75px;
                             }
                         }
                     }

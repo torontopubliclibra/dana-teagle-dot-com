@@ -46,29 +46,27 @@ let tpl = {
         },
     },
     init: () => {
-        if (window.location.pathname === "/tpl/" || window.location.pathname === "/tpl/index.html") {
-            fetch('../data/tpl-links.json').then(response => response.json())
-            .then((data) => {
-                let links = {};
-                for (let object in data) {
-                    links[object] = [];
-                    for (let item in data[object]) {
-                        let link = {
-                            "title": item,
-                            "description": "",
-                            "link": ""
-                        }
-                        for (let property in data[object][item]) {
-                            link[property] = data[object][item][property];
-                        };
-                        links[object].push(link);
+        fetch('../data/tpl-links.json').then(response => response.json())
+        .then((data) => {
+            let links = {};
+            for (let object in data) {
+                links[object] = [];
+                for (let item in data[object]) {
+                    let link = {
+                        "title": item,
+                        "description": "",
+                        "link": ""
+                    }
+                    for (let property in data[object][item]) {
+                        link[property] = data[object][item][property];
                     };
-                }
-                tpl.links = links;
-                tpl.functions.linkDisplay();
-            })
-            .catch(error => console.log(error));
-        };
+                    links[object].push(link);
+                };
+            }
+            tpl.links = links;
+            tpl.functions.linkDisplay();
+        })
+        .catch(error => console.log(error));
     },
 };
 $(document).ready(() => {
