@@ -122,6 +122,10 @@ html.tpl {
         margin: 0;
         border: 2px solid $color3;
 
+        @media only screen and (max-width: $tablet) {
+            max-width: 90%;
+        }
+
         &.alt {
             border: solid 2px rgba($white, 0.75);
         }
@@ -456,6 +460,7 @@ html.tpl {
         &.tpl-subpage {
             width: 100%;
             margin: 15px auto;
+            margin-bottom: 0;
 
             .tpl-page-content {
                 width: 100%;
@@ -688,10 +693,15 @@ html.tpl {
 
                     @media only screen and (max-width: $tablet) {
                         height: 150px;
+                        max-width: 100%;
                     }
 
                     &:first-of-type {
-                        margin-top: 45px;
+                        margin-top: 25px;
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: -15px;
                     }
 
                     &:hover {
