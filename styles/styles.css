@@ -574,6 +574,9 @@ html.tpl hr {
   margin: 0;
   border: 2px solid #7a91b1;
 }
+html.tpl hr.alt {
+  border: solid 2px rgba(243, 232, 233, 0.75);
+}
 html.tpl hr.no-margin {
   margin: 0 !important;
 }

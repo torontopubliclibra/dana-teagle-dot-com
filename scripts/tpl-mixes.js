@@ -41,7 +41,7 @@ let tplMixes = {
             let range = tplMixes.range;
             let streamSelect = tplMixes.streamSelect;
             let rangeSelect = tplMixes.rangeSelect;
-            let formattedMixes = [streamSelect, `<hr>`, rangeSelect];
+            let formattedMixes = [streamSelect, `<hr class="no-top">`, rangeSelect];
             let stream = "tidal";
             if (tplMixes.stream == "spotify") {
                 stream = "spotify";

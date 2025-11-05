@@ -115,6 +115,10 @@ html.tpl {
         margin: 0;
         border: 2px solid $color3;
 
+        &.alt {
+            border: solid 2px rgba($white, 0.75);
+        }
+
         &.no-margin {
             margin: 0 !important;
         }
