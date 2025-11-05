@@ -67,6 +67,7 @@ let tplLogs = {
                     }
                     break;
             }
+            formattedLogs.push(`<hr>` + yearSelect);
             tplLogs.content.html(formattedLogs.reduce((accumulator, log) => {
                 return accumulator + log;
             }));
@@ -82,11 +83,11 @@ let tplLogs = {
             };
             tplLogs.twentyFive = twentyFive;
 
-            // let twentyFour = {
-            //     "movies": [data["2024"]["movies"]],
-            //     "books": [data["2024"]["books"]],
-            // };
-            // tplLogs.twentyFour = twentyFour;
+            let twentyFour = {
+                "movies": [data["2024"]["movies"]],
+                "books": [data["2024"]["books"]],
+            };
+            tplLogs.twentyFour = twentyFour;
             tplLogs.functions.logsDisplay();
         })
         .catch(error => console.log(error));
