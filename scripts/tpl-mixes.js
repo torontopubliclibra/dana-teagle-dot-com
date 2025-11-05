@@ -27,6 +27,7 @@ let tplMixes = {
             }
             tplMixes.range = range;
             tplMixes.functions.mixDisplay();
+            window.scroll(top);
         },
         streamSet: (stream) => {
             switch(stream) {
@@ -124,6 +125,7 @@ let tplMixes = {
                     }
                     break;
             }
+            formattedMixes.push(rangeSelect);
             tplMixes.content.html(formattedMixes.reduce((accumulator, mix) => {
                 return accumulator + mix;
             }));
