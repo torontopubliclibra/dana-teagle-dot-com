@@ -719,10 +719,6 @@ html.tpl {
         justify-content: center;
         align-items: center;
 
-        &.left {
-            align-items: flex-start;
-        }
-
         ul {
             display: flex;
             flex-flow: row wrap;
@@ -762,6 +758,21 @@ html.tpl {
                 }
             }
         }
+
+        &.left {
+            width: 95%;
+            margin: 0 auto;
+            margin-top: -5px;
+            align-items: flex-start;
+
+            @media only screen and (max-width: $mobile) {
+                align-items: center;
+            }
+
+            ul {
+                gap: 15px;
+            }
+        }
         // responsive to mobile
         @media only screen and (max-width: $tablet) {
             display: block;
@@ -786,6 +797,15 @@ html.tpl {
                 }
                 @media only screen and (max-width: $mobile) {
                     justify-content: left;
+                }
+            }
+
+            &.left {
+                width: 95%;
+                margin: 0 auto;
+
+                ul {
+                    gap: 0;
                 }
             }
         }

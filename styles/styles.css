@@ -1118,9 +1118,6 @@ html.tpl .tpl-categories {
   justify-content: center;
   align-items: center;
 }
-html.tpl .tpl-categories.left {
-  align-items: flex-start;
-}
 html.tpl .tpl-categories ul {
   display: flex;
   flex-flow: row wrap;
@@ -1156,6 +1153,20 @@ html.tpl .tpl-categories ul li a img {
   padding-top: 2px;
   filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
 }
+html.tpl .tpl-categories.left {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: -5px;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl .tpl-categories.left {
+    align-items: center;
+  }
+}
+html.tpl .tpl-categories.left ul {
+  gap: 15px;
+}
 @media only screen and (max-width: 970px) {
   html.tpl .tpl-categories {
     display: block;
@@ -1180,6 +1191,15 @@ html.tpl .tpl-categories ul li a img {
 @media only screen and (max-width: 970px) and (max-width: 768px) {
   html.tpl .tpl-categories ul {
     justify-content: left;
+  }
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .tpl-categories.left {
+    width: 95%;
+    margin: 0 auto;
+  }
+  html.tpl .tpl-categories.left ul {
+    gap: 0;
   }
 }
 html.tpl footer {
