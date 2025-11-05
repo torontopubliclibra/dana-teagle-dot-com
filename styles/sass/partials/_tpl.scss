@@ -681,7 +681,8 @@ html.tpl {
                 margin: 5px auto;
                 margin-bottom: 10px;
                 transition: background-image 0.5s;
-                padding: 10px 15px;
+                padding: 10px 13px;
+                padding-right: 13px;
 
                 &.photo {
                     max-width: 95%;
@@ -801,7 +802,7 @@ html.tpl {
                     background: $black;
                     background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
                     border: solid rgba($color2, 0.75) 3px;
-                    padding: 5px 10px 8px 15px;
+                    padding: 5px 10px 8px 13px;
                     font-size: 12px !important;
                     color: $white;
                     text-decoration: none;
@@ -817,7 +818,6 @@ html.tpl {
                     img {
                         width: 16px;
                         margin-left: 5px;
-                        padding-top: 2px;
                         filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
                     }
                 }
@@ -848,7 +848,7 @@ html.tpl {
 
                     a {
                         justify-content: space-between;
-                        padding: 5px 15px;
+                        padding: 5px 13px;
 
                         img {
                             margin-left: 10px;
