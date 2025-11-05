@@ -26,7 +26,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> last read (<a href="/tpl/logs#books">see more</a>:</p>`);
+            formattedNow.push(`<p>>> last read (<a href="/tpl/logs#books">see more</a>)</p>`);
             for (let list in tplNow.books) {
                 let array = [tplNow.books[list]];
                 array.forEach(book => {

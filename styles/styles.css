@@ -997,12 +997,12 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon.dis
     width: 85%;
   }
 }
-html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
+html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies {
   scroll-margin-top: 255px;
 }
 @media only screen and (max-width: 768px) {
-  html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
-    scroll-margin-top: 325px;
+  html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies {
+    scroll-margin-top: 320px;
   }
 }
 html.tpl main .tpl-categories {

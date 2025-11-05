@@ -597,10 +597,10 @@ html.tpl {
                 }
             }
 
-            #books, #movies, #tv {
+            #books, #movies {
                 scroll-margin-top: 255px;
                 @media only screen and (max-width: $mobile) {
-                    scroll-margin-top: 325px;
+                    scroll-margin-top: 320px;
                 }
             }
         }
