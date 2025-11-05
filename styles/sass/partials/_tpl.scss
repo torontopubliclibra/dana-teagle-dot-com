@@ -648,6 +648,16 @@ html.tpl {
                 margin: 5px;
                 margin-bottom: 10px;
 
+                &.photo {
+                    max-width: 95%;
+                    margin: 10px auto;
+                    margin-bottom: 15px;
+
+                    &:first-of-type {
+                        margin-top: 45px;
+                    }
+                }
+
                 cursor: pointer;
               
                 .link-title {

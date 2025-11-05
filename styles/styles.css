@@ -1060,6 +1060,14 @@ html.tpl main .tpl-links .tpl-link {
   margin-bottom: 10px;
   cursor: pointer;
 }
+html.tpl main .tpl-links .tpl-link.photo {
+  max-width: 95%;
+  margin: 10px auto;
+  margin-bottom: 15px;
+}
+html.tpl main .tpl-links .tpl-link.photo:first-of-type {
+  margin-top: 45px;
+}
 html.tpl main .tpl-links .tpl-link .link-title {
   display: flex;
   gap: 10px;
