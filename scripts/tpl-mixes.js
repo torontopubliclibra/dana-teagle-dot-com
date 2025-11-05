@@ -33,10 +33,12 @@ let tplMixes = {
                 case "tidal":
                     tplMixes.stream = "tidal";
                     tplMixes.streamSelect = `<p>streaming links: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`
+                    localStorage['stream'] = `${tplMixes.stream}`;
                     break;
                 case "spotify":
                     tplMixes.stream = "spotify";
                     tplMixes.streamSelect = `<p>streaming links: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <span class="range-selected">spotify</span></p>`
+                    localStorage['stream'] = `${tplMixes.stream}`;
                     break;
             }
             tplMixes.stream = stream;
@@ -145,6 +147,10 @@ let tplMixes = {
             tplMixes.functions.mixDisplay();
         })
         .catch(error => console.log(error));
+
+        if (localStorage['stream'] === 'spotify') {
+            tplMixes.functions.streamSet('spotify');
+        }
     },
 };
 $(document).ready(() => {
