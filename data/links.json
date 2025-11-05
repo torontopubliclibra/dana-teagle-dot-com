@@ -49,10 +49,6 @@
         "Discogs": {
             "link": "/discogs",
             "description": ""
-        },
-        "Tidal": {
-            "link": "/tidal",
-            "description": ""
         }
     },
     "mutual aid": {

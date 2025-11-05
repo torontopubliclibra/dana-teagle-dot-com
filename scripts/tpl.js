@@ -37,7 +37,7 @@ let tpl = {
                     categoryTag = "category-1";
                 }
             }
-            tpl.tplCategories.html(`<h2>Jump to</h2>` + `<ul>` + linkCategories.reduce((accumulator, category) => {
+            tpl.tplCategories.html(`<h2>Jump to:</h2>` + `<ul>` + linkCategories.reduce((accumulator, category) => {
                 return accumulator + category;
             }) + `</ul>`);
             tpl.tplLinks.html(formattedLinks.reduce((accumulator, category) => {
@@ -46,7 +46,7 @@ let tpl = {
         },
     },
     init: () => {
-        fetch('../data/tpl-links.json').then(response => response.json())
+        fetch('../data/links.json').then(response => response.json())
         .then((data) => {
             let links = {};
             for (let object in data) {
