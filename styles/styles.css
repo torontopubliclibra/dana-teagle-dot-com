@@ -1182,7 +1182,7 @@ html.tpl .tpl-categories ul li a img {
   filter: brightness(0) saturate(100%) invert(92%) sepia(9%) saturate(134%) hue-rotate(301deg) brightness(99%) contrast(97%);
 }
 html.tpl .tpl-categories.logs {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 15px;
   align-items: center;
