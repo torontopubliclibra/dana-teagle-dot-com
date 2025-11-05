@@ -16,7 +16,7 @@ html.trans-id {
         background-size: 500px;
         margin-top: 75px;
         margin-bottom: 75px;
-        // responsive to mobile
+
         @media only screen and (max-width: $mobile) {
             margin-top: 5%;
             margin-bottom: 5%;
@@ -38,7 +38,7 @@ html.trans-id {
     header {
         border-bottom: none;
 
-        // responsive to mobile
+
         @media only screen and (max-width: $mobile) {
             padding-top: 15px;
 
@@ -77,7 +77,7 @@ html.trans-id {
             &:hover {
                 background-color: rgba($color1, 0.5) !important;
 
-                // responsive to mobile
+        
                 @media only screen and (max-width: $mobile) {
                     background-color: rgba($color2, 0.5) !important;
                     &:nth-of-type(even) {
@@ -85,7 +85,7 @@ html.trans-id {
                     }
                 }
             }
-            // responsive to mobile
+    
             @media only screen and (max-width: $mobile) {
                 min-width: 92% !important;
                 max-width: 92% !important;

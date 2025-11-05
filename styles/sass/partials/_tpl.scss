@@ -61,7 +61,6 @@ html.tpl {
     h2 {
         margin: 5px 0;
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             width: 100%;
 
@@ -70,7 +69,6 @@ html.tpl {
             }
         }
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             margin: 10px 0;
         }
@@ -104,7 +102,6 @@ html.tpl {
         opacity: 0;
         animation: fade-in-tpl-error 0.75s ease-in 1.5s forwards;
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             text-align: left;
             width: 85%;
@@ -192,7 +189,7 @@ html.tpl {
 
         .button {
             color: $white;
-            border: solid rgba($white, 0.75) 3px;
+            border: solid rgba($white, 0.5) 3px;
             background: $black;
             background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
             padding: 7px 25px;
@@ -200,7 +197,7 @@ html.tpl {
             font-style: normal;
 
             &:hover, &.selected {
-                border: solid $color3 3px;
+                border: solid rgba($color3, 0.75) 3px;
                 font-style: italic;
             }
 
@@ -228,7 +225,6 @@ html.tpl {
             }
         }
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
 
             &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
@@ -306,7 +302,6 @@ html.tpl {
             margin-bottom: 10px;
         }
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             hr {
                 margin-top: 18px;
@@ -363,7 +358,6 @@ html.tpl {
             }
         }
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             .badges {
                 width: 85%;
@@ -406,7 +400,6 @@ html.tpl {
             padding-top: 30px;
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             .tpl-landing {
                 flex-flow: column nowrap;
@@ -417,7 +410,6 @@ html.tpl {
             }
         }
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             .tpl-landing {
                 align-items: flex-start;
@@ -481,7 +473,7 @@ html.tpl {
                     font-size: 1rem;
 
                     &:hover {
-                        color: $color3;
+                        color: $color1;
 
                         @media only screen and (max-width: $tablet) {
                             color: $white;
@@ -498,7 +490,7 @@ html.tpl {
                     font-size: 1rem;
 
                     &:hover {
-                        color: $color3;
+                        color: $color1;
 
                         @media only screen and (max-width: $tablet) {
                             color: $white;
@@ -545,6 +537,7 @@ html.tpl {
                             justify-content: space-between;
                             margin-bottom: 10px;
                             text-decoration: none;
+                            border: solid 3px rgba($white, 0.05);
                             background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
                             max-width: 100%;
                             margin-right: 20px;
@@ -646,7 +639,7 @@ html.tpl {
             .tpl-link {
                 background: $black;
                 background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
-                border: solid 3px $color1;
+                border: solid 3px rgba($color1, 0.75);
                 min-width: 425px;
                 max-width: 500px;
                 @include textStyle (20px, left);
@@ -688,10 +681,10 @@ html.tpl {
                 }
               
                 &:hover {
-                    border: solid 3px $color2;
+                    border: solid 3px rgba($color2, 0.75);
 
                     @media only screen and (max-width: $mobile) {
-                        border: solid 3px $color1;
+                        border: solid 3px rgba($color1, 0.75);
                     }
                 }
     
@@ -734,18 +727,17 @@ html.tpl {
                     align-items: center;
                     background: $black;
                     background-image: linear-gradient(120deg, rgba($color3, 0.05) 50%, rgba($color2, 0.05) 100%);
-                    border: solid $color2 3px;
+                    border: solid rgba($color2, 0.75) 3px;
                     padding: 5px 10px 8px 15px;
                     font-size: 12px !important;
                     color: $white;
                     text-decoration: none;
                     &:hover {
                         color: $white !important;
-                        border: solid $color1 3px;
+                        border: solid rgba($color1, 0.75) 3px;
 
-                        // responsive to mobile
                         @media only screen and (max-width: $mobile) {
-                            border: solid $color2 3px;
+                            border: solid rgba($color2, 0.75) 3px;
                         }
                     }
 
@@ -773,7 +765,6 @@ html.tpl {
                 gap: 15px;
             }
         }
-        // responsive to mobile
         @media only screen and (max-width: $tablet) {
             display: block;
             width: 85%;
@@ -816,7 +807,6 @@ html.tpl {
         padding-bottom: 15px;
         min-width: 380px;
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             padding-top: 10px;
         }

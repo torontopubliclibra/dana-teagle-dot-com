@@ -42,7 +42,6 @@ html.rustprop {
         padding-bottom: 25px;
         padding-top: 5px;
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             text-align: center;
             width: 85%;
@@ -354,7 +353,6 @@ html.rustprop {
                     font-size: 0.85rem;
                     padding: 20px;
 
-                    // responsive to mobile
                     @media only screen and (max-width: $mobile) {
                         padding: 10px;
                     }
@@ -414,7 +412,6 @@ html.rustprop {
         padding-top: 20px;
         padding-bottom: 15px;
 
-        // responsive to mobile
         @media only screen and (max-width: $mobile) {
             padding-top: 15px;
         }
@@ -429,7 +426,6 @@ html.rustprop {
             margin: 0 auto;
             font-size: 14px;
 
-            // responsive to mobile
             @media only screen and (max-width: $mobile) {
                 text-align: left;
             }

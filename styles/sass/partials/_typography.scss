@@ -182,14 +182,12 @@ h1 {
     font-style: italic;
   }
 
-  // responsive to tablet
   @media only screen and (max-width: $tablet) {
     @include textStyle (70px, center, 1);
     max-width: 500px;
     font-style: italic;
   }
 
-  // responsive to mobile
   @media only screen and (max-width: $mobile) {
     @include textStyle (50px, center, 1);
     max-width: 400px;
@@ -249,7 +247,6 @@ h2 {
   margin: 0 auto 15px auto;
   width: 100%;
   
-  // responsive to mobile
   @media only screen and (max-width: $mobile) {
     @include textStyle (34px);
     width: 85%;
@@ -267,7 +264,6 @@ h3 {
   padding: 10px;
   max-width: 85%;
 
-  // responsive to tablet
   @media only screen and (max-width: $tablet) {
     font-size: 22px;
     text-align: left;
@@ -286,7 +282,6 @@ h3 {
   padding-left: 0;
   padding-right: 0;
 
-  // responsive to tablet
   @media only screen and (max-width: $mobile) {
     max-width: 85%;
     margin: 0 auto;
@@ -301,7 +296,6 @@ h3 {
   margin-top: -20px;
   padding-top: 10px !important;
 
-  // responsive to tablet
   @media only screen and (max-width: $tablet) {
     padding: 5px 0 !important;
   }
@@ -351,7 +345,6 @@ h3 {
     font-style: normal;
   }
 
-  // responsive to mobile
   @media only screen and (max-width: $mobile) {
     p, a, cite {
       font-size: 16px !important;
@@ -384,7 +377,6 @@ h3 {
     padding-bottom: 3px;
   }
 
-  // responsive to mobile
   @media only screen and (max-width: $mobile) {
     p {
       font-size: 18px;
@@ -404,12 +396,10 @@ h3 {
 .project-description p, a {
   @include textStyle (18px, center);
 
-  // responsive to tablet
   @media only screen and (max-width: $tablet) {
     text-align: left;
   }
 
-  // responsive to mobile
   @media only screen and (max-width: $mobile) {
     font-size: 17px;
   }
@@ -420,7 +410,7 @@ footer {
   .credit, p, a {
     @include textStyle (18px, center);
 
-    // responsive to mobile
+
     @media only screen and (max-width: $mobile) {
       @include textStyle (16px, center);
     }

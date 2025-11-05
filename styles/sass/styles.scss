@@ -170,7 +170,6 @@ hr {
             font-size: 15px;
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             font-style: italic;
 
@@ -415,7 +414,6 @@ header {
             }
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             background-color: $white;
             border-bottom: solid $color2 4px;
@@ -455,7 +453,6 @@ header {
         opacity: 0;
         animation: fade-in 0.4s ease-in 0.4s forwards;
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             opacity: 1;
             animation: none;
@@ -660,7 +657,6 @@ header {
         border: solid rgba($color2, 0.75) 5px;
         box-shadow: rgba($black, 0.25) inset 0px 20px 50px 5px;
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             max-width: 85%;
         }
@@ -682,7 +678,6 @@ header {
             animation-play-state: paused !important;
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             width: 90%;
             animation-duration: 150s;
@@ -712,7 +707,6 @@ header {
         position: relative;
         transition: transform 0.5s;
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             flex-direction: column;
         }
@@ -823,7 +817,6 @@ header {
     .wrapper {
         @include flex(row, 5%, "", center);
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             flex-direction: column;
         }
@@ -960,7 +953,6 @@ header {
             }
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             .service {
                 padding: 15px;
@@ -1023,7 +1015,6 @@ header {
     .wrapper {
         @include flex(row, 5%, "", center);
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             flex-direction: column;
         }
@@ -1366,7 +1357,6 @@ header {
         @include flex(row, 20px, center);
         max-width: 100%;
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
             flex-direction: column;
             width: 85%;
@@ -1594,7 +1584,6 @@ footer .wrapper {
             }
         }
 
-        // responsive to tablet
         @media only screen and (max-width: $tablet) {
 
             img {

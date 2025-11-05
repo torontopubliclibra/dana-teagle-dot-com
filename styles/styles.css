@@ -640,7 +640,7 @@ html.tpl nav hr:first-of-type {
 }
 html.tpl nav .button {
   color: #f3e8e9;
-  border: solid rgba(243, 232, 233, 0.75) 3px;
+  border: solid rgba(243, 232, 233, 0.5) 3px;
   background: #282b2c;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.05) 50%, rgba(181, 126, 155, 0.05) 100%);
   padding: 7px 25px;
@@ -648,7 +648,7 @@ html.tpl nav .button {
   font-style: normal;
 }
 html.tpl nav .button:hover, html.tpl nav .button.selected {
-  border: solid #7a91b1 3px;
+  border: solid rgba(122, 145, 177, 0.75) 3px;
   font-style: italic;
 }
 html.tpl nav .button.back {
@@ -885,7 +885,7 @@ html.tpl main.tpl-subpage .tpl-page-content a {
   font-size: 1rem;
 }
 html.tpl main.tpl-subpage .tpl-page-content a:hover {
-  color: #7a91b1;
+  color: #84A59D;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main.tpl-subpage .tpl-page-content a:hover {
@@ -903,7 +903,7 @@ html.tpl main.tpl-subpage .tpl-page-content button.range {
   font-size: 1rem;
 }
 html.tpl main.tpl-subpage .tpl-page-content button.range:hover {
-  color: #7a91b1;
+  color: #84A59D;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main.tpl-subpage .tpl-page-content button.range:hover {
@@ -951,6 +951,7 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix {
   justify-content: space-between;
   margin-bottom: 10px;
   text-decoration: none;
+  border: solid 3px rgba(243, 232, 233, 0.05);
   background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.1) 50%, rgba(122, 145, 177, 0.1) 100%);
   max-width: 100%;
   margin-right: 20px;
@@ -1041,7 +1042,7 @@ html.tpl main .tpl-links h3.h3-trans-id {
 html.tpl main .tpl-links .tpl-link {
   background: #282b2c;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.05) 50%, rgba(181, 126, 155, 0.05) 100%);
-  border: solid 3px #84A59D;
+  border: solid 3px rgba(132, 165, 157, 0.75);
   min-width: 425px;
   max-width: 500px;
   font-size: 20px;
@@ -1090,11 +1091,11 @@ html.tpl main .tpl-links .tpl-link hr {
   margin: 0;
 }
 html.tpl main .tpl-links .tpl-link:hover {
-  border: solid 3px #B57E9B;
+  border: solid 3px rgba(181, 126, 155, 0.75);
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-links .tpl-link:hover {
-    border: solid 3px #84A59D;
+    border: solid 3px rgba(132, 165, 157, 0.75);
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1132,7 +1133,7 @@ html.tpl .tpl-categories ul li a {
   align-items: center;
   background: #282b2c;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.05) 50%, rgba(181, 126, 155, 0.05) 100%);
-  border: solid #B57E9B 3px;
+  border: solid rgba(181, 126, 155, 0.75) 3px;
   padding: 5px 10px 8px 15px;
   font-size: 12px !important;
   color: #f3e8e9;
@@ -1140,11 +1141,11 @@ html.tpl .tpl-categories ul li a {
 }
 html.tpl .tpl-categories ul li a:hover {
   color: #f3e8e9 !important;
-  border: solid #84A59D 3px;
+  border: solid rgba(132, 165, 157, 0.75) 3px;
 }
 @media only screen and (max-width: 768px) {
   html.tpl .tpl-categories ul li a:hover {
-    border: solid #B57E9B 3px;
+    border: solid rgba(181, 126, 155, 0.75) 3px;
   }
 }
 html.tpl .tpl-categories ul li a img {
