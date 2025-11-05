@@ -1184,7 +1184,7 @@ html.tpl .tpl-categories ul li a img {
 html.tpl .tpl-categories.logs {
   width: 95%;
   margin: 0 auto;
-  margin-top: -5px;
+  margin-top: 15px;
   align-items: center;
 }
 html.tpl .tpl-categories.logs ul {
