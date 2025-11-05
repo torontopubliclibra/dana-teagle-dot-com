@@ -669,9 +669,31 @@ html.tpl {
                     max-width: 95%;
                     margin: 10px auto;
                     margin-bottom: 15px;
+                    height: 200px;
+                    background-size: cover;
+                    background-position: 0% 75%;
+                    background-blend-mode: normal;
+                    border: solid 3px rgba($white, 0.15);
+
+                    @media only screen and (max-width: $tablet) {
+                        height: 150px;
+                    }
 
                     &:first-of-type {
                         margin-top: 45px;
+                    }
+
+                    &:hover {
+                        border: solid 3px rgba($white, 0.05);
+                        background-blend-mode: color-dodge;
+                    }
+
+                    &#clouds {
+                        background-image: url('https://clouds.danateagle.com/assets/cloud-10.png');
+                    }
+
+                    &#birds {
+                        background-image: url('https://birds.danateagle.com/assets/birds-2.png');
                     }
                 }
 

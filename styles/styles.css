@@ -1083,9 +1083,29 @@ html.tpl main .tpl-links .tpl-link.photo {
   max-width: 95%;
   margin: 10px auto;
   margin-bottom: 15px;
+  height: 200px;
+  background-size: cover;
+  background-position: 0% 75%;
+  background-blend-mode: normal;
+  border: solid 3px rgba(243, 232, 233, 0.15);
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main .tpl-links .tpl-link.photo {
+    height: 150px;
+  }
 }
 html.tpl main .tpl-links .tpl-link.photo:first-of-type {
   margin-top: 45px;
+}
+html.tpl main .tpl-links .tpl-link.photo:hover {
+  border: solid 3px rgba(243, 232, 233, 0.05);
+  background-blend-mode: color-dodge;
+}
+html.tpl main .tpl-links .tpl-link.photo#clouds {
+  background-image: url("https://clouds.danateagle.com/assets/cloud-10.png");
+}
+html.tpl main .tpl-links .tpl-link.photo#birds {
+  background-image: url("https://birds.danateagle.com/assets/birds-2.png");
 }
 html.tpl main .tpl-links .tpl-link .link-title {
   display: flex;
