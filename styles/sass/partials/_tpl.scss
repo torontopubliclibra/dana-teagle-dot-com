@@ -427,7 +427,7 @@ html.tpl {
                 border-bottom: none;
 
                 @media only screen and (max-width: $tablet) {
-                    width: 400px;
+                    width: 100%;
                 }
                 animation: fade-in 0.5s;
             }

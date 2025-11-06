@@ -860,7 +860,7 @@ html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-ite
 }
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
-    width: 400px;
+    width: 100%;
   }
 }
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
