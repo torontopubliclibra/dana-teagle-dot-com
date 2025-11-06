@@ -843,7 +843,7 @@ html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
   padding-top: 15px;
 }
 html.tpl main .tpl-landing img.rusty, html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.rusty, html.tpl main.tpl-subpage img.feed-item {
-  border: solid 3px rgba(243, 232, 233, 0.75);
+  border: solid 3px rgba(243, 232, 233, 0.5);
   margin: 10px 0;
   margin-top: 0;
   width: 225px;
@@ -854,6 +854,8 @@ html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-ite
   max-width: 100%;
   min-height: 200px;
   height: auto;
+  margin: 0;
+  border-bottom: none;
   animation: fade-in 0.5s;
 }
 @media only screen and (max-width: 970px) {
@@ -885,6 +887,69 @@ html.tpl main .feed-items {
   html.tpl main .feed-items {
     align-items: flex-start;
   }
+}
+html.tpl main .feed-items .feed-item-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: fade-in 0.5s;
+}
+html.tpl main .feed-items .feed-item-container button {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: rgba(243, 232, 233, 0.9);
+  text-decoration: underline;
+  font-style: normal;
+}
+html.tpl main .feed-items .feed-item-container button:hover, html.tpl main .feed-items .feed-item-container button.selected {
+  color: #84A59D;
+  font-style: italic;
+  background: none;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main .feed-items .feed-item-container button:hover {
+    font-style: normal;
+    color: rgba(243, 232, 233, 0.9);
+  }
+  html.tpl main .feed-items .feed-item-container button.selected:hover {
+    color: #84A59D;
+    font-style: italic;
+    background: none;
+  }
+}
+html.tpl main .feed-items .feed-item-container p {
+  text-align: right !important;
+  margin: 0 !important;
+  width: 100%;
+  color: rgba(243, 232, 233, 0.9);
+  background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.15) 2%, rgba(181, 126, 155, 0.1) 100%);
+  border: solid 3px rgba(243, 232, 233, 0.5);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 5px 10px;
+  padding-top: 4px;
+  min-height: 32px;
+  cursor: default;
+  animation: fade-in 0.5s;
+}
+html.tpl main .feed-items .feed-item-container p.alt {
+  display: none;
+  background: rgba(40, 43, 44, 0.75);
+  height: calc(100% - 29px);
+  min-height: 200px;
+  margin-left: 3px;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 0.15s;
+}
+html.tpl main .feed-items .feed-item-container p.alt-visible {
+  display: flex;
 }
 html.tpl main .tpl-landing {
   padding-bottom: 15px;

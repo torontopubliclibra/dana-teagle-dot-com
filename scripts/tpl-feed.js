@@ -13,10 +13,11 @@ let tplFeed = {
             let visibleItems = tplFeed.items.slice(start, end);
             tplFeed.visibileItems = visibleItems;
 
-            for (let list in visibleItems) {
-                let array = [visibleItems[list]];
-                array.forEach(item => {
-                    let image = `<img src="${item.url}" alt="${item.alt}" class="feed-item">`;
+            for (let index in visibleItems) {
+                let count = parseInt(index) + 1; // Convert to number and add 1
+                let array = [visibleItems[index]];
+                array.forEach((item) => {
+                    let image = `<div class="feed-item-container" id="${count}"><img src="${item.url}" alt="${item.alt}" class="feed-item"><p class="alt">${item.alt}</p><br/><p>>> ${item.date} // <button onclick="tplFeed.functions.altToggle(${count})">alt</button></p></div>`;
                     formattedFeed.push(image);
                 });
             }
@@ -63,6 +64,28 @@ let tplFeed = {
                 tplFeed.range.end += 10;
                 tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
                 window.scroll(top);
+            }
+        },
+        resetAltToggles: () => {
+            for (let i = 0; i < tplFeed.visibileItems.length; i++) {
+                let id = i + 1;
+                const altElement = $(`#${id} .alt`);
+                if (altElement.hasClass('alt-visible')) {
+                    altElement.removeClass('alt-visible');
+                }
+                const altButton = $(`#${id} button`);
+                altButton.removeClass('selected');
+            }
+        },
+        altToggle: (id) => {
+            const altElement = $(`#${id} .alt`);
+            const altButton = $(`#${id} button`);
+            if (altElement.hasClass('alt-visible')) {
+                tplFeed.functions.resetAltToggles();
+            } else {
+                tplFeed.functions.resetAltToggles();
+                altElement.addClass('alt-visible');
+                altButton.addClass('selected');
             }
         },
     },

@@ -412,7 +412,7 @@ html.tpl {
             margin: 0;
             padding-top: 15px;
             img.rusty, img.feed-item {
-                border: solid 3px rgba($white, 0.75);
+                border: solid 3px rgba($white, 0.5);
                 margin: 10px 0;
                 margin-top: 0;
                 width: 225px;
@@ -423,6 +423,8 @@ html.tpl {
                 max-width: 100%;
                 min-height: 200px;
                 height: auto;
+                margin: 0;
+                border-bottom: none;
 
                 @media only screen and (max-width: $tablet) {
                     width: 400px;
@@ -452,6 +454,77 @@ html.tpl {
 
             @media only screen and (max-width: $tablet) {
                 align-items: flex-start;
+            }
+
+            .feed-item-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                animation: fade-in 0.5s;
+
+                button {
+                    font-size: 0.75rem;
+                    line-height: 1.25;
+                    color: rgba($white, 0.9);
+                    text-decoration: underline;
+                    font-style: normal;
+
+                    &:hover, &.selected {
+                        color: $color1;
+                        font-style: italic;
+                        background: none;
+                    }
+
+                    @media only screen and (max-width: $tablet) {
+                        &:hover {
+                            font-style: normal;
+                            color: rgba($white, 0.9);
+                        }
+
+                        &.selected:hover {
+                            color: $color1;
+                            font-style: italic;
+                            background: none;
+                        }
+                    }
+                }
+
+                p {
+                    text-align: right !important;
+                    margin: 0 !important;
+                    width: 100%;
+                    color: rgba($white, 0.9);
+                    background-image: linear-gradient(120deg, rgba($color2, 0.15) 2%, rgba($color2, 0.1) 100%);
+                    border: solid 3px rgba($white, 0.5);
+                    font-size: 0.75rem;
+                    line-height: 1.5;
+                    padding: 5px 10px;
+                    padding-top: 4px;
+                    min-height: 32px;
+                    cursor: default;
+                    animation: fade-in 0.5s;
+
+                    &.alt {
+                        display: none;
+                        background: rgba($black, 0.75);
+                        height: calc(100% - 29px);
+                        min-height: 200px;
+                        margin-left: 3px;
+                        position: absolute;
+                        top: 0;
+                        z-index: 20;
+                        text-align: center !important;
+                        justify-content: center;
+                        align-items: center;
+                        animation: fade-in 0.15s;
+                    }
+
+                    &.alt-visible {
+                        display: flex;
+                    }
+                }
             }
         }
 
