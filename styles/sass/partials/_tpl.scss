@@ -421,10 +421,13 @@ html.tpl {
             img.feed-item {
                 width: 500px;
                 max-width: 100%;
+                min-height: 200px;
+                height: auto;
 
                 @media only screen and (max-width: $tablet) {
                     width: 400px;
                 }
+                animation: fade-in 0.5s;
             }
             p {
                 color: $white;
@@ -587,6 +590,7 @@ html.tpl {
                         padding: 0 10px;
                         background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
                         max-width: 650px;
+                        animation: fade-in 0.5s;
 
                         &.mix {
                             display: flex;
@@ -660,6 +664,7 @@ html.tpl {
                 @media only screen and (max-width: $tablet) {
                     scroll-margin-top: 320px;
                 }
+                animation: fade-in 0.5s;
             }
         }
     
