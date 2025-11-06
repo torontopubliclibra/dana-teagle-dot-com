@@ -230,6 +230,7 @@ html {
 }
 
 html.sitemap body {
+  background: #282b2c !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -240,7 +241,11 @@ html.sitemap body {
   overflow-x: hidden;
 }
 html.sitemap body a:hover, html.sitemap body a:focus {
-  color: #282b2c;
+  color: #f3e8e9;
+  background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+  background-size: 100% 15%;
+  background-position: 25 97%;
+  text-decoration: none;
 }
 html.sitemap body header, html.sitemap body main, html.sitemap body footer {
   display: flex;
@@ -262,8 +267,8 @@ html.sitemap body header {
     padding: 25px;
   }
 }
-html.sitemap body header h1, html.sitemap body header p {
-  color: #282b2c;
+html.sitemap body header h1, html.sitemap body header p, html.sitemap body header a {
+  color: #f3e8e9;
   text-align: center;
 }
 html.sitemap body header h1 {
@@ -295,7 +300,7 @@ html.sitemap body main {
 }
 html.sitemap body main table {
   width: 80%;
-  background: #f3e8e9;
+  background: rgba(132, 165, 157, 0.1);
   border: solid #7a91b1 5px;
   border-collapse: collapse;
 }
@@ -308,6 +313,7 @@ html.sitemap body main table {
 }
 html.sitemap body main table, html.sitemap body main table a {
   font-size: 0.9rem;
+  color: #f3e8e9;
 }
 @media only screen and (max-width: 970px) {
   html.sitemap body main table, html.sitemap body main table a {
