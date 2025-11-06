@@ -1141,7 +1141,7 @@ html.tpl main .tpl-links .tpl-link.photo {
   border: solid 3px rgba(243, 232, 233, 0.15);
 }
 html.tpl main .tpl-links .tpl-link.photo:first-of-type {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 html.tpl main .tpl-links .tpl-link.photo:last-of-type {
   margin-bottom: -15px;
