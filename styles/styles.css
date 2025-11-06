@@ -295,7 +295,7 @@ html.sitemap body main {
 }
 @media only screen and (max-width: 970px) {
   html.sitemap body main {
-    padding: 25px 0;
+    padding: 0;
   }
 }
 html.sitemap body main table {
