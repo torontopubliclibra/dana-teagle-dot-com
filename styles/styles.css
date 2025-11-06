@@ -940,6 +940,8 @@ html.tpl main .feed-items .feed-item-container p.alt {
   height: calc(100% - 29px);
   min-height: 200px;
   margin-left: 3px;
+  padding-left: 5%;
+  padding-right: 5%;
   position: absolute;
   top: 0;
   z-index: 20;
