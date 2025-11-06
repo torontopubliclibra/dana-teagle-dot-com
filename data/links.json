@@ -40,7 +40,11 @@
         },
         "Tumblr": {
             "link": "/tumblr",
-            "description": "torontopubliclibra"
+            "description": "[at] torontopubliclibra"
+        },
+        "Last.fm": {
+            "link": "/lastfm",
+            "description": "[at] rustbecomesher"
         },
         "Goodreads": {
             "link": "/goodreads",
