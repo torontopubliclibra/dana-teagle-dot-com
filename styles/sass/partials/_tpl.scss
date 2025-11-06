@@ -421,14 +421,10 @@ html.tpl {
                 height: auto;
                 margin: 0;
                 border-bottom: none;
+                animation: fade-in 0.5s;
 
                 @media only screen and (max-width: $tablet) {
                     width: 100%;
-                }
-                animation: fade-in 0.5s;
-
-                &.alt-visible {
-                    filter: opacity(0.5);
                 }
             }
             p {
@@ -520,11 +516,12 @@ html.tpl {
                         text-align: center !important;
                         justify-content: center;
                         align-items: center;
-                        animation: fade-in 0.15s;
+                        animation: fade-in 0.3s;
                     }
 
                     &.alt-visible {
                         display: flex;
+                        filter: drop-shadow(0px 0px 10px rgba($black, 0.75));
                     }
                 }
             }
