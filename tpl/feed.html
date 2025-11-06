@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="tpl">
   <head>
-    <title>the toronto public libra / now</title>
-    <meta name="title" content="the toronto public libra / now" />
-    <meta property="og:title" content="the toronto public libra / now" />
+    <title>the toronto public libra / feed</title>
+    <meta name="title" content="the toronto public libra / feed" />
+    <meta property="og:title" content="the toronto public libra / feed" />
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="theme-color" content="#282b2c"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="what the toronto public libra is up to" />
-    <meta property="og:description" content="what the toronto public libra is up to" />
+    <meta name="description" content="the toronto public libra's feed" />
+    <meta property="og:description" content="the toronto public libra's feed" />
     <meta name="author" content="Dana Rosamund Teagle" />
     <link rel="apple-touch-icon-precomposed" href="../../assets/icons/favicon-2-touch.png">
     <link rel="shortcut icon" href="../../assets/icons/favicon-2-192.png" sizes="192x192" >
@@ -30,8 +30,8 @@
       <hr/>
       <ul>
         <li><a href="/tpl/" class="button">/</a></li>
-        <li><span class="button selected">/now</span></li>
-        <li><a href="/tpl/feed" class="button">/feed</a></li>
+        <li><a href="/tpl/now" class="button">/now</a></li>
+        <li><span class="button selected">/feed</span></li>
         <li><a href="/tpl/mixes" class="button">/mixes</a></li>
         <li><a href="/tpl/logs" class="button">/logs</a></li>
         <li><a href="/tpl/photos" class="button">/photos</a></li>
@@ -40,8 +40,10 @@
     </nav>
     <main class="tpl-subpage">
       <div class="tpl-page-content">
-        <h2 class="tpl-page-heading">now <small>[ as of <span class="date"></span> ]</small></h2>
+        <h2 class="tpl-page-heading">feed</h2>
         <div class="tpl-page-text">
+          <div class="feed-items">
+          </div>
         </div>
       </div>
       <hr/>
@@ -55,6 +57,6 @@
       </p>
     </footer>
     <script src="../../scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
-    <script src="../../scripts/tpl-now.js" type="text/javascript"></script>
+    <script src="../../scripts/tpl-feed.js" type="text/javascript"></script>
   </body>
 </html>

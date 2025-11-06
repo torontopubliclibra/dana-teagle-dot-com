@@ -731,8 +731,8 @@ html.tpl nav ul {
   html.tpl nav ul {
     width: 90%;
     gap: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     justify-content: left;
     align-items: center;
   }
@@ -836,12 +836,21 @@ html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
   margin: 0;
   padding-top: 15px;
 }
-html.tpl main .tpl-landing img.rusty, html.tpl main.tpl-subpage img.rusty {
+html.tpl main .tpl-landing img.rusty, html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.rusty, html.tpl main.tpl-subpage img.feed-item {
   border: solid 3px rgba(243, 232, 233, 0.75);
   margin: 10px 0;
   margin-top: 0;
   width: 225px;
   pointer-events: none;
+}
+html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
+  width: 500px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
+    width: 400px;
+  }
 }
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
   color: #f3e8e9;
@@ -851,6 +860,21 @@ html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
     text-align: left;
+  }
+}
+html.tpl main .feed-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  margin-bottom: -20px;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main .feed-items {
+    align-items: flex-start;
   }
 }
 html.tpl main .tpl-landing {
@@ -1023,6 +1047,7 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
   height: 75px;
   margin: 10px 0;
   border: solid 3px rgba(243, 232, 233, 0.5);
+  pointer-events: none;
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon {
   border: none;
