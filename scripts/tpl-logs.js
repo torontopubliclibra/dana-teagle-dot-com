@@ -29,7 +29,6 @@ let tplLogs = {
         },
         logsDisplay: () => {
             let year = tplLogs.year;
-            let toggles = tplLogs.yearSelect + tplLogs.logCategories;
             let movieCount, bookCount;
             switch(year) {
                 case "2025":
@@ -41,6 +40,8 @@ let tplLogs = {
                     bookCount = tplLogs.twentyFour.books[0].length;
                     break;
             }
+            let logCategories = `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">watched (${movieCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`;
+            let toggles = tplLogs.yearSelect + logCategories;
             let formattedLogs = [toggles, `<hr class="no-top"><p id="watched">>> watched in ${year} (${movieCount}) | <a href="/letterboxd" target="_blank">letterboxd</a></p>`];
 
             switch(year) {
