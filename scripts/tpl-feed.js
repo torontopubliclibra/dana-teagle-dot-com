@@ -70,21 +70,25 @@ let tplFeed = {
         resetAltToggles: () => {
             for (let i = 0; i < tplFeed.visibileItems.length; i++) {
                 let id = i + 1;
+                const element = $(`#${id} img`);
                 const altElement = $(`#${id} .alt`);
+                const altButton = $(`#${id} button`);
                 if (altElement.hasClass('alt-visible')) {
                     altElement.removeClass('alt-visible');
+                    element.removeClass('alt-visible');
                 }
-                const altButton = $(`#${id} button`);
                 altButton.removeClass('selected');
             }
         },
         altToggle: (id) => {
+            const element = $(`#${id} img`);
             const altElement = $(`#${id} .alt`);
             const altButton = $(`#${id} button`);
             if (altElement.hasClass('alt-visible')) {
                 tplFeed.functions.resetAltToggles();
             } else {
                 tplFeed.functions.resetAltToggles();
+                element.addClass('alt-visible');
                 altElement.addClass('alt-visible');
                 altButton.addClass('selected');
             }

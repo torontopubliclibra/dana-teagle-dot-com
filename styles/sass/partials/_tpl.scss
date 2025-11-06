@@ -426,6 +426,10 @@ html.tpl {
                     width: 100%;
                 }
                 animation: fade-in 0.5s;
+
+                &.alt-visible {
+                    filter: opacity(0.5);
+                }
             }
             p {
                 color: $white;

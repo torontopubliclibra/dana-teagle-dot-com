@@ -858,6 +858,9 @@ html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-ite
     width: 100%;
   }
 }
+html.tpl main .tpl-landing img.feed-item.alt-visible, html.tpl main.tpl-subpage img.feed-item.alt-visible {
+  filter: opacity(0.5);
+}
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
   color: #f3e8e9;
   font-size: 1rem;
