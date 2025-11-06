@@ -40,9 +40,9 @@ let tplLogs = {
                     bookCount = tplLogs.twentyFour.books[0].length;
                     break;
             }
-            let logCategories = `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">watched (${movieCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`;
+            let logCategories = `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">movies watched (${movieCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">books read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`;
             let toggles = tplLogs.yearSelect + logCategories;
-            let formattedLogs = [toggles, `<hr class="no-top"><p id="watched">>> watched in ${year} (${movieCount}) | <a href="/letterboxd" target="_blank">letterboxd</a></p>`];
+            let formattedLogs = [toggles, `<hr class="no-top"><p id="watched">>> movies watched in ${year} (${movieCount})`];
 
             switch(year) {
                 case "2025":
@@ -53,7 +53,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="read">>> read in ${year} (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
+                    formattedLogs.push(`<hr><p id="read">>> books read in ${year} (${bookCount})`);
                     for (let list in tplLogs.twentyFive.books) {
                         let array = [ ...tplLogs.twentyFive.books[list]];
                         array.forEach(book => {
@@ -71,7 +71,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="read">>> read in ${year} (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
+                    formattedLogs.push(`<hr><p id="read">>> books read in ${year} (${bookCount})`);
                     for (let list in tplLogs.twentyFour.books) {
                         let array = [ ...tplLogs.twentyFour.books[list]];
                         array.forEach(book => {
