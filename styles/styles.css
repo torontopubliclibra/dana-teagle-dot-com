@@ -658,11 +658,6 @@ html.tpl nav hr {
 html.tpl nav hr:first-of-type {
   margin-top: 0;
 }
-@media only screen and (max-width: 970px) {
-  html.tpl nav hr {
-    width: 90%;
-  }
-}
 html.tpl nav .button {
   color: #f3e8e9;
   border: solid rgba(243, 232, 233, 0.75) 3px;
@@ -991,7 +986,7 @@ html.tpl main.tpl-subpage .tpl-page-content {
 }
 html.tpl main.tpl-subpage .tpl-page-content hr {
   max-width: 100%;
-  width: 100%;
+  width: calc(100% - 3.5px);
   margin-bottom: 15px;
 }
 html.tpl main.tpl-subpage .tpl-page-content p {

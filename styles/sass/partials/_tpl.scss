@@ -201,10 +201,6 @@ html.tpl {
             &:first-of-type {
                 margin-top: 0;
             }
-
-            @media only screen and (max-width: $tablet) {
-                width: 90%;
-            }
         }
 
         .button {
@@ -571,7 +567,7 @@ html.tpl {
 
                 hr {
                     max-width: 100%;
-                    width: 100%;
+                    width: calc(100% - 3.5px);
                     margin-bottom: 15px;
                 }
 
