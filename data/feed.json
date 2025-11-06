@@ -1,14 +1,14 @@
 {
     "items": [
         {
-            "url": "../assets/feed/123.jpeg",
-            "alt": "So many people know me; I wish I did",
-            "date": "25/10/2025"
-        },
-        {
             "url": "../assets/feed/117.png",
             "alt": "Laura Palmer looking distressed",
             "date": "31/10/2025"
+        },
+        {
+            "url": "../assets/feed/123.jpeg",
+            "alt": "A mirror selfie of Dana wearing a brown plaid dress and red-brown cowboy boots, sitting on her bed, by a Moomin plushie",
+            "date": "29/10/2025"
         },
         {
             "url": "../assets/feed/122.jpeg",
@@ -96,6 +96,11 @@
             "date": "29/09/2025"
         },
         {
+            "url": "../assets/feed/124.png",
+            "alt": "A deer bashing her head against a tree",
+            "date": "19/09/2025"
+        },
+        {
             "url": "../assets/feed/103.jpeg",
             "alt": "Dana's camera screen showing many out-of-focus photos of the moon",
             "date": "07/09/2025"
@@ -145,10 +150,75 @@
             "alt": "Imagine if a tiny blonde woman named Dana existed in real life",
             "date": "19/08/2025"
         },
-                {
+        {
+            "url": "../assets/feed/125.jpeg",
+            "alt": "Julee Cruise's 'Falling' playing",
+            "date": "16/08/2025"
+        },
+        {
+            "url": "../assets/feed/126.jpeg",
+            "alt": "I'll see you again in 25 years",
+            "date": "13/08/2025"
+        },
+        {
             "url": "../assets/feed/95.jpeg",
             "alt": "How strange it is to be anything at all",
             "date": "11/08/2025"
+        },
+        {
+            "url": "../assets/feed/127.jpeg",
+            "alt": "Audrey, Shelly, and Donna put the pieces together",
+            "date": "11/08/2025"
+        },
+        {
+            "url": "../assets/feed/129.jpeg",
+            "alt": "Please don't talk to me about A.I. I will kill myself. and 'Essays on Disillusion and Design'",
+            "date": "09/08/2025"
+        },
+        {
+            "url": "../assets/feed/130.jpeg",
+            "alt": "Snufkin and Little My and Sniff",
+            "date": "08/08/2025"
+        },
+        {
+            "url": "../assets/feed/131.jpeg",
+            "alt": "Every day, once a day, give yourself a present",
+            "date": "07/08/2025"
+        },
+        {
+            "url": "../assets/feed/132.jpeg",
+            "alt": "Please do (not) feed the birds",
+            "date": "06/08/2025"
+        },
+        {
+            "url": "../assets/feed/128.png",
+            "alt": "Alice's little face",
+            "date": "02/08/2025"
+        },
+        {
+            "url": "../assets/feed/133.jpeg",
+            "alt": "The world of the heterosexual is a sick and boring life",
+            "date": "02/08/2025"
+        },
+        {
+            "url": "../assets/feed/134.png",
+            "alt": "Sofia Copolla, on the phone, in a strapless white dress",
+            "date": "28/07/2025"
+        },
+        {
+            "url": "../assets/feed/135.jpeg",
+            "alt": "Mirror selfie of Dana wearing a black tube top, blue denim jean shorts, and cowboy boots",
+            "date": "23/07/2025"
+        },
+        {
+            "url": "../assets/feed/136.jpeg",
+            "alt": "Sissy Spacek drinking from a beer bottle and holding a gun",
+            "date": "23/07/2025"
+        },
+        {
+            "url": "../assets/feed/137.png",
+            "alt": "Hunter Schafer and Alex Consani sitting on the ground smoking cigarettes",
+            "date": "23/07/2025"
         }
     ]
 }

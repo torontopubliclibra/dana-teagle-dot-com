@@ -14,7 +14,8 @@ let tplFeed = {
             tplFeed.visibileItems = visibleItems;
 
             for (let index in visibleItems) {
-                let count = parseInt(index) + 1; // Convert to number and add 1
+                let count = parseInt(index);
+                count++;
                 let array = [visibleItems[index]];
                 array.forEach((item) => {
                     let image = `<div class="feed-item-container" id="${count}"><img src="${item.url}" alt="${item.alt}" class="feed-item"><p class="alt">${item.alt}</p><br/><p>>> ${item.date} // <button onclick="tplFeed.functions.altToggle(${count})">alt</button></p></div>`;
