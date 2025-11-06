@@ -12,14 +12,15 @@ let tplLogs = {
         books: [],
     },
     yearSelect: `<p>year: <span class="year-selected">2025</span> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`,
+    logCategories: `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">watched<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">read<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`,
     functions: {
         yearSet: (year) => {
             switch(year) {
                 case "2025":
-                    tplLogs.yearSelect = `<p>year: <span class="year-selected">2025</span> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`
+                    tplLogs.yearSelect = `<p>year: <span class="year-selected">2025</span> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`;
                     break;
                 case "2024":
-                    tplLogs.yearSelect = `<p>year: <button class="range" onclick="tplLogs.functions.yearSet('2025')">2025</button> | <span class="year-selected">2024</span></p>`
+                    tplLogs.yearSelect = `<p>year: <button class="range" onclick="tplLogs.functions.yearSet('2025')">2025</button> | <span class="year-selected">2024</span></p>`;
                     break;
             }
             tplLogs.year = year;
@@ -28,7 +29,7 @@ let tplLogs = {
         },
         logsDisplay: () => {
             let year = tplLogs.year;
-            let yearSelect = tplLogs.yearSelect;
+            let toggles = tplLogs.yearSelect + tplLogs.logCategories;
             let movieCount, bookCount;
             switch(year) {
                 case "2025":
@@ -40,7 +41,7 @@ let tplLogs = {
                     bookCount = tplLogs.twentyFour.books[0].length;
                     break;
             }
-            let formattedLogs = [yearSelect, `<hr class="no-top"><p id="watched">>> watched (${movieCount}) | <a href="/letterboxd" target="_blank">letterboxd</a></p>`];
+            let formattedLogs = [toggles, `<hr class="no-top"><p id="watched">>> watched in ${year} (${movieCount}) | <a href="/letterboxd" target="_blank">letterboxd</a></p>`];
 
             switch(year) {
                 case "2025":
@@ -51,7 +52,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="read">>> read (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
+                    formattedLogs.push(`<hr><p id="read">>> read in ${year} (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
                     for (let list in tplLogs.twentyFive.books) {
                         let array = [ ...tplLogs.twentyFive.books[list]];
                         array.forEach(book => {
@@ -59,6 +60,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
+                    tplLogs.date.text(` [ as of  ${tplLogs.updated} ]`);
                     break;
                 case "2024":
                     for (let list in tplLogs.twentyFour.movies) {
@@ -68,7 +70,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    formattedLogs.push(`<hr><p id="read">>> read (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
+                    formattedLogs.push(`<hr><p id="read">>> read in ${year} (${bookCount}) | <a href="/goodreads" target="_blank">goodreads</a></p>`);
                     for (let list in tplLogs.twentyFour.books) {
                         let array = [ ...tplLogs.twentyFour.books[list]];
                         array.forEach(book => {
@@ -76,13 +78,13 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
+                    tplLogs.date.text(``);
                     break;
             }
-            formattedLogs.push(`<hr>` + yearSelect);
+            formattedLogs.push(`<hr>` + tplLogs.yearSelect);
             tplLogs.content.html(formattedLogs.reduce((accumulator, log) => {
                 return accumulator + log;
             }));
-            tplLogs.date.text(tplLogs.updated);
         },
     },
     init: () => {

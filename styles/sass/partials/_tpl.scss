@@ -128,6 +128,7 @@ html.tpl {
 
         &.alt {
             border: solid 2px rgba($white, 0.75);
+            margin-top: 15px !important;
         }
 
         &.small {
@@ -694,11 +695,6 @@ html.tpl {
                     background-blend-mode: normal;
                     border: solid 3px rgba($white, 0.15);
 
-                    @media only screen and (max-width: $tablet) {
-                        height: 150px;
-                        max-width: 100%;
-                    }
-
                     &:first-of-type {
                         margin-top: 25px;
                     }
@@ -707,8 +703,8 @@ html.tpl {
                         margin-bottom: -15px;
                     }
 
-                    &:hover {
-                        border: solid 3px rgba($white, 0.05);
+                    &:hover, &:focus {
+                        border: solid 3px rgba($white, 0.15);
                         background-blend-mode: color-dodge;
                     }
 
@@ -718,6 +714,16 @@ html.tpl {
 
                     &#birds {
                         background-image: url('https://birds.danateagle.com/assets/birds-2.png');
+                    }
+
+                    @media only screen and (max-width: $tablet) {
+                        height: 150px;
+                        max-width: 100%;
+
+                        &:hover, &:focus {
+                            border: solid 3px rgba($white, 0.15);
+                            background-blend-mode: normal;
+                        }
                     }
                 }
 
@@ -832,6 +838,8 @@ html.tpl {
 
             ul {
                 gap: 15px;
+                justify-content: flex-start;
+                width: 100%;
             }
         }
         @media only screen and (max-width: $tablet) {

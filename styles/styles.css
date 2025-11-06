@@ -588,6 +588,7 @@ html.tpl hr {
 }
 html.tpl hr.alt {
   border: solid 2px rgba(243, 232, 233, 0.75);
+  margin-top: 15px !important;
 }
 html.tpl hr.small {
   max-width: 750px;
@@ -1109,20 +1110,14 @@ html.tpl main .tpl-links .tpl-link.photo {
   background-blend-mode: normal;
   border: solid 3px rgba(243, 232, 233, 0.15);
 }
-@media only screen and (max-width: 970px) {
-  html.tpl main .tpl-links .tpl-link.photo {
-    height: 150px;
-    max-width: 100%;
-  }
-}
 html.tpl main .tpl-links .tpl-link.photo:first-of-type {
   margin-top: 25px;
 }
 html.tpl main .tpl-links .tpl-link.photo:last-of-type {
   margin-bottom: -15px;
 }
-html.tpl main .tpl-links .tpl-link.photo:hover {
-  border: solid 3px rgba(243, 232, 233, 0.05);
+html.tpl main .tpl-links .tpl-link.photo:hover, html.tpl main .tpl-links .tpl-link.photo:focus {
+  border: solid 3px rgba(243, 232, 233, 0.15);
   background-blend-mode: color-dodge;
 }
 html.tpl main .tpl-links .tpl-link.photo#clouds {
@@ -1130,6 +1125,16 @@ html.tpl main .tpl-links .tpl-link.photo#clouds {
 }
 html.tpl main .tpl-links .tpl-link.photo#birds {
   background-image: url("https://birds.danateagle.com/assets/birds-2.png");
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main .tpl-links .tpl-link.photo {
+    height: 150px;
+    max-width: 100%;
+  }
+  html.tpl main .tpl-links .tpl-link.photo:hover, html.tpl main .tpl-links .tpl-link.photo:focus {
+    border: solid 3px rgba(243, 232, 233, 0.15);
+    background-blend-mode: normal;
+  }
 }
 html.tpl main .tpl-links .tpl-link .link-title {
   display: flex;
@@ -1235,6 +1240,8 @@ html.tpl .tpl-categories.logs {
 }
 html.tpl .tpl-categories.logs ul {
   gap: 15px;
+  justify-content: flex-start;
+  width: 100%;
 }
 @media only screen and (max-width: 970px) {
   html.tpl .tpl-categories {
