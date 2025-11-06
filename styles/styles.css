@@ -876,12 +876,12 @@ html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
 html.tpl main .feed-items {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   justify-content: center;
   align-items: center;
   padding-top: 5px;
-  margin-bottom: -20px;
+  margin-bottom: -15px;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main .feed-items {
@@ -937,7 +937,7 @@ html.tpl main .feed-items .feed-item-container p {
 html.tpl main .feed-items .feed-item-container p.alt {
   display: none;
   background: rgba(40, 43, 44, 0.75);
-  height: calc(100% - 29px);
+  height: calc(100% - 29.5px);
   min-height: 200px;
   margin-left: 3px;
   padding-left: 5%;

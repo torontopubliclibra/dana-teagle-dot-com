@@ -445,12 +445,12 @@ html.tpl {
         .feed-items {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 20px;
             width: 100%;
             justify-content: center;
             align-items: center;
             padding-top: 5px;
-            margin-bottom: -20px;
+            margin-bottom: -15px;
 
             @media only screen and (max-width: $tablet) {
                 align-items: flex-start;
@@ -509,7 +509,7 @@ html.tpl {
                     &.alt {
                         display: none;
                         background: rgba($black, 0.75);
-                        height: calc(100% - 29px);
+                        height: calc(100% - 29.5px);
                         min-height: 200px;
                         margin-left: 3px;
                         padding-left: 5%;
