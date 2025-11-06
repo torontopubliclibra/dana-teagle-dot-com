@@ -933,6 +933,7 @@ html.tpl main .feed-items .feed-item-container p.alt {
   display: none;
   background: rgba(40, 43, 44, 0.75);
   height: calc(100% - 29.5px);
+  width: 100%;
   min-height: 200px;
   margin-left: 3px;
   padding-left: 5%;
