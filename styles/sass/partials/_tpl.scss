@@ -468,7 +468,7 @@ html.tpl {
                     font-style: normal;
 
                     &:hover, &.selected {
-                        color: $color1;
+                        color: $color2;
                         font-style: italic;
                         background: none;
                     }
@@ -480,7 +480,7 @@ html.tpl {
                         }
 
                         &.selected:hover {
-                            color: $color1;
+                            color: $color2;
                             font-style: italic;
                             background: none;
                         }

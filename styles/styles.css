@@ -899,7 +899,7 @@ html.tpl main .feed-items .feed-item-container button {
   font-style: normal;
 }
 html.tpl main .feed-items .feed-item-container button:hover, html.tpl main .feed-items .feed-item-container button.selected {
-  color: #84A59D;
+  color: #B57E9B;
   font-style: italic;
   background: none;
 }
@@ -909,7 +909,7 @@ html.tpl main .feed-items .feed-item-container button:hover, html.tpl main .feed
     color: rgba(243, 232, 233, 0.9);
   }
   html.tpl main .feed-items .feed-item-container button.selected:hover {
-    color: #84A59D;
+    color: #B57E9B;
     font-style: italic;
     background: none;
   }
