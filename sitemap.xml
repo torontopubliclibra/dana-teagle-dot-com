@@ -11,7 +11,7 @@
         <loc>https://danateagle.com/mini</loc>
         <lastmod>2025-11-02</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://danateagle.com/tpl/</loc>
@@ -21,6 +21,12 @@
     </url>
     <url>
         <loc>https://danateagle.com/tpl/now</loc>
+        <lastmod>2025-11-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://danateagle.com/tpl/feed</loc>
         <lastmod>2025-11-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

@@ -56,7 +56,7 @@ let tplMixes = {
 
                         if (count >= 101 && count <= 200 && link) {
                             let title = `<p><small>#${object.number} \\\\</small><br/>${object.title}</p><img src="../assets/icons/external-link.svg" class="icon" alt="external link icon">`;
-                            let image = `<img src="${object.image}" alt="${object.title} cover art"/>`;
+                            let image = `<img src="${object.image}" alt="rusty mix #${object.number} cover art"/>`;
                             formattedMixes.push(`<a href="${link}" target="_blank" class="sub mix">${image}${title}</a>`)
                         } else if (count >= 101 && count <= 200 && !link) {
                             let title = `<p><small>#${object.number} \\\\</small><br/>${object.title}</p><img src="../assets/icons/external-link.svg" class="icon disabled" alt="external link icon">`;
