@@ -416,6 +416,7 @@ html.tpl {
             }
             img.feed-item {
                 width: 500px;
+                min-width: 500px;
                 max-width: 100%;
                 min-height: 200px;
                 height: auto;
@@ -423,8 +424,9 @@ html.tpl {
                 border-bottom: none;
                 animation: fade-in 0.5s;
 
-                @media only screen and (max-width: $tablet) {
+                @media only screen and (max-width: $mobile) {
                     width: 100%;
+                    min-width: 100%;
                 }
             }
             p {
@@ -459,6 +461,16 @@ html.tpl {
                 align-items: center;
                 position: relative;
                 animation: fade-in 0.5s;
+                width: 500px;
+                min-width: 500px;
+                max-width: 100%;
+                min-height: 200px;
+                height: auto;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                    min-width: 100%;
+                }
 
                 button {
                     font-size: 0.75rem;
@@ -507,6 +519,7 @@ html.tpl {
                         background: rgba($black, 0.75);
                         height: calc(100% - 29.5px);
                         width: 100%;
+                        min-width: 100%;
                         min-height: 200px;
                         margin-left: 3px;
                         padding-left: 5%;

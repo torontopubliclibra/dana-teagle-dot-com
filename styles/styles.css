@@ -846,6 +846,7 @@ html.tpl main .tpl-landing img.rusty, html.tpl main .tpl-landing img.feed-item, 
 }
 html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
   width: 500px;
+  min-width: 500px;
   max-width: 100%;
   min-height: 200px;
   height: auto;
@@ -853,9 +854,10 @@ html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-ite
   border-bottom: none;
   animation: fade-in 0.5s;
 }
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 768px) {
   html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
     width: 100%;
+    min-width: 100%;
   }
 }
 html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
@@ -890,6 +892,17 @@ html.tpl main .feed-items .feed-item-container {
   align-items: center;
   position: relative;
   animation: fade-in 0.5s;
+  width: 500px;
+  min-width: 500px;
+  max-width: 100%;
+  min-height: 200px;
+  height: auto;
+}
+@media only screen and (max-width: 768px) {
+  html.tpl main .feed-items .feed-item-container {
+    width: 100%;
+    min-width: 100%;
+  }
 }
 html.tpl main .feed-items .feed-item-container button {
   font-size: 0.75rem;
@@ -934,6 +947,7 @@ html.tpl main .feed-items .feed-item-container p.alt {
   background: rgba(40, 43, 44, 0.75);
   height: calc(100% - 29.5px);
   width: 100%;
+  min-width: 100%;
   min-height: 200px;
   margin-left: 3px;
   padding-left: 5%;
