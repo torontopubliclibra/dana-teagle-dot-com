@@ -82,7 +82,7 @@ let tplLogs = {
                     tplLogs.date.text(``);
                     break;
             }
-            formattedLogs.push(`<hr>` + tplLogs.yearSelect);
+            formattedLogs.push(`<hr>` + tplLogs.yearSelect + `<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`);
             tplLogs.content.html(formattedLogs.reduce((accumulator, log) => {
                 return accumulator + log;
             }));

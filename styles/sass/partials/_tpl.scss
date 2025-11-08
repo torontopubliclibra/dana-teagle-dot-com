@@ -133,6 +133,10 @@ html.tpl {
 
         &.small {
             max-width: 750px;
+
+            @media only screen and (max-width: $tablet) {
+                max-width: 90%;
+            }
         }
 
         &.no-margin {
@@ -429,6 +433,12 @@ html.tpl {
                 border-bottom: none;
                 animation: fade-in 0.5s;
 
+                &.horizontal {
+                    height: 250px;
+                    width: auto;
+                    min-width: unset;
+                }
+
                 @media only screen and (max-width: $mobile) {
                     width: 100%;
                     min-width: 100%;
@@ -466,6 +476,14 @@ html.tpl {
             padding-top: 5px;
             margin-bottom: -15px;
 
+            &.horizontal {
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 15px;
+                width: 100%;
+                overflow: scroll;
+            }
+
             @media only screen and (max-width: $tablet) {
                 align-items: flex-start;
             }
@@ -482,6 +500,12 @@ html.tpl {
                 max-width: 100%;
                 min-height: 200px;
                 height: auto;
+
+                &.horizontal {
+                    height: 250px;
+                    width: auto;
+                    min-width: unset;
+                }
 
                 @media only screen and (max-width: $mobile) {
                     width: 100%;
@@ -547,6 +571,12 @@ html.tpl {
                         justify-content: center;
                         align-items: center;
                         animation: fade-in 0.3s;
+
+                        &.horizontal {
+                            height: 250px;
+                            width: auto;
+                            min-width: unset;
+                        }
                     }
 
                     &.alt-visible {
@@ -779,6 +809,7 @@ html.tpl {
 
             @media only screen and (max-width: $tablet) {
                 margin-bottom: 15px;
+                min-width: 100%;
             }
     
             h3 {
@@ -908,10 +939,6 @@ html.tpl {
                     margin-right: auto;
                 }
             }
-
-            @media only screen and (max-width: $tablet) {
-                min-width: 85%;
-            }
         }
     }
 
@@ -975,6 +1002,7 @@ html.tpl {
         }
         @media only screen and (max-width: $tablet) {
             display: block;
+            min-width: 85%;
             width: 85%;
 
             ul {

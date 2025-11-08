@@ -599,6 +599,11 @@ html.tpl hr.alt {
 html.tpl hr.small {
   max-width: 750px;
 }
+@media only screen and (max-width: 970px) {
+  html.tpl hr.small {
+    max-width: 90%;
+  }
+}
 html.tpl hr.no-margin {
   margin: 0 !important;
 }
@@ -860,6 +865,11 @@ html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-ite
   border-bottom: none;
   animation: fade-in 0.5s;
 }
+html.tpl main .tpl-landing img.feed-item.horizontal, html.tpl main.tpl-subpage img.feed-item.horizontal {
+  height: 250px;
+  width: auto;
+  min-width: unset;
+}
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
     width: 100%;
@@ -896,6 +906,13 @@ html.tpl main .feed-items {
   padding-top: 5px;
   margin-bottom: -15px;
 }
+html.tpl main .feed-items.horizontal {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 100%;
+  overflow: scroll;
+}
 @media only screen and (max-width: 970px) {
   html.tpl main .feed-items {
     align-items: flex-start;
@@ -913,6 +930,11 @@ html.tpl main .feed-items .feed-item-container {
   max-width: 100%;
   min-height: 200px;
   height: auto;
+}
+html.tpl main .feed-items .feed-item-container.horizontal {
+  height: 250px;
+  width: auto;
+  min-width: unset;
 }
 @media only screen and (max-width: 768px) {
   html.tpl main .feed-items .feed-item-container {
@@ -975,6 +997,11 @@ html.tpl main .feed-items .feed-item-container p.alt {
   justify-content: center;
   align-items: center;
   animation: fade-in 0.3s;
+}
+html.tpl main .feed-items .feed-item-container p.alt.horizontal {
+  height: 250px;
+  width: auto;
+  min-width: unset;
 }
 html.tpl main .feed-items .feed-item-container p.alt-visible {
   display: flex;
@@ -1185,6 +1212,7 @@ html.tpl main .tpl-links {
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-links {
     margin-bottom: 15px;
+    min-width: 100%;
   }
 }
 html.tpl main .tpl-links h3 {
@@ -1315,11 +1343,6 @@ html.tpl main .tpl-links .tpl-link:hover, html.tpl main .tpl-links .tpl-link:foc
     margin-right: auto;
   }
 }
-@media only screen and (max-width: 970px) {
-  html.tpl main .tpl-links {
-    min-width: 85%;
-  }
-}
 html.tpl .tpl-categories {
   width: 100%;
   max-width: 750px;
@@ -1376,6 +1399,7 @@ html.tpl .tpl-categories.logs ul {
 @media only screen and (max-width: 970px) {
   html.tpl .tpl-categories {
     display: block;
+    min-width: 85%;
     width: 85%;
   }
   html.tpl .tpl-categories ul {
