@@ -209,6 +209,12 @@ html.tpl {
 
   h1 a {
     font-size: 3.75rem;
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 3rem;
+      max-width: 300px;
+      display: block;
+    }
   }
 
   h2 {

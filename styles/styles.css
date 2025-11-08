@@ -646,8 +646,14 @@ html.tpl nav {
 }
 @media only screen and (max-width: 970px) {
   html.tpl nav {
-    top: 175px;
-    padding-top: 20px;
+    top: 176px;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html.tpl nav {
+    top: 171px;
+    padding-top: 0;
   }
 }
 html.tpl nav hr {
@@ -860,15 +866,25 @@ html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-ite
     min-width: 100%;
   }
 }
-html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
+html.tpl main .tpl-landing p, html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p, html.tpl main.tpl-subpage label {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main .tpl-landing p, html.tpl main.tpl-subpage p {
+  html.tpl main .tpl-landing p, html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p, html.tpl main.tpl-subpage label {
     text-align: left;
   }
+}
+html.tpl main .tpl-landing input, html.tpl main.tpl-subpage input {
+  border: solid rgba(243, 232, 233, 0.75) 2px;
+  height: auto;
+  width: calc(100% - 77px);
+  font-family: "Source Code Pro", monospace;
+  color: #f3e8e9;
+  font-size: 0.8rem;
+  background-color: #282b2c;
+  padding: 5px;
 }
 html.tpl main .feed-items {
   display: flex;
@@ -2166,6 +2182,13 @@ html.tpl h1, html.tpl h2, html.tpl h3 {
 }
 html.tpl h1 a {
   font-size: 3.75rem;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl h1 a {
+    font-size: 3rem;
+    max-width: 300px;
+    display: block;
+  }
 }
 html.tpl h2 {
   font-size: 1.5rem;
