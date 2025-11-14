@@ -1199,7 +1199,7 @@ html.tpl main.tpl-subpage #read, html.tpl main.tpl-subpage #watched {
 }
 @media only screen and (max-width: 970px) {
   html.tpl main.tpl-subpage #read, html.tpl main.tpl-subpage #watched {
-    scroll-margin-top: 320px;
+    scroll-margin-top: 295px;
   }
 }
 html.tpl main .tpl-links {
@@ -1228,7 +1228,7 @@ html.tpl main .tpl-links h3 {
     text-align: left;
     margin-right: auto;
     margin-left: auto;
-    scroll-margin-top: 325px;
+    scroll-margin-top: 295px;
   }
 }
 html.tpl main .tpl-links h3.h3-trans-id {

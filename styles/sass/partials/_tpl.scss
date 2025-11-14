@@ -794,7 +794,7 @@ html.tpl {
             #read, #watched {
                 scroll-margin-top: 255px;
                 @media only screen and (max-width: $tablet) {
-                    scroll-margin-top: 320px;
+                    scroll-margin-top: 295px;
                 }
                 animation: fade-in 0.5s;
             }
@@ -824,7 +824,7 @@ html.tpl {
                     text-align: left;
                     margin-right: auto;
                     margin-left: auto;
-                    scroll-margin-top: 325px;
+                    scroll-margin-top: 295px;
                 }
             }
 
