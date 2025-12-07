@@ -24,19 +24,6 @@
         "image": "./assets/projects/truehistory.png",
         "site": "https://truehistorybeer.com"
     },
-    "Ryan Perks": {
-        "id": "ryan-perks",
-        "year": "2025",
-        "tags": [
-            "Freelancer",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for book editor, Ryan Perks. I designed and developed the site between December 2024 and February 2025."
-        ],
-        "image": "./assets/projects/ryanperks.png",
-        "site": "https://ryanperks.com"
-    },
     "Therapy with Andrea": {
         "id": "andrea-lynn-ferguson",
         "year": "2025",
@@ -61,6 +48,19 @@
         ],
         "image": "./assets/projects/tony-matthews.jpg",
         "site": "https://www.tony-matthews.com/"
+    },
+    "Ryan Perks": {
+        "id": "ryan-perks",
+        "year": "2025",
+        "tags": [
+            "Freelancer",
+            "Writing/Editing"
+        ],
+        "description": [
+            "This is a website for book editor, Ryan Perks. I designed and developed the site between December 2024 and February 2025."
+        ],
+        "image": "./assets/projects/ryanperks.png",
+        "site": "https://ryanperks.com"
     },
     "Hazel Henry Audio": {
         "id": "hazel-henry-audio",
