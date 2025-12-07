@@ -44,8 +44,8 @@
 /services /#services
 /contact /#contact
 https://danateagle.com/now /tpl/now
-/trans-id-resources https://tg-id.ca
-/trans-id https://tg-id.ca
+/trans-id-resources https://idguide.ca
+/trans-id https://idguide.ca
 
 # RUSTPROP redirects
 /rustprop/culture-war https://danateagle.com/rustprop/#culture-war
