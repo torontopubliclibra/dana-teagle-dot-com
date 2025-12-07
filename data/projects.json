@@ -1,4 +1,17 @@
 {
+    "I.D. Guide": {
+        "id": "idguide",
+        "year": "2025",
+        "tags": [
+            "Non-profit",
+            "Advocacy"
+        ],
+        "description": [
+            "This is a website for I.D. Guide, a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. I've delivered workshops on name and gender marker changes for organizations across Ontario since 2025, and I.D. Guide, which launched in December 2025, is the latest iteration of my ongoing work in this area."
+        ],
+        "image": "./assets/projects/idguide.png",
+        "site": "https://idguide.ca"
+    },
     "True History Brewing": {
         "id": "true-history-brewing",
         "year": "2025",

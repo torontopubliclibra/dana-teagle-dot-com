@@ -1,4 +1,12 @@
 {
+    "I.D. Guide": {
+        "title": "I.D. Guide",
+        "year": "2022-",
+        "service": "Web design & development",
+        "id": "idguide",
+        "site": "https://idguide.ca",
+        "images": ["./assets/projects/idguide.png"]
+    },
     "THB 1": {
         "title": "True History Brewing",
         "year": "2024-",
