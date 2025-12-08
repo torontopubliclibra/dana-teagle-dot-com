@@ -91,7 +91,7 @@ body {
 
     .accordion-toggle {
         width: 100%;
-        background-color: rgba(122, 145, 177, 0.4);
+        background: rgba(122, 145, 177, 0.4);
         border: solid 5px $color2;
         border-top: none;
         font-size: 16px;
@@ -102,12 +102,8 @@ body {
         align-items: center;
         gap: 10px;
         padding: 10px 15px;
-        transition: background 0.2s;
         &:hover, &:focus {
             background: rgba(122, 145, 177, 0.4);
-            background-repeat: no-repeat;
-            background-size: 100% 20%;
-            background-position: 0 95%;
         }
         img {
             height: 18px;
@@ -663,28 +659,84 @@ header {
 
 #gallery {
 
+    hr {
+        border-left: none;
+        border-right: none;
+        border-width: 2.5px;
+    }
+
     .pause-button, .remote-button {
         cursor: pointer;
-        button {
+        color: $black;
+
+        img {
+            height: 20px;
+            margin-bottom: -5px;
+        }
+
+        &:hover {
             color: $black;
+        }
+
+        // responsive to tablet
+        @media only screen and (max-width: $tablet) {
+            &:hover {
+                background: none;
+            }
+        }
+    }
+    .pause-button, .remote-button {
+        margin-top: -10px;
+        width: 100%;
+        background-color: rgba(122, 145, 177, 0.4);
+        border: solid 5px $color2;
+        border-top: none;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 15px;
+        transition: background 0.2s;
+        button, a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
 
             &:hover {
-                background: linear-gradient(120deg, $color3 0%, $color3 100%);
-                background-repeat: no-repeat;
-                background-size: 100% 20%;
-                background-position: 0 95%;
+                color: $black;
             }
+        }
+        &:hover, &:focus {
+            background: rgba(122, 145, 177, 0.4);
+            background-repeat: no-repeat;
+            background-size: 100% 20%;
+            background-position: 0 95%;
+        }
+        img {
+            height: 18px;
+            margin-bottom: -2px;
+        }
+        &[aria-expanded="true"] {
+            background: rgba(122, 145, 177, 0.4);
+        }
+        &[aria-expanded="true"] img {
+            transform: rotate(0deg);
+        }
 
-            img {
-                height: 20px;
-                margin-bottom: -5px;
-            }
+        // responsive to mobile
+        @media only screen and (max-width: $mobile) {
+            width: 85%;
+            max-width: 85%;
+            min-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
 
-            // responsive to tablet
-            @media only screen and (max-width: $tablet) {
-                &:hover {
-                    background: none;
-                }
+            button {
+                max-width: 85%;
             }
         }
     }
@@ -906,7 +958,8 @@ header {
 
                 // responsive to tablet
                 @media only screen and (max-width: $tablet) {
-                    margin-top: 20px;
+
+                    margin-top: 5px !important;
 
                     img {
                         transform: rotate(115deg);
@@ -919,6 +972,29 @@ header {
                             transform: rotate(115deg);
                         }
                     }
+                }
+            }
+
+            button {
+                width: 100%;
+                background: rgba($color2, 0.4);
+                border: none;
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 0;
+                text-align: left;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 15px;
+                &:hover, &:focus {
+                    background: rgba($color2, 0.4);
+                    border: none;
+                }
+                img {
+                    height: 18px;
+                    margin-bottom: -2px;
                 }
             }
         }

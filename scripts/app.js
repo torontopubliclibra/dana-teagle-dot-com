@@ -474,17 +474,9 @@ let app = {
                     sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button> ]`;
                 }
 
-                let expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, true);app.functions.scrollUp('projects')" title="Expand all projects" class="project-button expand">Expand all projects <img src="./assets/icons/expand-down.svg" alt="expand all project descriptions icon" style="pointer-events: auto;"></button> ]`
-
-                if (expand === true) {
-                    expandText = `[ <button onclick="app.functions.projectDisplay(app.projects.filter, false);app.functions.scrollUp('projects')" title="Collapse all projects" class="project-button expand">Collapse all projects <img src="./assets/icons/collapse-up.svg" alt="collapse all project descriptions icon" style="pointer-events: auto;"></button> ]`
-                }
-
                 // stitch the html for each of the filters together and add it to the projects nav
                 app.elements.projectsNav.html(
                     `<p>`
-                    + expandText
-                    + `<br/>`
                     + sortText
                     + ` <br class="mobile-only"/>`
                     + filterText

@@ -2265,6 +2265,7 @@ h2 {
     color: #282b2c;
     width: 85%;
     margin: 10px auto;
+    margin-bottom: 15px;
     padding: 0;
   }
 }
@@ -2297,6 +2298,7 @@ h3 {
   margin-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
+  min-width: 100%;
 }
 @media only screen and (max-width: 768px) {
   #gallery h3 {
@@ -2322,7 +2324,7 @@ h3 {
 #services h4 {
   font-weight: 600;
   margin: 0;
-  margin-top: -15px;
+  margin-top: -20px;
 }
 
 #services blockquote {
@@ -2517,7 +2519,7 @@ body.loaded {
 }
 .projects-controls-accordion .accordion-toggle {
   width: 100%;
-  background-color: rgba(122, 145, 177, 0.4);
+  background: rgba(122, 145, 177, 0.4);
   border: solid 5px #B57E9B;
   border-top: none;
   font-size: 16px;
@@ -2528,13 +2530,9 @@ body.loaded {
   align-items: center;
   gap: 10px;
   padding: 10px 15px;
-  transition: background 0.2s;
 }
 .projects-controls-accordion .accordion-toggle:hover, .projects-controls-accordion .accordion-toggle:focus {
   background: rgba(122, 145, 177, 0.4);
-  background-repeat: no-repeat;
-  background-size: 100% 20%;
-  background-position: 0 95%;
 }
 .projects-controls-accordion .accordion-toggle img {
   height: 18px;
@@ -3049,25 +3047,78 @@ header .scroll-down img {
   }
 }
 
+#gallery hr {
+  border-left: none;
+  border-right: none;
+  border-width: 2.5px;
+}
 #gallery .pause-button, #gallery .remote-button {
   cursor: pointer;
-}
-#gallery .pause-button button, #gallery .remote-button button {
   color: #282b2c;
 }
-#gallery .pause-button button:hover, #gallery .remote-button button:hover {
-  background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
+#gallery .pause-button img, #gallery .remote-button img {
+  height: 20px;
+  margin-bottom: -5px;
+}
+#gallery .pause-button:hover, #gallery .remote-button:hover {
+  color: #282b2c;
+}
+@media only screen and (max-width: 970px) {
+  #gallery .pause-button:hover, #gallery .remote-button:hover {
+    background: none;
+  }
+}
+#gallery .pause-button, #gallery .remote-button {
+  margin-top: -10px;
+  width: 100%;
+  background-color: rgba(122, 145, 177, 0.4);
+  border: solid 5px #B57E9B;
+  border-top: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  transition: background 0.2s;
+}
+#gallery .pause-button button, #gallery .pause-button a, #gallery .remote-button button, #gallery .remote-button a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#gallery .pause-button button:hover, #gallery .pause-button a:hover, #gallery .remote-button button:hover, #gallery .remote-button a:hover {
+  color: #282b2c;
+}
+#gallery .pause-button:hover, #gallery .pause-button:focus, #gallery .remote-button:hover, #gallery .remote-button:focus {
+  background: rgba(122, 145, 177, 0.4);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
 }
-#gallery .pause-button button img, #gallery .remote-button button img {
-  height: 20px;
-  margin-bottom: -5px;
+#gallery .pause-button img, #gallery .remote-button img {
+  height: 18px;
+  margin-bottom: -2px;
 }
-@media only screen and (max-width: 970px) {
-  #gallery .pause-button button:hover, #gallery .remote-button button:hover {
-    background: none;
+#gallery .pause-button[aria-expanded=true], #gallery .remote-button[aria-expanded=true] {
+  background: rgba(122, 145, 177, 0.4);
+}
+#gallery .pause-button[aria-expanded=true] img, #gallery .remote-button[aria-expanded=true] img {
+  transform: rotate(0deg);
+}
+@media only screen and (max-width: 768px) {
+  #gallery .pause-button, #gallery .remote-button {
+    width: 85%;
+    max-width: 85%;
+    min-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #gallery .pause-button button, #gallery .remote-button button {
+    max-width: 85%;
   }
 }
 #gallery .gallery-container {
@@ -3254,7 +3305,7 @@ header .scroll-down img {
 }
 @media only screen and (max-width: 970px) {
   #services .wrapper h4 button {
-    margin-top: 20px;
+    margin-top: 5px !important;
   }
   #services .wrapper h4 button img {
     transform: rotate(115deg);
@@ -3265,6 +3316,28 @@ header .scroll-down img {
   #services .wrapper h4 button:hover img {
     transform: rotate(115deg);
   }
+}
+#services .wrapper h4 button {
+  width: 100%;
+  background: rgba(181, 126, 155, 0.4);
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+}
+#services .wrapper h4 button:hover, #services .wrapper h4 button:focus {
+  background: rgba(181, 126, 155, 0.4);
+  border: none;
+}
+#services .wrapper h4 button img {
+  height: 18px;
+  margin-bottom: -2px;
 }
 #services .wrapper blockquote * {
   animation: fade-in 1s;
