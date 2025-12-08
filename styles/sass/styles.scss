@@ -103,18 +103,15 @@ body {
         align-items: center;
         gap: 10px;
         padding: 10px 15px;
-        color: $white;
         transition: background 0.2s;
         &:hover, &:focus {
             background: rgba(122, 145, 177, 0.4);
-            color: $white;
             background-repeat: no-repeat;
             background-size: 100% 20%;
             background-position: 0 95%;
         }
         img {
             height: 18px;
-            filter: invert(1);
         }
         &[aria-expanded="true"] {
             background: rgba(122, 145, 177, 0.4);
@@ -1655,6 +1652,14 @@ body.dark-mode {
             &:hover {
                 color: #99b1d3;
             }
+        }
+    }
+
+    .accordion-toggle {
+        color: $white;
+
+        img {
+            filter: invert(1);
         }
     }
     
