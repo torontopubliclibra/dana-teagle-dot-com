@@ -83,7 +83,7 @@ p {
 
 // links
 a, button {
-  @include textStyle (18px);
+  @include textStyle (16px);
   transition: 0.4s color;
 
   &:hover, &:focus {

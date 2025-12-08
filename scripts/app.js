@@ -670,10 +670,12 @@ let app = {
                 this.setAttribute('aria-expanded', !expanded);
                 if (expanded) {
                     app.elements.projectsAccordionPanel.setAttribute('hidden', '');
-                    this.querySelector('img').src = './assets/icons/expand-down.svg';
+                    this.querySelector('img').src = './assets/icons/arrow-up.svg';
+                    this.querySelector('img').style.transform = 'rotate(180deg)';
                 } else {
                     app.elements.projectsAccordionPanel.removeAttribute('hidden');
-                    this.querySelector('img').src = './assets/icons/collapse-up.svg';
+                    this.querySelector('img').src = './assets/icons/arrow-up.svg';
+                    this.querySelector('img').style.transform = 'rotate(0deg)';
                 }
             });
         }

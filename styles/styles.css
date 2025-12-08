@@ -2074,7 +2074,7 @@ p {
 }
 
 a, button {
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   line-height: 1.25;
   color: #282b2c;
@@ -2520,7 +2520,7 @@ body.loaded {
   background-color: rgba(122, 145, 177, 0.4);
   border: solid 5px #B57E9B;
   border-top: none;
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
@@ -2538,12 +2538,13 @@ body.loaded {
 }
 .projects-controls-accordion .accordion-toggle img {
   height: 18px;
+  margin-bottom: -2px;
 }
 .projects-controls-accordion .accordion-toggle[aria-expanded=true] {
   background: rgba(122, 145, 177, 0.4);
 }
 .projects-controls-accordion .accordion-toggle[aria-expanded=true] img {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .projects-controls-accordion .accordion-panel {
   padding: 10px;
@@ -3316,6 +3317,9 @@ header .scroll-down img {
     gap: 15px;
   }
 }
+#services .services-content a img, #services .services-content button img {
+  font-size: 12px;
+}
 #services .services-content .service {
   background: rgba(132, 165, 157, 0.3);
   border: solid #B57E9B 5px;
@@ -3366,7 +3370,7 @@ header .scroll-down img {
     padding-left: 10px;
   }
   #services .services-content .service h4 {
-    font-size: 18px;
+    font-size: 14px;
     max-width: 80%;
   }
 }

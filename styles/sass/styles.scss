@@ -94,7 +94,7 @@ body {
         background-color: rgba(122, 145, 177, 0.4);
         border: solid 5px $color2;
         border-top: none;
-        font-size: 1.1rem;
+        font-size: 16px;
         font-weight: 600;
         text-align: left;
         cursor: pointer;
@@ -111,12 +111,13 @@ body {
         }
         img {
             height: 18px;
+            margin-bottom: -2px;
         }
         &[aria-expanded="true"] {
             background: rgba(122, 145, 177, 0.4);
         }
         &[aria-expanded="true"] img {
-            transform: rotate(180deg);
+            transform: rotate(0deg);
         }
     }
     .accordion-panel {
@@ -969,6 +970,10 @@ header {
                 gap: 15px;
             }
         }
+
+        a img, button img {
+            font-size: 12px;
+        }
         
         .service {
             @include borderedBox(rgba($color1, 0.3), $color2);
@@ -1021,7 +1026,7 @@ header {
                     padding-left: 10px;
                 }
                 h4 {
-                    font-size: 18px;
+                    font-size: 14px;
                     max-width: 80%;
                 }
             }
