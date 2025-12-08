@@ -3066,7 +3066,7 @@ header .scroll-down img {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 15px;
+  padding: 0;
   transition: background 0.2s;
 }
 #gallery .pause-button button, #gallery .pause-button a, #gallery .remote-button button, #gallery .remote-button a {
@@ -3074,6 +3074,7 @@ header .scroll-down img {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 12px 15px;
 }
 #gallery .pause-button button:hover, #gallery .pause-button a:hover, #gallery .remote-button button:hover, #gallery .remote-button a:hover {
   color: #282b2c;
@@ -3101,9 +3102,6 @@ header .scroll-down img {
     min-width: 85%;
     margin-left: auto;
     margin-right: auto;
-  }
-  #gallery .pause-button button, #gallery .remote-button button {
-    max-width: 85%;
   }
 }
 #gallery .gallery-container {
