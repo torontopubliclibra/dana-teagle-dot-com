@@ -666,29 +666,10 @@ header {
     }
 
     .pause-button, .remote-button {
-        cursor: pointer;
-        color: $black;
-
-        img {
-            height: 20px;
-            margin-bottom: -5px;
-        }
-
-        &:hover {
-            color: $black;
-        }
-
-        // responsive to tablet
-        @media only screen and (max-width: $tablet) {
-            &:hover {
-                background: none;
-            }
-        }
-    }
-    .pause-button, .remote-button {
         margin-top: -10px;
+        margin-bottom: 25px;
         width: 100%;
-        background-color: rgba(122, 145, 177, 0.4);
+        background: rgba(122, 145, 177, 0.4);
         border: solid 5px $color2;
         border-top: none;
         font-size: 16px;
@@ -1734,12 +1715,19 @@ body.dark-mode {
         }
     }
 
-    .accordion-toggle {
+    .accordion-toggle, #gallery .pause-button button {
         color: $white;
 
         img {
             filter: invert(1);
         }
+    }
+
+    #gallery .pause-button, .remote-button {
+        margin-top: -10px;
+        margin-bottom: 25px;
+        width: 100%;
+        background: rgba($black, 0.2);
     }
     
     header {

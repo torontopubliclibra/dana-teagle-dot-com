@@ -462,16 +462,16 @@ let app = {
                     }
                 });
 
-                let filterText = `[ Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"> ]<hr/>`;
+                let filterText = `Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"><hr/>`;
 
                 if (app.projects.filter !== 'All') {
-                    filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scrollUp('projects')" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button> ]<hr/>`;
+                    filterText = `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scrollUp('projects')" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button><hr/>`;
                 }
 
-                let sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest <img src="./assets/icons/sort-desc.svg" alt="sort descending icon" style="pointer-events: auto;"></button> ]`;
+                let sortText = `<button onclick="app.projects.data.reverse();app.projects.sort='oldest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort oldest to newest" class="project-button sort">Sort oldest to newest <img src="./assets/icons/sort-desc.svg" alt="sort descending icon" style="pointer-events: auto;"></button>`;
 
                 if (app.projects.sort === 'oldest') {
-                    sortText = `[ <button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button> ]`;
+                    sortText = `<button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button>`;
                 }
 
                 // stitch the html for each of the filters together and add it to the projects nav

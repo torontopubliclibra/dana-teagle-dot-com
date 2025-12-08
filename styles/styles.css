@@ -3053,25 +3053,10 @@ header .scroll-down img {
   border-width: 2.5px;
 }
 #gallery .pause-button, #gallery .remote-button {
-  cursor: pointer;
-  color: #282b2c;
-}
-#gallery .pause-button img, #gallery .remote-button img {
-  height: 20px;
-  margin-bottom: -5px;
-}
-#gallery .pause-button:hover, #gallery .remote-button:hover {
-  color: #282b2c;
-}
-@media only screen and (max-width: 970px) {
-  #gallery .pause-button:hover, #gallery .remote-button:hover {
-    background: none;
-  }
-}
-#gallery .pause-button, #gallery .remote-button {
   margin-top: -10px;
+  margin-bottom: 25px;
   width: 100%;
-  background-color: rgba(122, 145, 177, 0.4);
+  background: rgba(122, 145, 177, 0.4);
   border: solid 5px #B57E9B;
   border-top: none;
   font-size: 16px;
@@ -4008,11 +3993,17 @@ body.dark-mode .js-disabled-projects a, body.dark-mode .js-disabled-gallery a, b
 body.dark-mode .js-disabled-projects a:hover, body.dark-mode .js-disabled-gallery a:hover, body.dark-mode .js-disabled a:hover {
   color: #99b1d3;
 }
-body.dark-mode .accordion-toggle {
+body.dark-mode .accordion-toggle, body.dark-mode #gallery .pause-button button {
   color: #f3e8e9;
 }
-body.dark-mode .accordion-toggle img {
+body.dark-mode .accordion-toggle img, body.dark-mode #gallery .pause-button button img {
   filter: invert(1);
+}
+body.dark-mode #gallery .pause-button, body.dark-mode .remote-button {
+  margin-top: -10px;
+  margin-bottom: 25px;
+  width: 100%;
+  background: rgba(40, 43, 44, 0.2);
 }
 body.dark-mode header {
   background: linear-gradient(120deg, rgba(122, 145, 177, 0.6) 0%, rgba(122, 145, 177, 0.6) 2%, rgba(132, 165, 157, 0.75) 60%, rgba(132, 165, 157, 0.5) 98%, rgba(132, 165, 157, 0.5) 100%);
