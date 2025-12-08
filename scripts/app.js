@@ -26,7 +26,7 @@ let app = {
         darkModeToggle: $("#darkmode-toggle"),
         animationsToggle: $("#animations-toggle"),
         projectsContainer: $(".projects-container"),
-        projectsNav: $(".projects-nav"),
+        projectsNav: $(".projects-controls-accordion .projects-nav"),
         projectDescription: $(".project-description"),
         projectsErrorMessage: $(".js-disabled-projects"),
         headshotWrapper: $(".headshot-wrapper"),
@@ -35,7 +35,9 @@ let app = {
         pauseButton: document.querySelector(".pause-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
         testimonial: $("#services blockquote"),
-        testimonialsButton: document.querySelector(".testimonials-button")
+        testimonialsButton: document.querySelector(".testimonials-button"),
+        projectsAccordionToggle: document.querySelector(".projects-controls-accordion .accordion-toggle"),
+        projectsAccordionPanel: document.querySelector(".projects-controls-accordion .accordion-panel")
     },
 
     // toggle values
@@ -460,7 +462,7 @@ let app = {
                     }
                 });
 
-                let filterText = `[ Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"> ]`;
+                let filterText = `[ Select tag to filter <img src="./assets/icons/filter.svg" alt="remove project filter icon" style="pointer-events: auto;"> ]<hr/>`;
 
                 if (app.projects.filter !== 'All') {
                     filterText = `[ <button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scrollUp('projects')" title="Remove project filter" class="project-button filter">Remove selected filter <img src="./assets/icons/filter-off.svg" alt="remove project filter icon" style="pointer-events: auto;"></button> ]`;
@@ -554,7 +556,7 @@ let app = {
                     formattedProject.description =
                         `<button class="button read-more" title="`
                         + project.title
-                        + ` project description">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
+                        + ` project description" style="margin-left: 5px;">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
                         + formattedProject.image
                         + formattedParagraph
                         + `</p>`
@@ -563,7 +565,7 @@ let app = {
                 // if the project has a site link, format a site button
                 if (project.site) {
                     formattedProject.site =
-                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">Site<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
+                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website" style="margin-right: 5px;">Website<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
                     };
 
                 // if the project has a code link, format a code button
@@ -660,6 +662,21 @@ let app = {
 
     // app event listeners
     events: () => {
+
+        // Accordion dropdown for project controls
+        if (app.elements.projectsAccordionToggle && app.elements.projectsAccordionPanel) {
+            app.elements.projectsAccordionToggle.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                if (expanded) {
+                    app.elements.projectsAccordionPanel.setAttribute('hidden', '');
+                    this.querySelector('img').src = './assets/icons/expand-down.svg';
+                } else {
+                    app.elements.projectsAccordionPanel.removeAttribute('hidden');
+                    this.querySelector('img').src = './assets/icons/collapse-up.svg';
+                }
+            });
+        }
 
         // watch the screen width and console log when it changes
         window.addEventListener('resize', () => {

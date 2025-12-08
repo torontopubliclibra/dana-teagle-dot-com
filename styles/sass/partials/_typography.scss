@@ -274,7 +274,6 @@ h3 {
     font-size: 22px;
     text-align: left;
     margin: 0;
-    margin-bottom: 10px;
     max-width: 100%;
   }
 }
@@ -367,10 +366,13 @@ h3 {
 // projects navigation
 .projects-nav {
   p {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  a, button {
+    font-size: 16px !important;
   }
   ul, li, li button {
-    font-size: 16px;
+    font-size: 14px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -384,11 +386,8 @@ h3 {
   }
 
   @media only screen and (max-width: $mobile) {
-    p {
-      font-size: 18px;
-    }
-    ul, li, li button {
-      @include textStyle (15px, "", 1);
+    ul, li, li button, button {
+      @include textStyle (16px, "", 1);
       font-style: normal;
     }
     li button, .selected {
