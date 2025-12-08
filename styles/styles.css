@@ -2361,7 +2361,7 @@ h3 {
 }
 @media only screen and (max-width: 768px) {
   #services blockquote p, #services blockquote a, #services blockquote cite {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -2371,10 +2371,10 @@ h3 {
 }
 
 .projects-nav p {
-  font-size: 16px;
+  font-size: 14px;
 }
 .projects-nav a, .projects-nav button {
-  font-size: 16px !important;
+  font-size: 14px;
 }
 .projects-nav ul, .projects-nav li, .projects-nav li button {
   font-size: 14px;
@@ -2391,7 +2391,7 @@ h3 {
 }
 @media only screen and (max-width: 768px) {
   .projects-nav ul, .projects-nav li, .projects-nav li button, .projects-nav button {
-    font-size: 16px;
+    font-size: 14px;
     text-align: "";
     line-height: 1;
     color: #282b2c;
@@ -3638,12 +3638,11 @@ header .scroll-down img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   justify-content: initial;
   align-items: initial;
   width: 100%;
   margin: 5px;
-  margin-bottom: 10px;
 }
 #projects .projects-nav hr {
   margin-left: 0;

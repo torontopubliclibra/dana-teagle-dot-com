@@ -67,7 +67,6 @@ body {
     border: solid $white 5px;
     animation: fade-in-error 0.5s ease-in 1.5s forwards;
 
-    // responsive to mobile
     @media only screen and (max-width: $mobile) {
         width: 80%;
         font-size: 16px;
@@ -1336,10 +1335,9 @@ header {
 
     // projects navigation
     .projects-nav {
-        @include flex(column, 10px);
+        @include flex(column, 5px);
         width: 100%;
         margin: 5px;
-        margin-bottom: 10px;
 
         hr {
             margin-left: 0;
