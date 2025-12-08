@@ -399,7 +399,13 @@ let app = {
         
         // displaying the projects
         projectDisplay: (filter, expand) => {
-
+            // If a filter is being applied (not 'All'), expand the accordion
+            if (filter && filter !== 'All' && app.elements.projectsAccordionToggle && app.elements.projectsAccordionPanel) {
+                app.elements.projectsAccordionToggle.setAttribute('aria-expanded', 'true');
+                app.elements.projectsAccordionPanel.removeAttribute('hidden');
+                const icon = app.elements.projectsAccordionToggle.querySelector('img');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
             app.projects.expand = expand;
 
             // initialize the project array
