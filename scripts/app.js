@@ -22,6 +22,7 @@ let app = {
         servicesLink: $("nav .services"),
         contactLink: $("nav .contact"),
         scrollDownButton: $(".scroll-down"),
+        scrollTitle: $(".scroll-title"),
         scrollTopButton: $(".scroll-to-top"),
         darkModeToggle: $("#darkmode-toggle"),
         animationsToggle: $("#animations-toggle"),
@@ -43,7 +44,7 @@ let app = {
     // toggle values
     toggles: {
         animations: true,
-        darkMode: false,
+        darkMode: true,
     },
 
     // projects data and selected filter
@@ -97,20 +98,19 @@ let app = {
 
         // toggle dark mode function
         toggleDarkMode: () => {
-
-            // add dark-mode class to body, selected class to toggle, and flip the boolean value
+            // Toggle dark mode class and selected state
             app.elements.body.toggleClass("dark-mode");
             app.elements.darkModeToggle.toggleClass('selected');
             app.toggles.darkMode = !app.toggles.darkMode;
 
-            // swap the toggle html
+            // Update toggle button HTML
             if (app.toggles.darkMode === true) {
                 app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
             } else {
                 app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode');
             }
 
-            // store value locally in cache
+            // Save preference to localStorage
             localStorage['dark-mode'] = `${app.toggles.darkMode}`;
         },
 
@@ -700,6 +700,10 @@ let app = {
             e.preventDefault();
             app.functions.scroll("about");
         });
+        app.elements.scrollTitle.click((e) => {
+            e.preventDefault();
+            app.functions.scroll("about");
+        });
 
         app.elements.headshotWrapper.click((e) => {
             app.elements.headshotWrapper.toggleClass("clicked");
@@ -875,11 +879,26 @@ let app = {
         // add the event listeners
         app.events();
     
+
+        // Animations: default ON, but allow user to turn off
         if (localStorage['animations'] === 'false') {
             app.functions.toggleAnimations();
         }
-        if (localStorage['dark-mode'] === 'true') {
-            app.functions.toggleDarkMode();
+
+        // Dark mode: default ON, but allow user to turn off and persist
+        if (localStorage['dark-mode'] === 'false') {
+            // If user previously toggled OFF, ensure dark mode is off
+            if (app.toggles.darkMode === true) {
+                app.functions.toggleDarkMode();
+            }
+        } else {
+            // Default: dark mode ON
+            if (!app.elements.body.hasClass('dark-mode')) {
+                app.elements.body.addClass('dark-mode');
+                app.elements.darkModeToggle.addClass('selected');
+                app.toggles.darkMode = true;
+                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
+            }
         }
 
         setTimeout(() => {

@@ -43,6 +43,8 @@ button {
   background-repeat: no-repeat;
 }
 .selected {
+  background: linear-gradient(120deg, $color3 0%, $color3 100%);
+  background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 90%;
 }

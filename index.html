@@ -40,13 +40,13 @@
     <link rel="preload" href="./scripts/app.js" as="script" />
     <link rel="stylesheet" href="./styles/styles.css"/>
   </head>
-  <body>
+  <body class="dark-mode">
     <header id="home">
       <div class="toggles">
         <p><span class="mr"></span>Toggle on/off<span class="pr">:</span><span class="mr"></span></p>
         <ul>
           <li><button class="button selected" id="animations-toggle" onclick="app.functions.toggleAnimations()"><img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations</button></li>
-          <li><button class="button" id="darkmode-toggle" onclick="app.functions.toggleDarkMode()"><img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode</button></li>
+          <li><button class="button selected" id="darkmode-toggle" onclick="app.functions.toggleDarkMode()"><img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark mode</button></li>
         </ul>
       </div>
       <div class="wrapper"> 
@@ -72,7 +72,9 @@
           </ul>
         </nav>
         <div class="title highlight">
-          <h1>dana teagle dot com</h1>
+          <a class="scroll-title" title="Scroll down the page" href="#about" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
+            <h1>dana teagle dot com</h1>
+          </a>
         </div>
         <a class="scroll-down" title="Scroll down the page" href="#about" onKeyDown="app.functions.scrollOnEnter(event.keyCode, 'about')">
           <img src="./assets/icons/arrow-down.svg" alt="scroll down icon" tabindex="0">

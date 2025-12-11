@@ -2036,6 +2036,8 @@ button {
 }
 
 .selected {
+  background: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
+  background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 90%;
 }
@@ -3041,6 +3043,9 @@ header .scroll-down img {
     width: 60px;
   }
 }
+header .scroll-title {
+  text-decoration: none;
+}
 
 #gallery hr {
   border-left: none;
@@ -3683,7 +3688,7 @@ header .scroll-down img {
 }
 
 #projects hr {
-  border-color: #7a91b1;
+  border-color: #84A59D;
   margin-bottom: 0;
   border-width: 2.5px;
   border-left: 0;
@@ -3799,7 +3804,9 @@ header .scroll-down img {
 }
 #projects .projects-container .project .tags .selected {
   font-style: italic;
-  background-image: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+  background-image: linear-gradient(120deg, #7a91b1 0%, #7a91b1 100%);
+  line-height: 1.25;
+  padding-bottom: 4px;
 }
 @media only screen and (max-width: 970px) {
   #projects .projects-container .project .tags {
