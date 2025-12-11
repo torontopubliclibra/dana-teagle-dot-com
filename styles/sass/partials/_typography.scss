@@ -400,15 +400,11 @@ h3 {
 }
 
 // project descriptions
-.project-description p, a {
+.project-description p, a, button {
   @include textStyle (18px, center);
 
   @media only screen and (max-width: $tablet) {
     text-align: left;
-  }
-
-  @media only screen and (max-width: $mobile) {
-    font-size: 17px;
   }
 }
 

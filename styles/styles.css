@@ -2405,20 +2405,15 @@ h3 {
   }
 }
 
-.project-description p, a {
+.project-description p, a, button {
   font-size: 18px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
 }
 @media only screen and (max-width: 970px) {
-  .project-description p, a {
+  .project-description p, a, button {
     text-align: left;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .project-description p, a {
-    font-size: 17px;
   }
 }
 
