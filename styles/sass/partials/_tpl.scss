@@ -175,12 +175,11 @@ html.tpl {
         top: 0;
         background-color: #282b2c !important;
         z-index: 100;
-    }
 
-    header.trans-id-header {
-        margin-bottom: 0;
-        padding-bottom: 10px;
-        padding-top: 30px;
+        @media only screen and (max-width: $tablet) {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
     }
 
     nav {
@@ -193,13 +192,11 @@ html.tpl {
         z-index: 100;
 
         @media only screen and (max-width: $tablet) {
-            top: 176px;
-            padding-top: 0;
+            top: 156px;
         }
 
         @media only screen and (max-width: $mobile) {
-            top: 171px;
-            padding-top: 0;
+            top: 151px;
         }
 
         hr {
