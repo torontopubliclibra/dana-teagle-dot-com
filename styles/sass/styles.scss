@@ -1662,13 +1662,14 @@ header {
 
 // footer
 footer .wrapper {
-    @include flex(column, 0, center, center);
+    @include flex(row-reverse, 0, center, flex-end);
     padding: 20px 0;
     margin: 20px auto;
     width: 95%;
 
     .credit {
-        width: 95%;
+        width: 75%;
+        text-align: left;
         margin: 15px 0;
         font-size: 0.9rem;
 
@@ -1698,6 +1699,15 @@ footer .wrapper {
     a:hover {
         @media only screen and (max-width: $tablet) {
             color: $black;
+        }
+    }
+
+    @media only screen and (max-width: $tablet) {
+        @include flex(column, 0, center, center);
+
+        .credit {
+            width: 97%;
+            text-align: center;
         }
     }
 }

@@ -3944,16 +3944,17 @@ header .scroll-title {
 footer .wrapper {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row-reverse;
   gap: 0;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding: 20px 0;
   margin: 20px auto;
   width: 95%;
 }
 footer .wrapper .credit {
-  width: 95%;
+  width: 75%;
+  text-align: left;
   margin: 15px 0;
   font-size: 0.9rem;
 }
@@ -3977,6 +3978,20 @@ footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
 @media only screen and (max-width: 970px) {
   footer .wrapper a:hover {
     color: #282b2c;
+  }
+}
+@media only screen and (max-width: 970px) {
+  footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .wrapper .credit {
+    width: 97%;
+    text-align: center;
   }
 }
 
