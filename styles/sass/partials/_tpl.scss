@@ -864,11 +864,15 @@ html.tpl {
 
                     &:hover, &:focus {
                         border: solid 3px rgba($white, 0.15);
-                        background-blend-mode: color-dodge;
+                        background-blend-mode: lighten;
                     }
 
                     &#clouds {
-                        background-image: url('https://clouds.danateagle.com/assets/cloud-10.png');
+                        background-image: url('https://clouds.danateagle.com/assets/cloud-9.png');
+                        
+                        p {
+                            color: $black;
+                        }
                     }
 
                     &#birds {

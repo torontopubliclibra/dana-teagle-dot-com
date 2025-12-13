@@ -1285,10 +1285,13 @@ html.tpl main .tpl-links .tpl-link.photo:last-of-type {
 }
 html.tpl main .tpl-links .tpl-link.photo:hover, html.tpl main .tpl-links .tpl-link.photo:focus {
   border: solid 3px rgba(243, 232, 233, 0.15);
-  background-blend-mode: color-dodge;
+  background-blend-mode: lighten;
 }
 html.tpl main .tpl-links .tpl-link.photo#clouds {
-  background-image: url("https://clouds.danateagle.com/assets/cloud-10.png");
+  background-image: url("https://clouds.danateagle.com/assets/cloud-9.png");
+}
+html.tpl main .tpl-links .tpl-link.photo#clouds p {
+  color: #282b2c;
 }
 html.tpl main .tpl-links .tpl-link.photo#birds {
   background-image: url("https://birds.danateagle.com/assets/birds-2.png");
