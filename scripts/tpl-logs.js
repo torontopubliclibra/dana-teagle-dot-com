@@ -1,7 +1,7 @@
 let tplLogs = {
     content: $(".tpl-page-text"),
     year: "2025",
-    updated: "06/12/2025",
+    updated: "12/12/2025",
     date: $(".date"),
     twentyFive: {
         movies: [],
