@@ -1,7 +1,7 @@
 let tplLogs = {
     content: $(".tpl-page-text"),
     year: "2025",
-    updated: "12/12/2025",
+    updated: "",
     date: $(".date"),
     twentyFive: {
         movies: [],
@@ -89,31 +89,42 @@ let tplLogs = {
         },
     },
     init: () => {
-        fetch('../data/logs.json').then(response => response.json())
-        .then((data) => {
-            let twentyFive = {
-                "movies": [data["2025"]["movies"]],
-                "books": [data["2025"]["books"]],
-            };
-            tplLogs.twentyFive = twentyFive;
+        // Fetch the current date from now.json
+        fetch('../data/now.json')
+            .then(response => response.json())
+            .then((nowData) => {
+                // Get the first key as the date
+                tplLogs.updated = Object.keys(nowData)[0] || '';
+            })
+            .catch(error => console.log(error))
+            .finally(() => {
+                // Continue with logs.json fetch and rest of init
+                fetch('../data/logs.json').then(response => response.json())
+                .then((data) => {
+                    let twentyFive = {
+                        "movies": [data["2025"]["movies"]],
+                        "books": [data["2025"]["books"]],
+                    };
+                    tplLogs.twentyFive = twentyFive;
 
-            let twentyFour = {
-                "movies": [data["2024"]["movies"]],
-                "books": [data["2024"]["books"]],
-            };
-            tplLogs.twentyFour = twentyFour;
-            tplLogs.functions.logsDisplay();
-        })
-        .catch(error => console.log(error));
+                    let twentyFour = {
+                        "movies": [data["2024"]["movies"]],
+                        "books": [data["2024"]["books"]],
+                    };
+                    tplLogs.twentyFour = twentyFour;
+                    tplLogs.functions.logsDisplay();
+                })
+                .catch(error => console.log(error));
 
-        if (window.location.hash) {
-            let hash = window.location.hash;
-            if (hash === "#watched" || hash === "#read") {
-                setTimeout(() => {
-                    document.querySelector(hash).scrollIntoView();
-                }, 100);
-            }
-        }
+                if (window.location.hash) {
+                    let hash = window.location.hash;
+                    if (hash === "#watched" || hash === "#read") {
+                        setTimeout(() => {
+                            document.querySelector(hash).scrollIntoView();
+                        }, 100);
+                    }
+                }
+            });
     },
 };
 $(document).ready(() => {
