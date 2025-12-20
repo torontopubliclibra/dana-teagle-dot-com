@@ -4,17 +4,17 @@ let tplMixes = {
     range: "2",
     stream: "tidal",
     streamSelect: `<p>streaming links: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
-    rangeSelect: `<p>>> <span class="range-selected">#197-101</span> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#100-1</button></p>`,
+    rangeSelect: `<p>>> <span class="range-selected">#198-101</span> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#100-1</button></p>`,
     functions: {
         rangeSet: (range) => {
             switch(range) {
                 case "2":
                     tplMixes.range = "2";
-                    tplMixes.rangeSelect = `<p>>> <span class="range-selected">#197-101</span> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#100-1</button></p>`
+                    tplMixes.rangeSelect = `<p>>> <span class="range-selected">#198-101</span> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#100-1</button></p>`
                     break;
                 case "1":
                     tplMixes.range = "1";
-                    tplMixes.rangeSelect = `<p>>> <button class="range" onclick="tplMixes.functions.rangeSet('2')">#197-101</button> | <span class="range-selected">#100-1</span></p>`
+                    tplMixes.rangeSelect = `<p>>> <button class="range" onclick="tplMixes.functions.rangeSet('2')">#198-101</button> | <span class="range-selected">#100-1</span></p>`
                     break;
             }
             tplMixes.range = range;
