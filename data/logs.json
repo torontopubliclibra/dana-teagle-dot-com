@@ -1,6 +1,20 @@
 {
+    "2026": {
+        "movies": [
+        ],
+        "books": [
+        ]
+    },
     "2025": {
         "movies": [
+            "'the lord of the rings: the two towers' (2002, rewatch)",
+            "'wicked: for good' (2025)",
+            "'how the grinch stole christmas' (1966, rewatch)",
+            "'white christmas' (1954, rewatch)",
+            "'it's a wonderful life' (1946, rewatch)",
+            "'the lord of the rings: the fellowship of the ring' (2001, rewatch)",
+            "'a charlie brown christmas' (1965, rewatch)",
+            "'a christmas story' (1983, rewatch)",
             "'let the right one in' (2008, rewatch)",
             "'the muppet christmas carol' (1992, rewatch)",
             "'carol' (2015, rewatch)",
@@ -122,6 +136,7 @@
             "'avengers: endgame' (2019, rewatch)"
         ],
         "books": [
+            "'abortion: our bodies, their lies, and the truths we use to win' by jessica valenti (2024)",
             "'dayspring' by anthony oliveira (2024)",
             "'the precarious migrant worker: the socialization of precarity' by panos theodoropoulos (2025)",
             "'black jack, vol. 2' by osamu tezuka (1987, reread)",
