@@ -1,7 +1,7 @@
 
 let tplLogs = {
     content: $(".tpl-page-text"),
-    year: "2025",
+    year: "2026",
     updated: "",
     date: $(".date"),
     twentySix: {
@@ -16,7 +16,7 @@ let tplLogs = {
         movies: [],
         books: [],
     },
-    yearSelect: `<p>year: <button class="range" onclick="tplLogs.functions.yearSet('2026')">2026</button> | <span class="year-selected">2025</span> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`,
+    yearSelect: `<p>year: <span class="year-selected">2026</span> | <button class="range" onclick="tplLogs.functions.yearSet('2025')">2025</button> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`,
     logCategories: `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">watched<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">read<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`,
     functions: {
         yearSet: (year) => {
@@ -73,7 +73,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    tplLogs.date.text(``);
+                    tplLogs.date.text(` [ up to ${tplLogs.updated} ]`);
                     break;
                 case "2025":
                     for (let list in tplLogs.twentyFive.movies) {
@@ -91,7 +91,7 @@ let tplLogs = {
                             formattedLogs.push(item);
                         });
                     }
-                    tplLogs.date.text(` [ up to ${tplLogs.updated} ]`);
+                    tplLogs.date.text(``);
                     break;
                 case "2024":
                     for (let list in tplLogs.twentyFour.movies) {
