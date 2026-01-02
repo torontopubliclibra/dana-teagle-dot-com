@@ -63,14 +63,23 @@ let tplNow = {
 
         fetch('../data/logs.json').then(response => response.json())
         .then((data) => {
-            let movies = [];
-            let books = [];
-            for (let object in data) {
-                movies.push(data["2025"]["movies"]);
-                books.push(data["2025"]["books"]);
+            let movies2026 = (data["2026"] && data["2026"]["movies"]) ? data["2026"]["movies"] : [];
+            let books2026 = (data["2026"] && data["2026"]["books"]) ? data["2026"]["books"] : [];
+
+            let movies2025 = (data["2025"] && data["2025"]["movies"]) ? data["2025"]["movies"] : [];
+            let books2025 = (data["2025"] && data["2025"]["books"]) ? data["2025"]["books"] : [];
+
+            let movies = movies2026.slice(0, 3);
+            if (movies.length < 3) {
+                movies = movies.concat(movies2025.slice(0, 3 - movies.length));
             }
-            tplNow.movies = movies[0].slice(0,3);
-            tplNow.books = books[0].slice(0,3);
+            let books = books2026.slice(0, 3);
+            if (books.length < 3) {
+                books = books.concat(books2025.slice(0, 3 - books.length));
+            }
+
+            tplNow.movies = movies;
+            tplNow.books = books;
             tplNow.functions.nowDisplay();
         })
         .catch(error => console.log(error));
