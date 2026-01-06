@@ -421,8 +421,8 @@ html.tpl {
                 pointer-events: none;
             }
             img.feed-item {
-                width: 500px;
-                min-width: 500px;
+                width: 400px;
+                min-width: 400px;
                 max-width: 100%;
                 min-height: 200px;
                 height: auto;
@@ -492,8 +492,8 @@ html.tpl {
                 align-items: center;
                 position: relative;
                 animation: fade-in 0.5s;
-                width: 500px;
-                min-width: 500px;
+                width: 400px;
+                min-width: 400px;
                 max-width: 100%;
                 min-height: 200px;
                 height: auto;
@@ -735,7 +735,7 @@ html.tpl {
                         margin-right: auto;
                         padding: 0 10px;
                         background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
-                        max-width: 650px;
+                        max-width: 700px;
                         animation: fade-in 0.5s;
 
                         &.mix {

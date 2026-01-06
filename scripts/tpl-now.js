@@ -18,22 +18,29 @@ let tplNow = {
                 });
             }
 
+            if (tplNow.feedPosts && tplNow.feedPosts.length > 0) {
+                formattedNow.push(`<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a>)</p>`);
+                let feedItems = tplNow.feedPosts.map(post => {
+                    let img = post.url ? `<img src="${post.url}" alt="${post.alt ? post.alt.replace(/\"/g, '&quot;') : ''}" style="max-height: 150px; display: block; margin: 0 auto;"/>` : '';
+                    let date = post.date ? `<div style=\"font-size:0.65rem;color:rgba(243,232,233,0.9);text-align:left;padding:2px 5px;width:100%;letter-spacing:0.5px;\">&gt; ${post.date}</div>` : '';
+                    return `<div style="border: solid 3px rgba(243, 232, 233, 0.5);margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">${img}${date}</div>`;
+                }).join('');
+                let feedContainer = `<div id=\"now-feed-scroll\" style="display:flex;gap: 15px;overflow-x:auto;white-space:nowrap;max-height:220px;max-width:700px;margin: 10px auto;padding:15px;cursor:pointer;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);">${feedItems}</div>`;
+                formattedNow.push(feedContainer);
+            }
 
-            formattedNow.push(`<hr><p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`);
+            formattedNow.push(`<p>>> latest mixes (<a href="/tpl/mixes">see more</a>)</p>`);
+            for (let mix in tplNow.mixes) {
+                let object = tplNow.mixes[mix];
+                let link = object["tidal"];
+                formattedNow.push(`<p class="sub">> rusty mix #${object.number}: <a href="${link}" target="_blank">${object.title}</a></p>`);
+            }
+
+            formattedNow.push(`<p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`);
             for (let list in tplNow.movies) {
                 let array = [tplNow.movies[list]];
                 array.forEach(movie => {
                     let item = `<p class="sub">> ${movie}</p>`;
-                    formattedNow.push(item);
-                });
-            }
-
-            // TV section
-            formattedNow.push(`<p>>> last watched television (<a href="/tpl/logs#tv">see more</a>)</p>`);
-            for (let list in tplNow.tv) {
-                let array = [tplNow.tv[list]];
-                array.forEach(tvshow => {
-                    let item = `<p class="sub">> ${tvshow}</p>`;
                     formattedNow.push(item);
                 });
             }
@@ -47,17 +54,25 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> latest mixes (<a href="/tpl/mixes">see more</a>)</p>`);
-            for (let mix in tplNow.mixes) {
-                let object = tplNow.mixes[mix];
-                let link = object["tidal"];
-                formattedNow.push(`<p class="sub">> rusty mix #${object.number}: <a href="${link}" target="_blank">${object.title}</a></p>`);
+            formattedNow.push(`<p>>> last watched tv (<a href="/tpl/logs#tv">see more</a>)</p>`);
+            for (let list in tplNow.tv) {
+                let array = [tplNow.tv[list]];
+                array.forEach(tvshow => {
+                    let item = `<p class="sub">> ${tvshow}</p>`;
+                    formattedNow.push(item);
+                });
             }
 
             tplNow.content.html(formattedNow.reduce((accumulator, log) => {
                 return accumulator + log;
             }));
             tplNow.date.text(tplNow.updated);
+
+            setTimeout(() => {
+                $("#now-feed-scroll").off("click").on("click", function() {
+                    window.location.href = "/tpl/feed";
+                });
+            }, 0);
         },
     },
     init: () => {
@@ -115,6 +130,17 @@ let tplNow = {
                 mixes.push(mix);
             }
             tplNow.mixes = mixes.slice(0,3);
+            tplNow.functions.nowDisplay();
+        })
+        .catch(error => console.log(error));
+
+        // Fetch feed.json for last 10 posts
+        fetch('../data/feed.json').then(response => response.json())
+        .then((data) => {
+            // feed.json has { items: [...] }
+            let posts = (data && data.items) ? data.items : [];
+            // Use original order, show only first 8
+            tplNow.feedPosts = posts.slice(0, 6);
             tplNow.functions.nowDisplay();
         })
         .catch(error => console.log(error));

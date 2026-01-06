@@ -20,7 +20,7 @@ let tplLogs = {
         tv: [],
     },
     yearSelect: `<p>year: <span class="year-selected">2026</span> | <button class="range" onclick="tplLogs.functions.yearSet('2025')">2025</button> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`,
-    logCategories: `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#movies">watched<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#tv">tv<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#books">read<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`,
+    logCategories: `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#movies">watched<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#books">read<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#tv">tv<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`,
     functions: {
         yearSet: (year) => {
             switch(year) {
@@ -62,11 +62,11 @@ let tplLogs = {
             if (movieCount > 0) {
                 navItems.push(`<li class="link-category"><a href="#movies">movies watched (${movieCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
             }
-            if (tvCount > 0) {
-                navItems.push(`<li class="link-category"><a href="#tv">television watched (${tvCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
-            }
             if (bookCount > 0) {
                 navItems.push(`<li class="link-category"><a href="#books">books read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
+            }
+            if (tvCount > 0) {
+                navItems.push(`<li class="link-category"><a href="#tv">tv watched (${tvCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
             }
             let logCategories = '';
             if (navItems.length > 0) {
@@ -88,24 +88,23 @@ let tplLogs = {
                 }
             }
 
-            // TV section
-            if (tvCount > 0) {
-                formattedLogs.push(`<hr><p id="tv">>> television watched in ${year} (${tvCount})`);
-                for (let list in yearObj.tv) {
-                    let array = [ ...yearObj.tv[list]];
-                    array.forEach(tvshow => {
-                        let item = `<p class="sub">> ${tvshow}</p>`;
-                        formattedLogs.push(item);
-                    });
-                }
-            }
-
             if (bookCount > 0) {
                 formattedLogs.push(`<hr><p id="books">>> books read in ${year} (${bookCount})`);
                 for (let list in yearObj.books) {
                     let array = [ ...yearObj.books[list]];
                     array.forEach(book => {
                         let item = `<p class="sub">> ${book}</p>`;
+                        formattedLogs.push(item);
+                    });
+                }
+            }
+
+            if (tvCount > 0) {
+                formattedLogs.push(`<hr><p id="tv">>> tv watched in ${year} (${tvCount})`);
+                for (let list in yearObj.tv) {
+                    let array = [ ...yearObj.tv[list]];
+                    array.forEach(tvshow => {
+                        let item = `<p class="sub">> ${tvshow}</p>`;
                         formattedLogs.push(item);
                     });
                 }
