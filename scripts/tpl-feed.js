@@ -18,7 +18,9 @@ let tplFeed = {
                 count++;
                 let array = [visibleItems[index]];
                 array.forEach((item) => {
-                    let image = `<div class="feed-item-container" id="${count}"><img src="${item.url}" alt="${item.alt}" class="feed-item"><p class="alt">${item.alt}</p><p>>> ${item.date} // <button onclick="tplFeed.functions.altToggle(${count})">alt</button></p></div>`;
+                    // mailto link for reply
+                    let mailto = `mailto:torontopubliclibra@gmail.com?subject=${encodeURIComponent('Re: TPL feed post - ' + item.date + ' - ' + item.alt)}`;
+                    let image = `<div class="feed-item-container" id="${count}"><img src="${item.url}" alt="${item.alt}" class="feed-item"><p class="alt">${item.alt}</p><p>>> ${item.date} // <button onclick="tplFeed.functions.altToggle(${count})">alt</button> // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a></p></div>`;
                     formattedFeed.push(image);
                 });
             }

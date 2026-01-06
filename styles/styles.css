@@ -951,6 +951,19 @@ html.tpl main .feed-items .feed-item-container.horizontal {
     min-width: 100%;
   }
 }
+html.tpl main .feed-items .feed-item-container a {
+  font-size: 0.75rem !important;
+  color: rgba(243, 232, 233, 0.9) !important;
+  line-height: 1.25 !important;
+}
+html.tpl main .feed-items .feed-item-container a:hover, html.tpl main .feed-items .feed-item-container a.selected {
+  color: #B57E9B !important;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main .feed-items .feed-item-container a:hover {
+    color: rgba(243, 232, 233, 0.9) !important;
+  }
+}
 html.tpl main .feed-items .feed-item-container button {
   font-size: 0.75rem;
   line-height: 1.25;
@@ -1202,12 +1215,12 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon.dis
     width: 85%;
   }
 }
-html.tpl main.tpl-subpage #read, html.tpl main.tpl-subpage #watched {
+html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
   scroll-margin-top: 255px;
   animation: fade-in 0.5s;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main.tpl-subpage #read, html.tpl main.tpl-subpage #watched {
+  html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
     scroll-margin-top: 285px;
   }
 }

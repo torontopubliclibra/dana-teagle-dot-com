@@ -7,17 +7,20 @@ let tplLogs = {
     twentySix: {
         movies: [],
         books: [],
+        tv: [],
     },
     twentyFive: {
         movies: [],
         books: [],
+        tv: [],
     },
     twentyFour: {
         movies: [],
         books: [],
+        tv: [],
     },
     yearSelect: `<p>year: <span class="year-selected">2026</span> | <button class="range" onclick="tplLogs.functions.yearSet('2025')">2025</button> | <button class="range" onclick="tplLogs.functions.yearSet('2024')">2024</button></p>`,
-    logCategories: `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">watched<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">read<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`,
+    logCategories: `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#movies">watched<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#tv">tv<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#books">read<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`,
     functions: {
         yearSet: (year) => {
             switch(year) {
@@ -37,81 +40,83 @@ let tplLogs = {
         },
         logsDisplay: () => {
             let year = tplLogs.year;
-            let movieCount = 0, bookCount = 0;
+            let movieCount = 0, bookCount = 0, tvCount = 0;
+            let yearObj;
             switch(year) {
                 case "2026":
-                    movieCount = tplLogs.twentySix.movies[0]?.length || 0;
-                    bookCount = tplLogs.twentySix.books[0]?.length || 0;
+                    yearObj = tplLogs.twentySix;
                     break;
                 case "2025":
-                    movieCount = tplLogs.twentyFive.movies[0]?.length || 0;
-                    bookCount = tplLogs.twentyFive.books[0]?.length || 0;
+                    yearObj = tplLogs.twentyFive;
                     break;
                 case "2024":
-                    movieCount = tplLogs.twentyFour.movies[0]?.length || 0;
-                    bookCount = tplLogs.twentyFour.books[0]?.length || 0;
+                    yearObj = tplLogs.twentyFour;
                     break;
             }
-            let logCategories = `<hr class="alt"><div class="tpl-categories logs"><ul><li class="link-category"><a href="#watched">movies watched (${movieCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li><li class="link-category"><a href="#read">books read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li></ul></div>`;
-            let toggles = tplLogs.yearSelect + logCategories;
-            let formattedLogs = [toggles, `<hr class="no-top"><p id="watched">>> movies watched in ${year} (${movieCount})`];
+            movieCount = yearObj.movies[0]?.length || 0;
+            bookCount = yearObj.books[0]?.length || 0;
+            tvCount = yearObj.tv && yearObj.tv[0]?.length ? yearObj.tv[0].length : 0;
 
-            switch(year) {
-                case "2026":
-                    for (let list in tplLogs.twentySix.movies) {
-                        let array = [ ...tplLogs.twentySix.movies[list]];
-                        array.forEach(movie => {
-                            let item = `<p class="sub">> ${movie}</p>`;
-                            formattedLogs.push(item);
-                        });
-                    }
-                    formattedLogs.push(`<hr><p id="read">>> books read in ${year} (${bookCount})`);
-                    for (let list in tplLogs.twentySix.books) {
-                        let array = [ ...tplLogs.twentySix.books[list]];
-                        array.forEach(book => {
-                            let item = `<p class="sub">> ${book}</p>`;
-                            formattedLogs.push(item);
-                        });
-                    }
-                    tplLogs.date.text(` [ up to ${tplLogs.updated} ]`);
-                    break;
-                case "2025":
-                    for (let list in tplLogs.twentyFive.movies) {
-                        let array = [ ...tplLogs.twentyFive.movies[list]];
-                        array.forEach(movie => {
-                            let item = `<p class="sub">> ${movie}</p>`;
-                            formattedLogs.push(item);
-                        });
-                    }
-                    formattedLogs.push(`<hr><p id="read">>> books read in ${year} (${bookCount})`);
-                    for (let list in tplLogs.twentyFive.books) {
-                        let array = [ ...tplLogs.twentyFive.books[list]];
-                        array.forEach(book => {
-                            let item = `<p class="sub">> ${book}</p>`;
-                            formattedLogs.push(item);
-                        });
-                    }
-                    tplLogs.date.text(``);
-                    break;
-                case "2024":
-                    for (let list in tplLogs.twentyFour.movies) {
-                        let array = [ ...tplLogs.twentyFour.movies[list]];
-                        array.forEach(movie => {
-                            let item = `<p class="sub">> ${movie}</p>`;
-                            formattedLogs.push(item);
-                        });
-                    }
-                    formattedLogs.push(`<hr><p id="read">>> books read in ${year} (${bookCount})`);
-                    for (let list in tplLogs.twentyFour.books) {
-                        let array = [ ...tplLogs.twentyFour.books[list]];
-                        array.forEach(book => {
-                            let item = `<p class="sub">> ${book}</p>`;
-                            formattedLogs.push(item);
-                        });
-                    }
-                    tplLogs.date.text("");
-                    break;
+            // Build navigation only for nonzero counts
+            let navItems = [];
+            if (movieCount > 0) {
+                navItems.push(`<li class="link-category"><a href="#movies">movies watched (${movieCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
             }
+            if (tvCount > 0) {
+                navItems.push(`<li class="link-category"><a href="#tv">television watched (${tvCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
+            }
+            if (bookCount > 0) {
+                navItems.push(`<li class="link-category"><a href="#books">books read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
+            }
+            let logCategories = '';
+            if (navItems.length > 0) {
+                logCategories = `<hr class="alt"><div class="tpl-categories logs"><ul>${navItems.join('')}</ul></div>`;
+            }
+            let toggles = tplLogs.yearSelect + logCategories;
+            let formattedLogs = [toggles];
+            if (movieCount > 0) {
+                formattedLogs.push(`<hr class="no-top"><p id="movies">>> movies watched in ${year} (${movieCount})`);
+            }
+
+            if (movieCount > 0) {
+                for (let list in yearObj.movies) {
+                    let array = [ ...yearObj.movies[list]];
+                    array.forEach(movie => {
+                        let item = `<p class="sub">> ${movie}</p>`;
+                        formattedLogs.push(item);
+                    });
+                }
+            }
+
+            // TV section
+            if (tvCount > 0) {
+                formattedLogs.push(`<hr><p id="tv">>> television watched in ${year} (${tvCount})`);
+                for (let list in yearObj.tv) {
+                    let array = [ ...yearObj.tv[list]];
+                    array.forEach(tvshow => {
+                        let item = `<p class="sub">> ${tvshow}</p>`;
+                        formattedLogs.push(item);
+                    });
+                }
+            }
+
+            if (bookCount > 0) {
+                formattedLogs.push(`<hr><p id="books">>> books read in ${year} (${bookCount})`);
+                for (let list in yearObj.books) {
+                    let array = [ ...yearObj.books[list]];
+                    array.forEach(book => {
+                        let item = `<p class="sub">> ${book}</p>`;
+                        formattedLogs.push(item);
+                    });
+                }
+            }
+
+            if (year === "2026") {
+                tplLogs.date.text(` [ up to ${tplLogs.updated} ]`);
+            } else {
+                tplLogs.date.text("");
+            }
+
             formattedLogs.push(`<hr>` + tplLogs.yearSelect + `<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`);
             tplLogs.content.html(formattedLogs.reduce((accumulator, log) => {
                 return accumulator + log;
@@ -131,18 +136,21 @@ let tplLogs = {
                     let twentySix = {
                         "movies": [data["2026"] ? data["2026"]["movies"] : []],
                         "books": [data["2026"] ? data["2026"]["books"] : []],
+                        "tv": [data["2026"] && data["2026"]["tv"] ? data["2026"]["tv"] : []],
                     };
                     tplLogs.twentySix = twentySix;
 
                     let twentyFive = {
                         "movies": [data["2025"] ? data["2025"]["movies"] : []],
                         "books": [data["2025"] ? data["2025"]["books"] : []],
+                        "tv": [data["2025"] && data["2025"]["tv"] ? data["2025"]["tv"] : []],
                     };
                     tplLogs.twentyFive = twentyFive;
 
                     let twentyFour = {
                         "movies": [data["2024"] ? data["2024"]["movies"] : []],
                         "books": [data["2024"] ? data["2024"]["books"] : []],
+                        "tv": [data["2024"] && data["2024"]["tv"] ? data["2024"]["tv"] : []],
                     };
                     tplLogs.twentyFour = twentyFour;
                     tplLogs.functions.logsDisplay();
@@ -151,7 +159,7 @@ let tplLogs = {
 
                 if (window.location.hash) {
                     let hash = window.location.hash;
-                    if (hash === "#watched" || hash === "#read") {
+                    if (hash === "#movies" || hash === "#books" || hash === "#tv") {
                         setTimeout(() => {
                             document.querySelector(hash).scrollIntoView();
                         }, 100);

@@ -509,6 +509,23 @@ html.tpl {
                     min-width: 100%;
                 }
 
+                a {
+                    font-size: 0.75rem !important;
+                    color: rgba($white, 0.9) !important;
+                    line-height: 1.25 !important;
+
+                    &:hover, &.selected {
+                        color: $color2 !important;
+                    }
+
+                    
+                    @media only screen and (max-width: $tablet) {
+                        &:hover {
+                            color: rgba($white, 0.9) !important;
+                        }
+                    }
+                }
+
                 button {
                     font-size: 0.75rem;
                     line-height: 1.25;
@@ -788,7 +805,7 @@ html.tpl {
                 }
             }
 
-            #read, #watched {
+            #books, #movies, #tv {
                 scroll-margin-top: 255px;
                 @media only screen and (max-width: $tablet) {
                     scroll-margin-top: 285px;

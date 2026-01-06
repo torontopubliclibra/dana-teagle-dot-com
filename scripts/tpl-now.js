@@ -5,6 +5,7 @@ let tplNow = {
     list: [],
     movies: [],
     books: [],
+    tv: [],
     mixes: {},
     functions: {
         nowDisplay: () => {
@@ -17,7 +18,8 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<hr><p>>> last watched (<a href="/tpl/logs#watched">see more</a>)</p>`);
+
+            formattedNow.push(`<hr><p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`);
             for (let list in tplNow.movies) {
                 let array = [tplNow.movies[list]];
                 array.forEach(movie => {
@@ -26,7 +28,17 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> last read (<a href="/tpl/logs#read">see more</a>)</p>`);
+            // TV section
+            formattedNow.push(`<p>>> last watched television (<a href="/tpl/logs#tv">see more</a>)</p>`);
+            for (let list in tplNow.tv) {
+                let array = [tplNow.tv[list]];
+                array.forEach(tvshow => {
+                    let item = `<p class="sub">> ${tvshow}</p>`;
+                    formattedNow.push(item);
+                });
+            }
+
+            formattedNow.push(`<p>>> last read books (<a href="/tpl/logs#books">see more</a>)</p>`);
             for (let list in tplNow.books) {
                 let array = [tplNow.books[list]];
                 array.forEach(book => {
@@ -65,9 +77,11 @@ let tplNow = {
         .then((data) => {
             let movies2026 = (data["2026"] && data["2026"]["movies"]) ? data["2026"]["movies"] : [];
             let books2026 = (data["2026"] && data["2026"]["books"]) ? data["2026"]["books"] : [];
+            let tv2026 = (data["2026"] && data["2026"]["tv"]) ? data["2026"]["tv"] : [];
 
             let movies2025 = (data["2025"] && data["2025"]["movies"]) ? data["2025"]["movies"] : [];
             let books2025 = (data["2025"] && data["2025"]["books"]) ? data["2025"]["books"] : [];
+            let tv2025 = (data["2025"] && data["2025"]["tv"]) ? data["2025"]["tv"] : [];
 
             let movies = movies2026.slice(0, 3);
             if (movies.length < 3) {
@@ -77,9 +91,14 @@ let tplNow = {
             if (books.length < 3) {
                 books = books.concat(books2025.slice(0, 3 - books.length));
             }
+            let tv = tv2026.slice(0, 3);
+            if (tv.length < 3) {
+                tv = tv.concat(tv2025.slice(0, 3 - tv.length));
+            }
 
             tplNow.movies = movies;
             tplNow.books = books;
+            tplNow.tv = tv;
             tplNow.functions.nowDisplay();
         })
         .catch(error => console.log(error));
