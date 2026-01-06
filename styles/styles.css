@@ -844,10 +844,6 @@ html.tpl main .badges a:hover img, html.tpl main .badges button:hover img {
     margin: 5px 0;
     justify-content: left;
   }
-  html.tpl main .badges img {
-    width: 101px;
-    height: 35px;
-  }
 }
 html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
   width: 90%;
