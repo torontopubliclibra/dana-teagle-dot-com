@@ -29,12 +29,16 @@ let tplNow = {
                 formattedNow.push(feedContainer);
             }
 
-            formattedNow.push(`<p>>> latest mixes (<a href="/tpl/mixes">see more</a>)</p>`);
-            for (let mix in tplNow.mixes) {
-                let object = tplNow.mixes[mix];
+            formattedNow.push(`<p>>> latest rusty mixes (<a href="/tpl/mixes">see more</a>)</p>`);
+            // Container for latest mixes styled like mixes page
+            let mixesItems = tplNow.mixes.map(object => {
                 let link = object["tidal"];
-                formattedNow.push(`<p class="sub">> rusty mix #${object.number}: <a href="${link}" target="_blank">${object.title}</a></p>`);
-            }
+                let image = object["image"] ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" style="width:50px;height:50px;margin:5px 2px;border:solid 3px rgba(255,255,255,0.5);pointer-events:none;object-fit:cover;"/>` : '';
+                let title = `<p style="text-align:left;min-width:calc(100% - 100px);line-height:1.25;margin:0;"><small>#${object.number} &#92;&#92;<br/>${object.title}</small></p>`;
+                let icon = `<img src="/assets/icons/external-link.svg" class="icon" alt="external link icon" style="width:18px;filter:invert(1);margin-left:10px;"/>`;
+                return `<a href="${link}" target="_blank" class="sub mix" style="display:flex;max-width:700px;gap:0;align-items:center;justify-content:space-between;margin-bottom:10px;text-decoration:none;border:none;background-image:linear-gradient(120deg,rgba(181,126,155,0.1) 50%,rgba(122,145,177,0.1) 100%);margin-right:auto;cursor:pointer;transition:background-image 0.5s;">${image}${title}${icon}</a>`;
+            }).join('');
+            formattedNow.push(`<div class="now-mixes-list">${mixesItems}</div>`);
 
             formattedNow.push(`<p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`);
             for (let list in tplNow.movies) {
@@ -126,6 +130,7 @@ let tplNow = {
                     "title": object,
                     "number": data[object]["number"],
                     "tidal": data[object]["tidal"],
+                    "image": data[object]["image"]
                 };
                 mixes.push(mix);
             }

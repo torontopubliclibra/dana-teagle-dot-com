@@ -1205,7 +1205,6 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover.disabl
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
   width: 75px;
-  height: 75px;
   margin: 10px 0;
   border: solid 3px rgba(243, 232, 233, 0.5);
   pointer-events: none;
