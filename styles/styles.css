@@ -807,13 +807,16 @@ html.tpl main textarea {
   padding: 5px;
 }
 html.tpl main .badges {
+  background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
+  padding: 10px;
+  padding-top: 15px;
   width: 85%;
   max-width: 750px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 10px;
-  margin: 10px 0;
+  margin: 0;
 }
 html.tpl main .badges img {
   margin: 0;
@@ -1148,12 +1151,17 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text p {
   margin: 10px 0;
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub {
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
   max-width: 700px;
   animation: fade-in 0.5s;
+}
+html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub a {
+  font-size: 0.85rem;
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix {
   display: flex;
