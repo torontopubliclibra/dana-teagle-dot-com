@@ -1,27 +1,3 @@
-// Flex row for featuring line in tplNow
-.featuring-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-}
-.featuring-ellipsis-one {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 0;
-    max-width: 100%;
-}
-// One-line ellipsis for featuring lines in tplNow
-.featuring-ellipsis-one {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-}
 @use 'mixins' as *;
 @use 'variables' as *;
 @use 'animations';
@@ -794,6 +770,10 @@ html.tpl {
                             text-align: left;
                             width: calc(100% - 175px);
                             line-height: 1.5;
+
+                            @media only screen and (max-width: $tablet) {
+                                width: calc(100% - 140px);
+                            }
                         }
 
                         &.mix:hover, &.mix:focus {
@@ -813,6 +793,10 @@ html.tpl {
                             margin: 10px 0;
                             border: solid 3px rgba($white, 0.5);
                             pointer-events: none;
+
+                            @media only screen and (max-width: $tablet) {
+                                width: 100px;
+                            }
 
                             &.icon {
                                 border: none;
@@ -1123,6 +1107,28 @@ html.tpl {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: normal;
+        max-width: 100%;
+    }
+    .featuring-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+    }
+    .featuring-ellipsis-one {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+        max-width: 100%;
+    }
+    .featuring-ellipsis-one {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         max-width: 100%;
     }
 }

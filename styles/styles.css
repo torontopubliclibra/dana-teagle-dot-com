@@ -1187,6 +1187,11 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
   width: calc(100% - 175px);
   line-height: 1.5;
 }
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix p {
+    width: calc(100% - 140px);
+  }
+}
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:hover, html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix:focus {
   background-image: linear-gradient(120deg, rgba(181, 126, 155, 0.2) 50%, rgba(122, 145, 177, 0.2) 100%);
 }
@@ -1203,6 +1208,11 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
   margin: 10px 0;
   border: solid 3px rgba(243, 232, 233, 0.5);
   pointer-events: none;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img {
+    width: 100px;
+  }
 }
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon {
   border: none;
@@ -1504,6 +1514,28 @@ html.tpl .featuring-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  max-width: 100%;
+}
+html.tpl .featuring-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+html.tpl .featuring-ellipsis-one {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
+}
+html.tpl .featuring-ellipsis-one {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   max-width: 100%;
 }
 
