@@ -23,29 +23,31 @@ let tplFeed = {
                         tplFeed.range.start = Math.floor(idx / 10) * 10;
                         tplFeed.range.end = tplFeed.range.start + 10;
                         tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
-                        // Use requestAnimationFrame loop to ensure scroll happens after rendering
+                        // Add a longer delay to ensure the DOM is ready and rendering is complete
                         const tryScroll = () => {
                             const el = document.getElementById(hash);
                             if (el) {
-                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                // After scrollIntoView, force scroll to top of item after a short delay
                                 setTimeout(() => {
-                                    const rect = el.getBoundingClientRect();
-                                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                                    const isMobile = window.matchMedia('(max-width: 600px)').matches;
-                                    const offset = isMobile ? 290 : 260;
-                                    window.scrollTo({
-                                        top: rect.top + scrollTop - offset,
-                                        behavior: 'auto'
-                                    });
-                                }, 100);
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    // After scrollIntoView, force scroll to top of item after a longer delay
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                                        const isMobile = window.matchMedia('(max-width: 600px)').matches;
+                                        const offset = isMobile ? 290 : 260;
+                                        window.scrollTo({
+                                            top: rect.top + scrollTop - offset,
+                                            behavior: 'auto'
+                                        });
+                                    }, 350); // Increased delay for reliability
+                                }, 250); // Increased delay before scrollIntoView
                             } else {
                                 requestAnimationFrame(tryScroll);
                             }
                         };
                         tryScroll();
                     } else {
-                        scrollToItem();
+                        setTimeout(scrollToItem, 250); // Add delay even if already in range
                     }
                 }
             }
