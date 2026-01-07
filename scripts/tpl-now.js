@@ -22,7 +22,7 @@ let tplNow = {
                 formattedNow.push(`<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a>)</p>`);
                     let feedItems = tplNow.feedPosts.map(post => {
                         let id = post.id || post.ID || post.number;
-                        let permalink = id ? `/feed#${id}` : '#';
+                        let permalink = id ? `/tpl/feed#${id}` : '#';
                         let img = post.url ? `<img src=\"${post.url}\" alt=\"${post.alt ? post.alt.replace(/\"/g, '&quot;') : ''}\" style=\"max-height: 150px; display: block; margin: 0 auto;\"/>` : '';
                         let date = post.date ? `<div style=\"font-size:0.65rem;color:rgba(243,232,233,0.9);text-align:left;padding:2px 5px;width:100%;letter-spacing:0.5px;\">&gt; ${post.date}</div>` : '';
                         return `<a href=\"${permalink}\" class=\"now-feed-post\" style=\"border: solid 3px rgba(243, 232, 233, 0.5);margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;background:none;\" target=\"_blank\">${img}${date}</a>`;
