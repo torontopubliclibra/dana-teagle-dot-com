@@ -3,13 +3,15 @@
         "number": "198",
         "tidal": "https://tidal.com/playlist/720c2c58-e3ea-4cdb-8f61-c55ac1317101",
         "spotify": "https://open.spotify.com/playlist/37Tuask04qtfLr168PBg22",
-        "image": "https://resources.tidal.com/images/b496929a/6a2b/4e59/8609/9efdbb35fd87/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/b496929a/6a2b/4e59/8609/9efdbb35fd87/1080x1080.jpg",
+        "featuring": ["Broken Social Scene, Florence + the Machine, Ethel Cain, Lily Allen, Fionn, Fiona Apple, Wolf Alice, Nico, Labi Siffre, Soccer Mommy, Lucy Dacus, Phoebe Bridgers, Aretha Franklin"]
     },
     "struggle (let me be)": {
         "number": "197",
         "tidal": "https://tidal.com/playlist/e2a4d2ef-4283-46b1-a528-96e9b2a7e499",
         "spotify": "https://open.spotify.com/playlist/1KCPExI7n6bxdBVanJqIY7",
-        "image": "https://resources.tidal.com/images/dcea7fd9/d7e8/4e40/908d/9554318527db/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/dcea7fd9/d7e8/4e40/908d/9554318527db/1080x1080.jpg",
+        "featuring": ["Magdelena Bay", "Anna von Hausswolff", "Rosalía", "Björk", "Yves Tumor", "U.S. Girls", "Sudan Archives", "Lily Allen", "Britney Spears", "Addison Rae", "Blood Orange", "Tariq Al-Sabir", "Caroline Polachek", "Charli XCX"]
     },
     "solitary daughter (many friends)": {
         "number": "196",

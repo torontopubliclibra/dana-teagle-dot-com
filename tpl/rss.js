@@ -10,7 +10,7 @@ let tplRssFormatter = {
     },
     formatRss: (json) => {
         let formattedItems = '';
-        json.items.slice(0, 11).forEach((item) => {
+        json.items.slice(0, 10).forEach((item) => {
             let date = Array.isArray(item.date) ? item.date[0] : item.date;
             let formattedDate = tplRssFormatter.formatDate(date);
             let headline = item.alt || '';

@@ -1,3 +1,27 @@
+// Flex row for featuring line in tplNow
+.featuring-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+.featuring-ellipsis-one {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    max-width: 100%;
+}
+// One-line ellipsis for featuring lines in tplNow
+.featuring-ellipsis-one {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
 @use 'mixins' as *;
 @use 'variables' as *;
 @use 'animations';
@@ -768,7 +792,7 @@ html.tpl {
 
                         &.mix p {
                             text-align: left;
-                            min-width: calc(100% - 120px);
+                            width: calc(100% - 175px);
                             line-height: 1.5;
                         }
 
@@ -785,7 +809,7 @@ html.tpl {
                         }
 
                         &.mix img {
-                            width: 75px;
+                            width: 125px;
                             margin: 10px 0;
                             border: solid 3px rgba($white, 0.5);
                             pointer-events: none;
@@ -1086,10 +1110,19 @@ html.tpl {
             }
         }
     }
-    .feed-item-container {
+    .feed-item-container, .mix {
         scroll-margin-top: 260px;
             @media (max-width: 600px) {
                 scroll-margin-top: 290px;
             }
+    }
+    .featuring-ellipsis {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        max-width: 100%;
     }
 }
