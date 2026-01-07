@@ -10,31 +10,48 @@ let rustpropFeed = {
     visibleItems: [],
     functions: {
         scrollToHash: function() {
-                    if (window.location.hash) {
-                        const id = window.location.hash.substring(1);
-                        // Find index of item with this id
-                        const idx = rustpropFeed.items.findIndex(item => item.id === id);
-                        if (idx !== -1) {
-                            // If not on current page, paginate to correct page
-                            if (idx < rustpropFeed.range.start || idx >= rustpropFeed.range.end) {
-                                rustpropFeed.range.start = Math.floor(idx / 10) * 10;
-                                rustpropFeed.range.end = rustpropFeed.range.start + 10;
-                                rustpropFeed.functions.display(rustpropFeed.range.start, rustpropFeed.range.end);
-                                // Wait for DOM update before scrolling
+            if (window.location.hash) {
+                const id = window.location.hash.substring(1);
+                // Find index of item with this id
+                const idx = rustpropFeed.items.findIndex(item => item.id === id);
+                if (idx !== -1) {
+                    // If not on current page, paginate to correct page
+                    if (idx < rustpropFeed.range.start || idx >= rustpropFeed.range.end) {
+                        rustpropFeed.range.start = Math.floor(idx / 10) * 10;
+                        rustpropFeed.range.end = rustpropFeed.range.start + 10;
+                        rustpropFeed.functions.display(rustpropFeed.range.start, rustpropFeed.range.end);
+                        // Add a longer delay to ensure the DOM is ready and rendering is complete
+                        const tryScroll = () => {
+                            const el = document.getElementById(id);
+                            if (el) {
                                 setTimeout(() => {
-                                    const el = document.getElementById(id);
-                                    if (el) {
-                                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    }
-                                }, 100);
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                                        const isMobile = window.matchMedia('(max-width: 600px)').matches;
+                                        const offset = isMobile ? 290 : 260;
+                                        window.scrollTo({
+                                            top: rect.top + scrollTop - offset,
+                                            behavior: 'auto'
+                                        });
+                                    }, 350); // Increased delay for reliability
+                                }, 250); // Increased delay before scrollIntoView
                             } else {
-                                const el = document.getElementById(id);
-                                if (el) {
-                                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }
+                                requestAnimationFrame(tryScroll);
                             }
-                        }
+                        };
+                        tryScroll();
+                    } else {
+                        setTimeout(() => {
+                            const el = document.getElementById(id);
+                            if (el) {
+                                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 250); // Add delay even if already in range
                     }
+                }
+            }
                 },
         display: function(start, end) {
                         let formatted = [];
