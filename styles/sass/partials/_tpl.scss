@@ -696,11 +696,19 @@ html.tpl {
                     text-decoration: underline;
                     font-size: 1rem;
 
-                    &:hover {
+                    &:hover, &:disabled {
                         color: $color1;
 
                         @media only screen and (max-width: $tablet) {
                             color: $white;
+                        }
+                    }
+                    &:disabled {
+                        text-decoration: none;
+                        cursor: default;
+                        font-style: italic;
+                        @media only screen and (max-width: $tablet) {
+                            color: $color1;
                         }
                     }
                     @media only screen and (max-width: $tablet) {

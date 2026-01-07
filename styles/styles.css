@@ -1114,12 +1114,22 @@ html.tpl main.tpl-subpage .tpl-page-content button.range {
   text-decoration: underline;
   font-size: 1rem;
 }
-html.tpl main.tpl-subpage .tpl-page-content button.range:hover {
+html.tpl main.tpl-subpage .tpl-page-content button.range:hover, html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
   color: #84A59D;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main.tpl-subpage .tpl-page-content button.range:hover {
+  html.tpl main.tpl-subpage .tpl-page-content button.range:hover, html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
     color: #f3e8e9;
+  }
+}
+html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
+  text-decoration: none;
+  cursor: default;
+  font-style: italic;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
+    color: #84A59D;
   }
 }
 @media only screen and (max-width: 970px) {
