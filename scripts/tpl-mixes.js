@@ -2,7 +2,7 @@ let tplMixes = {
     nav: $(".tpl-page-nav"),
     content: $(".tpl-page-text"),
     mixes: {},
-    range: "4",
+    range: "8",
     query: "",
     stream: "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
@@ -10,7 +10,7 @@ let tplMixes = {
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: `<p id="range" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
         <button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" disabled>&lt;&lt; newer</button> | 
-        <span id="range-label">#151-200</span> | 
+        <span id="range-label">#176-200</span> | 
         <button class="range" id="older-btn" onclick="tplMixes.functions.older()" style="min-width:60px;">older &gt;&gt;</button>
     </p>`,
     functions: {
@@ -28,13 +28,17 @@ let tplMixes = {
         },
         updateRangeNav: () => {
             let ranges = [
-                {id: "1", label: "#1-50"},
-                {id: "2", label: "#51-100"},
-                {id: "3", label: "#101-150"},
-                {id: "4", label: "#151-200"}
+                {id: "1", label: "#1-25"},
+                {id: "2", label: "#26-50"},
+                {id: "3", label: "#51-75"},
+                {id: "4", label: "#76-100"},
+                {id: "5", label: "#101-125"},
+                {id: "6", label: "#126-150"},
+                {id: "7", label: "#151-175"},
+                {id: "8", label: "#176-200"}
             ];
             let idx = ranges.findIndex(r => r.id === tplMixes.range);
-            let label = ranges[idx].label;
+            let label = ranges[idx] ? ranges[idx].label : "";
             let olderDisabled = idx === 0 ? 'disabled' : '';
             let newerDisabled = idx === ranges.length-1 ? 'disabled' : '';
             tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
@@ -44,14 +48,14 @@ let tplMixes = {
             </p>`;
         },
         older: () => {
-            let ranges = ["1", "2", "3", "4"];
+            let ranges = ["1", "2", "3", "4", "5", "6", "7", "8"];
             let idx = ranges.indexOf(tplMixes.range);
             if (idx > 0) {
                 tplMixes.functions.rangeSet(ranges[idx-1]);
             }
         },
         newer: () => {
-            let ranges = ["1", "2", "3", "4"];
+            let ranges = ["1", "2", "3", "4", "5", "6", "7", "8"];
             let idx = ranges.indexOf(tplMixes.range);
             if (idx < ranges.length-1) {
                 tplMixes.functions.rangeSet(ranges[idx+1]);
@@ -103,147 +107,38 @@ let tplMixes = {
                 if (tplMixes.stream == "spotify") {
                     stream = "spotify";
                 }
-                switch(range) {
-                    case "4":
-                        for (let mix in tplMixes.mixes) {
-                            let object = tplMixes.mixes[mix];
-                            let count = Number(object.number);
-                            let link = object[stream];
-                            let featuringBar = '';
-                            if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                                let features = object.featuring;
-                                if (features.length === 1 && typeof features[0] === 'string' && features[0].includes(',')) {
-                                    features = features[0].split(',').map(f => f.trim());
-                                }
-                                featuringBar = `<div class=\"featuring-bar\">${features.join(', ')}</div>`;
-                            }
-                            if (count >= 151 && count <= 200 && link) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"rusty mix #${object.number} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;&#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`)
-                            } else if (count >= 151 && count <= 200 && !link) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;&#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`)
-                            }
+                let rangeBounds = {
+                    "1": [1, 25],
+                    "2": [26, 50],
+                    "3": [51, 75],
+                    "4": [76, 100],
+                    "5": [101, 125],
+                    "6": [126, 150],
+                    "7": [151, 175],
+                    "8": [176, 200]
+                };
+                let bounds = rangeBounds[range] || [1, 25];
+                for (let mix in tplMixes.mixes) {
+                    let object = tplMixes.mixes[mix];
+                    let count = Number(object.number);
+                    let link = object[stream];
+                    let featuringBar = '';
+                    if (Array.isArray(object.featuring) && object.featuring.length > 0) {
+                        let features = object.featuring;
+                        if (features.length === 1 && typeof features[0] === 'string' && features[0].includes(',')) {
+                            features = features[0].split(',').map(f => f.trim());
                         }
-                        break;
-                    case "3":
-                        for (let mix in tplMixes.mixes) {
-                            let object = tplMixes.mixes[mix];
-                            let count = Number(object.number);
-                            let link = object[stream];
-                            let featuringBar = '';
-                            if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                                featuringBar = `<div class=\"featuring-bar\">${object.featuring.join(', ')}</div>`;
-                            }
-                            if (count >= 101 && count <= 150 && link ) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`)
-                            } else if (count >= 101 && count <= 150 && !link) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`)
-                            }
-                        }
-                        break;
-                    case "2":
-                        for (let mix in tplMixes.mixes) {
-                            let object = tplMixes.mixes[mix];
-                            let count = Number(object.number);
-                            let link = object[stream];
-                            let featuringBar = '';
-                            if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                                featuringBar = `<div class=\"featuring-bar\">${object.featuring.join(', ')}</div>`;
-                            }
-                            if (count >= 51 && count <= 100 && link ) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`)
-                            } else if (count >= 51 && count <= 100 && !link) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`)
-                            }
-                        }
-                        break;
-                    case "1":
-                        for (let mix in tplMixes.mixes) {
-                            let object = tplMixes.mixes[mix];
-                            let count = Number(object.number);
-                            let link = object[stream];
-                            let featuringBar = '';
-                            if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                                featuringBar = `<div class=\"featuring-bar\">${object.featuring.join(', ')}</div>`;
-                            }
-                            if (count >= 1 && count <= 50 && link ) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`)
-                            } else if (count >= 1 && count <= 50 && !link) {
-                                let details = `
-                                    <div class=\"mix-details-flex\">
-                                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>
-                                        <div class=\"mix-info\">
-                                            <p><small>#${object.number} &#92;</small><br/>${object.title}</p>
-                                            <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">
-                                        </div>
-                                    </div>
-                                `;
-                                formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`)
-                            }
-                        }
-                        break;
+                        featuringBar = `<div class=\"featuring-bar\">${features.join(', ')}</div>`;
+                    }
+                    if (count >= bounds[0] && count <= bounds[1] && link) {
+                        let details = `
+                            <div class=\"mix-details-flex\">\n                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"rusty mix #${object.number} cover art\"/>`}</div>\n                        <div class=\"mix-info\">\n                            <p><small>#${object.number} &#92;&#92;</small><br/>${object.title}</p>\n                            <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">\n                        </div>\n                    </div>\n                `;
+                        formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`)
+                    } else if (count >= bounds[0] && count <= bounds[1] && !link) {
+                        let details = `
+                            <div class=\"mix-details-flex\">\n                        <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>\n                        <div class=\"mix-info\">\n                            <p><small>#${object.number} &#92;&#92;</small><br/>${object.title}</p>\n                            <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">\n                        </div>\n                    </div>\n                `;
+                        formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`)
+                    }
                 }
                 tplMixes.content.html(formattedMixes.reduce((accumulator, mix) => {
                     return accumulator + mix;
@@ -295,23 +190,28 @@ let tplMixes = {
             if (!hash) return;
             let mixNum = Number(hash);
             if (!mixNum) return;
-            // Determine correct range for any mix number
             let targetRange = null;
-            if (mixNum >= 151 && mixNum <= 200) {
+            if (mixNum >= 176 && mixNum <= 200) {
+                targetRange = "8";
+            } else if (mixNum >= 151 && mixNum <= 175) {
+                targetRange = "7";
+            } else if (mixNum >= 126 && mixNum <= 150) {
+                targetRange = "6";
+            } else if (mixNum >= 101 && mixNum <= 125) {
+                targetRange = "5";
+            } else if (mixNum >= 76 && mixNum <= 100) {
                 targetRange = "4";
-            } else if (mixNum >= 101 && mixNum <= 150) {
+            } else if (mixNum >= 51 && mixNum <= 75) {
                 targetRange = "3";
-            } else if (mixNum >= 51 && mixNum <= 100) {
+            } else if (mixNum >= 26 && mixNum <= 50) {
                 targetRange = "2";
-            } else if (mixNum >= 1 && mixNum <= 50) {
+            } else if (mixNum >= 1 && mixNum <= 25) {
                 targetRange = "1";
             }
             if (!targetRange) return;
-            // If not on the correct range, switch and then scroll after display
             if (tplMixes.range !== targetRange) {
                 tplMixes.range = targetRange;
                 tplMixes.functions.rangeSet(targetRange);
-                // Poll for element after range switch
                 let pollCount = 0;
                 const maxPolls = 40;
                 const pollForElement = () => {
