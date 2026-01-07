@@ -6,6 +6,7 @@ let tplMixes = {
     query: "",
     stream: "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
+    clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');"  class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: `<p id="range" style="padding-top:10px;">range: <span class="range-selected">#151-200</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button></p>`,
     functions: {
@@ -13,13 +14,16 @@ let tplMixes = {
             tplMixes.query = value;
             if (value) {
                 $("#range").hide();
+                $("#mix-search-clear").show();
+
             } else {
                 $("#range").show();
+                $("#mix-search-clear").hide();
             };
             tplMixes.functions.mixDisplay();
         },
         rangeSet: (range) => {
-            if (window.location.hash) {
+            if (window.location.hash) {range
                 history.replaceState(null, '', window.location.pathname + window.location.search);
             }
             switch(range) {
@@ -62,11 +66,10 @@ let tplMixes = {
             tplMixes.functions.mixDisplay();
         },
         navDisplay: () => {
-            let navContent = [tplMixes.searchBar, tplMixes.rangeSelect];
+            let navContent = [tplMixes.searchBar, tplMixes.clearSearchButton, tplMixes.rangeSelect];
 
             if (tplMixes.query) {
-                // If there is a search query, do not show range buttons
-                navContent = [tplMixes.searchBar];
+                navContent = [tplMixes.searchBar, tplMixes.clearSearchButton];
             }
 
             tplMixes.nav.html(navContent.reduce((accumulator, item) => {
@@ -377,7 +380,6 @@ let tplMixes = {
             tplMixes.functions.scrollToHash();
         });
 
-        // Mobile: Hide header on search input focus
         $(document).on('focus', '#mix-search-input', function() {
             if (window.matchMedia('(max-width: 600px)').matches) {
                 $('header').hide();
@@ -390,6 +392,8 @@ let tplMixes = {
                 $('nav').show();
             }
         });
+
+        tplMixes.functions.updateQuery('');
     },
 };
 $(document).ready(() => {

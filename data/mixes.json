@@ -130,31 +130,35 @@
         "tidal": "https://tidal.com/playlist/5ea88459-3e79-4b8c-a0d1-9cca9c5be4c2",
         "spotify": "https://open.spotify.com/playlist/2KZmixQ0pXm104DPip6r3z",
         "image": "https://resources.tidal.com/images/f0ef3cb9/5278/480d/9b6d/fb2276f92c4d/1080x1080.jpg",
-        "featuring": []
+        "featuring": ["The Beaches", "Sabrina Carpenter", "gird in red", "Charli XCX", "Lorde", "Katie Gavin", "Frances Forever", "Orville Peck", "Waxahatchee", "Dua Lipa"]
     },
     "smalltown boy (a nice mover)": {
         "number": "179",
         "tidal": "https://tidal.com/playlist/d8d59eaf-8e2b-455e-9af2-9f9be03d0290",
         "spotify": "https://open.spotify.com/playlist/4ebGRmIzPnd9csD0YEl8iZ",
-        "image": "https://resources.tidal.com/images/d598504b/f99d/4e40/8ce4/5b13526eef26/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/d598504b/f99d/4e40/8ce4/5b13526eef26/1080x1080.jpg",
+        "featuring": ["Bronski Beat", "Pet Shop Boys", "Eurythmics", "Annie Lennox", "New Order", "Frankie Goes to Hollywood", "Yaz", "Visage", "Gina X Performance"]
     },
     "challengers (mood swings)": {
         "number": "178",
         "tidal": "https://tidal.com/playlist/b9839d79-584a-4266-82d3-70af38b037e6",
         "spotify": "https://open.spotify.com/playlist/53GEhukPa9zdwRZjARnslf",
-        "image": "https://resources.tidal.com/images/066a7bc2/46da/48d3/a4a8/90ef510e7b6f/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/066a7bc2/46da/48d3/a4a8/90ef510e7b6f/1080x1080.jpg",
+        "featuring": ["Trent Reznor and Atticus Ross", "Little Simz", "Charli XCX", "Nine Inch Nails", "Jamie xx", "Jungle", "Joy Anonymous", "Justice", "Tame Impala", "Boyz Noize", "Underworld"]
     },
     "illusion (pain relief)": {
         "number": "177",
         "tidal": "https://tidal.com/playlist/15c7cdd6-ab98-45f8-9feb-482c635e1942",
         "spotify": "https://open.spotify.com/playlist/3BNnO9lKxPOwI6TJfEX9mw",
-        "image": "https://resources.tidal.com/images/c3957ce7/fe44/4462/895f/348de14b756b/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/c3957ce7/fe44/4462/895f/348de14b756b/1080x1080.jpg",
+        "featuring": ["Dua Lipa", "Flight Facilities", "Your Smith", "Carly Rae Jepsen", "MUNA", "Empress Of", "Tsatsamis", "Arlo Parks", "Romy", "Ralph"]
     },
     "little bit of rain (can we pretend)": {
         "number": "176",
         "tidal": "https://tidal.com/playlist/226d2d03-0047-4d01-92c5-47ef8d704a6d",
         "spotify": "https://open.spotify.com/playlist/0C6PF8ItcvTQ8L8q5bUGZq",
-        "image": "https://resources.tidal.com/images/9110b880/acc0/4c89/a874/c923075b489f/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/9110b880/acc0/4c89/a874/c923075b489f/1080x1080.jpg",
+        "featuring": ["Bill Withers", "Kahil El'Zabar", "Mulatu Astatke", "Alice Coltrane", "Pharoah Sanders", "Menahan Street Band", "Jeff Parker", "Kamasi Washington", "André 3000", "Labi Siffre", "Nina Simone", "Roberta Flack", "Karen Dalton"]
     },
     "if I could do it again (didn't I)": {
         "number": "175",
