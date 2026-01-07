@@ -4,7 +4,7 @@
         "tidal": "https://tidal.com/playlist/720c2c58-e3ea-4cdb-8f61-c55ac1317101",
         "spotify": "https://open.spotify.com/playlist/37Tuask04qtfLr168PBg22",
         "image": "https://resources.tidal.com/images/b496929a/6a2b/4e59/8609/9efdbb35fd87/1080x1080.jpg",
-        "featuring": ["Broken Social Scene, Florence + the Machine, Ethel Cain, Lily Allen, Fionn, Fiona Apple, Wolf Alice, Nico, Labi Siffre, Soccer Mommy, Lucy Dacus, Phoebe Bridgers, Aretha Franklin"]
+        "featuring": ["Broken Social Scene", "Florence + the Machine", "Ethel Cain", "Lily Allen", "Fionn", "Fiona Apple", "Wolf Alice", "Nico", "Labi Siffre", "Soccer Mommy", "Lucy Dacus", "Phoebe Bridgers", "Aretha Franklin"]
     },
     "struggle (let me be)": {
         "number": "197",
@@ -31,31 +31,36 @@
         "number": "194",
         "tidal": "https://tidal.com/playlist/8e08a280-41f4-409a-b2dc-bfc40110ef2e",
         "spotify": "https://open.spotify.com/playlist/5OgPFXCoUSDjtMUgRg3Xog",
-        "image": "https://resources.tidal.com/images/3144a550/6035/4960/b985/05fc4011d7c5/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/3144a550/6035/4960/b985/05fc4011d7c5/1080x1080.jpg",
+        "featuring": ["Bella White", "Emmylou Harris", "Bonnie Raitt", "Fleetwood Mac", "Gillian Welch", "Linda Ronstadt", "Carly Simon", "The Secret Sisters", "Tanya Tucker"]
     },
     "love you all the way (a new decade)": {
         "number": "193",
         "tidal": "https://tidal.com/playlist/ba00bfe1-a438-43ab-a8de-bc9075f1984a",
         "spotify": "https://open.spotify.com/playlist/0SvfUhBMt9egpDTIWIggjH",
-        "image": "https://resources.tidal.com/images/a4d8263f/b090/4657/88fc/70d10110a694/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/a4d8263f/b090/4657/88fc/70d10110a694/1080x1080.jpg",
+        "featuring": ["Julien Baker", "TORRES", "Waxahatchee", "Gillian Welch", "Julia Jacklin", "David Byrne", "Brian Eno", "Blood Orange", "Prince", "A Tribe Called Quest", "U.S. Girls", "Florence + the Machine", "Wilco", "Bonnie Raitt"]
     },
     "I am unwritten (lucky)": {
         "number": "192",
         "tidal": "https://tidal.com/playlist/a16fd5a0-d08b-4cd6-9402-82b42ef99301",
         "spotify": "https://open.spotify.com/playlist/5l0nPDEkgUBWzjFj1cyS0e",
-        "image": "https://resources.tidal.com/images/befe6c07/6aaf/4219/b9ab/48ed2d3a7f78/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/befe6c07/6aaf/4219/b9ab/48ed2d3a7f78/1080x1080.jpg",
+        "featuring": ["Britney Spears", "Natasha Bedingfield", "S Club", "Aqua", "Shania Twain", "No Doubt", "Atomic Kitten", "Spice Girls", "Vanessa Carlton"]
     },
     "shitty and tragic (silently)": {
         "number": "191",
         "tidal": "https://tidal.com/playlist/de787c06-6447-416a-a091-ff6ef547042c",
         "spotify": "https://open.spotify.com/playlist/4DWh83ITTrtK7X1CERO9qA",
-        "image": "https://resources.tidal.com/images/76c2199d/3cab/42ff/a081/75931226196a/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/76c2199d/3cab/42ff/a081/75931226196a/1080x1080.jpg",
+        "featuring": ["That Dog.", "Waxahatchee", "Tuscadero", "Swearin'", "Heavens to Betsy", "Dressy Bessy", "Team Dresch", "p.s. eliot", "Lois", "Diet Cig"]
     },
     "relationships (give and take)": {
         "number": "190",
         "tidal": "https://tidal.com/playlist/c22459aa-62df-4f4f-a4e5-f1ba9be15113",
         "spotify": "https://open.spotify.com/playlist/2FA0e2FKtjq8AUnibgqqI0",
-        "image": "https://resources.tidal.com/images/7d87f2ad/e847/4860/87ab/004267be000d/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/7d87f2ad/e847/4860/87ab/004267be000d/1080x1080.jpg",
+        "featuring": ["mxmtoon", "Ralph", "Lucy Dacus", "Terrace Martin", "Robert Glasper", "9th Wonder", "Kamasi Washington", "Dinner Party", "Pheolix" ,"HAIM", "Greentea Peng", "Mulatu Astatke", "Hoodna Orchestra", "Yukumi", "Katie Gavin", "Waxahatchee", "Chappell Roan", "Dolly Parton", "Linda Ronstadt", "Emmylou Harris", "Chet Baker"]
     },
     "venice, 1980 (true faith)": {
         "number": "189",
