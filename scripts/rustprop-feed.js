@@ -61,17 +61,20 @@ let rustpropFeed = {
                                 let item = visibleItems[i];
                                 let imagesHtml = Array.isArray(item.images) ? item.images.map((img, idx) => `<img src='${img}' alt='${Array.isArray(item.alt) ? item.alt[idx] || item.alt[0] : item.alt}' />`).join('') : `<img src='${item.images}' alt='${item.alt}' />`;
                                 let headline = item.headline ? `<span class='headline'>${item.headline}</span><br/>` : '';
-                                let date = Array.isArray(item.date) ? item.date.map((d, idx) => `v${idx+1}: <span class='datestamp'>${d}</span>`).join(', ') : `<span class='datestamp'>${item.date}</span>`;
+                                // Remove separate datestamp, only use date in permalink link
                                 let links = [];
+                                // Permalink link with date label, always first
+                                if (item.links.permalink) {
+                                    let dateLabel = Array.isArray(item.date) ? item.date[0] : item.date;
+                                    links.push(`<a href="#${item.id}" class="permalink-link">${dateLabel}</a>`);
+                                }
                                 if (item.links.instagram) links.push(`<a href='${item.links.instagram}' target='_blank'>Instagram</a>`);
-                                if (item.links.print) links.push(`<a href='${item.links.print}' target='_blank'>Print-at-home</a>`);
-                                // Use hash navigation for permalink
-                                if (item.links.permalink) links.push(`<a href="#${item.id}" class="permalink-link">Permalink</a>`);
+                                if (item.links.print) links.push(`<a href='${item.links.print}' target='_blank'>Print</a>`);
                                 let linksHtml = links.length ? `[ ${links.join(' | ')} ]` : '';
                                 formatted.push(`
                                     <div class='item' id='${item.id}'>
                                         ${imagesHtml}
-                                        <p class='img-caption'>${headline}${date}<br/>${linksHtml}</p>
+                                        <p class='img-caption'>${headline}${linksHtml}</p>
                                     </div>
                                 `);
                         }
