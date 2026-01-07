@@ -8,20 +8,19 @@ let tplMixes = {
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
     clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
-    rangeSelect: `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
-        <button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" disabled>&lt;&lt; newer</button> | 
-        <span id="range-label">#176-200</span> | 
-        <button class="range" id="older-btn" onclick="tplMixes.functions.older()" style="min-width:60px;">older &gt;&gt;</button>
+    rangeSelect: `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;"><button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" disabled>&lt;&lt; newer</button> | <span id="range-label">#176-200</span> | <button class="range" id="older-btn" onclick="tplMixes.functions.older();" style="min-width:60px;">older &gt;&gt;</button>
     </p>`,
-    scrollToTop: `<p style="padding-top:10px;"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">back to top</a></p>`,
+    scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">back to top</a></p>`,
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
             if (value) {
                 $(".range-select").hide();
+                $("#scroll-to-top").show();
                 $("#mix-search-clear").show();
             } else {
                 $(".range-select").show();
+                $("#scroll-to-top").hide();
                 $("#mix-search-clear").hide();
             };
             tplMixes.functions.mixDisplay();
@@ -42,9 +41,9 @@ let tplMixes = {
             let olderDisabled = idx === 0 ? 'disabled' : '';
             let newerDisabled = idx === ranges.length-1 ? 'disabled' : '';
             tplMixes.rangeSelect = `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
-                <button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" ${newerDisabled}>&lt;&lt; newer</button> | 
+                <button class="range" id="newer-btn" onclick="tplMixes.functions.newer();" style="min-width:60px;" ${newerDisabled}>&lt;&lt; newer</button> | 
                 <span id="range-label">${label}</span> | 
-                <button class="range" id="older-btn" onclick="tplMixes.functions.older()" style="min-width:60px;" ${olderDisabled}>older &gt;&gt;</button>
+                <button class="range" id="older-btn" onclick="tplMixes.functions.older();" style="min-width:60px;" ${olderDisabled}>older &gt;&gt;</button>
             </p>`;
         },
         older: () => {
@@ -164,6 +163,9 @@ let tplMixes = {
                 tplMixes.content.html(formattedMixes.reduce((accumulator, mix) => {
                     return accumulator + mix;
                 }));
+                setTimeout(() => {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }, 100);
             } else {
                 let query = tplMixes.query.toLowerCase();
                 let streamSelect = tplMixes.streamSelect;
@@ -205,7 +207,6 @@ let tplMixes = {
                 }));
             }
         },
-
         scrollToHash: () => {
             let hash = window.location.hash.replace('#', '');
             if (!hash) return;

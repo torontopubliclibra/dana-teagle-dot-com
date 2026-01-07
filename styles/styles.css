@@ -1130,6 +1130,7 @@ html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
 @media only screen and (max-width: 970px) {
   html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
     color: #84A59D;
+    font-style: normal;
   }
 }
 @media only screen and (max-width: 970px) {
