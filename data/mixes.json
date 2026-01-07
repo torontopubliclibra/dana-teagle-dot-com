@@ -164,25 +164,29 @@
         "number": "175",
         "tidal": "https://tidal.com/playlist/2059a72c-5667-4c90-b8fa-cf0acfb28e74",
         "spotify": "https://open.spotify.com/playlist/459oPgYfT3qRaoMxRpFPMT",
-        "image": "https://resources.tidal.com/images/35a7e06a/3370/4fe9/a379/5f994a52bf75/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/35a7e06a/3370/4fe9/a379/5f994a52bf75/1080x1080.jpg",
+        "featuring": ["Dua Lipa", "Darondo", "Gil Scott-Heron", "Makaya McCraven", "Mulatu Astatke", "Black Jesus Experience", "Menahan Street Band", "Sonya Spence", "Jalen Ngonda", "Little Simz", "Ms. Lauryn Hill", "Labi Siffre"]
     },
     "come back hither (while I'm here)": {
         "number": "174",
         "tidal": "https://tidal.com/playlist/2388c6a5-d0d5-49ee-8e8a-577be687e841",
         "spotify": "https://open.spotify.com/playlist/1r0fN1iGHJSjCEsppziYmg",
-        "image": "https://resources.tidal.com/images/e1e0459b/02ae/4009/b890/8b4149bb277b/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e1e0459b/02ae/4009/b890/8b4149bb277b/1080x1080.jpg",
+        "featuring": ["Ye Vagabonds", "Nora Brown", "Stephanie Coleman", "Aoife O'Donovan", "Allison Russell", "The Decemberists", "Joan Shelley", "Phil Ochs", "boygenius"]
     },
     "will you tell me (haunt me)": {
         "number": "173",
         "tidal": "https://tidal.com/playlist/d9d38cb2-1867-40e9-ae19-ad196ff86dc9",
         "spotify": "https://open.spotify.com/playlist/7lQrqxtPXDBSmmcLUExiRu",
-        "image": "https://resources.tidal.com/images/06bdd2bd/3d12/4401/a6d7/4b8953c80c4f/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/06bdd2bd/3d12/4401/a6d7/4b8953c80c4f/1080x1080.jpg",
+        "featuring": ["Arab Strap", "Faunts", "Do Make Say Think", "A Silver Mt. Zion", "Nine Inch Nails", "Ethel Cain", "Dreamwell", "Death Goals", "The Twilight Sad"]
     },
     "go outside (right back to it)": {
         "number": "172",
         "tidal": "https://tidal.com/playlist/8ff4dd2b-ba11-484e-bbaf-954264eab8d4",
         "spotify": "https://open.spotify.com/playlist/4whwcIXKKEYTujDBFCwLPV",
-        "image": "https://resources.tidal.com/images/a869c4ec/4500/41b1/991d/225c0b4de995/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/a869c4ec/4500/41b1/991d/225c0b4de995/1080x1080.jpg",
+        "featuring": ["Ratboys", "Waxahatchee", "MJ Lenderman", "Caroline Rose", "Angel Olsen", "Courtney Marie Andrews", "Lydia Loveless", "Jess Williamson", "Anna Tivel", "S.G. Goodman", "Shannen Moser", "Neko Case", "Hurray for the Riff Raff", "Ocean Vuong"]
     },
     "kick me (up from below)": {
         "number": "171",
