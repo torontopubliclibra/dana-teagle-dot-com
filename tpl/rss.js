@@ -1,10 +1,9 @@
-let rssFormatter = {
+let tplRssFormatter = {
     formattedRss: '',
     formatDate: (datestamp) => {
         const [day, month, year] = datestamp.split('/').map(Number);
         const fullYear = year < 100 ? 2000 + year : year;
         const date = new Date(fullYear, month - 1, day);
-        // Format as 'Mon, 06 Jan 2026' (no time)
         const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         return `${days[date.getUTCDay()]}, ${String(day).padStart(2, '0')} ${months[month-1]} ${fullYear}`;
@@ -13,33 +12,33 @@ let rssFormatter = {
         let formattedItems = '';
         json.items.slice(0, 11).forEach((item) => {
             let date = Array.isArray(item.date) ? item.date[0] : item.date;
-            let formattedDate = rssFormatter.formatDate(date);
-            let headline = item.headline || '';
-            let imageUrl = Array.isArray(item.images) ? item.images[0] : item.images;
+            let formattedDate = tplRssFormatter.formatDate(date);
+            let headline = item.alt || '';
+            let imageUrl = item.url;
             let image = imageUrl.replace(/^\.\//, '');
-            let title = Array.isArray(item.alt) ? item.alt[0] : item.alt;
+            let title = item.alt || '';
             if (title.includes('&')) {
                 title = title.replace(/&/g, '&amp;');
             }
+            let permalink = `https://www.torontopubliclibra.com/feed#${item.id}`;
             let formattedItem =
 `<item>
     <title>${title}</title>
-    <link>https://www.danateagle.com/rustprop/${item.id}</link>
-    <guid>https://www.danateagle.com/rustprop/${item.id}</guid>
+    <link>${permalink}</link>
+    <guid>${permalink}</guid>
     <pubDate>${formattedDate}</pubDate>
-    <description><![CDATA[<img src="https://www.danateagle.com/rustprop/images/${image}" alt="${title}"/><br/>${headline}]]></description>
+    <description><![CDATA[<img src="${image}" alt="${title}"/><br/>${headline}]]></description>
 </item>`;
             formattedItems += formattedItem + '\n';
         });
         console.log(formattedItems);
     },
     init: () => {
-        fetch('../data/rustprop.json')
+        fetch('../../data/feed.json')
             .then(response => response.json())
-            .then(data => rssFormatter.formatRss(data));
+            .then(data => tplRssFormatter.formatRss(data));
     },
 };
-
 document.addEventListener('DOMContentLoaded', function () {
-    rssFormatter.init();
+    tplRssFormatter.init();
 });

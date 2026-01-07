@@ -506,7 +506,6 @@ html.tpl h1, html.tpl h2, html.tpl h3 {
   }
 }
 html.tpl h1 {
-  font-style: normal;
   font-size: 45px;
   -webkit-user-select: initial;
      -moz-user-select: initial;
@@ -1488,6 +1487,14 @@ html.tpl footer a:hover {
 @media only screen and (max-width: 970px) {
   html.tpl footer a:hover {
     color: #f3e8e9;
+  }
+}
+html.tpl .feed-item-container {
+  scroll-margin-top: 260px;
+}
+@media (max-width: 600px) {
+  html.tpl .feed-item-container {
+    scroll-margin-top: 290px;
   }
 }
 

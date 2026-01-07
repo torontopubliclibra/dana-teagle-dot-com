@@ -1,8 +1,6 @@
 // app object
 let redirectsFormatter = {
-
     formattedRedirects: ``,
-
     formatRedirects: () => {
         let bodyID = document.querySelector(`body`).id.substr(3);
         let items = document.querySelectorAll(`div.item`);
@@ -19,7 +17,6 @@ let redirectsFormatter = {
                 formattedItems += formattedItem + `\n`;
             });
         }
-
         console.log(formattedItems);
     },
 

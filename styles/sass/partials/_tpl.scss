@@ -30,7 +30,6 @@ html.tpl {
     }
 
     h1 {
-        font-style: normal;
         font-size: 45px;
         user-select: initial;
 
@@ -1086,5 +1085,11 @@ html.tpl {
                 color: $white;
             }
         }
+    }
+    .feed-item-container {
+        scroll-margin-top: 260px;
+            @media (max-width: 600px) {
+                scroll-margin-top: 290px;
+            }
     }
 }

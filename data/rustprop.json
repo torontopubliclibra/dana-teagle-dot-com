@@ -1,0 +1,188 @@
+{
+  "items": [
+    {
+      "id": "culture-war",
+      "images": ["./images/culture-war.gif"],
+      "alt": "I want to be a boring lady but all these creeps keep doing culture war about us",
+      "headline": "I'm so tired !!",
+      "date": "20/09/2025",
+      "links": {
+        "instagram": "https://www.instagram.com/reel/DO2Hu1WjOCQ/",
+        "permalink": "https://rustprop.org/culture-war"
+      }
+    },
+    {
+      "id": "pride-2025",
+      "images": [
+        "./images/pride-2025-1.jpeg",
+        "./images/pride-2025-2.jpeg",
+        "./images/pride-2025-3.jpeg",
+        "./images/pride-2025-4.jpeg"
+      ],
+      "alt": [
+        "Gay pride is political",
+        "Trans pride is political",
+        "No pride in policing",
+        "No pride in genocide"
+      ],
+      "headline": "it feels like june comes earlier every year",
+      "date": "01/06/2025",
+      "links": {
+        "instagram": "https://www.instagram.com/p/DKWxCFCS0iz",
+        "print": "./print/pride-2025.pdf",
+        "permalink": "https://rustprop.org/pride-2025"
+      }
+    },
+    {
+      "id": "the-people-united",
+      "images": [
+        "./images/the-people-united-1.jpeg",
+        "./images/the-people-united-2.jpeg",
+        "./images/the-people-united-3.jpeg",
+        "./images/the-people-united-4.jpeg"
+      ],
+      "alt": "The people united will never be defeated",
+      "headline": "solidarity forever",
+      "date": "24/03/2025",
+      "links": {
+        "instagram": "https://www.instagram.com/p/DHmrzAENS-I/",
+        "print": "./print/the-people-united.pdf",
+        "permalink": "https://rustprop.org/the-people-united"
+      }
+    },
+    {
+      "id": "tomato-needs",
+      "images": ["./images/tomato-needs.png"],
+      "alt": "Mommy needs her tomato",
+      "headline": "my partner said that this one wouldn't resonate with people but I designed it anyway",
+      "date": "15/03/2025",
+      "links": {
+        "instagram": "https://www.instagram.com/p/DHO6CgTSMmf/",
+        "permalink": "https://rustprop.org/tomato-needs"
+      }
+    },
+    {
+      "id": "class-traitors",
+      "images": ["./images/class-traitors.jpeg"],
+      "alt": "Transphobic queers are class traitors",
+      "headline": "simple as",
+      "date": "14/03/2025",
+      "links": {
+        "instagram": "https://www.instagram.com/p/DHM3mzztBbl/",
+        "print": "./print/class-traitors.pdf",
+        "permalink": "https://rustprop.org/class-traitors"
+      }
+    },
+    {
+      "id": "obsessed",
+      "images": ["./images/obsessed.jpeg", "./images/obsessed-2.jpeg"],
+      "alt": "Wow you are obsessed with trans people",
+      "headline": "visibility has gone too far for real",
+      "date": ["04/03/2025", "09/03/2025"],
+      "links": {
+        "instagram": "https://www.instagram.com/p/DGyMQRax8he/",
+        "permalink": "https://rustprop.org/obsessed"
+      }
+    },
+    {
+      "id": "means-of-computation",
+      "images": ["./images/means-of-computation.jpeg"],
+      "alt": "Liberation will require seizing the means of computation. Until we own the servers there are no safe havens in cyberspace.",
+      "headline": "personally I don't believe marginalized groups will ever find a corporate-owned platform that is 'safe' or 'protects them' so long as it is politically accepted and/or profitable to do otherwise",
+      "date": "20/01/2025",
+      "links": {
+        "instagram": "https://www.instagram.com/p/DFEi7dXtPhf",
+        "permalink": "https://rustprop.org/means-of-computation"
+      }
+    },
+    {
+      "id": "trans-sky",
+      "images": ["./images/trans-sky.png"],
+      "alt": "If the sky ever looks like this it's a sign that you should become a transsexual.",
+      "headline": "huh... the more you know",
+      "date": "30/06/24",
+      "links": {
+        "instagram": "https://www.instagram.com/p/C83GMFuNzbW/",
+        "permalink": "https://rustprop.org/trans-sky"
+      }
+    },
+    {
+      "id": "touchscreens",
+      "images": ["./images/touchscreens.png", "./images/touchscreens-2.jpeg"],
+      "alt": "I really hate touchscreens. My hands hurt all the time. Phones should have buttons. This is what they took from us.",
+      "headline": "I yearn for the feeling of clunky buttons under my fingertips once again",
+      "date": ["26/06/2024", "09/03/2025"],
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8rr3cdAB-J",
+        "permalink": "https://rustprop.org/touchscreens"
+      }
+    },
+    {
+      "id": "sorry",
+      "images": ["./images/sorry.png", "./images/sorry-2.jpeg"],
+      "alt": "Sorry. I really am trying to apologize less. I'll do better I promise.",
+      "headline": "plz don't be mad at me",
+      "date": ["25/06/2024", "22/03/2025"],
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8o7czhAxQO/",
+        "permalink": "https://rustprop.org/sorry"
+      }
+    },
+    {
+      "id": "queer-lib",
+      "images": ["./images/queer-lib.png"],
+      "alt": "Queer/trans liberation and police abolition and anti-colonialism and anti-capitalism and land back go hand in hand in hand in hand in hand. None of us are free until all of us are free.",
+      "headline": "all of our liberation is inextricably intertwined. there is no pride in policing. there is no pride in genocide. land back now. corporations are not your ally. uplift trans women of colour while they are alive. free palestine and free sudan and free congo and free every oppressed peoples from the tyranny of colonial white supremacist ideology and extraction. queer/trans liberation cannot be divorced from class struggle and don't you forget it.",
+      "date": "24/06/2024",
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8mZvAFAFWD",
+        "print": "./print/queer-lib.pdf",
+        "permalink": "https://rustprop.org/queer-lib"
+      }
+    },
+    {
+      "id": "girlunions",
+      "images": ["./images/girlunions.png"],
+      "alt": "We really need fewer girlbosses and more girlunions.",
+      "headline": "and before you ask—girlpoliceunions don't count",
+      "date": "17/06/2024",
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8UOMCMudQs",
+        "permalink": "https://rustprop.org/girlunions"
+      }
+    },
+    {
+      "id": "modern-house",
+      "images": ["./images/modern-house.png"],
+      "alt": "Hey does anyone know who lives in that one weird modern house on the street? I just wanna know what their whole deal is.",
+      "headline": "I'm not afraid to ask the questions on everyone's minds",
+      "date": "16/06/2024",
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8R65hPOaAL/",
+        "permalink": "https://rustprop.org/modern-house"
+      }
+    },
+    {
+      "id": "push-notifs",
+      "images": ["./images/push-notifs.png"],
+      "alt": "Push notifications were a mistake. Websites shouldn't be trying to talk to me when I'm not even looking at them.",
+      "headline": "hey does anyone else ever wonder if maybe our phone apps are just lonely and bad at picking up on social cues?",
+      "date": "15/06/2024",
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8QlT3UstsE",
+        "permalink": "https://rustprop.org/push-notifs"
+      }
+    },
+    {
+      "id": "flowers",
+      "images": ["./images/flowers.png"],
+      "alt": "Flowers are for smelling. Just stop for a second. You're 'too busy'? Fuck off.",
+      "headline": "stop scrolling for a sec and stick yr nose in a rose",
+      "date": "15/06/2024",
+      "links": {
+        "instagram": "https://www.instagram.com/p/C8QEJvpSjyj",
+        "permalink": "https://rustprop.org/flowers"
+      }
+    }
+  ]
+}

@@ -111,7 +111,7 @@ let tplLogs = {
             }
 
             if (year === "2026") {
-                tplLogs.date.text(` [ up to ${tplLogs.updated} ]`);
+                tplLogs.date.text(` // up to ${tplLogs.updated}`);
             } else {
                 tplLogs.date.text("");
             }

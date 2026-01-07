@@ -1,15 +1,11 @@
 # Project sites and repos
 /repo https://github.com/torontopubliclibra/dana-teagle-dot-com/
-
 /notes https://notes.danateagle.com
 /notes/repo https://github.com/torontopubliclibra/note-taken/
-
 /pigeon https://pigeon.danateagle.com
 /pigeon/repo https://github.com/torontopubliclibra/the-pigeon-hole/
-
 /superhero https://superhero-showdown.netlify.app/
 /superhero/repo https://github.com/torontopubliclibra/superhero-showdown/
-
 /cloud https://clouds.danateagle.com
 /cloud/repo https://github.com/torontopubliclibra/these-are-clouds
 
@@ -46,30 +42,3 @@
 https://danateagle.com/now /tpl/now
 /trans-id-resources https://idguide.ca
 /trans-id https://idguide.ca
-
-# RUSTPROP redirects
-/rustprop/culture-war https://danateagle.com/rustprop/#culture-war
-/rustprop/pride-2025 https://danateagle.com/rustprop/#pride-2025
-/rustprop/hot-dog https://danateagle.com/rustprop/#hot-dog
-/rustprop/spring-lamb https://danateagle.com/rustprop/#spring-lamb
-/rustprop/genuine-ineptitude https://danateagle.com/rustprop/#genuine-ineptitude
-/rustprop/the-people-united https://danateagle.com/rustprop/#the-people-united
-/rustprop/tomato-needs https://danateagle.com/rustprop/#tomato-needs
-/rustprop/class-traitors https://danateagle.com/rustprop/#class-traitors
-/rustprop/obsessed https://danateagle.com/rustprop/#obsessed
-/rustprop/means-of-computation https://danateagle.com/rustprop/#means-of-computation
-
-
-/rustprop/nye https://danateagle.com/rustprop/2#nye
-/rustprop/too-hot https://danateagle.com/rustprop/2#too-hot
-/rustprop/trans-sky https://danateagle.com/rustprop/2#trans-sky
-/rustprop/gay-kissing https://danateagle.com/rustprop/2#gay-kissing
-/rustprop/touchscreens https://danateagle.com/rustprop/2#touchscreens
-/rustprop/sorry https://danateagle.com/rustprop/2#sorry
-/rustprop/queer-lib https://danateagle.com/rustprop/2#queer-lib
-/rustprop/great-part https://danateagle.com/rustprop/2#great-part\
-/rustprop/girlunions https://danateagle.com/rustprop/2#girlunions
-/rustprop/modern-house https://danateagle.com/rustprop/2#modern-house
-
-/rustprop/push-notifs https://danateagle.com/rustprop/3#push-notifs
-/rustprop/flowers https://danateagle.com/rustprop/3#flowers
