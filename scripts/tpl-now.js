@@ -20,16 +20,18 @@ let tplNow = {
 
             if (tplNow.feedPosts && tplNow.feedPosts.length > 0) {
                 formattedNow.push(`<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a>)</p>`);
-                let feedItems = tplNow.feedPosts.map(post => {
-                    let img = post.url ? `<img src="${post.url}" alt="${post.alt ? post.alt.replace(/\"/g, '&quot;') : ''}" style="max-height: 150px; display: block; margin: 0 auto;"/>` : '';
-                    let date = post.date ? `<div style=\"font-size:0.65rem;color:rgba(243,232,233,0.9);text-align:left;padding:2px 5px;width:100%;letter-spacing:0.5px;\">&gt; ${post.date}</div>` : '';
-                    return `<div style="border: solid 3px rgba(243, 232, 233, 0.5);margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">${img}${date}</div>`;
-                }).join('');
-                let feedContainer = `<div id=\"now-feed-scroll\" style="display:flex;gap: 15px;overflow-x:auto;white-space:nowrap;max-height:220px;max-width:700px;margin: 10px auto;padding:15px;cursor:pointer;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);">${feedItems}</div>`;
-                formattedNow.push(feedContainer);
+                    let feedItems = tplNow.feedPosts.map(post => {
+                        let id = post.id || post.ID || post.number;
+                        let permalink = id ? `/feed#${id}` : '#';
+                        let img = post.url ? `<img src=\"${post.url}\" alt=\"${post.alt ? post.alt.replace(/\"/g, '&quot;') : ''}\" style=\"max-height: 150px; display: block; margin: 0 auto;\"/>` : '';
+                        let date = post.date ? `<div style=\"font-size:0.65rem;color:rgba(243,232,233,0.9);text-align:left;padding:2px 5px;width:100%;letter-spacing:0.5px;\">&gt; ${post.date}</div>` : '';
+                        return `<a href=\"${permalink}\" class=\"now-feed-post\" style=\"border: solid 3px rgba(243, 232, 233, 0.5);margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;background:none;\" target=\"_blank\">${img}${date}</a>`;
+                    }).join('');
+                    let feedContainer = `<div id=\"now-feed-scroll\" style="display:flex;gap: 15px;overflow-x:auto;white-space:nowrap;max-height:220px;max-width:700px;margin: 10px auto;padding:15px;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);">${feedItems}</div>`;
+                    formattedNow.push(feedContainer);
             }
 
-            formattedNow.push(`<p>>> latest rusty mixes (<a href="/tpl/mixes">see more</a>)</p>`);
+                formattedNow.push(`<p>>> latest rusty mixes (<a href="/tpl/mixes">see more</a>)</p>`);
             // Container for latest mixes styled like mixes page
             let mixesItems = tplNow.mixes.map(object => {
                 let link = object["tidal"];
