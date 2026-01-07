@@ -17,13 +17,15 @@
         "number": "196",
         "tidal": "https://tidal.com/playlist/f5ca6e84-47cc-44ad-8c9f-6a425c793f46",
         "spotify": "https://open.spotify.com/playlist/67Wyp6AsP0YVX7fO7la2Gn",
-        "image": "https://resources.tidal.com/images/0092e502/c9ef/4bbd/a75f/25566d7b7f85/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/0092e502/c9ef/4bbd/a75f/25566d7b7f85/1080x1080.jpg",
+        "featuring": ["Emmylou Harris", "Joan Baez", "Nick Drake", "Leonard Cohen", "Bedouine", "Karen Dalton", "Phil Ochs"]
     },
     "end of summer (daffodil)": {
         "number": "195",
         "tidal": "https://tidal.com/playlist/b83c7195-f350-455a-974a-72b4ff5f3516",
         "spotify": "https://open.spotify.com/playlist/081nt6yalaLirXG7alOYl3",
-        "image": "https://resources.tidal.com/images/c30ed06d/9aaa/416b/93db/3e7fc2f10bda/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/c30ed06d/9aaa/416b/93db/3e7fc2f10bda/1080x1080.jpg",
+        "featuring": ["Jamie xx", "Kelsey Lu", "John Glacier", "Panda Bear", "Minnie Ripperton", "Little Simz", "Menahan Street Band", "Rogê", "Magdelena Bay", "U.S. Girls", "Sylvan Esso", "Two Door Cinema Club", "Kali Uchis", "Tame Impala", "Doechii", "Blood Orange", "Caroline Polachek", "Lorde", "Mustafa"]
     },
     "just walk away (coming home)": {
         "number": "194",

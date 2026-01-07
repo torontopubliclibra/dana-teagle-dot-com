@@ -743,7 +743,7 @@ html.tpl {
 
                         &.mix {
                             display: flex;
-                            gap: 10px;
+                            gap: 0;
                             align-items: center;
                             justify-content: space-between;
                             margin-bottom: 10px;
@@ -751,7 +751,7 @@ html.tpl {
                             border: solid 3px rgba($white, 0.05);
                             background-image: linear-gradient(120deg, rgba($color2, 0.1) 50%, rgba($color3, 0.1) 100%);
                             max-width: 100%;
-                            margin-right: 20px;
+                            padding: 0;
                             cursor: pointer;
                             transition: background-image 0.5s;
 
@@ -768,12 +768,7 @@ html.tpl {
 
                         &.mix p {
                             text-align: left;
-                            width: calc(100% - 175px);
                             line-height: 1.5;
-
-                            @media only screen and (max-width: $tablet) {
-                                width: calc(100% - 140px);
-                            }
                         }
 
                         &.mix:hover, &.mix:focus {
@@ -789,14 +784,10 @@ html.tpl {
                         }
 
                         &.mix img {
-                            width: 125px;
+                            width: 75px;
                             margin: 10px 0;
                             border: solid 3px rgba($white, 0.5);
                             pointer-events: none;
-
-                            @media only screen and (max-width: $tablet) {
-                                width: 100px;
-                            }
 
                             &.icon {
                                 border: none;
@@ -1130,5 +1121,35 @@ html.tpl {
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 100%;
+    }
+    .mix-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 120px;
+    }
+    .mix-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mix-details-flex {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.2em;
+        flex: 1 1 auto;
+        padding: 5px 10px;
+        padding-bottom: 0;
+    }
+    .featuring-bar {
+        min-width: 100%;
+        border-top: solid 3px rgba($white, 0.05);
+        padding: 10px;
+        text-align: left;
+        font-size: 80%;
+        color: $white;
     }
 }
