@@ -66,61 +66,71 @@
         "number": "189",
         "tidal": "https://tidal.com/playlist/5677d50f-ea3c-4294-8c4c-098d5f5638fa",
         "spotify": "https://open.spotify.com/playlist/2467rTI0sDj2sUjXRknwKl",
-        "image": "https://resources.tidal.com/images/132b1347/86b2/4dbb/8226/b149f166cfa0/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/132b1347/86b2/4dbb/8226/b149f166cfa0/1080x1080.jpg",
+        "featuring": ["Daniel Blumberg", "Scott Walker", "Prince", "When In Rome", "New Order", "Talk Talk", "Ultravox", "Blondie", "Mike + the Mechanics"]
     },
     "why can't I (nothing to prove)": {
         "number": "188",
         "tidal": "https://tidal.com/playlist/1fed6df0-ad33-4d08-a216-688780b1f515",
         "spotify": "https://open.spotify.com/playlist/5BWvOJAIZN5zN8Y5rAxxdb",
-        "image": "https://resources.tidal.com/images/f329d435/0b4d/46aa/842b/4ed83ea64823/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f329d435/0b4d/46aa/842b/4ed83ea64823/1080x1080.jpg",
+        "featuring": ["Avril Lavigne", "Dido", "Liz Phair", "Tracy Chapman", "Jennifer Paige", "Sheryl Crow", "Norah Jones", "Sade", "Céline Dion", "Adele", "Natalie Imbruglia", "Shania Twain", "Prince"]
     },
     "how does it feel (for balance)": {
         "number": "187",
         "tidal": "https://tidal.com/playlist/d950a093-ff4e-41c6-adac-3abbc821f2be",
         "spotify": "https://open.spotify.com/playlist/0wFxTLloVg3J744Mj2djh0",
-        "image": "https://resources.tidal.com/images/8121375f/6ebc/4f49/b6d8/c54ef2018fc0/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/8121375f/6ebc/4f49/b6d8/c54ef2018fc0/1080x1080.jpg",
+        "featuring": ["Sudan Archives", "Shabaka and the Ancestors", "Gil Scott-Heron", "Makaya McCraven", "Arlo Parks", "Dolly Parton", "Plains", "Waxahatchee", "Katie Gavin", "The Rural Alberta Advantage", "The Decemberists", "Haley Heynderickx", "Orville Peck"]
     },
     "us against the world (for dal)": {
         "number": "186",
         "tidal": "https://tidal.com/playlist/07c63f47-50bc-48c8-b7ae-abb353af857c",
         "spotify": "https://open.spotify.com/playlist/4ub9DLaeVQhvxT3rEN3IDI",
-        "image": "https://resources.tidal.com/images/11554ccb/a707/4d65/a941/26e144a289a6/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/11554ccb/a707/4d65/a941/26e144a289a6/1080x1080.jpg",
+        "featuring": ["Baby Charles", "Gil Scott-Heron", "Makaya McCraven", "Bettye LaVette", "Jungle", "Jamie xx", "Robyn", "Princess Nokia", "Romy", "Rachel Chiouriri", "Arlo Parks", "Kehlani", "Katie Gavin", "MUNA", "Empress Of", "Ralph"]
     },
     "I'm with you (for katharine)": {
         "number": "185",
         "tidal": "https://tidal.com/playlist/1fb39fb8-6cf5-4319-aecf-b161b772f7b0",
         "spotify": "https://open.spotify.com/playlist/0MSURt8whrFxzTYMdnCBfu",
-        "image": "https://resources.tidal.com/images/3aff4950/0bc6/4688/a5bc/4d45b73dcc78/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/3aff4950/0bc6/4688/a5bc/4d45b73dcc78/1080x1080.jpg",
+        "featuring": ["Trent Reznor and Atticus Ross", "AJJ", "The Mountain Goats", "Hop Along", "Laura Jane Grace", "Broken Social Scene", "Haley Heynderickx", "The Twilight Sad", "Magdelena Bay", "MUNA", "boygenius", "Sam Smith", "Beverly Glenn-Copeland"]
     },
     "walking side by side (for naomi)": {
         "number": "184",
         "tidal": "https://tidal.com/playlist/bd860cec-cba3-46bc-9ee4-00779425053f",
         "spotify": "https://open.spotify.com/playlist/4xc3xa1OfLgxevDI5FzilL",
-        "image": "https://resources.tidal.com/images/1490685d/d913/4169/907d/4b4aadb3d89d/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/1490685d/d913/4169/907d/4b4aadb3d89d/1080x1080.jpg",
+        "featuring": ["Bettye LaVette", "Gil Scott-Heron", "Makaya McCraven", "Mulatu Astatke", "Do Make Say Think", "The Roches", "Bedouine", "Gil Scott-Heron", "Nina Simone", "Empress Of", "Orville Peck", "Romy"]
     },
     "don't have the words (for julia)": {
         "number": "183",
         "tidal": "https://tidal.com/playlist/9da2d7c1-f934-40a3-a6a6-b18e12f9dc0b",
         "spotify": "https://open.spotify.com/playlist/0hF6uffEOQWgJECSCkW3xl",
-        "image": "https://resources.tidal.com/images/03f9f6c6/2930/47a9/bae7/65cb9b818208/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/03f9f6c6/2930/47a9/bae7/65cb9b818208/1080x1080.jpg",
+        "featuring": ["Omar Apollo", "Trent Reznor and Atticus Ross", "Magdelena Bay", "Nine Inch Nails", "Duran Duran", "Blood Orange", "Samantha Urbani", "Jamie xx", "Ethel Cain", "Death Goals", "King Woman", "Dreamwell", "Katie Gavin"]
     },
     "death & romance (falling together)": {
         "number": "182",
         "tidal": "https://tidal.com/playlist/94da372f-14dd-43c1-91d0-71359cc40f65",
         "spotify": "https://open.spotify.com/playlist/6OQo2MVoPsBxTbxFympcZy",
-        "image": "https://resources.tidal.com/images/7284a7b1/d65a/4795/8408/fe2609ae49d8/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/7284a7b1/d65a/4795/8408/fe2609ae49d8/1080x1080.jpg",
+        "featuring": ["Magdelena Bay", "Jamie xx", "Oona Doherty", "Chvrches", "Caroline Polachek", "Waxahatchee", "Katie Gavin", "Maggie Rogers", "Haley Heynderickx"]
     },
     "end of an era (anthems for a thirty-year-old woman)": {
         "number": "181",
         "tidal": "https://tidal.com/playlist/77583b44-34db-4c56-845c-54098bd216f9",
         "spotify": "https://open.spotify.com/playlist/0Ubend1MPkQ0nzHWoOSw8A",
-        "image": "https://resources.tidal.com/images/f351c04b/8139/4205/87c7/431487b4a9ee/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f351c04b/8139/4205/87c7/431487b4a9ee/1080x1080.jpg",
+        "featuring": ["Dua Lipa", "Jamie xx", "Charli XCX", "Troye Sivan", "Carly Rae Jepsen", "Prozzak", "Trent Reznor and Atticus Ross", "MUNA", "Sabrina Carpenter", "Blondie", "David Bowie", "Kehlani", "Alice Coltrane", "Mulatu Astatke", "Kendrick Lamar", "Kamasi Washington", "André 3000", "Nine Inch Nails", "Letters to Cleo", "Team Dresch", "ameokama", "Death Goals", "Ethel Cain", "yeule", "Sylvan Esso", "Tegan and Sara", "Broken Social Scene", "Pigeon Pit", "Katie Gavin", "Dolly Parton", "Linda Ronstadt", "Emmylou Harris", "The Chicks", "Waxahatchee"]
     },
     "just a girl (aftertaste)": {
         "number": "180",
         "tidal": "https://tidal.com/playlist/5ea88459-3e79-4b8c-a0d1-9cca9c5be4c2",
         "spotify": "https://open.spotify.com/playlist/2KZmixQ0pXm104DPip6r3z",
-        "image": "https://resources.tidal.com/images/f0ef3cb9/5278/480d/9b6d/fb2276f92c4d/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f0ef3cb9/5278/480d/9b6d/fb2276f92c4d/1080x1080.jpg",
+        "featuring": []
     },
     "smalltown boy (a nice mover)": {
         "number": "179",
