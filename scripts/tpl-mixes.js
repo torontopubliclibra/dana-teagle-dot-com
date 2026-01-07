@@ -8,7 +8,7 @@ let tplMixes = {
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
     clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');"  class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
-    rangeSelect: `<p id="range" style="padding-top:10px;">range: <span class="range-selected">#151-200</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button></p>`,
+    rangeSelect: `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <span class="range-selected">#151-200</span></p>`,
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
@@ -29,19 +29,19 @@ let tplMixes = {
             switch(range) {
                 case "4":
                     tplMixes.range = "4";
-                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <span class="range-selected">#151-200</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button></p>`;
+                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <span class="range-selected">#151-200</span></p>`;
                     break;
                 case "3":
                     tplMixes.range = "3";
-                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('4')">#151-200</button> | <span class="range-selected">#101-150</span> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button></p>`;
+                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <span class="range-selected">#101-150</span> | <button class="range" onclick="tplMixes.functions.rangeSet('4')">#151-200</button></p>`;
                     break;
                 case "2":
                     tplMixes.range = "2";
-                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('4')">#151-200</button> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <span class="range-selected">#51-100</span> | <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button></p>`;
+                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('1')">#1-50</button> | <span class="range-selected">#51-100</span> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <button class="range" onclick="tplMixes.functions.rangeSet('4')">#151-200</button></p>`;
                     break;
                 case "1":
                     tplMixes.range = "1";
-                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <button class="range" onclick="tplMixes.functions.rangeSet('4')">#151-200</button> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <span class="range-selected">#1-50</span></p>`;
+                    tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;">range: <span class="range-selected">#1-50</span> | <button class="range" onclick="tplMixes.functions.rangeSet('2')">#51-100</button> | <button class="range" onclick="tplMixes.functions.rangeSet('3')">#101-150</button> | <button class="range" onclick="tplMixes.functions.rangeSet('4')">#151-200</button></p>`;
                     break;
             }
             tplMixes.range = range;
@@ -245,7 +245,7 @@ let tplMixes = {
                     return titleMatch || numberMatch || featuringMatch;
                 });
 
-                for (let object of filteredMixes) {
+                for (let object of filteredMixes.reverse()) {
                     let link = object[stream];
                     let featuringBar = '';
                     if (Array.isArray(object.featuring) && object.featuring.length > 0) {
