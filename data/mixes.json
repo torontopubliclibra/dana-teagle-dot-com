@@ -192,19 +192,22 @@
         "number": "171",
         "tidal": "https://tidal.com/playlist/2e2aa0d9-1fec-42fa-9581-2acf3c5eb672",
         "spotify": "https://open.spotify.com/playlist/3QfXdkxJIBPLEl2fJe3KxI",
-        "image": "https://resources.tidal.com/images/bc37ea0a/36a3/4c18/980c/eb0602247755/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/bc37ea0a/36a3/4c18/980c/eb0602247755/1080x1080.jpg",
+        "featuring": ["Shit Present", "Weakened Friends", "Remember Sports", "Laura Jane Grace", "p.s. eliot", "Los Campesinos!", "Lemuria", "Screaming Females", "Heavens to Betsy", "Team Dresch", "Cayetana", "Nervous Dater", "Swearin'", "Tacocat", "Dressy Bessy"]
     },
     "you are tired (take my hand)": {
         "number": "170",
         "tidal": "https://tidal.com/playlist/225ae511-215c-4da7-9dad-6ec15eab5994",
         "spotify": "https://open.spotify.com/playlist/3hJy2C64ndmXawcE3RVxs9",
-        "image": "https://resources.tidal.com/images/feb46751/86f5/4017/ba41/04ff822d3588/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/feb46751/86f5/4017/ba41/04ff822d3588/1080x1080.jpg",
+        "featuring": ["Sufjan Stevens", "The Japanese House", "boygenius", "Anna Hauss", "Mitski", "Snail Mail", "Jeremy Dutcher", "The Mountain Goats", "The Rural Alberta Advantage"]
     },
     "just the same (too good to be true)": {
         "number": "169",
         "tidal": "https://tidal.com/playlist/31675694-a311-4b09-b6fa-24412f85d992",
         "spotify": "https://open.spotify.com/playlist/2ELh1lpsNq3pEWhYtuPSfp",
-        "image": "https://resources.tidal.com/images/2bc428e8/06ce/4a57/a965/a394e5d135f8/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/2bc428e8/06ce/4a57/a965/a394e5d135f8/1080x1080.jpg",
+        "featuring": ["Arlo Parks", "Carly Rae Jepsen", "Oracle Sisters", "Sir Woman", "Your Smith", "Joy Crookes", "Little Simz", "boygenius", "Caroline Rose", "Amy Winehouse", "Baby Charles", "Lawrence", "Corinne Bailey Rae", "DRAMA", "Soccer Mommy", "Ethel Cain", "NoSo", "Lucy Dacus", "Maggie Rogers", "Wallace", "Ralph", "Metric", "The Aces", "The Beths", "Tegan and Sara", "MUNA", "Wet Leg", "Sudan Archives", "Jon Batiste", "Janelle Monáe", "Mae Stepens", "Sans Soucis", "Jamila Woods", "Dua Lipa", "Japanese Breakfast", "Empress Of"]
     },
     "all you've got is everyone (solitude)": {
         "number": "168",

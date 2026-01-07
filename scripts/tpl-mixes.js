@@ -6,22 +6,22 @@ let tplMixes = {
     query: "",
     stream: "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
-    clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');"  class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
+    clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
-    rangeSelect: `<p id="range" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
+    rangeSelect: `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
         <button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" disabled>&lt;&lt; newer</button> | 
         <span id="range-label">#176-200</span> | 
         <button class="range" id="older-btn" onclick="tplMixes.functions.older()" style="min-width:60px;">older &gt;&gt;</button>
     </p>`,
+    scrollToTop: `<p style="padding-top:10px;"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">back to top</a></p>`,
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
             if (value) {
-                $("#range").hide();
+                $(".range-select").hide();
                 $("#mix-search-clear").show();
-
             } else {
-                $("#range").show();
+                $(".range-select").show();
                 $("#mix-search-clear").hide();
             };
             tplMixes.functions.mixDisplay();
@@ -41,7 +41,7 @@ let tplMixes = {
             let label = ranges[idx] ? ranges[idx].label : "";
             let olderDisabled = idx === 0 ? 'disabled' : '';
             let newerDisabled = idx === ranges.length-1 ? 'disabled' : '';
-            tplMixes.rangeSelect = `<p id="range" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
+            tplMixes.rangeSelect = `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
                 <button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" ${newerDisabled}>&lt;&lt; newer</button> | 
                 <span id="range-label">${label}</span> | 
                 <button class="range" id="older-btn" onclick="tplMixes.functions.older()" style="min-width:60px;" ${olderDisabled}>older &gt;&gt;</button>
@@ -88,15 +88,36 @@ let tplMixes = {
             tplMixes.functions.mixDisplay();
         },
         navDisplay: () => {
-            let navContent = [tplMixes.searchBar, tplMixes.clearSearchButton, tplMixes.rangeSelect];
-
-            if (tplMixes.query) {
-                navContent = [tplMixes.searchBar, tplMixes.clearSearchButton];
+            let navs = $(".tpl-page-nav");
+            // Ensure responsive CSS is present
+            if (!document.getElementById('tpl-mixes-bottom-nav-style')) {
+                const style = document.createElement('style');
+                style.id = 'tpl-mixes-bottom-nav-style';
+                style.innerHTML = `
+                .bottom-nav-flex { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; }
+                @media screen and (max-width: 600px) {
+                    .bottom-nav-flex { flex-direction: column-reverse; align-items: flex-start; margin-bottom: -15px; }
+                }`;
+                document.head.appendChild(style);
             }
-
-            tplMixes.nav.html(navContent.reduce((accumulator, item) => {
-                return accumulator + item;
-            }));
+            navs.each(function(idx) {
+                let navContent;
+                if (idx === 0) {
+                    navContent = [tplMixes.searchBar, tplMixes.clearSearchButton, tplMixes.rangeSelect];
+                    if (tplMixes.query) {
+                        navContent = [tplMixes.searchBar, tplMixes.clearSearchButton];
+                    }
+                } else {
+                    navContent = [
+                        '<hr style="margin-top: 30px;margin-bottom: 5px;border-color: rgba(243, 232, 233, 0.75);"/>',
+                        '<div class="bottom-nav-flex">',
+                        tplMixes.scrollToTop,
+                        tplMixes.rangeSelect,
+                        '</div>'
+                    ];
+                }
+                $(this).html(navContent.reduce((accumulator, item) => accumulator + item));
+            });
         },
         mixDisplay: () => {
             if (tplMixes.query === "") {
