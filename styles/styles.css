@@ -1568,6 +1568,9 @@ html.tpl .featuring-bar {
   font-size: 80%;
   color: #f3e8e9;
 }
+html.tpl .search {
+  background-color: rgba(132, 165, 157, 0.5);
+}
 
 html.rustprop body {
   background-color: #282b2c;

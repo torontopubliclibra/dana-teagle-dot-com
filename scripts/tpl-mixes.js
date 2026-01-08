@@ -118,6 +118,13 @@ let tplMixes = {
                 $(this).html(navContent.reduce((accumulator, item) => accumulator + item));
             });
         },
+        highlightMatch: (str, query) => {
+            if (!query) return str;
+            // Escape regex special chars in query
+            const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(safeQuery, 'gi');
+            return str.replace(regex, match => `<span class="search">${match}</span>`);
+        },
         mixDisplay: () => {
             if (tplMixes.query === "") {
                 let range = tplMixes.range;
@@ -185,15 +192,19 @@ let tplMixes = {
                     let link = object[stream];
                     let featuringBar = '';
                     if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                        featuringBar = `<div class=\"featuring-bar\">${object.featuring.join(', ')}</div>`;
+                        // Highlight matches in featuring
+                        let features = object.featuring.map(f => tplMixes.functions.highlightMatch(f, query));
+                        featuringBar = `<div class="featuring-bar">${features.join(', ')}</div>`;
                     }
+                    let numberHtml = tplMixes.functions.highlightMatch(`#${object.number}`, query);
+                    let titleHtml = tplMixes.functions.highlightMatch(object.title, query);
                     if (link) {
                         let details = `
-                            <div class=\"mix-details-flex\">\n                    <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>\n                    <div class=\"mix-info\">\n                        <p><small>#${object.number} &#92;</small><br/>${object.title}</p>\n                        <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">\n                    </div>\n                </div>\n            `;
+                            <div class=\"mix-details-flex\">\n                    <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>\n                    <div class=\"mix-info\">\n                        <p><small>${numberHtml} &#92;</small><br/>${titleHtml}</p>\n                        <img src=\"../assets/icons/external-link.svg\" class=\"icon\" alt=\"external link icon\">\n                    </div>\n                </div>\n            `;
                         formattedMixes.push(`<a id=\"${object.number}\" href=\"${link}\" target=\"_blank\" class=\"sub mix mix-flex\">${details}${featuringBar}</a>`)
                     } else {
                         let details = `
-                            <div class=\"mix-details-flex\">\n                    <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>\n                    <div class=\"mix-info\">\n                        <p><small>#${object.number} &#92;</small><br/>${object.title}</p>\n                        <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">\n                    </div>\n                </div>\n            `;
+                            <div class=\"mix-details-flex\">\n                    <div class=\"mix-image\">${`<img src=\"${object.image}\" alt=\"${object.title} cover art\"/>`}</div>\n                    <div class=\"mix-info\">\n                        <p><small>${numberHtml} &#92;</small><br/>${titleHtml}</p>\n                        <img src=\"../assets/icons/external-link.svg\" class=\"icon disabled\" alt=\"external link icon\">\n                    </div>\n                </div>\n            `;
                         formattedMixes.push(`<div id=\"${object.number}\" class=\"sub mix mix-flex disabled\">${details}${featuringBar}</div>`)
                     }
                 }
