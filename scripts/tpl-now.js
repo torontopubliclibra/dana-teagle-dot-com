@@ -6,7 +6,7 @@ let tplNow = {
     movies: [],
     books: [],
     tv: [],
-    mixes: {},
+    mixes: [],
     functions: {
         nowDisplay: () => {
             let formattedNow = [];
@@ -37,8 +37,12 @@ let tplNow = {
                 let link = `/tpl/mixes#${object.number}`;
                 let image = object["image"] ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" style="width:50px;height:50px;margin:5px 2px;border:solid 3px rgba(255,255,255,0.5);pointer-events:none;object-fit:cover;"/>` : '';
                 let title = `<p style="text-align:left;min-width:calc(100% - 100px);line-height:1.25;margin:0;"><small>#${object.number} &#92;&#92; ${object.title}</small></p>`;
+                let featuring = '';
+                if (Array.isArray(object.featuring) && object.featuring.length > 0) {
+                    featuring = `<p class="mix-featuring-ellipsis" style="text-align:left;min-width:0;max-width:100%;margin:0;margin-top:5px;font-size:0.85em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${object.featuring.join(', ')}</p>`;
+                }
                 let icon = `<p style="padding-right:10px;">></p>`;
-                return `<a href="${link}" class="sub mix" style="display:flex;max-width:700px;padding:5px 10px;gap:10px;align-items:center;justify-content:space-between;margin-bottom:10px;text-decoration:none;border:none;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);margin-right:auto;cursor:pointer;transition:background-image 0.5s;">${image}${title}${icon}</a>`;
+                return `<a href="${link}" class="sub mix" style="display:flex;max-width:700px;padding:5px 10px;gap:10px;align-items:center;justify-content:space-between;margin-bottom:10px;text-decoration:none;border:none;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);margin-right:auto;margin-left:auto;cursor:pointer;transition:background-image 0.5s;">${image}<span style="display:flex;flex-direction:column;flex:1;min-width:0;">${title}${featuring}</span>${icon}</a>`;
             }).join('');
             formattedNow.push(`<div class="now-mixes-list">${mixesItems}</div>`);
 
@@ -134,6 +138,9 @@ let tplNow = {
                     "tidal": data[object]["tidal"],
                     "image": data[object]["image"]
                 };
+                if (data[object]["featuring"]) {
+                    mix.featuring = data[object]["featuring"];
+                }
                 mixes.push(mix);
             }
             tplNow.mixes = mixes.slice(0,3);
