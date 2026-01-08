@@ -213,49 +213,57 @@
         "number": "168",
         "tidal": "https://tidal.com/playlist/c2bf2818-d993-4119-8d23-0fe5f689f7c2",
         "spotify": "https://open.spotify.com/playlist/3oQFFTr0Lec3nEb74lzpmZ",
-        "image": "https://resources.tidal.com/images/42b146ed/9eeb/481c/ba26/de7094a691a1/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/42b146ed/9eeb/481c/ba26/de7094a691a1/1080x1080.jpg",
+        "featuring": ["Saintseneca", "Haley Heynderickx", "Iron & Wine", "Feist", "Lucy Dacus", "The A's", "Elisapie", "Nico Paulo", "Adrienne Lenker", "Abigail Lapell", "Joan Shelley", "Bedouine"]
     },
     "nothing's free (wild and unruly)": {
         "number": "167",
         "tidal": "https://tidal.com/playlist/166bd4a6-80bb-43d1-8e88-09e44c45aa8e",
         "spotify": "https://open.spotify.com/playlist/4LYPgOuDqrCn7FQBhpuih2",
-        "image": "https://resources.tidal.com/images/00aa662a/0435/4b81/be91/87923ce267b9/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/00aa662a/0435/4b81/be91/87923ce267b9/1080x1080.jpg",
+        "featuring": ["Angel Olsen", "Bella White", "Adeem the Artist", "Bonnie Raitt", "The Judds", "The Chicks", "Melissa Carper", "Shania Twain", "Patsy Cline", "Linda Ronstadt", "Dolly Parton", "Emmylou Harris", "Waxahatchee", "Plains", "boygenius", "Julien Baker", "Phoebe Bridgers", "Chet Atkins", "Phil Ochs"]
     },
     "the boy genius (not strong enough)": {
         "number": "166",
         "tidal": "https://tidal.com/playlist/e0140bd7-fbe7-4212-be6a-34b9ce7f3589",
         "spotify": "https://open.spotify.com/playlist/5ftnBWd3EZElJNtmlJ4tsX",
-        "image": "https://resources.tidal.com/images/c3edd12a/0658/4b39/85ac/0e2e3f9bdf1d/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/c3edd12a/0658/4b39/85ac/0e2e3f9bdf1d/1080x1080.jpg",
+        "featuring": ["boygenius", "Julien Baker", "Phoebe Bridgers", "Lucy Dacus"]
     },
     "spider-man (on a slow night)": {
         "number": "165",
         "tidal": "https://tidal.com/playlist/95093708-a48a-488d-b8eb-513d08805cf7",
         "spotify": "https://open.spotify.com/playlist/5DNJ5xQdWzVc2S9JxSANJG",
-        "image": "https://resources.tidal.com/images/f3159275/d44e/485b/a3f4/81e741e266b3/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f3159275/d44e/485b/a3f4/81e741e266b3/1080x1080.jpg",
+        "featuring": ["Broken Social Scene", "Kendrick Lamar", "Beastie Boys", "Los Campesinos!", "LCD Soundsystem", "The Chemical Brothers", "Peter Bjorn and John", "The Avalanches", "blink-182", "Metric", "Veruca Salt", "Foals", "Arcade Fire"]
     },
     "mystery of love (april come)": {
         "number": "164",
         "tidal": "https://tidal.com/playlist/730b64c1-aa29-4f10-92c7-f16cda69579e",
         "spotify": "https://open.spotify.com/playlist/0rQEOvVDXkBUIfoXe1cZyf",
-        "image": "https://resources.tidal.com/images/9cc66475/4ff5/41fa/a7e9/8ae43fc42341/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/9cc66475/4ff5/41fa/a7e9/8ae43fc42341/1080x1080.jpg",
+        "featuring": ["Sufjan Stevens", "Édith Piaf", "boygenius", "Julie London", "Nat King Cole", "Gene Kelly", "Bill Withers", "The Beatles", "Barbara Lewis", "Haley Heynderickx", "Max García Conover", "Bedouine", "Hoagy Carmichael", "Nina Simone", "Billie Holliday", "St. Vincent", "Simon & Garfunkel"]
     },
     "boundaries (don't take no threats)": {
         "number": "163",
         "tidal": "https://tidal.com/playlist/6df14064-f420-433d-9a96-8787392510d0",
         "spotify": "https://open.spotify.com/playlist/42ttWrlZPBToxQBEdHNApR",
-        "image": "https://resources.tidal.com/images/e3eb32b5/15cd/4afa/8eac/c81fd8226ce8/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e3eb32b5/15cd/4afa/8eac/c81fd8226ce8/1080x1080.jpg",
+        "featuring": ["Lake Street Dive", "Ezra Collective", "Sampa the Great", "Jamila Woods", "DARGZ", "Moses Boyd", "Simon Dufour", "The Roots", "Joanna Newsom", "STS", "Menahan Street Band", "Amy Winehouse", "Chet Baker", "Little Simz", "Sade", "Sault", "Leon Bridges"]
     },
     "the wind (my love)": {
         "number": "162",
         "tidal": "https://tidal.com/playlist/79cd1d3a-a08e-4838-b7e4-1fc9ab15a614",
         "spotify": "https://open.spotify.com/playlist/6Wx565g40YpKWq7xgST82x",
-        "image": "https://resources.tidal.com/images/e32846f7/c6fb/4d9d/a8e6/a9f9f7a66af8/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e32846f7/c6fb/4d9d/a8e6/a9f9f7a66af8/1080x1080.jpg",
+        "featuring": ["Chet Baker", "Yvonne Elliman", "Paul Thomas", "Richie Havens", "Dolly Parton", "The Staple Singers", "Sister Rosetta Tharpe", "Marie Knight", "Sam Price Trio", "Mama Cass", "Odetta", "Seu Jorge", "Nina Simone", "Aretha Franklin", "Gladys Knight & the Pips"]
     },
     "I will always love you (will you still)": {
         "number": "161",
         "tidal": "https://tidal.com/playlist/75f44d97-0272-4a2a-ba69-021bc5fe19f9",
         "spotify": "https://open.spotify.com/playlist/4d1gT0FalrvFRpkccyo8rO",
-        "image": "https://resources.tidal.com/images/b7f6a4ae/cfcd/484b/9be3/3d0c540872c9/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/b7f6a4ae/cfcd/484b/9be3/3d0c540872c9/1080x1080.jpg",
+        "featuring": ["Dolly Parton", "Plains", "Waxahatchee", "Yola", "Maggie Rogers", "Angel Olsen", "Florence + the Machine", "Ethel Cain", "HAIM", "Brandi Carlile", "Catherine Carlile", "Linda Ronstadt", "Carole King", "Dusty Springfield", "Odetta", "Fleetwood Mac", "Bonnie Raitt", "Amy Winehouse"]
     },
     "memories that grip (the night she fell)": {
         "number": "160",
