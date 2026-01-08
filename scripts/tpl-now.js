@@ -36,7 +36,7 @@ let tplNow = {
             let mixesItems = tplNow.mixes.map(object => {
                 let link = `/tpl/mixes#${object.number}`;
                 let image = object["image"] ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" style="width:50px;height:50px;margin:5px 2px;border:solid 3px rgba(255,255,255,0.5);pointer-events:none;object-fit:cover;"/>` : '';
-                let title = `<p style="text-align:left;min-width:calc(100% - 100px);line-height:1.25;margin:0;"><small>#${object.number} &#92;&#92; ${object.title}</small></p>`;
+                let title = `<p class="mix-featuring-ellipsis" style="text-align:left;min-width:calc(100% - 100px);line-height:1.25;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><small>#${object.number} &#92;&#92; ${object.title}</small></p>`;
                 let featuring = '';
                 if (Array.isArray(object.featuring) && object.featuring.length > 0) {
                     featuring = `<p class="mix-featuring-ellipsis" style="text-align:left;min-width:0;max-width:100%;margin:0;margin-top:5px;font-size:0.85em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${object.featuring.join(', ')}</p>`;
