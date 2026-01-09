@@ -98,7 +98,7 @@ let tplFeed = {
             }
             toggleText += '</span>';
             toggleText += '<span style="border-bottom: solid white 0.75px;margin-bottom: 5px;"><a href="/tpl/rss.xml" target="_blank" style="margin-left:auto;margin-bottom: -3px; display: flex; align-items: center; text-decoration:none;gap: 8px; color: #f3e8e9; font-size: 1rem;" title="RSS Feed">RSS';
-            toggleText += '<img src="../../assets/icons/rss.svg" style="width:16px;filter: invert(1);" alt="RSS icon"></a></span>';
+            toggleText += '<img src="../../assets/icons/rss.svg" style="width:15px;filter: invert(1);" alt="RSS icon"></a></span>';
             toggleText += '</p>';
             tplFeed.toggle.html(toggleText);
         },

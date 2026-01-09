@@ -10,7 +10,7 @@ let tplMixes = {
     clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: '',
-    scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">Back to Top</a></p>`,
+    scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" style="width: 15px; margin-top:3px;margin-right:5px;filter: invert(1);">Back to Top</a></p>`,
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
@@ -118,7 +118,7 @@ let tplMixes = {
             html += `<ul class=\"artist-index\" style=\"max-width:100%;font-size:1rem;\">`;
             filteredArtists.forEach(artist => {
                 const safeArtist = artist.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-                html += `<li><a href=\"#\" style=\"color:inherit;text-decoration:underline;cursor:pointer;\" onclick=\"tplMixes.functions.artistIndexSearch('${safeArtist}');return false;\">${artist}</a></li>`;
+                html += `<li>>> <a href=\"#\" style=\"color:inherit;text-decoration:underline;cursor:pointer;\" onclick=\"tplMixes.functions.artistIndexSearch('${safeArtist}');return false;\">${artist}</a></li>`;
             });
             html += `</ul><hr/>`;
             html += tplMixes.scrollToTop;

@@ -13,7 +13,7 @@
       <body style="background-color: #282b2c; color: #f3e8e9">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body" style="margin-bottom: 0 !important;">
           <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1" style="background-color: #5f1f47 !important; padding: 15px !important;">
-            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader. Visit <a href="https://aboutfeeds.com" style="color: #f3e8e9; text-decoration: underline;">About Feeds</a> to get started with newsreaders and subscribing.
+            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader. Visit <a href="https://aboutfeeds.com" style="color: #f3e8e9; text-decoration: underline;" target="_blank" rel="norefferrer">About Feeds</a> to get started with newsreaders and subscribing.
           </p>
         </nav>
         <div class="container-md px-3 py-3 markdown-body" style="margin-top: 0 !important; padding-top: 0 !important;">
