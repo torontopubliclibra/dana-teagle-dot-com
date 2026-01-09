@@ -34,7 +34,7 @@ fetch('../data/rcc.json')
     list.style.padding = '0';
     list.style.display = 'none';
     list.style.flexDirection = 'column';
-    list.style.marginBottom = '0';
+    list.style.marginBottom = '75px';
     list.style.gap = '15px';
     data.rcc.forEach(film => {
       const li = document.createElement('li');
@@ -97,7 +97,7 @@ fetch('../data/rcc.json')
     statsList.style.display = 'none';
     statsList.style.flexDirection = 'column';
     statsList.style.minHeight = 'calc(100vh - 90px)';
-    statsList.style.marginBottom = '0';
+    statsList.style.marginBottom = '75px';
     statsList.style.gap = '5px';
     statsList.style.background = 'rgb(34, 34, 34)';
     statsList.style.padding = '20px';
@@ -163,7 +163,6 @@ fetch('../data/rcc.json')
     container.parentNode.insertBefore(statsList, container.nextSibling);
 
     function showView(view) {
-      // Remove selected class from all
       if (listBtn) listBtn.classList.remove('selected');
       if (postersBtn) postersBtn.classList.remove('selected');
       if (statsBtn) statsBtn.classList.remove('selected');
