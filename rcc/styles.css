@@ -24,7 +24,6 @@
 
 /* Make child sections full viewport for effect */
 .horizontal-scroll-container > section {
-  background: rgba(95, 31, 71, 0.5);
   height: calc(100vh - 75px);
   flex: none;
   flex-direction: column;
