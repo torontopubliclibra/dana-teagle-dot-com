@@ -8,8 +8,7 @@ let tplMixes = {
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
     clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
-    rangeSelect: `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;"><button class="range" id="newer-btn" onclick="tplMixes.functions.newer()" style="min-width:60px;" disabled>&lt;&lt; newer</button> | <span id="range-label">#176-200</span> | <button class="range" id="older-btn" onclick="tplMixes.functions.older();" style="min-width:60px;">older &gt;&gt;</button>
-    </p>`,
+    rangeSelect: '',
     scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">back to top</a></p>`,
     functions: {
         updateQuery: (value) => {
@@ -26,24 +25,28 @@ let tplMixes = {
             tplMixes.functions.mixDisplay();
         },
         updateRangeNav: () => {
+            let maxNum = 198;
+            if (tplMixes.mixes && tplMixes.mixes.length > 0) {
+                maxNum = Math.max(...tplMixes.mixes.map(m => Number(m.number)));
+            }
             let ranges = [
-                {id: "1", label: "#1-25"},
-                {id: "2", label: "#26-50"},
-                {id: "3", label: "#51-75"},
-                {id: "4", label: "#76-100"},
-                {id: "5", label: "#101-125"},
-                {id: "6", label: "#126-150"},
-                {id: "7", label: "#151-175"},
-                {id: "8", label: "#176-200"}
+                {id: "1", label: `#1-25`},
+                {id: "2", label: `#26-50`},
+                {id: "3", label: `#51-75`},
+                {id: "4", label: `#76-100`},
+                {id: "5", label: `#101-125`},
+                {id: "6", label: `#126-150`},
+                {id: "7", label: `#151-175`},
+                {id: "8", label: `#176-${maxNum}`}
             ];
             let idx = ranges.findIndex(r => r.id === tplMixes.range);
             let label = ranges[idx] ? ranges[idx].label : "";
             let olderDisabled = idx === 0 ? 'disabled' : '';
             let newerDisabled = idx === ranges.length-1 ? 'disabled' : '';
             tplMixes.rangeSelect = `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
-                <button class="range" id="newer-btn" onclick="tplMixes.functions.newer();" style="min-width:60px;" ${newerDisabled}>&lt;&lt; newer</button> | 
-                <span id="range-label">${label}</span> | 
-                <button class="range" id="older-btn" onclick="tplMixes.functions.older();" style="min-width:60px;" ${olderDisabled}>older &gt;&gt;</button>
+                <button class="range" id="newer-btn" onclick="tplMixes.functions.newer();"" ${newerDisabled}>&lt;&lt;</button> | 
+                <span id="range-label">${label} / ${maxNum}</span> | 
+                <button class="range" id="older-btn" onclick="tplMixes.functions.older();"" ${olderDisabled}>&gt;&gt;</button>
             </p>`;
         },
         older: () => {
@@ -135,6 +138,10 @@ let tplMixes = {
                 if (tplMixes.stream == "spotify") {
                     stream = "spotify";
                 }
+                let maxNum = 198;
+                if (tplMixes.mixes && tplMixes.mixes.length > 0) {
+                    maxNum = Math.max(...tplMixes.mixes.map(m => Number(m.number)));
+                }
                 let rangeBounds = {
                     "1": [1, 25],
                     "2": [26, 50],
@@ -143,7 +150,7 @@ let tplMixes = {
                     "5": [101, 125],
                     "6": [126, 150],
                     "7": [151, 175],
-                    "8": [176, 200]
+                    "8": [176, maxNum]
                 };
                 let bounds = rangeBounds[range] || [1, 25];
                 for (let mix in tplMixes.mixes) {
