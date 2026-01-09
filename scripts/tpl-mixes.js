@@ -451,6 +451,7 @@ let tplMixes = {
                 mixes.push(mix);
             }
             tplMixes.mixes = mixes;
+            tplMixes.functions.updateRangeNav();
             // If hash is #index, show index, else normal view
             if (window.location.hash === '#index') {
                 tplMixes.functions.showIndex();
@@ -474,6 +475,7 @@ let tplMixes = {
             if (window.location.hash === '#index') {
                 tplMixes.functions.showIndex();
             } else {
+                tplMixes.functions.updateRangeNav();
                 tplMixes.functions.navDisplay();
                 tplMixes.functions.mixDisplay();
             }
