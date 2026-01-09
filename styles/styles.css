@@ -1571,6 +1571,15 @@ html.tpl .featuring-bar {
 html.tpl .search {
   background-color: rgba(132, 165, 157, 0.5);
 }
+html.tpl .index-button {
+  margin-top: 10px;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .index-button {
+    margin-top: 25px;
+    margin-bottom: -15px;
+  }
+}
 
 html.rustprop body {
   background-color: #282b2c;

@@ -1,6 +1,7 @@
 let tplMixes = {
     nav: $(".tpl-page-nav"),
     content: $(".tpl-page-text"),
+    heading: $(".tpl-page-heading"),
     mixes: {},
     range: localStorage['mixRange'] || "8",
     query: "",
@@ -9,7 +10,7 @@ let tplMixes = {
     clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: '',
-    scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">back to top</a></p>`,
+    scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;">Back to Top</a></p>`,
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
@@ -22,6 +23,77 @@ let tplMixes = {
                 $("#scroll-to-top").hide();
                 $("#mix-search-clear").hide();
             };
+            tplMixes.functions.mixDisplay();
+        },
+        artistIndexSearch: (artist) => {
+            tplMixes.functions.exitIndex();
+            setTimeout(() => {
+                const input = document.getElementById('mix-search-input');
+                if (input) {
+                    input.value = artist;
+                    input.focus();
+                }
+                tplMixes.functions.updateQuery(artist);
+            }, 0);
+        },
+        showIndex: () => {
+                        // Set hash to 'index' for navigation/bookmarking
+                        if (window.location.hash !== '#index') {
+                            window.location.hash = 'index';
+                        }
+            let artistSet = new Set();
+            if (tplMixes.mixes && tplMixes.mixes.length > 0) {
+                tplMixes.mixes.forEach(mix => {
+                    if (Array.isArray(mix.featuring)) {
+                        mix.featuring.forEach(artist => {
+                            if (typeof artist === 'string' && artist.includes(',')) {
+                                artist.split(',').map(a => a.trim()).forEach(a => artistSet.add(a));
+                            } else {
+                                artistSet.add(artist);
+                            }
+                        });
+                    }
+                });
+            }
+            let artists = Array.from(artistSet).filter(Boolean).sort((a, b) => a.localeCompare(b));
+            // Inject responsive style for artist index columns if not present
+            if (!document.getElementById('artist-index-style')) {
+                const style = document.createElement('style');
+                style.id = 'artist-index-style';
+                style.innerHTML = `
+                    .artist-index { columns: 3; }
+                    @media screen and (max-width: 600px) {
+                        .artist-index { columns: 2; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            let html = `<p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p><hr style="margin-top: 15px;"/>`;
+            html += `<ul class="artist-index" style="max-width:100%;font-size:1rem;list-style:none;padding:0;">`;
+            artists.forEach(artist => {
+                const safeArtist = artist.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                html += `<li style="padding:2px 0;color:#f3e8e9;"><a href="#" style="color:inherit;text-decoration:underline;cursor:pointer;" onclick="tplMixes.functions.artistIndexSearch('${safeArtist}');return false;">${artist}</a></li>`;
+            });
+                    artistIndexSearch: (artist) => {
+                        tplMixes.functions.exitIndex();
+                        setTimeout(() => {
+                            tplMixes.functions.updateQuery(artist);
+                            const input = document.getElementById('mix-search-input');
+                            if (input) input.focus();
+                        }, 0);
+                    },
+            html += `</ul><hr/><p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p>`;
+            tplMixes.heading.text("rusty mixes artist index");
+            tplMixes.nav.html("");
+            tplMixes.content.html(html);
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        },
+        exitIndex: () => {
+            tplMixes.functions.navDisplay();
+            tplMixes.heading.text("rusty mixes");
+            if (window.location.hash === '#index') {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
             tplMixes.functions.mixDisplay();
         },
         updateRangeNav: () => {
@@ -97,7 +169,7 @@ let tplMixes = {
                 const style = document.createElement('style');
                 style.id = 'tpl-mixes-bottom-nav-style';
                 style.innerHTML = `
-                .bottom-nav-flex { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; }
+                .bottom-nav-flex { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
                 @media screen and (max-width: 600px) {
                     .bottom-nav-flex { flex-direction: column-reverse; align-items: flex-start; margin-bottom: -15px; }
                 }`;
@@ -116,7 +188,8 @@ let tplMixes = {
                         '<div class="bottom-nav-flex">',
                         tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
-                        '</div>'
+                        '</div>',
+                        '<p class="index-button">See also: <button onclick="tplMixes.functions.showIndex()" class="range">Index</button></p>'
                     ];
                 }
                 $(this).html(navContent.reduce((accumulator, item) => accumulator + item));
@@ -325,9 +398,14 @@ let tplMixes = {
                 mixes.push(mix);
             }
             tplMixes.mixes = mixes;
-            tplMixes.functions.mixDisplay();
-            tplMixes.functions.scrollToHash();
-            tplMixes.functions.navDisplay();
+            // If hash is #index, show index, else normal view
+            if (window.location.hash === '#index') {
+                tplMixes.functions.showIndex();
+            } else {
+                tplMixes.functions.mixDisplay();
+                tplMixes.functions.scrollToHash();
+                tplMixes.functions.navDisplay();
+            }
         })
         .catch(error => console.log(error));
 
@@ -340,19 +418,11 @@ let tplMixes = {
         }
 
         window.addEventListener('hashchange', () => {
-            tplMixes.functions.scrollToHash();
-        });
-
-        $(document).on('focus', '#mix-search-input', function() {
-            if (window.matchMedia('(max-width: 600px)').matches) {
-                $('header').hide();
-                $('nav').hide();
-            }
-        });
-        $(document).on('blur', '#mix-search-input', function() {
-            if (window.matchMedia('(max-width: 600px)').matches) {
-                $('header').show();
-                $('nav').show();
+            if (window.location.hash === '#index') {
+                tplMixes.functions.showIndex();
+            } else {
+                tplMixes.functions.navDisplay();
+                tplMixes.functions.mixDisplay();
             }
         });
 

@@ -1164,4 +1164,12 @@ html.tpl {
     .search {
         background-color: rgba($color1, 0.5);
     }
+    .index-button {
+        margin-top: 10px;
+
+        @media only screen and (max-width: $tablet) {
+            margin-top: 25px;
+            margin-bottom: -15px;
+        }
+    }
 }
