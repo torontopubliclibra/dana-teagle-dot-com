@@ -2121,12 +2121,10 @@ html.trans-id hr {
 body, button, .button {
   font-size: 18px;
   text-align: left;
-  line-height: 1.25;
+  line-height: 1.6;
   color: #282b2c;
   font-family: "Source Code Pro", monospace;
-  font-display: swap;
   font-weight: 600;
-  line-height: 1.6;
   text-transform: lowercase;
   text-decoration: none;
 }
@@ -2221,8 +2219,8 @@ button, .button, nav ul li a {
 .scroll-down {
   font-size: 75px;
   text-align: center;
-  line-height: "";
-  color: "";
+  line-height: 1.1;
+  color: #282b2c;
   cursor: pointer;
   transition: 0.75s;
 }
@@ -2504,7 +2502,7 @@ h3 {
 @media only screen and (max-width: 768px) {
   .projects-nav ul, .projects-nav li, .projects-nav li button, .projects-nav button {
     font-size: 14px;
-    text-align: "";
+    text-align: left;
     line-height: 1;
     color: #282b2c;
     font-style: normal;
@@ -3008,8 +3006,7 @@ header nav .mobile-menu {
   header nav .mobile-menu {
     position: fixed;
     top: 0;
-    right: "";
-    bottom: "";
+    /* right and bottom intentionally omitted for browser compatibility */
     left: 0;
     cursor: pointer;
     background: #7a91b1;
