@@ -14,15 +14,18 @@ let tplMixes = {
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
-            if (value) {
+            if (value && document.activeElement === document.getElementById('mix-search-input')) {
                 $(".range-select").hide();
+            } else {
+                $(".range-select").show();
+            }
+            if (value) {
                 $("#scroll-to-top").show();
                 $("#mix-search-clear").show();
             } else {
-                $(".range-select").show();
                 $("#scroll-to-top").hide();
                 $("#mix-search-clear").hide();
-            };
+            }
             tplMixes.functions.mixDisplay();
         },
         artistIndexSearch: (artist) => {
@@ -37,10 +40,10 @@ let tplMixes = {
             }, 0);
         },
         showIndex: () => {
-                        // Set hash to 'index' for navigation/bookmarking
-                        if (window.location.hash !== '#index') {
-                            window.location.hash = 'index';
-                        }
+            // Set hash to 'index' for navigation/bookmarking
+            if (window.location.hash !== '#index') {
+                window.location.hash = 'index';
+            }
             let artistSet = new Set();
             if (tplMixes.mixes && tplMixes.mixes.length > 0) {
                 tplMixes.mixes.forEach(mix => {
@@ -424,6 +427,15 @@ let tplMixes = {
         },
     },
     init: () => {
+        // Always show range select by default
+        $(document).on('focus', '#mix-search-input', function() {
+            if (this.value) {
+                $(".range-select").hide();
+            }
+        });
+        $(document).on('blur', '#mix-search-input', function() {
+            $(".range-select").show();
+        });
         fetch('../data/mixes.json').then(response => response.json())
         .then((data) => {
             let mixes = [];
