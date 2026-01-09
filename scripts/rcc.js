@@ -73,7 +73,7 @@ fetch('../data/rcc.json')
       img.alt = `'${film.title}' (${film.year}) poster`;
       img.className = 'poster';
       img.style.display = 'block';
-      img.style.width = '150px';
+      img.style.width = '200px';
       img.style.height = 'auto';
       img.style.padding = '20px';
       img.style.background = 'rgb(34, 34, 34)';

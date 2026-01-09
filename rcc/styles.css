@@ -287,7 +287,7 @@ footer p {
 }
 
 footer p, footer a, footer span {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   max-width: calc(100vw - 40px);
   margin: 0;
 }
