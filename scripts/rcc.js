@@ -158,7 +158,7 @@ fetch('../data/rcc.json')
         totalRuntime += film.runtime;
       }
     });
-    runtimeLi.textContent = `Total runtime: ${totalRuntime} minutes (${(totalRuntime / 60).toFixed(2)} hours) //`;
+    runtimeLi.textContent = `Total runtime: ${totalRuntime} mins (${(totalRuntime / 60).toFixed(2)} hrs) //`;
     runtimeLi.style.fontSize = '0.9rem';
     filmsLi.style.fontSize = '0.9rem';
     statsList.appendChild(directorsLi);
