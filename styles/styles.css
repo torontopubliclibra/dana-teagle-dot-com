@@ -901,7 +901,7 @@ html.tpl main .tpl-landing input, html.tpl main.tpl-subpage input {
   color: #f3e8e9;
   font-size: 0.8rem;
   background-color: #282b2c;
-  padding: 5px;
+  padding: 5px 7px;
 }
 html.tpl main .feed-items {
   display: flex;

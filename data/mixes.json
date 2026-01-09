@@ -214,7 +214,7 @@
         "tidal": "https://tidal.com/playlist/c2bf2818-d993-4119-8d23-0fe5f689f7c2",
         "spotify": "https://open.spotify.com/playlist/3oQFFTr0Lec3nEb74lzpmZ",
         "image": "https://resources.tidal.com/images/42b146ed/9eeb/481c/ba26/de7094a691a1/1080x1080.jpg",
-        "featuring": ["Saintseneca", "Haley Heynderickx", "Iron & Wine", "Feist", "Lucy Dacus", "The A's", "Elisapie", "Nico Paulo", "Adrienne Lenker", "Abigail Lapell", "Joan Shelley", "Bedouine"]
+        "featuring": ["Saintseneca", "Haley Heynderickx", "Iron & Wine", "Feist", "Lucy Dacus", "The A's", "Elisapie", "Nico Paulo", "Adrianne Lenker", "Abigail Lapell", "Joan Shelley", "Bedouine"]
     },
     "nothing's free (wild and unruly)": {
         "number": "167",
@@ -269,61 +269,172 @@
         "number": "160",
         "tidal": "https://tidal.com/playlist/7e9adbe6-6dd4-4a67-921e-ddcedd885471",
         "spotify": "https://open.spotify.com/playlist/5jpZpsnFFjGNtlgg2QBj30",
-        "image": "https://resources.tidal.com/images/582806c7/3332/4cfe/85f2/9a4b99a320ea/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/582806c7/3332/4cfe/85f2/9a4b99a320ea/1080x1080.jpg",
+        "featuring": ["Nick Drake", "Do Make Say Think", "Badbadnotgood", "Samuel T. Herring", "Tame Impala", "Joyful Joyful", "my bloody valentine", "Hole", "Nirvana", "Pixies", "New Order", "PJ Harvey", "Nick Cave & the Bad Seeds", "Jeff Buckley", "Talk Talk", "Leonard Cohen", "Angel Olsen", "Monica Martin", "Sylvan Esso", "Gia Margaret", "The Twilight Sad"]
     },
     "half of you (more of you)": {
         "number": "159",
         "tidal": "https://tidal.com/playlist/00de7963-b7c5-4a25-905a-e1125ce94549",
         "spotify": "https://open.spotify.com/playlist/65X7G4HNbqeg7P5Eq4tMD8",
-        "image": "https://resources.tidal.com/images/5c8a7cec/d3ee/42ec/88f1/3b83e612c085/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/5c8a7cec/d3ee/42ec/88f1/3b83e612c085/1080x1080.jpg",
+        "featuring": ["Sudan Archives", "stars", "St. Vincent", "Julien Baker", "Hop Along", "Sleater-Kinney", "Japanese Breakfast", "Cat Power", "Julia Jacklin", "Ethel Cain", "Chastity Belt", "Do Make Say Think", "Waxahatchee"]
     },
     "to be loved (a place to start)": {
         "number": "158",
         "tidal": "https://tidal.com/playlist/1ff5b9e5-130a-45f1-801f-7dbfaa3df358",
         "spotify": "https://open.spotify.com/playlist/2xmkVboGC1Noq68mgfdGJk",
-        "image": "https://resources.tidal.com/images/575f1219/099d/4dfb/96f3/10ab68bb0437/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/575f1219/099d/4dfb/96f3/10ab68bb0437/1080x1080.jpg",
+        "featuring": ["Chet Baker", "Neutral Milk Hotel", "Remember Sports", "p.s. eliot", "TOPS", "Diet Cig", "Angel Olsen", "La Luz", "Sylvan Esso", "Alabama Shakes", "Broken Social Scene", "White Denim"]
     },
     "woman (she wail and she moan)": {
         "number": "157",
         "tidal": "https://tidal.com/playlist/de8a02b0-69b7-49e6-a912-bdcc396b88b2",
         "spotify": "https://open.spotify.com/playlist/13oUlgjk69IGPc8CiyPMBS",
-        "image": "https://resources.tidal.com/images/53883017/cc18/47b9/a7b0/af8cbb3987b8/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/53883017/cc18/47b9/a7b0/af8cbb3987b8/1080x1080.jpg",
+        "featuring": [
+            "Nina Simone",
+            "Little Simz",
+            "Cleo Sol",
+            "Princess Nokia",
+            "Solange",
+            "Rico Nasty",
+            "Chaka Khan",
+            "Dua Lipa",
+            "Carly Rae Jepsen",
+            "Janelle Monáe",
+            "Sudan Archives",
+            "SOPHIE",
+            "Ralph",
+            "Dua Saleh",
+            "MUNA",
+            "Robyn",
+            "Donna Summer"
+        ]
     },
     "new day (miss her so)": {
         "number": "156",
         "tidal": "https://tidal.com/playlist/2ddd05eb-4f81-4518-8d81-3031965939c5",
         "spotify": "https://open.spotify.com/playlist/2pUbXjbEfq4DCe1tx2ROXj",
-        "image": "https://resources.tidal.com/images/54d4fc54/f9df/4b2f/9486/23acd203bd54/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/54d4fc54/f9df/4b2f/9486/23acd203bd54/1080x1080.jpg",
+        "featuring": [
+            "Holy Hive",
+            "Monster Rally",
+            "Arc De Soleil",
+            "The Impressions",
+            "Mulatu Astatke",
+            "Menahan Street Band",
+            "Saundra Williams",
+            "Syl Johnson",
+            "Laura Misch",
+            "Allah-Las",
+            "El Michels Affair"
+        ]
     },
     "more peace (heart on fire)": {
         "number": "155",
         "tidal": "https://tidal.com/playlist/4599a6d6-d718-4fe9-a966-940709b047f0",
         "spotify": "https://open.spotify.com/playlist/0tialq1jLyuxkMIkmqaCmv",
-        "image": "https://resources.tidal.com/images/b2eef3e8/0891/4d44/a902/2d5cf2809638/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/b2eef3e8/0891/4d44/a902/2d5cf2809638/1080x1080.jpg",
+        "featuring": [
+            "Alabaster DePlume",
+            "Little Simz",
+            "Sault",
+            "Marco Kleebauer",
+            "Yaya Bey",
+            "Sudan Archives",
+            "PawPaw Rod",
+            "Solange",
+            "KOKOROKO",
+            "Tsegue-Maryam Guebrou"
+        ]
     },
     "coffee for breakfast (essentially)": {
         "number": "154",
         "tidal": "https://tidal.com/playlist/620378c9-2a85-49ac-b6e0-7c1d320cf436",
         "spotify": "https://open.spotify.com/playlist/0TFhe1HRKUln25KWQ1hu8P",
-        "image": "https://resources.tidal.com/images/1ab37bd3/9596/4175/b080/2a68d10f2b3a/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/1ab37bd3/9596/4175/b080/2a68d10f2b3a/1080x1080.jpg",
+        "featuring": [
+            "Japanese Breakfast",
+            "Mallrat",
+            "Sudan Archives",
+            "Blood Orange",
+            "Empress Of",
+            "Yumi Zouma",
+            "Your Smith",
+            "Vagabon",
+            "Christine and the Queens",
+            "TOPS",
+            "Sylvan Esso"
+        ]
     },
     "good words (take flight)": {
         "number": "153",
         "tidal": "https://tidal.com/playlist/d76acc3d-935c-4276-8067-874fd131e1f9",
         "spotify": "https://open.spotify.com/playlist/5MVljO0jxv1kPUJ4ZbwcZm",
-        "image": "https://resources.tidal.com/images/04d1dbd0/d926/4101/ac7a/96ecf033149a/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/04d1dbd0/d926/4101/ac7a/96ecf033149a/1080x1080.jpg",
+        "featuring": [
+            "Mountain Main",
+            "The Weather Station",
+            "Laura Gibson",
+            "St. Vincent",
+            "Haley Heynderickx",
+            "Max García Conover",
+            "Cat Power",
+            "Feist",
+            "Ben Gibbard",
+            "The Decemberists",
+            "Adrianne Lenker",
+            "Bedouine",
+            "Tiny Ruins",
+            "Angel Olsen"
+        ]
     },
     "the way I feel (bitter with the sweet)": {
         "number": "152",
         "tidal": "https://tidal.com/playlist/da1af7f1-43d7-41f4-b280-3eba89c3bdcd",
         "spotify": "https://open.spotify.com/playlist/6CW5rcalBqxzei7j3ZoyDi",
-        "image": "https://resources.tidal.com/images/777623d3/9377/4e75/856e/8f2fb2513cd4/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/777623d3/9377/4e75/856e/8f2fb2513cd4/1080x1080.jpg",
+        "featuring": [
+            "The Zombies",
+            "Charlie Parker",
+            "Beastie Boys",
+            "Miho Hatori",
+            "Carole King",
+            "Durand Jones & The Indications",
+            "Brittany Howard",
+            "Bonnie Raitt",
+            "Badbadnotgood",
+            "Charlotte Day Wilson",
+            "Minnie Ripperton",
+            "Love Apple",
+            "Lou Ragland",
+            "Prince",
+            "The Hesitations",
+            "Donny Hathaway",
+            "Shuggie Otis",
+            "Bill Withers",
+            "Miles Davis"
+        ]
     },
     "body and soul (dream of spring)": {
         "number": "151",
         "tidal": "https://tidal.com/playlist/9b1bd0f5-bea1-46b0-bdb3-159a1eaf427b",
         "spotify": "https://open.spotify.com/playlist/5fPmSQDi7ZfNfTRxaCVgJp",
-        "image": "https://resources.tidal.com/images/23daf346/c298/4a7f/955e/4af983d6f2df/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/23daf346/c298/4a7f/955e/4af983d6f2df/1080x1080.jpg",
+        "featuring": [
+            "Billie Holliday",
+            "Oscar Peterson Trio",
+            "Chet Baker",
+            "Clifford Brown",
+            "Max Roach",
+            "Glenn Miller",
+            "Coleman Hawkins",
+            "Art Tatum",
+            "Thelonious Monk",
+            "Bill Evans",
+            "Charlie Parker",
+            "Sarah Vaughan"
+        ]
     },
     "those that sail (loose ends surround)": {
         "number": "150",
