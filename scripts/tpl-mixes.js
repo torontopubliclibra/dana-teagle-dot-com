@@ -14,11 +14,6 @@ let tplMixes = {
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
-            if (value && document.activeElement === document.getElementById('mix-search-input')) {
-                $(".range-select").hide();
-            } else {
-                $(".range-select").show();
-            }
             if (value) {
                 $("#scroll-to-top").show();
                 $("#mix-search-clear").show();
@@ -427,15 +422,6 @@ let tplMixes = {
         },
     },
     init: () => {
-        // Always show range select by default
-        $(document).on('focus', '#mix-search-input', function() {
-            if (this.value) {
-                $(".range-select").hide();
-            }
-        });
-        $(document).on('blur', '#mix-search-input', function() {
-            $(".range-select").show();
-        });
         fetch('../data/mixes.json').then(response => response.json())
         .then((data) => {
             let mixes = [];
