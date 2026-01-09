@@ -42,7 +42,7 @@ fetch('../data/rcc.json')
       li.style.flexDirection = 'row-reverse';
       const infoBar = document.createElement('div');
       infoBar.className = 'rcc-info-bar';
-      infoBar.style = 'color: #c0c5d2; padding: 20px 0; font-size: 0.8rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
+      infoBar.style = 'color: #c0c5d2; padding: 20px; font-size: 0.8rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
       function formatDate(dateStr) {
         const [day, month, year] = dateStr.split('-');
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -74,9 +74,9 @@ fetch('../data/rcc.json')
       img.className = 'poster';
       img.style.display = 'block';
       img.style.width = '200px';
-      img.style.maxWidth = '30%';
+      img.style.maxWidth = '25%';
       img.style.height = 'auto';
-      img.style.padding = '20px';
+      img.style.padding = '0';
       img.style.background = 'rgb(34, 34, 34)';
       if (film.series) {
         infoBar.style.background = 'rgba(41, 37, 41, 1)';
