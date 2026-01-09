@@ -208,6 +208,21 @@ let tplMixes = {
             tplMixes.stream = stream;
             tplMixes.functions.mixDisplay();
         },
+        randomMix: () => {
+            let randomIndex = Math.floor(Math.random() * tplMixes.mixes.length);
+            let randomMix = tplMixes.mixes[randomIndex];
+            if (randomMix) {
+                let streamLink = randomMix.tidal;
+                if (tplMixes.stream === "spotify" && randomMix.spotify) {
+                    streamLink = randomMix.spotify;
+                }
+                if (streamLink) {
+                    window.open(streamLink, '_blank');
+                } else {
+                    tplMixes.functions.randomMix();
+                }
+            }
+        },
         navDisplay: () => {
             setTimeout(() => {
                 const el = document.querySelector('.range-select');
@@ -237,7 +252,7 @@ let tplMixes = {
                         tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
                         '</div>',
-                        '<p class="index-button">See: <button onclick="tplMixes.functions.showIndex()" class="range">Artist Index</button></p>'
+                        '<p class="index-button"><button onclick="tplMixes.functions.showIndex()" class="range">Artist Index</button> | <button onclick="tplMixes.functions.randomMix()" class="range">Random Mix</button></p>'
                     ];
                 }
                 $(this).html(navContent.reduce((accumulator, item) => accumulator + item));
