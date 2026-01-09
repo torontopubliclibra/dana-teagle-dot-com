@@ -65,7 +65,11 @@ let tplFeed = {
                     let mailto = `mailto:torontopubliclibra@gmail.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
                     // Make the datestamp itself the permalink
                     let dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
-                    let image = `<div class="feed-item-container" id="${item.id}"><img src="${item.url}" alt="${item.alt}" class="feed-item"><p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
+                    let imgTag = `<img src="${item.url}" alt="${item.alt}" class="feed-item">`;
+                    if (item.link) {
+                        imgTag = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${imgTag}</a>`;
+                    }
+                    let image = `<div class="feed-item-container" id="${item.id}">${imgTag}<p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
                     formattedFeed.push(image);
                 });
             }
@@ -93,7 +97,7 @@ let tplFeed = {
                 toggleText += '<span class="year-selected">older >></span>';
             }
             toggleText += '</span>';
-            toggleText += '<span style="border-bottom: solid white 0.75px;margin-bottom: 5px;"><a href="/tpl/rss.xml" target="_blank" style="margin-left:auto;margin-bottom: -3px; display: flex; align-items: center; text-decoration:none;gap: 8px; color: #f3e8e9; font-size: 1.1em;" title="RSS Feed">RSS';
+            toggleText += '<span style="border-bottom: solid white 0.75px;margin-bottom: 5px;"><a href="/tpl/rss.xml" target="_blank" style="margin-left:auto;margin-bottom: -3px; display: flex; align-items: center; text-decoration:none;gap: 8px; color: #f3e8e9; font-size: 1rem;" title="RSS Feed">RSS';
             toggleText += '<img src="../../assets/icons/rss.svg" style="width:16px;filter: invert(1);" alt="RSS icon"></a></span>';
             toggleText += '</p>';
             tplFeed.toggle.html(toggleText);
