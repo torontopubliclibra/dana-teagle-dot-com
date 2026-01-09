@@ -42,7 +42,7 @@ fetch('../data/rcc.json')
       li.style.flexDirection = 'row-reverse';
       const infoBar = document.createElement('div');
       infoBar.className = 'rcc-info-bar';
-      infoBar.style = 'color: #c0c5d2; padding: 20px 0; font-size: 0.95rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
+      infoBar.style = 'color: #c0c5d2; padding: 20px 0; font-size: 0.8rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
       function formatDate(dateStr) {
         const [day, month, year] = dateStr.split('-');
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -58,7 +58,7 @@ fetch('../data/rcc.json')
       if (film.title === 'TBD') {
         infoText += `Title: TBD //<br/>`;
       } else {
-        infoText += `Title: <a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;">${film.title}</a> //<br/>`;
+        infoText += `Title: <a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.8rem;">${film.title}</a> //<br/>`;
       }
       if (film.year) infoText += `Year: ${film.year} //<br/>`;
       if (film.director) infoText += `Director: ${film.director} //<br/>`;
@@ -130,17 +130,20 @@ fetch('../data/rcc.json')
     Object.keys(decadeCounts).sort().forEach(decade => {
       const li = document.createElement('li');
       li.textContent = `${decade}s movie(s): ${decadeCounts[decade]} //`;
+      li.style.fontSize = '0.9rem';
       statsList.appendChild(li);
     });
     Object.keys(countries).sort().forEach(country => {
-        const li = document.createElement('li');
-        li.textContent = `${country} movie(s): ${countries[country]} //`;
-        statsList.appendChild(li);
+      const li = document.createElement('li');
+      li.textContent = `${country} movie(s): ${countries[country]} //`;
+      li.style.fontSize = '0.9rem';
+      statsList.appendChild(li);
     });
     Object.keys(languages).sort().forEach(lang => {
-        const li = document.createElement('li');
-        li.textContent = `${lang} language movie(s): ${languages[lang]} //`;
-        statsList.appendChild(li);
+      const li = document.createElement('li');
+      li.textContent = `${lang} language movie(s): ${languages[lang]} //`;
+      li.style.fontSize = '0.9rem';
+      statsList.appendChild(li);
     });
     const directorsList = [];
     data.rcc.forEach(film => {
@@ -150,6 +153,7 @@ fetch('../data/rcc.json')
     });
     const directorsLi = document.createElement('li');
     directorsLi.textContent = `Directors: ${[...new Set(directorsList)].sort().join(', ')} //`;
+    directorsLi.style.fontSize = '0.9rem';
     const runtimeLi = document.createElement('li');
     let totalRuntime = 0;
     data.rcc.forEach(film => {
@@ -158,6 +162,8 @@ fetch('../data/rcc.json')
       }
     });
     runtimeLi.textContent = `Total runtime: ${totalRuntime} minutes (${(totalRuntime / 60).toFixed(2)} hours) //`;
+    runtimeLi.style.fontSize = '0.9rem';
+    filmsLi.style.fontSize = '0.9rem';
     statsList.appendChild(directorsLi);
     statsList.appendChild(runtimeLi);
     statsList.appendChild(filmsLi);
