@@ -207,6 +207,18 @@ let tplMixes = {
             tplMixes.functions.mixDisplay();
         },
         navDisplay: () => {
+            // Debug: log when navDisplay runs and check for .range-select
+            setTimeout(() => {
+                const el = document.querySelector('.range-select');
+                console.log('navDisplay called. .range-select present:', !!el, el);
+            }, 0);
+            // Ensure .range-select is always visible unless intentionally hidden
+            if (!document.getElementById('range-select-always-visible')) {
+                const style = document.createElement('style');
+                style.id = 'range-select-always-visible';
+                style.innerHTML = `.range-select { display: flex !important; }`;
+                document.head.appendChild(style);
+            }
             let navs = $(".tpl-page-nav");
             // Ensure responsive CSS is present
             if (!document.getElementById('tpl-mixes-bottom-nav-style')) {
