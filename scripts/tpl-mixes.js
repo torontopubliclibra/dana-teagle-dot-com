@@ -14,12 +14,14 @@ let tplMixes = {
     functions: {
         updateQuery: (value) => {
             tplMixes.query = value;
-            if (value) {
-                $("#scroll-to-top").show();
-                $("#mix-search-clear").show();
-            } else {
-                $("#scroll-to-top").hide();
-                $("#mix-search-clear").hide();
+                if (value) {
+                    $(".range-select").css('display', 'none');
+                    $("#scroll-to-top").show();
+                    $("#mix-search-clear").show();
+                } else {
+                    $(".range-select").css('display', 'flex');
+                    $("#scroll-to-top").hide();
+                    $("#mix-search-clear").hide();
             }
             tplMixes.functions.mixDisplay();
         },
@@ -207,20 +209,13 @@ let tplMixes = {
             tplMixes.functions.mixDisplay();
         },
         navDisplay: () => {
-            // Debug: log when navDisplay runs and check for .range-select
             setTimeout(() => {
                 const el = document.querySelector('.range-select');
                 console.log('navDisplay called. .range-select present:', !!el, el);
             }, 0);
-            // Ensure .range-select is always visible unless intentionally hidden
-            if (!document.getElementById('range-select-always-visible')) {
-                const style = document.createElement('style');
-                style.id = 'range-select-always-visible';
-                style.innerHTML = `.range-select { display: flex !important; }`;
-                document.head.appendChild(style);
-            }
+            const forcedStyle = document.getElementById('range-select-always-visible');
+            if (forcedStyle) forcedStyle.remove();
             let navs = $(".tpl-page-nav");
-            // Ensure responsive CSS is present
             if (!document.getElementById('tpl-mixes-bottom-nav-style')) {
                 const style = document.createElement('style');
                 style.id = 'tpl-mixes-bottom-nav-style';
