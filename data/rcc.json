@@ -6,7 +6,10 @@
             "year": 2024,
             "director": "Luca Guadagnino",
             "poster": "/rcc/challengers.png",
-            "link": "https://letterboxd.com/film/challengers/"
+            "link": "https://letterboxd.com/film/challengers/",
+            "country": "American",
+            "languages": ["English"],
+            "runtime": 131
         },
         {
             "date": "05-02-2026",
@@ -14,7 +17,10 @@
             "year": 1999,
             "director": "Jamie Babbit",
             "poster": "/rcc/cheerleader.png",
-            "link": "https://letterboxd.com/film/but-im-a-cheerleader/"
+            "link": "https://letterboxd.com/film/but-im-a-cheerleader/",
+            "country": "American",
+            "languages": ["English"],
+            "runtime": 85
         },
         {
             "date": "30-04-2026",
@@ -22,7 +28,10 @@
             "year": 2004,
             "director": "Alice Wu",
             "poster": "/rcc/savingface.png",
-            "link": "https://letterboxd.com/film/saving-face/"
+            "link": "https://letterboxd.com/film/saving-face/",
+            "country": "American",
+            "languages": ["English", "Mandarin", "Shanghainese" ],
+            "runtime": 91
         },
         {
             "date": "30-07-2026",
@@ -30,7 +39,10 @@
             "year": 1985,
             "director": "Donna Deitch",
             "poster": "/rcc/deserthearts.png",
-            "link": "https://letterboxd.com/film/desert-hearts/"
+            "link": "https://letterboxd.com/film/desert-hearts/",
+            "country": "American",
+            "languages": ["English"],
+            "runtime": 96
         },
         {
             "date": "22-10-2026",
@@ -38,7 +50,10 @@
             "year": 2011,
             "director": "Dee Rees",
             "poster": "/rcc/pariah.png",
-            "link": "https://letterboxd.com/film/pariah/"
+            "link": "https://letterboxd.com/film/pariah/",
+            "country": "American",
+            "languages": ["English"],
+            "runtime": 86
         }
     ]
 }
