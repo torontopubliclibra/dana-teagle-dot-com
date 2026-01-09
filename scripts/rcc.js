@@ -39,10 +39,10 @@ fetch('../data/rcc.json')
     data.rcc.forEach(film => {
       const li = document.createElement('li');
       li.style.display = 'flex';
-      li.style.flexDirection = 'row-reverse';
+      li.style.flexDirection = 'row';
       const infoBar = document.createElement('div');
       infoBar.className = 'rcc-info-bar';
-      infoBar.style = 'color: #c0c5d2; padding: 20px; font-size: 0.8rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
+      infoBar.style = 'color: #c0c5d2; padding: 20px; font-size: 1rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
       function formatDate(dateStr) {
         const [day, month, year] = dateStr.split('-');
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -52,20 +52,17 @@ fetch('../data/rcc.json')
         return `${dayOfWeek} ${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
       }
       let infoText = '';
+      infoText += `${formatDate(film.date)} //<br/>`;
       if (film.series) {
-        infoText += `${film.series} //<br/>`;
+        infoText += `<em>${film.series}:</em><br/>`;
       }
       if (film.title === 'TBD') {
-        infoText += `Title: TBD //<br/>`;
+        infoText += `TBD<br/>`;
       } else {
-        infoText += `Title: <a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.8rem;">${film.title}</a> //<br/>`;
+        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:1rem;">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
       }
-      if (film.year) infoText += `Year: ${film.year} //<br/>`;
-      if (film.director) infoText += `Director: ${film.director} //<br/>`;
-      if (film.country) infoText += `Country: ${film.country} //<br/>`;
-      if (film.languages) infoText += `Language(s): ${film.languages.join(', ')} //<br/>`;
-      if (film.runtime) infoText += `Runtime: ${film.runtime} minutes //<br/>`;
-      infoText += `Date: ${formatDate(film.date)} //<br/>`;
+      if (film.director) infoText += `Directed by ${film.director}<br/>`;
+      if (film.runtime) infoText += `${film.runtime} mins | ${film.languages ? film.languages.join(', ') : ''}<br/>`;
       infoBar.innerHTML = infoText;
       li.appendChild(infoBar);
       const img = document.createElement('img');
@@ -73,7 +70,7 @@ fetch('../data/rcc.json')
       img.alt = `'${film.title}' (${film.year}) poster`;
       img.className = 'poster';
       img.style.display = 'block';
-      img.style.width = '200px';
+      img.style.width = '250px';
       img.style.maxWidth = '25%';
       img.style.height = 'auto';
       img.style.padding = '0';
