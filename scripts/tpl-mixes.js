@@ -225,9 +225,6 @@ let tplMixes = {
                 let navContent;
                 if (idx === 0) {
                     navContent = [tplMixes.searchBar, tplMixes.clearSearchButton, tplMixes.rangeSelect];
-                    if (tplMixes.query) {
-                        navContent = [tplMixes.searchBar, tplMixes.clearSearchButton];
-                    }
                 } else {
                     navContent = [
                         '<hr style="margin-top: 30px;margin-bottom: 5px;border-color: rgba(243, 232, 233, 0.75);"/>',
