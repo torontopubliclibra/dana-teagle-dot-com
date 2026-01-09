@@ -74,6 +74,7 @@ fetch('../data/rcc.json')
       img.className = 'poster';
       img.style.display = 'block';
       img.style.width = '200px';
+      img.style.maxWidth = '30%';
       img.style.height = 'auto';
       img.style.padding = '20px';
       img.style.background = 'rgb(34, 34, 34)';
