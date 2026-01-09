@@ -56,37 +56,82 @@ let tplMixes = {
                 });
             }
             let artists = Array.from(artistSet).filter(Boolean).sort((a, b) => a.localeCompare(b));
-            // Inject responsive style for artist index columns if not present
+            // Pagination: 0-9 and 4 alphanumeric ranges
+            const ranges = [
+                { label: 'A-F', start: 'A', end: 'F' },
+                { label: 'G-L', start: 'G', end: 'L' },
+                { label: 'M-R', start: 'M', end: 'R' },
+                { label: 'S-Z', start: 'S', end: 'Z' },
+                { label: '0-9', start: '0', end: '9', isNumber: true },
+            ];
+            if (typeof tplMixes.artistIndexPage !== 'number') tplMixes.artistIndexPage = 0;
+            function getFirstChar(artist) {
+                return (artist[0] || '').toUpperCase();
+            }
+            const currentRange = ranges[tplMixes.artistIndexPage];
+            const filteredArtists = artists.filter(artist => {
+                const ch = getFirstChar(artist);
+                if (currentRange.isNumber) {
+                    return ch >= '0' && ch <= '9';
+                } else {
+                    return ch >= currentRange.start && ch <= currentRange.end;
+                }
+            });
+            // Inject responsive style for artist index grid if not present
             if (!document.getElementById('artist-index-style')) {
                 const style = document.createElement('style');
                 style.id = 'artist-index-style';
                 style.innerHTML = `
-                    .artist-index { columns: 3; }
+                    .artist-index {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.5em 1.5em;
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                    }
+                    .artist-index li {
+                        flex: 0 1 calc(50% - 1.5em);
+                        box-sizing: border-box;
+                        padding: 2px 0;
+                        color: #f3e8e9;
+                    }
                     @media screen and (max-width: 600px) {
-                        .artist-index { columns: 2; }
+                        .artist-index li {
+                            flex-basis: 100%;
+                        }
                     }
                 `;
                 document.head.appendChild(style);
             }
-            let html = `<p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p><hr style="margin-top: 15px;"/>`;
-            html += `<ul class="artist-index" style="max-width:100%;font-size:1rem;list-style:none;padding:0;">`;
-            artists.forEach(artist => {
-                const safeArtist = artist.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-                html += `<li style="padding:2px 0;color:#f3e8e9;"><a href="#" style="color:inherit;text-decoration:underline;cursor:pointer;" onclick="tplMixes.functions.artistIndexSearch('${safeArtist}');return false;">${artist}</a></li>`;
+            let html = `<p><button class=\"range\" onclick=\"tplMixes.functions.exitIndex()\">&lt; Back to Mixes</button></p>`;
+            // Pagination controls
+            html += `<div style=\"margin-bottom:10px;\">`;
+            ranges.forEach((range, idx) => {
+                if (idx === tplMixes.artistIndexPage) {
+                    html += `<button class=\"range-selected\" disabled>${range.label}</button> `;
+                } else {
+                    html += `<button class=\"range\" onclick=\"tplMixes.functions.showIndexPage(${idx})\">${range.label}</button> `;
+                }
             });
-                    artistIndexSearch: (artist) => {
-                        tplMixes.functions.exitIndex();
-                        setTimeout(() => {
-                            tplMixes.functions.updateQuery(artist);
-                            const input = document.getElementById('mix-search-input');
-                            if (input) input.focus();
-                        }, 0);
-                    },
-            html += `</ul><hr/><p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p>`;
+            html += `</div><hr style=\"margin-top: 15px;\"/>`;
+            html += `<ul class=\"artist-index\" style=\"max-width:100%;font-size:1rem;\">`;
+            filteredArtists.forEach(artist => {
+                const safeArtist = artist.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                html += `<li><a href=\"#\" style=\"color:inherit;text-decoration:underline;cursor:pointer;\" onclick=\"tplMixes.functions.artistIndexSearch('${safeArtist}');return false;\">${artist}</a></li>`;
+            });
+            html += `</ul><hr/>`;
+            html += tplMixes.scrollToTop;
             tplMixes.heading.text("rusty mixes artist index");
             tplMixes.nav.html("");
             tplMixes.content.html(html);
+            $("#scroll-to-top").show();
             window.scrollTo({top: 0, behavior: 'smooth'});
+        },
+
+        showIndexPage: (page) => {
+            tplMixes.artistIndexPage = page;
+            tplMixes.functions.showIndex();
         },
         exitIndex: () => {
             tplMixes.functions.navDisplay();
@@ -94,6 +139,7 @@ let tplMixes = {
             if (window.location.hash === '#index') {
                 history.replaceState(null, '', window.location.pathname + window.location.search);
             }
+            $("#scroll-to-top").hide();
             tplMixes.functions.mixDisplay();
         },
         updateRangeNav: () => {
@@ -189,7 +235,7 @@ let tplMixes = {
                         tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
                         '</div>',
-                        '<p class="index-button">See also: <button onclick="tplMixes.functions.showIndex()" class="range">Index</button></p>'
+                        '<p class="index-button">See: <button onclick="tplMixes.functions.showIndex()" class="range">Artist Index</button></p>'
                     ];
                 }
                 $(this).html(navContent.reduce((accumulator, item) => accumulator + item));
