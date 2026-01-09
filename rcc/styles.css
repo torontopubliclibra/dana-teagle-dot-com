@@ -24,11 +24,14 @@
 
 /* Make child sections full viewport for effect */
 .horizontal-scroll-container > section {
+  background: rgba(95, 31, 71, 0.5);
   height: calc(100vh - 75px);
   flex: none;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 html {
   line-height: 1.15;
@@ -288,7 +291,7 @@ footer p {
 
 footer p, footer a {
   font-size: 0.8rem;
-  max-width: 95vw;
+  max-width: calc(100vw - 40px);
   margin: 0;
 }
 @media only screen and (max-width: 970px) {
@@ -309,13 +312,15 @@ body {
 }
 
 .poster {
-  margin: 0 auto;
+  margin: 0;
+  margin-right: auto;
   padding: 0;
   width: auto;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   pointer-events: none;
+  height: calc(100vh - 107px);
 }
 
 footer {
@@ -326,5 +331,5 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 25px;
+  padding: 20px;
 }
