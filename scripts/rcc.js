@@ -163,18 +163,26 @@ fetch('../data/rcc.json')
     container.parentNode.insertBefore(statsList, container.nextSibling);
 
     function showView(view) {
+      // Remove selected class from all
+      if (listBtn) listBtn.classList.remove('selected');
+      if (postersBtn) postersBtn.classList.remove('selected');
+      if (statsBtn) statsBtn.classList.remove('selected');
+
       if (view === 'list') {
         container.style.display = 'none';
         list.style.display = 'flex';
         statsList.style.display = 'none';
+        if (listBtn) listBtn.classList.add('selected');
       } else if (view === 'stats') {
         container.style.display = 'none';
         list.style.display = 'none';
         statsList.style.display = 'flex';
+        if (statsBtn) statsBtn.classList.add('selected');
       } else {
         list.style.display = 'none';
         statsList.style.display = 'none';
         container.style.display = 'flex';
+        if (postersBtn) postersBtn.classList.add('selected');
       }
     }
 
