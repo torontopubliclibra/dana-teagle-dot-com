@@ -2,7 +2,7 @@ let tplMixes = {
     nav: $(".tpl-page-nav"),
     content: $(".tpl-page-text"),
     mixes: {},
-    range: "8",
+    range: localStorage['mixRange'] || "8",
     query: "",
     stream: "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
@@ -65,6 +65,7 @@ let tplMixes = {
                 history.replaceState(null, '', window.location.pathname + window.location.search);
             }
             tplMixes.range = range;
+            localStorage['mixRange'] = range;
             tplMixes.functions.updateRangeNav();
             tplMixes.functions.navDisplay();
             tplMixes.functions.mixDisplay();
@@ -325,6 +326,10 @@ let tplMixes = {
 
         if (localStorage['stream'] === 'spotify') {
             tplMixes.functions.streamSet('spotify');
+        }
+        if (localStorage['mixRange']) {
+            tplMixes.range = localStorage['mixRange'];
+            tplMixes.functions.updateRangeNav();
         }
 
         window.addEventListener('hashchange', () => {

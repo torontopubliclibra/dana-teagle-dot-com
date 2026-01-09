@@ -861,230 +861,687 @@
         "number": "130",
         "tidal": "https://tidal.com/playlist/b08fb11e-4568-4c1b-a573-dabc4ad7f45f",
         "spotify": "https://open.spotify.com/playlist/1vwQTugdfHs4yuXJJdEe4M",
-        "image": "https://resources.tidal.com/images/f7cb58de/5b52/4cf9/a46d/b4e51a6c45d8/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f7cb58de/5b52/4cf9/a46d/b4e51a6c45d8/1080x1080.jpg",
+        "featuring": [
+            "Still Woozy",
+            "Glass Animals",
+            "Childish Gambino",
+            "Wet Leg",
+            "Anderson .Paak",
+            "Kali Uchis",
+            "Miguel",
+            "Miguel",
+            "Ari Lennox",
+            "Harry Styles",
+            "Frank Ocean",
+            "Kaytranada",
+            "Syd"
+        ]
     },
     "into the dark (never going back again)": {
         "number": "129",
         "tidal": "https://tidal.com/playlist/6c73a201-21b1-448a-a3e1-d954be3754e9",
         "spotify": "https://open.spotify.com/playlist/3mF2GlRJNHXDeGYYUeUq75",
-        "image": "https://resources.tidal.com/images/694c8d76/e093/4659/bf2f/6d0577106929/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/694c8d76/e093/4659/bf2f/6d0577106929/1080x1080.jpg",
+        "featuring": [
+            "Nataly Dawn",
+            "Sheriffs of Schroedingham",
+            "Sunflower Bean",
+            "Cicada Rhythm",
+            "Mountain Man",
+            "Mipso"
+        ]
     },
     "favourite time of year (xmas eve)": {
         "number": "128",
         "tidal": "https://tidal.com/playlist/d88958dd-a20d-41d8-90a3-23e81d36a068",
         "spotify": "https://open.spotify.com/playlist/48ZfxV2HhKyJDLd5QM58uV",
-        "image": "https://resources.tidal.com/images/1f4db1b4/a468/4735/9a8b/cbae1feb9d25/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/1f4db1b4/a468/4735/9a8b/cbae1feb9d25/1080x1080.jpg",
+        "featuring": [
+            "The Beach Boys",
+            "Kingsley Thomas",
+            "Rich Fontana",
+            "Little Branch Trio",
+            "Beegie Adair",
+            "Henri La Mer",
+            "Andrew Morgan Smith",
+            "The Lifetimers",
+            "Vince Guaraldi",
+            "Roddy Doyle Trio",
+            "Eltingvilles",
+            "Flatland Park",
+            "Ennio Mano",
+            "Art Silver Trio",
+            "Oscar Peterson",
+            "Joe Pass",
+            "Bill Evans",
+            "Vince Guaraldi",
+            "Fulton Street Players"
+        ]
     },
     "one more year (time will tell)": {
         "number": "127",
         "tidal": "https://tidal.com/playlist/2a6cf891-1775-478c-9ad9-b9ae983b47e3",
         "spotify": "https://open.spotify.com/playlist/5WaQ8fOtmuvogAti4XybTt",
-        "image": "https://resources.tidal.com/images/b83cfd1a/bbff/4bdd/841f/b2178ea16020/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/b83cfd1a/bbff/4bdd/841f/b2178ea16020/1080x1080.jpg",
+        "featuring": [
+            "Tame Impala",
+            "Prince",
+            "The Revolution",
+            "Dua Lipa",
+            "Bruno Mars",
+            "Anderson .Paak",
+            "Silk Sonic",
+            "Your Smith",
+            "Sylvan Esso",
+            "Ibibio Sound Machine",
+            "Childish Gambino",
+            "JJ Lin",
+            "A Tribe Called Quest",
+            "Bill Withers",
+            "Kendrick Lamar",
+            "Funkadelic",
+            "Luther Vandross",
+            "Mary Jane Girls",
+            "Curtis Mayfield",
+            "Amy Winehouse",
+            "BADBADNOTGOOD",
+            "Empress Of",
+            "St. Vincent",
+            "LCD Soundsystem",
+            "Minnie Ripperton",
+            "The Staple Sisters",
+            "David Bowie",
+            "Mitski",
+            "Chet Baker",
+            "Nina Simone",
+            "Charlotte Day Wilson",
+            "Little Simz",
+            "Cleo Sol",
+            "Lucy Dacus",
+            "Phoebe Bridgers",
+            "Japanese Breakfast",
+            "Ralph",
+            "CHVRCHES",
+            "Metric",
+            "MUNA",
+            "Tegan and Sara",
+            "Blondie",
+            "The Mountain Goats",
+            "Blood Orange",
+            "Samantha Urbani"
+        ]
     },
     "cowboy (midnight rider)": {
         "number": "126",
         "tidal": "https://tidal.com/playlist/1bed864f-6c30-4931-b726-cb1b6ca432e9",
         "spotify": "https://open.spotify.com/playlist/72LT14WMsFOccERvBfdfmW",
-        "image": "https://resources.tidal.com/images/abb3d1ae/e3af/4436/9bcf/032c24b5eccb/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/abb3d1ae/e3af/4436/9bcf/032c24b5eccb/1080x1080.jpg",
+        "featuring": [
+            "Thin Lizzy",
+            "The Allman Brothers Band",
+            "Creedence Clearwater Revival",
+            "Mountain",
+            "The Guess Who",
+            "The Who",
+            "Jimi Hendrix",
+            "Cream",
+            "ZZ Top",
+            "Stevie Ray Vaughan",
+            "Double Trouble",
+            "The Outlaws",
+            "Grateful Dead"
+        ]
     },
     "so sorry (regret)": {
         "number": "125",
         "tidal": "https://tidal.com/playlist/c27caaa9-4b09-4674-a34d-51b1de836b4d",
         "spotify": "https://open.spotify.com/playlist/4jYhZ7Nvk42QHtgwAh6yag",
-        "image": "https://resources.tidal.com/images/bc0a9f11/73a5/4c7c/87aa/489ec9ccc271/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/bc0a9f11/73a5/4c7c/87aa/489ec9ccc271/1080x1080.jpg",
+        "featuring": [
+            "Remember Sports",
+            "Cayetana",
+            "P.S. Eliot",
+            "Diet Cig",
+            "Chumped",
+            "All Dogs",
+            "Swearin'",
+            "Jawbreaker Reunion",
+            "Lemuria"
+        ]
     },
     "sign of the times (tonight)": {
         "number": "124",
         "tidal": "https://tidal.com/playlist/41bbae0e-6a5d-436b-81a1-5a94f4472f29",
         "spotify": "https://open.spotify.com/playlist/2YuajBwg7n1QgoV9aUHtig",
-        "image": "https://resources.tidal.com/images/ae2413e6/577e/4f11/9bed/9fd5e996717a/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/ae2413e6/577e/4f11/9bed/9fd5e996717a/1080x1080.jpg",
+        "featuring": [
+            "Steve Horner",
+            "The Beatles",
+            "Javi Lobe",
+            "Isobel Fontenay",
+            "Vitamin String Quartet",
+            "Inkoolu",
+            "Marius Furche",
+            "Music Lab Collective",
+            "Smashing Pumpkins"
+        ]
     },
     "alarm (shotgun)": {
         "number": "123",
         "tidal": "https://tidal.com/playlist/3b816efa-96d0-45a6-8181-c2f4aee436a5",
         "spotify": "https://open.spotify.com/playlist/5rhHKECdGHZ04mKzcW6Oxi",
-        "image": "https://resources.tidal.com/images/a4d4a0f6/d1f2/4e02/a170/97ea9458546c/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/a4d4a0f6/d1f2/4e02/a170/97ea9458546c/1080x1080.jpg",
+        "featuring": [
+            "Sylvan Esso",
+            "Japanese Breakfast",
+            "U.S. Girls",
+            "Haley Blais",
+            "Faye Webster",
+            "Julia Jacklin",
+            "Katy Kirby",
+            "Soccer Mommy",
+            "Margo Kleebauer"
+        ]
     },
     "glimpse of us (tv)": {
         "number": "122",
         "tidal": "https://tidal.com/playlist/cefae1e3-1a4f-43fc-9c53-614fe3d09ec9",
         "spotify": "https://open.spotify.com/playlist/4DqVDXuMPaIGIn4vuzNGLE",
-        "image": "https://resources.tidal.com/images/3c4e6ce3/b6d7/4a69/a463/f88e4f6608cf/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/3c4e6ce3/b6d7/4a69/a463/f88e4f6608cf/1080x1080.jpg",
+        "featuring": [
+            "Joji",
+            "The Mountain Goats",
+            "Devonté Hynes",
+            "Sufjan Stevens",
+            "Phoebe Bridgers",
+            "Ethel Cain",
+            "Weyes Blood",
+            "Billie Eilish"
+        ]
     },
     "madness (runaway)": {
         "number": "121",
         "tidal": "https://tidal.com/playlist/a1b67ba0-5d82-4b88-8812-0ec8a4af3b0c",
         "spotify": "https://open.spotify.com/playlist/0hhebOnfR2bRsqf9PH7PXN",
-        "image": "https://resources.tidal.com/images/e98e5352/c042/4cb7/b64f/194a18bce26e/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e98e5352/c042/4cb7/b64f/194a18bce26e/1080x1080.jpg",
+        "featuring": [
+            "Muse",
+            "Jack White",
+            "St. Vincent",
+            "Modest Mouse",
+            "Broken Bells",
+            "Danger Mouse",
+            "James Mercer",
+            "Foals",
+            "The Black Keys",
+            "Yeah Yeah Yeahs"
+        ]
     },
     "balloon (charcoal)": {
         "number": "120",
         "tidal": "https://tidal.com/playlist/2b8b4888-da12-4a27-a192-669ce64cc756",
         "spotify": "https://open.spotify.com/playlist/377gjbr4gYgXW0y9efzIf3",
-        "image": "https://resources.tidal.com/images/e6e71132/e38b/42e8/9d60/75a5677bf752/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e6e71132/e38b/42e8/9d60/75a5677bf752/1080x1080.jpg",
+        "featuring": [
+            "Crumb",
+            "Blood Orange",
+            "Caroline Rose",
+            "U.S. Girls",
+            "Phoebe Bridgers",
+            "TOPS",
+            "Toro y Moi",
+            "Japanese Breakfast"
+        ]
     },
     "paranoia (where it belongs)": {
         "number": "119",
         "tidal": "https://tidal.com/playlist/ef2a93c1-bac9-41a4-8aa5-9585b9d3eba0",
         "spotify": "https://open.spotify.com/playlist/1C6XBqns2nf613Dftxz3ls",
-        "image": "https://resources.tidal.com/images/e4b2d305/5219/4328/9849/077656fe082c/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e4b2d305/5219/4328/9849/077656fe082c/1080x1080.jpg",
+        "featuring": [
+            "Elsiane",
+            "Massive Attack",
+            "Elizabeth Fraser",
+            "Radiohead",
+            "Boards of Canada",
+            "The Chemical Brothers",
+            "Nine Inch Nails"
+        ]
     },
     "virtua (low)": {
         "number": "118",
         "tidal": "https://tidal.com/playlist/8d1b53a9-8bad-41d7-9e3e-6cd3f673b3c8",
         "spotify": "https://open.spotify.com/playlist/5qPpJDzNWBTTvGc1PmT4er",
-        "image": "https://resources.tidal.com/images/2fec420e/d23a/4cac/b3c3/540d53824bc6/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/2fec420e/d23a/4cac/b3c3/540d53824bc6/1080x1080.jpg",
+        "featuring": [
+            "Lipka",
+            "Two Door Cinema Club",
+            "Phoenix",
+            "The Strokes",
+            "Metronomy",
+            "Bombay Bicycle Club",
+            "Foals",
+            "Chet Faker"
+        ]
     },
     "caves (the answer)": {
         "number": "117",
         "tidal": "https://tidal.com/playlist/00bedc8e-11db-4fbd-81ef-8d200d8b4b36",
         "spotify": "https://open.spotify.com/playlist/0hLbS5iO8dh8bdGWPchP3C",
-        "image": "https://resources.tidal.com/images/d84d3df5/9def/4223/919a/6f8d10a64500/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/d84d3df5/9def/4223/919a/6f8d10a64500/1080x1080.jpg",
+        "featuring": [
+            "Steely Dan",
+            "Warren Zevon",
+            "The Doobie Brothers",
+            "Little Feat",
+            "Traffic",
+            "Stephen Stills",
+            "The Guess Who"
+        ]
     },
     "blacktop (this is how)": {
         "number": "116",
         "tidal": "https://tidal.com/playlist/f992debe-535c-4dca-9e51-39ea97798d26",
         "spotify": "https://open.spotify.com/playlist/4Il7Z1iBZgKB8jfqIYp4vg",
-        "image": "https://resources.tidal.com/images/fa9deab4/f840/4913/8409/5d51387c03eb/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/fa9deab4/f840/4913/8409/5d51387c03eb/1080x1080.jpg",
+        "featuring": [
+            "Colter Well",
+            "Mountain Man",
+            "Goodnight, Texas",
+            "Justin Townes Earle",
+            "Arthur Russell",
+            "The Secret Sisters",
+            "Angel Olsen"
+        ]
     },
     "blank slate (god wants us to wait)": {
         "number": "115",
         "tidal": "https://tidal.com/playlist/e6839a93-4e28-4396-8c40-6308b6fc60af",
         "spotify": "",
-        "image": "https://resources.tidal.com/images/6efc2043/1cda/4ed5/a3cc/ee192505876a/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/6efc2043/1cda/4ed5/a3cc/ee192505876a/1080x1080.jpg",
+        "featuring": [
+            "HMLTD",
+            "The Magnetic Fields",
+            "Deerhoof",
+            "The Avalanches",
+            "Blood Orange",
+            "The Flaming Lips",
+            "Destroyer",
+            "STRFKR",
+            "Islands"
+        ]
     },
     "alpha desperation (stunted)": {
         "number": "114",
         "tidal": "https://tidal.com/playlist/33646c32-c57b-4756-862e-0a901c473366",
         "spotify": "https://open.spotify.com/playlist/1G5AxTQLxBWZlyuwf448nW",
-        "image": "https://resources.tidal.com/images/8916af0f/134b/46e2/b6df/aa8c9e6623e5/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/8916af0f/134b/46e2/b6df/aa8c9e6623e5/1080x1080.jpg",
+        "featuring": [
+            "The Mountain Goats",
+            "Jeff Mangum",
+            "The Decemberists",
+            "Pigeon Pit",
+            "AJJ",
+            "Hospital Bracelet",
+            "Thank You, I'm Sorry",
+            "Remember Sports"
+        ]
     },
     "prog (new wave or truth)": {
         "number": "113",
         "tidal": "https://tidal.com/playlist/b53f26f1-d8c6-47c0-917f-86e51b7999cf",
         "spotify": "https://open.spotify.com/playlist/3XZSb2pgfIg0NWeEvcVJeb",
-        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9c0be0a21ac81aff632ca033"
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9c0be0a21ac81aff632ca033",
+        "featuring": [
+            "Pinback",
+            "Minutemen",
+            "Jawbreaker",
+            "Built to Spill",
+            "Against Me!",
+            "The Weakerthans",
+            "Modest Mouse",
+            "Defiance Ohio",
+            "The Tragically Hip"
+        ]
     },
     "call the doctor (means nothing)": {
         "number": "112",
         "tidal": "https://tidal.com/playlist/677cae76-dd90-4ba2-8b81-fcf77f28ceba",
         "spotify": "https://open.spotify.com/playlist/3phG7GpQNHIve7I7Un6ZVb",
-        "image": "https://resources.tidal.com/images/bc3c162d/dcbd/4e9d/8ff1/c92ecdbdb73a/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/bc3c162d/dcbd/4e9d/8ff1/c92ecdbdb73a/1080x1080.jpg",
+        "featuring": [
+            "Sleater-Kinney",
+            "Screaming Females",
+            "Metric",
+            "Tacocat",
+            "Courtney Barnett",
+            "Team Dresch",
+            "The Gits",
+            "The Royal They",
+            "Excuse 17",
+            "Heavens to Betsy"
+        ]
     },
     "today (future games)": {
         "number": "111",
         "tidal": "https://tidal.com/playlist/307ef8ab-6578-46c5-acaf-98a604ad1cc0",
         "spotify": "https://open.spotify.com/playlist/1rgk7yqjOXpLylEOf60Lft",
-        "image": "https://resources.tidal.com/images/ba74709e/786c/4798/894c/53938b7876b9/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/ba74709e/786c/4798/894c/53938b7876b9/1080x1080.jpg",
+        "featuring": [
+            "Fleetwood Mac",
+            "Scott Walker",
+            "The Zombies",
+            "Grateful Dead",
+            "Jimi Hendrix",
+            "George Harrison",
+            "The Velvet Underground",
+            "Jefferson Airplane"
+        ]
     },
     "oh no (don't want it)": {
         "number": "110",
         "tidal": "https://tidal.com/playlist/d6a23c67-8cb3-4bb0-bc9c-bd2a1b9623bb",
         "spotify": "https://open.spotify.com/playlist/1Nxlk57o35oHknAPCWi33r",
-        "image": "https://resources.tidal.com/images/50f1ac92/b2ff/4842/8407/7980710d2e91/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/50f1ac92/b2ff/4842/8407/7980710d2e91/1080x1080.jpg",
+        "featuring": [
+            "Marina",
+            "Lana Del Rey",
+            "Olivia Rodrigo",
+            "Destiny's Child",
+            "T.I.",
+            "Lil Wayne",
+            "Azealia Banks",
+            "Ralph",
+            "Kali Uchis",
+            "Mitski",
+            "Kim Petras"
+        ]
     },
     "come over (this mess)": {
         "number": "109",
         "tidal": "https://tidal.com/playlist/66defc22-9fff-4180-bae9-875af4e89772",
         "spotify": "https://open.spotify.com/playlist/6kaAVZjDK5kGG8FtG6bnoE",
-        "image": "https://resources.tidal.com/images/47c4ecfc/2210/45d5/b064/297485ef678c/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/47c4ecfc/2210/45d5/b064/297485ef678c/1080x1080.jpg",
+        "featuring": [
+            "Jeff Buckley",
+            "PJ Harvey",
+            "Thom Yorke",
+            "Smashing Pumpkins",
+            "Sonic Youth",
+            "Pavement",
+            "The Lemonheads",
+            "The Flaming Lips"
+        ]
     },
     "wet dream (oom sha la la)": {
         "number": "108",
         "tidal": "https://tidal.com/playlist/dbb7110d-8735-4468-9236-246e1f915e07",
         "spotify": "https://open.spotify.com/playlist/64a3O54pkrp0zYIAtX0u57",
-        "image": "https://resources.tidal.com/images/a91924f9/6461/42b4/bc4e/d56393fd0739/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/a91924f9/6461/42b4/bc4e/d56393fd0739/1080x1080.jpg",
+        "featuring": [
+            "Haley Heynderickx",
+            "Lucy Dacus",
+            "Julia Jacklin",
+            "Waxahatchee",
+            "Haley Blais",
+            "Courtney Barnett",
+            "Wet Leg",
+            "Angel Olsen"
+        ]
     },
     "one summer night (on my radio)": {
         "number": "107",
         "tidal": "https://tidal.com/playlist/a2eeee35-c920-447f-af59-237be7e2a82f",
         "spotify": "https://open.spotify.com/playlist/35OS62mXlKkU2Yytg38vvr",
-        "image": "https://resources.tidal.com/images/9eebf541/23fb/46bb/b7b7/14d7679a6783/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/9eebf541/23fb/46bb/b7b7/14d7679a6783/1080x1080.jpg",
+        "featuring": [
+            "That Dog.",
+            "Screaming Females",
+            "The Beths",
+            "Tuscadero",
+            "Soccer Mommy",
+            "Cub",
+            "Tacocat",
+            "Sleater-Kinney",
+            "Remember Sports",
+            "Cayetana",
+            "Camp Cope"
+        ]
     },
     "red right hand (would you fight?)": {
         "number": "106",
         "tidal": "https://tidal.com/playlist/5ec751fd-0e2a-4849-a834-997891bfac32",
         "spotify": "https://open.spotify.com/playlist/3MMqLK3pMW3taL7X8lRIfl",
-        "image": "https://resources.tidal.com/images/cf07090e/9643/4992/b744/79ab42ad5187/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/cf07090e/9643/4992/b744/79ab42ad5187/1080x1080.jpg",
+        "featuring": [
+            "Arctic Monkeys",
+            "Foals",
+            "The Dead Weather",
+            "The Kills",
+            "The Black Keys",
+            "Queens of the Stone Age",
+            "Jack White"
+        ]
     },
     "all the good times (like exploding stones)": {
         "number": "105",
         "tidal": "https://tidal.com/playlist/c4556ccd-e142-4022-9465-39a4663ffca0",
         "spotify": "https://open.spotify.com/playlist/6goiPKuIzc5KRWtqUcOlTa",
-        "image": "https://resources.tidal.com/images/9dbed829/b0d5/43ed/bcdd/7389bd478b51/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/9dbed829/b0d5/43ed/bcdd/7389bd478b51/1080x1080.jpg",
+        "featuring": [
+            "Kurt Vile",
+            "Sharon Van Etten",
+            "Soccer Mommy",
+            "Japanese Breakfast",
+            "MUNA",
+            "Julia Jacklin",
+            "Yeah Yeah Yeahs",
+            "Sylvan Esso",
+            "Phoebe Bridgers",
+            "Angel Olsen"
+        ]
     },
     "sleeping sickness (do you realise??)": {
         "number": "104",
         "tidal": "https://tidal.com/playlist/3c029860-c0ca-4335-b7db-6d248c4f0507",
         "spotify": "https://open.spotify.com/playlist/7mCZxBqnIF8HTx7YEuQPMy",
-        "image": "https://resources.tidal.com/images/f52694bf/9847/43a9/8abb/4a368d623052/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f52694bf/9847/43a9/8abb/4a368d623052/1080x1080.jpg",
+        "featuring": [
+            "City and Colour",
+            "Metric",
+            "Yeah Yeah Yeahs",
+            "Frightened Rabbit",
+            "White Lies",
+            "The Mountain Goats",
+            "Tegan and Sara",
+            "Modest Mouse",
+            "Stars",
+            "The Flaming Lips"
+        ]
     },
     "parentheses (one more night)": {
         "number": "103",
         "tidal": "https://tidal.com/playlist/73e334f1-91e6-48e5-8da1-bedb3c33f23e",
         "spotify": "https://open.spotify.com/playlist/04D6ysUQrB4ZZUhb846P4R",
-        "image": "https://resources.tidal.com/images/75e0d5e5/fd64/44a1/8ea8/fd022a3cc643/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/75e0d5e5/fd64/44a1/8ea8/fd022a3cc643/1080x1080.jpg",
+        "featuring": [
+            "The Blow",
+            "Kate Nash",
+            "Broken Social Scene",
+            "St. Vincent",
+            "of Montreal",
+            "Solange",
+            "Tegan and Sara",
+            "Metric",
+            "Cat Power",
+            "Stars"
+        ]
     },
     "ghosting (working woman)": {
         "number": "102",
         "tidal": "https://tidal.com/playlist/6c196a7f-755f-4467-ab7b-99821d1237bf",
         "spotify": "https://open.spotify.com/playlist/6T6nKQVWwjIQgdhWDdrTTh",
-        "image": "https://resources.tidal.com/images/d5c3b1d0/fdc3/4c51/adb0/7b1c9ce92518/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/d5c3b1d0/fdc3/4c51/adb0/7b1c9ce92518/1080x1080.jpg",
+        "featuring": [
+            "Mother Mother",
+            "AJJ",
+            "PUP",
+            "The Wombats",
+            "Neutral Milk Hotel",
+            "The Unicorns",
+            "Pavement",
+            "of Montreal"
+        ]
     },
     "over my head (don't bring me down)": {
         "number": "101",
         "tidal": "https://tidal.com/playlist/a14d06d7-3fe6-4a65-afa9-b474bd44a830",
         "spotify": "https://open.spotify.com/playlist/07O8JRqqEJDixyTEZ85Gm2",
-        "image": "https://resources.tidal.com/images/e1f9dfb7/182c/4c7b/8e18/a0766940856d/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/e1f9dfb7/182c/4c7b/8e18/a0766940856d/1080x1080.jpg",
+        "featuring": [
+            "Cream",
+            "The Allman Brothers Bands",
+            "Creedence Clearwater Revival",
+            "The Guess Who",
+            "Prince",
+            "Fleetwood Mac",
+            "Electric Light Orchestra",
+            "The Beatles",
+            "Steve Miller Band",
+            "America",
+            "Eagles"
+        ]
     },
     "sunflower (apollo)": {
         "number": "100",
         "tidal": "https://tidal.com/playlist/ec95057c-2b2a-4165-b724-4422b0d49296",
         "spotify": "https://open.spotify.com/playlist/0RAo6fW8gasnDwj3uHS0M8",
-        "image": "https://resources.tidal.com/images/932c4927/f3a2/4380/823f/c3e7b44f1edb/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/932c4927/f3a2/4380/823f/c3e7b44f1edb/1080x1080.jpg",
+        "featuring": [
+            "Harry Styles",
+            "BADBADNOTGOOD",
+            "Colin Stetson",
+            "Bill Withers",
+            "Rush",
+            "Sharon Jones",
+            "The Dap-Kings",
+            "Anderson .Paak",
+            "Schoolboy Q",
+            "Surfaces",
+            "The Band",
+            "Norman Greenbaum",
+            "St. Paul & The Broken Bones"
+        ]
     },
     "anxious type (that kind of girl)": {
         "number": "99",
         "tidal": "https://tidal.com/playlist/5c96ae24-ad52-47ae-9ec5-1ab77bea7bf1",
         "spotify": "https://open.spotify.com/playlist/4tYoRm0YfQX8hKauswH99b",
-        "image": "https://resources.tidal.com/images/df7840e2/c43c/4d3c/94f3/4a8e2ecdfd8b/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/df7840e2/c43c/4d3c/94f3/4a8e2ecdfd8b/1080x1080.jpg",
+        "featuring": [
+            "Shit Present",
+            "Blowout",
+            "Cayetana",
+            "Diet Cig",
+            "Tacocat",
+            "Hop Along",
+            "Remember Sports",
+            "Chumped",
+            "All Dogs"
+        ]
     },
     "me and the devil (the emperor)": {
         "number": "98",
         "tidal": "https://tidal.com/playlist/798ef93f-8479-41ce-b1ee-6586b59458b6",
         "spotify": "https://open.spotify.com/playlist/3hjnGAOG6ZlvJWEu3DpBiz",
-        "image": "https://resources.tidal.com/images/ac14c97a/e1ee/4a57/b0cc/deced5255c2c/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/ac14c97a/e1ee/4a57/b0cc/deced5255c2c/1080x1080.jpg",
+        "featuring": [
+            "Gil Scott-Heron",
+            "Makaya McCraven",
+            "Shabaka and the Ancestors",
+            "Kamasi Washington",
+            "Miles Davis",
+            "Donald Byrd"
+        ]
     },
     "marrow (lift up yr voices)": {
         "number": "97",
         "tidal": "https://tidal.com/playlist/0d6ac890-eb32-4213-9a5b-acf0a174288f",
         "spotify": "https://open.spotify.com/playlist/5ODRrnN83eZjcSzxcxEAon",
-        "image": "https://resources.tidal.com/images/f3fd49c8/18c2/4a98/ad20/079e4f55a877/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/f3fd49c8/18c2/4a98/ad20/079e4f55a877/1080x1080.jpg",
+        "featuring": [
+            "Joyful Joyful",
+            "Jamie xx",
+            "Gil Scott-Heron",
+            "Makaya McCraven",
+            "Li Yilei",
+            "Beverly Glenn-Copeland",
+            "Sunday Service Choir"
+        ]
     },
     "time moves slow (more of the same)": {
         "number": "96",
         "tidal": "https://tidal.com/playlist/6d7978e8-7dd3-47b5-a921-5706ce0fe7be",
         "spotify": "https://open.spotify.com/playlist/3TbLnwNGnQxxQNBxtqmF0p",
-        "image": "https://resources.tidal.com/images/81e10bfa/e1df/4b50/8ab7/a1452f27f308/1080x1080.jpg"
+        "image": "https://resources.tidal.com/images/81e10bfa/e1df/4b50/8ab7/a1452f27f308/1080x1080.jpg",
+        "featuring": [
+            "Caroline Rose",
+            "BADBADNOTGOOD",
+            "Samuel T. Herring",
+            "Charles Bradley",
+            "Menahan Street Band",
+            "Thundercat",
+            "Waxahatchee",
+            "El Michels Affair",
+            "Kamasi Washington",
+            "Mountain Main",
+            "Angel Olsen",
+            "St. Vincent"
+        ]
     },
     "leaning on you (clear blue morning)": {
         "number": "95",
         "tidal": "https://tidal.com/playlist/f96162d8-ce0a-4b08-989c-39dfe1ffae12",
         "spotify": "https://open.spotify.com/playlist/63vKzDAYpoMwsIOzx1VuHC",
-        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9d00e48035b0c3d4a9807691"
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c9d00e48035b0c3d4a9807691",
+        "featuring": [
+            "Dolly Parton",
+            "Indigo Girls",
+            "Yola",
+            "Whitney",
+            "Phoebe Bridgers",
+            "Bedouine",
+            "Hurray for the Riff Raff",
+            "Waxahatchee",
+            "Sharon Van Etten",
+            "Norah Jones",
+            "Lucy Dacus",
+            "The Secret Sisters",
+            "HAIM"
+        ]
     },
     "boyfriend (summer girl)": {
         "number": "94",
         "tidal": "https://tidal.com/playlist/c64ae2f4-0b0c-4bca-805e-1a47f4a6c532",
         "spotify": "https://open.spotify.com/playlist/2murzVPtFVf2mQNdISaVwB",
-        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c2e5003f4b9689e963eba7853"
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c2e5003f4b9689e963eba7853",
+        "featuring": [
+            "Tegan and Sara",
+            "Phoenix",
+            "HAIM",
+            "Your Smith",
+            "Now Now",
+            "CHVRCHES",
+            "Shura"
+        ]
     },
     "say you love me (you still believe in me)": {
         "number": "93",
         "tidal": "https://tidal.com/playlist/dc3ecf45-bb2e-481e-8cb0-8f41a95f7f57",
         "spotify": "https://open.spotify.com/playlist/4di0NTG482WLGtXq8lAWiP",
         "image": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c836832ef4c6cd5577b6ea8ef"
-    },
+    },    
     "why can't we (take care)": {
         "number": "92",
         "tidal": "https://tidal.com/playlist/dbb43544-5e74-449f-8dd7-b95af134264a",
