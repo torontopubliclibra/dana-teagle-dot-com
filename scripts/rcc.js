@@ -42,7 +42,7 @@ fetch('../data/rcc.json')
       li.style.flexDirection = 'row';
       const infoBar = document.createElement('div');
       infoBar.className = 'rcc-info-bar';
-      infoBar.style = 'color: #c0c5d2; padding: 20px; font-size: 1rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
+      infoBar.style = 'color: #c0c5d2; padding: 20px; font-size: 0.9rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
       function formatDate(dateStr) {
         const [day, month, year] = dateStr.split('-');
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -54,12 +54,12 @@ fetch('../data/rcc.json')
       let infoText = '';
       infoText += `${formatDate(film.date)} //<br/>`;
       if (film.series) {
-        infoText += `<em>${film.series}:</em><br/>`;
+        infoText += `<em style="font-size: 0.9rem;">${film.series}:</em><br/>`;
       }
       if (film.title === 'TBD') {
         infoText += `TBD<br/>`;
       } else {
-        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:1rem;">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
+        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.9rem;">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
       }
       if (film.director) infoText += `Directed by ${film.director}<br/>`;
       if (film.runtime) infoText += `${film.runtime} mins | ${film.languages ? film.languages.join(', ') : ''}<br/>`;
