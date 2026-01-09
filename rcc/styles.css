@@ -286,15 +286,10 @@ footer p {
   width: 100%;
 }
 
-footer p, footer a {
+footer p, footer a, footer span {
   font-size: 0.8rem;
   max-width: calc(100vw - 40px);
   margin: 0;
-}
-@media only screen and (max-width: 970px) {
-  footer p, footer a {
-    font-size: 0.75rem;
-  }
 }
 
 html {
@@ -323,8 +318,7 @@ body {
 
 .button {
   padding: 0.5em 1.25em;
-  background: #7BA0CF;
-  color: rgb(34, 34, 34);
+  background: rgb(60, 46, 60);
   border: none;
   font-size: 1em;
   font-weight: 600;

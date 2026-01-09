@@ -5,6 +5,7 @@ fetch('../data/rcc.json')
     if (!container || !data.rcc) return;
     container.innerHTML = '';
     data.rcc.forEach(film => {
+      if (film.title === 'TBD') return; // skip in posters view
       const section = document.createElement('section');
       const infoBar = document.createElement('div');
       infoBar.className = 'rcc-info-bar';
@@ -51,8 +52,15 @@ fetch('../data/rcc.json')
         return `${dayOfWeek} ${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
       }
       let infoText = '';
-      infoText += `Title: <a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;">${film.title}</a> //<br/>`;
-      infoText += `Year: ${film.year} //<br/>`;
+      if (film.series) {
+        infoText += `${film.series} //<br/>`;
+      }
+      if (film.title === 'TBD') {
+        infoText += `Title: TBD //<br/>`;
+      } else {
+        infoText += `Title: <a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;">${film.title}</a> //<br/>`;
+      }
+      if (film.year) infoText += `Year: ${film.year} //<br/>`;
       if (film.director) infoText += `Director: ${film.director} //<br/>`;
       if (film.country) infoText += `Country: ${film.country} //<br/>`;
       if (film.languages) infoText += `Language(s): ${film.languages.join(', ')} //<br/>`;
@@ -61,7 +69,7 @@ fetch('../data/rcc.json')
       infoBar.innerHTML = infoText;
       li.appendChild(infoBar);
       const img = document.createElement('img');
-      img.src = film.poster;
+      img.src = (film.title === 'TBD') ? 'blank.png' : film.poster;
       img.alt = `'${film.title}' (${film.year}) poster`;
       img.className = 'poster';
       img.style.display = 'block';
@@ -69,6 +77,10 @@ fetch('../data/rcc.json')
       img.style.height = 'auto';
       img.style.padding = '20px';
       img.style.background = 'rgb(34, 34, 34)';
+      if (film.series) {
+        infoBar.style.background = 'rgba(41, 37, 41, 1)';
+        img.style.background = 'rgba(41, 37, 41, 1)';
+      }
       li.appendChild(img);
       list.appendChild(li);
     });

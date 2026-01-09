@@ -20,7 +20,16 @@
             "link": "https://letterboxd.com/film/but-im-a-cheerleader/",
             "country": "American",
             "languages": ["English"],
-            "runtime": 85
+            "runtime": 85,
+            "series": "Yearning on Film #1"
+        },
+        {
+            "date": "05-03-2026",
+            "title": "TBD"
+        },
+        {
+            "date": "02-04-2026",
+            "title": "TBD"
         },
         {
             "date": "30-04-2026",
@@ -31,7 +40,16 @@
             "link": "https://letterboxd.com/film/saving-face/",
             "country": "American",
             "languages": ["English", "Mandarin", "Shanghainese" ],
-            "runtime": 91
+            "runtime": 91,
+            "series": "Yearning on Film #2"
+        },
+        {
+            "date": "28-05-2026",
+            "title": "TBD"
+        },
+        {
+            "date": "25-06-2026",
+            "title": "TBD"
         },
         {
             "date": "30-07-2026",
@@ -42,7 +60,16 @@
             "link": "https://letterboxd.com/film/desert-hearts/",
             "country": "American",
             "languages": ["English"],
-            "runtime": 96
+            "runtime": 96,
+            "series": "Yearning on Film #3"
+        },
+        {
+            "date": "27-08-2026",
+            "title": "TBD"
+        },
+        {
+            "date": "24-09-2026",
+            "title": "TBD"
         },
         {
             "date": "22-10-2026",
@@ -53,7 +80,16 @@
             "link": "https://letterboxd.com/film/pariah/",
             "country": "American",
             "languages": ["English"],
-            "runtime": 86
+            "runtime": 86,
+            "series": "Yearning on Film #4"
+        },
+        {
+            "date": "19-11-2026",
+            "title": "TBD"
+        },
+        {
+            "date": "17-12-2026",
+            "title": "TBD"
         }
     ]
 }
