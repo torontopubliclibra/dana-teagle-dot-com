@@ -714,6 +714,7 @@ html.tpl nav .button.back:hover img {
   }
   html.tpl nav .button {
     padding: 7px 25px;
+    font-size: 1rem;
   }
   html.tpl nav .button, html.tpl nav .button:hover, html.tpl nav .button.selected, html.tpl nav .button.selected:hover {
     font-style: normal;
