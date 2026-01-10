@@ -28,6 +28,22 @@
     </header>
     <nav>
       <hr/>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const tplNav = document.querySelector('html.tpl nav ul');
+              if (tplNav) {
+                const selected = tplNav.querySelector('.button.selected');
+                if (selected && tplNav.scrollWidth > tplNav.clientWidth) {
+                  const selectedRect = selected.getBoundingClientRect();
+                  const navRect = tplNav.getBoundingClientRect();
+                  const selectedCenter = selectedRect.left + selectedRect.width / 2;
+                  const navCenter = navRect.left + navRect.width / 2;
+                  const scrollLeft = tplNav.scrollLeft + (selectedCenter - navCenter);
+                  tplNav.scrollTo({ left: scrollLeft, behavior: 'auto' });
+                }
+              }
+            });
+          </script>
       <ul>
         <li><a href="/tpl/" class="button">/</a></li>
         <li><a href="/tpl/now" class="button">/now</a></li>

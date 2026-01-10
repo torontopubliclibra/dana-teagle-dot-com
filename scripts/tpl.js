@@ -71,4 +71,20 @@ let tpl = {
 };
 $(document).ready(() => {
     tpl.init();
+
+    // Center selected nav button if nav is horizontally scrollable
+    const tplNav = document.querySelector('html.tpl nav ul');
+    if (tplNav) {
+        const selected = tplNav.querySelector('.button.selected');
+        if (selected && tplNav.scrollWidth > tplNav.clientWidth) {
+            // Get the selected button's center relative to the nav
+            const selectedRect = selected.getBoundingClientRect();
+            const navRect = tplNav.getBoundingClientRect();
+            const selectedCenter = selectedRect.left + selectedRect.width / 2;
+            const navCenter = navRect.left + navRect.width / 2;
+            // Calculate scrollLeft so selected is centered
+            const scrollLeft = tplNav.scrollLeft + (selectedCenter - navCenter);
+            tplNav.scrollTo({ left: scrollLeft, behavior: 'auto' });
+        }
+    }
 });
