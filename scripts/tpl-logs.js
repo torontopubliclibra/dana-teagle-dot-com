@@ -66,7 +66,7 @@ let tplLogs = {
                 navItems.push(`<li class="link-category"><a href="#books">books read (${bookCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
             }
             if (tvCount > 0) {
-                navItems.push(`<li class="link-category"><a href="#tv">tv watched (${tvCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
+                navItems.push(`<li class="link-category"><a href="#tv">tv shows watched (${tvCount})<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`);
             }
             let logCategories = '';
             if (navItems.length > 0) {
@@ -100,7 +100,7 @@ let tplLogs = {
             }
 
             if (tvCount > 0) {
-                formattedLogs.push(`<hr><p id="tv">>> tv watched in ${year} (${tvCount})`);
+                formattedLogs.push(`<hr><p id="tv">>> tv shows watched in ${year} (${tvCount})`);
                 for (let list in yearObj.tv) {
                     let array = [ ...yearObj.tv[list]];
                     array.forEach(tvshow => {

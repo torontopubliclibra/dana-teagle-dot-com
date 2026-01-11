@@ -64,7 +64,7 @@ let tplNow = {
                 });
             }
 
-            formattedNow.push(`<p>>> last watched tv (<a href="/tpl/logs#tv">see more</a>)</p>`);
+            formattedNow.push(`<p>>> last watched tv shows (<a href="/tpl/logs#tv">see more</a>)</p>`);
             for (let list in tplNow.tv) {
                 let array = [tplNow.tv[list]];
                 array.forEach(tvshow => {
