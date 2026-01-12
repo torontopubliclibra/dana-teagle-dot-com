@@ -52,7 +52,7 @@ fetch('../data/rcc.json')
         return `${dayOfWeek} ${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
       }
       let infoText = '';
-      infoText += `${formatDate(film.date)} //<br/>`;
+      infoText += `<strong>${formatDate(film.date)} //</strong><br/>`;
       if (film.series) {
         infoText += `<em style="font-size: 0.9rem;">${film.series}:</em><br/>`;
       }
@@ -100,7 +100,30 @@ fetch('../data/rcc.json')
     statsList.style.background = 'rgb(34, 34, 34)';
     statsList.style.padding = '20px';
 
+    // Create separate lists for each stat category
+    const decadesList = document.createElement('ul');
+    decadesList.style.listStyle = 'none';
+    decadesList.style.padding = '0';
+    decadesList.style.marginBottom = '10px';
+    decadesList.style.fontSize = '0.9rem';
+    const countriesList = document.createElement('ul');
+    countriesList.style.listStyle = 'none';
+    countriesList.style.padding = '0';
+    countriesList.style.marginBottom = '10px';
+    countriesList.style.fontSize = '0.9rem';
+    const languagesList = document.createElement('ul');
+    languagesList.style.listStyle = 'none';
+    languagesList.style.padding = '0';
+    languagesList.style.marginBottom = '10px';
+    languagesList.style.fontSize = '0.9rem';
+    const totalsList = document.createElement('ul');
+    totalsList.style.listStyle = 'none';
+    totalsList.style.padding = '0';
+    totalsList.style.marginBottom = '10px';
+    totalsList.style.fontSize = '0.9rem';
+
     const totalFilms = data.rcc.length;
+    // Decade stats
     const decadeCounts = {};
     data.rcc.forEach(film => {
       if (film.year) {
@@ -108,6 +131,26 @@ fetch('../data/rcc.json')
         decadeCounts[decade] = (decadeCounts[decade] || 0) + 1;
       }
     });
+    Object.keys(decadeCounts).sort().forEach(decade => {
+      const li = document.createElement('li');
+      li.textContent = `${decade}s movie(s): ${decadeCounts[decade]}`;
+      decadesList.appendChild(li);
+    });
+
+    // Country stats
+    const countries = {};
+    data.rcc.forEach(film => {
+      if (film.country) {
+        countries[film.country] = (countries[film.country] || 0) + 1;
+      }
+    });
+    Object.keys(countries).sort().forEach(country => {
+      const li = document.createElement('li');
+      li.textContent = `${country} movie(s): ${countries[country]}`;
+      countriesList.appendChild(li);
+    });
+
+    // Language stats
     const languages = {};
     data.rcc.forEach(film => {
       if (film.languages) {
@@ -116,32 +159,13 @@ fetch('../data/rcc.json')
         });
       }
     });
-    const countries = {};
-    data.rcc.forEach(film => {
-      if (film.country) {
-        countries[film.country] = (countries[film.country] || 0) + 1;
-      }
-    });
-    const filmsLi = document.createElement('li');
-    filmsLi.textContent = `Total # of movies: ${totalFilms} //`;
-    Object.keys(decadeCounts).sort().forEach(decade => {
-      const li = document.createElement('li');
-      li.textContent = `${decade}s movie(s): ${decadeCounts[decade]} //`;
-      li.style.fontSize = '0.9rem';
-      statsList.appendChild(li);
-    });
-    Object.keys(countries).sort().forEach(country => {
-      const li = document.createElement('li');
-      li.textContent = `${country} movie(s): ${countries[country]} //`;
-      li.style.fontSize = '0.9rem';
-      statsList.appendChild(li);
-    });
     Object.keys(languages).sort().forEach(lang => {
       const li = document.createElement('li');
-      li.textContent = `${lang} language movie(s): ${languages[lang]} //`;
-      li.style.fontSize = '0.9rem';
-      statsList.appendChild(li);
+      li.textContent = `${lang} language movie(s): ${languages[lang]}`;
+      languagesList.appendChild(li);
     });
+
+    // Totals and directors
     const directorsList = [];
     data.rcc.forEach(film => {
       if (film.director) {
@@ -149,8 +173,7 @@ fetch('../data/rcc.json')
       }
     });
     const directorsLi = document.createElement('li');
-    directorsLi.textContent = `Directors: ${[...new Set(directorsList)].sort().join(', ')} //`;
-    directorsLi.style.fontSize = '0.9rem';
+    directorsLi.textContent = `Directors: ${[...new Set(directorsList)].sort().join(', ')}`;
     const runtimeLi = document.createElement('li');
     let totalRuntime = 0;
     data.rcc.forEach(film => {
@@ -158,12 +181,31 @@ fetch('../data/rcc.json')
         totalRuntime += film.runtime;
       }
     });
-    runtimeLi.textContent = `Total runtime: ${totalRuntime} mins (${(totalRuntime / 60).toFixed(2)} hrs) //`;
-    runtimeLi.style.fontSize = '0.9rem';
-    filmsLi.style.fontSize = '0.9rem';
-    statsList.appendChild(directorsLi);
-    statsList.appendChild(runtimeLi);
-    statsList.appendChild(filmsLi);
+    runtimeLi.textContent = `Total runtime: ${totalRuntime} mins (${(totalRuntime / 60).toFixed(2)} hrs)`;
+    const filmsLi = document.createElement('li');
+    filmsLi.textContent = `Total # of movies: ${totalFilms}`;
+    totalsList.appendChild(directorsLi);
+    totalsList.appendChild(runtimeLi);
+    totalsList.appendChild(filmsLi);
+
+    // Add all lists to statsList
+    // Add a heading for each section for clarity
+    const decadesHeader = document.createElement('li');
+    decadesHeader.innerHTML = '<strong>Decades //</strong>';
+    statsList.appendChild(decadesHeader);
+    statsList.appendChild(decadesList);
+    const countriesHeader = document.createElement('li');
+    countriesHeader.innerHTML = '<strong>Countries //</strong>';
+    statsList.appendChild(countriesHeader);
+    statsList.appendChild(countriesList);
+    const languagesHeader = document.createElement('li');
+    languagesHeader.innerHTML = '<strong>Languages //</strong>';
+    statsList.appendChild(languagesHeader);
+    statsList.appendChild(languagesList);
+    const totalsHeader = document.createElement('li');
+    totalsHeader.innerHTML = '<strong>Totals //</strong>';
+    statsList.appendChild(totalsHeader);
+    statsList.appendChild(totalsList);
     container.parentNode.insertBefore(statsList, container.nextSibling);
 
     function showView(view) {
