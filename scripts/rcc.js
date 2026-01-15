@@ -2,6 +2,9 @@ fetch('../data/rcc.json')
   .then(response => response.json())
   .then(data => {
     const container = document.querySelector('.horizontal-scroll-container');
+    if (container) {
+      container.style.marginBottom = '90px'; // Ensure space for sticky footer
+    }
     if (!container || !data.rcc) return;
     container.innerHTML = '';
     data.rcc.forEach(film => {
@@ -35,8 +38,9 @@ fetch('../data/rcc.json')
     list.style.display = 'none';
     list.style.flexDirection = 'column';
     list.style.marginBottom = '0';
-    list.style.height = 'calc(100vh - 75px)';
+    // Remove fixed height so list can grow naturally
     list.style.gap = '15px';
+    list.style.paddingBottom = '90px'; // Prevent sticky footer overlap (footer ~75px)
     data.rcc.forEach(film => {
       const li = document.createElement('li');
       li.style.display = 'flex';
@@ -59,6 +63,9 @@ fetch('../data/rcc.json')
       }
       if (film.title === 'TBD') {
         infoText += `TBD<br/>`;
+        if (Array.isArray(film.nominees) && film.nominees.length > 0) {
+          infoText += `<span style="font-size:0.85em; color:#b7b7b7;">Nominees: ${film.nominees.join(', ')}</span><br/>`;
+        }
       } else {
         infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.9rem;">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
       }
@@ -95,11 +102,11 @@ fetch('../data/rcc.json')
     statsList.style.padding = '0';
     statsList.style.display = 'none';
     statsList.style.flexDirection = 'column';
-    statsList.style.height = 'calc(100vh - 75px)';
     statsList.style.marginBottom = '0';
     statsList.style.gap = '5px';
     statsList.style.background = 'rgb(34, 34, 34)';
     statsList.style.padding = '20px';
+    statsList.style.paddingBottom = '90px';
 
     // Create separate lists for each stat category
     const decadesList = document.createElement('ul');
