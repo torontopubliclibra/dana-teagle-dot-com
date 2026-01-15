@@ -25,7 +25,12 @@
         },
         {
             "date": "05-03-2026",
-            "title": "TBD"
+            "title": "TBD",
+            "nominees": [
+                "Rope (1948)",
+                "Suspiria (1977)",
+                "Sinners (2025)"
+            ]
         },
         {
             "date": "02-04-2026",
