@@ -1,13 +1,11 @@
 {
-    "09/01/2026": [
+    "15/01/2026": [
         "working on an algorithms and data structures course",
         "playing chess",
         "listening to records",
         "doing client work",
-        "added artist data for <a href=\"/tpl/mixes/\">all 198 rusty mixes</a> and made them fully searchable <a href=\"/tpl/mixes#index\">with an index</a>",
-        "created <a href=\"/tpl/rss.xml\" target=\"_blank\" rel=\"noopener noreferrer\">an rss feed for the feed page</a>",
+        "reading a lot",
         "doing yoga and stationary bike in front of the TV",
-        "teaching myself piano",
-        "planning <a href=\"/rcc/\" target=\"_blank\" rel=\"noopener noreferrer\">my cinema club screenings</a> for the year"
+        "teaching myself piano"
     ]
 }
