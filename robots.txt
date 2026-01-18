@@ -2,9 +2,6 @@
 # -------------------------------------------------------
 
 User-agent: *
-Disallow: /assets/
 Disallow: /data/
-Disallow: /fonts/
-Disallow: /scripts/
 
 Sitemap: https://danateagle.com/sitemap.xml

@@ -14,12 +14,15 @@ The pages are all built with jQuery, HTML, and SCSS, and some of them use JSON t
     - /mini
     - /tpl
         - /now
-        - /uses
+        - /feed
+        - /mixes
+        - /logs
+        - /photos
+        - /misc
         - /404
     - /rustprop
-        - /2
-        - /3
         - /rss.xml
+        - /print
     - /404
     - /sitemap.xml
 ```
