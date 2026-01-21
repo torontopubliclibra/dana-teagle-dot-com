@@ -88,6 +88,20 @@
         "image": "./assets/projects/poe-m-allphin.png",
         "site": "https://poemallphin.com"
     },
+    "Point Pelee Planner": {
+        "id": "point-pelee-planner",
+        "year": "2025",
+        "tags": [
+            "Advocacy",
+            "Open-source"
+        ],
+        "description": [
+            "This is a web application designed to help visitors plan their trips to Point Pelee National Park. Built using the open-source Pytheas framework, the app provides interactive maps, curated site information, and custom itinerary features to enhance the park experience.",
+            "I led development on the project in summer 2025, with funding and support from Parallel 42 Systems, Windsor Hackforge, and Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+        ],
+        "image": "./assets/projects/point-pelee-planner.png",
+        "site": "https://pointpeleeplanner.com/"
+    },
     "Connect Fund": {
         "id": "connect-fund",
         "year": "2024",
@@ -138,5 +152,19 @@
         ],
         "image": "./assets/projects/sydneygautreau.png",
         "site": "https://sydneygautreau.com"
+    },
+    "Queer Walk": {
+        "id": "queer-walk",
+        "year": "2023",
+        "tags": [
+            "Advocacy",
+            "Open-source"
+        ],
+        "description": [
+            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and the open-source Pytheas framework. The project included significant upgrades to the framework's functionality.",
+            "I led development on the project in summer 2023, with funding and support from Parallel 42 Systems, Windsor Hackforge, and Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+        ],
+        "image": "./assets/projects/queer-walk.png",
+        "site": "https://queerwalk.ca"
     }
 }
