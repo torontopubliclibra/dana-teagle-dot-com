@@ -6,9 +6,10 @@
             "Non-profit",
             "Advocacy"
         ],
-        "description": [
-            "This is the latest version of my free and community-driven resource designed to help individuals across Canada navigate legal name, gender marker, and I.D. changes. The site launched in December 2025."
-        ],
+            "description": [
+                "This is the latest version of my free community-driven resource to help Canadians navigate legal name, gender marker, and I.D. changes.",
+                "The site offers step-by-step guides, official forms, and region-specific information, with a focus on supporting trans, non-binary, Two-Spirit, and gender non-conforming communities. It is a fast, accessible, modern web app written in TypeScript, independently researched and designed for ease of use, and was launched in December 2025."
+            ],
         "image": "./assets/projects/idguide.png",
         "site": "https://idguide.ca"
     },
@@ -19,7 +20,7 @@
             "Business/Storefront"
         ],
         "description": [
-            "This is a website for True History Brewing, a brewery and taproom located in Toronto. The site was originally launched in March 2024, with a full redesign completed in October 2025."
+            "This is a website for True History Brewing, a brewery and taproom located in Toronto. The project included custom designs and animations to reflect the brand's identity, and integrates with their other online platforms. The site was originally launched in March 2024, with a full redesign completed in October 2025."
         ],
         "image": "./assets/projects/truehistory.png",
         "site": "https://truehistorybeer.com"
@@ -31,7 +32,7 @@
             "Professional"
         ],
         "description": [
-            "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). The project was completed between May and June 2025."
+            "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). The site is designed to provide information about Andrea's services, background, and approach to therapy. The project was completed between May and June 2025."
         ],
         "image": "./assets/projects/andrea-lynn-ferguson.png",
         "site": "https://andrealynnferguson.com/"
@@ -44,7 +45,7 @@
             "Professional"
         ],
         "description": [
-            "This is a portfolio website for Tony Matthews, a producer and studio leader specializing in animation, digital media, and immersive storytelling. The site was designed and developed from March to June 2025."
+            "This is a portfolio website for Tony Matthews, a producer and studio leader specializing in animation, digital media, and immersive storytelling. The site features a clean, modern design to showcase Tony's work and experience in the industry. It was designed and developed from March to June 2025."
         ],
         "image": "./assets/projects/tony-matthews.jpg",
         "site": "https://www.tony-matthews.com/"
@@ -57,7 +58,7 @@
             "Writing/Editing"
         ],
         "description": [
-            "This is a portfolio website for Ryan Perks, a professional book editor. The project was completed between December 2024 and February 2025."
+            "This is a portfolio website for Ryan Perks, a professional book editor. The site provides information about Ryan's services, experience, and portfolio. The project was completed between December 2024 and February 2025."
         ],
         "image": "./assets/projects/ryanperks.png",
         "site": "https://ryanperks.com"
@@ -70,7 +71,7 @@
             "Music/Audio"
         ],
         "description": [
-            "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site was designed and built between January and April 2025."
+            "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site provides information about Hazel's work, background, and services. The site was designed and built between January and April 2025."
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
@@ -83,7 +84,7 @@
             "Music/Audio"
         ],
         "description": [
-            "This is a portfolio website for Poe M. Allphin, a PhD student in musicology and adjunct lecturer at CUNY. The project was completed between February and April 2025."
+            "This is a portfolio website for Poe M. Allphin, a PhD student in musicology and adjunct lecturer at CUNY. The site provides information about Poe's academic work, teaching, and research. The project was completed between February and April 2025."
         ],
         "image": "./assets/projects/poe-m-allphin.png",
         "site": "https://poemallphin.com"
@@ -110,7 +111,7 @@
             "Advocacy"
         ],
         "description": [
-            "This is a website for Connect Fund, a non-profit organization supporting healthcare for 2SLGBTQ+ communities in Canada. The site launched in summer 2024, with ongoing updates and design support."
+            "This is a website for Connect Fund, a non-profit organization supporting healthcare for 2SLGBTQ+ communities in Canada. The site enables online donations and facilitates information sharing with donors and clients. The site launched in summer 2024, with ongoing updates and design support."
         ],
         "image": "./assets/projects/connectfund.png",
         "site": "https://www.connectfund.org/"
@@ -123,7 +124,7 @@
             "Music/Audio"
         ],
         "description": [
-            "This is a portfolio website for Michael Cloud Duguay, a composer, producer, and accordionist. The site was designed and developed in 2024."
+            "This is a portfolio website for Michael Cloud Duguay, a composer, producer, and accordionist. The site features a fully custom design and highlights his many creative projects. It was designed and developed in 2024."
         ],
         "image": "./assets/projects/michaelcduguay.png",
         "site": "https://www.michaelcduguay.com/"
@@ -135,7 +136,7 @@
             "Artist/Creative"
         ],
         "description": [
-            "This is a portfolio website for Nina Milanovski, a dance artist and producer. The project was completed between February and March 2024."
+            "This is a portfolio website for Nina Milanovski, a dance artist and producer. The site features a lively, visually expressive design inspired by her practice. The project was completed between February and March 2024."
         ],
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
@@ -148,7 +149,9 @@
             "Writing/Editing"
         ],
         "description": [
-            "This is a website for Sydney Gautreau’s editing and writing coaching business. The original site was completed in 2022, with upgrades in 2023 and 2024."
+            "This is a website for Sydney Gautreau's editing and writing coaching business.",
+            "The site features a professional, custom design and highlights Sydney's services and experience.",
+            "The original site was completed in 2022, with upgrades in 2023 and 2024."
         ],
         "image": "./assets/projects/sydneygautreau.png",
         "site": "https://sydneygautreau.com"
