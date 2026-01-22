@@ -20,7 +20,7 @@
             "Business/Storefront"
         ],
         "description": [
-            "This is a website for True History Brewing, a brewery and taproom located in Toronto. The project included custom designs and animations to reflect the brand's identity, and integrates with their other online platforms. The site was originally launched in March 2024, with a full redesign completed in October 2025."
+            "This is a website for True History Brewing, a brewery and taproom located in Toronto. The project included custom designs and animations to reflect the brand's identity, and integrates with their other online platforms. It was originally launched in March 2024, with a full redesign completed in October 2025."
         ],
         "image": "./assets/projects/truehistory.png",
         "site": "https://truehistorybeer.com"
@@ -32,7 +32,7 @@
             "Professional"
         ],
         "description": [
-            "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). The site is designed to provide information about Andrea's services, background, and approach to therapy. The project was completed between May and June 2025."
+            "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). The site is designed to provide information about Andrea's services, background, and approach to therapy. It was completed between May and June 2025."
         ],
         "image": "./assets/projects/andrea-lynn-ferguson.png",
         "site": "https://andrealynnferguson.com/"
@@ -58,7 +58,7 @@
             "Writing/Editing"
         ],
         "description": [
-            "This is a portfolio website for Ryan Perks, a professional book editor. The site provides information about Ryan's services, experience, and portfolio. The project was completed between December 2024 and February 2025."
+            "This is a portfolio website for Ryan Perks, a professional book editor. The site provides information about Ryan's services, experience, and portfolio. It was completed between December 2024 and February 2025."
         ],
         "image": "./assets/projects/ryanperks.png",
         "site": "https://ryanperks.com"
@@ -71,7 +71,7 @@
             "Music/Audio"
         ],
         "description": [
-            "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site provides information about Hazel's work, background, and services. The site was designed and built between January and April 2025."
+            "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site provides information about Hazel's work, background, and services. It was designed and built between January and April 2025."
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
@@ -84,7 +84,7 @@
             "Music/Audio"
         ],
         "description": [
-            "This is a portfolio website for Poe M. Allphin, a PhD student in musicology and adjunct lecturer at CUNY. The site provides information about Poe's academic work, teaching, and research. The project was completed between February and April 2025."
+            "This is a portfolio website for Poe M. Allphin, a PhD student in musicology and adjunct lecturer at CUNY. The site provides information about Poe's academic work, teaching, and research. It was completed between February and April 2025."
         ],
         "image": "./assets/projects/poe-m-allphin.png",
         "site": "https://poemallphin.com"
@@ -111,7 +111,7 @@
             "Advocacy"
         ],
         "description": [
-            "This is a website for Connect Fund, a non-profit organization supporting healthcare for 2SLGBTQ+ communities in Canada. The site enables online donations and facilitates information sharing with donors and clients. The site launched in summer 2024, with ongoing updates and design support."
+            "This is a website for Connect Fund, a non-profit organization supporting healthcare for 2SLGBTQ+ communities in Canada. The site enables online donations and facilitates information sharing with donors and clients. It was launched in summer 2024, with ongoing updates and design support."
         ],
         "image": "./assets/projects/connectfund.png",
         "site": "https://www.connectfund.org/"
@@ -149,9 +149,7 @@
             "Writing/Editing"
         ],
         "description": [
-            "This is a website for Sydney Gautreau's editing and writing coaching business.",
-            "The site features a professional, custom design and highlights Sydney's services and experience.",
-            "The original site was completed in 2022, with upgrades in 2023 and 2024."
+            "This is a website for Sydney Gautreau's editing and writing coaching business. It features a professional, custom design and highlights Sydney's services and experience. The original site was completed in 2022, with upgrades in 2023 and 2024."
         ],
         "image": "./assets/projects/sydneygautreau.png",
         "site": "https://sydneygautreau.com"
