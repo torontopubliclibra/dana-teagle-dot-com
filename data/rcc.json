@@ -25,12 +25,14 @@
         },
         {
             "date": "05-03-2026",
-            "title": "TBD",
-            "nominees": [
-                "Rope (1948)",
-                "Suspiria (1977)",
-                "Sinners (2025)"
-            ]
+            "title": "Rope",
+            "year": 1948,
+            "director": "Alfred Hitchcock",
+            "poster": "/rcc/rope.png",
+            "link": "https://letterboxd.com/film/rope/",
+            "country": "American",
+            "languages": ["English"],
+            "runtime": 81
         },
         {
             "date": "02-04-2026",
