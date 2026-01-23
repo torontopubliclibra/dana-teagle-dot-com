@@ -98,7 +98,7 @@
         ],
         "description": [
             "This is a web application designed to help visitors plan their trips to Point Pelee National Park. Built using the open-source Pytheas framework, the app provides interactive maps, curated site information, and custom itinerary features to enhance the park experience.",
-            "I led development on the project in summer 2025, with funding and support from Parallel 42 Systems, Windsor Hackforge, and Walter Cassidy of the Windsor-Essex Rainbow Alliance."
+            "I led development on the project in summer 2025, with funding and support from Parallel 42 Systems and Windsor Hackforge."
         ],
         "image": "./assets/projects/point-pelee-planner.png",
         "site": "https://pointpeleeplanner.com/"
