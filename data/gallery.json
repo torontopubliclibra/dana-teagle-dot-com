@@ -7,6 +7,14 @@
         "site": "https://idguide.ca",
         "images": ["./assets/projects/idguide.png"]
     },
+    "Yang": {
+        "title": "Yang Chen",
+        "year": "2025-2026",
+        "service": "Web design & development",
+        "id": "yang-chen",
+        "site": "https://yangchen.ca",
+        "images": ["./assets/projects/yang-chen.png"]
+    },
     "THB 1": {
         "title": "True History Brewing",
         "year": "2024-",

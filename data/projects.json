@@ -1,4 +1,16 @@
 {
+    "Yang Chen": {
+        "id": "yang-chen",
+        "year": "2026",
+        "tags": [
+            "Artist/Creative", "Music/Audio"
+        ],
+            "description": [
+                "This is a portfolio website for Yang Chen, a percussionist and composer. The site features a bold brutalist design and showcases Yang's work and experience in the music industry. It was designed and developed between September 2025 and January 2026."
+            ],
+        "image": "./assets/projects/yang-chen.png",
+        "site": "https://yangchen.ca"
+    },
     "I.D. Guide": {
         "id": "idguide",
         "year": "2025",
@@ -32,7 +44,7 @@
             "Professional"
         ],
         "description": [
-            "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). The site is designed to provide information about Andrea's services, background, and approach to therapy. It was completed between May and June 2025."
+            "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). It was completed between May and June 2025."
         ],
         "image": "./assets/projects/andrea-lynn-ferguson.png",
         "site": "https://andrealynnferguson.com/"
@@ -45,7 +57,7 @@
             "Professional"
         ],
         "description": [
-            "This is a portfolio website for Tony Matthews, a producer and studio leader specializing in animation, digital media, and immersive storytelling. The site features a clean, modern design to showcase Tony's work and experience in the industry. It was designed and developed from March to June 2025."
+            "This is a portfolio website for Tony Matthews, laying out his experience in digital media production, animated features, VFX, studio operations, engineering, consulting, speaking engagements, and leadership. It was designed and developed from March to June 2025."
         ],
         "image": "./assets/projects/tony-matthews.jpg",
         "site": "https://www.tony-matthews.com/"
@@ -58,7 +70,7 @@
             "Writing/Editing"
         ],
         "description": [
-            "This is a portfolio website for Ryan Perks, a professional book editor. The site provides information about Ryan's services, experience, and portfolio. It was completed between December 2024 and February 2025."
+            "This is a portfolio website for Ryan Perks, a professional book editor. It was completed between December 2024 and February 2025."
         ],
         "image": "./assets/projects/ryanperks.png",
         "site": "https://ryanperks.com"
@@ -71,7 +83,7 @@
             "Music/Audio"
         ],
         "description": [
-            "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site provides information about Hazel's work, background, and services. It was designed and built between January and April 2025."
+            "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site provides information about Hazel's work, portfolio, and services. It was designed and built between January and April 2025."
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
