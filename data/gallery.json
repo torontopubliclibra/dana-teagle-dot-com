@@ -1,11 +1,19 @@
 {
     "I.D. Guide": {
         "title": "I.D. Guide",
-        "year": "2022-",
+        "year": "2022-2026",
         "service": "Web design & development",
         "id": "idguide",
         "site": "https://idguide.ca",
         "images": ["./assets/projects/idguide.png"]
+    },
+    "Avery": {
+        "title": "Avery Everhart",
+        "year": "2025-2026",
+        "service": "Web design & development",
+        "id": "avery-everhart",
+        "site": "https://averyeverhart.com",
+        "images": ["./assets/projects/avery-everhart.png"]
     },
     "Yang": {
         "title": "Yang Chen",
@@ -17,7 +25,7 @@
     },
     "THB 1": {
         "title": "True History Brewing",
-        "year": "2024-",
+        "year": "2024-2025",
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
@@ -25,7 +33,7 @@
     },
     "THB 2": {
         "title": "True History Brewing",
-        "year": "2024-",
+        "year": "2024-2025",
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
@@ -33,7 +41,7 @@
     },
     "MCD 1": {
         "title": "Michael Cloud Duguay",
-        "year": "2024-",
+        "year": "2024-2025",
         "service": "Web design & development",
         "id": "michael-cloud-duguay",
         "site": "https://michaelcduguay.com",
@@ -41,7 +49,7 @@
     },
     "MCD 2": {
         "title": "Michael Cloud Duguay",
-        "year": "2024-",
+        "year": "2024-2025",
         "service": "Web design & development",
         "id": "michael-cloud-duguay",
         "site": "https://michaelcduguay.com",
@@ -49,7 +57,7 @@
     },
     "Connect Fund": {
         "title": "Connect Fund",
-        "year": "2024-",
+        "year": "2024-2026",
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
@@ -57,7 +65,7 @@
     },
     "Connect Fund 2": {
         "title": "Connect Fund",
-        "year": "2024-",
+        "year": "2024-2026",
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
@@ -65,7 +73,7 @@
     },
     "Nina": {
         "title": "Nina Milanovski",
-        "year": "2024-",
+        "year": "2024",
         "service": "Web design & development",
         "id": "nina-milanovski",
         "site": "https://ninamilanovski.com",
@@ -87,7 +95,7 @@
     },
     "RUSTPROP 1": {
         "title": "RUSTPROP",
-        "year": "2024-",
+        "year": "2024-2026",
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
@@ -95,7 +103,7 @@
     },
     "RUSTPROP 2": {
         "title": "RUSTPROP",
-        "year": "2024-",
+        "year": "2024-2026",
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
@@ -111,7 +119,7 @@
     },
     "Poe M. Allphin": {
         "title": "Poe M. Allphin",
-        "year": "2025-",
+        "year": "2025",
         "service": "Web design & development",
         "id": "poe-m-allphin",
         "site": "https://poemallphin.com/",
@@ -119,7 +127,7 @@
     },
     "Tony Matthews": {
         "title": "Tony Matthews",
-        "year": "2025-",
+        "year": "2025",
         "service": "Web design & development",
         "id": "tony-matthews",
         "site": "https://www.tony-matthews.com/",
@@ -127,7 +135,7 @@
     },
     "Therapy with Andrea": {
         "title": "Therapy with Andrea",
-        "year": "2025-",
+        "year": "2025",
         "service": "Web design & development",
         "id": "andrea-lynn-ferguson",
         "site": "https://andrealynnferguson.com/",

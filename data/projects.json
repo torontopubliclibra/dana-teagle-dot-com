@@ -1,7 +1,19 @@
 {
+    "Avery Everhart": {
+        "id": "avery-everhart",
+        "year": "2025-2026",
+        "tags": [
+            "Academic", "Professional"
+        ],
+            "description": [
+                "This is a portfolio website for Avery Everhart, a transdisciplinary socio-spatial scientist and Assistant Professor of Geography at the University of British Columbia. The site provides information about her academic work, teaching, and research. It was completed between July 2025 and January 2026."
+            ],
+        "image": "./assets/projects/avery-everhart.png",
+        "site": "https://averyeverhart.com"
+    },
     "Yang Chen": {
         "id": "yang-chen",
-        "year": "2026",
+        "year": "2025-2026",
         "tags": [
             "Artist/Creative", "Music/Audio"
         ],
@@ -13,7 +25,7 @@
     },
     "I.D. Guide": {
         "id": "idguide",
-        "year": "2025",
+        "year": "2022-2026",
         "tags": [
             "Non-profit",
             "Advocacy"
@@ -64,7 +76,7 @@
     },
     "Ryan Perks": {
         "id": "ryan-perks",
-        "year": "2025",
+        "year": "2024-2025",
         "tags": [
             "Freelancer",
             "Writing/Editing"
@@ -117,7 +129,7 @@
     },
     "Connect Fund": {
         "id": "connect-fund",
-        "year": "2024",
+        "year": "2024-2026",
         "tags": [
             "Non-profit",
             "Advocacy"
@@ -130,7 +142,7 @@
     },
     "Michael Cloud Duguay": {
         "id": "michael-cloud-duguay",
-        "year": "2024",
+        "year": "2024-2025",
         "tags": [
             "Artist/Creative",
             "Music/Audio"
@@ -155,7 +167,7 @@
     },
     "Sydney Gautreau": {
         "id": "sydney-gautreau",
-        "year": "2024",
+        "year": "2022-2024",
         "tags": [
             "Freelancer",
             "Writing/Editing"
