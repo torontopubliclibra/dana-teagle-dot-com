@@ -2,11 +2,11 @@
     "work & creative": {
         "dana teagle dot com": {
             "link": "/",
-            "description": "My design & web/software dev portfolio"
+            "description": "Design & web/software development portfolio"
         },
         "I.D. Guide": {
             "link": "https://idguide.ca/",
-            "description": "Resource designed to help navigate legal name and gender marker changes in Canada"
+            "description": "Guides to legal name and gender marker changes in Canada"
         },
         "RUSTPROP": {
             "link": "/rustprop",
@@ -14,37 +14,37 @@
         }
     },
     "social profiles": {
-        "Instagram (I)": {
-            "link": "/tpl-insta",
-            "description": "[at] torontopubliclibra"
-        },
-        "Instagram (II)": {
-            "link": "/dt-insta",
-            "description": "[at] danateagledotcom"
-        },
-        "Instagram (III)": {
-            "link": "/rp-insta",
-            "description": "[at] rustprop"
-        },
         "Letterboxd": {
             "link": "/letterboxd",
-            "description": "[at] torontolibra"
+            "description": "@torontolibra"
         },
         "Tumblr": {
             "link": "/tumblr",
-            "description": "[at] torontopubliclibra"
+            "description": "@torontopubliclibra"
         },
         "Last.fm": {
             "link": "/lastfm",
-            "description": "[at] rustbecomesher"
+            "description": "@rustbecomesher"
         },
         "Goodreads": {
             "link": "/goodreads",
-            "description": ""
+            "description": "@torontopubliclibra"
         },
         "Discogs": {
             "link": "/discogs",
-            "description": ""
+            "description": "@torontopubliclibra"
+        },
+        "Instagram (I)": {
+            "link": "/tpl-insta",
+            "description": "@torontopubliclibra"
+        },
+        "Instagram (II)": {
+            "link": "/dt-insta",
+            "description": "@danateagledotcom"
+        },
+        "Instagram (III)": {
+            "link": "/rp-insta",
+            "description": "@rustprop"
         }
     },
     "mutual aid": {
