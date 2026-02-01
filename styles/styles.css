@@ -2382,7 +2382,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   line-height: 1.5;
   color: #282b2c;
@@ -2394,7 +2394,7 @@ h3 {
 }
 @media only screen and (max-width: 970px) {
   h3 {
-    font-size: 22px;
+    font-size: 18px;
     text-align: left;
     margin: 0;
     max-width: 100%;
@@ -3184,6 +3184,7 @@ header .scroll-title {
   align-items: center;
   gap: 10px;
   padding: 12px 15px;
+  font-size: 16px;
 }
 #gallery .pause-button button:hover, #gallery .pause-button a:hover, #gallery .remote-button button:hover, #gallery .remote-button a:hover {
   color: #282b2c;

@@ -1,7 +1,7 @@
 {
     "Avery Everhart": {
         "id": "avery-everhart",
-        "year": "2025-2026",
+        "year": "2026",
         "tags": [
             "Academic", "Professional"
         ],
@@ -13,7 +13,7 @@
     },
     "Yang Chen": {
         "id": "yang-chen",
-        "year": "2025-2026",
+        "year": "2026",
         "tags": [
             "Artist/Creative", "Music/Audio"
         ],
@@ -25,7 +25,7 @@
     },
     "I.D. Guide": {
         "id": "idguide",
-        "year": "2022-2026",
+        "year": "2025",
         "tags": [
             "Non-profit",
             "Advocacy"
@@ -76,7 +76,7 @@
     },
     "Ryan Perks": {
         "id": "ryan-perks",
-        "year": "2024-2025",
+        "year": "2025",
         "tags": [
             "Freelancer",
             "Writing/Editing"
@@ -129,7 +129,7 @@
     },
     "Connect Fund": {
         "id": "connect-fund",
-        "year": "2024-2026",
+        "year": "2024",
         "tags": [
             "Non-profit",
             "Advocacy"
@@ -142,7 +142,7 @@
     },
     "Michael Cloud Duguay": {
         "id": "michael-cloud-duguay",
-        "year": "2024-2025",
+        "year": "2024",
         "tags": [
             "Artist/Creative",
             "Music/Audio"
@@ -165,19 +165,6 @@
         "image": "./assets/projects/ninamilanovski.jpg",
         "site": "https://ninamilanovski.com"
     },
-    "Sydney Gautreau": {
-        "id": "sydney-gautreau",
-        "year": "2022-2024",
-        "tags": [
-            "Freelancer",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for Sydney Gautreau's editing and writing coaching business. It features a professional, custom design and highlights Sydney's services and experience. The original site was completed in 2022, with upgrades in 2023 and 2024."
-        ],
-        "image": "./assets/projects/sydneygautreau.png",
-        "site": "https://sydneygautreau.com"
-    },
     "Queer Walk": {
         "id": "queer-walk",
         "year": "2023",
@@ -191,5 +178,18 @@
         ],
         "image": "./assets/projects/queer-walk.png",
         "site": "https://queerwalk.ca"
+    },
+    "Sydney Gautreau": {
+        "id": "sydney-gautreau",
+        "year": "2022",
+        "tags": [
+            "Freelancer",
+            "Writing/Editing"
+        ],
+        "description": [
+            "This is a website for Sydney Gautreau's editing and writing coaching business. It features a professional, custom design and highlights Sydney's services and experience. The original site was completed in 2022, with upgrades in 2023 and 2024."
+        ],
+        "image": "./assets/projects/sydneygautreau.png",
+        "site": "https://sydneygautreau.com"
     }
 }

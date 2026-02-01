@@ -259,8 +259,26 @@ h2 {
   scroll-margin-top: 145px;
 }
 
+#testimonials {
+  scroll-margin-top: 175px;
+}
+
+cite {
+  display: block;
+  margin-bottom: 30px;
+  color: #e2a6c6;
+}
+
+blockquote {
+  margin-left: 20px;
+}
+
 a {
   color: #f3e8e9;
+}
+
+cite a {
+  color: #e2a6c6;
 }
 
 a:hover {
@@ -290,6 +308,10 @@ footer {
 hr {
   border: solid #84A59D 2px;
   margin: 30px 0;
+}
+
+hr.blue-dash {
+  border: dashed #99b1d3 2px;
 }
 
 header hr {

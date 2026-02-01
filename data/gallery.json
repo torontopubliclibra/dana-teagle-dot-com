@@ -1,7 +1,7 @@
 {
     "I.D. Guide": {
         "title": "I.D. Guide",
-        "year": "2022-2026",
+        "year": "2025-",
         "service": "Web design & development",
         "id": "idguide",
         "site": "https://idguide.ca",
@@ -9,7 +9,7 @@
     },
     "Avery": {
         "title": "Avery Everhart",
-        "year": "2025-2026",
+        "year": "2026",
         "service": "Web design & development",
         "id": "avery-everhart",
         "site": "https://averyeverhart.com",
@@ -17,7 +17,7 @@
     },
     "Yang": {
         "title": "Yang Chen",
-        "year": "2025-2026",
+        "year": "2026",
         "service": "Web design & development",
         "id": "yang-chen",
         "site": "https://yangchen.ca",
@@ -25,7 +25,7 @@
     },
     "THB 1": {
         "title": "True History Brewing",
-        "year": "2024-2025",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
@@ -33,7 +33,7 @@
     },
     "THB 2": {
         "title": "True History Brewing",
-        "year": "2024-2025",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "true-history-brewing",
         "site": "https://truehistorybeer.com",
@@ -41,7 +41,7 @@
     },
     "MCD 1": {
         "title": "Michael Cloud Duguay",
-        "year": "2024-2025",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "michael-cloud-duguay",
         "site": "https://michaelcduguay.com",
@@ -49,7 +49,7 @@
     },
     "MCD 2": {
         "title": "Michael Cloud Duguay",
-        "year": "2024-2025",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "michael-cloud-duguay",
         "site": "https://michaelcduguay.com",
@@ -57,7 +57,7 @@
     },
     "Connect Fund": {
         "title": "Connect Fund",
-        "year": "2024-2026",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
@@ -65,7 +65,7 @@
     },
     "Connect Fund 2": {
         "title": "Connect Fund",
-        "year": "2024-2026",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "connect-fund",
         "site": "https://connectfund.org",
@@ -73,7 +73,7 @@
     },
     "Nina": {
         "title": "Nina Milanovski",
-        "year": "2024",
+        "year": "2024-",
         "service": "Web design & development",
         "id": "nina-milanovski",
         "site": "https://ninamilanovski.com",
@@ -81,13 +81,13 @@
     },
     "YRL": {
         "title": "Your Real Life Insurance",
-        "year": "2020-2021",
+        "year": "2020-21",
         "service": "Graphic design & social media marketing",
         "images": ["./assets/projects/yrl-1.png", "./assets/projects/yrl-2.png"]
     },
     "Sydney": {
         "title": "Sydney Gautreau",
-        "year": "2022-2024",
+        "year": "2022-",
         "service": "Web design & development",
         "id": "sydney-gautreau",
         "site": "https://sydneygautreau.com",
@@ -95,7 +95,7 @@
     },
     "RUSTPROP 1": {
         "title": "RUSTPROP",
-        "year": "2024-2026",
+        "year": "2024-26",
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
@@ -103,7 +103,7 @@
     },
     "RUSTPROP 2": {
         "title": "RUSTPROP",
-        "year": "2024-2026",
+        "year": "2024-26",
         "service": "Agitprop design project",
         "site": "/rustprop",
         "instagram": "/rp-insta",
@@ -111,7 +111,7 @@
     },
     "Ryan Perks": {
         "title": "Ryan Perks",
-        "year": "2024-2025",
+        "year": "2025-",
         "service": "Web design & development",
         "id": "ryan-perks",
         "site": "https://ryanperks.com",
@@ -119,7 +119,7 @@
     },
     "Poe M. Allphin": {
         "title": "Poe M. Allphin",
-        "year": "2025",
+        "year": "2025-",
         "service": "Web design & development",
         "id": "poe-m-allphin",
         "site": "https://poemallphin.com/",
@@ -135,7 +135,7 @@
     },
     "Therapy with Andrea": {
         "title": "Therapy with Andrea",
-        "year": "2025",
+        "year": "2025-",
         "service": "Web design & development",
         "id": "andrea-lynn-ferguson",
         "site": "https://andrealynnferguson.com/",

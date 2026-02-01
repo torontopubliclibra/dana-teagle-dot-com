@@ -1,6 +1,7 @@
 // app object
 const app = {
     elements: {
+        h1: $("h1"),
         body: $("body"),
         header: $("header"),
         nav: $("nav"),
@@ -85,6 +86,9 @@ const app = {
                 app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode');
             }
             localStorage['dark-mode'] = `${app.toggles.darkMode}`;
+        },
+        changeTitleText(text) {
+            app.elements.h1.html(text);
         },
         toggleNav() {
             app.elements.body.toggleClass("nav-open");
@@ -360,7 +364,7 @@ const app = {
                     site: "",
                     code: "",
                 };
-                formattedProject.heading = `<h3>${project.title}</h3>`
+                formattedProject.heading = `<h3>${project.title} (${project.year})</h3>`
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
                         return `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
@@ -471,9 +475,32 @@ const app = {
                 }
             });
         }
+        
         window.addEventListener('resize', () => {
             app.functions.galleryDisplay();
         });
+
+        let h1HoverActive = false;
+        function updateH1Hover() {
+            if (window.matchMedia('(min-width: 970px)').matches) {
+                if (!h1HoverActive) {
+                    app.elements.h1.on('mouseenter.h1hover', function() {
+                        app.functions.changeTitleText("dana rosamund teagle");
+                    });
+                    app.elements.h1.on('mouseleave.h1hover', function() {
+                        app.functions.changeTitleText("dana teagle dot com");
+                    });
+                    h1HoverActive = true;
+                }
+            } else {
+                if (h1HoverActive) {
+                    app.elements.h1.off('.h1hover');
+                    h1HoverActive = false;
+                }
+            }
+        }
+        updateH1Hover();
+        window.addEventListener('resize', updateH1Hover);
         app.elements.mobileMenu.click(app.functions.toggleNav);
         document.querySelectorAll("nav ul li a").forEach((link) => link.addEventListener("click", app.functions.toggleNav));
         app.elements.scrollTopButton.click((e) => {

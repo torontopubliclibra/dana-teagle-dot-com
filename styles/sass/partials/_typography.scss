@@ -264,9 +264,8 @@ h2 {
   }
 }
 
-// project headings
 h3 {
-  @include textStyle (22px, center, 1.5);
+  @include textStyle (18px, center, 1.5);
   font-weight: 600;
   font-style: italic;
   margin: 0 auto;
@@ -274,7 +273,7 @@ h3 {
   max-width: 85%;
 
   @media only screen and (max-width: $tablet) {
-    font-size: 22px;
+    font-size: 18px;
     text-align: left;
     margin: 0;
     max-width: 100%;
