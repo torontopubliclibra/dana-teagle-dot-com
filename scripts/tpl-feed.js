@@ -49,7 +49,7 @@ const tplFeed = {
                 const dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
                 let mediaTag;
                 if (item.type === 'video') {
-                    mediaTag = `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}" style="max-width:100%;height:auto;">
+                    mediaTag = `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}" style="max-width:100%;height:auto;border: solid 3px rgba(243, 232, 233, 0.5); border-bottom: none;">
                         <source src="${item.url}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>`;
