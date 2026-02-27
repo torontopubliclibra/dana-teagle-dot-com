@@ -47,11 +47,19 @@ const tplFeed = {
                 const permalink = `torontopubliclibra.com/feed#${item.id}`;
                 const mailto = `mailto:torontopubliclibra@gmail.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
                 const dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
-                let imgTag = `<img src="${item.url}" alt="${item.alt}" class="feed-item">`;
-                if (item.link) {
-                    imgTag = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${imgTag}</a>`;
+                let mediaTag;
+                if (item.type === 'video') {
+                    mediaTag = `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}" style="max-width:100%;height:auto;">
+                        <source src="${item.url}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`;
+                } else {
+                    mediaTag = `<img src="${item.url}" alt="${item.alt}" class="feed-item">`;
                 }
-                return `<div class="feed-item-container" id="${item.id}">${imgTag}<p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
+                if (item.link) {
+                    mediaTag = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${mediaTag}</a>`;
+                }
+                return `<div class="feed-item-container" id="${item.id}">${mediaTag}<p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
             });
             tplFeed.content.html(formattedFeed.join(''));
             tplFeed.functions.updateToggle();
