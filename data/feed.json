@@ -23,7 +23,8 @@
             "type": "video",
             "alt": "Winnipeg the Cat the Snow the Movie (2026)",
             "date": "24/02/2026",
-            "id": "231"
+            "id": "231",
+            "thumbnail": "../assets/feed/231thumb.png"
         },
         {
             "url": "../assets/feed/232.jpeg",
