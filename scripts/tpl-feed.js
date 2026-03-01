@@ -82,19 +82,23 @@ const tplFeed = {
             tplFeed.toggle.html(toggleText);
         },
         newer() {
+            setTimeout(() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }, 100);
             if (tplFeed.range.start > 0) {
                 tplFeed.range.start -= 10;
                 tplFeed.range.end -= 10;
                 tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
-                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }
         },
         older() {
+            setTimeout(() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }, 100);
             if (tplFeed.range.end < tplFeed.items.length) {
                 tplFeed.range.start += 10;
                 tplFeed.range.end += 10;
                 tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
-                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }
         },
         resetAltToggles() {
