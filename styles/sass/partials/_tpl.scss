@@ -1095,11 +1095,16 @@ html.tpl {
             }
         }
     }
+    .feed-item-container {
+        scroll-margin-top: 258px;
+    }
+    .mix {
+        scroll-margin-top: 250px;
+    }
     .feed-item-container, .mix {
-        scroll-margin-top: 260px;
-            @media (max-width: 600px) {
-                scroll-margin-top: 290px;
-            }
+        @media (max-width: 600px) {
+            scroll-margin-top: 290px;
+        }
     }
     .featuring-ellipsis {
         display: -webkit-box;

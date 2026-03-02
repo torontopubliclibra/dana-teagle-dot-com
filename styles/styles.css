@@ -1504,8 +1504,11 @@ html.tpl footer a:hover {
     color: #f3e8e9;
   }
 }
-html.tpl .feed-item-container, html.tpl .mix {
-  scroll-margin-top: 260px;
+html.tpl .feed-item-container {
+  scroll-margin-top: 258px;
+}
+html.tpl .mix {
+  scroll-margin-top: 250px;
 }
 @media (max-width: 600px) {
   html.tpl .feed-item-container, html.tpl .mix {
