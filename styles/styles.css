@@ -1229,7 +1229,7 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon.dis
   }
 }
 html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
-  scroll-margin-top: 255px;
+  scroll-margin-top: 250px;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
@@ -1257,7 +1257,7 @@ html.tpl main .tpl-links h3 {
   width: auto;
   margin-bottom: 10px;
   padding-top: 0;
-  scroll-margin-top: 255px;
+  scroll-margin-top: 250px;
 }
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-links h3 {

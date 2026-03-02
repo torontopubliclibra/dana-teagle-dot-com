@@ -817,7 +817,7 @@ html.tpl {
             }
 
             #books, #movies, #tv {
-                scroll-margin-top: 255px;
+                scroll-margin-top: 250px;
                 @media only screen and (max-width: $tablet) {
                     scroll-margin-top: 285px;
                 }
@@ -842,7 +842,7 @@ html.tpl {
                 width: auto;
                 margin-bottom: 10px;
                 padding-top: 0;
-                scroll-margin-top: 255px;
+                scroll-margin-top: 250px;
 
                 @media only screen and (max-width: $tablet) {
                     max-width: 90%;
