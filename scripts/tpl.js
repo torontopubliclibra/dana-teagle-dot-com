@@ -29,6 +29,14 @@ const tpl = {
             }
             tpl.tplCategories.html(`<ul>${linkCategories.join('')}</ul>`);
             tpl.tplLinks.html(formattedLinks.join('<br/>'));
+            $(".link-category a").on("click", function(e) {
+                const targetId = $(this).attr("href").replace('#', '');
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            });
         },
     },
     init() {
