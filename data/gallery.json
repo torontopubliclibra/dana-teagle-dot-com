@@ -1,4 +1,11 @@
 {
+    "Toronto Public Libra": {
+        "title": "Toronto Public Libra",
+        "year": "2025",
+        "service": "Business card design",
+        "site": "https://danateagle.com/tpl",
+        "images": ["./assets/projects/tpl-business.png"]
+    },
     "I.D. Guide": {
         "title": "I.D. Guide",
         "year": "2025-",
@@ -6,6 +13,14 @@
         "id": "idguide",
         "site": "https://idguide.ca",
         "images": ["./assets/projects/idguide.png"]
+    },
+    "I.D. Guide-2": {
+        "title": "I.D. Guide",
+        "year": "2025-",
+        "service": "Web design & development",
+        "id": "idguide",
+        "site": "https://idguide.ca",
+        "images": ["./assets/projects/idguide-2.png"]
     },
     "Avery": {
         "title": "Avery Everhart",
