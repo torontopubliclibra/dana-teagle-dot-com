@@ -36,8 +36,14 @@
         },
         {
             "date": "02-04-2026",
-            "title": "TBD",
-            "nominees": ["Torch Song Trilogy (1988)", "Candyman (1992)", "Past Lives (2023)"]
+            "title": "Torch Song Trilogy",
+            "year": "1988",
+            "director": "Paul Bogart",
+            "poster": "/rcc/torchsongtrilogy.png",
+            "link": "https://letterboxd.com/film/torch-song-trilogy/",
+            "country": "American",
+            "languages": ["English"],
+            "runtime": 120
         },
         {
             "date": "30-04-2026",
