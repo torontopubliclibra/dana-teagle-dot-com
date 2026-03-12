@@ -1617,6 +1617,9 @@ html.rustprop .rp-hr {
   margin-top: 30px;
   max-width: 900px;
 }
+html.rustprop hr.accent {
+  border-color: rgb(95, 31, 71);
+}
 html.rustprop h1 {
   text-align: center;
   cursor: text;
@@ -1748,6 +1751,19 @@ html.rustprop main .rp-landing, html.rustprop main .four-oh-four {
   margin-bottom: 30px;
   border-bottom: solid 4px rgba(243, 232, 233, 0.75);
 }
+html.rustprop main .rp-landing .rp-links, html.rustprop main .four-oh-four .rp-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-landing .rp-links, html.rustprop main .four-oh-four .rp-links {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustprop main .four-oh-four p, html.rustprop main .four-oh-four a {
   color: #f3e8e9;
   font-size: 1rem;
@@ -1767,6 +1783,14 @@ html.rustprop main .rp-landing a, html.rustprop main .four-oh-four a {
 }
 html.rustprop main .rp-landing .new-line, html.rustprop main .four-oh-four .new-line {
   margin-top: 5px;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop main .rp-landing .new-line, html.rustprop main .four-oh-four .new-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
   height: 0.9rem;

@@ -33,6 +33,10 @@ html.rustprop {
         max-width: 900px;
     }
 
+    hr.accent {
+        border-color: rgb(95, 31, 71);
+    }
+
     h1 {
         text-align: center;
         cursor: text;
@@ -173,6 +177,19 @@ html.rustprop {
             padding-bottom: 20px;
             margin-bottom: 30px;
             border-bottom: solid 4px rgba($white, 0.75);
+
+            .rp-links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 10px;
+                @media only screen and (max-width: $mobile) {
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
+
             p, a {
                 color: $white;
                 font-size: 1rem;
@@ -191,6 +208,13 @@ html.rustprop {
             }
             .new-line {
                 margin-top: 5px;
+
+                @media only screen and (max-width: $mobile) {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
             a img {
                 height: 0.9rem;
