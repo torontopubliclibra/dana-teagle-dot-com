@@ -61,6 +61,7 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border: solid #cbd6da89 1px;
 }
 
 pre {
