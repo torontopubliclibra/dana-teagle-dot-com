@@ -76,6 +76,10 @@ fetch('../data/rcc.json')
       infoText += `<a href="${nextFilm.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:1.2rem;">${nextFilm.title}</a> ${nextFilm.year ? `(${nextFilm.year}) ` : ''}<hr/>${formatDateLong(nextFilm.date)}<br/>`;
       if (nextFilm.series) infoText += `<em style="font-size: 0.9rem;">${nextFilm.series}:</em><br/>`;
       if (nextFilm.director) infoText += `Directed by ${nextFilm.director}<br/>`;
+        if (nextFilm.writer) {
+          const writers = Array.isArray(nextFilm.writer) ? nextFilm.writer.join(', ') : nextFilm.writer;
+          infoText += `Written by ${writers}<br/>`;
+        }
       if (nextFilm.runtime) infoText += `${nextFilm.runtime} mins | ${nextFilm.languages ? nextFilm.languages.join(', ') : ''}<br/>`;
       infoDiv.innerHTML = infoText;
       wrapper.appendChild(infoDiv);
@@ -133,7 +137,16 @@ fetch('../data/rcc.json')
       } else {
         infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.9rem;">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
       }
-      if (film.director) infoText += `Directed by ${film.director}<br/>`;
+      const singleWriter = Array.isArray(film.writer) ? film.writer.length === 1 ? film.writer[0] : null : film.writer;
+      if (film.director && singleWriter && film.director === singleWriter) {
+        infoText += `Written and Directed by ${film.director}<br/>`;
+      } else {
+        if (film.director) infoText += `Directed by ${film.director}<br/>`;
+        if (film.writer) {
+          const writers = Array.isArray(film.writer) ? film.writer.join(', ') : film.writer;
+          infoText += `Written by ${writers}<br/>`;
+        }
+      }
       if (film.runtime) infoText += `${film.runtime} mins | ${film.languages ? film.languages.join(', ') : ''}<br/>`;
       infoBar.innerHTML = infoText;
       li.appendChild(infoBar);
@@ -221,6 +234,17 @@ fetch('../data/rcc.json')
 
     const totalFilms = data.rcc.length;
     const directorsList = [...new Set(data.rcc.map(film => film.director).filter(Boolean))].sort();
+    const writersSet = new Set();
+    data.rcc.forEach(film => {
+      if (film.writer) {
+        if (Array.isArray(film.writer)) {
+          film.writer.forEach(w => writersSet.add(w));
+        } else {
+          writersSet.add(film.writer);
+        }
+      }
+    });
+    const writersList = [...writersSet].sort();
     const totalRuntime = data.rcc.reduce((sum, film) => sum + (film.runtime || 0), 0);
     const totalsUl = document.createElement('ul');
     Object.assign(totalsUl.style, {
@@ -231,6 +255,7 @@ fetch('../data/rcc.json')
     });
     [
       `Directors: ${directorsList.join(', ')}`,
+      `Writers: ${writersList.join(', ')}`,
       `Total runtime: ${totalRuntime} mins (${(totalRuntime / 60).toFixed(2)} hrs)`,
       `Total # of movies: ${totalFilms}`
     ].forEach(text => {
