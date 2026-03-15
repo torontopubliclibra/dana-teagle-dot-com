@@ -271,14 +271,12 @@ fetch('../data/rcc.json')
 
     function showView(view) {
       [listBtn, postersBtn, statsBtn, nowBtn].forEach(btn => btn && btn.classList.remove('selected'));
-      nowPlayingSection.style.display = 'none';
+      nowPlayingSection.style.display = 'none'; // Always hidden
       container.style.display = 'none';
       list.style.display = 'none';
       statsList.style.display = 'none';
-      if (view === 'now') {
-        nowPlayingSection.style.display = 'block';
-        if (nowBtn) nowBtn.classList.add('selected');
-      } else if (view === 'list') {
+      // Disable 'now' view
+      if (view === 'list') {
         list.style.display = 'flex';
         if (listBtn) listBtn.classList.add('selected');
       } else if (view === 'stats') {
@@ -291,9 +289,10 @@ fetch('../data/rcc.json')
     }
 
     const hash = window.location.hash.replace('#', '');
-    showView(['now', 'list', 'stats', 'posters'].includes(hash) ? hash : 'now');
+    // Default to 'posters' if no valid hash
+    showView(['list', 'stats', 'posters'].includes(hash) ? hash : 'posters');
 
-    if (nowBtn) nowBtn.addEventListener('click', () => { window.location.hash = 'now'; showView('now'); });
+    // Disable nowBtn functionality
     if (listBtn) listBtn.addEventListener('click', () => { window.location.hash = 'list'; showView('list'); });
     if (postersBtn) postersBtn.addEventListener('click', () => { window.location.hash = 'posters'; showView('posters'); });
     if (statsBtn) statsBtn.addEventListener('click', () => { window.location.hash = 'stats'; showView('stats'); });
