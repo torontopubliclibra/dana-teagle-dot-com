@@ -243,11 +243,89 @@ const tplMixes = {
                         tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
                         '</div>',
-                        '<p class="index-button"><button onclick="tplMixes.functions.showIndex()" class="range">Artist Index</button> | <button onclick="tplMixes.functions.randomMix()" class="range">Random Mix</button></p>'
+                        '<p class="index-button"><button onclick="tplMixes.functions.showIndex()" class="range">Artist Index</button> | <button onclick="tplMixes.functions.showTileView()" class="range">Grid view</button> | <button onclick="tplMixes.functions.randomMix()" class="range">Random</button></p>'
                     ];
                 }
                 $(this).html(navContent.join(''));
             });
+        },
+        showTileView() {
+            tplMixes.heading.text("rusty mixes grid view");
+            tplMixes.nav.html("");
+            if (!document.getElementById('mix-tile-grid-style')) {
+                const style = document.createElement('style');
+                style.id = 'mix-tile-grid-style';
+                style.innerHTML = `
+                    .mix-tile-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                        gap: 0.5rem;
+                        margin-top: 18px;
+                        margin-bottom: 18px;
+                    }
+                    .mix-tile {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        aspect-ratio: 1 / 1;
+                        justify-content: center;
+                        background: rgba(40,40,40,0.2);
+                        border: solid 3px rgba(243, 232, 233, 0.5);
+                        transition: box-shadow 0.2s;
+                    }
+                    .mix-tile a {
+                        margin-bottom: -4px;
+                    }
+                    .mix-tile:hover {
+                        box-shadow: 0 0 2px #f3e8e9;
+                    }
+                    .mix-tile img {
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                        object-fit: cover;
+                    }
+                    .mix-tile-title {
+                        font-size: 0.95em;
+                        color: #f3e8e9;
+                        text-align: center;
+                        margin-bottom: 2px;
+                    }
+                    .mix-tile-number {
+                        font-size: 0.85em;
+                        color: #c9b6b7;
+                        margin-bottom: 2px;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            const backBtn = `<p><button class="range" onclick="tplMixes.functions.exitTileView()">&lt; Back to Mixes</button></p>`;
+            let gridHtml = '<div class="mix-tile-grid">';
+            tplMixes.mixes.forEach(object => {
+                gridHtml += `<div class="mix-tile">`;
+                gridHtml += `<a href="#${object.number}" class="mix-tile-link" data-mixnum="${object.number}" title="rusty mix #${object.number}: ${object.title}"><img src="${object.image}" alt="rusty mix #${object.number} cover art"/></a>`;
+                gridHtml += `</div>`;
+            });
+            gridHtml += '</div>';
+            tplMixes.content.html([backBtn, gridHtml].join(''));
+            $(".mix-tile-link").on("click", function(e) {
+                e.preventDefault();
+                const mixNum = $(this).data("mixnum");
+                window.location.hash = `#${mixNum}`;
+                tplMixes.functions.navDisplay();
+                tplMixes.heading.text("rusty mixes");
+                tplMixes.functions.mixDisplay();
+                // Scroll/focus after DOM updates
+                setTimeout(() => {
+                    tplMixes.functions.scrollToHash();
+                }, 200);
+            });
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        },
+        exitTileView() {
+            tplMixes.functions.navDisplay();
+            tplMixes.heading.text("rusty mixes");
+            tplMixes.functions.mixDisplay();
         },
         highlightMatch(str, query) {
             if (!query) return str;
