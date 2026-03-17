@@ -1577,6 +1577,7 @@ html.tpl .featuring-bar {
   text-align: left;
   font-size: 80%;
   color: #f3e8e9;
+  line-height: 1.25;
 }
 html.tpl .search {
   background-color: rgba(132, 165, 157, 0.5);

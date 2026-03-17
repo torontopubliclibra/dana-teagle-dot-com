@@ -5,10 +5,10 @@ const tplMixes = {
     mixes: [],
     range: localStorage['mixRange'] || "8",
     query: "",
-    stream: "tidal",
+    stream: localStorage['stream'] || "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
     clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
-    streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
+    streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: '',
     scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" style="width: 15px; margin-top:3px;margin-right:5px;filter: invert(1);">Back to Top</a></p>`,
     functions: {
@@ -190,11 +190,15 @@ const tplMixes = {
         streamSet(stream) {
             if (stream === "tidal") {
                 tplMixes.stream = "tidal";
-                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
+                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
+                localStorage['stream'] = tplMixes.stream;
+            } else if (stream === "apple") {
+                tplMixes.stream = "apple";
+                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <span class="range-selected">apple</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
                 localStorage['stream'] = tplMixes.stream;
             } else if (stream === "spotify") {
                 tplMixes.stream = "spotify";
-                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <span class="range-selected">spotify</span></p>`;
+                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <span class="range-selected">spotify</span></p>`;
                 localStorage['stream'] = tplMixes.stream;
             }
             tplMixes.functions.mixDisplay();
@@ -204,7 +208,9 @@ const tplMixes = {
             const randomMix = tplMixes.mixes[randomIndex];
             if (randomMix) {
                 let streamLink = randomMix.tidal;
-                if (tplMixes.stream === "spotify" && randomMix.spotify) {
+                if (tplMixes.stream === "apple" && randomMix.apple) {
+                    streamLink = randomMix.apple;
+                } else if (tplMixes.stream === "spotify" && randomMix.spotify) {
                     streamLink = randomMix.spotify;
                 }
                 if (streamLink) {
@@ -254,7 +260,7 @@ const tplMixes = {
                 const range = tplMixes.range;
                 const streamSelect = tplMixes.streamSelect;
                 const formattedMixes = [`<hr class="no-top">`, streamSelect];
-                let stream = tplMixes.stream === "spotify" ? "spotify" : "tidal";
+                let stream = tplMixes.stream;
                 let maxNum = 198;
                 if (tplMixes.mixes && tplMixes.mixes.length > 0) {
                     maxNum = Math.max(...tplMixes.mixes.map(m => Number(m.number)));
@@ -272,7 +278,14 @@ const tplMixes = {
                 const bounds = rangeBounds[range] || [1, 25];
                 tplMixes.mixes.forEach(object => {
                     const count = Number(object.number);
-                    const link = object[stream];
+                    let link = null;
+                    if (stream === "apple" && object.apple) {
+                        link = object.apple;
+                    } else if (stream === "spotify" && object.spotify) {
+                        link = object.spotify;
+                    } else if (stream === "tidal" && object.tidal) {
+                        link = object.tidal;
+                    }
                     let featuringBar = '';
                     if (Array.isArray(object.featuring) && object.featuring.length > 0) {
                         let features = object.featuring;
@@ -313,7 +326,7 @@ const tplMixes = {
                 const query = tplMixes.query.toLowerCase();
                 const streamSelect = tplMixes.streamSelect;
                 const formattedMixes = [`<hr class="no-top">`, streamSelect];
-                let stream = tplMixes.stream === "spotify" ? "spotify" : "tidal";
+                let stream = tplMixes.stream;
                 const filteredMixes = tplMixes.mixes.filter(mix => {
                     const titleMatch = mix.title.toLowerCase().includes(query);
                     const numberMatch = mix.number.toString().includes(query);
@@ -321,7 +334,14 @@ const tplMixes = {
                     return titleMatch || numberMatch || featuringMatch;
                 });
                 filteredMixes.slice().reverse().forEach(object => {
-                    const link = object[stream];
+                    let link = null;
+                    if (stream === "apple" && object.apple) {
+                        link = object.apple;
+                    } else if (stream === "spotify" && object.spotify) {
+                        link = object.spotify;
+                    } else if (stream === "tidal" && object.tidal) {
+                        link = object.tidal;
+                    }
                     let featuringBar = '';
                     if (Array.isArray(object.featuring) && object.featuring.length > 0) {
                         let features = object.featuring.map(f => tplMixes.functions.highlightMatch(f, query));
@@ -450,6 +470,7 @@ const tplMixes = {
                         number: data[key].number,
                         tidal: data[key].tidal,
                         spotify: data[key].spotify,
+                        apple: data[key].apple,
                         image: data[key].image,
                         featuring: data[key].featuring || []
                     };
@@ -468,6 +489,8 @@ const tplMixes = {
             .catch(error => console.log(error));
         if (localStorage['stream'] === 'spotify') {
             tplMixes.functions.streamSet('spotify');
+        } else if (localStorage['stream'] === 'apple') {
+            tplMixes.functions.streamSet('apple');
         }
         if (localStorage['mixRange']) {
             tplMixes.range = localStorage['mixRange'];
