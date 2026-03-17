@@ -1175,6 +1175,7 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub a {
 html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix {
   display: flex;
   gap: 0;
+  line-height: 1.25;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
