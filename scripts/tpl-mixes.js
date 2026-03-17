@@ -243,7 +243,7 @@ const tplMixes = {
                         tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
                         '</div>',
-                        '<p class="index-button"><button onclick="tplMixes.functions.showIndex()" class="range">Artist Index</button> | <button onclick="tplMixes.functions.showTileView()" class="range">Grid view</button> | <button onclick="tplMixes.functions.randomMix()" class="range">Random</button></p>'
+                        '<p class="index-button"><button onclick="tplMixes.functions.showIndex()" class="range">Index</button> | <button onclick="tplMixes.functions.showTileView()" class="range">Grid view</button> | <button onclick="tplMixes.functions.randomMix()" class="range">Random</button></p>'
                     ];
                 }
                 $(this).html(navContent.join(''));
