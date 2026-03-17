@@ -126,6 +126,7 @@ const tplMixes = {
         },
         showIndexPage(page) {
             tplMixes.artistIndexPage = page;
+            tplMixes.query = "";
             tplMixes.functions.showIndex();
         },
         exitIndex() {
@@ -250,6 +251,7 @@ const tplMixes = {
             });
         },
         showTileView() {
+            tplMixes.query = "";
             tplMixes.heading.text("rusty mixes grid view");
             tplMixes.nav.html("");
             if (!document.getElementById('mix-tile-grid-style')) {
