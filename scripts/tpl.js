@@ -5,28 +5,26 @@ const tpl = {
     links: {},
     functions: {
         linkDisplay() {
-            const formattedLinks = [];
+            if (tpl.links) {
+                tpl.errorMessage.html("");
+                tpl.errorMessage.removeClass("js-disabled").addClass("js-enabled");
+            }
             const linkCategories = Object.keys(tpl.links).map(category =>
                 `<li class="link-category"><a href="#${category.replace(/\s/g, "-")}">${category}<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`
             );
-            if (tpl.links) {
-                tpl.errorMessage.html("");
-                tpl.errorMessage.removeClass("js-disabled");
-                tpl.errorMessage.addClass("js-enabled");
-            }
             let categoryTag = "category-1";
-            for (const category in tpl.links) {
+            const formattedLinks = Object.entries(tpl.links).map(([category, links]) => {
                 const heading = `<h3 id="${category.replace(/\s/g, "-")}">${category}</h3>`;
-                const categoryLinks = [heading];
-                tpl.links[category].forEach(link => {
+                const categoryLinks = links.map(link => {
                     const title = `<span class="link-title"><p class="button-label">${link.title}</p><img src="../assets/icons/external-link.svg" alt="external link icon"></span>`;
                     const href = `href="${link.link}"`;
                     const description = link.description ? `<hr/><p class="button-description">${link.description}</p>` : '';
-                    categoryLinks.push(`<a class="button tpl-link ${categoryTag}" ${href} target="_blank">${title}${description}</a>`);
+                    return `<a class="button tpl-link ${categoryTag}" ${href} target="_blank">${title}${description}</a>`;
                 });
-                formattedLinks.push(categoryLinks.join(''));
+                const html = [heading, ...categoryLinks].join("");
                 categoryTag = categoryTag === "category-1" ? "category-2" : "category-1";
-            }
+                return html;
+            });
             tpl.tplCategories.html(`<ul>${linkCategories.join('')}</ul>`);
             tpl.tplLinks.html(formattedLinks.join('<br/>'));
             $(".link-category a").on("click", function(e) {
@@ -41,25 +39,19 @@ const tpl = {
     },
     init() {
         fetch('../data/links.json')
-            .then(response => response.json())
-            .then(data => {
-                const links = {};
-                for (const object in data) {
-                    links[object] = [];
-                    for (const item in data[object]) {
-                        const link = {
-                            title: item,
-                            description: "",
-                            link: ""
-                        };
-                        Object.assign(link, data[object][item]);
-                        links[object].push(link);
-                    }
-                }
-                tpl.links = links;
-                tpl.functions.linkDisplay();
-            })
-            .catch(error => console.log(error));
+        .then(response => response.json())
+        .then(data => {
+            tpl.links = Object.entries(data).reduce((acc, [category, items]) => {
+                acc[category] = Object.entries(items).map(([title, props]) => ({
+                    title,
+                    description: props.description || "",
+                    link: props.link || ""
+                }));
+                return acc;
+            }, {});
+            tpl.functions.linkDisplay();
+        })
+        .catch(error => console.log(error));
     }
 };
 

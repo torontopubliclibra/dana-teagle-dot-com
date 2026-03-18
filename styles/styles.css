@@ -419,12 +419,10 @@ html.sitemap body main td {
 @keyframes fade-in-error-dark {
   0% {
     opacity: 0;
-    color: #282b2c;
     border: solid #282b2c 5px;
   }
   100% {
     opacity: 1;
-    color: #f3e8e9;
     border: solid #B57E9B 5px;
   }
 }
@@ -2386,7 +2384,7 @@ html.rustprop h1 {
   font-family: "VT323", monospace;
 }
 html.rustprop h1 a {
-  font-size: 11rem;
+  font-size: 9rem;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 a {
@@ -4152,6 +4150,9 @@ body.dark-mode .js-disabled-projects a, body.dark-mode .js-disabled-gallery a, b
 }
 body.dark-mode .js-disabled-projects a:hover, body.dark-mode .js-disabled-gallery a:hover, body.dark-mode .js-disabled a:hover {
   color: #99b1d3;
+}
+body.dark-mode .js-disabled-gallery p, body.dark-mode .js-disabled-gallery a {
+  color: #282b2c !important;
 }
 body.dark-mode .accordion-toggle, body.dark-mode #gallery .pause-button button {
   color: #f3e8e9;

@@ -1,4 +1,3 @@
-
 const rustpropFeed = {
     content: document.querySelector('.img-gallery'),
     navTop: document.querySelector('.rp-nav.top'),
@@ -88,7 +87,7 @@ const rustpropFeed = {
                 rustpropFeed.range.start -= 10;
                 rustpropFeed.range.end -= 10;
                 rustpropFeed.functions.display(rustpropFeed.range.start, rustpropFeed.range.end);
-                const offset = window.innerWidth <= 600 ? 322 : 220;
+                const offset = window.innerWidth <= 600 ? 322 : 180;
                 window.scrollTo({ top: offset, left: 0, behavior: 'smooth' });
             }
         },
@@ -97,7 +96,7 @@ const rustpropFeed = {
                 rustpropFeed.range.start += 10;
                 rustpropFeed.range.end += 10;
                 rustpropFeed.functions.display(rustpropFeed.range.start, rustpropFeed.range.end);
-                const offset = window.innerWidth <= 600 ? 322 : 220;
+                const offset = window.innerWidth <= 600 ? 322 : 180;
                 window.scrollTo({ top: offset, left: 0, behavior: 'smooth' });
             }
         },

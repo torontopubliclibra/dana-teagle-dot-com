@@ -96,12 +96,10 @@
 @keyframes fade-in-error-dark {
     0% {
         opacity: 0;
-        color: $black;
         border: solid $black 5px;
     };
     100% {
         opacity: 1;
-        color: $white;
         border: solid $color2 5px;
     };
 };
@@ -111,7 +109,6 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-// fade-out animation
 @keyframes fade-out {
     0% {
         opacity: 1;

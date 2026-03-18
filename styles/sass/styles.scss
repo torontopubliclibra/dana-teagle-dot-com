@@ -1728,6 +1728,10 @@ body.dark-mode {
         }
     }
 
+    .js-disabled-gallery p, .js-disabled-gallery a {
+        color: $black !important;
+    }
+
     .accordion-toggle, #gallery .pause-button button {
         color: $white;
 

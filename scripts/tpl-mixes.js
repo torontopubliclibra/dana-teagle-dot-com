@@ -11,18 +11,69 @@ const tplMixes = {
     streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: '',
     scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" style="width: 15px; margin-top:3px;margin-right:5px;filter: invert(1);">Back to Top</a></p>`,
+    helpers: {
+        getStreamLink(mix, stream) {
+            if (stream === "apple" && mix.apple) return mix.apple;
+            if (stream === "spotify" && mix.spotify) return mix.spotify;
+            if (stream === "tidal" && mix.tidal) return mix.tidal;
+            return null;
+        },
+        parseFeaturing(features) {
+            if (!Array.isArray(features) || features.length === 0) return '';
+            let parsed = features;
+            if (features.length === 1 && typeof features[0] === 'string' && features[0].includes(',')) {
+                parsed = features[0].split(',').map(f => f.trim());
+            }
+            return `<div class="featuring-bar">${parsed.join(', ')}</div>`;
+        },
+        renderMixDetails(mix, link, featuringBar, numberHtml, titleHtml, disabled) {
+            return `
+                <div class="mix-details-flex">
+                    <div class="mix-image"><img src="${mix.image}" alt="${mix.title} cover art"/></div>
+                    <div class="mix-info">
+                        <p><small>${numberHtml}</small><br/>${titleHtml}</p>
+                        <img src="../assets/icons/external-link.svg" class="icon${disabled ? ' disabled' : ''}" alt="external link icon">
+                    </div>
+                </div>
+                ${featuringBar}
+            `;
+        },
+        renderRangeButtons(ranges, currentIndex, callbackName) {
+            return ranges.map((range, idx) => {
+                if (idx === currentIndex) {
+                    return `<button class="range-selected" disabled>${range.label}</button>`;
+                } else {
+                    return `<button class="range" onclick="tplMixes.functions.${callbackName}(${idx})">${range.label}</button>`;
+                }
+            }).join(' ');
+        },
+        injectStyle(id, css) {
+            if (!document.getElementById(id)) {
+                const style = document.createElement('style');
+                style.id = id;
+                style.innerHTML = css;
+                document.head.appendChild(style);
+            }
+        },
+        scrollAndFocusElement(el, offset) {
+            const rect = el.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            window.scrollTo({
+                top: rect.top + scrollTop - offset,
+                behavior: 'smooth'
+            });
+            setTimeout(() => {
+                el.setAttribute('tabindex', '-1');
+                el.focus({ preventScroll: true });
+            }, 350);
+        }
+    },
     functions: {
         updateQuery(value) {
             tplMixes.query = value;
-            if (value) {
-                $(".range-select").css('display', 'none');
-                $("#scroll-to-top").show();
-                $("#mix-search-clear").show();
-            } else {
-                $(".range-select").css('display', 'flex');
-                $("#scroll-to-top").hide();
-                $("#mix-search-clear").hide();
-            }
+            $(".range-select").css('display', value ? 'none' : 'flex');
+            $("#scroll-to-top").toggle(!!value);
+            $("#mix-search-clear").toggle(!!value);
             tplMixes.functions.mixDisplay();
         },
         artistIndexSearch(artist) {
@@ -37,23 +88,13 @@ const tplMixes = {
             }, 0);
         },
         showIndex() {
-            if (window.location.hash !== '#index') {
-                window.location.hash = 'index';
-            }
+            if (window.location.hash !== '#index') window.location.hash = 'index';
             const artistSet = new Set();
-            if (tplMixes.mixes && tplMixes.mixes.length > 0) {
-                tplMixes.mixes.forEach(mix => {
-                    if (Array.isArray(mix.featuring)) {
-                        mix.featuring.forEach(artist => {
-                            if (typeof artist === 'string' && artist.includes(',')) {
-                                artist.split(',').map(a => a.trim()).forEach(a => artistSet.add(a));
-                            } else {
-                                artistSet.add(artist);
-                            }
-                        });
-                    }
+            tplMixes.mixes.forEach(mix => {
+                tplMixes.helpers.parseFeaturing(mix.featuring).replace(/<div class="featuring-bar">|<\/div>/g, '').split(',').forEach(a => {
+                    if (a.trim()) artistSet.add(a.trim());
                 });
-            }
+            });
             const artists = Array.from(artistSet).filter(Boolean).sort((a, b) => a.localeCompare(b));
             const ranges = [
                 { label: 'A-F', start: 'A', end: 'F' },
@@ -63,53 +104,20 @@ const tplMixes = {
                 { label: '0-9', start: '0', end: '9', isNumber: true },
             ];
             if (typeof tplMixes.artistIndexPage !== 'number') tplMixes.artistIndexPage = 0;
-            function getFirstChar(artist) {
-                return (artist[0] || '').toUpperCase();
-            }
+            const getFirstChar = artist => (artist[0] || '').toUpperCase();
             const currentRange = ranges[tplMixes.artistIndexPage];
             const filteredArtists = artists.filter(artist => {
                 const ch = getFirstChar(artist);
-                if (currentRange.isNumber) {
-                    return ch >= '0' && ch <= '9';
-                } else {
-                    return ch >= currentRange.start && ch <= currentRange.end;
-                }
+                return currentRange.isNumber ? (ch >= '0' && ch <= '9') : (ch >= currentRange.start && ch <= currentRange.end);
             });
-            if (!document.getElementById('artist-index-style')) {
-                const style = document.createElement('style');
-                style.id = 'artist-index-style';
-                style.innerHTML = `
-                    .artist-index {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 0.5em 1.5em;
-                        padding: 0;
-                        margin: 0;
-                        list-style: none;
-                    }
-                    .artist-index li {
-                        flex: 0 1 calc(50% - 1.5em);
-                        box-sizing: border-box;
-                        padding: 2px 0;
-                        color: #f3e8e9;
-                    }
-                    @media screen and (max-width: 600px) {
-                        .artist-index li {
-                            flex-basis: 100%;
-                        }
-                    }
-                `;
-                document.head.appendChild(style);
-            }
+            tplMixes.helpers.injectStyle('artist-index-style', `
+                .artist-index { display: flex; flex-wrap: wrap; gap: 0.5em 1.5em; padding: 0; margin: 0; list-style: none; }
+                .artist-index li { flex: 0 1 calc(50% - 1.5em); box-sizing: border-box; padding: 2px 0; color: #f3e8e9; }
+                @media screen and (max-width: 600px) { .artist-index li { flex-basis: 100%; } }
+            `);
             let html = `<p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p>`;
             html += `<div style="margin-bottom:10px;">`;
-            ranges.forEach((range, idx) => {
-                if (idx === tplMixes.artistIndexPage) {
-                    html += `<button class="range-selected" disabled>${range.label}</button> `;
-                } else {
-                    html += `<button class="range" onclick="tplMixes.functions.showIndexPage(${idx})">${range.label}</button> `;
-                }
-            });
+            html += tplMixes.helpers.renderRangeButtons(ranges, tplMixes.artistIndexPage, 'showIndexPage');
             html += `</div><hr style="margin-top: 15px;"/>`;
             html += `<ul class="artist-index" style="max-width:100%;font-size:1rem;">`;
             filteredArtists.forEach(artist => {
@@ -336,128 +344,43 @@ const tplMixes = {
             return str.replace(regex, match => `<span class="search">${match}</span>`);
         },
         mixDisplay() {
-            if (tplMixes.query === "") {
-                const range = tplMixes.range;
-                const streamSelect = tplMixes.streamSelect;
-                const formattedMixes = [`<hr class="no-top">`, streamSelect];
-                let stream = tplMixes.stream;
-                let maxNum = 198;
-                if (tplMixes.mixes && tplMixes.mixes.length > 0) {
-                    maxNum = Math.max(...tplMixes.mixes.map(m => Number(m.number)));
+            const range = tplMixes.range;
+            const streamSelect = tplMixes.streamSelect;
+            const formattedMixes = [`<hr class="no-top">`, streamSelect];
+            let stream = tplMixes.stream;
+            let maxNum = tplMixes.mixes.length > 0 ? Math.max(...tplMixes.mixes.map(m => Number(m.number))) : 198;
+            const rangeBounds = {
+                "1": [1, 25], "2": [26, 50], "3": [51, 75], "4": [76, 100], "5": [101, 125], "6": [126, 150], "7": [151, 175], "8": [176, maxNum]
+            };
+            const bounds = rangeBounds[range] || [1, 25];
+            const query = tplMixes.query.toLowerCase();
+            const mixesToShow = tplMixes.query === "" ? tplMixes.mixes.filter(object => {
+                const count = Number(object.number);
+                return count >= bounds[0] && count <= bounds[1];
+            }) : tplMixes.mixes.filter(mix => {
+                const titleMatch = mix.title.toLowerCase().includes(query);
+                const numberMatch = mix.number.toString().includes(query);
+                const featuringMatch = Array.isArray(mix.featuring) && mix.featuring.some(artist => artist.toLowerCase().includes(query));
+                return titleMatch || numberMatch || featuringMatch;
+            }).slice().reverse();
+            mixesToShow.forEach(object => {
+                const link = tplMixes.helpers.getStreamLink(object, stream);
+                let featuringBar = tplMixes.query === "" ? tplMixes.helpers.parseFeaturing(object.featuring) : `<div class="featuring-bar">${object.featuring.map(f => tplMixes.functions.highlightMatch(f, query)).join(', ')}</div>`;
+                const numberHtml = tplMixes.query === "" ? `#${object.number} \\` : tplMixes.functions.highlightMatch(`#${object.number}`, query);
+                const titleHtml = tplMixes.query === "" ? object.title : tplMixes.functions.highlightMatch(object.title, query);
+                const disabled = !link;
+                const details = tplMixes.helpers.renderMixDetails(object, link, featuringBar, numberHtml, titleHtml, disabled);
+                if (link) {
+                    formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}</a>`);
+                } else {
+                    formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}</div>`);
                 }
-                const rangeBounds = {
-                    "1": [1, 25],
-                    "2": [26, 50],
-                    "3": [51, 75],
-                    "4": [76, 100],
-                    "5": [101, 125],
-                    "6": [126, 150],
-                    "7": [151, 175],
-                    "8": [176, maxNum]
-                };
-                const bounds = rangeBounds[range] || [1, 25];
-                tplMixes.mixes.forEach(object => {
-                    const count = Number(object.number);
-                    let link = null;
-                    if (stream === "apple" && object.apple) {
-                        link = object.apple;
-                    } else if (stream === "spotify" && object.spotify) {
-                        link = object.spotify;
-                    } else if (stream === "tidal" && object.tidal) {
-                        link = object.tidal;
-                    }
-                    let featuringBar = '';
-                    if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                        let features = object.featuring;
-                        if (features.length === 1 && typeof features[0] === 'string' && features[0].includes(',')) {
-                            features = features[0].split(',').map(f => f.trim());
-                        }
-                        featuringBar = `<div class="featuring-bar">${features.join(', ')}</div>`;
-                    }
-                    if (count >= bounds[0] && count <= bounds[1] && link) {
-                        let details = `
-                            <div class="mix-details-flex">
-                                <div class="mix-image"><img src="${object.image}" alt="rusty mix #${object.number} cover art"/></div>
-                                <div class="mix-info">
-                                    <p><small>#${object.number} &#92;&#92;</small><br/>${object.title}</p>
-                                    <img src="../assets/icons/external-link.svg" class="icon" alt="external link icon">
-                                </div>
-                            </div>
-                        `;
-                        formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`);
-                    } else if (count >= bounds[0] && count <= bounds[1] && !link) {
-                        let details = `
-                            <div class="mix-details-flex">
-                                <div class="mix-image"><img src="${object.image}" alt="${object.title} cover art"/></div>
-                                <div class="mix-info">
-                                    <p><small>#${object.number} &#92;&#92;</small><br/>${object.title}</p>
-                                    <img src="../assets/icons/external-link.svg" class="icon disabled" alt="external link icon">
-                                </div>
-                            </div>
-                        `;
-                        formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`);
-                    }
-                });
-                tplMixes.content.html(formattedMixes.join(''));
-                setTimeout(() => {
-                    window.scrollTo({top: 0, behavior: 'smooth'});
-                }, 100);
-            } else {
-                const query = tplMixes.query.toLowerCase();
-                const streamSelect = tplMixes.streamSelect;
-                const formattedMixes = [`<hr class="no-top">`, streamSelect];
-                let stream = tplMixes.stream;
-                const filteredMixes = tplMixes.mixes.filter(mix => {
-                    const titleMatch = mix.title.toLowerCase().includes(query);
-                    const numberMatch = mix.number.toString().includes(query);
-                    const featuringMatch = Array.isArray(mix.featuring) && mix.featuring.some(artist => artist.toLowerCase().includes(query));
-                    return titleMatch || numberMatch || featuringMatch;
-                });
-                filteredMixes.slice().reverse().forEach(object => {
-                    let link = null;
-                    if (stream === "apple" && object.apple) {
-                        link = object.apple;
-                    } else if (stream === "spotify" && object.spotify) {
-                        link = object.spotify;
-                    } else if (stream === "tidal" && object.tidal) {
-                        link = object.tidal;
-                    }
-                    let featuringBar = '';
-                    if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                        let features = object.featuring.map(f => tplMixes.functions.highlightMatch(f, query));
-                        featuringBar = `<div class="featuring-bar">${features.join(', ')}</div>`;
-                    }
-                    const numberHtml = tplMixes.functions.highlightMatch(`#${object.number}`, query);
-                    const titleHtml = tplMixes.functions.highlightMatch(object.title, query);
-                    if (link) {
-                        let details = `
-                            <div class="mix-details-flex">
-                                <div class="mix-image"><img src="${object.image}" alt="${object.title} cover art"/></div>
-                                <div class="mix-info">
-                                    <p><small>${numberHtml} &#92;</small><br/>${titleHtml}</p>
-                                    <img src="../assets/icons/external-link.svg" class="icon" alt="external link icon">
-                                </div>
-                            </div>
-                        `;
-                        formattedMixes.push(`<a id="${object.number}" href="${link}" target="_blank" class="sub mix mix-flex">${details}${featuringBar}</a>`);
-                    } else {
-                        let details = `
-                            <div class="mix-details-flex">
-                                <div class="mix-image"><img src="${object.image}" alt="${object.title} cover art"/></div>
-                                <div class="mix-info">
-                                    <p><small>${numberHtml} &#92;</small><br/>${titleHtml}</p>
-                                    <img src="../assets/icons/external-link.svg" class="icon disabled" alt="external link icon">
-                                </div>
-                            </div>
-                        `;
-                        formattedMixes.push(`<div id="${object.number}" class="sub mix mix-flex disabled">${details}${featuringBar}</div>`);
-                    }
-                });
-                if (filteredMixes.length === 0) {
-                    formattedMixes.push(`<p>no mixes found matching "${tplMixes.query}"</p>`);
-                }
-                tplMixes.content.html(formattedMixes.join(''));
+            });
+            if (tplMixes.query !== "" && mixesToShow.length === 0) {
+                formattedMixes.push(`<p>no mixes found matching "${tplMixes.query}"</p>`);
             }
+            tplMixes.content.html(formattedMixes.join(''));
+            if (tplMixes.query === "") setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'}); }, 100);
         },
         scrollToHash() {
             const hash = window.location.hash.replace('#', '');
