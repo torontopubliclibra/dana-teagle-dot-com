@@ -42,9 +42,23 @@ const tplLogs = {
                 const count = yearObj[cat.key].length;
                 if (count > 0) {
                     formattedLogs.push(`${idx === 0 ? '<hr class="no-top">' : '<hr>'}<p id="${cat.key}">>> ${cat.label} in ${year} (${count})`);
-                    yearObj[cat.key].forEach(item => {
-                        formattedLogs.push(`<p class="sub">> ${item}</p>`);
-                    });
+                        yearObj[cat.key].forEach(item => {
+                            if (typeof item === 'object' && item !== null) {
+                                let logTitle = item.log || '';
+                                if (item.link) {
+                                    logTitle = `<a href="${item.link}" target="_blank">${logTitle}</a>`;
+                                }
+                                let logStr = logTitle;
+                                if (item.year) {
+                                    logStr += ` (${item.year}`;
+                                    if (item.rewatch) logStr += ', rewatch';
+                                    logStr += ')';
+                                }
+                                formattedLogs.push(`<p class="sub">> ${logStr}</p>`);
+                            } else {
+                                formattedLogs.push(`<p class="sub">> ${item}</p>`);
+                            }
+                        });
                 }
             });
             tplLogs.date.text(year === "2026" ? ` // up to ${tplLogs.updated}` : "");

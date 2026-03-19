@@ -12,7 +12,21 @@ const tplNow = {
     renderList(title, link, items) {
         let html = `<p>>> ${title} (<a href="${link}">see more</a>)</p>`;
         items.forEach(item => {
-            html += `<p class="sub">> ${item}</p>`;
+            let formatted = '';
+            if (typeof item === 'object' && item !== null) {
+                let logTitle = item.log || '';
+                if (item.link) {
+                    logTitle = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${logTitle}</a>`;
+                }
+                let extra = '';
+                if (item.year) extra += ` (${item.year}`;
+                if (item.rewatch) extra += (item.year ? ', rewatch' : 'rewatch');
+                if (item.year) extra += ')';
+                formatted = logTitle + extra;
+            } else {
+                formatted = item;
+            }
+            html += `<p class="sub">> ${formatted}</p>`;
         });
         return html;
     },
