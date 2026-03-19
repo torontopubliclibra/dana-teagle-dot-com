@@ -19,8 +19,8 @@ const tplNow = {
                     const author = item.author || '';
                     const year = item.year || '';
                     let bookStr = `'` + bookTitle + `'`;
-                    if (author) bookStr += ` by ${author}`;
                     if (year) bookStr += ` (${year})`;
+                    if (author) bookStr += ` by ${author}`;
                     if (item.link) {
                         bookStr = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${bookStr}</a>`;
                     }

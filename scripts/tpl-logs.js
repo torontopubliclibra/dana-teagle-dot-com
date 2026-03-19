@@ -52,7 +52,7 @@ const tplLogs = {
                                     }
                                     let author = item.author ? ` by ${item.author}` : '';
                                     let year = item.year ? ` (${item.year})` : '';
-                                    logStr = `${title}${author}${year}`;
+                                    logStr = `${title}${year}${author}`;
                                 } else {
                                     let logTitle = `'` + item.log + `'` || '';
                                     if (item.link) {
