@@ -44,15 +44,26 @@ const tplLogs = {
                     formattedLogs.push(`${idx === 0 ? '<hr class="no-top">' : '<hr>'}<p id="${cat.key}">>> ${cat.label} in ${year} (${count})`);
                         yearObj[cat.key].forEach(item => {
                             if (typeof item === 'object' && item !== null) {
-                                let logTitle = item.log || '';
-                                if (item.link) {
-                                    logTitle = `<a href="${item.link}" target="_blank">${logTitle}</a>`;
-                                }
-                                let logStr = logTitle;
-                                if (item.year) {
-                                    logStr += ` (${item.year}`;
-                                    if (item.rewatch) logStr += ', rewatch';
-                                    logStr += ')';
+                                let logStr = '';
+                                if (cat.key === 'books') {
+                                    let title = `'` + item.log + `'` || '';
+                                    if (item.link) {
+                                        title = `<a href="${item.link}" target="_blank">${title}</a>`;
+                                    }
+                                    let author = item.author ? ` by ${item.author}` : '';
+                                    let year = item.year ? ` (${item.year})` : '';
+                                    logStr = `${title}${author}${year}`;
+                                } else {
+                                    let logTitle = `'` + item.log + `'` || '';
+                                    if (item.link) {
+                                        logTitle = `'` + `<a href="${item.link}" target="_blank">${item.log}</a>` + `'`;
+                                    }
+                                    logStr = logTitle;
+                                    if (item.year) {
+                                        logStr += ` (${item.year}`;
+                                        if (item.rewatch) logStr += ', rewatch';
+                                        logStr += ')';
+                                    }
                                 }
                                 formattedLogs.push(`<p class="sub">> ${logStr}</p>`);
                             } else {

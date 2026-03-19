@@ -14,15 +14,28 @@ const tplNow = {
         items.forEach(item => {
             let formatted = '';
             if (typeof item === 'object' && item !== null) {
-                let logTitle = item.log || '';
-                if (item.link) {
-                    logTitle = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${logTitle}</a>`;
+                if (title.toLowerCase().includes('book')) {
+                    const bookTitle = item.log || '';
+                    const author = item.author || '';
+                    const year = item.year || '';
+                    let bookStr = `'` + bookTitle + `'`;
+                    if (author) bookStr += ` by ${author}`;
+                    if (year) bookStr += ` (${year})`;
+                    if (item.link) {
+                        bookStr = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${bookStr}</a>`;
+                    }
+                    formatted = bookStr;
+                } else {
+                    let logTitle = `'` + item.log + `'` || '';
+                    if (item.link) {
+                        logTitle = `'` + `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.log}</a>` + `'`;
+                    }
+                    let extra = '';
+                    if (item.year) extra += ` (${item.year}`;
+                    if (item.rewatch) extra += (item.year ? ', rewatch' : 'rewatch');
+                    if (item.year) extra += ')';
+                    formatted = logTitle + extra;
                 }
-                let extra = '';
-                if (item.year) extra += ` (${item.year}`;
-                if (item.rewatch) extra += (item.year ? ', rewatch' : 'rewatch');
-                if (item.year) extra += ')';
-                formatted = logTitle + extra;
             } else {
                 formatted = item;
             }

@@ -67,9 +67,9 @@
             {"log": "fraggle rock", "season": "1", "year": "1983", "rewatch": false}
         ],
         "books": [
-            {"log": "good girl", "author": "anna fitzpatrick", "year": null, "reread": false},
-            {"log": "perverts", "author": "kay gabriel", "year": null, "reread": false},
-            {"log": "the employees", "author": "olga ravn", "year": null, "reread": false},
+            {"log": "good girl", "author": "anna fitzpatrick", "year": "2022", "reread": false},
+            {"log": "perverts", "author": "kay gabriel", "year": "2025", "reread": false},
+            {"log": "the employees", "author": "olga ravn", "year": "2020", "reread": false},
             {"log": "lao tzu's tao te ching", "author": "ursula k. le guin", "year": "1997", "reread": false},
             {"log": "on the calculation of volume II", "author": "solvej balle", "year": "2020", "reread": false},
             {"log": "the self-esteem class: simple lesssons for a lifetime of contentment", "author": "yoon hong gyun", "year": "2025", "reread": false},
