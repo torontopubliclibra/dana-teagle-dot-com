@@ -25,6 +25,24 @@ const tplNow = {
                         bookStr = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${bookStr}</a>`;
                     }
                     formatted = bookStr;
+                } else if (title.toLowerCase().includes('tv')) {
+                    let logTitle = `'` + item.log + `'` || '';
+                    if (item.link) {
+                        logTitle = `'` + `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.log}</a>` + `'`;
+                    }
+                    let seasonStr = '';
+                    if (item.season) {
+                        if (typeof item.season === 'string' && item.season.includes('-')) {
+                            seasonStr = ` seasons ${item.season}`;
+                        } else {
+                            seasonStr = ` season ${item.season}`;
+                        }
+                    }
+                    let extra = '';
+                    if (item.year) extra += ` (${item.year}`;
+                    if (item.rewatch) extra += (item.year ? ', rewatch' : 'rewatch');
+                    if (item.year) extra += ')';
+                    formatted = logTitle + seasonStr + extra;
                 } else {
                     let logTitle = `'` + item.log + `'` || '';
                     if (item.link) {

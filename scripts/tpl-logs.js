@@ -58,7 +58,16 @@ const tplLogs = {
                                     if (item.link) {
                                         logTitle = `'` + `<a href="${item.link}" target="_blank">${item.log}</a>` + `'`;
                                     }
-                                    logStr = logTitle;
+                                    // Add season info for TV logs
+                                    let seasonStr = '';
+                                    if (cat.key === 'tv' && item.season) {
+                                        if (typeof item.season === 'string' && item.season.includes('-')) {
+                                            seasonStr = ` seasons ${item.season}`;
+                                        } else {
+                                            seasonStr = ` season ${item.season}`;
+                                        }
+                                    }
+                                    logStr = logTitle + seasonStr;
                                     if (item.year) {
                                         logStr += ` (${item.year}`;
                                         if (item.rewatch) logStr += ', rewatch';
