@@ -1,6 +1,8 @@
 {
     "2026": {
         "movies": [
+            {"log": "Klute", "year": "1971", "rewatch": false, "link": "https://letterboxd.com/film/klute/"},
+            {"log": "Women on the Verge of a Nervous Breakdown", "year": "1988", "rewatch": false, "link": "https://letterboxd.com/film/women-on-the-verge-of-a-nervous-breakdown/"},
             {"log": "Idiotka", "year": "2025", "rewatch": false, "link": "https://letterboxd.com/film/idiotka-2025/"},
             {"log": "In the Name of the Father", "year": "1993", "rewatch": false, "link": "https://letterboxd.com/film/in-the-name-of-the-father-1993/"},
             {"log": "Discipline", "year": "2026", "rewatch": false, "link": "https://letterboxd.com/film/discipline-2026/"},
