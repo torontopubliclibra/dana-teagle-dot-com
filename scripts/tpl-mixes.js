@@ -96,19 +96,14 @@ const tplMixes = {
                 });
             });
             const artists = Array.from(artistSet).filter(Boolean).sort((a, b) => a.localeCompare(b));
-            const ranges = [
-                { label: 'A-F', start: 'A', end: 'F' },
-                { label: 'G-L', start: 'G', end: 'L' },
-                { label: 'M-R', start: 'M', end: 'R' },
-                { label: 'S-Z', start: 'S', end: 'Z' },
-                { label: '0-9', start: '0', end: '9', isNumber: true },
-            ];
+            const ranges = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(ch => ({ label: `/` + ch, char: ch }));
+            ranges.push({ label: '/#', char: '#' });
             if (typeof tplMixes.artistIndexPage !== 'number') tplMixes.artistIndexPage = 0;
             const getFirstChar = artist => (artist[0] || '').toUpperCase();
             const currentRange = ranges[tplMixes.artistIndexPage];
             const filteredArtists = artists.filter(artist => {
                 const ch = getFirstChar(artist);
-                return currentRange.isNumber ? (ch >= '0' && ch <= '9') : (ch >= currentRange.start && ch <= currentRange.end);
+                return currentRange.char === '#' ? (ch >= '0' && ch <= '9') : (ch === currentRange.char);
             });
             tplMixes.helpers.injectStyle('artist-index-style', `
                 .artist-index { display: flex; flex-wrap: wrap; gap: 0.5em 1.5em; padding: 0; margin: 0; list-style: none; }
@@ -116,7 +111,7 @@ const tplMixes = {
                 @media screen and (max-width: 600px) { .artist-index li { flex-basis: 100%; } }
             `);
             let html = `<p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p>`;
-            html += `<div style="margin-bottom:10px;">`;
+            html += `<div style="margin-bottom:10px;display:flex;gap:0.5rem;">`;
             html += tplMixes.helpers.renderRangeButtons(ranges, tplMixes.artistIndexPage, 'showIndexPage');
             html += `</div><hr style="margin-top: 15px;"/>`;
             html += `<ul class="artist-index" style="max-width:100%;font-size:1rem;">`;
@@ -130,7 +125,7 @@ const tplMixes = {
             tplMixes.nav.html("");
             tplMixes.content.html(html);
             $("#scroll-to-top").show();
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            setTimeout(() => { window.scrollTo({top: 0, behavior: 'smooth'}); }, 100);
         },
         showIndexPage(page) {
             tplMixes.artistIndexPage = page;
