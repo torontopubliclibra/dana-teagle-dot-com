@@ -8,8 +8,9 @@
             "writer": ["Justin Kuritzkes"],
             "poster": "/rcc/challengers.png",
             "link": "https://letterboxd.com/film/challengers/",
-            "country": "American",
+            "country": ["American"],
             "languages": ["English"],
+            "cast": ["Zendaya", "Josh O'Connor", "Mike Faist", "Darnell Appling", "Hailey Gates"],
             "runtime": 131
         },
         {
@@ -20,8 +21,9 @@
             "writer": ["Brian Peterson"],
             "poster": "/rcc/cheerleader.png",
             "link": "https://letterboxd.com/film/but-im-a-cheerleader/",
-            "country": "American",
+            "country": ["American"],
             "languages": ["English"],
+            "cast": ["Natasha Lyonne", "Clea DuVall", "RuPaul", "Eddie Cibrian", "Cathy Moriarty", "Mink Stole", "Bud Cort", "Melanie Lynskey", "Joel Michaely", "Kip Perdue", "Dante Basco", "Michelle Williams", "Julie Delpy"],
             "runtime": 85,
             "series": "Yearning on Film #1"
         },
@@ -33,8 +35,9 @@
             "writer": ["Hume Cronyn", "Arthur Laurents", "Patrick Hamilton"],
             "poster": "/rcc/rope.png",
             "link": "https://letterboxd.com/film/rope/",
-            "country": "American",
+            "country": ["American", "Canadian"],
             "languages": ["English"],
+            "cast": ["James Stewart", "John Dall", "Farley Granger", "Constance Collier", "Joan Chandler", "Douglas Dick", "Cedric Hardwicke", "Edith Evanson", "Dick Hogan"],
             "runtime": 81
         },
         {
@@ -45,8 +48,9 @@
             "writer": ["Harvey Fierstein"],
             "poster": "/rcc/torchsongtrilogy.png",
             "link": "https://letterboxd.com/film/torch-song-trilogy/",
-            "country": "American",
+            "country": ["American"],
             "languages": ["English"],
+            "cast": ["Harvey Fierstein", "Anne Bancroft", "Matthew Broderick", "Brian Kerwin", "Karen Young", "Eddie Castrodad", "Ken Page", "Charles Pierce", "Axel Vera", "Robert Lee Minor"],
             "runtime": 120
         },
         {
@@ -57,14 +61,16 @@
             "writer": ["Alice Wu"],
             "poster": "/rcc/savingface.png",
             "link": "https://letterboxd.com/film/saving-face/",
-            "country": "American",
+            "country": ["American"],
             "languages": ["English", "Mandarin", "Shanghainese" ],
+            "cast": ["Michelle Krusiec", "Joan Chen", "Lynn Chen", "Jin Wang", "Guang Lan Koh", "Jessica Hecht", "Ato Essandoh", "Wang Luoyong", "David Shih", "Brian Yang", "Nathaniel Geng", "Mao Zhao"],
             "runtime": 91,
             "series": "Yearning on Film #2"
         },
         {
             "date": "28-05-2026",
-            "title": "TBD"
+            "title": "TBD",
+            "nominees": ["All About Eve", "American Psycho", "Enemy"]
         },
         {
             "date": "25-06-2026",
@@ -78,8 +84,9 @@
             "writer": ["Natalie Cooper", "Jane Rule"],
             "poster": "/rcc/deserthearts.png",
             "link": "https://letterboxd.com/film/desert-hearts/",
-            "country": "American",
+            "country": ["American"],
             "languages": ["English"],
+            "cast": ["Helen Shaver", "Patricia Charbonneau", "Audra Lindley", "Andra Akers", "Gwen Welles", "Dean Butler", "James Staley", "Katie La Bourdette", "Alex McArthur", "Tyler Tyhurst", "Denise Crosby", "Antony Ponzini"],
             "runtime": 96,
             "series": "Yearning on Film #3"
         },
@@ -95,8 +102,9 @@
             "writer": ["David Lynch", "Barry Gifford"],
             "poster": "/rcc/losthighway.png",
             "link": "https://letterboxd.com/film/lost-highway/",
-            "country": "American",
+            "country": ["American", "French"],
             "languages": ["English"],
+            "cast": ["Bill Pullman", "Patricia Arquette", "Balthazar Getty", "Robert Blake", "Robert Loggia", "Richard Pryor", "Gary Busey", "Henry Rollins", "Jack Nance", "Mink Stole", "Lisa Boyle", "Natasha Gregson Wagner", "Marilyn Manson", "Scott Coffey", "Giovanni Ribisi", "Jack Kehler", "Michael Shamus Wiles"],
             "runtime": 134
         },
         {
@@ -111,8 +119,9 @@
             "writer": ["Dee Rees"],
             "poster": "/rcc/pariah.png",
             "link": "https://letterboxd.com/film/pariah/",
-            "country": "American",
+            "country": ["American"],
             "languages": ["English"],
+            "cast": ["Adepero Oduye", "Aasha Davis", "Charles Parnell", "Kim Wayans", "Pernell Walker", "Sahra Mellesse"],
             "runtime": 86,
             "series": "Yearning on Film #4"
         },

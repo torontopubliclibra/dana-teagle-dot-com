@@ -1,6 +1,8 @@
 {
     "2026": {
         "movies": [
+            {"log": "Diary of Mad Housewife", "year": "1970", "rewatch": false, "link": "https://letterboxd.com/film/diary-of-a-mad-housewife/"},
+            {"log": "Torch Song Trilogy", "year": "1988", "rewatch": true, "link": "https://letterboxd.com/film/torch-song-trilogy/"},
             {"log": "Thunderbolts* [New Avengers]", "year": "2025", "rewatch": true, "link": "https://letterboxd.com/film/thunderbolts/"},
             {"log": "Klute", "year": "1971", "rewatch": false, "link": "https://letterboxd.com/film/klute/"},
             {"log": "Women on the Verge of a Nervous Breakdown", "year": "1988", "rewatch": false, "link": "https://letterboxd.com/film/women-on-the-verge-of-a-nervous-breakdown/"},
@@ -57,9 +59,11 @@
             {"log": "Spencer", "year": "2021", "rewatch": true, "link": "https://letterboxd.com/film/spencer-2021/"}
         ],
         "tv": [
+            {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false},
             {"log": "firefly", "season": "1", "year": "2002", "rewatch": true},
             {"log": "rooster", "year": "2026", "rewatch": false},
-            {"log": "bob's burgers", "season": "10-15", "year": "2019-2025", "rewatch": true},
+            {"log": "stath lets flats", "season": "3", "year": "2021", "rewatch": false},
+            {"log": "bob's burgers", "season": "10-16", "year": "2019-2025", "rewatch": true},
             {"log": "columbo", "season": "1", "year": "1972", "rewatch": false},
             {"log": "stath lets flats", "season": "2", "year": "2019", "rewatch": true},
             {"log": "love story: john f. kennedy jr. & carolyn bessette", "year": "2026", "rewatch": false},
@@ -72,7 +76,6 @@
             {"log": "wonder man", "year": "2026", "rewatch": false},
             {"log": "the traitors u.s.", "season": "4", "year": "2026", "rewatch": false},
             {"log": "a knight of the seven kingdoms", "season": "1", "year": "2026", "rewatch": false},
-            {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false},
             {"log": "the traitors u.k.", "season": "4", "year": "2026", "rewatch": false},
             {"log": "dept q.", "season": "1", "year": "2025", "rewatch": false},
             {"log": "fraggle rock", "season": "1", "year": "1983", "rewatch": false}

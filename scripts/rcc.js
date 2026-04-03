@@ -39,14 +39,17 @@ fetch('../data/rcc.json')
         film.writer.length === 1 &&
         film.writer[0] === film.director
       ) {
-        infoText += `Written and Directed by ${film.director}<br/>`;
+        infoText += `<hr/>Written and Directed by: ${film.director}<br/>`;
       } else {
-        if (film.director) infoText += `Directed by ${film.director}<br/>`;
+        if (film.director) infoText += `<hr/>Directed by: ${film.director}<br/>`;
         if (Array.isArray(film.writer) && film.writer.length > 0) {
-          infoText += `Written by ${film.writer.join(', ')}<br/>`;
+          infoText += `Written by: ${film.writer.join(', ')}<br/>`;
         }
       }
-      if (film.runtime) infoText += `${film.runtime} mins | ${film.languages ? film.languages.join(', ') : ''}<br/>`;
+      if (Array.isArray(film.cast) && film.cast.length > 0) {
+        infoText += `Starring: ${film.cast.join(', ')}<br/>`;
+      }
+      if (film.runtime) infoText += `<hr/>${film.runtime} mins | ${film.languages ? film.languages.join(', ') : ''}<br/>`;
       return infoText;
     };
     const createPosterSection = film => {
@@ -131,7 +134,6 @@ fetch('../data/rcc.json')
       Object.assign(ul.style, {
         listStyle: 'none',
         padding: '0',
-        marginBottom: '10px',
         fontSize: '0.9rem'
       });
       Object.keys(items).sort().forEach(key => {
@@ -148,15 +150,51 @@ fetch('../data/rcc.json')
       return acc;
     }, {});
     createStatList(countBy(data.rcc, film => film.year ? Math.floor(film.year / 10) * 10 : null), 'Decades', (decade, count) => `${decade}s movie(s): ${count}`);
-    createStatList(countBy(data.rcc, film => film.country), 'Countries', (country, count) => `${country} movie(s): ${count}`);
+    createStatList(
+      data.rcc.reduce((acc, film) => {
+        if (film.country) film.country.forEach(c => acc[c] = (acc[c] || 0) + 1);
+        return acc;
+      }, {}),
+      '<hr/>Countries',
+      (country, count) => `${country} produced movie(s): ${count}`
+    );
     createStatList(
       data.rcc.reduce((acc, film) => {
         if (film.languages) film.languages.forEach(lang => acc[lang] = (acc[lang] || 0) + 1);
         return acc;
       }, {}),
-      'Languages',
+      '<hr/>Languages',
       (lang, count) => `${lang} language movie(s): ${count}`
     );
+    const castAppearances = {};
+    data.rcc.forEach(film => {
+      if (Array.isArray(film.cast)) {
+        film.cast.forEach(actor => {
+          if (!castAppearances[actor]) castAppearances[actor] = [];
+          castAppearances[actor].push(film.title);
+        });
+      }
+    });
+    const repeatPerformers = Object.entries(castAppearances)
+      .filter(([, movies]) => movies.length > 1)
+      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+    if (repeatPerformers.length > 0) {
+      const rpHeader = document.createElement('li');
+      rpHeader.innerHTML = '<hr/><strong>Repeat Performers //</strong>';
+      const rpUl = document.createElement('ul');
+      Object.assign(rpUl.style, {
+        listStyle: 'none',
+        padding: '0',
+        fontSize: '0.9rem'
+      });
+      repeatPerformers.forEach(([actor, movies]) => {
+        const li = document.createElement('li');
+        li.textContent = `${actor}: ${movies.length} appearances (${movies.join(', ')})`;
+        rpUl.appendChild(li);
+      });
+      statsList.appendChild(rpHeader);
+      statsList.appendChild(rpUl);
+    }
     const totalFilms = data.rcc.length;
     const directorsList = [...new Set(data.rcc.map(film => film.director).filter(Boolean))].sort();
     const writersList = [...new Set(
@@ -167,7 +205,6 @@ fetch('../data/rcc.json')
     Object.assign(totalsUl.style, {
       listStyle: 'none',
       padding: '0',
-      marginBottom: '10px',
       fontSize: '0.9rem'
     });
     [
@@ -181,7 +218,7 @@ fetch('../data/rcc.json')
       totalsUl.appendChild(li);
     });
     const totalsHeader = document.createElement('li');
-    totalsHeader.innerHTML = '<strong>Totals //</strong>';
+    totalsHeader.innerHTML = '<hr/><strong>Totals //</strong>';
     statsList.appendChild(totalsHeader);
     statsList.appendChild(totalsUl);
     container.parentNode.insertBefore(statsList, container.nextSibling);
