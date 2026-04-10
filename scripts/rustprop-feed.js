@@ -54,7 +54,7 @@ const rustpropFeed = {
                     const dateLabel = Array.isArray(item.date) ? item.date[0] : item.date;
                     links.push(`<a href="#${item.id}" class="permalink-link">${dateLabel}</a>`);
                 }
-                if (item.links.instagram) links.push(`<a href='${item.links.instagram}' target='_blank'>Instagram</a>`);
+                // if (item.links.instagram) links.push(`<a href='${item.links.instagram}' target='_blank'>Instagram</a>`);
                 if (item.links.print) links.push(`<a href='${item.links.print}' target='_blank'>Print</a>`);
                 const linksHtml = links.length ? `[ ${links.join(' | ')} ]` : '';
                 return `

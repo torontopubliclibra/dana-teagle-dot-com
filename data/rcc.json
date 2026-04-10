@@ -69,8 +69,16 @@
         },
         {
             "date": "28-05-2026",
-            "title": "TBD",
-            "nominees": ["All About Eve", "American Psycho", "Enemy"]
+            "title": "American Psycho",
+            "year": 2000,
+            "director": "Mary Harron",
+            "writer": ["Guinevere Turner", "Mary Harron", "Bret Easton Ellis"],
+            "poster": "/rcc/americanpsycho.png",
+            "link": "https://letterboxd.com/film/american-psycho/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Christian Bale", "Justin Theroux", "Josh Lucas", "Bill Sage", "Jared Leto", "Reese Witherspoon", "Samantha Mathis", "Willem Dafoe", "Chloë Sevigny", "Matt Ross", "Guinevere Turner", "Cara Seymour"],
+            "runtime": 102
         },
         {
             "date": "25-06-2026",

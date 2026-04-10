@@ -41,10 +41,6 @@
         "Instagram (II)": {
             "link": "/dt-insta",
             "description": "@danateagledotcom"
-        },
-        "Instagram (III)": {
-            "link": "/rp-insta",
-            "description": "@rustprop"
         }
     },
     "mutual aid": {
@@ -66,10 +62,6 @@
         }
     },
     "contact & pay": {
-        "RUSTPROP Ko-fi": {
-            "link": "/kofi",
-            "description": "Support my agitprop design project"
-        },
         "PayPal": {
             "link": "/paypal",
             "description": "Send payments via PayPal"
