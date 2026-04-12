@@ -1,6 +1,11 @@
 {
     "2026": {
         "movies": [
+            {"log": "Kiki's Delivery Service", "year": "1989", "rewatch": true, "link": "https://letterboxd.com/film/kikis-delivery-service/"},
+            {"log": "Clueless", "year": "1995", "rewatch": true, "link": "https://letterboxd.com/film/clueless/"},
+            {"log": "The Music Man", "year": "1962", "rewatch": false, "link": "https://letterboxd.com/film/the-music-man/"},
+            {"log": "Party Girl", "year": "1995", "rewatch": false, "link": "https://letterboxd.com/film/party-girl/"},
+            {"log": "Jesus Christ Superstar", "year": "1973", "rewatch": true, "link": "https://letterboxd.com/film/jesus-christ-superstar/"},
             {"log": "Diary of Mad Housewife", "year": "1970", "rewatch": false, "link": "https://letterboxd.com/film/diary-of-a-mad-housewife/"},
             {"log": "Torch Song Trilogy", "year": "1988", "rewatch": true, "link": "https://letterboxd.com/film/torch-song-trilogy/"},
             {"log": "Thunderbolts* [New Avengers]", "year": "2025", "rewatch": true, "link": "https://letterboxd.com/film/thunderbolts/"},
@@ -59,12 +64,15 @@
             {"log": "Spencer", "year": "2021", "rewatch": true, "link": "https://letterboxd.com/film/spencer-2021/"}
         ],
         "tv": [
+            {"log": "taskmaster", "season": "21", "year": "2026", "rewatch": false},
+            {"log": "daria", "season": "1", "year": "1997", "rewatch": true},
             {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false},
+            {"log": "columbo", "season": "1", "year": "1972", "rewatch": false},
+            {"log": "last one laughing uk", "season": "2", "year": "2026", "rewatch": false},
             {"log": "firefly", "season": "1", "year": "2002", "rewatch": true},
             {"log": "rooster", "year": "2026", "rewatch": false},
             {"log": "stath lets flats", "season": "3", "year": "2021", "rewatch": false},
             {"log": "bob's burgers", "season": "10-16", "year": "2019-2025", "rewatch": true},
-            {"log": "columbo", "season": "1", "year": "1972", "rewatch": false},
             {"log": "stath lets flats", "season": "2", "year": "2019", "rewatch": true},
             {"log": "love story: john f. kennedy jr. & carolyn bessette", "year": "2026", "rewatch": false},
             {"log": "stath lets flats", "season": "1", "year": "2018", "rewatch": true},
