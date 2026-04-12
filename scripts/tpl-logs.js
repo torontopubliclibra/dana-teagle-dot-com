@@ -46,9 +46,11 @@ const tplLogs = {
                             if (typeof item === 'object' && item !== null) {
                                 let logStr = '';
                                 if (cat.key === 'books') {
-                                    let title = `'` + item.log + `'` || '';
+                                    let title = item.log || '';
                                     if (item.link) {
-                                        title = `<a href="${item.link}" target="_blank">${title}</a>`;
+                                        title = `'` + `<a href="${item.link}" target="_blank">${title}</a>` + `'`;
+                                    } else {
+                                        title = `'` + title + `'`;
                                     }
                                     let author = item.author ? ` by ${item.author}` : '';
                                     let year = item.year ? ` (${item.year})` : '';
@@ -58,7 +60,6 @@ const tplLogs = {
                                     if (item.link) {
                                         logTitle = `'` + `<a href="${item.link}" target="_blank">${item.log}</a>` + `'`;
                                     }
-                                    // Add season info for TV logs
                                     let seasonStr = '';
                                     if (cat.key === 'tv' && item.season) {
                                         if (typeof item.season === 'string' && item.season.includes('-')) {
