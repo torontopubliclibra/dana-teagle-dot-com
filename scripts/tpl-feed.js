@@ -53,7 +53,7 @@ const tplFeed = {
             const mailto = `mailto:torontopubliclibra@gmail.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
             const dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
             let mediaTag = item.type === 'video'
-                ? `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}" style="max-width:100%;height:auto;border: solid 3px rgba(243, 232, 233, 0.5); border-bottom: none;">
+                ? `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}">
                         <source src="${item.url}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>`
@@ -69,13 +69,13 @@ const tplFeed = {
                 ? `<button class="range" onclick="tplFeed.functions.${fn}()">${text}</button>`
                 : `<span class="year-selected">${text}</span>`;
             tplFeed.toggle.html(`
-                <p style="display: flex; align-items: center; justify-content: space-between;">
+                <p class="feed-toggle-nav">
                     <span>
                         ${navBtn(start > 0, '<< newer', 'newer')} | ${navBtn(end < tplFeed.items.length, 'older >>', 'older')}
                     </span>
-                    <span style="border-bottom: solid white 0.75px;margin-bottom: 5px;">
-                        <a href="/tpl/rss.xml" target="_blank" style="margin-left:auto;margin-bottom: -3px; display: flex; align-items: center; text-decoration:none;gap: 8px; color: #f3e8e9; font-size: 1rem;" title="RSS Feed">RSS
-                        <img src="../../assets/icons/rss.svg" style="width:15px;filter: invert(1);" alt="RSS icon"></a>
+                    <span class="feed-rss-link-wrapper">
+                        <a href="/tpl/rss.xml" target="_blank" class="feed-rss-link" title="RSS Feed">RSS
+                        <img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon"></a>
                     </span>
                 </p>
             `);

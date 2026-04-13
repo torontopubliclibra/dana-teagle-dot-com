@@ -3,7 +3,6 @@ fetch('../data/rcc.json')
   .then(data => {
     const container = document.querySelector('.horizontal-scroll-container');
     if (!container || !data.rcc) return;
-    container.style.marginBottom = '90px';
     container.innerHTML = '';
     const monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const monthsLong = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -20,18 +19,18 @@ fetch('../data/rcc.json')
       let infoText = '';
       if (opts.short) {
         if (film.director) infoText += `${film.director}'s `;
-        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.75rem;">${film.title}</a> (${film.year}) on ${formatDate(film.date)} //`;
+        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" class="rcc-link">${film.title}</a> (${film.year}) on ${formatDate(film.date)} //`;
         return infoText;
       }
       infoText += `<strong>${formatDate(film.date, true)} //</strong><br/>`;
-      if (film.series) infoText += `<em style="font-size: 0.9rem;">${film.series}:</em><br/>`;
+      if (film.series) infoText += `<em class="rcc-series-title">${film.series}:</em><br/>`;
       if (film.title === 'TBD') {
         infoText += `TBD<br/>`;
         if (Array.isArray(film.nominees) && film.nominees.length > 0) {
-          infoText += `<span style="font-size:0.85em; color:#b7b7b7;">Nominees: ${film.nominees.join(', ')}</span><br/>`;
+          infoText += `<span class="rcc-nominees">Nominees: ${film.nominees.join(', ')}</span><br/>`;
         }
       } else {
-        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" style="color: #c0c5d2; text-decoration: underline;font-size:0.9rem;">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
+        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" class="rcc-link--full">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
       }
       if (
         film.director &&
@@ -56,8 +55,7 @@ fetch('../data/rcc.json')
       if (film.title === 'TBD') return null;
       const section = document.createElement('section');
       const infoBar = document.createElement('div');
-      infoBar.className = 'rcc-info-bar';
-      infoBar.style = 'color: #c0c5d2; padding: 6px 10px; font-size: 0.75rem; font-family: inherit;width:100%;height:32px;box-sizing:border-box;';
+      infoBar.className = 'rcc-info-bar rcc-info-bar--short';
       infoBar.innerHTML = getInfoBarHTML(film, { short: true });
       section.appendChild(infoBar);
       const img = document.createElement('img');
@@ -69,28 +67,16 @@ fetch('../data/rcc.json')
     };
     const createListItem = film => {
       const li = document.createElement('li');
-      Object.assign(li.style, {
-        display: 'flex',
-        flexDirection: 'row'
-      });
+      li.className = 'rcc-list-item';
       const infoBar = document.createElement('div');
-      infoBar.className = 'rcc-info-bar';
-      infoBar.style = 'color: #c0c5d2; padding: 20px; font-size: 0.9rem; font-family: inherit; background: #222; width: 100%; box-sizing: border-box;';
+      infoBar.className = 'rcc-info-bar rcc-info-bar--full';
       infoBar.innerHTML = getInfoBarHTML(film);
-      if (film.series) infoBar.style.background = 'rgba(41, 37, 41, 1)';
+      if (film.series) infoBar.classList.add('rcc-info-bar--series');
       li.appendChild(infoBar);
       const img = document.createElement('img');
       img.src = (film.title === 'TBD') ? 'blank.png' : film.poster;
       img.alt = `'${film.title}' (${film.year}) poster`;
-      img.className = 'poster';
-      Object.assign(img.style, {
-        display: 'block',
-        width: '250px',
-        maxWidth: '25%',
-        height: 'auto',
-        padding: '0',
-        background: film.series ? 'rgba(41, 37, 41, 1)' : 'rgb(34, 34, 34)'
-      });
+      img.className = `poster rcc-list-poster${film.series ? ' rcc-list-poster--series' : ''}`;
       li.appendChild(img);
       return li;
     };
@@ -99,15 +85,7 @@ fetch('../data/rcc.json')
       if (section) container.appendChild(section);
     });
     const list = document.createElement('ul');
-    Object.assign(list.style, {
-      listStyle: 'none',
-      padding: '0',
-      display: 'none',
-      flexDirection: 'column',
-      marginBottom: '0',
-      gap: '15px',
-      paddingBottom: '90px'
-    });
+    list.className = 'rcc-list';
     data.rcc.forEach(film => {
       list.appendChild(createListItem(film));
     });
@@ -116,26 +94,12 @@ fetch('../data/rcc.json')
     const postersBtn = document.getElementById('rcc-posters-btn');
     const statsBtn = document.getElementById('rcc-stats-btn');
     const statsList = document.createElement('ul');
-    Object.assign(statsList.style, {
-      listStyle: 'none',
-      padding: '0',
-      display: 'none',
-      flexDirection: 'column',
-      marginBottom: '0',
-      gap: '5px',
-      background: 'rgb(34, 34, 34)',
-      paddingBottom: '90px',
-      padding: '20px'
-    });
+    statsList.className = 'rcc-stats-list';
     const createStatList = (items, label, formatter) => {
       const header = document.createElement('li');
       header.innerHTML = `<strong>${label} //</strong>`;
       const ul = document.createElement('ul');
-      Object.assign(ul.style, {
-        listStyle: 'none',
-        padding: '0',
-        fontSize: '0.9rem'
-      });
+      ul.className = 'rcc-stat-sublist';
       Object.keys(items).sort().forEach(key => {
         const li = document.createElement('li');
         li.textContent = formatter ? formatter(key, items[key]) : `${key}: ${items[key]}`;
@@ -182,11 +146,7 @@ fetch('../data/rcc.json')
       const rpHeader = document.createElement('li');
       rpHeader.innerHTML = '<hr/><strong>Repeat Performers //</strong>';
       const rpUl = document.createElement('ul');
-      Object.assign(rpUl.style, {
-        listStyle: 'none',
-        padding: '0',
-        fontSize: '0.9rem'
-      });
+      rpUl.className = 'rcc-stat-sublist';
       repeatPerformers.forEach(([actor, movies]) => {
         const li = document.createElement('li');
         li.textContent = `${actor}: ${movies.length} appearances (${movies.join(', ')})`;
@@ -202,11 +162,7 @@ fetch('../data/rcc.json')
     )].sort();
     const totalRuntime = data.rcc.reduce((sum, film) => sum + (film.runtime || 0), 0);
     const totalsUl = document.createElement('ul');
-    Object.assign(totalsUl.style, {
-      listStyle: 'none',
-      padding: '0',
-      fontSize: '0.9rem'
-    });
+    totalsUl.className = 'rcc-stat-sublist';
     [
       `Directors: ${directorsList.join(', ')}`,
       `Writers: ${writersList.join(', ')}`,
@@ -224,22 +180,12 @@ fetch('../data/rcc.json')
     container.parentNode.insertBefore(statsList, container.nextSibling);
     function showView(view) {
       [listBtn, postersBtn, statsBtn].forEach(btn => btn && btn.classList.remove('selected'));
-      if (view === 'list') {
-        container.style.display = 'none';
-        list.style.display = 'flex';
-        statsList.style.display = 'none';
-        if (listBtn) listBtn.classList.add('selected');
-      } else if (view === 'stats') {
-        container.style.display = 'none';
-        list.style.display = 'none';
-        statsList.style.display = 'flex';
-        if (statsBtn) statsBtn.classList.add('selected');
-      } else {
-        list.style.display = 'none';
-        statsList.style.display = 'none';
-        container.style.display = 'flex';
-        if (postersBtn) postersBtn.classList.add('selected');
-      }
+      container.classList.toggle('hidden', view !== 'posters');
+      list.classList.toggle('active', view === 'list');
+      statsList.classList.toggle('active', view === 'stats');
+      if (view === 'list' && listBtn) listBtn.classList.add('selected');
+      else if (view === 'stats' && statsBtn) statsBtn.classList.add('selected');
+      else if (postersBtn) postersBtn.classList.add('selected');
     }
     const hash = window.location.hash.replace('#', '');
     showView(['list', 'stats', 'posters'].includes(hash) ? hash : 'posters');

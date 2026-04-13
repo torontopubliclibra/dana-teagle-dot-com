@@ -7,10 +7,10 @@ const tplMixes = {
     query: "",
     stream: localStorage['stream'] || "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
-    clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear" style="display:none;padding-top:12px;">clear search</button>`,
-    streamSelect: `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
+    clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range mix-search-clear" id="mix-search-clear">clear search</button>`,
+    streamSelect: `<p class="stream-select">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`,
     rangeSelect: '',
-    scrollToTop: `<p style="display:none;padding-top:10px;" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" style="width: 15px; margin-top:3px;margin-right:5px;filter: invert(1);">Back to Top</a></p>`,
+    scrollToTop: `<p class="scroll-to-top" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" class="scroll-to-top-icon">Back to Top</a></p>`,
     helpers: {
         getStreamLink(mix, stream) {
             if (stream === "apple" && mix.apple) return mix.apple;
@@ -46,14 +46,6 @@ const tplMixes = {
                     return `<button class="range" onclick="tplMixes.functions.${callbackName}(${idx})">${range.label}</button>`;
                 }
             }).join(' ');
-        },
-        injectStyle(id, css) {
-            if (!document.getElementById(id)) {
-                const style = document.createElement('style');
-                style.id = id;
-                style.innerHTML = css;
-                document.head.appendChild(style);
-            }
         },
         scrollAndFocusElement(el, offset) {
             const rect = el.getBoundingClientRect();
@@ -105,19 +97,15 @@ const tplMixes = {
                 const ch = getFirstChar(artist);
                 return currentRange.char === '#' ? (ch >= '0' && ch <= '9') : (ch === currentRange.char);
             });
-            tplMixes.helpers.injectStyle('artist-index-style', `
-                .artist-index { display: flex; flex-wrap: wrap; gap: 0.5em 1.5em; padding: 0; margin: 0; list-style: none; }
-                .artist-index li { flex: 0 1 calc(50% - 1.5em); box-sizing: border-box; padding: 2px 0; color: #f3e8e9; }
-                @media screen and (max-width: 600px) { .artist-index li { flex-basis: 100%; } }
-            `);
+
             let html = `<p><button class="range" onclick="tplMixes.functions.exitIndex()">&lt; Back to Mixes</button></p>`;
-            html += `<div style="margin-bottom:10px;display:flex;gap:0.5rem;">`;
+            html += `<div class="artist-index-ranges">`;
             html += tplMixes.helpers.renderRangeButtons(ranges, tplMixes.artistIndexPage, 'showIndexPage');
-            html += `</div><hr style="margin-top: 15px;"/>`;
-            html += `<ul class="artist-index" style="max-width:100%;font-size:1rem;">`;
+            html += `</div><hr class="artist-index-separator"/>`;
+            html += `<ul class="artist-index">`;
             filteredArtists.forEach(artist => {
                 const safeArtist = artist.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-                html += `<li>>> <a href="#" style="color:inherit;text-decoration:underline;cursor:pointer;" onclick="tplMixes.functions.artistIndexSearch('${safeArtist}');return false;">${artist}</a></li>`;
+                html += `<li>>> <a href="#" class="artist-index-link" onclick="tplMixes.functions.artistIndexSearch('${safeArtist}');return false;">${artist}</a></li>`;
             });
             html += `</ul><hr/>`;
             html += tplMixes.scrollToTop;
@@ -160,7 +148,7 @@ const tplMixes = {
             const label = ranges[idx] ? ranges[idx].label : "";
             const olderDisabled = idx === 0 ? 'disabled' : '';
             const newerDisabled = idx === ranges.length-1 ? 'disabled' : '';
-            tplMixes.rangeSelect = `<p class="range-select" style="padding-top:10px;display:flex;align-items:center;justify-content:flex-start;gap:12px;">
+            tplMixes.rangeSelect = `<p class="range-select">
                 <button class="range" id="newer-btn" onclick="tplMixes.functions.newer();" ${newerDisabled}>&lt;&lt;</button> | 
                 <span id="range-label">${label} / ${maxNum}</span> | 
                 <button class="range" id="older-btn" onclick="tplMixes.functions.older();" ${olderDisabled}>&gt;&gt;</button>
@@ -194,15 +182,15 @@ const tplMixes = {
         streamSet(stream) {
             if (stream === "tidal") {
                 tplMixes.stream = "tidal";
-                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
+                tplMixes.streamSelect = `<p class="stream-select">platform: <span class="range-selected">tidal</span> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
                 localStorage['stream'] = tplMixes.stream;
             } else if (stream === "apple") {
                 tplMixes.stream = "apple";
-                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <span class="range-selected">apple</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
+                tplMixes.streamSelect = `<p class="stream-select">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <span class="range-selected">apple</span> | <button class="range" onclick="tplMixes.functions.streamSet('spotify')">spotify</button></p>`;
                 localStorage['stream'] = tplMixes.stream;
             } else if (stream === "spotify") {
                 tplMixes.stream = "spotify";
-                tplMixes.streamSelect = `<p style="padding-bottom:5px;">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <span class="range-selected">spotify</span></p>`;
+                tplMixes.streamSelect = `<p class="stream-select">platform: <button class="range" onclick="tplMixes.functions.streamSet('tidal')">tidal</button> | <button class="range" onclick="tplMixes.functions.streamSet('apple')">apple</button> | <span class="range-selected">spotify</span></p>`;
                 localStorage['stream'] = tplMixes.stream;
             }
             tplMixes.functions.mixDisplay();
@@ -225,24 +213,13 @@ const tplMixes = {
             }
         },
         navDisplay() {
-            if (!document.getElementById('tpl-mixes-bottom-nav-style')) {
-                const style = document.createElement('style');
-                style.id = 'tpl-mixes-bottom-nav-style';
-                style.innerHTML = `
-                    .bottom-nav-flex { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
-                    @media screen and (max-width: 600px) {
-                        .bottom-nav-flex { flex-direction: column-reverse; align-items: flex-start; margin-bottom: -15px; }
-                    }
-                `;
-                document.head.appendChild(style);
-            }
             $(".tpl-page-nav").each(function(idx) {
                 let navContent;
                 if (idx === 0) {
                     navContent = [tplMixes.searchBar, tplMixes.clearSearchButton, tplMixes.rangeSelect];
                 } else {
                     navContent = [
-                        '<hr style="margin-top: 30px;margin-bottom: 5px;border-color: rgba(243, 232, 233, 0.75);"/>',
+                        '<hr class="bottom-nav-hr"/>',
                         '<div class="bottom-nav-flex">',
                         tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
@@ -257,53 +234,7 @@ const tplMixes = {
             tplMixes.query = "";
             tplMixes.heading.text("rusty mixes grid view");
             tplMixes.nav.html("");
-            if (!document.getElementById('mix-tile-grid-style')) {
-                const style = document.createElement('style');
-                style.id = 'mix-tile-grid-style';
-                style.innerHTML = `
-                    .mix-tile-grid {
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                        gap: 0.5rem;
-                        margin-top: 18px;
-                        margin-bottom: 18px;
-                    }
-                    .mix-tile {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        aspect-ratio: 1 / 1;
-                        justify-content: center;
-                        background: rgba(40,40,40,0.2);
-                        border: solid 3px rgba(243, 232, 233, 0.5);
-                        transition: box-shadow 0.2s;
-                    }
-                    .mix-tile a {
-                        margin-bottom: -4px;
-                    }
-                    .mix-tile:hover {
-                        box-shadow: 0 0 2px #f3e8e9;
-                    }
-                    .mix-tile img {
-                        width: 100%;
-                        aspect-ratio: 1 / 1;
-                        object-fit: cover;
-                    }
-                    .mix-tile-title {
-                        font-size: 0.95em;
-                        color: #f3e8e9;
-                        text-align: center;
-                        margin-bottom: 2px;
-                    }
-                    .mix-tile-number {
-                        font-size: 0.85em;
-                        color: #c9b6b7;
-                        margin-bottom: 2px;
-                    }
-                `;
-                document.head.appendChild(style);
-            }
+
             const backBtn = `<p><button class="range" onclick="tplMixes.functions.exitTileView()">&lt; Back to Mixes</button></p>`;
             let gridHtml = '<div class="mix-tile-grid">';
             tplMixes.mixes.forEach(object => {

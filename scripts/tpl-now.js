@@ -9,31 +9,27 @@ const tplNow = {
     mixes: [],
     feedPosts: [],
     topAlbums: [],
-    cardStyle: 'border:solid 3px rgba(243,232,233,0.5);margin:0;display:flex;flex-direction:column;align-items:center;text-decoration:none;background:none;width:155px;',
-    scrollStyle: 'display:flex;gap:15px;overflow-x:auto;white-space:nowrap;max-width:700px;margin:10px auto;padding:15px;background-image:linear-gradient(120deg,rgba(122,145,177,0.1) 50%,rgba(181,126,155,0.1) 100%);',
-    infoStyle: 'font-size:0.65rem;color:rgba(243,232,233,0.9);text-align:left;padding:4px 5px;width:100%;letter-spacing:0.5px;white-space:normal;line-height:1.3;',
     seasonStr(season) {
         if (!season) return '';
         return typeof season === 'string' && season.includes('-') ? ` seasons ${season}` : ` season ${season}`;
     },
     renderFeedPosts() {
         if (!this.feedPosts.length) return '';
-        const feedPostStyle = 'border: solid 3px rgba(243, 232, 233, 0.5);margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;background:none;';
-        const feedContainerStyle = 'display:flex;gap: 15px;overflow-x:auto;white-space:nowrap;max-height:220px;max-width:700px;margin: 10px auto;padding:15px;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);';
+
         let html = `<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a>)</p>`;
         const feedItems = this.feedPosts.map(post => {
             const id = post.id || post.ID || post.number;
             const permalink = id ? `/tpl/feed#${id}` : '#';
             let img = '';
             if (post.type === 'video' && post.thumbnail) {
-                img = `<img src="${post.thumbnail}" alt="${post.alt ? post.alt.replace(/\"/g, '&quot;') : 'video thumbnail'}" style="max-height: 150px; display: block; margin: 0 auto;"/>`;
+                img = `<img src="${post.thumbnail}" alt="${post.alt ? post.alt.replace(/\"/g, '&quot;') : 'video thumbnail'}" class="now-feed-img"/>`;
             } else if (post.url) {
-                img = `<img src="${post.url}" alt="${post.alt ? post.alt.replace(/\"/g, '&quot;') : ''}" style="max-height: 150px; display: block; margin: 0 auto;"/>`;
+                img = `<img src="${post.url}" alt="${post.alt ? post.alt.replace(/\"/g, '&quot;') : ''}" class="now-feed-img"/>`;
             }
-            const date = post.date ? `<div style="font-size:0.65rem;color:rgba(243,232,233,0.9);text-align:left;padding:2px 5px;width:100%;letter-spacing:0.5px;">&gt; ${post.date}</div>` : '';
-            return `<a href="${permalink}" class="now-feed-post" style="${feedPostStyle}">${img}${date}</a>`;
+            const date = post.date ? `<div class="now-feed-date">&gt; ${post.date}</div>` : '';
+            return `<a href="${permalink}" class="now-feed-post">${img}${date}</a>`;
         }).join('');
-        html += `<div id="now-feed-scroll" style="${feedContainerStyle}">${feedItems}</div>`;
+        html += `<div id="now-feed-scroll" class="now-feed-scroll">${feedItems}</div>`;
         return html;
     },
     renderMovies() {
@@ -41,12 +37,12 @@ const tplNow = {
         let html = `<p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`;
         const movieItems = this.movies.map(movie => {
             const posterUrl = movie.poster ? `https://image.tmdb.org/t/p/w185${movie.poster}` : '';
-            const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" style="height:auto; width:150px;display:block;margin:0;object-fit:cover;"/>` : `<div style="height:auto;width:150px;display:flex;align-items:center;justify-content:center;background:rgba(243,232,233,0.1);font-size:0.6rem;text-align:center;padding:5px;">${movie.log}</div>`;
-            const info = `<div style="${this.infoStyle}"><span style="display:block;">&gt; '${movie.log.replace(/'/g, '\&#39;')}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})</span></div>`;
+            const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
+            const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '\&#39;')}' (${movie.year})</span></div>`;
             const link = movie.link || '/tpl/logs#movies';
-            return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-movie" style="${this.cardStyle}">${img}${info}</a>`;
+            return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-movie now-card">${img}${info}</a>`;
         }).join('');
-        html += `<div style="${this.scrollStyle}">${movieItems}</div>`;
+        html += `<div class="now-scroll">${movieItems}</div>`;
         return html;
     },
     renderBooks() {
@@ -57,15 +53,15 @@ const tplNow = {
             const author = book.author || '';
             const year = book.year || '';
             const coverUrl = book.coverUrl || '';
-            const img = coverUrl ? `<img src="${coverUrl}" alt="${title.replace(/"/g, '&quot;')} cover" style="height:auto; width:150px;display:block;margin:0;object-fit:cover;"/>` : `<div style="height:225px;width:150px;display:flex;align-items:center;justify-content:center;background:rgba(243,232,233,0.1);font-size:0.6rem;text-align:center;padding:5px;">${title}</div>`;
+            const img = coverUrl ? `<img src="${coverUrl}" alt="${title.replace(/"/g, '&quot;')} cover" class="now-poster"/>` : `<div class="now-poster-fallback tall">${title}</div>`;
             let infoText = `&gt; '${title.replace(/'/g, '&#39;')}'`;
             if (year) infoText += ` (${year})`;
             if (author) infoText += ` by ${author}`;
-            const info = `<div style="${this.infoStyle}"><span style="display:block;">${infoText}</span></div>`;
+            const info = `<div class="now-card-info"><span>${infoText}</span></div>`;
             const link = book.link || book.openLibraryUrl || '/tpl/logs#books';
-            return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-book" style="${this.cardStyle}">${img}${info}</a>`;
+            return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-book now-card">${img}${info}</a>`;
         }).join('');
-        html += `<div style="${this.scrollStyle}">${bookItems}</div>`;
+        html += `<div class="now-scroll">${bookItems}</div>`;
         return html;
     },
     renderTV() {
@@ -73,12 +69,12 @@ const tplNow = {
         let html = `<p>>> last watched tv shows (<a href="/tpl/logs#tv">see more</a>)</p>`;
         const tvItems = this.tv.map(show => {
             const posterUrl = show.poster ? `https://image.tmdb.org/t/p/w185${show.poster}` : '';
-            const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" style="height:auto; width:150px;display:block;margin:0;object-fit:cover;"/>` : `<div style="height:225px;width:150px;display:flex;align-items:center;justify-content:center;background:rgba(243,232,233,0.1);font-size:0.6rem;text-align:center;padding:5px;">${show.log}</div>`;
-            const info = `<div style="${this.infoStyle}"><span style="display:block;">&gt; '${show.log.replace(/'/g, '\&#39;')}'${this.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})</span></div>`;
+            const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
+            const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '\&#39;')}'${this.seasonStr(show.season)} (${show.year})</span></div>`;
             const link = show.link || show.thetvdbUrl || '/tpl/logs#tv';
-            return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-tv" style="${this.cardStyle}">${img}${info}</a>`;
+            return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-tv now-card">${img}${info}</a>`;
         }).join('');
-        html += `<div style="${this.scrollStyle}">${tvItems}</div>`;
+        html += `<div class="now-scroll">${tvItems}</div>`;
         return html;
     },
     renderTopAlbums() {
@@ -86,28 +82,27 @@ const tplNow = {
         let html = `<p>>> recently listening (<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">see more</a>)</p>`;
         const albumItems = this.topAlbums.map(album => {
             const artwork = album.image || '';
-            const img = artwork ? `<img src="${artwork}" alt="${album.name.replace(/"/g, '&quot;')} album art" style="height:150px; width:150px; display: block; margin: 0 auto;"/>` : '';
-            const info = `<div style="${this.infoStyle}"><span style="display:block;">&gt; ${album.artist} \\ '${album.name}'</span></div>`;
+            const img = artwork ? `<img src="${artwork}" alt="${album.name.replace(/"/g, '&quot;')} album art" class="now-album-art"/>` : '';
+            const info = `<div class="now-card-info"><span>&gt; ${album.artist} \\ '${album.name}'</span></div>`;
             const lastFmUrl = album.url || 'https://www.last.fm/user/rustbecomesher';
-            return `<a href="${lastFmUrl}" target="_blank" rel="noopener noreferrer" class="now-album" style="${this.cardStyle}">${img}${info}</a>`;
+            return `<a href="${lastFmUrl}" target="_blank" rel="noopener noreferrer" class="now-album now-card">${img}${info}</a>`;
         }).join('');
-        html += `<div style="${this.scrollStyle}">${albumItems}</div>`;
+        html += `<div class="now-scroll">${albumItems}</div>`;
         return html;
     },
     renderMixes() {
         if (!this.mixes.length) return '';
-        const mixStyle = 'display:flex;max-width:700px;padding:5px 10px;gap:10px;align-items:center;justify-content:space-between;margin-bottom:10px;text-decoration:none;border:none;background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);margin-right:auto;margin-left:auto;cursor:pointer;transition:background-image 0.5s;';
         let html = `<p>>> latest rusty mixes (<a href="/tpl/mixes">see more</a>)</p>`;
         const mixesItems = this.mixes.map(object => {
             const link = `/tpl/mixes#${object.number}`;
-            const image = object.image ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" style="width:50px;height:50px;margin:5px 2px;border:solid 3px rgba(255,255,255,0.5);pointer-events:none;object-fit:cover;"/>` : '';
-            const title = `<p class="mix-featuring-ellipsis" style="text-align:left;min-width:calc(100% - 100px);line-height:1.25;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"><small>#${object.number} \\ ${object.title}</small></p>`;
+            const image = object.image ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" class="now-mix-img"/>` : '';
+            const title = `<p class="now-mix-title"><small>#${object.number} \\ ${object.title}</small></p>`;
             let featuring = '';
             if (Array.isArray(object.featuring) && object.featuring.length > 0) {
-                featuring = `<p class="mix-featuring-ellipsis" style="text-align:left;min-width:0;max-width:100%;margin:0;margin-top:5px;font-size:0.85em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${object.featuring.join(', ')}</p>`;
+                featuring = `<p class="now-mix-featuring">${object.featuring.join(', ')}</p>`;
             }
-            const icon = `<p style="padding-right:10px;">></p>`;
-            return `<a href="${link}" class="sub mix" style="${mixStyle}">${image}<span style="display:flex;flex-direction:column;flex:1;min-width:0;">${title}${featuring}</span>${icon}</a>`;
+            const icon = `<p class="now-mix-icon">></p>`;
+            return `<a href="${link}" class="now-mix">${image}<span class="now-mix-details">${title}${featuring}</span>${icon}</a>`;
         }).join('');
         html += `<div class="now-mixes-list">${mixesItems}</div>`;
         return html;
@@ -188,11 +183,11 @@ const tplNow = {
                 image: data[key].image,
                 featuring: data[key].featuring || []
             }));
-            this.mixes = mixes.slice(0, 3);
+            this.mixes = mixes.slice(0, 5);
         });
         this.fetchSection('../data/feed.json', ['feed'], data => {
             const posts = (data && data.items) ? data.items : [];
-            this.feedPosts = posts.slice(0, 6);
+            this.feedPosts = posts.slice(0, 10);
         });
         this.tmdbKey = '1d27d67ac5b026aad089308525f64f5f';
         const lastFmKey = '8387eaa633e79d3aaab96fb9c1173163';
