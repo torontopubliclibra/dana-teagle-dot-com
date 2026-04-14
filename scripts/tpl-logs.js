@@ -118,8 +118,8 @@ const tplLogs = {
                 const coverUrl = book.coverUrl || '';
                 const img = coverUrl ? `<img src="${coverUrl}" alt="${title.replace(/"/g, '&quot;')} cover" class="now-poster"/>` : `<div class="now-poster-fallback tall">${title}</div>`;
                 let infoText = `&gt; '${title.replace(/'/g, '&#39;')}'`;
-                if (year) infoText += ` (${year}${book.rewatch ? ', reread' : ''})`;
-                if (author) infoText += ` by ${author}`;
+                if (year) infoText += ` (${year})`;
+                if (author) infoText += ` \\ ${author}`;
                 const info = `<div class="now-card-info"><span>${infoText}</span></div>`;
                 const link = book.link || '#books';
                 const target = book.link ? ' target="_blank" rel="noopener noreferrer"' : '';
