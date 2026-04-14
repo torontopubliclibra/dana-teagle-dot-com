@@ -1628,6 +1628,23 @@ html.tpl .now-card {
   text-decoration: none;
   background: none;
   width: 155px;
+  min-width: 155px;
+  height: 100%;
+  gap: 5px;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .now-card {
+    background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .log-scroll .now-card {
+    width: 155px;
+    flex-direction: column;
+  }
 }
 html.tpl .now-scroll {
   display: flex;
@@ -1638,6 +1655,18 @@ html.tpl .now-scroll {
   margin: 10px auto;
   padding: 15px;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .now-scroll {
+    flex-direction: column;
+    padding: 0;
+    margin: 10px 0;
+    background-image: none;
+    gap: 10px;
+  }
+}
+html.tpl .now-scroll.log-scroll {
+  flex-direction: row;
 }
 html.tpl .now-card-info {
   font-size: 0.65rem;
@@ -1651,6 +1680,17 @@ html.tpl .now-card-info {
 }
 html.tpl .now-card-info span {
   display: block;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .now-card-info {
+    font-size: 0.8rem;
+    padding-bottom: 10px !important;
+  }
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .log-scroll .now-card-info {
+    font-size: 0.65rem;
+  }
 }
 html.tpl .now-album, html.tpl .now-movie, html.tpl .now-book, html.tpl .now-tv {
   border: none;
@@ -1679,6 +1719,11 @@ html.tpl .now-feed-scroll {
   padding: 15px;
   background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
 }
+@media only screen and (max-width: 970px) {
+  html.tpl .now-feed-scroll {
+    margin: 10px 0;
+  }
+}
 html.tpl .now-feed-img {
   max-height: 150px;
   display: block;
@@ -1704,6 +1749,11 @@ html.tpl .now-poster {
      object-fit: cover;
   image-rendering: pixelated;
 }
+@media only screen and (max-width: 970px) {
+  html.tpl .now-poster {
+    width: 50px;
+  }
+}
 html.tpl .now-poster-fallback {
   border: solid 3px rgba(243, 232, 233, 0.5);
   text-wrap: wrap;
@@ -1718,6 +1768,19 @@ html.tpl .now-poster-fallback {
   text-align: center;
   padding: 5px;
 }
+@media only screen and (max-width: 970px) {
+  html.tpl .now-poster-fallback {
+    width: 50px;
+    min-width: 50px;
+    word-break: break-all;
+  }
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .log-scroll .now-poster, html.tpl .log-scroll .now-poster-fallback {
+    width: 130px;
+    aspect-ratio: 8/12;
+  }
+}
 html.tpl .now-album-art {
   border: solid 3px rgba(243, 232, 233, 0.5);
   height: 150px;
@@ -1725,6 +1788,12 @@ html.tpl .now-album-art {
   display: block;
   margin: 0 auto;
   image-rendering: pixelated;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .now-album-art {
+    width: 50px;
+    height: 50px;
+  }
 }
 html.tpl .now-mix {
   display: flex;
@@ -1756,13 +1825,19 @@ html.tpl .now-mix:hover, html.tpl .now-mix:focus {
   }
 }
 html.tpl .now-mix-img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   margin: 5px 2px;
   border: solid 3px rgba(255, 255, 255, 0.5);
   pointer-events: none;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 970px) {
+  html.tpl .now-mix-img {
+    width: 50px;
+    height: 50px;
+  }
 }
 html.tpl .now-mix-title {
   text-align: left;

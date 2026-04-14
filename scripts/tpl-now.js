@@ -38,7 +38,7 @@ const tplNow = {
         const movieItems = this.movies.map(movie => {
             const posterUrl = movie.poster ? `https://image.tmdb.org/t/p/w185${movie.poster}` : '';
             const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
-            const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '\&#39;')}' (${movie.year})</span></div>`;
+            const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '\&#39;')}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})</span></div>`;
             const link = movie.link || '/tpl/logs#movies';
             return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-movie now-card">${img}${info}</a>`;
         }).join('');
@@ -55,7 +55,7 @@ const tplNow = {
             const coverUrl = book.coverUrl || '';
             const img = coverUrl ? `<img src="${coverUrl}" alt="${title.replace(/"/g, '&quot;')} cover" class="now-poster"/>` : `<div class="now-poster-fallback tall">${title}</div>`;
             let infoText = `&gt; '${title.replace(/'/g, '&#39;')}'`;
-            if (year) infoText += ` (${year})`;
+            if (year) infoText += ` (${year}${book.rewatch ? ', reread' : ''})`;
             if (author) infoText += ` by ${author}`;
             const info = `<div class="now-card-info"><span>${infoText}</span></div>`;
             const link = book.link || book.openLibraryUrl || '/tpl/logs#books';
@@ -70,7 +70,7 @@ const tplNow = {
         const tvItems = this.tv.map(show => {
             const posterUrl = show.poster ? `https://image.tmdb.org/t/p/w185${show.poster}` : '';
             const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
-            const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '\&#39;')}'${this.seasonStr(show.season)} (${show.year})</span></div>`;
+            const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '\&#39;')}'${this.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})</span></div>`;
             const link = show.link || show.thetvdbUrl || '/tpl/logs#tv';
             return `<a href="${link}" target="_blank" rel="noopener noreferrer" class="now-tv now-card">${img}${info}</a>`;
         }).join('');
@@ -183,7 +183,7 @@ const tplNow = {
                 image: data[key].image,
                 featuring: data[key].featuring || []
             }));
-            this.mixes = mixes.slice(0, 5);
+            this.mixes = mixes.slice(0, 4);
         });
         this.fetchSection('../data/feed.json', ['feed'], data => {
             const posts = (data && data.items) ? data.items : [];

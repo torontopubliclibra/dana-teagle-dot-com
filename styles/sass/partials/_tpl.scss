@@ -1226,6 +1226,23 @@ html.tpl {
         text-decoration: none;
         background: none;
         width: 155px;
+        min-width: 155px;
+        height: 100%;
+        gap: 5px;
+
+        @media only screen and (max-width: $tablet) {
+            background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
+            width: 100%;
+            flex-direction: row;
+            padding: 10px;
+        }
+    }
+
+    .log-scroll .now-card {
+        @media only screen and (max-width: $tablet) {
+            width: 155px;
+            flex-direction: column;
+        }
     }
 
     .now-scroll {
@@ -1237,6 +1254,18 @@ html.tpl {
         margin: 10px auto;
         padding: 15px;
         background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
+
+        @media only screen and (max-width: $tablet) {
+            flex-direction: column;
+            padding: 0;
+            margin: 10px 0;
+            background-image: none;
+            gap: 10px;
+        }
+
+        &.log-scroll {
+            flex-direction: row;
+        }
     }
 
     .now-card-info {
@@ -1251,6 +1280,17 @@ html.tpl {
 
         span {
             display: block;
+        }
+
+        @media only screen and (max-width: $tablet) {
+            font-size: 0.8rem;
+            padding-bottom: 10px !important;
+        }
+    }
+
+    .log-scroll .now-card-info {
+        @media only screen and (max-width: $tablet) {
+            font-size: 0.65rem;
         }
     }
 
@@ -1283,6 +1323,10 @@ html.tpl {
         margin: 10px auto;
         padding: 15px;
         background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
+
+        @media only screen and (max-width: $tablet) {
+            margin: 10px 0;
+        }
     }
 
     .now-feed-img {
@@ -1310,6 +1354,10 @@ html.tpl {
         margin: 0;
         object-fit: cover;
         image-rendering: pixelated;
+
+        @media only screen and (max-width: $tablet) {
+            width: 50px;
+        }
     }
 
     .now-poster-fallback {
@@ -1325,6 +1373,19 @@ html.tpl {
         font-size: 0.6rem;
         text-align: center;
         padding: 5px;
+
+        @media only screen and (max-width: $tablet) {
+            width: 50px;
+            min-width: 50px;
+            word-break: break-all;
+        }
+    }
+
+    .log-scroll .now-poster, .log-scroll .now-poster-fallback {
+        @media only screen and (max-width: $tablet) {
+            width: 130px;
+            aspect-ratio: 8 / 12;
+        }
     }
 
     .now-album-art {
@@ -1334,6 +1395,11 @@ html.tpl {
         display: block;
         margin: 0 auto;
         image-rendering: pixelated;
+
+        @media only screen and (max-width: $tablet) {
+            width: 50px;
+            height: 50px;
+        }
     }
 
     .now-mix {
@@ -1366,12 +1432,17 @@ html.tpl {
     }
 
     .now-mix-img {
-        width: 50px;
-        height: 50px;
+        width: 75px;
+        height: 75px;
         margin: 5px 2px;
         border: solid 3px rgba(#fff, 0.5);
         pointer-events: none;
         object-fit: cover;
+
+        @media only screen and (max-width: $tablet) {
+            width: 50px;
+            height: 50px;
+        }
     }
 
     .now-mix-title {

@@ -107,12 +107,12 @@ const tplLogs = {
             const movieItems = movies.map(movie => {
                 const posterUrl = movie.poster ? `https://image.tmdb.org/t/p/w185${movie.poster}` : '';
                 const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
-                const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '&#39;')}' (${movie.year})</span></div>`;
+                const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '&#39;')}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})</span></div>`;
                 const link = movie.link || '#movies';
                 const target = movie.link ? ' target="_blank" rel="noopener noreferrer"' : '';
                 return `<a href="${link}"${target} class="now-movie now-card">${img}${info}</a>`;
             }).join('');
-            return `<div class="now-scroll">${movieItems}</div>`;
+            return `<div class="now-scroll log-scroll">${movieItems}</div>`;
         },
         renderBooksShelves(books) {
             if (!books.length) return '';
@@ -123,26 +123,26 @@ const tplLogs = {
                 const coverUrl = book.coverUrl || '';
                 const img = coverUrl ? `<img src="${coverUrl}" alt="${title.replace(/"/g, '&quot;')} cover" class="now-poster"/>` : `<div class="now-poster-fallback tall">${title}</div>`;
                 let infoText = `&gt; '${title.replace(/'/g, '&#39;')}'`;
-                if (year) infoText += ` (${year})`;
+                if (year) infoText += ` (${year}${book.rewatch ? ', reread' : ''})`;
                 if (author) infoText += ` by ${author}`;
                 const info = `<div class="now-card-info"><span>${infoText}</span></div>`;
                 const link = book.link || '#books';
                 const target = book.link ? ' target="_blank" rel="noopener noreferrer"' : '';
                 return `<a href="${link}"${target} class="now-book now-card">${img}${info}</a>`;
             }).join('');
-            return `<div class="now-scroll">${bookItems}</div>`;
+            return `<div class="now-scroll log-scroll">${bookItems}</div>`;
         },
         renderTVShelves(tv) {
             if (!tv.length) return '';
             const tvItems = tv.map(show => {
                 const posterUrl = show.poster ? `https://image.tmdb.org/t/p/w185${show.poster}` : '';
                 const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
-                const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '&#39;')}'${tplLogs.functions.seasonStr(show.season)} (${show.year})</span></div>`;
+                const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '&#39;')}'${tplLogs.functions.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})</span></div>`;
                 const link = show.link || '#tv';
                 const target = show.link ? ' target="_blank" rel="noopener noreferrer"' : '';
                 return `<a href="${link}"${target} class="now-tv now-card">${img}${info}</a>`;
             }).join('');
-            return `<div class="now-scroll">${tvItems}</div>`;
+            return `<div class="now-scroll log-scroll">${tvItems}</div>`;
         },
         logsDisplay() {
             const year = tplLogs.year;
