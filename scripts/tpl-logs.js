@@ -11,25 +11,20 @@ const tplLogs = {
     yearList: ["2026", "2025", "2024"],
     yearSelect: "",
     viewSelect: "",
-    view: "list",
+    view: "shelves",
     tmdbKey: '1d27d67ac5b026aad089308525f64f5f',
     postersFetched: {},
     functions: {
         yearSet(year) {
             tplLogs.year = year;
             tplLogs.yearSelect = tplLogs.functions.generateYearSelect(year);
-            if (tplLogs.view === 'shelves') {
-                tplLogs.functions.fetchPostersForYear(year);
-            }
+            tplLogs.functions.fetchPostersForYear(year);
             tplLogs.functions.logsDisplay();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         },
         viewSet(view) {
             tplLogs.view = view;
             tplLogs.viewSelect = tplLogs.functions.generateViewSelect(view);
-            if (view === 'shelves') {
-                tplLogs.functions.fetchPostersForYear(tplLogs.year);
-            }
             tplLogs.functions.logsDisplay();
         },
         generateYearSelect(selectedYear) {
@@ -40,7 +35,7 @@ const tplLogs = {
             ).join(" | ") + `</p>`;
         },
         generateViewSelect(selectedView) {
-            const views = ['list', 'shelves'];
+            const views = ['shelves', 'lists'];
             return `<p>view: ` + views.map(v =>
                 v === selectedView
                     ? `<span class="year-selected">${v}</span>`
@@ -244,6 +239,7 @@ const tplLogs = {
                             tplLogs.years[year].books = data[year]?.books || [];
                             tplLogs.years[year].tv = data[year]?.tv || [];
                         });
+                        tplLogs.functions.fetchPostersForYear(tplLogs.year);
                         tplLogs.functions.logsDisplay();
                     })
                     .catch(error => console.log(error));

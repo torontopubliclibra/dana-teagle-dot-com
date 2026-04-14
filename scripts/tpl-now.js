@@ -79,7 +79,7 @@ const tplNow = {
     },
     renderTopAlbums() {
         if (!this.topAlbums.length) return '';
-        let html = `<p>>> recently listening (<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">see more</a>)</p>`;
+        let html = `<p>>> recently listening (<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">last.fm</a>)</p>`;
         const albumItems = this.topAlbums.map(album => {
             const artwork = album.image || '';
             const img = artwork ? `<img src="${artwork}" alt="${album.name.replace(/"/g, '&quot;')} album art" class="now-album-art"/>` : '';
