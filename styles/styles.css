@@ -1652,6 +1652,12 @@ html.tpl .now-card-info {
 html.tpl .now-card-info span {
   display: block;
 }
+html.tpl .now-album, html.tpl .now-movie, html.tpl .now-book, html.tpl .now-tv {
+  border: none;
+}
+html.tpl .now-album .now-card-info, html.tpl .now-movie .now-card-info, html.tpl .now-book .now-card-info, html.tpl .now-tv .now-card-info {
+  padding-bottom: 0;
+}
 html.tpl .now-feed-post {
   border: solid 3px rgba(243, 232, 233, 0.5);
   margin: 0;
@@ -1688,8 +1694,10 @@ html.tpl .now-feed-date {
   letter-spacing: 0.5px;
 }
 html.tpl .now-poster {
+  border: solid 3px rgba(243, 232, 233, 0.5);
   height: auto;
   width: 150px;
+  aspect-ratio: 8/12;
   display: block;
   margin: 0;
   -o-object-fit: cover;
@@ -1697,8 +1705,11 @@ html.tpl .now-poster {
   image-rendering: pixelated;
 }
 html.tpl .now-poster-fallback {
+  border: solid 3px rgba(243, 232, 233, 0.5);
+  text-wrap: wrap;
   height: auto;
   width: 150px;
+  aspect-ratio: 8/12;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1707,10 +1718,8 @@ html.tpl .now-poster-fallback {
   text-align: center;
   padding: 5px;
 }
-html.tpl .now-poster-fallback.tall {
-  height: 225px;
-}
 html.tpl .now-album-art {
+  border: solid 3px rgba(243, 232, 233, 0.5);
   height: 150px;
   width: 150px;
   display: block;
