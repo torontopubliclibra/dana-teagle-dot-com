@@ -26,6 +26,7 @@ const tplLogs = {
         },
         viewSet(view) {
             tplLogs.view = view;
+            try { localStorage.setItem('tplLogsView', view); } catch(e) {}
             tplLogs.viewSelect = tplLogs.functions.generateViewSelect(view);
             if (view === 'shelves') {
                 tplLogs.functions.fetchPostersForYear(tplLogs.year);
@@ -227,6 +228,10 @@ const tplLogs = {
         },
     },
     init() {
+        try {
+            const savedView = localStorage.getItem('tplLogsView');
+            if (savedView === 'list' || savedView === 'shelves') tplLogs.view = savedView;
+        } catch(e) {}
         tplLogs.yearSelect = tplLogs.functions.generateYearSelect(tplLogs.year);
         tplLogs.viewSelect = tplLogs.functions.generateViewSelect(tplLogs.view);
         fetch('../data/now.json')
