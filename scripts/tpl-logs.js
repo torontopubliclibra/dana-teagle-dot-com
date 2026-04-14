@@ -76,6 +76,7 @@ const tplLogs = {
             if (!books.length) return;
             const promises = books.map(book => {
                 if (book.coverUrl) return Promise.resolve();
+                if (book.cover) { book.coverUrl = book.cover; return Promise.resolve(); }
                 const author = book.author ? book.author.replace(/,?\s*et al\.?/i, '').trim() : '';
                 const q = encodeURIComponent(book.log + (author ? ' ' + author : ''));
                 const searchUrl = `https://openlibrary.org/search.json?q=${q}&limit=1&fields=key,isbn`;
@@ -100,7 +101,7 @@ const tplLogs = {
         renderMoviesShelves(movies) {
             if (!movies.length) return '';
             const movieItems = movies.map(movie => {
-                const posterUrl = movie.poster ? `https://image.tmdb.org/t/p/w185${movie.poster}` : '';
+                const posterUrl = movie.poster ? (movie.poster.startsWith('http') ? movie.poster : `https://image.tmdb.org/t/p/w185${movie.poster}`) : '';
                 const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
                 const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '&#39;')}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})</span></div>`;
                 const link = movie.link || '#movies';
@@ -130,7 +131,7 @@ const tplLogs = {
         renderTVShelves(tv) {
             if (!tv.length) return '';
             const tvItems = tv.map(show => {
-                const posterUrl = show.poster ? `https://image.tmdb.org/t/p/w185${show.poster}` : '';
+                const posterUrl = show.poster ? (show.poster.startsWith('http') ? show.poster : `https://image.tmdb.org/t/p/w185${show.poster}`) : '';
                 const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
                 const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '&#39;')}'${tplLogs.functions.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})</span></div>`;
                 const link = show.link || '#tv';

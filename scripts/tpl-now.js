@@ -36,7 +36,7 @@ const tplNow = {
         if (!this.movies.length) return '';
         let html = `<p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`;
         const movieItems = this.movies.map(movie => {
-            const posterUrl = movie.poster ? `https://image.tmdb.org/t/p/w185${movie.poster}` : '';
+            const posterUrl = movie.poster ? (movie.poster.startsWith('http') ? movie.poster : `https://image.tmdb.org/t/p/w185${movie.poster}`) : '';
             const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
             const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '\&#39;')}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})</span></div>`;
             const link = movie.link || '/tpl/logs#movies';
@@ -68,7 +68,7 @@ const tplNow = {
         if (!this.tv.length) return '';
         let html = `<p>>> last watched tv shows (<a href="/tpl/logs#tv">see more</a>)</p>`;
         const tvItems = this.tv.map(show => {
-            const posterUrl = show.poster ? `https://image.tmdb.org/t/p/w185${show.poster}` : '';
+            const posterUrl = show.poster ? (show.poster.startsWith('http') ? show.poster : `https://image.tmdb.org/t/p/w185${show.poster}`) : '';
             const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
             const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '\&#39;')}'${this.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})</span></div>`;
             const link = show.link || show.thetvdbUrl || '/tpl/logs#tv';
@@ -205,6 +205,7 @@ const tplNow = {
     fetchTMDBPosters(items, type) {
         if (!items.length || !this.tmdbKey) return;
         const promises = items.map(item => {
+            if (item.poster) return Promise.resolve();
             const query = encodeURIComponent(item.log);
             let url = `https://api.themoviedb.org/3/search/${type}?api_key=${this.tmdbKey}&query=${query}`;
             if (type === 'movie' && item.year) url += `&year=${item.year}`;
@@ -232,6 +233,10 @@ const tplNow = {
     fetchBookCovers() {
         if (!this.books.length) return;
         const promises = this.books.map(book => {
+            if (book.cover) {
+                book.coverUrl = book.cover;
+                return Promise.resolve();
+            }
             const author = book.author ? book.author.replace(/,?\s*et al\.?/i, '').trim() : '';
             const q = encodeURIComponent(book.log + (author ? ' ' + author : ''));
             const searchUrl = `https://openlibrary.org/search.json?q=${q}&limit=1&fields=key,isbn`;
