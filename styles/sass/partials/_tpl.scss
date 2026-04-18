@@ -1106,6 +1106,14 @@ html.tpl {
     .feed-rss-link-wrapper {
         border-bottom: solid $white 0.75px;
         margin-bottom: 5px;
+
+        &:hover {
+            border-bottom: solid $color1 0.75px;
+
+            @media only screen and (max-width: $tablet) {
+                border-bottom: solid $white 0.75px;
+            }
+        }
     }
 
     .feed-rss-link {
@@ -1117,11 +1125,47 @@ html.tpl {
         gap: 8px;
         color: $white;
         font-size: 1rem;
+
+        &:hover {
+            .feed-rss-icon {
+                filter: invert(73%) sepia(26%) saturate(247%) hue-rotate(115deg) brightness(84%) contrast(83%);
+                transform: skew(-10deg);
+
+                @media only screen and (max-width: $tablet) {
+                    filter: invert(1);
+                    transform: none;
+                }
+            }
+        }
     }
 
     .feed-rss-icon {
         width: 15px;
         filter: invert(1);
+        transition: filter 0.3s;
+
+        &:hover {
+            filter: invert(73%) sepia(26%) saturate(247%) hue-rotate(115deg) brightness(84%) contrast(83%);
+            transform: skew(-10deg);
+
+            @media only screen and (max-width: $tablet) {
+                filter: invert(1);
+                transform: none;
+            }
+        }
+    }
+
+    .now-rss-icon {
+        display: inline-flex;
+        border-bottom: solid $white 0.75px;
+
+        &:hover {
+            border-bottom: solid $color1 0.75px;
+
+            @media only screen and (max-width: $tablet) {
+                border-bottom: solid $white 0.75px;
+            }
+        }
     }
 
     video.feed-item {
@@ -1232,21 +1276,14 @@ html.tpl {
 
         @media only screen and (max-width: $tablet) {
             background-image: linear-gradient(120deg, rgba(122, 145, 177, 0.1) 50%, rgba(181, 126, 155, 0.1) 100%);
-            width: 100%;
-            flex-direction: row;
-            padding: 10px;
-        }
-    }
-
-    .log-scroll .now-card {
-        @media only screen and (max-width: $tablet) {
             width: 155px;
-            flex-direction: column;
+            padding: 10px;
         }
     }
 
     .now-scroll {
         display: flex;
+        justify-content: center;
         gap: 15px;
         overflow-x: auto;
         white-space: nowrap;
@@ -1256,16 +1293,15 @@ html.tpl {
         background-image: linear-gradient(120deg, rgba($color3, 0.1) 50%, rgba($color2, 0.1) 100%);
 
         @media only screen and (max-width: $tablet) {
-            flex-direction: column;
-            padding: 0;
-            margin: 10px 0;
+            justify-content: flex-start;
             background-image: none;
-            gap: 10px;
+            padding: 0;
+            padding-bottom: 15px;
         }
+    }
 
-        &.log-scroll {
-            flex-direction: row;
-        }
+    .log-scroll {
+        justify-content: flex-start;
     }
 
     .now-card-info {
@@ -1282,13 +1318,6 @@ html.tpl {
             display: block;
         }
 
-        @media only screen and (max-width: $tablet) {
-            font-size: 0.8rem;
-            padding-bottom: 10px !important;
-        }
-    }
-
-    .log-scroll .now-card-info {
         @media only screen and (max-width: $tablet) {
             font-size: 0.65rem;
         }
@@ -1356,7 +1385,7 @@ html.tpl {
         image-rendering: pixelated;
 
         @media only screen and (max-width: $tablet) {
-            width: 50px;
+            width: 130px;
         }
     }
 
@@ -1375,16 +1404,7 @@ html.tpl {
         padding: 5px;
 
         @media only screen and (max-width: $tablet) {
-            width: 50px;
-            min-width: 50px;
-            word-break: break-all;
-        }
-    }
-
-    .log-scroll .now-poster, .log-scroll .now-poster-fallback {
-        @media only screen and (max-width: $tablet) {
             width: 130px;
-            aspect-ratio: 8 / 12;
         }
     }
 
@@ -1397,8 +1417,8 @@ html.tpl {
         image-rendering: pixelated;
 
         @media only screen and (max-width: $tablet) {
-            width: 50px;
-            height: 50px;
+            width: 130px;
+            height: 130px;
         }
     }
 

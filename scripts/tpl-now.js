@@ -16,7 +16,7 @@ const tplNow = {
     renderFeedPosts() {
         if (!this.feedPosts.length) return '';
 
-        let html = `<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a>)</p>`;
+        let html = `<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a> / <a href="/tpl/rss.xml" target="_blank" title="RSS Feed" class="now-rss-icon"><img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon" style="text-decoration: underline;width:12px;"></a>)</p>`;
         const feedItems = this.feedPosts.map(post => {
             const id = post.id || post.ID || post.number;
             const permalink = id ? `/tpl/feed#${id}` : '#';

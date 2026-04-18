@@ -1,6 +1,7 @@
 {
     "2026": {
         "movies": [
+            {"log": "Singin' in the Rain", "year": "1952", "rewatch": true, "link": "https://letterboxd.com/film/singin-in-the-rain/", "poster": "https://a.ltrbxd.com/resized/sm/upload/xc/8e/3x/nt/nUP6Kna8oiUl2VNbEQ4BJhTcpO8-0-230-0-345-crop.jpg?v=2c7de99ac3"},
             {"log": "Kiki's Delivery Service", "year": "1989", "rewatch": true, "link": "https://letterboxd.com/film/kikis-delivery-service/", "poster": "https://a.ltrbxd.com/resized/sm/upload/5e/rk/0e/99/C70E830B-E641-4CD4-87B3-8DFB91383E20-0-2000-0-3000-crop.jpg?v=359a791d0d"},
             {"log": "Clueless", "year": "1995", "rewatch": true, "link": "https://letterboxd.com/film/clueless/", "poster": "https://a.ltrbxd.com/resized/sm/upload/fn/rr/3z/h7/i8gEHh2sszB6YWLC0jl559sxAeN-0-2000-0-3000-crop.jpg?v=593192fedf"},
             {"log": "The Music Man", "year": "1962", "rewatch": false, "link": "https://letterboxd.com/film/the-music-man/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/3/6/9/3/43693-the-music-man-0-2000-0-3000-crop.jpg?v=d321512a81"},
@@ -64,9 +65,9 @@
             {"log": "Spencer", "year": "2021", "rewatch": true, "link": "https://letterboxd.com/film/spencer-2021/"}
         ],
         "tv": [
-            {"log": "taskmaster", "season": "21", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/posters/5af6cb30c8ef7.jpg"},
-            {"log": "daria", "season": "1", "year": "1997", "rewatch": true, "poster": "https://artworks.thetvdb.com/banners/posters/77996-4.jpg"},
-            {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false},
+            {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-pitt"},
+            {"log": "daria", "season": "1", "year": "1997", "rewatch": true, "poster": "https://artworks.thetvdb.com/banners/posters/77996-4.jpg", "link": "https://thetvdb.com/series/daria"},
+            {"log": "taskmaster", "season": "21", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/posters/5af6cb30c8ef7.jpg", "link": "https://thetvdb.com/series/taskmaster"},
             {"log": "columbo", "season": "1", "year": "1972", "rewatch": false},
             {"log": "last one laughing uk", "season": "2", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/v4/series/455162/posters/69b3121c046a7.jpg"},
             {"log": "firefly", "season": "1", "year": "2002", "rewatch": true},
@@ -89,6 +90,7 @@
             {"log": "fraggle rock", "season": "1", "year": "1983", "rewatch": false}
         ],
         "books": [
+            {"log": "Fancy Gap", "author": "Zak Jones", "year": "2026", "reread": false, "link": "https://www.penguinrandomhouse.ca/books/753165/fancy-gap-by-zak-jones/9780735249875", "cover": "https://m.media-amazon.com/images/I/71zmgQp-kDL._UF1000,1000_QL80_.jpg"},
             {"log": "Hyperpolitics: Extreme Politicization without Political Consequences", "author": "Anton Jäger", "year": "2023", "reread": false, "link": "https://www.versobooks.com/en-ca/products/3460-hyperpolitics", "cover": "https://www.versobooks.com/cdn/shop/files/getimage_c57178a6-fa6f-4041-8799-bd811cd37df7.jpg"},
             {"log": "slow technology reader", "author": "carolyn strauss, et al.", "year": "2026", "reread": false, "link": "https://valiz.nl/en/publications/slow-technology-reader", "cover": "https://ik.imagekit.io/efv6pqb1qal/images/publicaties/Slow_Technology_Reader/9789493246461_SlowTechnologyReader_RGB_LOWRES.jpg"},
             {"log": "good girl", "author": "anna fitzpatrick", "year": "2022", "reread": false, "link": "https://www.flyingbooks.ca/item/SF-Vg84XuCCn78CGypDuHg", "cover": "https://cdn1.bookmanager.com/i/m?b=SF-Vg84XuCCn78CGypDuHg&cb=1706903254"},
