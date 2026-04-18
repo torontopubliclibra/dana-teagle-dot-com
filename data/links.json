@@ -13,6 +13,32 @@
             "description": "Political messaging with varying degrees of importance"
         }
     },
+    "contact & pay": {
+        "Personal email": {
+            "link": "mailto:dana@torontopubliclibra.com",
+            "description": "dana [at] torontopubliclibra.com"
+        },
+        "Business email": {
+            "link": "mailto:contact@danateagle.com",
+            "description": "contact [at] danateagle.com"
+        },
+        "PayPal": {
+            "link": "/paypal",
+            "description": "Send payments via PayPal"
+        },
+        "Wise": {
+            "link": "/wise",
+            "description": "Send payments via Wise"
+        },
+        "Discord": {
+            "link": "/discord",
+            "description": "torontopubliclibra on Discord"
+        },
+        "PGP key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "ASCII text file download"
+        }
+    },
     "social profiles": {
         "Letterboxd": {
             "link": "/letterboxd",
@@ -59,32 +85,6 @@
         "National Network of Abortion Funds": {
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
-        }
-    },
-    "contact & pay": {
-        "PayPal": {
-            "link": "/paypal",
-            "description": "Send payments via PayPal"
-        },
-        "Wise": {
-            "link": "/wise",
-            "description": "Send payments via Wise"
-        },
-        "Personal email": {
-            "link": "mailto:dana@torontopubliclibra.com",
-            "description": "dana [at] torontopubliclibra.com"
-        },
-        "Business email": {
-            "link": "mailto:contact@danateagle.com",
-            "description": "contact [at] danateagle.com"
-        },
-        "Discord": {
-            "link": "/discord",
-            "description": "torontopubliclibra on Discord"
-        },
-        "PGP key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "ASCII text file download"
         }
     }
 }
