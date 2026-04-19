@@ -16,7 +16,7 @@ const tplNow = {
     renderFeedPosts() {
         if (!this.feedPosts.length) return '';
 
-        let html = `<hr><p>>> latest feed posts (<a href='/tpl/feed'>see more</a> / <a href="/tpl/rss.xml" target="_blank" title="RSS Feed" class="now-rss-icon"><img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon" style="text-decoration: underline;width:12px;"></a>)</p>`;
+        let html = `<hr><p>>> latest feed posts (<a href='/tpl/feed'>more</a> / <a href="/tpl/rss.xml" target="_blank" title="RSS Feed" class="now-rss-icon"><img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon" style="text-decoration: underline;width:12px;"></a>)</p>`;
         const feedItems = this.feedPosts.map(post => {
             const id = post.id || post.ID || post.number;
             const permalink = id ? `/tpl/feed#${id}` : '#';
@@ -34,7 +34,7 @@ const tplNow = {
     },
     renderMovies() {
         if (!this.movies.length) return '';
-        let html = `<p>>> last watched movies (<a href="/tpl/logs#movies">see more</a>)</p>`;
+        let html = `<p>>> last watched movies (<a href="/tpl/logs#movies">more</a>)</p>`;
         const movieItems = this.movies.map(movie => {
             const posterUrl = movie.poster ? (movie.poster.startsWith('http') ? movie.poster : `https://image.tmdb.org/t/p/w185${movie.poster}`) : '';
             const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
@@ -47,7 +47,7 @@ const tplNow = {
     },
     renderBooks() {
         if (!this.books.length) return '';
-        let html = `<p>>> last read books (<a href="/tpl/logs#books">see more</a>)</p>`;
+        let html = `<p>>> last read books (<a href="/tpl/logs#books">more</a>)</p>`;
         const bookItems = this.books.map(book => {
             const title = book.log || '';
             const author = book.author || '';
@@ -66,7 +66,7 @@ const tplNow = {
     },
     renderTV() {
         if (!this.tv.length) return '';
-        let html = `<p>>> last watched tv shows (<a href="/tpl/logs#tv">see more</a>)</p>`;
+        let html = `<p>>> last watched tv shows (<a href="/tpl/logs#tv">more</a>)</p>`;
         const tvItems = this.tv.map(show => {
             const posterUrl = show.poster ? (show.poster.startsWith('http') ? show.poster : `https://image.tmdb.org/t/p/w185${show.poster}`) : '';
             const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
@@ -92,7 +92,7 @@ const tplNow = {
     },
     renderMixes() {
         if (!this.mixes.length) return '';
-        let html = `<p>>> latest rusty mixes (<a href="/tpl/mixes">see more</a>)</p>`;
+        let html = `<p>>> latest rusty mixes (<a href="/tpl/mixes">more</a>)</p>`;
         const mixesItems = this.mixes.map(object => {
             const link = `/tpl/mixes#${object.number}`;
             const image = object.image ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" class="now-mix-img"/>` : '';

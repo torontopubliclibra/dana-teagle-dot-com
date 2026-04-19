@@ -76,7 +76,7 @@ fetch('../data/rcc.json')
       const img = document.createElement('img');
       img.src = (film.title === 'TBD') ? 'blank.png' : film.poster;
       img.alt = `'${film.title}' (${film.year}) poster`;
-      img.className = `poster rcc-list-poster${film.series ? ' rcc-list-poster--series' : ''}${film.title === 'TBD' ? ' tbd' : ''}`;
+      img.className = `poster rcc-list-poster${film.series ? ' rcc-list-poster--series' : ''}${film.title === 'TBD' ? ' rcc-list-poster--tbd' : ''}`;
       if (film.title !== 'TBD') {
         img.style.cursor = 'pointer';
         img.addEventListener('click', () => openLightbox(film.poster, film.title, film.year));
