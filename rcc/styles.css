@@ -320,7 +320,8 @@ body {
 @media only screen and (max-width: 600px) {
   .poster {
     height: auto;
-    min-height: calc(100vh - 107px);
+    min-height: calc(100vh - 120px);
+    max-height: 100%;
     width: 100vw;
   }
 }
@@ -482,7 +483,7 @@ footer p {
 
 .rcc-lightbox-content {
   position: relative;
-  min-height: 80vh;
+  max-height: 80vh;
   max-width: 80vw;
   cursor: default;
   display: flex;
