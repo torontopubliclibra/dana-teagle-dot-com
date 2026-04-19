@@ -18,7 +18,6 @@ fetch('../data/rcc.json')
     const getInfoBarHTML = (film, opts = {}) => {
       let infoText = '';
       if (opts.short) {
-        if (film.director) infoText += `${film.director}'s `;
         infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" class="rcc-link">${film.title}</a> (${film.year}) on ${formatDate(film.date)} //`;
         return infoText;
       }
