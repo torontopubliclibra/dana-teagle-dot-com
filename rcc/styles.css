@@ -33,6 +33,7 @@
 @media only screen and (max-width: 600px) {
   .horizontal-scroll-container > section {
     justify-content: flex-start;
+    height: 100%;
   }
 }
 html {
