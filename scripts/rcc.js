@@ -76,9 +76,43 @@ fetch('../data/rcc.json')
       const img = document.createElement('img');
       img.src = (film.title === 'TBD') ? 'blank.png' : film.poster;
       img.alt = `'${film.title}' (${film.year}) poster`;
-      img.className = `poster rcc-list-poster${film.series ? ' rcc-list-poster--series' : ''}`;
+      img.className = `poster rcc-list-poster${film.series ? ' rcc-list-poster--series' : ''}${film.title === 'TBD' ? ' tbd' : ''}`;
+      if (film.title !== 'TBD') {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => openLightbox(film.poster, film.title, film.year));
+      }
       li.appendChild(img);
       return li;
+    };
+    const openLightbox = (src, title, year) => {
+      const overlay = document.createElement('div');
+      overlay.className = 'rcc-lightbox-overlay';
+      const content = document.createElement('div');
+      content.className = 'rcc-lightbox-content';
+      const banner = document.createElement('div');
+      banner.className = 'rcc-lightbox-banner';
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'rcc-lightbox-close';
+      closeBtn.innerHTML = '&#10005;';
+      closeBtn.setAttribute('aria-label', 'Close');
+      closeBtn.addEventListener('click', () => overlay.remove());
+      banner.appendChild(closeBtn);
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = `'${title}' (${year}) poster`;
+      content.appendChild(banner);
+      content.appendChild(img);
+      overlay.appendChild(content);
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay) overlay.remove();
+      });
+      document.addEventListener('keydown', function handler(e) {
+        if (e.key === 'Escape') {
+          overlay.remove();
+          document.removeEventListener('keydown', handler);
+        }
+      });
+      document.body.appendChild(overlay);
     };
     data.rcc.forEach(film => {
       const section = createPosterSection(film);

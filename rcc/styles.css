@@ -317,6 +317,14 @@ body {
   object-fit: contain;
 }
 
+@media only screen and (max-width: 600px) {
+  .poster {
+    height: auto;
+    min-height: calc(100vh - 107px);
+    width: 100vw;
+  }
+}
+
 .button {
   padding: 0.5em 1.25em;
   background: rgb(60, 46, 60);
@@ -426,6 +434,14 @@ footer p {
   background: rgb(34, 34, 34);
 }
 
+@media only screen and (max-width: 600px) {
+  .rcc-list-poster {
+    height: auto;
+    min-height: unset;
+    width: 250px;
+  }
+}
+
 .rcc-list-poster.rcc-list-poster--series {
   background: rgba(41, 37, 41, 1);
 }
@@ -449,4 +465,66 @@ footer p {
   list-style: none;
   padding: 0;
   font-size: 0.9rem;
+}
+
+.rcc-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rcc-lightbox-content {
+  position: relative;
+  min-height: 80vh;
+  max-width: 80vw;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.rcc-lightbox-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(40, 43, 44, 0.9);
+  padding: 4px 8px;
+}
+
+.rcc-lightbox-close {
+  background: none;
+  border: none;
+  color: #c0c5d2;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  font-family: inherit;
+}
+
+.rcc-lightbox-close:hover {
+  color: #fff;
+}
+
+.rcc-lightbox-content img {
+  display: block;
+  max-height: calc(80vh - 30px);
+  width: auto;
+  object-fit: contain;
+}
+
+.rcc-list-poster {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.rcc-list-poster--tbd {
+  cursor: default;
 }

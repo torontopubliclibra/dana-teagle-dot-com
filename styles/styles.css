@@ -487,6 +487,11 @@ html.tpl header {
   background: none !important;
   min-width: 380px;
 }
+@media only screen and (max-width: 970px) {
+  html.tpl header {
+    min-width: 100%;
+  }
+}
 html.tpl #contact {
   background: none !important;
   padding: 0 !important;
@@ -775,6 +780,9 @@ html.tpl main hr {
   margin-bottom: 10px;
 }
 @media only screen and (max-width: 970px) {
+  html.tpl main {
+    min-width: 100%;
+  }
   html.tpl main hr {
     margin-top: 18px;
     margin-bottom: 18px;
@@ -881,7 +889,7 @@ html.tpl main .tpl-landing img.feed-item.horizontal, html.tpl main.tpl-subpage i
 @media only screen and (max-width: 768px) {
   html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
     width: 100%;
-    min-width: 100%;
+    min-width: unset;
   }
 }
 html.tpl main .tpl-landing p, html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p, html.tpl main.tpl-subpage label {
@@ -947,7 +955,7 @@ html.tpl main .feed-items .feed-item-container.horizontal {
 @media only screen and (max-width: 768px) {
   html.tpl main .feed-items .feed-item-container {
     width: 100%;
-    min-width: 100%;
+    min-width: unset;
   }
 }
 html.tpl main .feed-items .feed-item-container a {
