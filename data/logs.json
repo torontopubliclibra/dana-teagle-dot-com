@@ -1,6 +1,8 @@
 {
     "2026": {
         "movies": [
+            {"log": "Muppets from Space", "year": "1999", "rewatch": true, "link": "https://letterboxd.com/film/muppets-from-space/", "poster": ""},
+            {"log": "Drop Dead Gorgeous", "year": "1999", "rewatch": true, "link": "https://letterboxd.com/film/drop-dead-gorgeous/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/6/1/7/9/46179-drop-dead-gorgeous-0-2000-0-3000-crop.jpg?v=c429391f85"},
             {"log": "Singin' in the Rain", "year": "1952", "rewatch": true, "link": "https://letterboxd.com/film/singin-in-the-rain/", "poster": "https://a.ltrbxd.com/resized/sm/upload/xc/8e/3x/nt/nUP6Kna8oiUl2VNbEQ4BJhTcpO8-0-230-0-345-crop.jpg?v=2c7de99ac3"},
             {"log": "Kiki's Delivery Service", "year": "1989", "rewatch": true, "link": "https://letterboxd.com/film/kikis-delivery-service/", "poster": "https://a.ltrbxd.com/resized/sm/upload/5e/rk/0e/99/C70E830B-E641-4CD4-87B3-8DFB91383E20-0-2000-0-3000-crop.jpg?v=359a791d0d"},
             {"log": "Clueless", "year": "1995", "rewatch": true, "link": "https://letterboxd.com/film/clueless/", "poster": "https://a.ltrbxd.com/resized/sm/upload/fn/rr/3z/h7/i8gEHh2sszB6YWLC0jl559sxAeN-0-2000-0-3000-crop.jpg?v=593192fedf"},
