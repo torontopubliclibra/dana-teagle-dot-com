@@ -1,7 +1,9 @@
 {
     "2026": {
         "movies": [
-            {"log": "Muppets from Space", "year": "1999", "rewatch": true, "link": "https://letterboxd.com/film/muppets-from-space/", "poster": ""},
+            {"log": "The Daytrippers", "year": "1996", "rewatch": false, "link": "https://letterboxd.com/film/the-daytrippers/", "poster": "https://a.ltrbxd.com/resized/film-poster/1/5/8/1/8/15818-the-daytrippers-0-2000-0-3000-crop.jpg?v=5f1dfa0f8b"},
+            {"log": "I Like Movies", "year": "2022", "rewatch": false, "link": "https://letterboxd.com/film/i-like-movies/", "poster": "https://a.ltrbxd.com/resized/film-poster/8/8/3/1/5/3/883153-i-like-movies-0-2000-0-3000-crop.jpg?v=f0181e54fc"},
+            {"log": "Muppets from Space", "year": "1999", "rewatch": true, "link": "https://letterboxd.com/film/muppets-from-space/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/6/4/4/3/46443-muppets-from-space-0-2000-0-3000-crop.jpg?v=9e3ce30758"},
             {"log": "Drop Dead Gorgeous", "year": "1999", "rewatch": true, "link": "https://letterboxd.com/film/drop-dead-gorgeous/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/6/1/7/9/46179-drop-dead-gorgeous-0-2000-0-3000-crop.jpg?v=c429391f85"},
             {"log": "Singin' in the Rain", "year": "1952", "rewatch": true, "link": "https://letterboxd.com/film/singin-in-the-rain/", "poster": "https://a.ltrbxd.com/resized/sm/upload/xc/8e/3x/nt/nUP6Kna8oiUl2VNbEQ4BJhTcpO8-0-230-0-345-crop.jpg?v=2c7de99ac3"},
             {"log": "Kiki's Delivery Service", "year": "1989", "rewatch": true, "link": "https://letterboxd.com/film/kikis-delivery-service/", "poster": "https://a.ltrbxd.com/resized/sm/upload/5e/rk/0e/99/C70E830B-E641-4CD4-87B3-8DFB91383E20-0-2000-0-3000-crop.jpg?v=359a791d0d"},
