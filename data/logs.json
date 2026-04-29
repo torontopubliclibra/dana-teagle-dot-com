@@ -1,6 +1,8 @@
 {
     "2026": {
         "movies": [
+            {"log": "Carnival of Souls", "year": "1962", "rewatch": false, "link": "https://letterboxd.com/film/carnival-of-souls/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/1/8/3/8/41838-carnival-of-souls-0-2000-0-3000-crop.jpg?v=a3719cf15b"},
+            {"log": "Mother Mary", "year": "2026", "rewatch": false, "link": "https://letterboxd.com/film/mother-mary-2026/", "poster": "https://a.ltrbxd.com/resized/film-poster/9/9/4/3/5/3/994353-mother-mary-2026-0-2000-0-3000-crop.jpg?v=a2644168b4"},
             {"log": "Kiss Me Deadly", "year": "1955", "rewatch": false, "link": "https://letterboxd.com/film/kiss-me-deadly/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/0/6/3/0/40630-kiss-me-deadly-0-2000-0-3000-crop.jpg?v=d81289f7bf"},
             {"log": "Leave Her to Heaven", "year": "1945", "rewatch": false, "link": "https://letterboxd.com/film/leave-her-to-heaven/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/0/8/6/8/40868-leave-her-to-heaven-0-2000-0-3000-crop.jpg?v=57d033e9c4"},
             {"log": "Is This Thing On?", "year": "2025", "rewatch": false, "link": "https://letterboxd.com/film/is-this-thing-on-2025/", "poster": "https://a.ltrbxd.com/resized/sm/upload/cu/cp/cr/2m/o0uOCDLZEwlForZ5Bf3IeBwlPLd-0-2000-0-3000-crop.jpg?v=371b64c948"},
