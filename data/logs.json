@@ -1,6 +1,9 @@
 {
     "2026": {
         "movies": [
+            {"log": "We're All Going to the World's Fair", "year": "2021", "rewatch": false, "link": "https://letterboxd.com/film/were-all-going-to-the-worlds-fair/", "poster": "https://a.ltrbxd.com/resized/film-poster/6/9/5/5/2/2/695522-we-re-all-going-to-the-world-s-fair-0-2000-0-3000-crop.jpg?v=d123af3067"},
+            {"log": "Chungking Express", "year": "1994", "rewatch": true, "link": "https://letterboxd.com/film/chungking-express/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/5/6/0/2/45602-chungking-express-0-2000-0-3000-crop.jpg?v=9475abb05b"},
+            {"log": "Saving Face", "year": "2004", "rewatch": true, "link": "https://letterboxd.com/film/saving-face/", "poster": ""},
             {"log": "Carnival of Souls", "year": "1962", "rewatch": false, "link": "https://letterboxd.com/film/carnival-of-souls/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/1/8/3/8/41838-carnival-of-souls-0-2000-0-3000-crop.jpg?v=a3719cf15b"},
             {"log": "Mother Mary", "year": "2026", "rewatch": false, "link": "https://letterboxd.com/film/mother-mary-2026/", "poster": "https://a.ltrbxd.com/resized/film-poster/9/9/4/3/5/3/994353-mother-mary-2026-0-2000-0-3000-crop.jpg?v=a2644168b4"},
             {"log": "Kiss Me Deadly", "year": "1955", "rewatch": false, "link": "https://letterboxd.com/film/kiss-me-deadly/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/0/6/3/0/40630-kiss-me-deadly-0-2000-0-3000-crop.jpg?v=d81289f7bf"},
@@ -99,6 +102,7 @@
             {"log": "fraggle rock", "season": "1", "year": "1983", "rewatch": false}
         ],
         "books": [
+            {"log": "Encampment: Resistance, Grace, and an Unhoused Community", "author": "Maggie Helwig", "year": "2025", "reread": false, "link": "https://chbooks.com/Books/E/Encampment", "cover": "https://chbooks.com/var/site/storage/images/books/e/encampment/9781552455043_cover/1461900-1-eng-CA/9781552455043_cover1_rb_modalcover.jpg"},
             {"log": "Fancy Gap", "author": "Zak Jones", "year": "2026", "reread": false, "link": "https://www.penguinrandomhouse.ca/books/753165/fancy-gap-by-zak-jones/9780735249875", "cover": "https://m.media-amazon.com/images/I/71zmgQp-kDL._UF1000,1000_QL80_.jpg"},
             {"log": "Hyperpolitics: Extreme Politicization without Political Consequences", "author": "Anton Jäger", "year": "2023", "reread": false, "link": "https://www.versobooks.com/en-ca/products/3460-hyperpolitics", "cover": "https://www.versobooks.com/cdn/shop/files/getimage_6f9272d1-c898-4323-9d47-2355e4b39c0b.jpg?v=1776659472&width=878"},
             {"log": "slow technology reader", "author": "carolyn strauss, et al.", "year": "2026", "reread": false, "link": "https://valiz.nl/en/publications/slow-technology-reader", "cover": "https://ik.imagekit.io/efv6pqb1qal/images/publicaties/Slow_Technology_Reader/9789493246461_SlowTechnologyReader_RGB_LOWRES.jpg"},
