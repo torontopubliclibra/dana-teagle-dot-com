@@ -417,12 +417,17 @@ html.tpl {
             gap: 10px;
             margin: 0;
             padding-top: 15px;
-            img.rusty, img.feed-item {
+            img.rusty {
                 border: solid 3px rgba($white, 0.5);
                 margin: 10px 0;
                 margin-top: 0;
-                width: 225px;
+                width: 150px;
                 pointer-events: none;
+            }
+            img.feed-item {
+                border: solid 3px rgba($white, 0.5);
+                margin: 10px 0;
+                margin-top: 0;
             }
             img.feed-item {
                 width: 400px;
@@ -433,6 +438,8 @@ html.tpl {
                 margin: 0;
                 border-bottom: none;
                 animation: fade-in 0.5s;
+                pointer-events: auto;
+                cursor: zoom-in;
 
                 &.horizontal {
                     height: 250px;
@@ -616,7 +623,7 @@ html.tpl {
                 width: 85%;
                 max-width: 85%;
                 img.rusty {
-                    width: 175px;
+                    width: 150px;
                 }
             }
         }
@@ -1178,6 +1185,107 @@ html.tpl {
         height: auto;
         border: solid 3px rgba($white, 0.5);
         border-bottom: none;
+        cursor: zoom-in;
+    }
+
+    body.feed-lightbox-open {
+        overflow: hidden;
+    }
+
+    .feed-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: rgba($black, 0.92);
+
+        &.is-open {
+            display: flex;
+        }
+    }
+
+    .feed-lightbox-panel {
+        width: fit-content;
+        max-width: calc(100vw - 40px);
+        max-height: 92vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+
+    .feed-lightbox-close,
+    .feed-lightbox-link {
+        border: solid 2px rgba($white, 0.65);
+        background: rgba($black, 0.95);
+        color: $white;
+        font-size: 0.8rem;
+        line-height: 1;
+        text-transform: lowercase;
+        padding: 8px 12px;
+    }
+
+    .feed-lightbox-link {
+        display: inline-flex;
+        text-decoration: none;
+    }
+
+    .feed-lightbox-close {
+        font-style: normal !important;
+    }
+
+    .feed-lightbox-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .feed-lightbox-media {
+        width: auto;
+        max-width: calc(100vw - 40px);
+        max-height: calc(92vh - 120px);
+        height: auto;
+        border: solid 3px rgba($white, 0.5);
+        background: $black;
+    }
+
+    .feed-lightbox-caption,
+    .feed-lightbox-actions {
+        align-self: stretch;
+        margin: 0;
+        text-align: right;
+        color: rgba($white, 0.92);
+    }
+
+    .feed-lightbox-caption {
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .feed-lightbox-actions:empty,
+    .feed-lightbox-caption:empty {
+        display: none;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        .feed-lightbox {
+            padding: 12px;
+        }
+
+        .feed-lightbox-panel {
+            max-width: calc(100vw - 24px);
+            max-height: 100vh;
+        }
+
+        .feed-lightbox-media {
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vh - 132px);
+        }
     }
 
     .feed-item-container {

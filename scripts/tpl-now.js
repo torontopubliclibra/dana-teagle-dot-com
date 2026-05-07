@@ -183,7 +183,7 @@ const tplNow = {
                 image: data[key].image,
                 featuring: data[key].featuring || []
             }));
-            this.mixes = mixes.slice(0, 4);
+            this.mixes = mixes.slice(0, 2);
         });
         this.fetchSection('../data/feed.json', ['feed'], data => {
             const posts = (data && data.items) ? data.items : [];

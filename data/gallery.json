@@ -112,16 +112,14 @@
         "title": "RUSTPROP",
         "year": "2024-26",
         "service": "Agitprop design project",
-        "site": "/rustprop",
-        "instagram": "/rp-insta",
+        "site": "https://rustprop.org",
         "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/push-notifs.png"]
     },
     "RUSTPROP 2": {
         "title": "RUSTPROP",
         "year": "2024-26",
         "service": "Agitprop design project",
-        "site": "/rustprop",
-        "instagram": "/rp-insta",
+        "site": "https://rustprop.org",
         "images": ["./rustprop/images/queer-lib.png", "./rustprop/images/the-people-united-4.jpeg"]
     },
     "Ryan Perks": {

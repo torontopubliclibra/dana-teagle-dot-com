@@ -725,7 +725,8 @@ header {
 
     .gallery-container {
         position: relative;
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
         max-width: 100%;
         width: 95%;
         margin: 0 auto;
@@ -745,6 +746,20 @@ header {
           );
         border: solid rgba($color2, 0.75) 5px;
         box-shadow: rgba($black, 0.25) inset 0px 20px 50px 5px;
+        scrollbar-width: thin;
+        scrollbar-color: rgba($color2, 0.8) rgba($black, 0.65);
+
+        &::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba($black, 0.65);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba($color2, 0.8);
+        }
 
         @media only screen and (max-width: $tablet) {
             max-width: 85%;
@@ -783,6 +798,13 @@ header {
         &.paused .gallery-item .gallery-item-info {
             display: flex;
             opacity: 100%;
+        }
+
+        .gallery-end-space {
+            width: 220px;
+            min-width: 220px;
+            height: 1px;
+            pointer-events: none;
         }
     }
     .gallery-item {
@@ -1182,9 +1204,9 @@ header {
             min-height: 100%;
 
             .headshot {
-                border: solid rgba($color3, 0.25) 15px;
+                border: solid rgba($color3, 0.25) 5px;
                 width: 100%;
-                max-width: 250px;
+                max-width: 200px;
                 max-height: 250px;
                 pointer-events: none;
                 transition: opacity 0.5s;
@@ -1476,11 +1498,12 @@ header {
 
         // individual projects
         .project {
+            display: flex;
+            flex-direction: column;
             @include borderedBox(rgba($color3, 0.5), $color2);
             margin: 0;
             height: 100%;
-            width: calc(31% - 5px);
-            max-width: 585px;
+            width: 375px;
 
             .tags {
                 min-width: 100%;
@@ -1528,15 +1551,34 @@ header {
                 max-width: 100%;
             }
 
+            .project-image {
+                image-rendering: pixelated;
+                width: calc(100% - 20px);
+                margin: 10px auto;
+                margin-top: 0;
+                pointer-events: none;
+                border: solid rgba($black, 0.4) 4px;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+
+                @media only screen and (max-width: $tablet) {
+                    margin: 10px 2.5%;
+                    margin-top: 0;
+                }
+            }
+
             // project description
             .project-description {
-                @include flex(row, 0, center);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 padding: 0;
                 overflow: hidden;
 
                 // buttons
                 .button {
-                    width: 40%;
+                    width: 95%;
                     display: flex;
                     justify-content: space-between;
                     gap: 5px;
@@ -1564,10 +1606,6 @@ header {
                         padding: 10px;
                         padding-bottom: 7px;
                         gap: 4px;
-
-                        &:first-of-type {
-                            margin-left: 10px;
-                        }
                         
                         &:hover, &:focus {
                             background-color: $white;
@@ -1601,14 +1639,6 @@ header {
                         padding: 15px;
                         opacity: 1;
                         transition: display 0.6s, max-height 0.6s, opacity 0.75s;
-
-                        .project-image {
-                            image-rendering: pixelated;
-                            max-width: 100%;
-                            margin-bottom: 10px;
-                            pointer-events: none;
-                            border: solid rgba($black, 0.4) 4px;
-                        }
                     }
                 }
             }

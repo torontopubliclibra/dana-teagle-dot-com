@@ -265,7 +265,7 @@ h2 {
 }
 
 h3 {
-  @include textStyle (18px, center, 1.5);
+  @include textStyle (1.25rem, center, 1.5);
   font-weight: 600;
   font-style: italic;
   margin: 0 auto;

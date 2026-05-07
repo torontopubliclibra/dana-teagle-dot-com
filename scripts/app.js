@@ -30,6 +30,7 @@ const app = {
         projectDescription: $(".project-description"),
         projectsErrorMessage: $(".js-disabled-projects"),
         headshotWrapper: $(".headshot-wrapper"),
+        galleryContainer: document.querySelector(".gallery-container"),
         galleryContent: document.querySelector(".gallery-content"),
         galleryErrorMessage: $(".js-disabled-gallery"),
         pauseButton: document.querySelector(".pause-button"),
@@ -177,13 +178,14 @@ const app = {
                     let itemLinks = [];
                     let formattedLinks = ``;
                     if (item.site) {
-                        itemLinks.push(`<a href="${item.site}" target="_blank" title="${item.title} website">Site</a>`)
+                        const siteLabel = item.site.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+                        itemLinks.push(`<a href="${item.site}" target="_blank" title="${item.title} website">${siteLabel}</a>`)
                     }
                     if (item.instagram) {
                         itemLinks.push(`<a href="${item.instagram}" target="_blank" title="${item.title} instagram">Instagram</a>`)
                     }
                     if (item.id) {
-                        itemLinks.push(`<button onclick="app.functions.projectDisplay('All', app.projects.expand); app.functions.readMoreByID('${item.id}'); app.functions.scroll('${item.id}')">Project info</button>`)
+                        itemLinks.push(`<button onclick="app.functions.projectDisplay('All', app.projects.expand); app.functions.readMoreByID('${item.id}'); app.functions.scroll('${item.id}')">Read more</button>`)
                     }
                     if (itemLinks.length > 0) {
                         formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + ` | ` + item}) + `</p>`
@@ -196,7 +198,7 @@ const app = {
                 });
                 app.elements.galleryContent.innerHTML= galleryArray.reduce((accumulator, item) => {
                     return accumulator + item;
-                });
+                }) + `<div class="gallery-end-space" aria-hidden="true"></div>`;
             }
             if (app.elements.galleryContent) {
                 setTimeout(() => {
@@ -205,6 +207,23 @@ const app = {
                     galleryItems.forEach(item => {
                         totalWidth += item.offsetWidth;
                     });
+                    // Add leading space equal to the max leftward pixel shift so the user can
+                    // scroll back to the beginning after the animation has run to the left.
+                    // Max leftward shift = totalWidth * 0.475 * 1.2 (derived from the formula below).
+                    const spacerWidth = Math.ceil(totalWidth * 0.475 * 1.2);
+                    let startSpacer = app.elements.galleryContent.querySelector('.gallery-start-space');
+                    if (!startSpacer) {
+                        startSpacer = document.createElement('div');
+                        startSpacer.className = 'gallery-start-space';
+                        startSpacer.setAttribute('aria-hidden', 'true');
+                        app.elements.galleryContent.insertBefore(startSpacer, app.elements.galleryContent.firstChild);
+                    }
+                    startSpacer.style.width = `${spacerWidth}px`;
+                    startSpacer.style.minWidth = `${spacerWidth}px`;
+                    startSpacer.style.height = '1px';
+                    startSpacer.style.flexShrink = '0';
+                    startSpacer.style.pointerEvents = 'none';
+                    // Recalculate using the new (wider) content width so the initial view is unchanged.
                     let galleryTransform = ((totalWidth / app.elements.galleryContent.offsetWidth) * 0.475) * 120;
                     let style = document.createElement('style');
                     let keyframes = `
@@ -234,6 +253,9 @@ const app = {
                     if (app.gallery.paused === true) {
                         app.elements.galleryContent.style.animationPlayState = 'paused';
                     }
+                    // Start scroll at beginning of content (after the leading space) so the
+                    // initial view is unchanged, while leaving room to scroll back to the left.
+                    app.elements.galleryContainer.scrollLeft = spacerWidth;
                 }, 1000);
             }
         },
@@ -364,7 +386,7 @@ const app = {
                     site: "",
                     code: "",
                 };
-                formattedProject.heading = `<h3>${project.title} (${project.year})</h3>`
+                formattedProject.heading = `<h3>${project.title}</h3>`
                 let formattedTags = project.tags.map((tag) => {
                     if (tag === app.projects.filter) {
                         return `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
@@ -390,14 +412,14 @@ const app = {
                     formattedProject.description =
                         `<button class="button read-more" title="`
                         + project.title
-                        + ` project description" style="margin-left: 5px;">Read more<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
-                        + formattedProject.image
+                        + ` project description">About this project<img src="./assets/icons/expand-down.svg"  alt="expand description icon"></button><p>`
                         + formattedParagraph
                         + `</p>`
                 }
                 if (project.site) {
+                    const siteLabel = project.site.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
                     formattedProject.site =
-                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website" style="margin-right: 5px;">Website<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
+                        `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">${siteLabel}<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
                     };
                 if (project.code) {
                     formattedProject.code =
@@ -405,6 +427,7 @@ const app = {
                     };
                 return `<div class="project" id="${project.id}">`
                 + formattedProject.heading
+                + formattedProject.image
                 + `<div class="project-description">`
                 + formattedProject.site
                 + formattedProject.code
@@ -429,12 +452,12 @@ const app = {
         readMore(project, paragraph, button) {
             if (!button.classList.contains('read-less')){
                 button.classList.add("read-less");
-                button.innerHTML = `Read less<img src="./assets/icons/collapse-up.svg" alt="collapse description icon">`;
+                button.innerHTML = `About this project<img src="./assets/icons/collapse-up.svg" alt="collapse description icon">`;
                 project.classList.add("active");
                 paragraph.style.maxHeight = (paragraph.scrollHeight + 30) + `px`;
             } else {
                 button.classList.remove("read-less");
-                button.innerHTML = `Read more<img src="./assets/icons/expand-down.svg" alt="expand description icon">`;
+                button.innerHTML = `About this project<img src="./assets/icons/expand-down.svg" alt="expand description icon">`;
                 project.classList.remove("active");
                 paragraph.style.maxHeight = 0;
                 document.activeElement.blur();
@@ -474,6 +497,19 @@ const app = {
                     this.querySelector('img').style.transform = 'rotate(0deg)';
                 }
             });
+        }
+
+        if (app.elements.galleryContainer) {
+            app.elements.galleryContainer.addEventListener('wheel', (event) => {
+                const scrollDelta = event.deltaX || (event.shiftKey ? event.deltaY : 0);
+
+                if (scrollDelta === 0) {
+                    return;
+                }
+
+                event.preventDefault();
+                app.elements.galleryContainer.scrollLeft += scrollDelta;
+            }, { passive: false });
         }
         
         window.addEventListener('resize', () => {

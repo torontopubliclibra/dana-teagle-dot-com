@@ -2,6 +2,8 @@
 const tplFeed = {
     content: $(".feed-items"),
     toggle: $(".feed-toggle"),
+    lightbox: null,
+    lastActiveElement: null,
     range: { start: 0, end: 10 },
     items: [],
     visibleItems: [],
@@ -114,6 +116,95 @@ const tplFeed = {
                 altButton.addClass('selected');
             }
         },
+        ensureLightbox() {
+            if (tplFeed.lightbox) return tplFeed.lightbox;
+
+            $('body').append(`
+                <div class="feed-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded feed media">
+                    <div class="feed-lightbox-panel">
+                        <button type="button" class="feed-lightbox-close" aria-label="Close media viewer">close</button>
+                        <div class="feed-lightbox-frame"></div>
+                        <p class="feed-lightbox-caption"></p>
+                        <p class="feed-lightbox-actions"></p>
+                    </div>
+                </div>
+            `);
+
+            tplFeed.lightbox = $('.feed-lightbox');
+            tplFeed.lightbox.on('click', event => {
+                if ($(event.target).is('.feed-lightbox, .feed-lightbox-close')) {
+                    tplFeed.functions.closeLightbox();
+                }
+            });
+
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('click', event => {
+                if (!$(event.target).is('.feed-lightbox-close')) {
+                    event.stopPropagation();
+                }
+            });
+
+            $(document).on('keydown', tplFeed.functions.handleLightboxKeydown);
+
+            return tplFeed.lightbox;
+        },
+        openLightbox(mediaElement, externalLink) {
+            const lightbox = tplFeed.functions.ensureLightbox();
+            const media = $(mediaElement);
+            const isVideo = media.is('video');
+            const source = isVideo ? media.find('source').attr('src') || media.attr('src') : media.attr('src');
+            const poster = isVideo ? media.attr('poster') || '' : '';
+            const alt = media.attr('alt') || media.closest('.feed-item-container').find('.alt').text().trim();
+            const frameMarkup = isVideo
+                ? `<video class="feed-lightbox-media" controls autoplay playsinline preload="metadata" ${poster ? `poster="${poster}"` : ''}><source src="${source}" type="video/mp4">Your browser does not support the video tag.</video>`
+                : `<img src="${source}" alt="${alt}" class="feed-lightbox-media">`;
+
+            tplFeed.lastActiveElement = document.activeElement;
+            lightbox.find('.feed-lightbox-frame').html(frameMarkup);
+            lightbox.find('.feed-lightbox-actions').html(
+                externalLink
+                    ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="feed-lightbox-link">open link</a>`
+                    : ''
+            );
+            $('body').addClass('feed-lightbox-open');
+            lightbox.attr('aria-hidden', 'false').addClass('is-open');
+            lightbox.find('.feed-lightbox-close').trigger('focus');
+        },
+        closeLightbox() {
+            if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) return;
+
+            tplFeed.lightbox.find('video').each((_, video) => {
+                video.pause();
+                video.currentTime = 0;
+            });
+            tplFeed.lightbox.removeClass('is-open').attr('aria-hidden', 'true');
+            tplFeed.lightbox.find('.feed-lightbox-frame, .feed-lightbox-actions').empty();
+            tplFeed.lightbox.find('.feed-lightbox-caption').text('');
+            $('body').removeClass('feed-lightbox-open');
+
+            if (tplFeed.lastActiveElement && typeof tplFeed.lastActiveElement.focus === 'function') {
+                tplFeed.lastActiveElement.focus();
+            }
+        },
+        handleLightboxKeydown(event) {
+            if (event.key === 'Escape') {
+                tplFeed.functions.closeLightbox();
+            }
+        },
+        mediaClick(event) {
+            const media = event.target.closest('.feed-item');
+            if (!media) return;
+
+            const anchor = media.closest('a[href]');
+            if (anchor && (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button === 1)) {
+                return;
+            }
+
+            if (anchor) {
+                event.preventDefault();
+            }
+
+            tplFeed.functions.openLightbox(media, anchor ? anchor.href : '');
+        },
     },
     init() {
         fetch('../data/feed.json')
@@ -124,6 +215,7 @@ const tplFeed = {
                 tplFeed.functions.scrollToHash();
             })
             .catch(error => console.log(error));
+        tplFeed.content.on('click', '.feed-item, a:has(.feed-item)', tplFeed.functions.mediaClick);
         window.addEventListener('hashchange', tplFeed.functions.scrollToHash);
     }
 };
