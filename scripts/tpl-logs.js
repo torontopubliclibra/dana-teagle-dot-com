@@ -15,6 +15,11 @@ const tplLogs = {
     tmdbKey: '1d27d67ac5b026aad089308525f64f5f',
     postersFetched: {},
     functions: {
+        categories: [
+            { key: 'movies', label: 'movies watched', icon: 'arrow-down.svg' },
+            { key: 'books', label: 'books read', icon: 'arrow-down.svg' },
+            { key: 'tv', label: 'tv shows watched', icon: 'arrow-down.svg' }
+        ],
         yearSet(year) {
             tplLogs.year = year;
             tplLogs.yearSelect = tplLogs.functions.generateYearSelect(year);
@@ -45,6 +50,77 @@ const tplLogs = {
         seasonStr(season) {
             if (!season) return '';
             return typeof season === 'string' && season.includes('-') ? ` seasons ${season}` : ` season ${season}`;
+        },
+        getPosterUrl(poster) {
+            return poster ? (poster.startsWith('http') ? poster : `https://image.tmdb.org/t/p/w185${poster}`) : '';
+        },
+        escapeTitle(title) {
+            return `${title || ''}`.replace(/'/g, '&#39;');
+        },
+        getTopToggles() {
+            return tplLogs.yearSelect + tplLogs.viewSelect;
+        },
+        renderFooter(topToggles) {
+            return `<hr>${topToggles}<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`;
+        },
+        renderSectionHeader(cat, year, count, index) {
+            return `${index === 0 ? '<hr class="no-top">' : '<hr>'}<p id="${cat.key}">>> ${cat.label} in ${year} (${count})</p>`;
+        },
+        renderCategoryNav(yearObj) {
+            const navItems = tplLogs.functions.categories
+                .filter(cat => yearObj[cat.key].length > 0)
+                .map(cat => `<li class="link-category"><a href="#${cat.key}">${cat.label} (${yearObj[cat.key].length})<img src="../assets/icons/${cat.icon}" alt="scroll down icon"></a></li>`);
+
+            return navItems.length > 0
+                ? `<hr class="alt"><div class="tpl-categories logs"><ul>${navItems.join('')}</ul></div>`
+                : '';
+        },
+        getShelfImageUrl(item) {
+            return item.poster || item.coverUrl || item.cover || '';
+        },
+        renderShelfCard(item, options) {
+            const label = item.log || '';
+            const imageUrl = tplLogs.functions.getShelfImageUrl(item);
+            const posterUrl = options.imageType === 'book'
+                ? imageUrl
+                : tplLogs.functions.getPosterUrl(imageUrl);
+            const fallbackClass = options.fallbackClass ? ` ${options.fallbackClass}` : '';
+            const img = posterUrl
+                ? `<img src="${posterUrl}" alt="${label.replace(/"/g, '&quot;')} ${options.altText}" class="now-poster"/>`
+                : `<div class="now-poster-fallback${fallbackClass}">${label}</div>`;
+            const link = item.link || options.fallbackLink;
+            const target = item.link ? ' target="_blank" rel="noopener noreferrer"' : '';
+            return `<a href="${link}"${target} class="${options.className} now-card">${img}${options.renderInfo(item)}</a>`;
+        },
+        formatLinkedTitle(title, href) {
+            const safeTitle = title || '';
+            return href ? `'` + `<a href="${href}" target="_blank">${safeTitle}</a>` + `'` : `'${safeTitle}'`;
+        },
+        renderListBook(item) {
+            let logStr = tplLogs.functions.formatLinkedTitle(item.log, item.link);
+            if (item.year) logStr += ` (${item.year})`;
+            if (item.author) logStr += ` by ${item.author}`;
+            return `<p class="sub">> ${logStr}</p>`;
+        },
+        renderListMedia(item, includeSeason) {
+            let logStr = tplLogs.functions.formatLinkedTitle(item.log, item.link);
+            if (includeSeason && item.season) {
+                logStr += tplLogs.functions.seasonStr(item.season);
+            }
+            if (item.year) {
+                logStr += ` (${item.year}`;
+                if (item.rewatch) logStr += ', rewatch';
+                logStr += ')';
+            }
+            return `<p class="sub">> ${logStr}</p>`;
+        },
+        renderListItem(catKey, item) {
+            if (typeof item !== 'object' || item === null) {
+                return `<p class="sub">> ${item}</p>`;
+            }
+
+            if (catKey === 'books') return tplLogs.functions.renderListBook(item);
+            return tplLogs.functions.renderListMedia(item, catKey === 'tv');
         },
         fetchPostersForYear(year) {
             if (tplLogs.postersFetched[year]) return;
@@ -100,125 +176,82 @@ const tplLogs = {
         },
         renderMoviesShelves(movies) {
             if (!movies.length) return '';
-            const movieItems = movies.map(movie => {
-                const posterUrl = movie.poster ? (movie.poster.startsWith('http') ? movie.poster : `https://image.tmdb.org/t/p/w185${movie.poster}`) : '';
-                const img = posterUrl ? `<img src="${posterUrl}" alt="${movie.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback">${movie.log}</div>`;
-                const info = `<div class="now-card-info"><span>&gt; '${movie.log.replace(/'/g, '&#39;')}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})</span></div>`;
-                const link = movie.link || '#movies';
-                const target = movie.link ? ' target="_blank" rel="noopener noreferrer"' : '';
-                return `<a href="${link}"${target} class="now-movie now-card">${img}${info}</a>`;
-            }).join('');
+            const movieItems = movies.map(movie => tplLogs.functions.renderShelfCard(movie, {
+                className: 'now-movie',
+                fallbackLink: '#movies',
+                altText: 'poster',
+                renderInfo(entry) {
+                    return `<div class="now-card-info"><span>&gt; '${tplLogs.functions.escapeTitle(entry.log)}' (${entry.year}${entry.rewatch ? ', rewatch' : ''})</span></div>`;
+                }
+            })).join('');
             return `<div class="now-scroll log-scroll">${movieItems}</div>`;
         },
         renderBooksShelves(books) {
             if (!books.length) return '';
-            const bookItems = books.map(book => {
-                const title = book.log || '';
-                const author = book.author || '';
-                const year = book.year || '';
-                const coverUrl = book.coverUrl || '';
-                const img = coverUrl ? `<img src="${coverUrl}" alt="${title.replace(/"/g, '&quot;')} cover" class="now-poster"/>` : `<div class="now-poster-fallback tall">${title}</div>`;
-                let infoText = `&gt; '${title.replace(/'/g, '&#39;')}'`;
-                if (year) infoText += ` (${year})`;
-                if (author) infoText += ` \\ ${author}`;
-                const info = `<div class="now-card-info"><span>${infoText}</span></div>`;
-                const link = book.link || '#books';
-                const target = book.link ? ' target="_blank" rel="noopener noreferrer"' : '';
-                return `<a href="${link}"${target} class="now-book now-card">${img}${info}</a>`;
-            }).join('');
+            const bookItems = books.map(book => tplLogs.functions.renderShelfCard(book, {
+                className: 'now-book',
+                fallbackLink: '#books',
+                imageType: 'book',
+                altText: 'cover',
+                fallbackClass: 'tall',
+                renderInfo(entry) {
+                    let infoText = `&gt; '${tplLogs.functions.escapeTitle(entry.log)}'`;
+                    if (entry.year) infoText += ` (${entry.year})`;
+                    if (entry.author) infoText += ` \\ ${entry.author}`;
+                    return `<div class="now-card-info"><span>${infoText}</span></div>`;
+                }
+            })).join('');
             return `<div class="now-scroll log-scroll">${bookItems}</div>`;
         },
         renderTVShelves(tv) {
             if (!tv.length) return '';
-            const tvItems = tv.map(show => {
-                const posterUrl = show.poster ? (show.poster.startsWith('http') ? show.poster : `https://image.tmdb.org/t/p/w185${show.poster}`) : '';
-                const img = posterUrl ? `<img src="${posterUrl}" alt="${show.log.replace(/"/g, '&quot;')} poster" class="now-poster"/>` : `<div class="now-poster-fallback tall">${show.log}</div>`;
-                const info = `<div class="now-card-info"><span>&gt; '${show.log.replace(/'/g, '&#39;')}'${tplLogs.functions.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})</span></div>`;
-                const link = show.link || '#tv';
-                const target = show.link ? ' target="_blank" rel="noopener noreferrer"' : '';
-                return `<a href="${link}"${target} class="now-tv now-card">${img}${info}</a>`;
-            }).join('');
+            const tvItems = tv.map(show => tplLogs.functions.renderShelfCard(show, {
+                className: 'now-tv',
+                fallbackLink: '#tv',
+                altText: 'poster',
+                fallbackClass: 'tall',
+                renderInfo(entry) {
+                    return `<div class="now-card-info"><span>&gt; '${tplLogs.functions.escapeTitle(entry.log)}'${tplLogs.functions.seasonStr(entry.season)} (${entry.year}${entry.rewatch ? ', rewatch' : ''})</span></div>`;
+                }
+            })).join('');
             return `<div class="now-scroll log-scroll">${tvItems}</div>`;
         },
         logsDisplay() {
             const year = tplLogs.year;
             const yearObj = tplLogs.years[year];
-            const categories = [
-                { key: 'movies', label: 'movies watched', icon: 'arrow-down.svg' },
-                { key: 'books', label: 'books read', icon: 'arrow-down.svg' },
-                { key: 'tv', label: 'tv shows watched', icon: 'arrow-down.svg' }
-            ];
-            const topToggles = tplLogs.yearSelect + tplLogs.viewSelect;
+            const categories = tplLogs.functions.categories;
+            const topToggles = tplLogs.functions.getTopToggles();
 
             if (tplLogs.view === 'shelves') {
                 const formattedLogs = [topToggles];
                 categories.forEach((cat, idx) => {
-                    const count = yearObj[cat.key].length;
-                    if (count > 0) {
-                        formattedLogs.push(`${idx === 0 ? '<hr class="no-top">' : '<hr>'}<p id="${cat.key}">>> ${cat.label} in ${year} (${count})</p>`);
-                        if (cat.key === 'movies') formattedLogs.push(tplLogs.functions.renderMoviesShelves(yearObj.movies));
-                        else if (cat.key === 'books') formattedLogs.push(tplLogs.functions.renderBooksShelves(yearObj.books));
-                        else if (cat.key === 'tv') formattedLogs.push(tplLogs.functions.renderTVShelves(yearObj.tv));
+                    const items = yearObj[cat.key];
+                    if (items.length > 0) {
+                        formattedLogs.push(tplLogs.functions.renderSectionHeader(cat, year, items.length, idx));
+                        if (cat.key === 'movies') formattedLogs.push(tplLogs.functions.renderMoviesShelves(items));
+                        else if (cat.key === 'books') formattedLogs.push(tplLogs.functions.renderBooksShelves(items));
+                        else if (cat.key === 'tv') formattedLogs.push(tplLogs.functions.renderTVShelves(items));
                     }
                 });
                 tplLogs.date.text(year === "2026" ? ` // up to ${tplLogs.updated}` : "");
-                formattedLogs.push(`<hr>` + topToggles + `<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`);
+                formattedLogs.push(tplLogs.functions.renderFooter(topToggles));
                 tplLogs.content.html(formattedLogs.join(''));
                 return;
             }
 
-            const navItems = categories
-                .filter(cat => yearObj[cat.key].length > 0)
-                .map(cat => `<li class="link-category"><a href="#${cat.key}">${cat.label} (${yearObj[cat.key].length})<img src="../assets/icons/${cat.icon}" alt="scroll down icon"></a></li>`);
-            let logCategories = navItems.length > 0 ? `<hr class="alt"><div class="tpl-categories logs"><ul>${navItems.join('')}</ul></div>` : '';
-            const toggles = topToggles + logCategories;
+            const toggles = topToggles + tplLogs.functions.renderCategoryNav(yearObj);
             const formattedLogs = [toggles];
             categories.forEach((cat, idx) => {
-                const count = yearObj[cat.key].length;
-                if (count > 0) {
-                    formattedLogs.push(`${idx === 0 ? '<hr class="no-top">' : '<hr>'}<p id="${cat.key}">>> ${cat.label} in ${year} (${count})`);
-                        yearObj[cat.key].forEach(item => {
-                            if (typeof item === 'object' && item !== null) {
-                                let logStr = '';
-                                if (cat.key === 'books') {
-                                    let title = item.log || '';
-                                    if (item.link) {
-                                        title = `'` + `<a href="${item.link}" target="_blank">${title}</a>` + `'`;
-                                    } else {
-                                        title = `'` + title + `'`;
-                                    }
-                                    let author = item.author ? ` by ${item.author}` : '';
-                                    let year = item.year ? ` (${item.year})` : '';
-                                    logStr = `${title}${year}${author}`;
-                                } else {
-                                    let logTitle = `'` + item.log + `'` || '';
-                                    if (item.link) {
-                                        logTitle = `'` + `<a href="${item.link}" target="_blank">${item.log}</a>` + `'`;
-                                    }
-                                    let seasonStr = '';
-                                    if (cat.key === 'tv' && item.season) {
-                                        if (typeof item.season === 'string' && item.season.includes('-')) {
-                                            seasonStr = ` seasons ${item.season}`;
-                                        } else {
-                                            seasonStr = ` season ${item.season}`;
-                                        }
-                                    }
-                                    logStr = logTitle + seasonStr;
-                                    if (item.year) {
-                                        logStr += ` (${item.year}`;
-                                        if (item.rewatch) logStr += ', rewatch';
-                                        logStr += ')';
-                                    }
-                                }
-                                formattedLogs.push(`<p class="sub">> ${logStr}</p>`);
-                            } else {
-                                formattedLogs.push(`<p class="sub">> ${item}</p>`);
-                            }
-                        });
+                const items = yearObj[cat.key];
+                if (items.length > 0) {
+                    formattedLogs.push(tplLogs.functions.renderSectionHeader(cat, year, items.length, idx));
+                    items.forEach(item => {
+                        formattedLogs.push(tplLogs.functions.renderListItem(cat.key, item));
+                    });
                 }
             });
             tplLogs.date.text(year === "2026" ? ` // up to ${tplLogs.updated}` : "");
-            formattedLogs.push(`<hr>` + topToggles + `<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`);
+            formattedLogs.push(tplLogs.functions.renderFooter(topToggles));
             tplLogs.content.html(formattedLogs.join(''));
         },
     },

@@ -1,3 +1,6 @@
+const FEED_PAGE_SIZE = 10;
+const NARROW_VIEWPORT_QUERY = '(max-width: 600px)';
+const MOBILE_VIEWPORT_QUERY = '(max-width: 768px), (hover: none) and (pointer: coarse)';
 
 const tplFeed = {
     content: $(".feed-items"),
@@ -5,42 +8,100 @@ const tplFeed = {
     lightbox: null,
     lastActiveElement: null,
     lastScrollPosition: 0,
+    lastOpenedItemId: '',
     scrollLock: {
         active: false,
         y: 0,
         bodyStyles: {}
     },
-    range: { start: 0, end: 10 },
+    range: { start: 0, end: FEED_PAGE_SIZE },
     items: [],
     visibleItems: [],
     functions: {
+        getItemIndex(id) {
+            return tplFeed.items.findIndex(item => item.id === id);
+        },
+        getRangeEnd(start = tplFeed.range.start) {
+            return Math.min(start + FEED_PAGE_SIZE, tplFeed.items.length);
+        },
+        setRange(start) {
+            tplFeed.range.start = Math.max(0, start);
+            tplFeed.range.end = tplFeed.functions.getRangeEnd(tplFeed.range.start);
+        },
+        setRangeForIndex(index) {
+            const start = Math.floor(index / FEED_PAGE_SIZE) * FEED_PAGE_SIZE;
+            tplFeed.functions.setRange(start);
+        },
+        renderCurrentRange() {
+            const { start, end } = tplFeed.range;
+            tplFeed.visibleItems = tplFeed.items.slice(start, end);
+            tplFeed.content.html(tplFeed.visibleItems.map(tplFeed.functions.feedItemHTML).join(''));
+            tplFeed.functions.updateToggle();
+        },
+        scrollItemIntoView(id, block = 'start', offset = 0) {
+            const el = document.getElementById(id);
+            if (!el) {
+                return false;
+            }
+
+            el.scrollIntoView({ behavior: 'smooth', block });
+            if (offset) {
+                setTimeout(() => {
+                    const rect = el.getBoundingClientRect();
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    window.scrollTo({ top: rect.top + scrollTop - offset, behavior: 'auto' });
+                }, 350);
+            }
+
+            return true;
+        },
+        scrollToPageTop() {
+            setTimeout(() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }, 100);
+        },
+        getAltElements(id) {
+            return {
+                altElement: $(`#${id} .alt`),
+                altButton: $(`#${id} button`)
+            };
+        },
+        buildFeedMedia(item) {
+            const mediaMarkup = item.type === 'video'
+                ? `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}">
+                        <source src="${item.url}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>`
+                : `<img src="${item.url}" alt="${item.alt}" class="feed-item">`;
+
+            if (!item.link) {
+                return mediaMarkup;
+            }
+
+            return `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${mediaMarkup}</a>`;
+        },
+        buildLightboxMedia({ isVideo, source, poster, alt }) {
+            if (isVideo) {
+                return `<video class="feed-lightbox-media" controls autoplay playsinline preload="metadata" ${poster ? `poster="${poster}"` : ''}><source src="${source}" type="video/mp4">Your browser does not support the video tag.</video>`;
+            }
+
+            return `<img src="${source}" alt="${alt}" class="feed-lightbox-media">`;
+        },
         scrollToHash() {
             const hash = window.location.hash.substring(1);
             if (!hash) return;
-            const idx = tplFeed.items.findIndex(item => item.id === hash);
+
+            const idx = tplFeed.functions.getItemIndex(hash);
             if (idx === -1) return;
-            const scrollToItem = (block = 'start', offset = 0) => {
-                const el = document.getElementById(hash);
-                if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block });
-                    if (offset) {
-                        setTimeout(() => {
-                            const rect = el.getBoundingClientRect();
-                            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                            window.scrollTo({ top: rect.top + scrollTop - offset, behavior: 'auto' });
-                        }, 350);
-                    }
-                }
-            };
+
             if (idx < tplFeed.range.start || idx >= tplFeed.range.end) {
-                tplFeed.range.start = Math.floor(idx / 10) * 10;
-                tplFeed.range.end = tplFeed.range.start + 10;
-                tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
+                tplFeed.functions.setRangeForIndex(idx);
+                tplFeed.functions.renderCurrentRange();
+
                 const tryScroll = () => {
-                    const el = document.getElementById(hash);
-                    if (el) {
+                    if (document.getElementById(hash)) {
                         setTimeout(() => {
-                            scrollToItem('center', window.matchMedia('(max-width: 600px)').matches ? 290 : 260);
+                            tplFeed.functions.scrollItemIntoView(hash, 'center', tplFeed.functions.preferredScrollOffset());
                         }, 250);
                     } else {
                         requestAnimationFrame(tryScroll);
@@ -48,27 +109,19 @@ const tplFeed = {
                 };
                 tryScroll();
             } else {
-                setTimeout(() => scrollToItem(), 250);
+                setTimeout(() => tplFeed.functions.scrollItemIntoView(hash), 250);
             }
         },
         feedDisplay(start, end) {
-            tplFeed.visibleItems = tplFeed.items.slice(start, end);
-            tplFeed.content.html(tplFeed.visibleItems.map(tplFeed.functions.feedItemHTML).join(''));
-            tplFeed.functions.updateToggle();
+            tplFeed.range.start = start;
+            tplFeed.range.end = Math.min(end, tplFeed.items.length);
+            tplFeed.functions.renderCurrentRange();
         },
         feedItemHTML(item) {
             const permalink = `torontopubliclibra.com/feed#${item.id}`;
             const mailto = `mailto:torontopubliclibra@gmail.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
             const dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
-            let mediaTag = item.type === 'video'
-                ? `<video class="feed-item" controls preload="metadata" poster="${item.poster || ''}">
-                        <source src="${item.url}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>`
-                : `<img src="${item.url}" alt="${item.alt}" class="feed-item">`;
-            if (item.link) {
-                mediaTag = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${mediaTag}</a>`;
-            }
+            const mediaTag = tplFeed.functions.buildFeedMedia(item);
             return `<div class="feed-item-container" id="${item.id}">${mediaTag}<p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
         },
         updateToggle() {
@@ -89,30 +142,28 @@ const tplFeed = {
             `);
         },
         changeRange(dir) {
-            setTimeout(() => {
-                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-            }, 100);
-            const step = 10;
+            tplFeed.functions.scrollToPageTop();
+
             if (dir === 'newer' && tplFeed.range.start > 0) {
-                tplFeed.range.start -= step;
-                tplFeed.range.end -= step;
+                tplFeed.functions.setRange(tplFeed.range.start - FEED_PAGE_SIZE);
             } else if (dir === 'older' && tplFeed.range.end < tplFeed.items.length) {
-                tplFeed.range.start += step;
-                tplFeed.range.end += step;
+                tplFeed.functions.setRange(tplFeed.range.start + FEED_PAGE_SIZE);
             }
-            tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
+
+            tplFeed.functions.renderCurrentRange();
         },
         newer() { tplFeed.functions.changeRange('newer'); },
         older() { tplFeed.functions.changeRange('older'); },
         resetAltToggles() {
             tplFeed.visibleItems.forEach(item => {
-                $(`#${item.id} .alt`).removeClass('alt-visible');
-                $(`#${item.id} button`).removeClass('selected');
+                const { altElement, altButton } = tplFeed.functions.getAltElements(item.id);
+                altElement.removeClass('alt-visible');
+                altButton.removeClass('selected');
             });
         },
         altToggle(id) {
-            const altElement = $(`#${id} .alt`);
-            const altButton = $(`#${id} button`);
+            const { altElement, altButton } = tplFeed.functions.getAltElements(id);
+
             if (altElement.hasClass('alt-visible')) {
                 altElement.removeClass('alt-visible');
                 altButton.removeClass('selected');
@@ -122,11 +173,14 @@ const tplFeed = {
                 altButton.addClass('selected');
             }
         },
-        shouldUseMobileScrollLock() {
-            return window.matchMedia('(max-width: 768px), (hover: none) and (pointer: coarse)').matches;
+        isMobileViewport() {
+            return window.matchMedia(MOBILE_VIEWPORT_QUERY).matches;
         },
-        lockMobileScroll() {
-            if (!tplFeed.functions.shouldUseMobileScrollLock() || tplFeed.scrollLock.active) {
+        preferredScrollOffset() {
+            return window.matchMedia(NARROW_VIEWPORT_QUERY).matches ? 290 : 260;
+        },
+        lockPageScroll() {
+            if (tplFeed.scrollLock.active) {
                 return;
             }
 
@@ -149,7 +203,7 @@ const tplFeed = {
             body.style.overflow = 'hidden';
             tplFeed.scrollLock.active = true;
         },
-        unlockMobileScroll() {
+        unlockPageScroll() {
             if (!tplFeed.scrollLock.active) {
                 return;
             }
@@ -203,21 +257,19 @@ const tplFeed = {
             const source = isVideo ? media.find('source').attr('src') || media.attr('src') : media.attr('src');
             const poster = isVideo ? media.attr('poster') || '' : '';
             const alt = media.attr('alt') || media.closest('.feed-item-container').find('.alt').text().trim();
-            const frameMarkup = isVideo
-                ? `<video class="feed-lightbox-media" controls autoplay playsinline preload="metadata" ${poster ? `poster="${poster}"` : ''}><source src="${source}" type="video/mp4">Your browser does not support the video tag.</video>`
-                : `<img src="${source}" alt="${alt}" class="feed-lightbox-media">`;
+            const frameMarkup = tplFeed.functions.buildLightboxMedia({ isVideo, source, poster, alt });
 
             tplFeed.lastActiveElement = document.activeElement;
             tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+            tplFeed.lastOpenedItemId = media.closest('.feed-item-container').attr('id') || '';
             lightbox.find('.feed-lightbox-frame').html(frameMarkup);
             lightbox.find('.feed-lightbox-actions').html(
                 externalLink
                     ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="feed-lightbox-link">open link</a>`
                     : ''
             );
-            document.documentElement.classList.add('feed-lightbox-open');
             $('body').addClass('feed-lightbox-open');
-            tplFeed.functions.lockMobileScroll();
+            tplFeed.functions.lockPageScroll();
             lightbox.attr('aria-hidden', 'false').addClass('is-open');
             lightbox.find('.feed-lightbox-close').trigger('focus');
         },
@@ -232,9 +284,8 @@ const tplFeed = {
             tplFeed.lightbox.removeClass('is-open').attr('aria-hidden', 'true');
             tplFeed.lightbox.find('.feed-lightbox-frame, .feed-lightbox-actions').empty();
             tplFeed.lightbox.find('.feed-lightbox-caption').text('');
-            document.documentElement.classList.remove('feed-lightbox-open');
             $('body').removeClass('feed-lightbox-open');
-            tplFeed.functions.unlockMobileScroll();
+            tplFeed.functions.unlockPageScroll();
 
             if (tplFeed.lastActiveElement && typeof tplFeed.lastActiveElement.focus === 'function') {
                 try {
@@ -246,6 +297,22 @@ const tplFeed = {
 
             window.scrollTo(0, restoreY);
             requestAnimationFrame(() => window.scrollTo(0, restoreY));
+
+            if (tplFeed.functions.isMobileViewport() && tplFeed.lastOpenedItemId) {
+                const opener = document.getElementById(tplFeed.lastOpenedItemId);
+                if (opener) {
+                    requestAnimationFrame(() => {
+                        const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
+                        if (Math.abs(currentY - restoreY) > 6) {
+                            const rect = opener.getBoundingClientRect();
+                            const targetY = rect.top + currentY - tplFeed.functions.preferredScrollOffset();
+                            window.scrollTo(0, targetY);
+                        }
+                    });
+                }
+            }
+
+            tplFeed.lastOpenedItemId = '';
         },
         handleLightboxKeydown(event) {
             if (event.key === 'Escape') {
