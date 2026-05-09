@@ -4,6 +4,7 @@ const tplFeed = {
     toggle: $(".feed-toggle"),
     lightbox: null,
     lastActiveElement: null,
+    lastScrollPosition: 0,
     scrollLock: {
         active: false,
         y: 0,
@@ -207,6 +208,7 @@ const tplFeed = {
                 : `<img src="${source}" alt="${alt}" class="feed-lightbox-media">`;
 
             tplFeed.lastActiveElement = document.activeElement;
+            tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
             lightbox.find('.feed-lightbox-frame').html(frameMarkup);
             lightbox.find('.feed-lightbox-actions').html(
                 externalLink
@@ -221,6 +223,7 @@ const tplFeed = {
         },
         closeLightbox() {
             if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) return;
+            const restoreY = tplFeed.scrollLock.active ? tplFeed.scrollLock.y : tplFeed.lastScrollPosition;
 
             tplFeed.lightbox.find('video').each((_, video) => {
                 video.pause();
@@ -234,8 +237,15 @@ const tplFeed = {
             tplFeed.functions.unlockMobileScroll();
 
             if (tplFeed.lastActiveElement && typeof tplFeed.lastActiveElement.focus === 'function') {
-                tplFeed.lastActiveElement.focus();
+                try {
+                    tplFeed.lastActiveElement.focus({ preventScroll: true });
+                } catch (_error) {
+                    tplFeed.lastActiveElement.focus();
+                }
             }
+
+            window.scrollTo(0, restoreY);
+            requestAnimationFrame(() => window.scrollTo(0, restoreY));
         },
         handleLightboxKeydown(event) {
             if (event.key === 'Escape') {
