@@ -1188,8 +1188,19 @@ html.tpl {
         cursor: zoom-in;
     }
 
+    &.feed-lightbox-open,
     body.feed-lightbox-open {
         overflow: hidden;
+        overscroll-behavior: none;
+    }
+
+    &.feed-lightbox-open,
+    body.feed-lightbox-open {
+        height: 100%;
+    }
+
+    body.feed-lightbox-open {
+        touch-action: none;
     }
 
     .feed-lightbox {
@@ -1201,6 +1212,8 @@ html.tpl {
         align-items: center;
         padding: 20px;
         background: rgba($black, 0.92);
+        overscroll-behavior: none;
+        touch-action: none;
 
         &.is-open {
             display: flex;
@@ -1241,7 +1254,7 @@ html.tpl {
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: auto;
+        overflow: hidden;
     }
 
     .feed-lightbox-media {

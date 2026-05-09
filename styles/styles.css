@@ -1591,8 +1591,17 @@ html.tpl video.feed-item {
   border-bottom: none;
   cursor: zoom-in;
 }
+html.tpl.feed-lightbox-open,
 html.tpl body.feed-lightbox-open {
   overflow: hidden;
+  overscroll-behavior: none;
+}
+html.tpl.feed-lightbox-open,
+html.tpl body.feed-lightbox-open {
+  height: 100%;
+}
+html.tpl body.feed-lightbox-open {
+  touch-action: none;
 }
 html.tpl .feed-lightbox {
   position: fixed;
@@ -1603,6 +1612,8 @@ html.tpl .feed-lightbox {
   align-items: center;
   padding: 20px;
   background: rgba(40, 43, 44, 0.92);
+  overscroll-behavior: none;
+  touch-action: none;
 }
 html.tpl .feed-lightbox.is-open {
   display: flex;
@@ -1638,7 +1649,7 @@ html.tpl .feed-lightbox-frame {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  overflow: hidden;
 }
 html.tpl .feed-lightbox-media {
   width: auto;

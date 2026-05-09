@@ -4,6 +4,11 @@ const tplFeed = {
     toggle: $(".feed-toggle"),
     lightbox: null,
     lastActiveElement: null,
+    scrollLock: {
+        active: false,
+        y: 0,
+        bodyStyles: {}
+    },
     range: { start: 0, end: 10 },
     items: [],
     visibleItems: [],
@@ -116,6 +121,49 @@ const tplFeed = {
                 altButton.addClass('selected');
             }
         },
+        shouldUseMobileScrollLock() {
+            return window.matchMedia('(max-width: 768px), (hover: none) and (pointer: coarse)').matches;
+        },
+        lockMobileScroll() {
+            if (!tplFeed.functions.shouldUseMobileScrollLock() || tplFeed.scrollLock.active) {
+                return;
+            }
+
+            const body = document.body;
+            tplFeed.scrollLock.y = window.pageYOffset || document.documentElement.scrollTop || 0;
+            tplFeed.scrollLock.bodyStyles = {
+                position: body.style.position,
+                top: body.style.top,
+                left: body.style.left,
+                right: body.style.right,
+                width: body.style.width,
+                overflow: body.style.overflow
+            };
+
+            body.style.position = 'fixed';
+            body.style.top = `-${tplFeed.scrollLock.y}px`;
+            body.style.left = '0';
+            body.style.right = '0';
+            body.style.width = '100%';
+            body.style.overflow = 'hidden';
+            tplFeed.scrollLock.active = true;
+        },
+        unlockMobileScroll() {
+            if (!tplFeed.scrollLock.active) {
+                return;
+            }
+
+            const body = document.body;
+            const { bodyStyles, y } = tplFeed.scrollLock;
+            body.style.position = bodyStyles.position || '';
+            body.style.top = bodyStyles.top || '';
+            body.style.left = bodyStyles.left || '';
+            body.style.right = bodyStyles.right || '';
+            body.style.width = bodyStyles.width || '';
+            body.style.overflow = bodyStyles.overflow || '';
+            tplFeed.scrollLock.active = false;
+            window.scrollTo(0, y);
+        },
         ensureLightbox() {
             if (tplFeed.lightbox) return tplFeed.lightbox;
 
@@ -165,7 +213,9 @@ const tplFeed = {
                     ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="feed-lightbox-link">open link</a>`
                     : ''
             );
+            document.documentElement.classList.add('feed-lightbox-open');
             $('body').addClass('feed-lightbox-open');
+            tplFeed.functions.lockMobileScroll();
             lightbox.attr('aria-hidden', 'false').addClass('is-open');
             lightbox.find('.feed-lightbox-close').trigger('focus');
         },
@@ -179,7 +229,9 @@ const tplFeed = {
             tplFeed.lightbox.removeClass('is-open').attr('aria-hidden', 'true');
             tplFeed.lightbox.find('.feed-lightbox-frame, .feed-lightbox-actions').empty();
             tplFeed.lightbox.find('.feed-lightbox-caption').text('');
+            document.documentElement.classList.remove('feed-lightbox-open');
             $('body').removeClass('feed-lightbox-open');
+            tplFeed.functions.unlockMobileScroll();
 
             if (tplFeed.lastActiveElement && typeof tplFeed.lastActiveElement.focus === 'function') {
                 tplFeed.lastActiveElement.focus();
