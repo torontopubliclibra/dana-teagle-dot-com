@@ -325,6 +325,10 @@ h3 {
   margin: 0;
   padding: 3rem;
 
+  @media only screen and (max-width: $mobile) {
+    padding: 1rem;
+  }
+
   p {
     line-height: 1.75rem;
   }
