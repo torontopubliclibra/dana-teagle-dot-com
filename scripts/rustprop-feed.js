@@ -203,7 +203,7 @@ const rustpropFeed = {
             }
 
             const mediaStyle = (frameClass === 'single' || frameClass === 'multi-two' || frameClass === 'multi-three')
-                ? 'width:auto;max-width:100%;max-height:60vh;height:auto;object-fit:contain;border:solid 3px rgba(255,255,255,0.5);background:#111;'
+                ? 'width:100%;max-width:100%;max-height:75vh;height:auto;object-fit:contain;border:solid 3px rgba(255,255,255,0.5);background:#111;'
                 : 'width:100%;height:auto;max-width:100%;max-height:30vh;object-fit:contain;box-sizing:border-box;border:solid 3px rgba(255,255,255,0.5);background:#111;';
 
             const lightboxMediaHtml = itemImages.map(img => {

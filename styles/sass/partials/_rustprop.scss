@@ -73,9 +73,7 @@ html.rustprop {
 
     .rp-lightbox-frame {
         width: 100%;
-        background: rgba(255,255,255,0.75);
-        padding: 1.5rem;
-        padding-bottom: 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -138,8 +136,7 @@ html.rustprop {
 
     .rp-lightbox-caption {
         margin:0;
-        background-color:rgba(255,255,255,0.75);
-        color:#242a31;
+        color: $white;
         text-align:center;
         font-size:0.9rem;
         line-height:1.5;
@@ -148,6 +145,7 @@ html.rustprop {
 
         a {
             font-size:0.9rem;
+            color: $white;
         }
     }
 
@@ -161,12 +159,13 @@ html.rustprop {
         }
 
         .rp-lightbox-panel {
-            width: 100%;
-            max-width: calc(100vw - 24px);
+            width: 75vw;
+            max-width: 75vw;
         }
 
         .rp-lightbox-media {
-            max-height: 60vh;
+            width: 100%;
+            max-height: 75vh;
         }
     }
 
@@ -358,6 +357,7 @@ html.rustprop {
 
                 @media only screen and (max-width: $mobile) {
                     text-align: left;
+                    width: 100%;
                 }
             }
             a {
@@ -395,6 +395,9 @@ html.rustprop {
             }
             p {
                 width: 80%;
+                @media only screen and (max-width: $tablet) {
+                    width: 100%;
+                }
             }
             a:hover, a:focus {
                 background-color: rgba($white, 0.75);

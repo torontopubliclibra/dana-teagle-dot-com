@@ -912,6 +912,7 @@ html.tpl main .tpl-landing img.feed-item.horizontal, html.tpl main.tpl-subpage i
   html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
     width: 100%;
     min-width: unset;
+    min-height: unset;
   }
 }
 html.tpl main .tpl-landing p, html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p, html.tpl main.tpl-subpage label {
@@ -1695,11 +1696,11 @@ html.tpl .feed-lightbox-caption:empty {
     padding: 12px;
   }
   html.tpl .feed-lightbox-panel {
-    max-width: calc(100vw - 24px);
+    max-width: 75vw;
     max-height: 100vh;
   }
   html.tpl .feed-lightbox-media {
-    max-width: calc(100vw - 24px);
+    max-width: 100%;
     max-height: calc(100vh - 132px);
   }
 }
@@ -2197,9 +2198,7 @@ html.rustprop .rp-lightbox-close {
 }
 html.rustprop .rp-lightbox-frame {
   width: 100%;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 1.5rem;
-  padding-bottom: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2257,8 +2256,7 @@ html.rustprop .rp-lightbox-frame.multi-four {
 }
 html.rustprop .rp-lightbox-caption {
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.75);
-  color: #242a31;
+  color: #f3e8e9;
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -2267,6 +2265,7 @@ html.rustprop .rp-lightbox-caption {
 }
 html.rustprop .rp-lightbox-caption a {
   font-size: 0.9rem;
+  color: #f3e8e9;
 }
 html.rustprop .rp-lightbox-caption:empty {
   display: none;
@@ -2276,11 +2275,12 @@ html.rustprop .rp-lightbox-caption:empty {
     padding: 12px;
   }
   html.rustprop .rp-lightbox-panel {
-    width: 100%;
-    max-width: calc(100vw - 24px);
+    width: 75vw;
+    max-width: 75vw;
   }
   html.rustprop .rp-lightbox-media {
-    max-height: 60vh;
+    width: 100%;
+    max-height: 75vh;
   }
 }
 html.rustprop header {
@@ -2460,6 +2460,7 @@ html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustpro
 @media only screen and (max-width: 768px) {
   html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustprop main .four-oh-four p, html.rustprop main .four-oh-four a {
     text-align: left;
+    width: 100%;
   }
 }
 html.rustprop main .rp-landing a, html.rustprop main .four-oh-four a {
@@ -2497,6 +2498,11 @@ html.rustprop main .rp-landing a img.lrg, html.rustprop main .four-oh-four a img
 }
 html.rustprop main .rp-landing p, html.rustprop main .four-oh-four p {
   width: 80%;
+}
+@media only screen and (max-width: 970px) {
+  html.rustprop main .rp-landing p, html.rustprop main .four-oh-four p {
+    width: 100%;
+  }
 }
 html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus, html.rustprop main .four-oh-four a:hover, html.rustprop main .four-oh-four a:focus {
   background-color: rgba(243, 232, 233, 0.75);
@@ -2989,11 +2995,12 @@ html body.project-lightbox-open {
 
 @media only screen and (max-width: 768px) {
   .project-lightbox {
-    padding: calc(12px + env(safe-area-inset-top)) 12px 12px;
+    padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
   }
   .project-lightbox-panel {
     max-width: calc(100vw - 24px);
-    max-height: 100vh;
+    height: auto;
+    max-height: calc(100dvh - (max(12px, env(safe-area-inset-top)) + max(12px, env(safe-area-inset-bottom))));
   }
   .project-lightbox-title-row {
     gap: 8px;
@@ -3101,7 +3108,7 @@ p {
 }
 
 a, button {
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   line-height: 1.25;
   color: #282b2c;
@@ -4242,6 +4249,8 @@ header .scroll-title {
   min-height: calc(100vh - 24px);
   height: calc(100vh - 24px);
   gap: 60px;
+  align-items: flex-end;
+  padding-bottom: 12vh;
 }
 #gallery .gallery-container.is-fullscreen .gallery-content:hover {
   animation-play-state: running !important;

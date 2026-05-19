@@ -857,6 +857,8 @@ header {
                 min-height: calc(100vh - 24px);
                 height: calc(100vh - 24px);
                 gap: 60px;
+                align-items: flex-end;
+                padding-bottom: 12vh;
 
                 &:hover {
                     animation-play-state: running !important;

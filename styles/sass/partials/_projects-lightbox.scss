@@ -188,12 +188,13 @@ html body.project-lightbox-open {
 
 @media only screen and (max-width: $mobile) {
     .project-lightbox {
-        padding: calc(12px + env(safe-area-inset-top)) 12px 12px;
+        padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
     }
 
     .project-lightbox-panel {
         max-width: calc(100vw - 24px);
-        max-height: 100vh;
+        height: auto;
+        max-height: calc(100dvh - (max(12px, env(safe-area-inset-top)) + max(12px, env(safe-area-inset-bottom))));
     }
 
     .project-lightbox-title-row {

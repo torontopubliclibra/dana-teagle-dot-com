@@ -466,6 +466,7 @@ html.tpl {
                 @media only screen and (max-width: $mobile) {
                     width: 100%;
                     min-width: unset;
+                    min-height: unset;
                 }
             }
             p, label {
@@ -1307,12 +1308,12 @@ html.tpl {
         }
 
         .feed-lightbox-panel {
-            max-width: calc(100vw - 24px);
+            max-width: 75vw;
             max-height: 100vh;
         }
 
         .feed-lightbox-media {
-            max-width: calc(100vw - 24px);
+            max-width: 100%;
             max-height: calc(100vh - 132px);
         }
     }
