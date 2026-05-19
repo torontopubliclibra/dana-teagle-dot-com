@@ -865,11 +865,26 @@ html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
   padding-top: 15px;
 }
 html.tpl main .tpl-landing img.rusty, html.tpl main.tpl-subpage img.rusty {
+  margin: 0;
+  width: 150px;
+  display: block;
+}
+html.tpl main .tpl-landing .rusty-pixel-wrapper, html.tpl main.tpl-subpage .rusty-pixel-wrapper {
+  display: inline-block;
+  position: relative;
   border: solid 3px rgba(243, 232, 233, 0.5);
   margin: 10px 0;
   margin-top: 0;
-  width: 150px;
+  line-height: 0;
+}
+html.tpl main .tpl-landing .rusty-pixel-wrapper .rusty-pixel-canvas, html.tpl main.tpl-subpage .rusty-pixel-wrapper .rusty-pixel-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
 }
 html.tpl main .tpl-landing img.feed-item, html.tpl main.tpl-subpage img.feed-item {
   border: solid 3px rgba(243, 232, 233, 0.5);
@@ -2120,11 +2135,153 @@ html.tpl .mix-tile-number {
   margin-bottom: 2px;
 }
 
+html.rustprop.rp-lightbox-open,
+html.rustprop body.rp-lightbox-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+html.rustprop body.rp-lightbox-open {
+  touch-action: none;
+}
 html.rustprop body {
   background-color: #282b2c;
 }
 html.rustprop body, html.rustprop .button {
   text-transform: uppercase;
+}
+html.rustprop .rp-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(40, 43, 44, 0.92);
+}
+html.rustprop .rp-lightbox.is-open {
+  display: flex;
+}
+html.rustprop .rp-lightbox-panel {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 40px;
+}
+html.rustprop .rp-lightbox-panel button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: solid 2px rgba(255, 255, 255, 0.65);
+  background: rgba(15, 15, 15, 0.95);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1;
+  text-transform: lowercase;
+  padding: 8px 12px;
+}
+html.rustprop .rp-lightbox-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: solid 2px rgba(243, 232, 233, 0.65);
+  background: rgba(40, 43, 44, 0.95);
+  color: #f3e8e9;
+  font-size: 0.8rem;
+  line-height: 1;
+  text-transform: lowercase;
+  padding: 8px 12px;
+}
+html.rustprop .rp-lightbox-frame {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html.rustprop .rp-lightbox-media {
+  width: auto;
+  max-width: 100%;
+  max-height: 72vh;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: solid 3px rgba(243, 232, 233, 0.5);
+  background: #282b2c;
+}
+html.rustprop .rp-lightbox-frame.multi-two,
+html.rustprop .rp-lightbox-frame.multi-three,
+html.rustprop .rp-lightbox-frame.multi-four {
+  display: grid;
+  gap: 0;
+  align-items: stretch;
+  justify-items: stretch;
+  width: 100%;
+  overflow: hidden;
+}
+html.rustprop .rp-lightbox-frame.multi-two .rp-lightbox-media,
+html.rustprop .rp-lightbox-frame.multi-three .rp-lightbox-media,
+html.rustprop .rp-lightbox-frame.multi-four .rp-lightbox-media {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 40vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-sizing: border-box;
+}
+html.rustprop .rp-lightbox-frame.multi-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+html.rustprop .rp-lightbox-frame.multi-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+html.rustprop .rp-lightbox-frame.multi-four {
+  grid-template-columns: repeat(2, minmax(0, 2fr));
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop .rp-lightbox-frame.multi-three,
+  html.rustprop .rp-lightbox-frame.multi-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  html.rustprop .rp-lightbox-frame.multi-two .rp-lightbox-media,
+  html.rustprop .rp-lightbox-frame.multi-three .rp-lightbox-media,
+  html.rustprop .rp-lightbox-frame.multi-four .rp-lightbox-media {
+    max-height: 30vh;
+  }
+}
+html.rustprop .rp-lightbox-caption {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #242a31;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 20px;
+  width: 100%;
+}
+html.rustprop .rp-lightbox-caption a {
+  font-size: 0.9rem;
+}
+html.rustprop .rp-lightbox-caption:empty {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop .rp-lightbox {
+    padding: 12px;
+  }
+  html.rustprop .rp-lightbox-panel {
+    width: 100%;
+    max-width: calc(100vw - 24px);
+  }
+  html.rustprop .rp-lightbox-media {
+    max-height: 60vh;
+  }
 }
 html.rustprop header {
   min-height: auto;
@@ -2459,7 +2616,8 @@ html.rustprop main .img-gallery .item img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: zoom-in;
   border-top: solid rgba(243, 232, 233, 0.75) 4px;
 }
 html.rustprop main .img-gallery .item img:first-of-type {
@@ -2488,29 +2646,6 @@ html.rustprop main .img-gallery .item .img-caption a {
   background-color: rgba(40, 43, 44, 0.75);
   padding: 2px 10px;
   text-decoration: none;
-}
-@media only screen and (max-width: 970px) {
-  html.rustprop main .rp-landing {
-    flex-flow: column nowrap;
-    width: 85%;
-  }
-  html.rustprop main .rp-landing p {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing {
-    align-items: flex-start;
-    margin-bottom: 25px;
-  }
-  html.rustprop main .rp-landing p, html.rustprop main .rp-landing a {
-    text-align: left;
-  }
-}
-@media only screen and (max-width: 520px) {
-  html.rustprop main .rp-landing .new-line {
-    margin-top: 10px;
-  }
 }
 html.rustprop footer {
   min-width: 380px;
@@ -3132,7 +3267,7 @@ html.rustprop h1 {
   font-family: "VT323", monospace;
 }
 html.rustprop h1 a {
-  font-size: 9rem;
+  font-size: 7rem;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 a {
@@ -3223,12 +3358,11 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: rgba(122, 145, 177, 0.25);
   font-style: italic;
   text-align: left;
   min-width: 100%;
   margin: 0;
-  padding: 25px;
+  padding: 3rem;
 }
 #services blockquote p {
   line-height: 1.75rem;
@@ -3297,14 +3431,14 @@ h3 {
   }
 }
 
-.project-description p, a, button {
+.project-description p, .project-description a, .project-description button {
   font-size: 18px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
 }
 @media only screen and (max-width: 970px) {
-  .project-description p, a, button {
+  .project-description p, .project-description a, .project-description button {
     text-align: left;
   }
 }
@@ -3395,7 +3529,7 @@ body.loaded {
 
 .projects-controls-accordion {
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
   width: 100%;
   overflow: hidden;
 }
@@ -3951,7 +4085,7 @@ header .scroll-title {
 }
 #gallery .gallery-controls-row {
   width: 100%;
-  margin: 1rem 0 1rem 0;
+  margin: 2rem 0;
   display: flex;
   gap: 10px;
 }
@@ -4113,16 +4247,19 @@ header .scroll-title {
 #gallery .gallery-container.is-fullscreen .gallery-item {
   flex-direction: column;
 }
+#gallery .gallery-container.is-fullscreen .gallery-item img {
+  height: 50vh;
+}
 #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info {
   height: auto;
-  min-height: 100px;
+  min-height: 150px;
   position: relative;
   display: flex;
   opacity: 100%;
   padding: 5px;
 }
 #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info p, #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info a, #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info button {
-  font-size: 0.9rem;
+  font-size: 1.15rem;
 }
 #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info hr {
   display: none;
@@ -4337,6 +4474,29 @@ header .scroll-title {
   height: 18px;
   margin-bottom: -2px;
 }
+#services .wrapper h4 button.testimonial-button .testimonial-button-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+#services .wrapper h4 button.testimonial-button .testimonial-button-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+#services .wrapper h4 button.testimonial-button .testimonial-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  opacity: 0.35;
+  transform: translateY(1px);
+  flex: 0 0 auto;
+}
+#services .wrapper h4 button.testimonial-button .testimonial-dot.active {
+  opacity: 1;
+  background: currentColor;
+}
 #services .wrapper blockquote * {
   animation: fade-in 1s;
 }
@@ -4367,7 +4527,10 @@ header .scroll-title {
   width: 95%;
   padding: 50px;
   margin: 20px auto;
-  margin-top: 0;
+  margin-top: 1rem;
+}
+#services .services-content.testimonials {
+  padding: 0;
 }
 #services .services-content hr {
   border-color: #84A59D;
@@ -4515,7 +4678,7 @@ header .scroll-title {
   max-width: 100%;
   width: 95%;
   padding: 50px;
-  margin: 0 auto 20px auto;
+  margin: 1rem auto;
 }
 #about .about-content hr {
   border-color: #7a91b1;
@@ -4525,33 +4688,17 @@ header .scroll-title {
 #about .about-content .basic-info {
   display: flex;
   flex-flow: row wrap;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 0.5rem;
   width: 100%;
   min-height: 100%;
 }
 #about .about-content .basic-info .headshot {
-  border: solid rgba(122, 145, 177, 0.25) 5px;
-  width: 100%;
-  max-width: 200px;
-  max-height: 250px;
-  pointer-events: none;
+  width: auto;
+  max-height: 175px;
   transition: opacity 0.5s;
-}
-#about .about-content .basic-info .headshot-ascii {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  opacity: 0;
-  border: solid rgba(122, 145, 177, 0) 15px;
-  background-color: rgba(122, 145, 177, 0.25);
-  font-size: 6.15px;
-  letter-spacing: 1.325px !important;
-  line-height: 1.5;
-}
-#about .about-content .basic-info .headshot-ascii.mobile {
-  display: none;
+  display: block;
 }
 #about .about-content .basic-info .headshot-wrapper {
   display: flex;
@@ -4563,77 +4710,21 @@ header .scroll-title {
   overflow: hidden;
   cursor: pointer;
 }
-#about .about-content .basic-info .headshot-wrapper:hover .headshot, #about .about-content .basic-info .headshot-wrapper.clicked .headshot {
+#about .about-content .basic-info .headshot-pixel-wrapper {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: auto;
+  border: solid rgba(122, 145, 177, 0.25) 5px;
+}
+#about .about-content .basic-info .headshot-pixel-wrapper .headshot-pixel-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   opacity: 0;
-}
-#about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii, #about .about-content .basic-info .headshot-wrapper.clicked .headshot-ascii {
-  opacity: 1;
-}
-#about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper, #about .about-content .basic-info .headshot-wrapper .button {
-  display: none;
-}
-@media only screen and (max-width: 768px) {
-  #about .about-content .basic-info .headshot-wrapper {
-    border: solid rgba(122, 145, 177, 0) 10px;
-    background-color: rgba(122, 145, 177, 0.25);
-    cursor: default;
-  }
-  #about .about-content .basic-info .headshot-wrapper .headshot {
-    background: none;
-    border: none;
-    width: 150px;
-    height: auto;
-    aspect-ratio: 1/1;
-  }
-  #about .about-content .basic-info .headshot-wrapper .headshot-ascii {
-    display: none;
-  }
-  #about .about-content .basic-info .headshot-wrapper .headshot-ascii.mobile {
-    display: block;
-    background-color: rgba(122, 145, 177, 0.25);
-    color: #282b2c;
-    font-size: 8px !important;
-    line-height: 1.35 !important;
-    letter-spacing: 0.95px !important;
-  }
-  #about .about-content .basic-info .headshot-wrapper .ascii-toggle-wrapper {
-    display: block;
-    font-size: 0.9rem;
-  }
-  #about .about-content .basic-info .headshot-wrapper .button {
-    background: rgba(243, 232, 233, 0);
-    display: inline-flex;
-    align-items: flex-end;
-    flex-direction: row-reverse;
-    font-size: 0.75rem;
-    line-height: 1.15;
-    height: 30px;
-    gap: 10px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-  }
-  #about .about-content .basic-info .headshot-wrapper .button img {
-    width: 15px;
-  }
-  #about .about-content .basic-info .headshot-wrapper .highlight {
-    background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 12%;
-    background-position: 50% 97%;
-  }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot {
-    opacity: 1;
-  }
-  #about .about-content .basic-info .headshot-wrapper:hover .headshot-ascii {
-    opacity: 0;
-  }
-  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot {
-    opacity: 0;
-  }
-  #about .about-content .basic-info .headshot-wrapper.clicked:hover .headshot-ascii {
-    opacity: 1;
-  }
+  transition: opacity 0.15s ease;
 }
 #about .about-content .basic-info .basic-info-caption {
   font-style: italic;
@@ -4667,7 +4758,7 @@ header .scroll-title {
 }
 @media only screen and (max-width: 768px) {
   #about .about-content .basic-info {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 0;
     align-items: flex-start;
@@ -4703,6 +4794,7 @@ header .scroll-title {
 }
 
 #projects hr {
+  margin-top: 2rem;
   border-color: #84A59D;
   margin-bottom: 0;
   border-width: 2.5px;
@@ -4724,14 +4816,14 @@ header .scroll-title {
   margin-right: 0;
   margin-bottom: 0;
 }
-#projects .projects-nav br {
+#projects .projects-nav WW br {
   margin-bottom: 10px;
 }
-#projects .projects-nav br.mobile-only {
+#projects .projects-nav WW br.mobile-only {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  #projects .projects-nav br.mobile-only {
+  #projects .projects-nav WW br.mobile-only {
     display: block;
   }
 }
@@ -4933,7 +5025,8 @@ header .scroll-title {
   border: solid #B57E9B 5px;
   padding: 50px;
   width: 95%;
-  margin: 0 auto;
+  margin: 1rem auto;
+  margin-top: 2rem;
 }
 #contact .contact-content .email {
   font-style: italic;

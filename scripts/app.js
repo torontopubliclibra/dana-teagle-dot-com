@@ -109,6 +109,131 @@ const app = {
             app.elements.body.toggleClass("nav-open");
             app.elements.nav.toggleClass("active");
         },
+        setupHeadshotPixelation() {
+            const headshotImage = document.querySelector("#about .basic-info .headshot");
+            if (!headshotImage) {
+                return;
+            }
+
+            const headshotLink = headshotImage.closest("a");
+            if (!headshotLink) {
+                return;
+            }
+
+            headshotLink.classList.add("headshot-pixel-wrapper");
+
+            const pixelCanvas = document.createElement("canvas");
+            pixelCanvas.className = "headshot-pixel-canvas";
+            pixelCanvas.setAttribute("aria-hidden", "true");
+            headshotLink.appendChild(pixelCanvas);
+
+            const pixelContext = pixelCanvas.getContext("2d");
+            const workingCanvas = document.createElement("canvas");
+            const workingContext = workingCanvas.getContext("2d");
+
+            let animationFrame = null;
+            let currentPixelSize = 1;
+            const maxPixelSize = 22;
+
+            const resizeCanvas = () => {
+                const imageWidth = headshotImage.clientWidth;
+                const imageHeight = headshotImage.clientHeight;
+
+                if (!imageWidth || !imageHeight) {
+                    return;
+                }
+
+                pixelCanvas.width = imageWidth;
+                pixelCanvas.height = imageHeight;
+                workingCanvas.width = imageWidth;
+                workingCanvas.height = imageHeight;
+                drawPixelatedFrame(currentPixelSize);
+            };
+
+            const drawPixelatedFrame = (pixelSize) => {
+                if (!pixelContext || !workingContext || !headshotImage.complete) {
+                    return;
+                }
+
+                const sourceWidth = pixelCanvas.width;
+                const sourceHeight = pixelCanvas.height;
+                if (!sourceWidth || !sourceHeight) {
+                    return;
+                }
+
+                const sampleWidth = Math.max(1, Math.floor(sourceWidth / pixelSize));
+                const sampleHeight = Math.max(1, Math.floor(sourceHeight / pixelSize));
+
+                workingContext.clearRect(0, 0, sourceWidth, sourceHeight);
+                workingContext.imageSmoothingEnabled = true;
+                workingContext.drawImage(headshotImage, 0, 0, sampleWidth, sampleHeight);
+
+                pixelContext.clearRect(0, 0, sourceWidth, sourceHeight);
+                pixelContext.imageSmoothingEnabled = false;
+                pixelContext.drawImage(workingCanvas, 0, 0, sampleWidth, sampleHeight, 0, 0, sourceWidth, sourceHeight);
+            };
+
+            const animatePixelation = (targetPixelSize, duration) => {
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                }
+
+                const startPixelSize = currentPixelSize;
+                const startTime = performance.now();
+
+                const tick = (timestamp) => {
+                    const elapsed = timestamp - startTime;
+                    const progress = Math.min(1, elapsed / duration);
+                    const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+                    currentPixelSize = startPixelSize + ((targetPixelSize - startPixelSize) * easedProgress);
+                    drawPixelatedFrame(currentPixelSize);
+
+                    if (progress < 1) {
+                        animationFrame = requestAnimationFrame(tick);
+                    } else {
+                        currentPixelSize = targetPixelSize;
+                        drawPixelatedFrame(currentPixelSize);
+                        if (targetPixelSize <= 1) {
+                            pixelCanvas.style.opacity = "0";
+                        }
+                    }
+                };
+
+                animationFrame = requestAnimationFrame(tick);
+            };
+
+            const startPixelation = () => {
+                if (!headshotImage.complete) {
+                    return;
+                }
+                pixelCanvas.style.opacity = "1";
+                animatePixelation(maxPixelSize, 360);
+            };
+
+            const stopPixelation = () => {
+                if (!headshotImage.complete) {
+                    return;
+                }
+                animatePixelation(1, 420);
+            };
+
+            const setupReadyState = () => {
+                resizeCanvas();
+                drawPixelatedFrame(1);
+                pixelCanvas.style.opacity = "0";
+            };
+
+            if (headshotImage.complete) {
+                setupReadyState();
+            } else {
+                headshotImage.addEventListener("load", setupReadyState, { once: true });
+            }
+
+            window.addEventListener("resize", resizeCanvas);
+            headshotLink.addEventListener("mouseenter", startPixelation);
+            headshotLink.addEventListener("mouseleave", stopPixelation);
+        },
         shuffleArray(array) {
             const groups = array.reduce((acc, item) => {
                 acc[item.title] = acc[item.title] || [];
@@ -872,6 +997,7 @@ const app = {
     },
     events() {
         app.functions.renderGalleryControls();
+        app.functions.setupHeadshotPixelation();
 
         if (app.elements.projectsAccordionToggle && app.elements.projectsAccordionPanel) {
             app.elements.projectsAccordionToggle.addEventListener('click', function() {

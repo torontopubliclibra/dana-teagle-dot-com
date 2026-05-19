@@ -82,7 +82,7 @@ body {
 
 .projects-controls-accordion {
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
     width: 100%;
     overflow: hidden;
 
@@ -680,7 +680,7 @@ header {
 
     .gallery-controls-row {
         width: 100%;
-        margin: 1rem 0 1rem 0;
+        margin: 2rem 0;
         display: flex;
         gap: 10px;
 
@@ -870,16 +870,20 @@ header {
             .gallery-item {
                 flex-direction: column;
 
+                img {
+                    height: 50vh;
+                }
+
                 .gallery-item-info {
                     height: auto;
-                    min-height: 100px;
+                    min-height: 150px;
                     position: relative;
                     display: flex;
                     opacity: 100%;
                     padding: 5px;
 
                     p, a, button {
-                        font-size: 0.9rem;
+                        font-size: 1.15rem;
                     }
 
                     hr {
@@ -1126,6 +1130,35 @@ header {
                     height: 18px;
                     margin-bottom: -2px;
                 }
+
+                &.testimonial-button {
+                    .testimonial-button-label {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    .testimonial-button-dots {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+
+                    .testimonial-dot {
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 999px;
+                        border: 1px solid currentColor;
+                        opacity: 0.35;
+                        transform: translateY(1px);
+                        flex: 0 0 auto;
+
+                        &.active {
+                            opacity: 1;
+                            background: currentColor;
+                        }
+                    }
+                }
             }
         }
 
@@ -1159,7 +1192,11 @@ header {
         width: 95%;
         padding: 50px;
         margin: 20px auto;
-        margin-top: 0;
+        margin-top: 1rem;
+
+        &.testimonials {
+            padding: 0;
+        }
 
         hr {
             border-color: $color1;
@@ -1312,7 +1349,7 @@ header {
         max-width: 100%;
         width: 95%;
         padding: 50px;
-        margin: 0 auto 20px auto;
+        margin: 1rem auto;
         
         hr {
             border-color: $color3;
@@ -1323,35 +1360,17 @@ header {
         .basic-info {
             display: flex;
             flex-flow: row wrap;
-            justify-content: left;
+            justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 0.5rem;
             width: 100%;
             min-height: 100%;
 
             .headshot {
-                border: solid rgba($color3, 0.25) 5px;
-                width: 100%;
-                max-width: 200px;
-                max-height: 250px;
-                pointer-events: none;
+                width: auto;
+                max-height: 175px;
                 transition: opacity 0.5s;
-            }
-
-            .headshot-ascii {
-                position: absolute;
-                overflow: hidden;
-                top: 0;
-                opacity: 0;
-                border: solid rgba($color3, 0) 15px;
-                background-color: rgba($color3, 0.25);
-                font-size: 6.15px;
-                letter-spacing: 1.325px !important;
-                line-height: 1.5;
-
-                &.mobile {
-                    display: none;
-                }
+                display: block;
             }
 
             .headshot-wrapper {
@@ -1363,92 +1382,23 @@ header {
                 width: auto;
                 overflow: hidden;
                 cursor: pointer;
+            }
 
-                &:hover, &.clicked {
-                    .headshot {
-                        opacity: 0;
-                    }
-                    .headshot-ascii {
-                        opacity: 1;
-                    }
-                }
+            .headshot-pixel-wrapper {
+                display: inline-block;
+                position: relative;
+                width: auto;
+                height: auto;
+                border: solid rgba($color3, 0.25) 5px;
 
-                .ascii-toggle-wrapper, .button {
-                    display: none;
-                }
-
-                @media only screen and (max-width: $mobile) {
-                    border: solid rgba($color3, 0) 10px;
-                    background-color: rgba($color3, 0.25);
-                    cursor: default;
-
-                    .headshot {
-                        background: none;
-                        border: none;
-                        width: 150px;
-                        height: auto;
-                        aspect-ratio: 1/1;
-                    }
-
-                    .headshot-ascii {
-                        display: none;
-
-                        &.mobile {
-                            display: block;
-                            background-color: rgba($color3, 0.25);
-                            color: $black;
-                            font-size: 8px !important;
-                            line-height: 1.35 !important;
-                            letter-spacing: 0.95px !important;
-                        }
-                    }
-
-                    .ascii-toggle-wrapper {
-                        display: block;
-                        font-size: 0.9rem;
-                    }
-
-                    .button {
-                        background: rgba($white, 0);
-                        display: inline-flex;
-                        align-items: flex-end;
-                        flex-direction: row-reverse;
-                        font-size: 0.75rem;
-                        line-height: 1.15;
-                        height: 30px;
-                        gap: 10px;
-                        padding-left: 0;
-                        padding-right: 0;
-                        padding-bottom: 0;
-                        img {
-                            width: 15px;
-                        }
-                    }
-
-                    .highlight {
-                        background: linear-gradient(120deg, $color2 0%, $color2 100%);
-                        background-repeat: no-repeat;
-                        background-size: 100% 12%;
-                        background-position: 50% 97%;
-                    }
-
-                    &:hover {
-                        .headshot {
-                            opacity: 1;
-                        }
-                        .headshot-ascii {
-                            opacity: 0;
-                        }
-                    }
-
-                    &.clicked:hover {
-                        .headshot {
-                            opacity: 0;
-                        }
-                        .headshot-ascii {
-                            opacity: 1;
-                        }
-                    }
+                .headshot-pixel-canvas {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: opacity 0.15s ease;
                 }
             }
 
@@ -1485,15 +1435,11 @@ header {
                     }
                 }
 
-                // .headshot {
-                //     max-width: 300px;
-                // }
-
             }
 
             // responsive to mobile
             @media only screen and (max-width: $mobile) {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 width: 100%;
                 margin: 0;
                 align-items: flex-start;
@@ -1501,10 +1447,6 @@ header {
                 .basic-info-caption {
                     text-align: left;
                 }
-
-                // .headshot {
-                //     max-width: 350px;
-                // }
             }
         }
 
@@ -1537,6 +1479,7 @@ header {
 #projects {
 
     hr {
+        margin-top: 2rem;
         border-color: $color1;
         margin-bottom: 0;
         border-width: 2.5px;
@@ -1555,7 +1498,7 @@ header {
             margin-right: 0;
             margin-bottom: 0;
         }
-
+WW
         br {
             margin-bottom: 10px;
 
@@ -1782,7 +1725,8 @@ header {
         @include borderedBox(rgba($white, 0.8), $color2);
         padding: 50px;
         width: 95%;
-        margin: 0 auto;
+        margin: 1rem auto;
+        margin-top: 2rem;
 
         .email {
             font-style: italic;
