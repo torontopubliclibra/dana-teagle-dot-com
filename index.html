@@ -127,9 +127,10 @@
     <section id="gallery" role="region" aria-labelledby="gallery">
       <div class="wrapper">
         <h2>My design gallery</h2>
-        <hr/>
-        <h3 class="pause-button"><button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button>
-        </h3>
+        <div class="gallery-controls-row">
+          <h3 class="pause-button" id="gallery-pause-button"><button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button></h3>
+          <h3 class="pause-button" id="gallery-fullscreen-button"><button onclick="app.functions.toggleGalleryFullscreen()">Enter fullscreen <img src="./assets/icons/expand-down.svg" alt="enter fullscreen icon" style="pointer-events: auto;"></button></h3>
+        </div>
         <div class="gallery-container">
           <!-- javascript fallback error message -->
           <p class="js-disabled-gallery">Sorry, but the gallery section isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason (and honestly I respect your choice). I actually have a <a href="/mini">mini HTML/CSS-only version of the site</a> for that purpose. Otherwise, please check back later.</p>

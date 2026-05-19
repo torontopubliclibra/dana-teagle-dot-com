@@ -1,4 +1,16 @@
 {
+    "WEST83": {
+        "id": "west83",
+        "year": "2026",
+        "tags": [
+            "Professional"
+        ],
+            "description": [
+                "This is a website for WEST83 Consulting, an Organizational Development practice led by Dr. Jessica Sartori. I designed their logo in 2024 and launched their new website in April 2026."
+            ],
+        "image": "./assets/projects/west83-0.png",
+        "site": "https://west83.com"
+    },
     "Avery Everhart": {
         "id": "avery-everhart",
         "year": "2026",
@@ -8,7 +20,7 @@
             "description": [
                 "This is a portfolio website for Avery Everhart, a transdisciplinary socio-spatial scientist and Assistant Professor of Geography at the University of British Columbia. The site provides information about her academic work, teaching, and research. It was completed between July 2025 and January 2026."
             ],
-        "image": "./assets/projects/avery-everhart.png",
+        "image": "./assets/projects/avery-everhart-0.png",
         "site": "https://averyeverhart.com"
     },
     "Yang Chen": {
@@ -20,7 +32,7 @@
             "description": [
                 "This is a portfolio website for Yang Chen, a percussionist and composer. The site features a bold brutalist design and showcases Yang's work and experience in the music industry. It was designed and developed between September 2025 and January 2026."
             ],
-        "image": "./assets/projects/yang-chen.png",
+        "image": "./assets/projects/yang-chen-0.png",
         "site": "https://yangchen.ca"
     },
     "I.D. Guide": {
@@ -31,10 +43,10 @@
             "Advocacy"
         ],
             "description": [
-                "This is the latest version of my free community-driven resource to help Canadians navigate legal name, gender marker, and I.D. changes.",
-                "The site offers step-by-step guides, official forms, and region-specific information, with a focus on supporting trans, non-binary, Two-Spirit, and gender non-conforming communities. It is a fast, accessible, modern web app written in TypeScript, independently researched and designed for ease of use, and was launched in December 2025."
+                "This is the latest version of my free and independent resource to help Canadians navigate legal name, gender marker, and I.D. changes.",
+                "The site offers step-by-step guides, official forms, and region-specific information, with a focus on supporting trans, non-binary, Two-Spirit, and gender non-conforming communities, and was launched in December 2025."
             ],
-        "image": "./assets/projects/idguide.png",
+        "image": "./assets/projects/idguide-0.png",
         "site": "https://idguide.ca"
     },
     "True History Brewing": {
@@ -46,7 +58,7 @@
         "description": [
             "This is a website for True History Brewing, a brewery and taproom located in Toronto. The project included custom designs and animations to reflect the brand's identity, and integrates with their other online platforms. It was originally launched in March 2024, with a full redesign completed in October 2025."
         ],
-        "image": "./assets/projects/truehistory.png",
+        "image": "./assets/projects/truehistory-0.png",
         "site": "https://truehistorybeer.com"
     },
     "Therapy with Andrea": {
@@ -58,8 +70,9 @@
         "description": [
             "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). It was completed between May and June 2025."
         ],
-        "image": "./assets/projects/andrea-lynn-ferguson.png",
-        "site": "https://andrealynnferguson.com/"
+        "image": "./assets/projects/andrea-0.png",
+        "site": "https://andrealynnferguson.com/",
+        "image-justify": "top left"
     },
     "Tony Matthews": {
         "id": "tony-matthews",
@@ -113,20 +126,6 @@
         "image": "./assets/projects/poe-m-allphin.png",
         "site": "https://poemallphin.com"
     },
-    "Point Pelee Planner": {
-        "id": "point-pelee-planner",
-        "year": "2025",
-        "tags": [
-            "Advocacy",
-            "Open-source"
-        ],
-        "description": [
-            "This is a web application designed to help visitors plan their trips to Point Pelee National Park. Built using the open-source Pytheas framework, the app provides interactive maps, curated site information, and custom itinerary features to enhance the park experience.",
-            "I led development on the project in summer 2025, with funding and support from Parallel 42 Systems and Windsor Hackforge."
-        ],
-        "image": "./assets/projects/point-pelee-planner.png",
-        "site": "https://pointpeleeplanner.com/"
-    },
     "Connect Fund": {
         "id": "connect-fund",
         "year": "2024",
@@ -150,7 +149,7 @@
         "description": [
             "This is a portfolio website for Michael Cloud Duguay, a composer, producer, and accordionist. The site features a fully custom design and highlights his many creative projects. It was designed and developed in 2024."
         ],
-        "image": "./assets/projects/michaelcduguay.png",
+        "image": "./assets/projects/michaelcduguay-0.png",
         "site": "https://www.michaelcduguay.com/"
     },
     "Nina Milanovski": {
@@ -163,21 +162,8 @@
             "This is a portfolio website for Nina Milanovski, a dance artist and producer. The site features a lively, visually expressive design inspired by her practice. The project was completed between February and March 2024."
         ],
         "image": "./assets/projects/ninamilanovski.jpg",
-        "site": "https://ninamilanovski.com"
-    },
-    "Queer Walk": {
-        "id": "queer-walk",
-        "year": "2023",
-        "tags": [
-            "Advocacy",
-            "Open-source"
-        ],
-        "description": [
-            "This is a guided walking tour app for the 2SLGBTQAI+ community in Windsor-Essex, Ontario, built with React and the open-source Pytheas framework. The project included significant upgrades to the framework's functionality.",
-            "I led development on the project in summer 2023, with funding and support from Parallel 42 Systems, Windsor Hackforge, and Walter Cassidy of the Windsor-Essex Rainbow Alliance."
-        ],
-        "image": "./assets/projects/queer-walk.png",
-        "site": "https://queerwalk.ca"
+        "site": "https://ninamilanovski.com",
+        "image-justify": "top left"
     },
     "Sydney Gautreau": {
         "id": "sydney-gautreau",

@@ -33,10 +33,11 @@ const app = {
         galleryContainer: document.querySelector(".gallery-container"),
         galleryContent: document.querySelector(".gallery-content"),
         galleryErrorMessage: $(".js-disabled-gallery"),
-        pauseButton: document.querySelector(".pause-button"),
+        pauseButton: document.querySelector("#gallery-pause-button"),
+        fullscreenButton: document.querySelector("#gallery-fullscreen-button"),
         galleryInfoItems: document.querySelectorAll(".gallery-item-info"),
         testimonial: $("#services blockquote"),
-        testimonialsButton: document.querySelector(".testimonials-button"),
+        testimonialsButton: document.querySelector(".testimonial-button") || document.querySelector(".testimonials-button"),
         projectsAccordionToggle: document.querySelector(".projects-controls-accordion .accordion-toggle"),
         projectsAccordionPanel: document.querySelector(".projects-controls-accordion .accordion-panel")
     },
@@ -57,6 +58,19 @@ const app = {
     gallery: {
         data: [],
         paused: false,
+        fullscreen: false,
+    },
+    projectLightbox: {
+        element: null,
+        lastActiveElement: null,
+        lastScrollPosition: 0,
+        items: [],
+        index: -1,
+        scrollLock: {
+            active: false,
+            y: 0,
+            bodyStyles: {}
+        }
     },
     functions: {
         toggleAnimations() {
@@ -126,20 +140,110 @@ const app = {
         galleryPause(playState) {
             if (playState === 'pause') {
                 app.elements.galleryContent.classList.add('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('unpause')">Unpause the gallery <img src="./assets/icons/play.svg" alt="unpause gallery icon" style="pointer-events: auto;"></button>`
                 app.elements.galleryContent.style.animationPlayState = 'paused';
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.add('reveal');
                 })
                 app.gallery.paused = true;
+                app.functions.renderGalleryControls();
             } else if (playState === 'unpause') {
                 app.elements.galleryContent.classList.remove('paused');
-                app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('pause')">Pause the gallery <img src="./assets/icons/pause.svg" alt="pause gallery icon" style="pointer-events: auto;"></button>`
                 app.elements.galleryContent.style.animationPlayState = 'running';
                 app.elements.galleryInfoItems.forEach((item) => {
                     item.classList.remove('reveal');
                 })
                 app.gallery.paused = false;
+                app.functions.renderGalleryControls();
+            }
+        },
+        ensureGalleryFullscreenControls() {
+            const container = app.elements.galleryContainer;
+            if (!container) {
+                return null;
+            }
+
+            let controls = container.querySelector('.gallery-fullscreen-controls');
+            if (controls) {
+                return controls;
+            }
+
+            controls = document.createElement('div');
+            controls.className = 'gallery-fullscreen-controls';
+            controls.innerHTML = `
+                <button type="button" class="gallery-fullscreen-action gallery-fullscreen-pause"></button>
+                <button type="button" class="gallery-fullscreen-action gallery-fullscreen-exit"></button>
+            `;
+            container.appendChild(controls);
+            return controls;
+        },
+        renderGalleryControls() {
+            if (!app.elements.pauseButton || !app.elements.fullscreenButton) {
+                return;
+            }
+
+            const fullscreenControls = app.functions.ensureGalleryFullscreenControls();
+
+            const pauseLabel = app.gallery.paused ? 'Unpause gallery' : 'Pause gallery';
+            const pauseState = app.gallery.paused ? 'unpause' : 'pause';
+            const pauseIcon = app.gallery.paused ? 'play' : 'pause';
+            const pauseIconAlt = app.gallery.paused ? 'unpause gallery icon' : 'pause gallery icon';
+
+            const fullscreenLabel = app.gallery.fullscreen ? 'Exit' : 'Full screen';
+            const fullscreenIcon = app.gallery.fullscreen ? 'fullscreen-exit' : 'fullscreen';
+            const fullscreenIconAlt = app.gallery.fullscreen ? 'exit fullscreen icon' : 'enter fullscreen icon';
+
+            app.elements.pauseButton.innerHTML = `<button onclick="app.functions.galleryPause('${pauseState}')">${pauseLabel} <img src="./assets/icons/${pauseIcon}.svg" alt="${pauseIconAlt}" style="pointer-events: auto;"></button>`;
+            app.elements.fullscreenButton.innerHTML = `<button onclick="app.functions.toggleGalleryFullscreen()">${fullscreenLabel} <img src="./assets/icons/${fullscreenIcon}.svg" alt="${fullscreenIconAlt}" style="pointer-events: auto;"></button>`;
+
+            if (fullscreenControls) {
+                const fullscreenPauseButton = fullscreenControls.querySelector('.gallery-fullscreen-pause');
+                const fullscreenExitButton = fullscreenControls.querySelector('.gallery-fullscreen-exit');
+
+                if (fullscreenPauseButton) {
+                    fullscreenPauseButton.innerHTML = `${app.gallery.paused ? 'Unpause' : 'Pause'} <img src="./assets/icons/${pauseIcon}.svg" alt="${pauseIconAlt}" style="pointer-events: auto;">`;
+                    fullscreenPauseButton.setAttribute('onclick', `app.functions.galleryPause('${pauseState}')`);
+                }
+
+                if (fullscreenExitButton) {
+                    fullscreenExitButton.innerHTML = `Exit <img src="./assets/icons/fullscreen-exit.svg" alt="exit fullscreen icon" style="pointer-events: auto;">`;
+                    fullscreenExitButton.setAttribute('onclick', 'app.functions.toggleGalleryFullscreen()');
+                }
+            }
+        },
+        updateGalleryFullscreenState() {
+            const isFullscreen = document.fullscreenElement === app.elements.galleryContainer
+                || document.webkitFullscreenElement === app.elements.galleryContainer;
+            app.gallery.fullscreen = Boolean(isFullscreen);
+
+            if (app.elements.galleryContainer) {
+                app.elements.galleryContainer.classList.toggle('is-fullscreen', app.gallery.fullscreen);
+            }
+
+            app.functions.renderGalleryControls();
+        },
+        async toggleGalleryFullscreen() {
+            const container = app.elements.galleryContainer;
+            if (!container) {
+                return;
+            }
+
+            try {
+                const isFullscreen = document.fullscreenElement === container
+                    || document.webkitFullscreenElement === container;
+
+                if (!isFullscreen) {
+                    if (container.requestFullscreen) {
+                        await container.requestFullscreen();
+                    } else if (container.webkitRequestFullscreen) {
+                        container.webkitRequestFullscreen();
+                    }
+                } else if (document.exitFullscreen) {
+                    await document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            } catch (_error) {
+                // Ignore fullscreen API errors; state is refreshed by the change event.
             }
         },
         galleryDisplay() {
@@ -185,7 +289,7 @@ const app = {
                         itemLinks.push(`<a href="${item.instagram}" target="_blank" title="${item.title} instagram">Instagram</a>`)
                     }
                     if (item.id) {
-                        itemLinks.push(`<button onclick="app.functions.projectDisplay('All', app.projects.expand); app.functions.readMoreByID('${item.id}'); app.functions.scroll('${item.id}')">Read more</button>`)
+                        itemLinks.push(`<button onclick="app.functions.openGalleryProject('${item.id}')">Read more</button>`)
                     }
                     if (itemLinks.length > 0) {
                         formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + ` | ` + item}) + `</p>`
@@ -259,8 +363,36 @@ const app = {
                 }, 1000);
             }
         },
+        renderTestimonialButton() {
+            if (!app.elements.testimonialsButton) {
+                return;
+            }
+
+            const totalTestimonials = app.testimonials.data.length;
+            if (totalTestimonials === 0) {
+                app.elements.testimonialsButton.innerHTML = `Another testimonial <img src="./assets/icons/refresh.svg" alt="" srcset="">`;
+                app.elements.testimonialsButton.removeAttribute('aria-label');
+                return;
+            }
+
+            const currentTestimonial = app.testimonials.index + 1;
+            const testimonialDots = Array.from({ length: totalTestimonials }, (_item, index) => {
+                const isActive = index === app.testimonials.index;
+                return `<span class="testimonial-dot${isActive ? ' active' : ''}" aria-hidden="true"></span>`;
+            }).join('');
+
+            app.elements.testimonialsButton.innerHTML = `<span class="testimonial-button-label">Another testimonial <img src="./assets/icons/refresh.svg" alt="" srcset=""></span><span class="testimonial-button-dots" aria-hidden="true">${testimonialDots}</span>`;
+            app.elements.testimonialsButton.setAttribute('aria-label', `Show testimonial ${currentTestimonial} of ${totalTestimonials}`);
+        },
         testimonialDisplay() {
+            if (!app.testimonials.data.length) {
+                app.elements.testimonial.html('');
+                app.functions.renderTestimonialButton();
+                return;
+            }
+
             app.elements.testimonial.html(`<p><span class="quote-marks">“</span>${app.testimonials.data[app.testimonials.index].quote}<span class="quote-marks">”</span></p><cite>${app.testimonials.data[app.testimonials.index].cite}</cite>`);
+            app.functions.renderTestimonialButton();
         },
         nextTestimonial() {
             if (app.testimonials.index < (app.testimonials.data.length - 1)) {
@@ -305,6 +437,211 @@ const app = {
             } else {
                 app.functions.scroll(direction);
             };
+        },
+        lockProjectPageScroll() {
+            if (app.projectLightbox.scrollLock.active) {
+                return;
+            }
+
+            const body = document.body;
+            app.projectLightbox.scrollLock.y = window.pageYOffset || document.documentElement.scrollTop || 0;
+            app.projectLightbox.scrollLock.bodyStyles = {
+                position: body.style.position,
+                top: body.style.top,
+                left: body.style.left,
+                right: body.style.right,
+                width: body.style.width,
+                overflow: body.style.overflow
+            };
+
+            body.style.position = 'fixed';
+            body.style.top = `-${app.projectLightbox.scrollLock.y}px`;
+            body.style.left = '0';
+            body.style.right = '0';
+            body.style.width = '100%';
+            body.style.overflow = 'hidden';
+            app.projectLightbox.scrollLock.active = true;
+        },
+        unlockProjectPageScroll() {
+            if (!app.projectLightbox.scrollLock.active) {
+                return;
+            }
+
+            const body = document.body;
+            const { bodyStyles, y } = app.projectLightbox.scrollLock;
+            body.style.position = bodyStyles.position || '';
+            body.style.top = bodyStyles.top || '';
+            body.style.left = bodyStyles.left || '';
+            body.style.right = bodyStyles.right || '';
+            body.style.width = bodyStyles.width || '';
+            body.style.overflow = bodyStyles.overflow || '';
+            app.projectLightbox.scrollLock.active = false;
+            window.scrollTo(0, y);
+        },
+        ensureProjectLightbox() {
+            if (app.projectLightbox.element) return app.projectLightbox.element;
+
+            $('body').append(`
+                <div class="project-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded project image">
+                    <div class="project-lightbox-panel">
+                        <div class="project-lightbox-header">
+                            <div class="project-lightbox-link-wrap"></div>
+                            <button type="button" class="project-lightbox-close" aria-label="Close project image">close</button>
+                        </div>
+                        <div class="project-lightbox-title-row">
+                            <button type="button" class="project-lightbox-nav project-lightbox-prev" aria-label="Previous project image">&larr;</button>
+                            <p class="project-lightbox-title"></p>
+                            <button type="button" class="project-lightbox-nav project-lightbox-next" aria-label="Next project image">&rarr;</button>
+                        </div>
+                        <div class="project-lightbox-frame">
+                            <div class="project-lightbox-media-wrap"></div>
+                        </div>
+                        <p class="project-lightbox-description"></p>
+                    </div>
+                </div>
+            `);
+
+            app.projectLightbox.element = $('.project-lightbox');
+            app.projectLightbox.element.on('click', event => {
+                if ($(event.target).is('.project-lightbox, .project-lightbox-close')) {
+                    app.functions.closeProjectLightbox();
+                }
+            });
+
+            app.projectLightbox.element.on('click', '.project-lightbox-prev', () => {
+                app.functions.navigateProjectLightbox('prev');
+            });
+            app.projectLightbox.element.on('click', '.project-lightbox-next', () => {
+                app.functions.navigateProjectLightbox('next');
+            });
+
+            $(document).on('keydown', app.functions.handleProjectLightboxKeydown);
+            return app.projectLightbox.element;
+        },
+        renderProjectLightboxItem() {
+            const lightbox = app.functions.ensureProjectLightbox();
+            const { items, index } = app.projectLightbox;
+
+            if (!items.length || index < 0 || index >= items.length) {
+                return;
+            }
+
+            const image = $(items[index]);
+            const source = image.attr('src');
+            const alt = image.attr('alt') || '';
+            const title = image.data('projectTitle') || '';
+            const description = image.data('projectDescription') || '';
+            const externalLink = image.data('projectLink') || '';
+            const canGoPrev = index > 0;
+            const canGoNext = index < items.length - 1;
+
+            const imageMarkup = `<img src="${source}" alt="${alt}" class="project-lightbox-media">`;
+            const wrappedImage = externalLink
+                ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-image-link">${imageMarkup}</a>`
+                : imageMarkup;
+            lightbox.find('.project-lightbox-media-wrap').html(wrappedImage);
+            lightbox.find('.project-lightbox-title').text(title);
+            lightbox.find('.project-lightbox-description').text(description);
+            lightbox.find('.project-lightbox-link-wrap').html(
+                externalLink
+                    ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-link">${externalLink.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0]}</a>`
+                    : ''
+            );
+            lightbox.find('.project-lightbox-prev').prop('disabled', !canGoPrev).attr('aria-disabled', (!canGoPrev).toString());
+            lightbox.find('.project-lightbox-next').prop('disabled', !canGoNext).attr('aria-disabled', (!canGoNext).toString());
+        },
+        navigateProjectLightbox(direction) {
+            if (!app.projectLightbox.element || !app.projectLightbox.element.hasClass('is-open')) {
+                return;
+            }
+
+            const delta = direction === 'next' ? 1 : -1;
+            const newIndex = app.projectLightbox.index + delta;
+            if (newIndex < 0 || newIndex >= app.projectLightbox.items.length) {
+                return;
+            }
+
+            app.projectLightbox.index = newIndex;
+            app.functions.renderProjectLightboxItem();
+        },
+        openProjectLightbox(mediaElement) {
+            const images = Array.from(document.querySelectorAll('.projects-container .project-image'));
+            const index = images.indexOf(mediaElement);
+            const lightbox = app.functions.ensureProjectLightbox();
+
+            if (index === -1) {
+                return;
+            }
+
+            app.projectLightbox.items = images;
+            app.projectLightbox.index = index;
+            app.projectLightbox.lastActiveElement = document.activeElement;
+            app.projectLightbox.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+            app.functions.renderProjectLightboxItem();
+            $('body').addClass('project-lightbox-open');
+            app.functions.lockProjectPageScroll();
+            lightbox.attr('aria-hidden', 'false').addClass('is-open');
+            lightbox.find('.project-lightbox-close').trigger('focus');
+        },
+        closeProjectLightbox() {
+            const lightbox = app.projectLightbox.element;
+            if (!lightbox || !lightbox.hasClass('is-open')) return;
+
+            const restoreY = app.projectLightbox.scrollLock.active
+                ? app.projectLightbox.scrollLock.y
+                : app.projectLightbox.lastScrollPosition;
+
+            lightbox.removeClass('is-open').attr('aria-hidden', 'true');
+            lightbox.find('.project-lightbox-media-wrap, .project-lightbox-link-wrap').empty();
+            lightbox.find('.project-lightbox-title, .project-lightbox-description').text('');
+            app.projectLightbox.items = [];
+            app.projectLightbox.index = -1;
+            $('body').removeClass('project-lightbox-open');
+            app.functions.unlockProjectPageScroll();
+
+            if (app.projectLightbox.lastActiveElement && typeof app.projectLightbox.lastActiveElement.focus === 'function') {
+                try {
+                    app.projectLightbox.lastActiveElement.focus({ preventScroll: true });
+                } catch (_error) {
+                    app.projectLightbox.lastActiveElement.focus();
+                }
+            }
+
+            window.scrollTo(0, restoreY);
+            requestAnimationFrame(() => window.scrollTo(0, restoreY));
+        },
+        handleProjectLightboxKeydown(event) {
+            if (!app.projectLightbox.element || !app.projectLightbox.element.hasClass('is-open')) {
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                app.functions.closeProjectLightbox();
+                return;
+            }
+
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                app.functions.navigateProjectLightbox('prev');
+                return;
+            }
+
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                app.functions.navigateProjectLightbox('next');
+            }
+        },
+        projectImageClick(event) {
+            const trigger = event.target.closest('.project-image-trigger, .project-image');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const image = trigger.classList.contains('project-image')
+                ? trigger
+                : trigger.querySelector('.project-image');
+
+            if (!image) return;
+            app.functions.openProjectLightbox(image);
         },
         projectDisplay(filter, expand) {
             if (filter && filter !== 'All' && app.elements.projectsAccordionToggle && app.elements.projectsAccordionPanel) {
@@ -386,22 +723,48 @@ const app = {
                     site: "",
                     code: "",
                 };
-                formattedProject.heading = `<h3>${project.title}</h3>`
-                let formattedTags = project.tags.map((tag) => {
-                    if (tag === app.projects.filter) {
-                        return `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`
-                    } else {
-                        return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.expand);app.functions.scrollUp('projects')" class="tag">#` + tag + `</button>`
-                    }
-                })
-                formattedProject.tags = `<div class="tags">` + formattedTags.reduce((accumulator, tag) => {
-                    return accumulator + tag}) + `</div>`;
+                formattedProject.heading = `<h3>${project.title}</h3>`;
+                // Only show tags if filtering (not 'All').
+                let showTags = app.projects.filter !== "All";
+                let formattedTags = "";
+                if (showTags) {
+                    formattedTags = project.tags.map((tag) => {
+                        if (tag === app.projects.filter) {
+                            return `<button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scroll('projects')" class="selected tag">#` + tag + `</button>`;
+                        } else {
+                            return `<button onclick="app.functions.projectDisplay('${tag}', app.projects.expand);app.functions.scrollUp('projects')" class="tag">#` + tag + `</button>`;
+                        }
+                    }).join("");
+                    formattedProject.tags = `<div class="tags">${formattedTags}</div>`;
+                } else {
+                    // Tags will be toggled by readMore if expanded
+                    formattedProject.tags = `<div class="tags" style="display:none;">${project.tags.map((tag) => `<button onclick="app.functions.projectDisplay('${tag}', app.projects.expand);app.functions.scrollUp('projects')" class="tag">#${tag}</button>`).join("")}</div>`;
+                }
                 if (project.image) {
-                    formattedProject.image = `<img src="`
-                    + project.image
-                    + `" class="project-image" alt="`
+                    const projectDescription = Array.isArray(project.description) && project.description.length > 0
+                        ? project.description.join(' ')
+                        : '';
+                    const imageJustify = typeof project['image-justify'] === 'string'
+                        ? project['image-justify'].trim()
+                        : '';
+                    const imageJustifyStyle = imageJustify
+                        ? ` style="object-position: ${imageJustify.replace(/\"/g, '&quot;')};"`
+                        : '';
+                    formattedProject.image = `<button type="button" class="project-image-trigger" aria-label="Expand image for `
                     + project.title
-                    + ` website screenshot">`
+                    + `"><img src="`
+                    + project.image
+                    + `" class="project-image"`
+                    + imageJustifyStyle
+                    + ` data-project-title="`
+                    + project.title
+                    + `" data-project-description="`
+                    + projectDescription
+                    + `" data-project-link="`
+                    + (project.site || '')
+                    + `" alt="`
+                    + project.title
+                    + ` website screenshot"></button>`
                 }
                 if (project.description.length > 0) {
                     let formattedParagraph = project.description.reduce((accumulator, paragraph) => {
@@ -450,18 +813,43 @@ const app = {
             }
         },
         readMore(project, paragraph, button) {
-            if (!button.classList.contains('read-less')){
+            const tagsDiv = project.querySelector('.tags');
+            if (!button.classList.contains('read-less')) {
                 button.classList.add("read-less");
                 button.innerHTML = `About this project<img src="./assets/icons/collapse-up.svg" alt="collapse description icon">`;
                 project.classList.add("active");
                 paragraph.style.maxHeight = (paragraph.scrollHeight + 30) + `px`;
+                if (tagsDiv && app.projects.filter === "All") tagsDiv.style.display = "flex";
             } else {
                 button.classList.remove("read-less");
                 button.innerHTML = `About this project<img src="./assets/icons/expand-down.svg" alt="expand description icon">`;
                 project.classList.remove("active");
                 paragraph.style.maxHeight = 0;
+                if (tagsDiv && app.projects.filter === "All") tagsDiv.style.display = "none";
                 document.activeElement.blur();
             }
+        },
+        async openGalleryProject(id) {
+            const exitFullscreen = document.exitFullscreen
+                ? () => document.exitFullscreen()
+                : document.webkitExitFullscreen
+                    ? () => document.webkitExitFullscreen()
+                    : null;
+
+            const isGalleryFullscreen = document.fullscreenElement === app.elements.galleryContainer
+                || document.webkitFullscreenElement === app.elements.galleryContainer;
+
+            if (isGalleryFullscreen && exitFullscreen) {
+                try {
+                    await exitFullscreen();
+                } catch (_error) {
+                    // Continue with project navigation even if fullscreen exit fails.
+                }
+            }
+
+            app.functions.projectDisplay('All', app.projects.expand);
+            app.functions.readMoreByID(id);
+            app.functions.scroll(id);
         },
         readMoreByID(id) {
             let project = document.getElementById(`${id}`);
@@ -483,6 +871,8 @@ const app = {
         }
     },
     events() {
+        app.functions.renderGalleryControls();
+
         if (app.elements.projectsAccordionToggle && app.elements.projectsAccordionPanel) {
             app.elements.projectsAccordionToggle.addEventListener('click', function() {
                 const expanded = this.getAttribute('aria-expanded') === 'true';
@@ -510,6 +900,9 @@ const app = {
                 event.preventDefault();
                 app.elements.galleryContainer.scrollLeft += scrollDelta;
             }, { passive: false });
+
+            document.addEventListener('fullscreenchange', app.functions.updateGalleryFullscreenState);
+            document.addEventListener('webkitfullscreenchange', app.functions.updateGalleryFullscreenState);
         }
         
         window.addEventListener('resize', () => {
@@ -596,6 +989,7 @@ const app = {
             e.preventDefault();
             app.functions.scroll("contact");
         });
+        app.elements.projectsContainer.on('click', '.project-image-trigger, .project-image', app.functions.projectImageClick);
 
     },
     init() {

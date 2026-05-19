@@ -1,0 +1,225 @@
+@use 'variables' as *;
+
+#projects .projects-container .project .project-image-trigger {
+    width: 100%;
+    display: flex;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: zoom-in;
+}
+
+#projects .projects-container .project .project-image-trigger:focus-visible {
+    outline: solid 2px $black;
+    outline-offset: -2px;
+}
+
+#projects .projects-container .project .project-image-trigger .project-image {
+    pointer-events: auto;
+    cursor: zoom-in;
+}
+
+html.project-lightbox-open,
+html body.project-lightbox-open {
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+html.project-lightbox-open,
+html body.project-lightbox-open {
+    height: 100%;
+}
+
+html body.project-lightbox-open {
+    touch-action: none;
+}
+
+.project-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba($black, 0.92);
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+.project-lightbox.is-open {
+    display: flex;
+}
+
+.project-lightbox-panel {
+    width: fit-content;
+    max-width: 1260px;
+    width: 90%;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.project-lightbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-lightbox-close,
+.project-lightbox-nav,
+.project-lightbox-link {
+    border: solid 2px rgba($white, 0.65);
+    background: rgba($black, 0.95);
+    color: $white;
+    font-size: 0.8rem;
+    line-height: 1;
+    text-transform: lowercase;
+    padding: 8px 12px;
+}
+
+.project-lightbox-link-wrap {
+    flex: 0 0 auto;
+}
+
+.project-lightbox-link {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.project-lightbox-image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:focus {
+        outline: solid 2px rgba($white, 0.65);
+        outline-offset: 2px;
+    }
+}
+
+.project-lightbox-close {
+    font-style: normal !important;
+
+    &:focus {
+        color: $white;
+    }
+}
+
+.project-lightbox-title-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-lightbox-frame {
+    display: block;
+    overflow: visible;
+    width: 100%;
+}
+
+.project-lightbox-nav {
+    font-size: 1.2rem;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 8px 10px;
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-lightbox-nav:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.project-lightbox-media-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
+}
+
+.project-lightbox-media {
+    width: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border: solid 3px rgba($white, 0.5);
+    background: $black;
+}
+
+.project-lightbox-title,
+.project-lightbox-description {
+    margin: 0;
+    color: rgba($white, 0.92);
+}
+
+.project-lightbox-title {
+    flex: 1 1 auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.project-lightbox-description {
+    align-self: stretch;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-lightbox-title:empty,
+.project-lightbox-description:empty {
+    display: none;
+}
+
+@media only screen and (max-width: $mobile) {
+    .project-lightbox {
+        padding: 12px;
+    }
+
+    .project-lightbox-panel {
+        max-width: calc(100vw - 24px);
+        max-height: 100vh;
+    }
+
+    .project-lightbox-title-row {
+        gap: 8px;
+    }
+
+    .project-lightbox-title {
+        font-size: 1rem;
+    }
+
+    .project-lightbox-frame,
+    .project-lightbox-media-wrap,
+    .project-lightbox-image-link {
+        width: 100%;
+    }
+
+    .project-lightbox-media {
+        max-width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .project-lightbox-nav {
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 1rem;
+    }
+}
