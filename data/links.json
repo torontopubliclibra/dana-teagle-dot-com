@@ -85,6 +85,14 @@
         "National Network of Abortion Funds": {
             "link": "https://abortionfunds.org/",
             "description": "Network of 100 independent abortion funds working to remove financial and logistical barriers to abortion access"
+        },
+        "Connect Fund": {
+            "link": "https://connectfund.org/",
+            "description": "Gender-affirming healthcare fund for 2SLGBTQ+ Canadians"
+        },
+        "Penn2Paper": {
+            "link": "https://penn2paper.ca/",
+            "description": "A free platonic pen pal program between federal prisoners and community volunteers"
         }
     }
 }

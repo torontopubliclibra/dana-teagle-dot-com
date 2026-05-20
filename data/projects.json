@@ -1,4 +1,16 @@
 {
+    "Penn2Paper": {
+        "id": "penn2paper",
+        "year": "2026",
+        "tags": [
+            "Advocacy", "Community organizing"
+        ],
+            "description": [
+                "This is a website for Penn2Paper, a group of community volunteers who help foster connection, community care, collective growth, and solidarity through letter writing. They facilitate a platonic and free pen pal program between federal prisoners and community volunteers. I designed their new website in May 2026."
+            ],
+        "image": "./assets/projects/penn2paper.png",
+        "site": "https://penn2paper.ca"
+    },
     "WEST83": {
         "id": "west83",
         "year": "2026",
@@ -10,18 +22,6 @@
             ],
         "image": "./assets/projects/west83-0.png",
         "site": "https://west83.com"
-    },
-    "Avery Everhart": {
-        "id": "avery-everhart",
-        "year": "2026",
-        "tags": [
-            "Academic", "Professional"
-        ],
-            "description": [
-                "This is a portfolio website for Avery Everhart, a transdisciplinary socio-spatial scientist and Assistant Professor of Geography at the University of British Columbia. The site provides information about her academic work, teaching, and research. It was completed between July 2025 and January 2026."
-            ],
-        "image": "./assets/projects/avery-everhart-0.png",
-        "site": "https://averyeverhart.com"
     },
     "Yang Chen": {
         "id": "yang-chen",
@@ -35,12 +35,23 @@
         "image": "./assets/projects/yang-chen-0.png",
         "site": "https://yangchen.ca"
     },
+    "Avery Everhart": {
+        "id": "avery-everhart",
+        "year": "2026",
+        "tags": [
+            "Academic", "Professional"
+        ],
+            "description": [
+                "This is a portfolio website for Avery Everhart, a transdisciplinary socio-spatial scientist and Assistant Professor of Geography at the University of British Columbia. The site provides information about her academic work, teaching, and research. It was completed between July 2025 and January 2026."
+            ],
+        "image": "./assets/projects/avery-everhart-0.png",
+        "site": "https://averyeverhart.com"
+    },
     "I.D. Guide": {
         "id": "idguide",
         "year": "2025",
         "tags": [
-            "Non-profit",
-            "Advocacy"
+            "Advocacy", "Community organizing"
         ],
             "description": [
                 "This is the latest version of my free and independent resource to help Canadians navigate legal name, gender marker, and I.D. changes.",
@@ -65,7 +76,8 @@
         "id": "andrea-lynn-ferguson",
         "year": "2025",
         "tags": [
-            "Professional"
+            "Professional",
+            "Healthcare"
         ],
         "description": [
             "This is a portfolio website for Andrea Lynn Ferguson, registered psychotherapist (qualifying). It was completed between May and June 2025."
@@ -105,7 +117,8 @@
         "year": "2025",
         "tags": [
             "Freelancer",
-            "Music/Audio"
+            "Music/Audio",
+            "Artist/Creative"
         ],
         "description": [
             "This is a portfolio website for Hazel Henry, a rock music producer based in Portland, Oregon. The site provides information about Hazel's work, portfolio, and services. It was designed and built between January and April 2025."
@@ -131,7 +144,8 @@
         "year": "2024",
         "tags": [
             "Non-profit",
-            "Advocacy"
+            "Advocacy",
+            "Healthcare"
         ],
         "description": [
             "This is a website for Connect Fund, a non-profit organization supporting healthcare for 2SLGBTQ+ communities in Canada. The site enables online donations and facilitates information sharing with donors and clients. It was launched in summer 2024, with ongoing updates and design support."
