@@ -530,12 +530,14 @@ const app = {
         },
         scroll(direction) {
             let location = "";
+            const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+            const offset = arguments.length > 1 ? ((arguments[1] || 0) * rootFontSize) : 0;
             if (direction === "top") {
-                location = 0;
+                location = Math.max(0, 0 - offset);
                 window.scrollTo({top: location, behavior: "smooth"});
                 history.pushState(null, null, ' ');
             } else {
-                location = $(`#${direction}`).offset().top;
+                location = Math.max(0, $(`#${direction}`).offset().top - offset);
                 window.scrollTo({top: location, behavior: "smooth"});
                 setTimeout(() => {
                     history.pushState(null, null, `#${direction}`);
@@ -1109,7 +1111,7 @@ const app = {
         });
         app.elements.aboutToTestimonial.click((e) => {
             e.preventDefault();
-            app.functions.scroll("testimonial");
+            app.functions.scroll("testimonial", 1);
         });
         app.elements.servicesToContact.click((e) => {
             e.preventDefault();

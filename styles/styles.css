@@ -5071,6 +5071,10 @@ header .scroll-title {
   }
 }
 
+#testimonial {
+  scroll-margin-top: 1rem;
+}
+
 footer .wrapper {
   display: flex;
   flex-wrap: wrap;

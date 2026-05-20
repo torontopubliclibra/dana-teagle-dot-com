@@ -1764,6 +1764,10 @@ WW
     }
 }
 
+#testimonial {
+    scroll-margin-top: 1rem;
+}
+
 // footer
 footer .wrapper {
     @include flex(row-reverse, 0, center, flex-end);
