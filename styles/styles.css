@@ -4808,12 +4808,14 @@ header .scroll-title {
 }
 
 #projects hr {
-  margin-top: 2rem;
   border-color: #84A59D;
   margin-bottom: 0;
   border-width: 2.5px;
   border-left: 0;
   border-right: 0;
+}
+#projects hr.mt {
+  margin-top: 2rem;
 }
 #projects .projects-nav {
   display: flex;
@@ -4824,6 +4826,16 @@ header .scroll-title {
   align-items: initial;
   width: 100%;
   margin: 5px;
+}
+#projects .projects-nav p.flex-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+@media only screen and (max-width: 970px) {
+  #projects .projects-nav p.flex-nav {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }
 #projects .projects-nav hr {
   margin-left: 0;

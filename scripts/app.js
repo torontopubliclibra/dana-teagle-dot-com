@@ -823,10 +823,10 @@ const app = {
                     sortText = `<button onclick="app.projects.data.reverse();app.projects.sort='newest';app.functions.projectDisplay(app.projects.filter, app.projects.expand);app.functions.scrollUp('projects')" title="Sort newest to oldest" class="project-button sort">Sort newest to oldest <img src="./assets/icons/sort-asc.svg" alt="sort ascending icon" style="pointer-events: auto;"></button>`;
                 }
                 app.elements.projectsNav.html(
-                    `<p>`
+                    `<p class="flex-nav">`
                     + sortText
                     + ` <br class="mobile-only"/>`
-                    + filterText
+                    + `<span>` + filterText + `</span>`
                     + `</p>`
                     + `<ul class="project-filters">`
                     + projectFilters.reduce((accumulator, tag) => {

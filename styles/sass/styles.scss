@@ -1481,12 +1481,15 @@ header {
 #projects {
 
     hr {
-        margin-top: 2rem;
         border-color: $color1;
         margin-bottom: 0;
         border-width: 2.5px;
         border-left: 0;
         border-right: 0;
+
+        &.mt {
+            margin-top: 2rem;
+        }
     }
 
     // projects navigation
@@ -1494,6 +1497,16 @@ header {
         @include flex(column, 5px);
         width: 100%;
         margin: 5px;
+
+        p.flex-nav {
+            display: flex;
+            gap: 0.5rem;
+
+            @media only screen and (max-width: $tablet) {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+        }
 
         hr {
             margin-left: 0;
