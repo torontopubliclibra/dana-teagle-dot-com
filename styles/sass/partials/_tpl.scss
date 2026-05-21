@@ -1241,7 +1241,7 @@ html.tpl {
         position: relative;
         width: fit-content;
         max-width: calc(100vw - 40px);
-        max-height: 92vh;
+        max-height: 90vh;
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -1464,11 +1464,13 @@ html.tpl {
 
         .feed-lightbox-panel {
             max-width: 85vw;
+            margin-bottom: -5vh;
             height: 70vh;
             max-height: 70vh;
             margin: 0 auto;
             align-items: space-between;
             justify-content: center;
+            top: 3vh;
         }
 
         .feed-lightbox-header {
@@ -1487,8 +1489,10 @@ html.tpl {
         }
 
         .feed-lightbox-media {
+            width: 100%;
             max-width: 100%;
-            max-height: calc(100vh - 132px);
+            height: auto;
+            max-height: 80vh;
         }
 
         .feed-lightbox-nav-row {

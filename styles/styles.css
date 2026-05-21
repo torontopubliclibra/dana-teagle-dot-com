@@ -1639,7 +1639,7 @@ html.tpl .feed-lightbox-panel {
   width: -moz-fit-content;
   width: fit-content;
   max-width: calc(100vw - 40px);
-  max-height: 92vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -1839,11 +1839,13 @@ html.tpl .feed-lightbox-caption:empty {
   }
   html.tpl .feed-lightbox-panel {
     max-width: 85vw;
+    margin-bottom: -5vh;
     height: 70vh;
     max-height: 70vh;
     margin: 0 auto;
     align-items: space-between;
     justify-content: center;
+    top: 3vh;
   }
   html.tpl .feed-lightbox-header {
     order: 2;
@@ -1858,8 +1860,10 @@ html.tpl .feed-lightbox-caption:empty {
     gap: 6px;
   }
   html.tpl .feed-lightbox-media {
+    width: 100%;
     max-width: 100%;
-    max-height: calc(100vh - 132px);
+    height: auto;
+    max-height: 80vh;
   }
   html.tpl .feed-lightbox-nav-row {
     order: 1;
@@ -3045,10 +3049,9 @@ html body.project-lightbox-open {
   border: solid #B57E9B 5px;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 1200px;
+  max-width: 1260px;
   width: 90%;
-  height: auto;
-  max-height: 92vh;
+  height: 90vh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -3062,6 +3065,8 @@ html body.project-lightbox-open {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+  margin-top: auto;
+  order: 4;
 }
 
 .project-lightbox-close,
@@ -3112,7 +3117,7 @@ html body.project-lightbox-open {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: -3.5rem;
+  margin-top: 0;
 }
 
 .project-lightbox-frame {
@@ -3196,23 +3201,36 @@ html body.project-lightbox-open {
 
 @media only screen and (max-width: 768px) {
   .project-lightbox {
-    padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+    padding: max(12px, env(safe-area-inset-top)) 12px max(68px, env(safe-area-inset-bottom) + 56px);
   }
   .project-lightbox-panel {
     max-width: calc(100vw - 24px);
     padding: 1rem;
-    max-height: 85vh;
+    max-height: 80vh;
   }
   .project-lightbox-title-row {
     gap: 8px;
     margin-top: 0;
   }
   .project-lightbox-nav {
-    position: static;
+    position: fixed;
+    top: auto;
+    bottom: 5vh;
+    margin: 0;
+    z-index: 2010;
+    height: auto;
   }
   .project-lightbox-nav:hover, .project-lightbox-nav:active, .project-lightbox-nav:focus {
     color: #f3e8e9;
     font-style: normal !important;
+  }
+  .project-lightbox-nav.project-lightbox-prev {
+    left: calc(50% - 52px);
+    right: auto;
+  }
+  .project-lightbox-nav.project-lightbox-next {
+    left: calc(50% + 10px);
+    right: auto;
   }
   .project-lightbox-title {
     font-size: 1rem;
@@ -3224,7 +3242,9 @@ html body.project-lightbox-open {
   }
   .project-lightbox-media {
     max-width: 100%;
-    max-height: 50vh;
+    width: 100%;
+    max-height: unset;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: top center;
