@@ -649,9 +649,9 @@ const app = {
                 app.functions.navigateProjectLightbox('next');
             });
 
-            app.projectLightbox.element.find('.project-lightbox-panel').on('touchstart', '.project-lightbox-frame', app.functions.handleProjectLightboxTouchStart);
-            app.projectLightbox.element.find('.project-lightbox-panel').on('touchmove', '.project-lightbox-frame', app.functions.handleProjectLightboxTouchMove);
-            app.projectLightbox.element.find('.project-lightbox-panel').on('touchend touchcancel', '.project-lightbox-frame', app.functions.handleProjectLightboxTouchEnd);
+            app.projectLightbox.element.find('.project-lightbox-panel').on('touchstart', app.functions.handleProjectLightboxTouchStart);
+            app.projectLightbox.element.find('.project-lightbox-panel').on('touchmove', app.functions.handleProjectLightboxTouchMove);
+            app.projectLightbox.element.find('.project-lightbox-panel').on('touchend touchcancel', app.functions.handleProjectLightboxTouchEnd);
 
             $(document).on('keydown', app.functions.handleProjectLightboxKeydown);
             return app.projectLightbox.element;
