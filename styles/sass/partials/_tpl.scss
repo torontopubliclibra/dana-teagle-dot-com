@@ -1467,6 +1467,8 @@ html.tpl {
         }
 
         .feed-lightbox-header {
+            order: 2;
+            width: 100%;
             align-items: flex-start;
         }
 
@@ -1485,6 +1487,7 @@ html.tpl {
         }
 
         .feed-lightbox-nav-row {
+            order: 1;
             justify-content: center;
             align-items: center;
             gap: 0;
@@ -1495,8 +1498,15 @@ html.tpl {
         }
 
         .feed-lightbox-frame {
-            order: 1;
             width: 100%;
+        }
+
+        .feed-lightbox-caption {
+            order: 3;
+        }
+
+        .feed-lightbox-actions {
+            order: 4;
         }
 
         .feed-lightbox-panel {

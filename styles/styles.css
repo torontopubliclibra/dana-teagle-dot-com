@@ -1841,6 +1841,8 @@ html.tpl .feed-lightbox-caption:empty {
     align-items: space-between;
   }
   html.tpl .feed-lightbox-header {
+    order: 2;
+    width: 100%;
     align-items: flex-start;
   }
   html.tpl .feed-lightbox-header-meta {
@@ -1855,6 +1857,7 @@ html.tpl .feed-lightbox-caption:empty {
     max-height: calc(100vh - 132px);
   }
   html.tpl .feed-lightbox-nav-row {
+    order: 1;
     justify-content: center;
     align-items: center;
     gap: 0;
@@ -1863,8 +1866,13 @@ html.tpl .feed-lightbox-caption:empty {
     display: none;
   }
   html.tpl .feed-lightbox-frame {
-    order: 1;
     width: 100%;
+  }
+  html.tpl .feed-lightbox-caption {
+    order: 3;
+  }
+  html.tpl .feed-lightbox-actions {
+    order: 4;
   }
   html.tpl .feed-lightbox-panel {
     position: relative;
