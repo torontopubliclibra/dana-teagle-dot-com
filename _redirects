@@ -45,4 +45,4 @@ https://danateagle.com/now /tpl/now
 
 # Feed permalink compatibility
 /feed/:id /tpl/feed#:id 301!
-tpl/feed/:id /tpl/feed#:id 301!
+/tpl/feed/:id /tpl/feed#:id 301!
