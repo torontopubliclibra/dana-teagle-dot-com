@@ -1,6 +1,10 @@
 {
     "2026": {
         "movies": [
+            {"log": "Testament", "year": "1983", "rewatch": false, "link": "https://letterboxd.com/film/testament/", "poster": "https://a.ltrbxd.com/resized/film-poster/3/8/5/1/9/38519-testament-0-2000-0-3000-crop.jpg?v=024025073e"},
+            {"log": "Return of the Jedi", "year": "1983", "rewatch": true, "link": "https://letterboxd.com/film/return-of-the-jedi/", "poster": "https://a.ltrbxd.com/resized/sm/upload/88/lu/ak/8v/5wDrNqePjb5SOucrWQwiFu340vv-0-2000-0-3000-crop.jpg?v=acc9d9c27b"},
+            {"log": "Turning Red", "year": "2022", "rewatch": true, "link": "https://letterboxd.com/film/turning-red/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/3/8/7/2/7/438727-turning-red-0-2000-0-3000-crop.jpg?v=85497b8090"},
+            {"log": "The Sheep Detectives", "year": "2026", "rewatch": false, "link": "https://letterboxd.com/film/the-sheep-detectives/", "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/8/3/1/3/5/1183135-the-sheep-detectives-0-2000-0-3000-crop.jpg?v=c7b622176e"},
             {"log": "The Punisher: One Last Kill", "year": "2026", "rewatch": false, "link": "https://letterboxd.com/film/the-punisher-one-last-kill/", "poster": "https://a.ltrbxd.com/resized/film-poster/1/3/1/7/4/7/0/1317470-untitled-the-punisher-special-0-2000-0-3000-crop.jpg?v=5a39a454db"},
             {"log": "Mile End Kicks", "year": "2025", "rewatch": false, "link": "https://letterboxd.com/film/mile-end-kicks/", "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/6/4/6/1/2/1064612-mile-end-kicks-0-2000-0-3000-crop.jpg?v=f73de5160c"},
             {"log": "Blue Heron", "year": "2025", "rewatch": false, "link": "https://letterboxd.com/film/blue-heron/", "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/7/1/2/2/0/1071220-blue-heron-0-2000-0-3000-crop.jpg?v=d5d52f31b6"},
@@ -83,11 +87,13 @@
             {"log": "Spencer", "year": "2021", "rewatch": true, "link": "https://letterboxd.com/film/spencer-2021/"}
         ],
         "tv": [
+            {"log": "The Other Bennet Sister", "season": "1", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-other-bennet-sister", "poster": "https://artworks.thetvdb.com/banners/v4/series/455324/posters/69ce529ba4216.jpg"},
+            {"log": "Bojack Horseman", "season": "1", "year": "2014", "rewatch": true, "link": "https://thetvdb.com/series/bojack-horseman", "poster": "https://artworks.thetvdb.com/banners/posters/282254-6.jpg"},
+            {"log": "columbo", "season": "1", "year": "1972", "rewatch": false, "link": "https://thetvdb.com/series/columbo", "poster": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmediaproxy.tvtropes.org%2Fwidth%2F1200%2Fhttps%3A%2F%2Fstatic.tvtropes.org%2Fpmwiki%2Fpub%2Fimages%2Fcolumbo_1.jpg&f=1&nofb=1&ipt=cfe2cd3b73373fdeac3c1a92312507a815ccb7a6debaddef5c487a06e10942a2"},
             {"log": "daredevil: born again", "season": "2", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/v4/series/422712/posters/6978fefe94ea5.jpg", "link": "https://thetvdb.com/series/daredevil-born-again"},
             {"log": "taskmaster", "season": "21", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/posters/5af6cb30c8ef7.jpg", "link": "https://thetvdb.com/series/taskmaster"},
             {"log": "daria", "season": "1", "year": "1997", "rewatch": true, "poster": "https://artworks.thetvdb.com/banners/posters/77996-4.jpg", "link": "https://thetvdb.com/series/daria"},
             {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-pitt"},
-            {"log": "columbo", "season": "1", "year": "1972", "rewatch": false},
             {"log": "last one laughing uk", "season": "2", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/v4/series/455162/posters/69b3121c046a7.jpg"},
             {"log": "firefly", "season": "1", "year": "2002", "rewatch": true},
             {"log": "rooster", "year": "2026", "rewatch": false},
@@ -109,9 +115,10 @@
             {"log": "fraggle rock", "season": "1", "year": "1983", "rewatch": false}
         ],
         "books": [
+            {"log": "Other Women", "author": "Nicola Maye Goldberg", "year": "2026", "reread": false, "link": "https://www.penguinrandomhouse.ca/books/804532/other-women-by-nicola-maye-goldberg/9781836741657", "cover": "https://images.penguinrandomhouse.com/cover/9781836741657"},
             {"log": "Encampment: Resistance, Grace, and an Unhoused Community", "author": "Maggie Helwig", "year": "2025", "reread": false, "link": "https://chbooks.com/Books/E/Encampment", "cover": "https://chbooks.com/var/site/storage/images/books/e/encampment/9781552455043_cover/1461900-1-eng-CA/9781552455043_cover1_rb_modalcover.jpg"},
             {"log": "Fancy Gap", "author": "Zak Jones", "year": "2026", "reread": false, "link": "https://www.penguinrandomhouse.ca/books/753165/fancy-gap-by-zak-jones/9780735249875", "cover": "https://m.media-amazon.com/images/I/71zmgQp-kDL._UF1000,1000_QL80_.jpg"},
-            {"log": "Hyperpolitics: Extreme Politicization without Political Consequences", "author": "Anton Jäger", "year": "2023", "reread": false, "link": "https://www.versobooks.com/en-ca/products/3460-hyperpolitics", "cover": "https://www.versobooks.com/cdn/shop/files/getimage_663460fd-423b-4da5-a8be-ad52cc361881.jpg"},
+            {"log": "Hyperpolitics: Extreme Politicization without Political Consequences", "author": "Anton Jäger", "year": "2023", "reread": false, "link": "https://www.versobooks.com/en-ca/products/3460-hyperpolitics", "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fresearchdevstore.myshopify.com%2Fcdn%2Fshop%2Ffiles%2FGux1hS-WkAAYqBA.jpg%3Fv%3D1752097516&f=1&nofb=1&ipt=65ffcf9951130d520ecc5aee2c0216c7f0a30d890db756d0d60b842975c32be8"},
             {"log": "slow technology reader", "author": "carolyn strauss, et al.", "year": "2026", "reread": false, "link": "https://valiz.nl/en/publications/slow-technology-reader", "cover": "https://ik.imagekit.io/efv6pqb1qal/images/publicaties/Slow_Technology_Reader/9789493246461_SlowTechnologyReader_RGB_LOWRES.jpg"},
             {"log": "good girl", "author": "anna fitzpatrick", "year": "2022", "reread": false, "link": "https://www.flyingbooks.ca/item/SF-Vg84XuCCn78CGypDuHg", "cover": "https://cdn1.bookmanager.com/i/m?b=SF-Vg84XuCCn78CGypDuHg&cb=1706903254"},
             {"log": "perverts", "author": "kay gabriel", "year": "2025", "reread": false, "link": "https://nightboat.org/book/perverts/", "cover": "https://nightboat.org/wp-content/uploads/2025/04/small-5-400x600.jpg"},
