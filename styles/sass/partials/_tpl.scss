@@ -1480,23 +1480,18 @@ html.tpl {
         }
 
         .feed-lightbox-media {
-            max-width: 80%;
+            max-width: 100%;
             max-height: calc(100vh - 132px);
         }
 
         .feed-lightbox-nav-row {
-            flex-wrap: wrap;
             justify-content: center;
-            align-items: flex-start;
-            gap: 8px;
+            align-items: center;
+            gap: 0;
         }
 
-        .feed-lightbox-nav.feed-lightbox-prev {
-            margin-left: -0.75rem;
-        }
-
-        .feed-lightbox-nav.feed-lightbox-next {
-            margin-right: -0.75rem;
+        .feed-lightbox-nav {
+            display: none;
         }
 
         .feed-lightbox-frame {

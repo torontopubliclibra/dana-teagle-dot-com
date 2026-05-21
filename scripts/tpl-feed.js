@@ -11,6 +11,13 @@ const tplFeed = {
     lastActiveElement: null,
     lastScrollPosition: 0,
     lastOpenedItemId: '',
+    lightboxTouch: {
+        startX: 0,
+        startY: 0,
+        deltaX: 0,
+        deltaY: 0,
+        tracking: false
+    },
     scrollLock: {
         active: false,
         y: 0,
@@ -194,6 +201,85 @@ const tplFeed = {
         isMobileViewport() {
             return window.matchMedia(MOBILE_VIEWPORT_QUERY).matches;
         },
+        resetLightboxTouchState() {
+            tplFeed.lightboxTouch.startX = 0;
+            tplFeed.lightboxTouch.startY = 0;
+            tplFeed.lightboxTouch.deltaX = 0;
+            tplFeed.lightboxTouch.deltaY = 0;
+            tplFeed.lightboxTouch.tracking = false;
+        },
+        getLightboxTouchPoint(event) {
+            const originalEvent = event.originalEvent || event;
+            if (!originalEvent) {
+                return null;
+            }
+
+            if (originalEvent.touches && originalEvent.touches.length) {
+                return originalEvent.touches[0];
+            }
+
+            if (originalEvent.changedTouches && originalEvent.changedTouches.length) {
+                return originalEvent.changedTouches[0];
+            }
+
+            return null;
+        },
+        handleLightboxTouchStart(event) {
+            if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open') || !tplFeed.functions.isMobileViewport()) {
+                return;
+            }
+
+            const point = tplFeed.functions.getLightboxTouchPoint(event);
+            if (!point) {
+                return;
+            }
+
+            tplFeed.lightboxTouch.startX = point.clientX;
+            tplFeed.lightboxTouch.startY = point.clientY;
+            tplFeed.lightboxTouch.deltaX = 0;
+            tplFeed.lightboxTouch.deltaY = 0;
+            tplFeed.lightboxTouch.tracking = true;
+        },
+        handleLightboxTouchMove(event) {
+            if (!tplFeed.lightboxTouch.tracking || !tplFeed.functions.isMobileViewport()) {
+                return;
+            }
+
+            const point = tplFeed.functions.getLightboxTouchPoint(event);
+            if (!point) {
+                return;
+            }
+
+            tplFeed.lightboxTouch.deltaX = point.clientX - tplFeed.lightboxTouch.startX;
+            tplFeed.lightboxTouch.deltaY = point.clientY - tplFeed.lightboxTouch.startY;
+
+            if (Math.abs(tplFeed.lightboxTouch.deltaX) > Math.abs(tplFeed.lightboxTouch.deltaY) && event.cancelable) {
+                event.preventDefault();
+            }
+        },
+        handleLightboxTouchEnd(event) {
+            if (!tplFeed.lightboxTouch.tracking) {
+                return;
+            }
+
+            const point = tplFeed.functions.getLightboxTouchPoint(event);
+            if (point) {
+                tplFeed.lightboxTouch.deltaX = point.clientX - tplFeed.lightboxTouch.startX;
+                tplFeed.lightboxTouch.deltaY = point.clientY - tplFeed.lightboxTouch.startY;
+            }
+
+            const absX = Math.abs(tplFeed.lightboxTouch.deltaX);
+            const absY = Math.abs(tplFeed.lightboxTouch.deltaY);
+            const swipeThreshold = 50;
+            const isHorizontalSwipe = absX > swipeThreshold && absX > absY;
+
+            if (isHorizontalSwipe) {
+                const direction = tplFeed.lightboxTouch.deltaX < 0 ? 'next' : 'prev';
+                tplFeed.functions.navigateLightbox(direction);
+            }
+
+            tplFeed.functions.resetLightboxTouchState();
+        },
         preferredScrollOffset() {
             return window.matchMedia(NARROW_VIEWPORT_QUERY).matches ? 290 : 260;
         },
@@ -283,6 +369,10 @@ const tplFeed = {
             tplFeed.lightbox.find('.feed-lightbox-panel').on('click', '.feed-lightbox-next', () => {
                 tplFeed.functions.navigateLightbox('next');
             });
+
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('touchstart', '.feed-lightbox-frame', tplFeed.functions.handleLightboxTouchStart);
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('touchmove', '.feed-lightbox-frame', tplFeed.functions.handleLightboxTouchMove);
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('touchend touchcancel', '.feed-lightbox-frame', tplFeed.functions.handleLightboxTouchEnd);
 
             $(document).on('keydown', tplFeed.functions.handleLightboxKeydown);
 
@@ -374,6 +464,7 @@ const tplFeed = {
             tplFeed.lightboxIndex = index;
             tplFeed.lastActiveElement = document.activeElement;
             tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+            tplFeed.functions.resetLightboxTouchState();
             tplFeed.functions.renderLightboxItem();
             $('body').addClass('feed-lightbox-open');
             tplFeed.functions.lockPageScroll();
@@ -394,6 +485,7 @@ const tplFeed = {
             tplFeed.lightbox.find('.feed-lightbox-caption').text('');
             tplFeed.lightboxItems = [];
             tplFeed.lightboxIndex = -1;
+            tplFeed.functions.resetLightboxTouchState();
             $('body').removeClass('feed-lightbox-open');
             tplFeed.functions.unlockPageScroll();
 

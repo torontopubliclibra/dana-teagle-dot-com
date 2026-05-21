@@ -1851,20 +1851,16 @@ html.tpl .feed-lightbox-caption:empty {
     gap: 6px;
   }
   html.tpl .feed-lightbox-media {
-    max-width: 80%;
+    max-width: 100%;
     max-height: calc(100vh - 132px);
   }
   html.tpl .feed-lightbox-nav-row {
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: center;
+    gap: 0;
   }
-  html.tpl .feed-lightbox-nav.feed-lightbox-prev {
-    margin-left: -0.75rem;
-  }
-  html.tpl .feed-lightbox-nav.feed-lightbox-next {
-    margin-right: -0.75rem;
+  html.tpl .feed-lightbox-nav {
+    display: none;
   }
   html.tpl .feed-lightbox-frame {
     order: 1;
