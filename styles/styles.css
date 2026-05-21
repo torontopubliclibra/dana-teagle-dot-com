@@ -4428,7 +4428,7 @@ header .scroll-title {
   box-shadow: none;
 }
 #gallery .gallery-container.is-fullscreen .gallery-fullscreen-controls {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   z-index: 2000;
@@ -4489,11 +4489,14 @@ header .scroll-title {
 }
 @media only screen and (max-width: 768px) {
   #gallery .gallery-container.is-fullscreen {
+    position: fixed;
     width: 100vh;
     max-width: 100vh;
     height: 100vw;
     top: 50%;
     left: 50%;
+    right: auto;
+    bottom: auto;
     transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center center;
   }
