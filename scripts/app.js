@@ -351,21 +351,7 @@ const app = {
                 app.elements.galleryContainer.classList.toggle('is-fullscreen', app.gallery.fullscreen);
             }
 
-            app.functions.updateGalleryMobileRotationClass();
-
             app.functions.renderGalleryControls();
-        },
-        shouldRotateGalleryFullscreen() {
-            const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-            const isPortrait = window.matchMedia('(orientation: portrait)').matches;
-            return app.gallery.fullscreen && isTouchDevice && isPortrait;
-        },
-        updateGalleryMobileRotationClass() {
-            if (!app.elements.galleryContainer) {
-                return;
-            }
-
-            app.elements.galleryContainer.classList.toggle('is-mobile-rotated', app.functions.shouldRotateGalleryFullscreen());
         },
         async toggleGalleryFullscreen() {
             const container = app.elements.galleryContainer;
@@ -1137,12 +1123,10 @@ const app = {
 
             document.addEventListener('fullscreenchange', app.functions.updateGalleryFullscreenState);
             document.addEventListener('webkitfullscreenchange', app.functions.updateGalleryFullscreenState);
-            window.addEventListener('orientationchange', app.functions.updateGalleryMobileRotationClass);
         }
         
         window.addEventListener('resize', () => {
             app.functions.galleryDisplay();
-            app.functions.updateGalleryMobileRotationClass();
         });
 
         let h1HoverActive = false;

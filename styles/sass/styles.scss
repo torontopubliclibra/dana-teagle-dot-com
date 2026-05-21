@@ -824,7 +824,7 @@ header {
             box-shadow: none;
 
             .gallery-fullscreen-controls {
-                position: absolute;
+                position: fixed;
                 top: 20px;
                 right: 20px;
                 z-index: 2000;
@@ -894,24 +894,6 @@ header {
                 }
             }
 
-            &.is-mobile-rotated {
-                position: fixed;
-                width: 100vh;
-                max-width: 100vh;
-                height: 100vw;
-                top: 50%;
-                left: 50%;
-                right: auto;
-                bottom: auto;
-                margin: 0;
-                transform: translate(-50%, -50%) rotate(90deg);
-                transform-origin: center center;
-
-                .gallery-content {
-                    min-height: calc(100vw - 24px);
-                    height: calc(100vw - 24px);
-                }
-            }
         }
     }
     .gallery-content {
