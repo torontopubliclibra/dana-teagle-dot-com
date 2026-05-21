@@ -40,7 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const docHeight = document.documentElement.scrollHeight;
-      const nearBottom = window.innerHeight + window.scrollY >= docHeight - 2;
+      const isMobile = window.innerWidth < 901;
+      const bottomThreshold = isMobile ? 100 : 2;
+      const nearBottom = window.innerHeight + window.scrollY >= docHeight - bottomThreshold;
       if (nearBottom) {
         const lastEntry = sectionMap[sectionMap.length - 1];
         sectionMap.forEach((entry) => {
