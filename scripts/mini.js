@@ -1,4 +1,98 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function setupNavSectionHighlight() {
+    const navLinks = Array.from(document.querySelectorAll("header nav a[href^='#']"));
+    if (!navLinks.length) {
+      return;
+    }
+
+    const sectionMap = navLinks
+      .map((link) => {
+        const selector = link.getAttribute("href");
+        if (!selector) {
+          return null;
+        }
+
+        const section = document.querySelector(selector);
+        if (!section) {
+          return null;
+        }
+
+        return { link, section };
+      })
+      .filter(Boolean);
+
+    if (!sectionMap.length) {
+      return;
+    }
+
+    const getScrollMarker = () => {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 0;
+      return window.scrollY + headerHeight + 8;
+    };
+
+    const updateActiveLink = () => {
+      if (window.scrollY <= 2) {
+        sectionMap.forEach((entry) => {
+          entry.link.classList.remove("is-active");
+        });
+        return;
+      }
+
+      const docHeight = document.documentElement.scrollHeight;
+      const nearBottom = window.innerHeight + window.scrollY >= docHeight - 2;
+      if (nearBottom) {
+        const lastEntry = sectionMap[sectionMap.length - 1];
+        sectionMap.forEach((entry) => {
+          entry.link.classList.toggle("is-active", entry === lastEntry);
+        });
+        return;
+      }
+
+      const marker = getScrollMarker();
+      let activeEntry = sectionMap[0];
+
+      sectionMap.forEach((entry) => {
+        const top = entry.section.offsetTop;
+        if (marker >= top) {
+          activeEntry = entry;
+        }
+      });
+
+      sectionMap.forEach((entry) => {
+        entry.link.classList.toggle("is-active", entry === activeEntry);
+      });
+    };
+
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    window.addEventListener("resize", updateActiveLink);
+    updateActiveLink();
+  }
+
+  function setupScrollTopButton() {
+    const scrollTopButton = document.querySelector(".mini-scroll-top");
+    if (!scrollTopButton) {
+      return;
+    }
+
+    const updateVisibility = () => {
+      if (window.innerWidth < 901) {
+        scrollTopButton.classList.remove("is-visible");
+        return;
+      }
+
+      if (window.scrollY >= window.innerHeight) {
+        scrollTopButton.classList.add("is-visible");
+      } else {
+        scrollTopButton.classList.remove("is-visible");
+      }
+    };
+
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    window.addEventListener("resize", updateVisibility);
+    updateVisibility();
+  }
+
   function bindSectionJumpLinks() {
     const jumpLinks = document.querySelectorAll("a[href='#gallery'], a[href='#services'], a[href='#testimonial']");
     jumpLinks.forEach((link) => {
@@ -333,4 +427,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initContent();
   setupHeadshotPixelation();
+  setupScrollTopButton();
+  setupNavSectionHighlight();
 });

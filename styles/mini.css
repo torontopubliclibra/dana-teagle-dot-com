@@ -257,16 +257,18 @@ h2 {
   font-size: 1.25rem;
   margin-top: -20px;
   padding-top: 20px;
-  scroll-margin-top: 145px;
+  scroll-margin-top: 121px;
 }
 
 #testimonial {
-  scroll-margin-top: 175px;
+  scroll-margin-top: 151px;
 }
 
+#about,
 #gallery,
-#services {
-  scroll-margin-top: 175px;
+#services,
+#projects {
+  scroll-margin-top: 151px;
 }
 
 cite {
@@ -290,6 +292,12 @@ cite a {
 a:hover {
   color: #99b1d3;
   font-style: italic;
+}
+
+header nav a.is-active {
+  color: #99b1d3;
+  font-style: italic;
+  text-decoration: none;
 }
 
 header, main, footer {
@@ -423,7 +431,7 @@ hr.highlight {
 .mini-project-item {
   border: solid rgba(153, 177, 211, 0.45) 2px;
   padding: 10px 14px;
-  scroll-margin-top: 165px;
+  scroll-margin-top: 141px;
 }
 
 .mini-project-item summary {
@@ -488,4 +496,41 @@ hr.highlight {
   height: auto;
   border: solid rgba(153, 177, 211, 0.45) 2px;
   image-rendering: pixelated;
+}
+
+.mini-scroll-top {
+  display: none;
+}
+
+@media only screen and (min-width: 901px) {
+  .mini-scroll-top {
+    position: fixed;
+    right: calc((100vw - min(85vw, 900px)) / 2 - 84px);
+    bottom: 24px;
+    z-index: 20;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #99b1d3 2px;
+    background: #282b2c;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .mini-scroll-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mini-scroll-top img {
+    width: 18px;
+    height: 18px;
+    filter: invert(74%) sepia(8%) saturate(606%) hue-rotate(176deg) brightness(88%) contrast(90%);
+  }
 }
