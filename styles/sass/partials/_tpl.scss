@@ -1348,6 +1348,7 @@ html.tpl {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        perspective: 1500px;
     }
 
     .feed-lightbox-nav-row {
@@ -1399,6 +1400,49 @@ html.tpl {
         display: inline-flex;
         justify-content: center;
         align-items: center;
+
+        &.is-flip-next {
+            animation: feed-lightbox-flip-next 0.24s ease-out;
+            transform-origin: right center;
+        }
+
+        &.is-flip-prev {
+            animation: feed-lightbox-flip-prev 0.24s ease-out;
+            transform-origin: left center;
+        }
+    }
+
+    @keyframes feed-lightbox-flip-next {
+        from {
+            opacity: 0.9;
+            transform: rotateY(-8deg) translateX(8px) scale(0.995);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateY(0deg) translateX(0) scale(1);
+        }
+    }
+
+    @keyframes feed-lightbox-flip-prev {
+        from {
+            opacity: 0.9;
+            transform: rotateY(8deg) translateX(-8px) scale(0.995);
+        }
+
+        to {
+            opacity: 1;
+            transform: rotateY(0deg) translateX(0) scale(1);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .feed-lightbox-media-shell {
+            &.is-flip-next,
+            &.is-flip-prev {
+                animation: none;
+            }
+        }
     }
 
     .feed-lightbox-alt {

@@ -8,6 +8,7 @@ const tplFeed = {
     lightbox: null,
     lightboxItems: [],
     lightboxIndex: -1,
+    lightboxTransitionDirection: '',
     lastActiveElement: null,
     lastScrollPosition: 0,
     lastOpenedItemId: '',
@@ -406,6 +407,9 @@ const tplFeed = {
 
             tplFeed.lastOpenedItemId = itemId;
             lightbox.find('.feed-lightbox-frame').html(frameMarkup);
+            if (tplFeed.lightboxTransitionDirection) {
+                lightbox.find('.feed-lightbox-media-shell').addClass(`is-flip-${tplFeed.lightboxTransitionDirection}`);
+            }
             lightbox.find('.feed-lightbox-header-meta').html(headerMeta);
             lightbox.find('.feed-lightbox-panel').attr('data-alt-text', alt || '');
             lightbox.find('.feed-lightbox-alt-toggle').attr('aria-pressed', 'false').removeClass('selected');
@@ -418,6 +422,7 @@ const tplFeed = {
                     ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="feed-lightbox-link">open link</a>`
                     : ''
             );
+            tplFeed.lightboxTransitionDirection = '';
         },
         navigateLightbox(direction) {
             if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) {
@@ -428,6 +433,7 @@ const tplFeed = {
             const nextIndex = tplFeed.lightboxIndex + delta;
             if (nextIndex >= 0 && nextIndex < tplFeed.lightboxItems.length) {
                 tplFeed.lightboxIndex = nextIndex;
+                tplFeed.lightboxTransitionDirection = direction;
                 tplFeed.functions.renderLightboxItem();
                 return;
             }
@@ -437,6 +443,7 @@ const tplFeed = {
                 tplFeed.functions.renderCurrentRange();
                 tplFeed.functions.refreshLightboxItems();
                 tplFeed.lightboxIndex = 0;
+                tplFeed.lightboxTransitionDirection = direction;
                 tplFeed.functions.renderLightboxItem();
                 return;
             }
@@ -446,6 +453,7 @@ const tplFeed = {
                 tplFeed.functions.renderCurrentRange();
                 tplFeed.functions.refreshLightboxItems();
                 tplFeed.lightboxIndex = Math.max(0, tplFeed.lightboxItems.length - 1);
+                tplFeed.lightboxTransitionDirection = direction;
                 tplFeed.functions.renderLightboxItem();
                 return;
             }
@@ -462,6 +470,7 @@ const tplFeed = {
 
             tplFeed.lightboxItems = items;
             tplFeed.lightboxIndex = index;
+            tplFeed.lightboxTransitionDirection = '';
             tplFeed.lastActiveElement = document.activeElement;
             tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
             tplFeed.functions.resetLightboxTouchState();
@@ -485,6 +494,7 @@ const tplFeed = {
             tplFeed.lightbox.find('.feed-lightbox-caption').text('');
             tplFeed.lightboxItems = [];
             tplFeed.lightboxIndex = -1;
+            tplFeed.lightboxTransitionDirection = '';
             tplFeed.functions.resetLightboxTouchState();
             $('body').removeClass('feed-lightbox-open');
             tplFeed.functions.unlockPageScroll();
