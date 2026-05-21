@@ -216,6 +216,7 @@ html body.project-lightbox-open {
     .project-lightbox-panel {
         max-width: calc(100vw - 24px);
         max-height: calc(100dvh - (max(12px, env(safe-area-inset-top)) + max(12px, env(safe-area-inset-bottom))));
+        padding: 1rem;
     }
 
     .project-lightbox-title-row {
@@ -225,6 +226,11 @@ html body.project-lightbox-open {
 
     .project-lightbox-nav {
         position: static;
+
+        &:hover, &:active, &:focus {
+            color: $white;
+            font-style: normal !important;
+        }
     }
     
     .project-lightbox-title {

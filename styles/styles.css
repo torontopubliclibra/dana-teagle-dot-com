@@ -1833,11 +1833,14 @@ html.tpl .feed-lightbox-caption:empty {
 @media only screen and (max-width: 768px) {
   html.tpl .feed-lightbox {
     padding: 12px;
+    min-height: 100dvh;
+    justify-content: center;
     align-items: center;
   }
   html.tpl .feed-lightbox-panel {
     max-width: 85vw;
     height: 70vh;
+    margin: 0 auto;
     align-items: space-between;
   }
   html.tpl .feed-lightbox-header {
@@ -3195,6 +3198,7 @@ html body.project-lightbox-open {
   .project-lightbox-panel {
     max-width: calc(100vw - 24px);
     max-height: calc(100dvh - (max(12px, env(safe-area-inset-top)) + max(12px, env(safe-area-inset-bottom))));
+    padding: 1rem;
   }
   .project-lightbox-title-row {
     gap: 8px;
@@ -3202,6 +3206,10 @@ html body.project-lightbox-open {
   }
   .project-lightbox-nav {
     position: static;
+  }
+  .project-lightbox-nav:hover, .project-lightbox-nav:active, .project-lightbox-nav:focus {
+    color: #f3e8e9;
+    font-style: normal !important;
   }
   .project-lightbox-title {
     font-size: 1rem;

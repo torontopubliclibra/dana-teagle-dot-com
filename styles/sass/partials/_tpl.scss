@@ -1457,12 +1457,15 @@ html.tpl {
     @media only screen and (max-width: $mobile) {
         .feed-lightbox {
             padding: 12px;
+            min-height: 100dvh;
+            justify-content: center;
             align-items: center;
         }
 
         .feed-lightbox-panel {
             max-width: 85vw;
             height: 70vh;
+            margin: 0 auto;
             align-items: space-between;
         }
 
