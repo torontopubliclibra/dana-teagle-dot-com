@@ -1746,7 +1746,7 @@ html.tpl .feed-lightbox-nav-row {
   gap: 12px;
 }
 html.tpl .feed-lightbox-nav {
-  position: relative;
+  position: absolute;
   top: 50%;
   border: solid 2px rgba(243, 232, 233, 0.65);
   background: rgba(40, 43, 44, 0.95);
@@ -1833,10 +1833,12 @@ html.tpl .feed-lightbox-caption:empty {
 @media only screen and (max-width: 768px) {
   html.tpl .feed-lightbox {
     padding: 12px;
+    align-items: center;
   }
   html.tpl .feed-lightbox-panel {
-    max-width: 75vw;
-    max-height: 100vh;
+    max-width: 85vw;
+    height: 70vh;
+    align-items: space-between;
   }
   html.tpl .feed-lightbox-header {
     align-items: flex-start;
@@ -1849,16 +1851,27 @@ html.tpl .feed-lightbox-caption:empty {
     gap: 6px;
   }
   html.tpl .feed-lightbox-media {
-    max-width: 100%;
+    max-width: 80%;
     max-height: calc(100vh - 132px);
   }
   html.tpl .feed-lightbox-nav-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 8px;
   }
-  html.tpl .feed-lightbox-nav {
-    min-width: 36px;
-    min-height: 36px;
-    font-size: 1rem;
+  html.tpl .feed-lightbox-nav.feed-lightbox-prev {
+    margin-left: -0.75rem;
+  }
+  html.tpl .feed-lightbox-nav.feed-lightbox-next {
+    margin-right: -0.75rem;
+  }
+  html.tpl .feed-lightbox-frame {
+    order: 1;
+    width: 100%;
+  }
+  html.tpl .feed-lightbox-panel {
+    position: relative;
   }
 }
 html.tpl .feed-item-container {

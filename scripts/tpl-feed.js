@@ -276,11 +276,11 @@ const tplFeed = {
                 tplFeed.functions.toggleLightboxAlt();
             });
 
-            tplFeed.lightbox.on('click', '.feed-lightbox-prev', () => {
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('click', '.feed-lightbox-prev', () => {
                 tplFeed.functions.navigateLightbox('prev');
             });
 
-            tplFeed.lightbox.on('click', '.feed-lightbox-next', () => {
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('click', '.feed-lightbox-next', () => {
                 tplFeed.functions.navigateLightbox('next');
             });
 
