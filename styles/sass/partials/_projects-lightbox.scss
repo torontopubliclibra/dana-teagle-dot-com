@@ -53,10 +53,15 @@ html body.project-lightbox-open {
 }
 
 .project-lightbox-panel {
+    position: relative;
+    overflow-y: scroll;
+    background: rgba(122, 145, 177, 0.4);
+    border: solid #B57E9B 5px;
     width: fit-content;
-    max-width: 1260px;
+    max-width: 1200px;
     width: 90%;
     height: 92vh;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -81,10 +86,12 @@ html body.project-lightbox-open {
     line-height: 1;
     text-transform: lowercase;
     padding: 8px 12px;
+    z-index: 5;
 }
 
 .project-lightbox-link-wrap {
     flex: 0 0 auto;
+    z-index: 5;
 }
 
 .project-lightbox-link {
@@ -105,10 +112,13 @@ html body.project-lightbox-open {
 }
 
 .project-lightbox-close {
-    font-style: normal !important;
-
-    &:focus {
+    &:focus, &:active {
         color: $white;
+        font-style: normal !important;
+    }
+    &:hover {
+        color: $color1;
+        font-style: italic !important;
     }
 }
 
@@ -117,6 +127,7 @@ html body.project-lightbox-open {
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin-top: -3.5rem;
 }
 
 .project-lightbox-frame {
@@ -126,6 +137,8 @@ html body.project-lightbox-open {
 }
 
 .project-lightbox-nav {
+    position: absolute;
+    top: calc(50% - 21px);
     font-size: 1.2rem;
     min-width: 42px;
     min-height: 42px;
@@ -134,6 +147,14 @@ html body.project-lightbox-open {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.project-lightbox-nav.project-lightbox-prev {
+    left: 2rem;
+}
+
+.project-lightbox-nav.project-lightbox-next {
+    right: 2rem;
 }
 
 .project-lightbox-nav:disabled {
@@ -152,7 +173,7 @@ html body.project-lightbox-open {
 .project-lightbox-media {
     width: auto;
     max-width: 100%;
-    max-height: 60vh;
+    max-height: calc(65vh - 2rem);
     height: auto;
     object-fit: contain;
     display: block;
@@ -167,7 +188,8 @@ html body.project-lightbox-open {
 }
 
 .project-lightbox-title {
-    flex: 1 1 auto;
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
     font-style: italic;
     font-size: 1.2rem;
@@ -193,14 +215,18 @@ html body.project-lightbox-open {
 
     .project-lightbox-panel {
         max-width: calc(100vw - 24px);
-        height: auto;
         max-height: calc(100dvh - (max(12px, env(safe-area-inset-top)) + max(12px, env(safe-area-inset-bottom))));
     }
 
     .project-lightbox-title-row {
         gap: 8px;
+        margin-top: 0;
     }
 
+    .project-lightbox-nav {
+        position: static;
+    }
+    
     .project-lightbox-title {
         font-size: 1rem;
     }
