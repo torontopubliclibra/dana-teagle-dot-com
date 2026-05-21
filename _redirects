@@ -46,4 +46,4 @@ https://danateagle.com/now /tpl/now
 # Feed permalink compatibility
 /feed/:id /tpl/feed#:id 301!
 /tpl/feed/:id /tpl/feed#:id 301!
-torontopubliclibra.com/feed/:id /tpl/feed#:id 301!
+https://torontopubliclibra.com/feed/:id https://danateagle.com/tpl/feed#:id 301!
