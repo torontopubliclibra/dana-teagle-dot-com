@@ -4487,19 +4487,22 @@ header .scroll-title {
 #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info hr {
   display: none;
 }
-@media only screen and (max-width: 768px) {
-  #gallery .gallery-container.is-fullscreen {
-    position: fixed;
-    width: 100vh;
-    max-width: 100vh;
-    height: 100vw;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%) rotate(90deg);
-    transform-origin: center center;
-  }
+#gallery .gallery-container.is-fullscreen.is-mobile-rotated {
+  position: fixed;
+  width: 100vh;
+  max-width: 100vh;
+  height: 100vw;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center center;
+}
+#gallery .gallery-container.is-fullscreen.is-mobile-rotated .gallery-content {
+  min-height: calc(100vw - 24px);
+  height: calc(100vw - 24px);
 }
 #gallery .gallery-content {
   overflow: visible;

@@ -894,7 +894,7 @@ header {
                 }
             }
 
-            @media only screen and (max-width: $mobile) {
+            &.is-mobile-rotated {
                 position: fixed;
                 width: 100vh;
                 max-width: 100vh;
@@ -903,8 +903,14 @@ header {
                 left: 50%;
                 right: auto;
                 bottom: auto;
+                margin: 0;
                 transform: translate(-50%, -50%) rotate(90deg);
                 transform-origin: center center;
+
+                .gallery-content {
+                    min-height: calc(100vw - 24px);
+                    height: calc(100vw - 24px);
+                }
             }
         }
     }
