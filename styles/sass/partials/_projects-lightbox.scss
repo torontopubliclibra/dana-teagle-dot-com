@@ -46,6 +46,7 @@ html body.project-lightbox-open {
     background: rgba($black, 0.92);
     overscroll-behavior: none;
     touch-action: none;
+    perspective: 1500px;
 }
 
 .project-lightbox.is-open {
@@ -55,7 +56,7 @@ html body.project-lightbox-open {
 .project-lightbox-panel {
     position: relative;
     overflow-y: scroll;
-    background: rgba(122, 145, 177, 0.4);
+    background: rgba(80, 90, 104, 0.821);
     border: solid #B57E9B 5px;
     width: fit-content;
     max-width: 1260px;
@@ -67,6 +68,16 @@ html body.project-lightbox-open {
     justify-content: flex-start;
     align-items: stretch;
     gap: 1.5rem;
+
+    &.is-flip-next {
+        animation: project-lightbox-flip-next 0.28s ease-out;
+        transform-origin: right center;
+    }
+
+    &.is-flip-prev {
+        animation: project-lightbox-flip-prev 0.28s ease-out;
+        transform-origin: left center;
+    }
 }
 
 .project-lightbox-header {
@@ -174,6 +185,40 @@ html body.project-lightbox-open {
     align-items: center;
     min-width: 0;
     width: 100%;
+
+}
+
+@keyframes project-lightbox-flip-next {
+    from {
+        opacity: 0.97;
+        transform: rotateY(-3deg) translateX(3px) scale(0.998);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0) scale(1);
+    }
+}
+
+@keyframes project-lightbox-flip-prev {
+    from {
+        opacity: 0.97;
+        transform: rotateY(3deg) translateX(-3px) scale(0.998);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0deg) translateX(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-lightbox-panel {
+        &.is-flip-next,
+        &.is-flip-prev {
+            animation: none;
+        }
+    }
 }
 
 .project-lightbox-media {

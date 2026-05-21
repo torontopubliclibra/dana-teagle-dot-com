@@ -66,6 +66,7 @@ const app = {
         lastScrollPosition: 0,
         items: [],
         index: -1,
+        transitionDirection: '',
         touch: {
             startX: 0,
             startY: 0,
@@ -678,6 +679,15 @@ const app = {
                 ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-image-link">${imageMarkup}</a>`
                 : imageMarkup;
             lightbox.find('.project-lightbox-media-wrap').html(wrappedImage);
+            const panel = lightbox.find('.project-lightbox-panel');
+            panel.removeClass('is-flip-next is-flip-prev');
+            if (app.projectLightbox.transitionDirection) {
+                // Force reflow so repeated same-direction navigation still replays the animation.
+                if (panel.length) {
+                    void panel[0].offsetWidth;
+                }
+                panel.addClass(`is-flip-${app.projectLightbox.transitionDirection}`);
+            }
             lightbox.find('.project-lightbox-title').text(title);
             lightbox.find('.project-lightbox-description').text(description);
             lightbox.find('.project-lightbox-link-wrap').html(
@@ -687,6 +697,7 @@ const app = {
             );
             lightbox.find('.project-lightbox-prev').prop('disabled', !canGoPrev).attr('aria-disabled', (!canGoPrev).toString());
             lightbox.find('.project-lightbox-next').prop('disabled', !canGoNext).attr('aria-disabled', (!canGoNext).toString());
+            app.projectLightbox.transitionDirection = '';
         },
         navigateProjectLightbox(direction) {
             if (!app.projectLightbox.element || !app.projectLightbox.element.hasClass('is-open')) {
@@ -700,6 +711,7 @@ const app = {
             }
 
             app.projectLightbox.index = newIndex;
+            app.projectLightbox.transitionDirection = direction;
             app.functions.renderProjectLightboxItem();
         },
         openProjectLightbox(mediaElement) {
@@ -713,6 +725,7 @@ const app = {
 
             app.projectLightbox.items = images;
             app.projectLightbox.index = index;
+            app.projectLightbox.transitionDirection = '';
             app.projectLightbox.lastActiveElement = document.activeElement;
             app.projectLightbox.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
             app.functions.resetProjectLightboxTouchState();
@@ -731,10 +744,12 @@ const app = {
                 : app.projectLightbox.lastScrollPosition;
 
             lightbox.removeClass('is-open').attr('aria-hidden', 'true');
+            lightbox.find('.project-lightbox-panel').removeClass('is-flip-next is-flip-prev');
             lightbox.find('.project-lightbox-media-wrap, .project-lightbox-link-wrap').empty();
             lightbox.find('.project-lightbox-title, .project-lightbox-description').text('');
             app.projectLightbox.items = [];
             app.projectLightbox.index = -1;
+            app.projectLightbox.transitionDirection = '';
             app.functions.resetProjectLightboxTouchState();
             $('body').removeClass('project-lightbox-open');
             app.functions.unlockProjectPageScroll();
