@@ -3213,8 +3213,8 @@ html body.project-lightbox-open {
   .project-lightbox-panel {
     width: 85vw;
     max-width: 85vw;
-    height: 90vh;
-    max-height: 90vh;
+    height: 80vh;
+    max-height: 80vh;
     padding: 1rem;
     padding-bottom: 1.5rem;
     justify-content: space-between;
