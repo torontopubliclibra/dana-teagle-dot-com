@@ -66,6 +66,13 @@ const app = {
         lastScrollPosition: 0,
         items: [],
         index: -1,
+        touch: {
+            startX: 0,
+            startY: 0,
+            deltaX: 0,
+            deltaY: 0,
+            tracking: false
+        },
         scrollLock: {
             active: false,
             y: 0,
@@ -642,6 +649,10 @@ const app = {
                 app.functions.navigateProjectLightbox('next');
             });
 
+            app.projectLightbox.element.find('.project-lightbox-panel').on('touchstart', '.project-lightbox-frame', app.functions.handleProjectLightboxTouchStart);
+            app.projectLightbox.element.find('.project-lightbox-panel').on('touchmove', '.project-lightbox-frame', app.functions.handleProjectLightboxTouchMove);
+            app.projectLightbox.element.find('.project-lightbox-panel').on('touchend touchcancel', '.project-lightbox-frame', app.functions.handleProjectLightboxTouchEnd);
+
             $(document).on('keydown', app.functions.handleProjectLightboxKeydown);
             return app.projectLightbox.element;
         },
@@ -704,6 +715,7 @@ const app = {
             app.projectLightbox.index = index;
             app.projectLightbox.lastActiveElement = document.activeElement;
             app.projectLightbox.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+            app.functions.resetProjectLightboxTouchState();
             app.functions.renderProjectLightboxItem();
             $('body').addClass('project-lightbox-open');
             app.functions.lockProjectPageScroll();
@@ -723,6 +735,7 @@ const app = {
             lightbox.find('.project-lightbox-title, .project-lightbox-description').text('');
             app.projectLightbox.items = [];
             app.projectLightbox.index = -1;
+            app.functions.resetProjectLightboxTouchState();
             $('body').removeClass('project-lightbox-open');
             app.functions.unlockProjectPageScroll();
 
@@ -757,6 +770,85 @@ const app = {
                 event.preventDefault();
                 app.functions.navigateProjectLightbox('next');
             }
+        },
+        resetProjectLightboxTouchState() {
+            app.projectLightbox.touch.startX = 0;
+            app.projectLightbox.touch.startY = 0;
+            app.projectLightbox.touch.deltaX = 0;
+            app.projectLightbox.touch.deltaY = 0;
+            app.projectLightbox.touch.tracking = false;
+        },
+        getProjectLightboxTouchPoint(event) {
+            const originalEvent = event.originalEvent || event;
+            if (!originalEvent) {
+                return null;
+            }
+
+            if (originalEvent.touches && originalEvent.touches.length) {
+                return originalEvent.touches[0];
+            }
+
+            if (originalEvent.changedTouches && originalEvent.changedTouches.length) {
+                return originalEvent.changedTouches[0];
+            }
+
+            return null;
+        },
+        handleProjectLightboxTouchStart(event) {
+            if (!app.projectLightbox.element || !app.projectLightbox.element.hasClass('is-open')) {
+                return;
+            }
+
+            const point = app.functions.getProjectLightboxTouchPoint(event);
+            if (!point) {
+                return;
+            }
+
+            app.projectLightbox.touch.startX = point.clientX;
+            app.projectLightbox.touch.startY = point.clientY;
+            app.projectLightbox.touch.deltaX = 0;
+            app.projectLightbox.touch.deltaY = 0;
+            app.projectLightbox.touch.tracking = true;
+        },
+        handleProjectLightboxTouchMove(event) {
+            if (!app.projectLightbox.touch.tracking) {
+                return;
+            }
+
+            const point = app.functions.getProjectLightboxTouchPoint(event);
+            if (!point) {
+                return;
+            }
+
+            app.projectLightbox.touch.deltaX = point.clientX - app.projectLightbox.touch.startX;
+            app.projectLightbox.touch.deltaY = point.clientY - app.projectLightbox.touch.startY;
+
+            if (Math.abs(app.projectLightbox.touch.deltaX) > Math.abs(app.projectLightbox.touch.deltaY) && event.cancelable) {
+                event.preventDefault();
+            }
+        },
+        handleProjectLightboxTouchEnd(event) {
+            if (!app.projectLightbox.touch.tracking) {
+                return;
+            }
+
+            const point = app.functions.getProjectLightboxTouchPoint(event);
+            if (point) {
+                app.projectLightbox.touch.deltaX = point.clientX - app.projectLightbox.touch.startX;
+                app.projectLightbox.touch.deltaY = point.clientY - app.projectLightbox.touch.startY;
+            }
+
+            const absX = Math.abs(app.projectLightbox.touch.deltaX);
+            const absY = Math.abs(app.projectLightbox.touch.deltaY);
+            const swipeThreshold = 50;
+            const isHorizontalSwipe = absX > swipeThreshold && absX > absY;
+
+            if (isHorizontalSwipe) {
+                const direction = app.projectLightbox.touch.deltaX < 0 ? 'next' : 'prev';
+                app.functions.navigateProjectLightbox(direction);
+            }
+
+            app.functions.resetProjectLightboxTouchState();
         },
         projectImageClick(event) {
             const trigger = event.target.closest('.project-image-trigger, .project-image');

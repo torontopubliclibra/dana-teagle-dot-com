@@ -60,7 +60,8 @@ html body.project-lightbox-open {
     width: fit-content;
     max-width: 1200px;
     width: 90%;
-    height: 92vh;
+    height: auto;
+    max-height: 92vh;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -172,7 +173,7 @@ html body.project-lightbox-open {
 
 .project-lightbox-media {
     width: auto;
-    max-width: 100%;
+    max-width: 80%;
     max-height: calc(65vh - 2rem);
     height: auto;
     object-fit: contain;
@@ -215,8 +216,8 @@ html body.project-lightbox-open {
 
     .project-lightbox-panel {
         max-width: calc(100vw - 24px);
-        max-height: calc(100dvh - (max(12px, env(safe-area-inset-top)) + max(12px, env(safe-area-inset-bottom))));
         padding: 1rem;
+        max-height: 85vh;
     }
 
     .project-lightbox-title-row {
