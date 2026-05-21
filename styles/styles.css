@@ -1873,7 +1873,6 @@ html.tpl .feed-lightbox-caption:empty {
   }
   html.tpl .feed-lightbox-panel {
     max-width: 90vw;
-    margin-bottom: -5vh;
     height: 70vh;
     max-height: 70vh;
     margin: 0 auto;
@@ -1897,7 +1896,7 @@ html.tpl .feed-lightbox-caption:empty {
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 80vh;
+    max-height: 75vh;
   }
   html.tpl .feed-lightbox-nav-row {
     order: 1;
