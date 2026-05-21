@@ -42,3 +42,6 @@
 https://danateagle.com/now /tpl/now
 /trans-id-resources https://idguide.ca
 /trans-id https://idguide.ca
+
+# Feed permalink compatibility
+/feed/:id /tpl/feed#:id 301!

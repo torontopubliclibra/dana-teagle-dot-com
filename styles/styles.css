@@ -1641,11 +1641,27 @@ html.tpl .feed-lightbox-panel {
   max-height: 92vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: stretch;
   gap: 12px;
 }
+html.tpl .feed-lightbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+html.tpl .feed-lightbox-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
 html.tpl .feed-lightbox-close,
-html.tpl .feed-lightbox-link {
+html.tpl .feed-lightbox-link,
+html.tpl .feed-lightbox-reply-link,
+html.tpl .feed-lightbox-alt-toggle {
   border: solid 2px rgba(243, 232, 233, 0.65);
   background: rgba(40, 43, 44, 0.95);
   color: #f3e8e9;
@@ -1654,18 +1670,102 @@ html.tpl .feed-lightbox-link {
   text-transform: lowercase;
   padding: 8px 12px;
 }
+html.tpl .feed-lightbox-close:hover,
+html.tpl .feed-lightbox-link:hover,
+html.tpl .feed-lightbox-reply-link:hover,
+html.tpl .feed-lightbox-alt-toggle:hover {
+  color: #B57E9B;
+  font-style: italic !important;
+}
+html.tpl .feed-lightbox-close.selected,
+html.tpl .feed-lightbox-link.selected,
+html.tpl .feed-lightbox-reply-link.selected,
+html.tpl .feed-lightbox-alt-toggle.selected {
+  color: #B57E9B;
+  font-style: italic !important;
+}
+html.tpl .feed-lightbox-close:focus, html.tpl .feed-lightbox-close:active {
+  color: #f3e8e9;
+  font-style: normal !important;
+}
+html.tpl .feed-lightbox-close:hover {
+  color: #B57E9B;
+  font-style: italic !important;
+}
 html.tpl .feed-lightbox-link {
   display: inline-flex;
   text-decoration: none;
 }
-html.tpl .feed-lightbox-close {
-  font-style: normal !important;
+html.tpl .feed-lightbox-reply-link,
+html.tpl .feed-lightbox-alt-toggle {
+  white-space: nowrap;
+}
+html.tpl .feed-lightbox-date-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+html.tpl .feed-lightbox-date-text {
+  width: 100%;
+  color: rgba(243, 232, 233, 0.9);
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1;
+  text-transform: lowercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 8px;
+}
+html.tpl .feed-lightbox-header-buttons {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+html.tpl .feed-lightbox-reply-link {
+  display: inline-flex;
+  text-decoration: none;
+}
+html.tpl .feed-lightbox-alt-toggle {
+  cursor: pointer;
 }
 html.tpl .feed-lightbox-frame {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+html.tpl .feed-lightbox-media-shell {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+html.tpl .feed-lightbox-alt {
+  display: none;
+  background: rgba(40, 43, 44, 0.75);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 5%;
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+  color: rgba(243, 232, 233, 0.9);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  animation: fade-in 0.3s;
+}
+html.tpl .feed-lightbox-alt.alt-visible {
+  display: flex;
+  filter: drop-shadow(0px 0px 10px rgba(40, 43, 44, 0.75));
+  border: solid 3px rgba(243, 232, 233, 0.5);
 }
 html.tpl .feed-lightbox-media {
   width: auto;
@@ -1698,6 +1798,16 @@ html.tpl .feed-lightbox-caption:empty {
   html.tpl .feed-lightbox-panel {
     max-width: 75vw;
     max-height: 100vh;
+  }
+  html.tpl .feed-lightbox-header {
+    align-items: flex-start;
+  }
+  html.tpl .feed-lightbox-header-meta {
+    justify-content: space-between;
+    gap: 6px;
+  }
+  html.tpl .feed-lightbox-header-buttons {
+    gap: 6px;
   }
   html.tpl .feed-lightbox-media {
     max-width: 100%;

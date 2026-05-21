@@ -87,6 +87,19 @@ const tplFeed = {
 
             return `<img src="${source}" alt="${alt}" class="feed-lightbox-media">`;
         },
+        buildLightboxHeaderMeta({ id, date }) {
+            if (!id) {
+                return '';
+            }
+
+            const permalink = `torontopubliclibra.com/feed/${id}`;
+            const mailto = `mailto:dana@torontopubliclibra.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
+            const dateMarkup = date
+                ? `<span class="feed-lightbox-date-text">>> ${date}</span>`
+                : `<span class="feed-lightbox-date-text">permalink</span>`;
+
+            return `<span class="feed-lightbox-date-wrap">${dateMarkup}</span><span class="feed-lightbox-header-buttons"><button type="button" class="feed-lightbox-alt-toggle" aria-pressed="false">alt</button><a href="${mailto}" class="feed-lightbox-reply-link" target="_blank" rel="noopener noreferrer">reply</a></span>`;
+        },
         scrollToHash() {
             const hash = window.location.hash.substring(1);
             if (!hash) return;
@@ -118,7 +131,7 @@ const tplFeed = {
             tplFeed.functions.renderCurrentRange();
         },
         feedItemHTML(item) {
-            const permalink = `torontopubliclibra.com/feed#${item.id}`;
+            const permalink = `torontopubliclibra.com/feed/${item.id}`;
             const mailto = `mailto:dana@torontopubliclibra.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
             const dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
             const mediaTag = tplFeed.functions.buildFeedMedia(item);
@@ -225,7 +238,10 @@ const tplFeed = {
             $('body').append(`
                 <div class="feed-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded feed media">
                     <div class="feed-lightbox-panel">
-                        <button type="button" class="feed-lightbox-close" aria-label="Close media viewer">close</button>
+                        <div class="feed-lightbox-header">
+                            <div class="feed-lightbox-header-meta"></div>
+                            <button type="button" class="feed-lightbox-close" aria-label="Close media viewer">close</button>
+                        </div>
                         <div class="feed-lightbox-frame"></div>
                         <p class="feed-lightbox-caption"></p>
                         <p class="feed-lightbox-actions"></p>
@@ -246,6 +262,11 @@ const tplFeed = {
                 }
             });
 
+            tplFeed.lightbox.find('.feed-lightbox-panel').on('click', '.feed-lightbox-alt-toggle', event => {
+                event.preventDefault();
+                tplFeed.functions.toggleLightboxAlt();
+            });
+
             $(document).on('keydown', tplFeed.functions.handleLightboxKeydown);
 
             return tplFeed.lightbox;
@@ -257,12 +278,24 @@ const tplFeed = {
             const source = isVideo ? media.find('source').attr('src') || media.attr('src') : media.attr('src');
             const poster = isVideo ? media.attr('poster') || '' : '';
             const alt = media.attr('alt') || media.closest('.feed-item-container').find('.alt').text().trim();
-            const frameMarkup = tplFeed.functions.buildLightboxMedia({ isVideo, source, poster, alt });
+            const itemId = media.closest('.feed-item-container').attr('id') || '';
+            const item = tplFeed.items.find(entry => entry.id === itemId);
+            const mediaMarkup = tplFeed.functions.buildLightboxMedia({ isVideo, source, poster, alt });
+            const frameMarkup = `<div class="feed-lightbox-media-shell">${mediaMarkup}<p class="feed-lightbox-alt">${alt}</p></div>`;
+            const headerMeta = tplFeed.functions.buildLightboxHeaderMeta({
+                id: itemId,
+                date: item ? item.date : ''
+            });
 
             tplFeed.lastActiveElement = document.activeElement;
             tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
-            tplFeed.lastOpenedItemId = media.closest('.feed-item-container').attr('id') || '';
+            tplFeed.lastOpenedItemId = itemId;
             lightbox.find('.feed-lightbox-frame').html(frameMarkup);
+            lightbox.find('.feed-lightbox-header-meta').html(headerMeta);
+            lightbox.find('.feed-lightbox-panel').attr('data-alt-text', alt || '');
+            lightbox.find('.feed-lightbox-alt-toggle').attr('aria-pressed', 'false').removeClass('selected');
+            lightbox.find('.feed-lightbox-caption').text('');
+            lightbox.find('.feed-lightbox-alt').removeClass('alt-visible');
             lightbox.find('.feed-lightbox-actions').html(
                 externalLink
                     ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="feed-lightbox-link">open link</a>`
@@ -282,7 +315,8 @@ const tplFeed = {
                 video.currentTime = 0;
             });
             tplFeed.lightbox.removeClass('is-open').attr('aria-hidden', 'true');
-            tplFeed.lightbox.find('.feed-lightbox-frame, .feed-lightbox-actions').empty();
+            tplFeed.lightbox.find('.feed-lightbox-frame, .feed-lightbox-actions, .feed-lightbox-header-meta').empty();
+            tplFeed.lightbox.find('.feed-lightbox-panel').removeAttr('data-alt-text');
             tplFeed.lightbox.find('.feed-lightbox-caption').text('');
             $('body').removeClass('feed-lightbox-open');
             tplFeed.functions.unlockPageScroll();
@@ -318,6 +352,24 @@ const tplFeed = {
             if (event.key === 'Escape') {
                 tplFeed.functions.closeLightbox();
             }
+        },
+        toggleLightboxAlt() {
+            if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) {
+                return;
+            }
+
+            const altButton = tplFeed.lightbox.find('.feed-lightbox-alt-toggle');
+            const altOverlay = tplFeed.lightbox.find('.feed-lightbox-alt');
+            const isVisible = altButton.attr('aria-pressed') === 'true';
+
+            if (isVisible) {
+                altOverlay.removeClass('alt-visible');
+                altButton.attr('aria-pressed', 'false').removeClass('selected');
+                return;
+            }
+
+            altOverlay.addClass('alt-visible');
+            altButton.attr('aria-pressed', 'true').addClass('selected');
         },
         mediaClick(event) {
             const media = event.target.closest('.feed-item');
