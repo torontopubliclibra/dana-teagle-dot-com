@@ -3201,13 +3201,13 @@ html body.project-lightbox-open {
 
 @media only screen and (max-width: 768px) {
   .project-lightbox {
-    padding: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
   .project-lightbox-panel {
-    max-width: calc(100vw - 24px);
-    padding: 1rem;
+    width: 85vw;
+    margin-bottom: 2rem;
     height: 80vh;
+    padding: 1rem;
   }
   .project-lightbox-title-row {
     gap: 8px;
