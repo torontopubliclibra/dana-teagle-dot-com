@@ -1238,6 +1238,7 @@ html.tpl {
     }
 
     .feed-lightbox-panel {
+        position: relative;
         width: fit-content;
         max-width: calc(100vw - 40px);
         max-height: 92vh;
@@ -1349,6 +1350,50 @@ html.tpl {
         overflow: hidden;
     }
 
+    .feed-lightbox-nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .feed-lightbox-nav {
+        position: relative;
+        top: 50%;
+        border: solid 2px rgba($white, 0.65);
+        background: rgba($black, 0.95);
+        color: $white;
+        font-size: 1.2rem;
+        min-width: 42px;
+        min-height: 42px;
+        padding: 8px 10px 6px;
+        padding-bottom: 0.7rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+
+        &.feed-lightbox-prev {
+            left: 0rem;
+            margin-left: -3.4rem;
+            }
+
+        &.feed-lightbox-next {
+            right: 0;
+            margin-right: -3.4rem;
+        }
+
+        &:hover {
+            color: $color2;
+            font-style: italic !important;
+        }
+
+        &:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+    }
+
     .feed-lightbox-media-shell {
         position: relative;
         display: inline-flex;
@@ -1435,6 +1480,16 @@ html.tpl {
         .feed-lightbox-media {
             max-width: 100%;
             max-height: calc(100vh - 132px);
+        }
+
+        .feed-lightbox-nav-row {
+            gap: 8px;
+        }
+
+        .feed-lightbox-nav {
+            min-width: 36px;
+            min-height: 36px;
+            font-size: 1rem;
         }
     }
 

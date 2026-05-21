@@ -6,6 +6,8 @@ const tplFeed = {
     content: $(".feed-items"),
     toggle: $(".feed-toggle"),
     lightbox: null,
+    lightboxItems: [],
+    lightboxIndex: -1,
     lastActiveElement: null,
     lastScrollPosition: 0,
     lastOpenedItemId: '',
@@ -130,6 +132,9 @@ const tplFeed = {
             tplFeed.range.end = Math.min(end, tplFeed.items.length);
             tplFeed.functions.renderCurrentRange();
         },
+        refreshLightboxItems() {
+            tplFeed.lightboxItems = Array.from(document.querySelectorAll('.feed-items .feed-item'));
+        },
         feedItemHTML(item) {
             const permalink = `torontopubliclibra.com/feed/${item.id}`;
             const mailto = `mailto:dana@torontopubliclibra.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
@@ -242,7 +247,11 @@ const tplFeed = {
                             <div class="feed-lightbox-header-meta"></div>
                             <button type="button" class="feed-lightbox-close" aria-label="Close media viewer">close</button>
                         </div>
-                        <div class="feed-lightbox-frame"></div>
+                        <div class="feed-lightbox-nav-row">
+                            <button type="button" class="feed-lightbox-nav feed-lightbox-prev" aria-label="Previous feed item">&larr;</button>
+                            <div class="feed-lightbox-frame"></div>
+                            <button type="button" class="feed-lightbox-nav feed-lightbox-next" aria-label="Next feed item">&rarr;</button>
+                        </div>
                         <p class="feed-lightbox-caption"></p>
                         <p class="feed-lightbox-actions"></p>
                     </div>
@@ -267,19 +276,37 @@ const tplFeed = {
                 tplFeed.functions.toggleLightboxAlt();
             });
 
+            tplFeed.lightbox.on('click', '.feed-lightbox-prev', () => {
+                tplFeed.functions.navigateLightbox('prev');
+            });
+
+            tplFeed.lightbox.on('click', '.feed-lightbox-next', () => {
+                tplFeed.functions.navigateLightbox('next');
+            });
+
             $(document).on('keydown', tplFeed.functions.handleLightboxKeydown);
 
             return tplFeed.lightbox;
         },
-        openLightbox(mediaElement, externalLink) {
+        renderLightboxItem() {
             const lightbox = tplFeed.functions.ensureLightbox();
-            const media = $(mediaElement);
+            const { lightboxItems, lightboxIndex } = tplFeed;
+
+            if (!lightboxItems.length || lightboxIndex < 0 || lightboxIndex >= lightboxItems.length) {
+                return;
+            }
+
+            const media = $(lightboxItems[lightboxIndex]);
             const isVideo = media.is('video');
             const source = isVideo ? media.find('source').attr('src') || media.attr('src') : media.attr('src');
             const poster = isVideo ? media.attr('poster') || '' : '';
             const alt = media.attr('alt') || media.closest('.feed-item-container').find('.alt').text().trim();
             const itemId = media.closest('.feed-item-container').attr('id') || '';
             const item = tplFeed.items.find(entry => entry.id === itemId);
+            const anchor = media.closest('a[href]');
+            const externalLink = anchor.length ? anchor.attr('href') : '';
+            const canGoPrev = lightboxIndex > 0 || tplFeed.range.start > 0;
+            const canGoNext = lightboxIndex < lightboxItems.length - 1 || tplFeed.range.end < tplFeed.items.length;
             const mediaMarkup = tplFeed.functions.buildLightboxMedia({ isVideo, source, poster, alt });
             const frameMarkup = `<div class="feed-lightbox-media-shell">${mediaMarkup}<p class="feed-lightbox-alt">${alt}</p></div>`;
             const headerMeta = tplFeed.functions.buildLightboxHeaderMeta({
@@ -287,13 +314,13 @@ const tplFeed = {
                 date: item ? item.date : ''
             });
 
-            tplFeed.lastActiveElement = document.activeElement;
-            tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
             tplFeed.lastOpenedItemId = itemId;
             lightbox.find('.feed-lightbox-frame').html(frameMarkup);
             lightbox.find('.feed-lightbox-header-meta').html(headerMeta);
             lightbox.find('.feed-lightbox-panel').attr('data-alt-text', alt || '');
             lightbox.find('.feed-lightbox-alt-toggle').attr('aria-pressed', 'false').removeClass('selected');
+            lightbox.find('.feed-lightbox-prev').prop('disabled', !canGoPrev).attr('aria-disabled', (!canGoPrev).toString());
+            lightbox.find('.feed-lightbox-next').prop('disabled', !canGoNext).attr('aria-disabled', (!canGoNext).toString());
             lightbox.find('.feed-lightbox-caption').text('');
             lightbox.find('.feed-lightbox-alt').removeClass('alt-visible');
             lightbox.find('.feed-lightbox-actions').html(
@@ -301,6 +328,53 @@ const tplFeed = {
                     ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="feed-lightbox-link">open link</a>`
                     : ''
             );
+        },
+        navigateLightbox(direction) {
+            if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) {
+                return;
+            }
+
+            const delta = direction === 'next' ? 1 : -1;
+            const nextIndex = tplFeed.lightboxIndex + delta;
+            if (nextIndex >= 0 && nextIndex < tplFeed.lightboxItems.length) {
+                tplFeed.lightboxIndex = nextIndex;
+                tplFeed.functions.renderLightboxItem();
+                return;
+            }
+
+            if (direction === 'next' && tplFeed.range.end < tplFeed.items.length) {
+                tplFeed.functions.setRange(tplFeed.range.start + FEED_PAGE_SIZE);
+                tplFeed.functions.renderCurrentRange();
+                tplFeed.functions.refreshLightboxItems();
+                tplFeed.lightboxIndex = 0;
+                tplFeed.functions.renderLightboxItem();
+                return;
+            }
+
+            if (direction === 'prev' && tplFeed.range.start > 0) {
+                tplFeed.functions.setRange(tplFeed.range.start - FEED_PAGE_SIZE);
+                tplFeed.functions.renderCurrentRange();
+                tplFeed.functions.refreshLightboxItems();
+                tplFeed.lightboxIndex = Math.max(0, tplFeed.lightboxItems.length - 1);
+                tplFeed.functions.renderLightboxItem();
+                return;
+            }
+        },
+        openLightbox(mediaElement) {
+            tplFeed.functions.refreshLightboxItems();
+            const items = tplFeed.lightboxItems;
+            const index = items.indexOf(mediaElement);
+            const lightbox = tplFeed.functions.ensureLightbox();
+
+            if (index === -1) {
+                return;
+            }
+
+            tplFeed.lightboxItems = items;
+            tplFeed.lightboxIndex = index;
+            tplFeed.lastActiveElement = document.activeElement;
+            tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+            tplFeed.functions.renderLightboxItem();
             $('body').addClass('feed-lightbox-open');
             tplFeed.functions.lockPageScroll();
             lightbox.attr('aria-hidden', 'false').addClass('is-open');
@@ -318,6 +392,8 @@ const tplFeed = {
             tplFeed.lightbox.find('.feed-lightbox-frame, .feed-lightbox-actions, .feed-lightbox-header-meta').empty();
             tplFeed.lightbox.find('.feed-lightbox-panel').removeAttr('data-alt-text');
             tplFeed.lightbox.find('.feed-lightbox-caption').text('');
+            tplFeed.lightboxItems = [];
+            tplFeed.lightboxIndex = -1;
             $('body').removeClass('feed-lightbox-open');
             tplFeed.functions.unlockPageScroll();
 
@@ -349,8 +425,24 @@ const tplFeed = {
             tplFeed.lastOpenedItemId = '';
         },
         handleLightboxKeydown(event) {
+            if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) {
+                return;
+            }
+
             if (event.key === 'Escape') {
                 tplFeed.functions.closeLightbox();
+                return;
+            }
+
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                tplFeed.functions.navigateLightbox('prev');
+                return;
+            }
+
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                tplFeed.functions.navigateLightbox('next');
             }
         },
         toggleLightboxAlt() {
@@ -384,7 +476,7 @@ const tplFeed = {
                 event.preventDefault();
             }
 
-            tplFeed.functions.openLightbox(media, anchor ? anchor.href : '');
+            tplFeed.functions.openLightbox(media);
         },
     },
     init() {

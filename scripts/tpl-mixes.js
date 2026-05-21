@@ -3,7 +3,7 @@ const tplMixes = {
     content: $(".tpl-page-text"),
     heading: $(".tpl-page-heading"),
     mixes: [],
-    range: localStorage['mixRange'] || "8",
+    range: "8",
     query: "",
     stream: localStorage['stream'] || "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
@@ -286,7 +286,6 @@ const tplMixes = {
             }
 
             tplMixes.range = range;
-            localStorage['mixRange'] = range;
             tplMixes.functions.updateRangeNav();
             tplMixes.functions.navDisplay();
             tplMixes.functions.mixDisplay();
@@ -448,11 +447,6 @@ const tplMixes = {
                 tplMixes.functions.navDisplay();
             })
             .catch(error => console.log(error));
-
-        if (localStorage['mixRange']) {
-            tplMixes.range = localStorage['mixRange'];
-            tplMixes.functions.updateRangeNav();
-        }
 
         window.addEventListener('hashchange', () => {
             if (window.location.hash === '#index') {
