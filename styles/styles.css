@@ -4488,22 +4488,14 @@ header .scroll-title {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  #gallery .gallery-container.is-fullscreen .gallery-content {
-    gap: 20px;
-    padding-bottom: 4vh;
-  }
-  #gallery .gallery-container.is-fullscreen .gallery-item {
-    border-width: 2px;
-  }
-  #gallery .gallery-container.is-fullscreen .gallery-item img {
-    height: 16.667vh;
-  }
-  #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info {
-    min-height: 50px;
-    padding: 2px;
-  }
-  #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info p, #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info a, #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info button {
-    font-size: 0.38rem;
+  #gallery .gallery-container.is-fullscreen {
+    width: 100vh;
+    max-width: 100vh;
+    height: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center center;
   }
 }
 #gallery .gallery-content {
