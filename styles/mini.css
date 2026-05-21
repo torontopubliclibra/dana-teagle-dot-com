@@ -355,6 +355,14 @@ hr.highlight {
   color: #99b1d3;
 }
 
+body:has(header .title:hover) .basic-info .name,
+body:has(header .title:focus-visible) .basic-info .name {
+  background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
+  background-repeat: no-repeat;
+  background-size: 110% 18%;
+  background-position: 0 95%;
+}
+
 .basic-info .headshot-link {
   display: inline-block;
   border: solid rgba(153, 177, 211, 0.4) 4px;
