@@ -218,7 +218,6 @@ html body.project-lightbox-open {
     .project-lightbox-panel {
         width: 85vw;
         max-width: 85vw;
-        margin-bottom: 3rem;
         height: 80vh;
         max-height: 80vh;
         padding: 1rem;
@@ -230,27 +229,7 @@ html body.project-lightbox-open {
     }
 
     .project-lightbox-nav {
-        position: fixed;
-        top: auto;
-        bottom: 5vh;
-        margin: 0;
-        z-index: 2010;
-        height: auto;
-
-        &:hover, &:active, &:focus {
-            color: $white;
-            font-style: normal !important;
-        }
-    }
-
-    .project-lightbox-nav.project-lightbox-prev {
-        left: calc(50% - 52px);
-        right: auto;
-    }
-
-    .project-lightbox-nav.project-lightbox-next {
-        left: calc(50% + 10px);
-        right: auto;
+        display: none;
     }
     
     .project-lightbox-title {
@@ -272,9 +251,4 @@ html body.project-lightbox-open {
         object-position: top center;
     }
 
-    .project-lightbox-nav {
-        min-width: 36px;
-        min-height: 36px;
-        font-size: 1rem;
-    }
 }
