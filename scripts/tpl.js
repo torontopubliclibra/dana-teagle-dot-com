@@ -28,9 +28,11 @@ const tpl = {
                 const pixelContext = pixelCanvas.getContext("2d");
                 const workingCanvas = document.createElement("canvas");
                 const workingContext = workingCanvas.getContext("2d");
+                const rustyLink = rustyImage.closest("a");
 
                 let animationFrame = null;
                 let currentPixelSize = 1;
+                let isNavigating = false;
                 const maxPixelSize = 22;
 
                 const drawPixelatedFrame = (pixelSize) => {
@@ -101,19 +103,19 @@ const tpl = {
                     animationFrame = requestAnimationFrame(tick);
                 };
 
-                const startPixelation = () => {
-                    if (!rustyImage.complete) {
+                const triggerPixelateAndNavigate = (event) => {
+                    if (isNavigating || !rustyImage.complete) {
                         return;
                     }
-                    pixelCanvas.style.opacity = "1";
-                    animatePixelation(maxPixelSize, 360);
-                };
 
-                const stopPixelation = () => {
-                    if (!rustyImage.complete) {
-                        return;
-                    }
-                    animatePixelation(1, 420);
+                    event.preventDefault();
+                    isNavigating = true;
+                    pixelCanvas.style.opacity = "1";
+
+                    animatePixelation(maxPixelSize, 320);
+                    window.setTimeout(() => {
+                        window.location.href = (rustyLink && rustyLink.getAttribute("href")) || "/";
+                    }, 320);
                 };
 
                 const setupReadyState = () => {
@@ -129,8 +131,7 @@ const tpl = {
                 }
 
                 window.addEventListener("resize", resizeCanvas);
-                wrapper.addEventListener("mouseenter", startPixelation);
-                wrapper.addEventListener("mouseleave", stopPixelation);
+                wrapper.addEventListener("click", triggerPixelateAndNavigate);
             });
         },
         linkDisplay() {

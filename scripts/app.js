@@ -140,6 +140,7 @@ const app = {
 
             let animationFrame = null;
             let currentPixelSize = 1;
+            let isNavigating = false;
             const maxPixelSize = 22;
 
             const resizeCanvas = () => {
@@ -210,19 +211,19 @@ const app = {
                 animationFrame = requestAnimationFrame(tick);
             };
 
-            const startPixelation = () => {
-                if (!headshotImage.complete) {
+            const triggerPixelateAndNavigate = (event) => {
+                if (isNavigating || !headshotImage.complete) {
                     return;
                 }
-                pixelCanvas.style.opacity = "1";
-                animatePixelation(maxPixelSize, 360);
-            };
 
-            const stopPixelation = () => {
-                if (!headshotImage.complete) {
-                    return;
-                }
-                animatePixelation(1, 420);
+                event.preventDefault();
+                isNavigating = true;
+                pixelCanvas.style.opacity = "1";
+
+                animatePixelation(maxPixelSize, 320);
+                window.setTimeout(() => {
+                    window.location.href = headshotLink.getAttribute("href") || "/tpl";
+                }, 320);
             };
 
             const setupReadyState = () => {
@@ -238,8 +239,7 @@ const app = {
             }
 
             window.addEventListener("resize", resizeCanvas);
-            headshotLink.addEventListener("mouseenter", startPixelation);
-            headshotLink.addEventListener("mouseleave", stopPixelation);
+            headshotLink.addEventListener("click", triggerPixelateAndNavigate);
         },
         shuffleArray(array) {
             const groups = array.reduce((acc, item) => {
@@ -621,7 +621,7 @@ const app = {
                         <div class="project-lightbox-header">
                             <div class="project-lightbox-link-wrap"></div>
                             <button type="button" class="project-lightbox-close" aria-label="Close project image">close</button>
-                        </div>
+                        </div><div style="display:flex;flex-direction:column;gap:1rem;">
                         <div class="project-lightbox-title-row">
                             <button type="button" class="project-lightbox-nav project-lightbox-prev" aria-label="Previous project image">&larr;</button>
                             <p class="project-lightbox-title"></p>
@@ -629,7 +629,7 @@ const app = {
                         </div>
                         <div class="project-lightbox-frame">
                             <div class="project-lightbox-media-wrap"></div>
-                        </div>
+                        </div></div>
                         <p class="project-lightbox-description"></p>
                     </div>
                 </div>

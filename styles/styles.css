@@ -1649,7 +1649,7 @@ html.tpl .feed-lightbox-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 html.tpl .feed-lightbox-header-meta {
   display: flex;
@@ -3051,7 +3051,7 @@ html body.project-lightbox-open {
   width: fit-content;
   max-width: 1260px;
   width: 90%;
-  height: 90vh;
+  height: 85vh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -3090,6 +3090,9 @@ html body.project-lightbox-open {
 .project-lightbox-link {
   display: inline-flex;
   text-decoration: none;
+}
+.project-lightbox-link:hover {
+  color: #84A59D;
 }
 
 .project-lightbox-image-link {
@@ -3203,12 +3206,18 @@ html body.project-lightbox-open {
   .project-lightbox {
     padding-bottom: 2rem;
   }
+  .project-lightbox-header {
+    margin-top: 0;
+    order: 0;
+  }
   .project-lightbox-panel {
     width: 85vw;
     max-width: 85vw;
-    height: 80vh;
-    max-height: 80vh;
+    height: 90vh;
+    max-height: 90vh;
     padding: 1rem;
+    padding-bottom: 1.5rem;
+    justify-content: space-between;
   }
   .project-lightbox-title-row {
     gap: 8px;
