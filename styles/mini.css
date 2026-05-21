@@ -534,3 +534,10 @@ hr.highlight {
     filter: invert(74%) sepia(8%) saturate(606%) hue-rotate(176deg) brightness(88%) contrast(90%);
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .nav-about,
+  .nav-sep-about {
+    display: none;
+  }
+}
