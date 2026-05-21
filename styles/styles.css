@@ -2983,7 +2983,7 @@ html body.project-lightbox-open {
 
 .project-lightbox-description {
   align-self: stretch;
-  text-align: left;
+  text-align: center;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -4318,7 +4318,7 @@ header .scroll-title {
 }
 #gallery .gallery-item {
   background-color: #282b2c;
-  border: solid rgba(40, 43, 44, 0.25) 5px;
+  border: solid 5px rgba(243, 232, 233, 0.75);
   box-shadow: rgba(40, 43, 44, 0.5) 0px 20px 50px 5px;
   display: flex;
   flex-direction: row;

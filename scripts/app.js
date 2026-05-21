@@ -414,7 +414,7 @@ const app = {
                         itemLinks.push(`<a href="${item.instagram}" target="_blank" title="${item.title} instagram">Instagram</a>`)
                     }
                     if (item.id) {
-                        itemLinks.push(`<button onclick="app.functions.openGalleryProject('${item.id}')">Read more</button>`)
+                        itemLinks.push(`<button onclick="app.functions.openGalleryProject('${item.id}')">Project info</button>`)
                     }
                     if (itemLinks.length > 0) {
                         formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + ` | ` + item}) + `</p>`

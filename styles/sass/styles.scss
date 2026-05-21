@@ -940,7 +940,7 @@ header {
     }
     .gallery-item {
         background-color: $black;
-        border: solid rgba($black, 0.25) 5px;
+        border: solid 5px rgba($white, 0.75);
         box-shadow: rgba($black, 0.5) 0px 20px 50px 5px;
         display: flex;
         flex-direction: row;

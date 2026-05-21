@@ -6,6 +6,29 @@
         "site": "https://danateagle.com/tpl",
         "images": ["./assets/projects/tpl-business.png"]
     },
+    "Penn2Paper": {
+        "title": "Penn2Paper",
+        "year": "2026",
+        "service": "Web design & development",
+        "site": "https://penn2paper.ca",
+        "images": ["./assets/projects/penn2paper.png"]
+    },
+    "WEST83 Consulting": {
+        "title": "WEST83 Consulting",
+        "year": "2026",
+        "id": "west83",
+        "service": "Web design & development",
+        "site": "https://west83.com",
+        "images": ["./assets/projects/west83-0.png"]
+    },
+    "WEST83 Consulting-2": {
+        "title": "WEST83 Consulting",
+        "year": "2026",
+        "id": "west83",
+        "service": "Logo and branding design",
+        "site": "https://west83.com",
+        "images": ["./assets/projects/west83.png"]
+    },
     "I.D. Guide": {
         "title": "I.D. Guide",
         "year": "2025-",
@@ -108,14 +131,14 @@
         "site": "https://sydneygautreau.com",
         "images": ["./assets/projects/sydneygautreau.png"]
     },
-    "RUSTPROP 1": {
+    "RUSTPROP-1": {
         "title": "RUSTPROP",
         "year": "2024-26",
         "service": "Agitprop design project",
         "site": "https://rustprop.org",
         "images": ["./rustprop/images/touchscreens.png", "./rustprop/images/push-notifs.png"]
     },
-    "RUSTPROP 2": {
+    "RUSTPROP-2": {
         "title": "RUSTPROP",
         "year": "2024-26",
         "service": "Agitprop design project",
