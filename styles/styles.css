@@ -1839,7 +1839,6 @@ html.tpl .feed-lightbox-caption:empty {
     max-width: 85vw;
     height: 70vh;
     align-items: space-between;
-    margin-bottom: 3rem;
   }
   html.tpl .feed-lightbox-header {
     order: 2;
