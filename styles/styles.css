@@ -3084,9 +3084,10 @@ html body.project-lightbox-open {
   border: solid #B57E9B 5px;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 1260px;
+  max-width: 900px;
   width: 90%;
-  height: 85vh;
+  height: auto;
+  max-height: 95vh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -3281,11 +3282,11 @@ html body.project-lightbox-open {
   .project-lightbox-panel {
     width: 85vw;
     max-width: 85vw;
-    height: 80vh;
+    height: auto;
     max-height: 80vh;
     padding: 1rem;
     padding-bottom: 1.5rem;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .project-lightbox-title-row {
     gap: 8px;
