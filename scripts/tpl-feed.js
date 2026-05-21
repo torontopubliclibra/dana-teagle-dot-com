@@ -119,7 +119,7 @@ const tplFeed = {
         },
         feedItemHTML(item) {
             const permalink = `torontopubliclibra.com/feed#${item.id}`;
-            const mailto = `mailto:torontopubliclibra@gmail.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
+            const mailto = `mailto:dana@torontopubliclibra.com?subject=${encodeURIComponent('Re: ' + permalink)}`;
             const dateLink = `<a href="#${item.id}" class="permalink-link">${item.date}</a>`;
             const mediaTag = tplFeed.functions.buildFeedMedia(item);
             return `<div class="feed-item-container" id="${item.id}">${mediaTag}<p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
