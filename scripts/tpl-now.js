@@ -119,7 +119,7 @@ const tplNow = {
             const lastFmUrl = album.url || 'https://www.last.fm/user/rustbecomesher';
             return this.buildCard(lastFmUrl, 'now-album', img, info);
         }).join('');
-        return this.renderSection('recently listening', '<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">last.fm</a>', albumItems);
+        return this.renderSection('latest top albums', '<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">last.fm</a>', albumItems);
     },
     renderMixes() {
         if (!this.mixes.length) return '';
