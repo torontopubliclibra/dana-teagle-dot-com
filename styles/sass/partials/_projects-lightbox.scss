@@ -217,8 +217,10 @@ html body.project-lightbox-open {
 
     .project-lightbox-panel {
         width: 85vw;
-        margin-bottom: 2rem;
+        max-width: 85vw;
+        margin-bottom: 3rem;
         height: 80vh;
+        max-height: 80vh;
         padding: 1rem;
     }
 
