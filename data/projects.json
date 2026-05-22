@@ -61,19 +61,6 @@
         "image": "./assets/projects/west83-0.png",
         "site": "https://west83.com"
     },
-    "Parallel 42 Systems": {
-        "id": "parallel-42-systems",
-        "year": "2026",
-        "tags": [
-            "Professional",
-            "Consultancy"
-        ],
-            "description": [
-                "This is a website for Parallel 42 Systems, a partnership of software practitioners based in Windsor, Ontario. I've been working with P42 on various software development projects and consulting since 2022, and helped launch their new website in early 2026."
-            ],
-        "image": "./assets/projects/p42-0.png",
-        "site": "https://p42systems.com/"
-    },
     "True History Brewing": {
         "id": "true-history-brewing",
         "year": "2025",
@@ -140,19 +127,6 @@
         ],
         "image": "./assets/projects/hazel-henry-audio.png",
         "site": "https://hazelhenryaudio.com/"
-    },
-    "Jupiter Wildwood": {
-        "id": "orbwitch",
-        "year": "2025",
-        "tags": [
-            "Artist/Creative",
-            "Writing/Editing"
-        ],
-        "description": [
-            "This is a website for Jupiter Autumn Wildwood, also known as OrbWitch, a maker, writer, multi-disciplinary artist, and witch based in Tkaronto, Ontario. I custom designed this highly accessible and legible site to reflect her focus on disability justice and access work."
-        ],
-        "image": "./assets/projects/orbwitch.png",
-        "site": "https://orbwitch.com/"
     },
     "Poe M. Allphin": {
         "id": "poe-m-allphin",
