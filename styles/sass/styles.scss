@@ -472,6 +472,7 @@ header {
         &:hover, &:focus {
             background-color: rgba($white, 0.5);
             border-bottom: solid $color3 4px;
+            color: $white;
         }
 
         @media only screen and (max-width: $tablet) {
