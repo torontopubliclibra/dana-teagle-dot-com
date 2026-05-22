@@ -1908,7 +1908,7 @@ html.tpl {
     .mix-search-status {
         display: none;
         width: 100%;
-        padding-bottom: 0.6rem;
+        padding-bottom: rem;
         align-items: center;
         justify-content: space-between;
         gap: 12px;
@@ -1976,7 +1976,7 @@ html.tpl {
     }
 
     .range-select {
-        padding-bottom: 0.6rem;
+        padding-bottom: 0.75rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1990,7 +1990,7 @@ html.tpl {
     .mix-nav-controls {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
+        gap: 0.6rem;
         margin-left: auto;
         white-space: nowrap;
     }

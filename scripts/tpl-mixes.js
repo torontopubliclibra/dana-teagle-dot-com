@@ -263,7 +263,7 @@ const tplMixes = {
             const currentRange = ranges[currentIndex] || ranges[0];
 
             tplMixes.rangeSelect = `<p class="range-select">
-                <span class="mix-range-label" id="range-label">${currentRange.label}</span>
+                <span class="mix-range-label" id="range-label">>> ${currentRange.label}</span>
                 <span class="mix-nav-controls">
                     <button class="range" id="oldest-btn" onclick="tplMixes.functions.oldest();" ${currentIndex <= 0 ? 'disabled' : ''}>&lt;-</button> |
                     <button class="range" id="older-btn" onclick="tplMixes.functions.older();" ${currentIndex <= 0 ? 'disabled' : ''}>&lt;&lt;<span class="mix-nav-desktop-label"> older</span></button> |
