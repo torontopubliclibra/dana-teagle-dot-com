@@ -407,6 +407,12 @@ html.tpl {
             }
         }
 
+        .rss-label {
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+            font-family: "Source Code Pro", monospace;
+        }
+
         .tpl-landing, &.tpl-subpage {
             width: 90%;
             max-width: unset;
@@ -1168,6 +1174,14 @@ html.tpl {
         }
     }
 
+    .feed-page-date-range {
+        font-size: 1rem;
+
+        @media only screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
     .feed-rss-icon {
         width: 15px;
         filter: invert(1);
@@ -1891,11 +1905,20 @@ html.tpl {
         min-width: 0;
     }
 
-    // Mixes page - controls & dynamically generated elements
-
-    .mix-search-clear {
+    .mix-search-status {
         display: none;
-        padding-top: 12px;
+        width: 100%;
+        padding-bottom: 0.6rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .mix-search-query-display {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .stream-select {
@@ -1953,11 +1976,31 @@ html.tpl {
     }
 
     .range-select {
-        padding-top: 10px;
+        padding-bottom: 0.6rem;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 12px;
+    }
+
+    .mix-range-label {
+        white-space: nowrap;
+    }
+
+    .mix-nav-controls {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: auto;
+        white-space: nowrap;
+    }
+
+    .mix-nav-desktop-label {
+        display: inline;
+
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
     }
 
     .bottom-nav-hr {

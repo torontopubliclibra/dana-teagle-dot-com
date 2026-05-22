@@ -11,6 +11,7 @@ const tplFeed = {
     lightboxTransitionDirection: '',
     lastActiveElement: null,
     lastScrollPosition: 0,
+    lightboxOpenedItemId: '',
     lastOpenedItemId: '',
     lightboxTouch: {
         startX: 0,
@@ -150,19 +151,78 @@ const tplFeed = {
             const mediaTag = tplFeed.functions.buildFeedMedia(item);
             return `<div class="feed-item-container" id="${item.id}">${mediaTag}<p class="alt">${item.alt}</p><p>>> ${dateLink} // <a href="${mailto}" class="reply-link" target="_blank" rel="noopener noreferrer">reply</a> // <button onclick=\"tplFeed.functions.altToggle('${item.id}')\">alt</button></p></div>`;
         },
+        parseFeedDate(dateText) {
+            const match = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/.exec((dateText || '').trim());
+            if (!match) {
+                return null;
+            }
+
+            const day = Number(match[1]);
+            const month = Number(match[2]);
+            const year = Number(match[3]);
+
+            if (!day || !month || !year) {
+                return null;
+            }
+
+            return { day, month, year };
+        },
+        formatFeedDateRange(newestDate, oldestDate) {
+            const start = tplFeed.functions.parseFeedDate(oldestDate);
+            const end = tplFeed.functions.parseFeedDate(newestDate);
+
+            if (!start || !end) {
+                return `${newestDate} - ${oldestDate}`;
+            }
+
+            const monthNames = [
+                'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+            ];
+
+            const startMonth = monthNames[start.month - 1];
+            const endMonth = monthNames[end.month - 1];
+
+            if (!startMonth || !endMonth) {
+                return `${newestDate} - ${oldestDate}`;
+            }
+
+            if (start.year === end.year && start.month === end.month) {
+                return `${startMonth} ${start.day}-${end.day}, ${start.year}`;
+            }
+
+            if (start.year === end.year) {
+                return `${startMonth} ${start.day}-${endMonth} ${end.day}, ${start.year}`;
+            }
+
+            return `${startMonth} ${start.day}, ${start.year}-${endMonth} ${end.day}, ${end.year}`;
+        },
         updateToggle() {
             const { start, end } = tplFeed.range;
+            const navParts = [];
+            const firstVisibleItem = tplFeed.visibleItems[0];
+            const lastVisibleItem = tplFeed.visibleItems[tplFeed.visibleItems.length - 1];
+            const newestDate = firstVisibleItem ? firstVisibleItem.date : '';
+            const oldestDate = lastVisibleItem ? lastVisibleItem.date : '';
+            const dateRangeMarkup = (newestDate && oldestDate)
+                ? `<span class="feed-page-date-range">>> ${tplFeed.functions.formatFeedDateRange(newestDate, oldestDate)}</span>`
+                : '';
             const navBtn = (cond, text, fn) => cond
                 ? `<button class="range" onclick="tplFeed.functions.${fn}()">${text}</button>`
                 : `<span class="year-selected">${text}</span>`;
+
+            navParts.push(navBtn(start > 0, '<-', 'newest'));
+
+            navParts.push(navBtn(start > 0, '<< newer', 'newer'));
+            navParts.push(navBtn(end < tplFeed.items.length, 'older >>', 'older'));
+
+            navParts.push(navBtn(end < tplFeed.items.length, '->', 'oldest'));
+
             tplFeed.toggle.html(`
                 <p class="feed-toggle-nav">
-                    <span>
-                        ${navBtn(start > 0, '<< newer', 'newer')} | ${navBtn(end < tplFeed.items.length, 'older >>', 'older')}
-                    </span>
-                    <span class="feed-rss-link-wrapper">
-                        <a href="/tpl/rss.xml" target="_blank" class="feed-rss-link" title="RSS Feed">RSS
-                        <img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon"></a>
+                    ${dateRangeMarkup}
+                    <span class="feed-nav-controls">
+                        ${navParts.join(' | ')}
                     </span>
                 </p>
             `);
@@ -174,12 +234,19 @@ const tplFeed = {
                 tplFeed.functions.setRange(tplFeed.range.start - FEED_PAGE_SIZE);
             } else if (dir === 'older' && tplFeed.range.end < tplFeed.items.length) {
                 tplFeed.functions.setRange(tplFeed.range.start + FEED_PAGE_SIZE);
+            } else if (dir === 'newest' && tplFeed.range.start > 0) {
+                tplFeed.functions.setRange(0);
+            } else if (dir === 'oldest' && tplFeed.range.end < tplFeed.items.length) {
+                const lastPageStart = Math.max(0, Math.floor((tplFeed.items.length - 1) / FEED_PAGE_SIZE) * FEED_PAGE_SIZE);
+                tplFeed.functions.setRange(lastPageStart);
             }
 
             tplFeed.functions.renderCurrentRange();
         },
         newer() { tplFeed.functions.changeRange('newer'); },
         older() { tplFeed.functions.changeRange('older'); },
+        newest() { tplFeed.functions.changeRange('newest'); },
+        oldest() { tplFeed.functions.changeRange('oldest'); },
         resetAltToggles() {
             tplFeed.visibleItems.forEach(item => {
                 const { altElement, altButton } = tplFeed.functions.getAltElements(item.id);
@@ -463,6 +530,7 @@ const tplFeed = {
             const items = tplFeed.lightboxItems;
             const index = items.indexOf(mediaElement);
             const lightbox = tplFeed.functions.ensureLightbox();
+            const openedItemId = $(mediaElement).closest('.feed-item-container').attr('id') || '';
 
             if (index === -1) {
                 return;
@@ -473,6 +541,7 @@ const tplFeed = {
             tplFeed.lightboxTransitionDirection = '';
             tplFeed.lastActiveElement = document.activeElement;
             tplFeed.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+            tplFeed.lightboxOpenedItemId = openedItemId;
             tplFeed.functions.resetLightboxTouchState();
             tplFeed.functions.renderLightboxItem();
             $('body').addClass('feed-lightbox-open');
@@ -482,6 +551,8 @@ const tplFeed = {
         },
         closeLightbox() {
             if (!tplFeed.lightbox || !tplFeed.lightbox.hasClass('is-open')) return;
+            const closedItemId = tplFeed.lastOpenedItemId;
+            const navigatedWithinLightbox = Boolean(closedItemId) && closedItemId !== tplFeed.lightboxOpenedItemId;
             const restoreY = tplFeed.scrollLock.active ? tplFeed.scrollLock.y : tplFeed.lastScrollPosition;
 
             tplFeed.lightbox.find('video').each((_, video) => {
@@ -507,23 +578,23 @@ const tplFeed = {
                 }
             }
 
-            window.scrollTo(0, restoreY);
-            requestAnimationFrame(() => window.scrollTo(0, restoreY));
+            if (navigatedWithinLightbox) {
+                const didScroll = tplFeed.functions.scrollItemIntoView(
+                    closedItemId,
+                    'start',
+                    tplFeed.functions.preferredScrollOffset()
+                );
 
-            if (tplFeed.functions.isMobileViewport() && tplFeed.lastOpenedItemId) {
-                const opener = document.getElementById(tplFeed.lastOpenedItemId);
-                if (opener) {
-                    requestAnimationFrame(() => {
-                        const currentY = window.pageYOffset || document.documentElement.scrollTop || 0;
-                        if (Math.abs(currentY - restoreY) > 6) {
-                            const rect = opener.getBoundingClientRect();
-                            const targetY = rect.top + currentY - tplFeed.functions.preferredScrollOffset();
-                            window.scrollTo(0, targetY);
-                        }
-                    });
+                if (!didScroll) {
+                    window.scrollTo(0, restoreY);
+                    requestAnimationFrame(() => window.scrollTo(0, restoreY));
                 }
+            } else {
+                window.scrollTo(0, restoreY);
+                requestAnimationFrame(() => window.scrollTo(0, restoreY));
             }
 
+            tplFeed.lightboxOpenedItemId = '';
             tplFeed.lastOpenedItemId = '';
         },
         handleLightboxKeydown(event) {

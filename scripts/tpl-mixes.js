@@ -7,7 +7,7 @@ const tplMixes = {
     query: "",
     stream: localStorage['stream'] || "tidal",
     searchBar: `<p>search: <input type="text" id="mix-search-input" placeholder="by number, title, or artist" oninput="tplMixes.functions.updateQuery(this.value)"></p>`,
-    clearSearchButton: `<button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range mix-search-clear" id="mix-search-clear">clear search</button>`,
+    searchStatus: `<p class="mix-search-status" id="mix-search-status"><span class="mix-search-query-display" id="mix-search-query-display"></span><button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear">clear search</button></p>`,
     streamSelect: "",
     rangeSelect: "",
     scrollToTop: `<p class="scroll-to-top" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" class="scroll-to-top-icon">Back to Top</a></p>`,
@@ -173,9 +173,11 @@ const tplMixes = {
     functions: {
         updateQuery(value) {
             tplMixes.query = value;
-            $(".range-select").css('display', value ? 'none' : 'flex');
-            $("#scroll-to-top").toggle(!!value);
-            $("#mix-search-clear").toggle(!!value);
+            const hasQuery = !!value.trim();
+            $(".range-select").css('display', hasQuery ? 'none' : 'flex');
+            $("#scroll-to-top").toggle(hasQuery);
+            $("#mix-search-status").css('display', hasQuery ? 'flex' : 'none');
+            $("#mix-search-query-display").text(`"${value.trim()}"`);
             tplMixes.functions.mixDisplay();
         },
         artistIndexSearch(artist) {
@@ -261,9 +263,13 @@ const tplMixes = {
             const currentRange = ranges[currentIndex] || ranges[0];
 
             tplMixes.rangeSelect = `<p class="range-select">
-                <button class="range" id="newer-btn" onclick="tplMixes.functions.newer();" ${currentIndex === ranges.length - 1 ? 'disabled' : ''}>&lt;&lt;</button> |
-                <span id="range-label">${currentRange.label} / ${maxNum}</span> |
-                <button class="range" id="older-btn" onclick="tplMixes.functions.older();" ${currentIndex <= 0 ? 'disabled' : ''}>&gt;&gt;</button>
+                <span class="mix-range-label" id="range-label">${currentRange.label}</span>
+                <span class="mix-nav-controls">
+                    <button class="range" id="oldest-btn" onclick="tplMixes.functions.oldest();" ${currentIndex <= 0 ? 'disabled' : ''}>&lt;-</button> |
+                    <button class="range" id="older-btn" onclick="tplMixes.functions.older();" ${currentIndex <= 0 ? 'disabled' : ''}>&lt;&lt;<span class="mix-nav-desktop-label"> older</span></button> |
+                    <button class="range" id="newer-btn" onclick="tplMixes.functions.newer();" ${currentIndex === ranges.length - 1 ? 'disabled' : ''}><span class="mix-nav-desktop-label">newer </span>&gt;&gt;</button> |
+                    <button class="range" id="newest-btn" onclick="tplMixes.functions.newest();" ${currentIndex === ranges.length - 1 ? 'disabled' : ''}>-&gt;</button>
+                </span>
             </p>`;
         },
         older() {
@@ -278,6 +284,18 @@ const tplMixes = {
             const currentIndex = ranges.findIndex(range => range.id === tplMixes.range);
             if (currentIndex < ranges.length - 1) {
                 tplMixes.functions.rangeSet(ranges[currentIndex + 1].id);
+            }
+        },
+        oldest() {
+            const ranges = tplMixes.helpers.getRangeDefinitions();
+            if (ranges.length > 0) {
+                tplMixes.functions.rangeSet(ranges[0].id);
+            }
+        },
+        newest() {
+            const ranges = tplMixes.helpers.getRangeDefinitions();
+            if (ranges.length > 0) {
+                tplMixes.functions.rangeSet(ranges[ranges.length - 1].id);
             }
         },
         rangeSet(range) {
@@ -316,7 +334,7 @@ const tplMixes = {
         navDisplay() {
             $(".tpl-page-nav").each(function(idx) {
                 const navContent = idx === 0
-                    ? [tplMixes.searchBar, tplMixes.clearSearchButton, tplMixes.rangeSelect]
+                    ? [tplMixes.searchStatus, tplMixes.rangeSelect, tplMixes.searchBar]
                     : [
                         '<hr class="bottom-nav-hr"/>',
                         '<div class="bottom-nav-flex">',
