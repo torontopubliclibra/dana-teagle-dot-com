@@ -281,6 +281,99 @@ blockquote {
   margin-left: 20px;
 }
 
+#testimonials {
+  margin-top: 10px;
+}
+
+.mini-testimonials-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mini-testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.mini-testimonial-arrows {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini-testimonial-arrow {
+  border: solid #99b1d3 2px;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-testimonial-arrow:hover,
+.mini-testimonial-arrow:focus-visible {
+  border-color: #f3e8e9;
+}
+
+.mini-testimonial-arrow img {
+  width: 18px;
+  height: 18px;
+  filter: invert(74%) sepia(8%) saturate(606%) hue-rotate(176deg) brightness(88%) contrast(90%);
+}
+
+.mini-testimonial-arrow:hover img,
+.mini-testimonial-arrow:focus-visible img {
+  filter: invert(94%) sepia(14%) saturate(138%) hue-rotate(290deg) brightness(107%) contrast(92%);
+}
+
+.mini-testimonial-next img {
+  transform: rotate(180deg);
+}
+
+.mini-testimonial-slide {
+  min-height: 190px;
+}
+
+.mini-testimonial-slide blockquote {
+  margin: 0 0 12px;
+}
+
+.mini-testimonial-slide cite {
+  margin-bottom: 0;
+}
+
+.mini-testimonial-dots {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.mini-testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: solid #99b1d3 1px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mini-testimonial-dot.is-active {
+  background: #99b1d3;
+}
+
+.mini-testimonial-dot:hover,
+.mini-testimonial-dot:focus-visible {
+  border-color: #f3e8e9;
+}
+
 a {
   color: #f3e8e9;
 }
@@ -449,7 +542,7 @@ body:has(header .title:focus-visible) .basic-info .name {
   gap: 10px;
   cursor: pointer;
   position: relative;
-  padding-left: 20px;
+  padding-left: 28px;
   list-style: none;
 }
 
@@ -496,6 +589,7 @@ body:has(header .title:focus-visible) .basic-info .name {
 
 .mini-project-image-link {
   display: inline-block;
+  margin: 0.25rem 0 0.5rem 0;
 }
 
 .mini-project-content img {
@@ -546,6 +640,44 @@ body:has(header .title:focus-visible) .basic-info .name {
 @media only screen and (max-width: 900px) {
   header nav {
     font-size: 14px;
+  }
+
+  .mini-project-item summary {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    padding-left: 0;
+    padding-right: 24px;
+  }
+
+  .mini-project-item summary::before {
+    left: auto;
+    right: 0;
+  }
+
+  .mini-project-title,
+  .mini-project-link {
+    display: block;
+    text-align: left;
+  }
+
+  .mini-testimonials-carousel {
+    gap: 8px;
+  }
+
+  .mini-testimonial-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .mini-testimonial-arrow img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mini-testimonial-slide {
+    min-height: 225px;
   }
 
   .nav-about,

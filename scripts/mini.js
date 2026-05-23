@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .replace(/^https?:\/\/(www\.)?/i, "")
           .replace(/\/$/, "");
 
-        return `<details class="mini-project-item"${projectIdAttr}><summary><span class="mini-project-title">${project.title}</span><a class="mini-project-link" href="${project.site}" target="_blank" onclick="event.stopPropagation();">${displayUrl || "project link"}</a></summary><div class="mini-project-content">${descriptionMarkup}${imageMarkup}</div></details>`;
+        return `<details class="mini-project-item"${projectIdAttr}><summary><span class="mini-project-title">${project.title}</span><a class="mini-project-link" href="${project.site}" target="_blank" onclick="event.stopPropagation();">${displayUrl || "project link"}</a></summary><div class="mini-project-content">${imageMarkup}${descriptionMarkup}</div></details>`;
       })
       .join("");
   }
@@ -233,10 +233,94 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const testimonials = shuffleArray(Object.values(testimonialsData));
-    testimonialsContainer.innerHTML = testimonials
-      .map((testimonial) => `<blockquote><em>"${testimonial.quote || ""}"</em></blockquote><cite>${(testimonial.cite || "").replace(/^\s*[\u2014-]\s*/, "")}</cite>`)
-      .join("\n");
+    const testimonials = shuffleArray(Object.values(testimonialsData || {})).filter((testimonial) => testimonial && testimonial.quote && testimonial.cite);
+    if (!testimonials.length) {
+      testimonialsContainer.innerHTML = "";
+      return;
+    }
+
+    testimonialsContainer.innerHTML = `
+      <div class="mini-testimonials-carousel" role="region" aria-label="Client testimonials">
+        <div class="mini-testimonial-controls" aria-label="Testimonial sequence controls">
+          <div class="mini-testimonial-dots" aria-label="Testimonial sequence"></div>
+          <div class="mini-testimonial-arrows">
+            <button type="button" class="mini-testimonial-arrow mini-testimonial-prev" aria-label="Show previous testimonial"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
+            <button type="button" class="mini-testimonial-arrow mini-testimonial-next" aria-label="Show next testimonial"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
+          </div>
+        </div>
+        <div class="mini-testimonial-slides" aria-live="polite"></div>
+      </div>
+    `;
+
+    const slidesContainer = testimonialsContainer.querySelector(".mini-testimonial-slides");
+    const dotsContainer = testimonialsContainer.querySelector(".mini-testimonial-dots");
+    const prevButton = testimonialsContainer.querySelector(".mini-testimonial-prev");
+    const nextButton = testimonialsContainer.querySelector(".mini-testimonial-next");
+    if (!slidesContainer || !dotsContainer || !prevButton || !nextButton) {
+      return;
+    }
+
+    slidesContainer.innerHTML = testimonials
+      .map((testimonial, index) => `<article class="mini-testimonial-slide${index === 0 ? " is-active" : ""}" data-slide-index="${index}" ${index === 0 ? "" : "hidden"}><blockquote><em>"${testimonial.quote || ""}"</em></blockquote><cite>${(testimonial.cite || "").replace(/^\s*[\u2014-]\s*/, "")}</cite></article>`)
+      .join("");
+
+    dotsContainer.innerHTML = testimonials
+      .map((testimonial, index) => `<button type="button" class="mini-testimonial-dot${index === 0 ? " is-active" : ""}" data-dot-index="${index}" aria-label="Show testimonial ${index + 1} of ${testimonials.length}"></button>`)
+      .join("");
+
+    const slides = Array.from(testimonialsContainer.querySelectorAll(".mini-testimonial-slide"));
+    const dots = Array.from(testimonialsContainer.querySelectorAll(".mini-testimonial-dot"));
+    let activeIndex = 0;
+
+    const setActiveSlide = (newIndex) => {
+      const total = slides.length;
+      if (!total) {
+        return;
+      }
+
+      activeIndex = (newIndex + total) % total;
+
+      slides.forEach((slide, index) => {
+        const isActive = index === activeIndex;
+        slide.classList.toggle("is-active", isActive);
+        slide.hidden = !isActive;
+      });
+
+      dots.forEach((dot, index) => {
+        const isActive = index === activeIndex;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+    };
+
+    prevButton.addEventListener("click", () => {
+      setActiveSlide(activeIndex - 1);
+    });
+
+    nextButton.addEventListener("click", () => {
+      setActiveSlide(activeIndex + 1);
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const targetIndex = parseInt(dot.getAttribute("data-dot-index") || "0", 10);
+        setActiveSlide(targetIndex);
+      });
+    });
+
+    testimonialsContainer.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        setActiveSlide(activeIndex - 1);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        setActiveSlide(activeIndex + 1);
+      }
+    });
+
+    setActiveSlide(0);
   }
 
   function copySectionContent(indexDoc, sourceSelector, targetSelector) {
