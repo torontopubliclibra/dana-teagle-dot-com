@@ -25,6 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    let lockedActiveEntry = null;
+    let lockReleaseTimeoutId = null;
+
+    const setActiveEntry = (activeEntry) => {
+      sectionMap.forEach((entry) => {
+        entry.link.classList.toggle("is-active", entry === activeEntry);
+      });
+    };
+
+    const releaseActiveLinkLock = () => {
+      if (lockReleaseTimeoutId) {
+        window.clearTimeout(lockReleaseTimeoutId);
+        lockReleaseTimeoutId = null;
+      }
+
+      if (!lockedActiveEntry) {
+        return;
+      }
+
+      lockedActiveEntry = null;
+      updateActiveLink();
+    };
+
+    const scheduleActiveLinkLockRelease = () => {
+      if (lockReleaseTimeoutId) {
+        window.clearTimeout(lockReleaseTimeoutId);
+      }
+
+      lockReleaseTimeoutId = window.setTimeout(() => {
+        releaseActiveLinkLock();
+      }, 140);
+    };
+
     const getScrollMarker = () => {
       const header = document.querySelector("header");
       const headerHeight = header ? header.offsetHeight : 0;
@@ -32,6 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const updateActiveLink = () => {
+      if (lockedActiveEntry) {
+        setActiveEntry(lockedActiveEntry);
+        return;
+      }
+
       if (window.scrollY <= 2) {
         sectionMap.forEach((entry) => {
           entry.link.classList.remove("is-active");
@@ -45,9 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const nearBottom = window.innerHeight + window.scrollY >= docHeight - bottomThreshold;
       if (nearBottom) {
         const lastEntry = sectionMap[sectionMap.length - 1];
-        sectionMap.forEach((entry) => {
-          entry.link.classList.toggle("is-active", entry === lastEntry);
-        });
+        setActiveEntry(lastEntry);
         return;
       }
 
@@ -61,12 +97,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      sectionMap.forEach((entry) => {
-        entry.link.classList.toggle("is-active", entry === activeEntry);
-      });
+      setActiveEntry(activeEntry);
     };
 
-    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const clickedEntry = sectionMap.find((entry) => entry.link === link);
+        if (!clickedEntry) {
+          return;
+        }
+
+        lockedActiveEntry = clickedEntry;
+        setActiveEntry(clickedEntry);
+        scheduleActiveLinkLockRelease();
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      if (lockedActiveEntry) {
+        setActiveEntry(lockedActiveEntry);
+        scheduleActiveLinkLockRelease();
+        return;
+      }
+
+      updateActiveLink();
+    }, { passive: true });
     window.addEventListener("resize", updateActiveLink);
     updateActiveLink();
   }
@@ -116,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function bindGalleryProjectLinks() {
-    const galleryProjectLinks = document.querySelectorAll(".mini-gallery-item[data-project-target]");
+    const galleryProjectLinks = document.querySelectorAll(".mini-gallery-link[data-project-target]");
     galleryProjectLinks.forEach((link) => {
       link.addEventListener("click", (event) => {
         const targetId = link.getAttribute("data-project-target");
@@ -136,6 +191,225 @@ document.addEventListener("DOMContentLoaded", () => {
         targetProject.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+  }
+
+  function setupGalleryPreview(galleryItems) {
+    const galleryContainer = document.getElementById("mini-gallery");
+    if (!galleryContainer) {
+      return;
+    }
+
+    const cardsContainer = galleryContainer.querySelector(".mini-gallery-cards");
+    const hoverPopup = galleryContainer.querySelector(".mini-gallery-hover-popup");
+    const hoverPopupImages = galleryContainer.querySelector(".mini-gallery-hover-popup-images");
+    const dotsContainer = galleryContainer.querySelector(".mini-gallery-dots");
+    const prevButton = galleryContainer.querySelector(".mini-gallery-prev");
+    const nextButton = galleryContainer.querySelector(".mini-gallery-next");
+
+    if (!cardsContainer || !dotsContainer || !prevButton || !nextButton || !galleryItems.length) {
+      return;
+    }
+
+    const getVisibleCount = () => (window.innerWidth <= 900 ? 1 : 3);
+    let activeIndex = 0;
+    let activeHoverItemIndex = -1;
+
+    const renderVisibleCards = () => {
+      const total = galleryItems.length;
+      if (!total) {
+        cardsContainer.innerHTML = "";
+        return;
+      }
+
+      const visibleCount = Math.min(getVisibleCount(), total);
+      const visibleCards = Array.from({ length: visibleCount }, (_, offset) => {
+        const itemIndex = (activeIndex + offset) % total;
+        const item = galleryItems[itemIndex];
+        const projectLinkMarkup = item.projectTargetId
+          ? `<a class="mini-gallery-link mini-gallery-project-link" href="#${item.projectTargetId}" data-project-target="${item.projectTargetId}">project</a>`
+          : "";
+        const siteLinkMarkup = `<a class="mini-gallery-link mini-gallery-site-link" href="${item.siteUrl || "#"}" target="_blank" rel="noopener">${item.displayUrl}</a>`;
+        const previewImagesMarkup = `<div class="mini-gallery-preview-images ${item.imageSources.length > 1 ? "multiple" : ""}">${(item.imageSources || [])
+          .map((imageSrc, imageIndex) => `<img class="mini-gallery-preview-image" src="${imageSrc}" alt="${item.title} preview image ${imageIndex + 1}" loading="lazy">`)
+          .join("")}</div>`;
+        const imageLinkMarkup = item.imageSources.length > 1
+          ? `<a class="mini-gallery-image-link" href="${item.siteUrl || "#"}" target="_blank" rel="noopener">${previewImagesMarkup}</a>`
+          : `<div class="mini-gallery-preview-images">${(item.imageSources || [])
+              .map((imageSrc, imageIndex) => `<a class="mini-gallery-image-link" href="${item.siteUrl || "#"}" target="_blank" rel="noopener"><img class="mini-gallery-preview-image" src="${imageSrc}" alt="${item.title} preview image ${imageIndex + 1}" loading="lazy"></a>`)
+              .join("")}</div>`;
+
+        return `<article class="mini-gallery-card" role="listitem" data-gallery-item-index="${itemIndex}"><strong class="mini-gallery-preview-title mini-gallery-card-title">${item.title}</strong>${imageLinkMarkup}<p class="mini-gallery-preview-caption">${siteLinkMarkup}<span class="mini-gallery-preview-meta">${item.service}</span></p><div class="mini-gallery-links">${projectLinkMarkup}</div></article>`;
+      });
+
+      cardsContainer.innerHTML = visibleCards.join("");
+      bindGalleryProjectLinks();
+    };
+
+    const renderDots = () => {
+      dotsContainer.innerHTML = galleryItems
+        .map((item, index) => `<button type="button" class="mini-gallery-dot${index === 0 ? " is-active" : ""}" data-dot-index="${index}" aria-label="Show gallery item ${index + 1} of ${galleryItems.length}"></button>`)
+        .join("");
+    };
+
+    const syncActiveDot = () => {
+      const dots = Array.from(dotsContainer.querySelectorAll(".mini-gallery-dot"));
+      dots.forEach((dot, index) => {
+        const isActive = index === activeIndex;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
+    };
+
+    const setActiveIndex = (newIndex) => {
+      const total = galleryItems.length;
+      activeIndex = (newIndex + total) % total;
+      renderVisibleCards();
+      syncActiveDot();
+    };
+
+    const showHoverPopup = (card) => {
+      if (!hoverPopup || !hoverPopupImages || !card) {
+        return;
+      }
+
+      const itemIndex = parseInt(card.getAttribute("data-gallery-item-index") || "-1", 10);
+      if (itemIndex < 0 || itemIndex >= galleryItems.length) {
+        return;
+      }
+
+      if (activeHoverItemIndex === itemIndex && hoverPopup.classList.contains("is-visible")) {
+        return;
+      }
+
+      const item = galleryItems[itemIndex];
+      if (!item || !Array.isArray(item.imageSources) || !item.imageSources.length) {
+        return;
+      }
+
+      hoverPopupImages.innerHTML = item.imageSources
+        .map((imageSrc, imageIndex) => `<img class="mini-gallery-hover-popup-image" src="${imageSrc}" alt="${item.title} popup preview image ${imageIndex + 1}" loading="lazy">`)
+        .join("");
+      activeHoverItemIndex = itemIndex;
+      hoverPopup.classList.add("is-visible");
+      hoverPopup.setAttribute("aria-hidden", "false");
+    };
+
+    const positionHoverPopup = (mouseEvent) => {
+      if (!hoverPopup || !mouseEvent) {
+        return;
+      }
+
+      const viewportPadding = 12;
+      const cursorOffset = 18;
+      const popupWidth = hoverPopup.offsetWidth;
+      const popupHeight = hoverPopup.offsetHeight;
+
+      const desiredLeft = mouseEvent.clientX - popupWidth - cursorOffset;
+      const desiredTop = mouseEvent.clientY + cursorOffset;
+
+      const maxLeft = Math.max(viewportPadding, window.innerWidth - popupWidth - viewportPadding);
+      const maxTop = Math.max(viewportPadding, window.innerHeight - popupHeight - viewportPadding);
+
+      const clampedLeft = Math.min(Math.max(viewportPadding, desiredLeft), maxLeft);
+      const clampedTop = Math.min(Math.max(viewportPadding, desiredTop), maxTop);
+
+      hoverPopup.style.left = `${clampedLeft}px`;
+      hoverPopup.style.top = `${clampedTop}px`;
+    };
+
+    const hideHoverPopup = () => {
+      if (!hoverPopup) {
+        return;
+      }
+
+      activeHoverItemIndex = -1;
+      hoverPopup.classList.remove("is-visible");
+      hoverPopup.setAttribute("aria-hidden", "true");
+    };
+
+    const getHoveredGalleryCard = (target) => {
+      if (!(target instanceof Element)) {
+        return null;
+      }
+
+      const previewTrigger = target.closest(".mini-gallery-image-link, .mini-gallery-preview-images, .mini-gallery-preview-image");
+      if (!previewTrigger || !cardsContainer.contains(previewTrigger)) {
+        return null;
+      }
+
+      return previewTrigger.closest(".mini-gallery-card");
+    };
+
+    prevButton.addEventListener("click", () => {
+      setActiveIndex(activeIndex - 1);
+    });
+
+    nextButton.addEventListener("click", () => {
+      setActiveIndex(activeIndex + 1);
+    });
+
+    dotsContainer.addEventListener("click", (event) => {
+      const dot = event.target.closest(".mini-gallery-dot");
+      if (!dot || !dotsContainer.contains(dot)) {
+        return;
+      }
+
+      const targetIndex = parseInt(dot.getAttribute("data-dot-index") || "0", 10);
+      setActiveIndex(targetIndex);
+    });
+
+    galleryContainer.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        setActiveIndex(activeIndex - 1);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        setActiveIndex(activeIndex + 1);
+      }
+    });
+
+    cardsContainer.addEventListener("mouseover", (event) => {
+      const card = getHoveredGalleryCard(event.target);
+      if (!card) {
+        return;
+      }
+
+      showHoverPopup(card);
+      positionHoverPopup(event);
+    });
+
+    cardsContainer.addEventListener("mousemove", (event) => {
+      const card = getHoveredGalleryCard(event.target);
+      if (!card) {
+        return;
+      }
+
+      showHoverPopup(card);
+      positionHoverPopup(event);
+    });
+
+    cardsContainer.addEventListener("mouseout", (event) => {
+      const card = getHoveredGalleryCard(event.target);
+      if (!card) {
+        return;
+      }
+
+      const nextCard = getHoveredGalleryCard(event.relatedTarget);
+      if (nextCard === card) {
+        return;
+      }
+
+      hideHoverPopup();
+    });
+
+    cardsContainer.addEventListener("mouseleave", hideHoverPopup);
+
+    window.addEventListener("resize", renderVisibleCards);
+
+    renderDots();
+    setActiveIndex(0);
   }
 
   function shuffleArray(items) {
@@ -159,33 +433,40 @@ document.addEventListener("DOMContentLoaded", () => {
         return !key.includes("-2") && !key.includes("-3") && !/\s[23]$/.test(key);
       })
       .map(([, item]) => item);
-    galleryContainer.innerHTML = shuffleArray(galleryItems)
-      .map((item) => {
-        const imageList = Array.isArray(item.images) ? item.images.filter(Boolean) : [];
-        const title = item.title || "Untitled";
-        const service = item.service || "";
-        const projectTargetId = item.id ? `project-${item.id}` : "";
-        const itemMeta = service;
-        const imageMarkup = imageList.length
-          ? `<div class="mini-gallery-images">${imageList
-              .map((imageSrc, index) => `<img src="${imageSrc}" alt="${title} gallery image ${index + 1}" loading="lazy">`)
-              .join("")}</div>`
-          : "";
-        const textMarkup = `<p class="mini-gallery-text"><strong>${title}</strong>${itemMeta ? `<br>${itemMeta}` : ""}</p>`;
+    const shuffledGalleryItems = shuffleArray(galleryItems).map((item) => {
+      const imageList = Array.isArray(item.images) ? item.images.filter(Boolean) : [];
+      const imageSources = imageList.length ? imageList : [""];
+      const title = item.title || "Untitled";
+      const service = item.service || "";
+      const projectTargetId = item.id ? `project-${item.id}` : "";
+      const siteUrl = item.site || "";
+      const displayUrl = siteUrl
+        .replace(/^https?:\/\/(www\.)?/i, "")
+        .replace(/\/$/, "") || "project site";
 
-        if (projectTargetId) {
-          return `<a class="mini-gallery-item" href="#${projectTargetId}" data-project-target="${projectTargetId}">${imageMarkup}${textMarkup}</a>`;
-        }
+      return {
+        imageSources,
+        title,
+        service,
+        projectTargetId,
+        siteUrl,
+        displayUrl,
+        previewAlt: `${title} full-size preview`
+      };
+    });
 
-        if (item.site) {
-          return `<a class="mini-gallery-item" href="${item.site}" target="_blank">${imageMarkup}${textMarkup}</a>`;
-        }
+    galleryContainer.innerHTML = `
+      <div class="mini-gallery-controls" aria-label="Gallery item controls">
+        <div class="mini-gallery-dots" aria-label="Gallery sequence"></div>
+        <div class="mini-testimonial-arrows">
+          <button type="button" class="mini-testimonial-arrow mini-gallery-prev" aria-label="Show previous gallery item"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
+          <button type="button" class="mini-testimonial-arrow mini-gallery-next" aria-label="Show next gallery item"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
+        </div>
+      </div>
+      <div class="mini-gallery-cards" role="list" aria-live="polite"></div>
+      <div class="mini-gallery-hover-popup" aria-hidden="true"><div class="mini-gallery-hover-popup-images"></div></div>`;
 
-        return `<div class="mini-gallery-item">${imageMarkup}${textMarkup}</div>`;
-      })
-      .join("");
-
-    bindGalleryProjectLinks();
+    setupGalleryPreview(shuffledGalleryItems);
   }
 
   function renderProjects(projectsData) {
@@ -211,9 +492,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectsList.innerHTML = projects
       .map((project) => {
-        const descriptionMarkup = project.description
+        const descriptionMarkup = `<div class="mini-project-description">${project.description
           .map((paragraph) => `<p>${paragraph}</p>`)
-          .join("");
+          .join("")}</div>`;
         const imageMarkup = project.image
           ? `<a class="mini-project-image-link" href="${project.site}" target="_blank"><img src="${project.image}" alt="${project.title} preview image" loading="lazy"></a>`
           : "";

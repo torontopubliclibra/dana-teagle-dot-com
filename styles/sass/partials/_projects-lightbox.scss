@@ -93,14 +93,18 @@ html body.project-lightbox-open {
 .project-lightbox-close,
 .project-lightbox-nav,
 .project-lightbox-link {
-    border: solid 2px rgba($white, 0.65);
     background: rgba($black, 0.95);
     color: $white;
     font-size: 0.8rem;
     line-height: 1;
     text-transform: lowercase;
-    padding: 8px 12px;
+    padding: 12px;
+    padding-bottom: 8px;
     z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .project-lightbox-link-wrap {
@@ -111,10 +115,26 @@ html body.project-lightbox-open {
 .project-lightbox-link {
     display: inline-flex;
     text-decoration: none;
+    border-bottom: solid 4px transparent;
+
+    &:focus, &:active {
+        color: $white;
+    }
 
     &:hover {
-        color: $color1;
+        color: $white;
+        border-color: $color1;
     }
+}
+
+.project-lightbox-close {
+    border-bottom: solid 4px transparent;
+}
+
+.project-lightbox-link img, .project-lightbox-close img {
+    width: 14px;
+    height: 14px;
+    filter: invert(100%) sepia(100%) grayscale(100%) brightness(150%);
 }
 
 .project-lightbox-image-link {
@@ -135,7 +155,8 @@ html body.project-lightbox-open {
         font-style: normal !important;
     }
     &:hover {
-        color: $color1;
+        color: $white;
+        border-color: $color1;
         font-style: italic !important;
     }
 }
@@ -229,7 +250,7 @@ html body.project-lightbox-open {
     height: auto;
     object-fit: contain;
     display: block;
-    border: solid 3px rgba($white, 0.5);
+    border: solid rgba(40, 43, 44, 0.4) 4px;
     background: $black;
 }
 

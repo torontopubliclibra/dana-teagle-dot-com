@@ -621,7 +621,7 @@ const app = {
                     <div class="project-lightbox-panel">
                         <div class="project-lightbox-header">
                             <div class="project-lightbox-link-wrap"></div>
-                            <button type="button" class="project-lightbox-close" aria-label="Close project image">close</button>
+                            <button type="button" class="project-lightbox-close" aria-label="Close project image">close<img src="./assets/icons/fullscreen-exit.svg" alt="close icon"></button>
                         </div><div style="display:flex;flex-direction:column;gap:1rem;">
                         <div class="project-lightbox-title-row">
                             <button type="button" class="project-lightbox-nav project-lightbox-prev" aria-label="Previous project image">&larr;</button>
@@ -692,7 +692,7 @@ const app = {
             lightbox.find('.project-lightbox-description').text(description);
             lightbox.find('.project-lightbox-link-wrap').html(
                 externalLink
-                    ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-link">${externalLink.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0]}</a>`
+                    ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-link">${externalLink.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0]}<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
                     : ''
             );
             lightbox.find('.project-lightbox-prev').prop('disabled', !canGoPrev).attr('aria-disabled', (!canGoPrev).toString());
