@@ -553,6 +553,15 @@ const app = {
             };
             document.activeElement.blur();
         },
+        scrollToElementSmooth(id) {
+            const target = document.getElementById(id);
+            if (!target) {
+                return;
+            }
+
+            const targetTop = Math.max(0, window.pageYOffset + target.getBoundingClientRect().top);
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        },
         scrollUp(direction) {
             let location = "";
             location = $(`#${direction}`).offset().top;
@@ -1070,10 +1079,10 @@ const app = {
                     ? () => document.webkitExitFullscreen()
                     : null;
 
-            const isGalleryFullscreen = document.fullscreenElement === app.elements.galleryContainer
+            const wasGalleryFullscreen = document.fullscreenElement === app.elements.galleryContainer
                 || document.webkitFullscreenElement === app.elements.galleryContainer;
 
-            if (isGalleryFullscreen && exitFullscreen) {
+            if (wasGalleryFullscreen && exitFullscreen) {
                 try {
                     await exitFullscreen();
                 } catch (_error) {
@@ -1083,7 +1092,15 @@ const app = {
 
             app.functions.projectDisplay('All', app.projects.expand);
             app.functions.readMoreByID(id);
-            app.functions.scroll(id);
+
+            if (wasGalleryFullscreen) {
+                // Wait for fullscreen transition/layout to settle, then do one smooth scroll.
+                setTimeout(() => {
+                    app.functions.scrollToElementSmooth(id);
+                }, 220);
+            } else {
+                app.functions.scroll(id);
+            }
         },
         readMoreByID(id) {
             let project = document.getElementById(`${id}`);

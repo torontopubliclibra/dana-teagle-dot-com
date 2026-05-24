@@ -1,0 +1,101 @@
+[
+  {
+    "type": "link",
+    "href": "https://danateagle.com/",
+    "target": "_blank",
+    "title": "Dana Teagle Dot Com",
+    "img": {
+      "src": "../assets/badges/pro-web-design-88x31.gif",
+      "alt": "professional web design 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "#mutual-aid",
+    "title": "Mutual aid links",
+    "img": {
+      "src": "../assets/badges/machine_kills_fascists-88x31.jpg",
+      "alt": "this machine kills fascists 88x31"
+    }
+  },
+  {
+    "type": "button",
+    "id": "bookmark",
+    "img": {
+      "src": "../assets/badges/bookmark-88x31.gif",
+      "alt": "bookmark 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://www.palestinianyouthmovement.com/",
+    "target": "_blank",
+    "title": "Palestinian Youth Movement",
+    "img": {
+      "src": "../assets/badges/free-palestine-88x31.gif",
+      "alt": "free palestine now 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://justicetrans.org/",
+    "target": "_blank",
+    "title": "JusticeTrans",
+    "img": {
+      "src": "../assets/badges/trans-rights-now-88x31.gif",
+      "alt": "trans rights now 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://danateagle.com/",
+    "target": "_blank",
+    "title": "Dana Teagle Dot Com",
+    "img": {
+      "src": "../assets/badges/hand-coded-88x31.gif",
+      "alt": "hand-coded 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://www.retrogames.cz/play_882-SNES.php?emulator=EJS",
+    "target": "_blank",
+    "title": "Earthbound emulator",
+    "img": {
+      "src": "../assets/badges/earthbound-88x31.gif",
+      "alt": "earthbound 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://lexfeathers.ca",
+    "target": "_blank",
+    "title": "Lex Feathers",
+    "img": {
+      "src": "../assets/badges/lexfeathers-88x31.gif",
+      "alt": "lex feathers 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://ky.fyi",
+    "target": "_blank",
+    "title": "Ky Decker",
+    "img": {
+      "src": "../assets/badges/ky-fyi-88x31.png",
+      "alt": "ky fyi 88x31"
+    }
+  },
+  {
+    "type": "link",
+    "href": "https://torontopubliclibra.com",
+    "target": "_blank",
+    "title": "the toronto public libra",
+    "img": {
+      "src": "https://danateagle.com/assets/badges/tpl-88x31.gif",
+      "width": "88px",
+      "height": "31px",
+      "alt": "toronto public libra 88x31"
+    }
+  }
+]

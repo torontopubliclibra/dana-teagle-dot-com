@@ -2,7 +2,9 @@ const tpl = {
     tplCategories: $(".tpl-categories"),
     errorMessage: $(".js-disabled-tpl"),
     tplLinks: $(".tpl-links"),
+    badgesContainer: $("#tpl-badges"),
     links: {},
+    badges: [],
     functions: {
         setupRustyPixelation() {
             const rustyImages = document.querySelectorAll("html.tpl .tpl-landing img.rusty, html.tpl main.tpl-subpage img.rusty");
@@ -144,6 +146,16 @@ const tpl = {
             tpl.tplLinks.html(linkMarkup);
             bindCategoryScrollLinks();
         },
+        badgesDisplay() {
+            if (!tpl.badgesContainer.length || !tpl.badges.length) {
+                return;
+            }
+
+            const shuffledBadges = prioritizeAndShuffleBadges(tpl.badges);
+            const badgesMarkup = shuffledBadges.map(buildBadgeMarkup).join("");
+            tpl.badgesContainer.html(badgesMarkup);
+            bindBookmarkButton();
+        },
     },
     init() {
         fetch("../data/links.json")
@@ -160,6 +172,18 @@ const tpl = {
                 tpl.functions.linkDisplay();
             })
             .catch(error => console.log(error));
+
+        if (tpl.badgesContainer.length) {
+            fetch("../data/badges.json")
+                .then(response => response.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        tpl.badges = data;
+                        tpl.functions.badgesDisplay();
+                    }
+                })
+                .catch(error => console.log(error));
+        }
     }
 };
 
@@ -200,6 +224,78 @@ function bindCategoryScrollLinks() {
             e.preventDefault();
             target.scrollIntoView({ behavior: "smooth" });
         }
+    });
+}
+
+function shuffleArray(array) {
+    const shuffled = [...array];
+
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[i]];
+    }
+
+    return shuffled;
+}
+
+function prioritizeAndShuffleBadges(badges) {
+    const pinnedPatterns = ["tpl-88x31", "pro-web-design-88x31"];
+    const pinnedBadges = [];
+    const remainingBadges = [...badges];
+
+    pinnedPatterns.forEach((pattern) => {
+        const pinnedIndex = remainingBadges.findIndex((badge) => {
+            const imgSrc = badge && badge.img && badge.img.src ? badge.img.src : "";
+            return imgSrc.includes(pattern);
+        });
+
+        if (pinnedIndex !== -1) {
+            pinnedBadges.push(remainingBadges[pinnedIndex]);
+            remainingBadges.splice(pinnedIndex, 1);
+        }
+    });
+
+    return [...pinnedBadges, ...shuffleArray(remainingBadges)];
+}
+
+function buildBadgeMarkup(badge) {
+    const imgWidth = badge.img && badge.img.width ? ` width="${badge.img.width}"` : "";
+    const imgHeight = badge.img && badge.img.height ? ` height="${badge.img.height}"` : "";
+    const imgMarkup = `<img src="${badge.img.src}" alt="${badge.img.alt}"${imgWidth}${imgHeight}>`;
+
+    if (badge.type === "button") {
+        const buttonId = badge.id ? ` id="${badge.id}"` : "";
+        const buttonTitle = badge.title ? ` title="${badge.title}"` : "";
+        return `<button${buttonId}${buttonTitle}>${imgMarkup}</button>`;
+    }
+
+    const href = badge.href || "#";
+    const target = badge.target ? ` target="${badge.target}"` : "";
+    const title = badge.title ? ` title="${badge.title}"` : "";
+
+    return `<a href="${href}"${target}${title}>${imgMarkup}</a>`;
+}
+
+function bindBookmarkButton() {
+    const bookmarkButton = document.getElementById("bookmark");
+
+    if (!bookmarkButton) {
+        return;
+    }
+
+    bookmarkButton.addEventListener("click", function() {
+        if (window.sidebar && window.sidebar.addPanel) {
+            window.sidebar.addPanel(document.title, window.location.href, "");
+        } else if (window.external && ("AddFavorite" in window.external)) {
+            window.external.AddFavorite(location.href, document.title);
+        } else if (window.opera && window.print) {
+            this.title = document.title;
+            return true;
+        } else {
+            alert("Press " + (navigator.userAgent.toLowerCase().indexOf("mac") !== -1 ? "Command/Cmd" : "CTRL") + " + D to bookmark this page.");
+        }
+
+        return false;
     });
 }
 

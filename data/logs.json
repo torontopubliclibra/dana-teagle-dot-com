@@ -1,6 +1,7 @@
 {
     "2026": {
         "movies": [
+            {"log": "My Darling Clementine", "year": "1946", "rewatch": false, "link": "https://letterboxd.com/film/my-darling-clementine/", "poster": "https://a.ltrbxd.com/resized/sm/upload/a9/pr/u0/bt/1y0DvLUCEVVnregAY4pdAkhCGwD-0-2000-0-3000-crop.jpg?v=bd5f4d94e8"},
             {"log": "Testament", "year": "1983", "rewatch": false, "link": "https://letterboxd.com/film/testament/", "poster": "https://a.ltrbxd.com/resized/film-poster/3/8/5/1/9/38519-testament-0-2000-0-3000-crop.jpg?v=024025073e"},
             {"log": "Return of the Jedi", "year": "1983", "rewatch": true, "link": "https://letterboxd.com/film/return-of-the-jedi/", "poster": "https://a.ltrbxd.com/resized/sm/upload/88/lu/ak/8v/5wDrNqePjb5SOucrWQwiFu340vv-0-2000-0-3000-crop.jpg?v=acc9d9c27b"},
             {"log": "Turning Red", "year": "2022", "rewatch": true, "link": "https://letterboxd.com/film/turning-red/", "poster": "https://a.ltrbxd.com/resized/film-poster/4/3/8/7/2/7/438727-turning-red-0-2000-0-3000-crop.jpg?v=85497b8090"},
@@ -87,12 +88,12 @@
             {"log": "Spencer", "year": "2021", "rewatch": true, "link": "https://letterboxd.com/film/spencer-2021/"}
         ],
         "tv": [
+            {"log": "daria", "season": "1", "year": "1997", "rewatch": true, "poster": "https://artworks.thetvdb.com/banners/posters/77996-4.jpg", "link": "https://thetvdb.com/series/daria"},
+            {"log": "The Way Out (UK)", "season": "1", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-way-out-uk", "poster": "https://artworks.thetvdb.com/banners/v4/series/476020/posters/6a047b4c66139.jpg"},
             {"log": "The Other Bennet Sister", "season": "1", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-other-bennet-sister", "poster": "https://artworks.thetvdb.com/banners/v4/series/455324/posters/69ce529ba4216.jpg"},
             {"log": "Bojack Horseman", "season": "1", "year": "2014", "rewatch": true, "link": "https://thetvdb.com/series/bojack-horseman", "poster": "https://artworks.thetvdb.com/banners/posters/282254-6.jpg"},
             {"log": "columbo", "season": "1", "year": "1972", "rewatch": false, "link": "https://thetvdb.com/series/columbo", "poster": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmediaproxy.tvtropes.org%2Fwidth%2F1200%2Fhttps%3A%2F%2Fstatic.tvtropes.org%2Fpmwiki%2Fpub%2Fimages%2Fcolumbo_1.jpg&f=1&nofb=1&ipt=cfe2cd3b73373fdeac3c1a92312507a815ccb7a6debaddef5c487a06e10942a2"},
             {"log": "daredevil: born again", "season": "2", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/v4/series/422712/posters/6978fefe94ea5.jpg", "link": "https://thetvdb.com/series/daredevil-born-again"},
-            {"log": "taskmaster", "season": "21", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/posters/5af6cb30c8ef7.jpg", "link": "https://thetvdb.com/series/taskmaster"},
-            {"log": "daria", "season": "1", "year": "1997", "rewatch": true, "poster": "https://artworks.thetvdb.com/banners/posters/77996-4.jpg", "link": "https://thetvdb.com/series/daria"},
             {"log": "the pitt", "season": "2", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-pitt"},
             {"log": "last one laughing uk", "season": "2", "year": "2026", "rewatch": false, "poster": "https://artworks.thetvdb.com/banners/v4/series/455162/posters/69b3121c046a7.jpg"},
             {"log": "firefly", "season": "1", "year": "2002", "rewatch": true},
@@ -108,7 +109,7 @@
             {"log": "love is blind", "season": "10", "year": "2026", "rewatch": false},
             {"log": "bridgerton", "season": "4", "year": "2026", "rewatch": false},
             {"log": "wonder man", "year": "2026", "rewatch": false},
-            {"log": "the traitors u.s.", "season": "4", "year": "2026", "rewatch": false},
+            {"log": "the traitors u.s.", "season": "4", "year": "2026", "rewatch": false, "link": "https://thetvdb.com/series/the-traitors-us", "poster": "https://artworks.thetvdb.com/banners/v4/series/428163/posters/69606b34de7e4.jpg"},
             {"log": "a knight of the seven kingdoms", "season": "1", "year": "2026", "rewatch": false},
             {"log": "the traitors u.k.", "season": "4", "year": "2026", "rewatch": false},
             {"log": "dept q.", "season": "1", "year": "2025", "rewatch": false},

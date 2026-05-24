@@ -40,6 +40,14 @@
         }
     },
     "social profiles": {
+        "Instagram (I)": {
+            "link": "/tpl-insta",
+            "description": "@torontopubliclibra"
+        },
+        "Instagram (II)": {
+            "link": "/dt-insta",
+            "description": "@danateagledotcom"
+        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": "@torontolibra"
@@ -59,14 +67,6 @@
         "Discogs": {
             "link": "/discogs",
             "description": "@torontopubliclibra"
-        },
-        "Instagram (I)": {
-            "link": "/tpl-insta",
-            "description": "@torontopubliclibra"
-        },
-        "Instagram (II)": {
-            "link": "/dt-insta",
-            "description": "@danateagledotcom"
         }
     },
     "mutual aid": {

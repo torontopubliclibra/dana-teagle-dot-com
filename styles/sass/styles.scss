@@ -823,6 +823,7 @@ header {
             margin: 0;
             border-width: 0;
             box-shadow: none;
+            background: repeating-linear-gradient(-75deg, rgba(122, 145, 177, 0.75), rgba(122, 145, 177, 0.75) 1px, #282b2c 1px, #282b2c 2px);
 
             .gallery-fullscreen-controls {
                 position: fixed;

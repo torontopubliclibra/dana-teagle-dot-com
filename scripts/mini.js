@@ -203,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hoverPopup = galleryContainer.querySelector(".mini-gallery-hover-popup");
     const hoverPopupImages = galleryContainer.querySelector(".mini-gallery-hover-popup-images");
     const dotsContainer = galleryContainer.querySelector(".mini-gallery-dots");
+    const counter = galleryContainer.querySelector(".mini-gallery-counter");
     const prevButton = galleryContainer.querySelector(".mini-gallery-prev");
     const nextButton = galleryContainer.querySelector(".mini-gallery-next");
 
@@ -210,7 +211,17 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const getVisibleCount = () => (window.innerWidth <= 900 ? 1 : 3);
+    const getVisibleCount = () => {
+      if (window.innerWidth <= 900) {
+        return 1;
+      }
+
+      if (window.innerWidth <= 1200) {
+        return 2;
+      }
+
+      return 3;
+    };
     let activeIndex = 0;
     let activeHoverItemIndex = -1;
 
@@ -252,12 +263,21 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const syncActiveDot = () => {
+      const total = galleryItems.length;
+      const visibleCount = Math.min(getVisibleCount(), total);
+      const visibleIndexes = new Set(
+        Array.from({ length: visibleCount }, (_, offset) => (activeIndex + offset) % total)
+      );
       const dots = Array.from(dotsContainer.querySelectorAll(".mini-gallery-dot"));
       dots.forEach((dot, index) => {
-        const isActive = index === activeIndex;
+        const isActive = visibleIndexes.has(index);
         dot.classList.toggle("is-active", isActive);
         dot.setAttribute("aria-current", isActive ? "true" : "false");
       });
+
+      if (counter) {
+        counter.textContent = `${activeIndex + 1}/${galleryItems.length}`;
+      }
     };
 
     const setActiveIndex = (newIndex) => {
@@ -406,7 +426,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cardsContainer.addEventListener("mouseleave", hideHoverPopup);
 
-    window.addEventListener("resize", renderVisibleCards);
+    window.addEventListener("resize", () => {
+      renderVisibleCards();
+      syncActiveDot();
+    });
 
     renderDots();
     setActiveIndex(0);
@@ -428,10 +451,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const galleryItems = Object.entries(galleryData || {})
-      .filter(([name]) => {
-        const key = name.trim();
-        return !key.includes("-2") && !key.includes("-3") && !/\s[23]$/.test(key);
-      })
+      // .filter(([name]) => {
+      //   const key = name.trim();
+      //   return !key.includes("-2") && !key.includes("-3") && !/\s[23]$/.test(key);
+      // })
       .map(([, item]) => item);
     const shuffledGalleryItems = shuffleArray(galleryItems).map((item) => {
       const imageList = Array.isArray(item.images) ? item.images.filter(Boolean) : [];
@@ -460,6 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="mini-gallery-dots" aria-label="Gallery sequence"></div>
         <div class="mini-testimonial-arrows">
           <button type="button" class="mini-testimonial-arrow mini-gallery-prev" aria-label="Show previous gallery item"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
+          <div class="mini-gallery-counter" aria-live="polite" aria-atomic="true"></div>
           <button type="button" class="mini-testimonial-arrow mini-gallery-next" aria-label="Show next gallery item"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
         </div>
       </div>
@@ -526,6 +550,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="mini-testimonial-dots" aria-label="Testimonial sequence"></div>
           <div class="mini-testimonial-arrows">
             <button type="button" class="mini-testimonial-arrow mini-testimonial-prev" aria-label="Show previous testimonial"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
+            <div class="mini-testimonial-counter" aria-live="polite" aria-atomic="true"></div>
             <button type="button" class="mini-testimonial-arrow mini-testimonial-next" aria-label="Show next testimonial"><img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true"></button>
           </div>
         </div>
@@ -535,6 +560,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slidesContainer = testimonialsContainer.querySelector(".mini-testimonial-slides");
     const dotsContainer = testimonialsContainer.querySelector(".mini-testimonial-dots");
+    const counter = testimonialsContainer.querySelector(".mini-testimonial-counter");
     const prevButton = testimonialsContainer.querySelector(".mini-testimonial-prev");
     const nextButton = testimonialsContainer.querySelector(".mini-testimonial-next");
     if (!slidesContainer || !dotsContainer || !prevButton || !nextButton) {
@@ -572,6 +598,10 @@ document.addEventListener("DOMContentLoaded", () => {
         dot.classList.toggle("is-active", isActive);
         dot.setAttribute("aria-current", isActive ? "true" : "false");
       });
+
+      if (counter) {
+        counter.textContent = `${activeIndex + 1}/${slides.length}`;
+      }
     };
 
     prevButton.addEventListener("click", () => {

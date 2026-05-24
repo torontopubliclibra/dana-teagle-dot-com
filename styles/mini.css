@@ -351,6 +351,14 @@ blockquote {
   gap: 8px;
 }
 
+.mini-testimonial-counter {
+  display: none;
+  color: #99b1d3;
+  font-size: 0.95rem;
+  min-width: 2.5ch;
+  text-align: center;
+}
+
 .mini-testimonial-dot {
   width: 8px;
   height: 8px;
@@ -501,6 +509,14 @@ body:has(header .title:focus-visible) .basic-info .name {
   display: flex;
   justify-content: flex-start;
   gap: 8px;
+}
+
+.mini-gallery-counter {
+  display: none;
+  color: #99b1d3;
+  font-size: 0.95rem;
+  min-width: 2.5ch;
+  text-align: center;
 }
 
 .mini-gallery-dot {
@@ -791,6 +807,12 @@ body:has(header .title:focus-visible) .basic-info .name {
   }
 }
 
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .mini-gallery-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media only screen and (max-width: 900px) {
   header nav {
     font-size: 14px;
@@ -831,6 +853,29 @@ body:has(header .title:focus-visible) .basic-info .name {
 
   .mini-testimonials-carousel {
     gap: 8px;
+  }
+
+  .mini-testimonial-dots,
+  .mini-gallery-dots {
+    display: none;
+  }
+
+  .mini-testimonial-counter,
+  .mini-gallery-counter {
+    display: block;
+  }
+
+  .mini-testimonial-controls,
+  .mini-gallery-controls {
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mini-testimonial-arrows {
+    min-width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .mini-testimonial-arrow {
