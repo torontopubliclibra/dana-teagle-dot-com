@@ -1,6 +1,7 @@
 {
     "2026": {
         "movies": [
+            {"log": "I Love Boosters", "year": "2026", "rewatch": false, "link": "https://letterboxd.com/film/i-love-boosters/", "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/0/8/1/0/1110810-i-love-boosters-0-2000-0-3000-crop.jpg?v=a760551168"},
             {"log": "My Darling Clementine", "year": "1946", "rewatch": false, "link": "https://letterboxd.com/film/my-darling-clementine/", "poster": "https://a.ltrbxd.com/resized/sm/upload/a9/pr/u0/bt/1y0DvLUCEVVnregAY4pdAkhCGwD-0-2000-0-3000-crop.jpg?v=bd5f4d94e8"},
             {"log": "Testament", "year": "1983", "rewatch": false, "link": "https://letterboxd.com/film/testament/", "poster": "https://a.ltrbxd.com/resized/film-poster/3/8/5/1/9/38519-testament-0-2000-0-3000-crop.jpg?v=024025073e"},
             {"log": "Return of the Jedi", "year": "1983", "rewatch": true, "link": "https://letterboxd.com/film/return-of-the-jedi/", "poster": "https://a.ltrbxd.com/resized/sm/upload/88/lu/ak/8v/5wDrNqePjb5SOucrWQwiFu340vv-0-2000-0-3000-crop.jpg?v=acc9d9c27b"},
