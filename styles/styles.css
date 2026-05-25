@@ -4251,6 +4251,7 @@ header .social:hover {
   color: #282b2c;
 }
 header .social:focus, header .social:active {
+  background-color: rgba(243, 232, 233, 0.5);
   border-bottom: solid #B57E9B 4px;
 }
 @media only screen and (max-width: 970px) {

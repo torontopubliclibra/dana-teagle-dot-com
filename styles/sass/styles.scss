@@ -482,6 +482,7 @@ header {
         }
 
         &:focus, &:active {
+            background-color: rgba($white, 0.5);
             border-bottom: solid $color2 4px;
         }
 
