@@ -500,10 +500,14 @@ header {
                 height: 25px;
             }
 
-            &:hover, &:focus, &:active {
+            &:hover {
                 background-color: $white;
                 border-bottom: solid $color2 4px;
                 margin-bottom: 10px;
+            }
+
+            &:focus, &:active {
+                border-bottom: solid $color2 4px;
             }
         }
         

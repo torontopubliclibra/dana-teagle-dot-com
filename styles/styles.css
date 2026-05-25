@@ -4269,10 +4269,13 @@ header .social:hover, header .social:focus, header .social:active {
   header .social img {
     height: 25px;
   }
-  header .social:hover, header .social:focus, header .social:active {
+  header .social:hover {
     background-color: #f3e8e9;
     border-bottom: solid #B57E9B 4px;
     margin-bottom: 10px;
+  }
+  header .social:focus, header .social:active {
+    border-bottom: solid #B57E9B 4px;
   }
 }
 header nav {
