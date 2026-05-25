@@ -1,4 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function setupThemeToggle() {
+    const body = document.body;
+    const toggle = document.getElementById("darkmode-toggle");
+    const themeMeta = document.querySelector("meta[name='theme-color']");
+    if (!body || !toggle) {
+      return;
+    }
+
+    const toggleIcon = toggle.querySelector("img");
+    const DARK_THEME_COLOR = "#252133";
+    const LIGHT_THEME_COLOR = "#f8f3ef";
+
+    const setTheme = (isDarkMode) => {
+      body.classList.toggle("light-mode", !isDarkMode);
+
+      if (toggleIcon) {
+        toggleIcon.src = isDarkMode ? "./assets/icons/cloud.svg" : "./assets/icons/dark.svg";
+        toggleIcon.alt = isDarkMode ? "Light mode icon" : "Dark mode icon";
+      }
+
+      toggle.setAttribute("aria-label", isDarkMode ? "Switch to light mode" : "Switch to dark mode");
+      if (themeMeta) {
+        themeMeta.setAttribute("content", isDarkMode ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+      }
+
+      localStorage.setItem("dark-mode", isDarkMode ? "true" : "false");
+    };
+
+    const storedPreference = localStorage.getItem("dark-mode");
+    const isDarkMode = storedPreference !== "false";
+    setTheme(isDarkMode);
+
+    toggle.addEventListener("click", () => {
+      const currentlyDark = !body.classList.contains("light-mode");
+      setTheme(!currentlyDark);
+    });
+  }
+
   function setupNavSectionHighlight() {
     const navLinks = Array.from(document.querySelectorAll("header nav a[href^='#']"));
     if (!navLinks.length) {
@@ -823,6 +861,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   initContent();
+  setupThemeToggle();
   setupHeadshotPixelation();
   setupScrollTopButton();
   setupNavSectionHighlight();

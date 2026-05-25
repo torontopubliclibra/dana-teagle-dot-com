@@ -14,8 +14,21 @@ article, aside, footer, header, nav, section {
 }
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 1.75rem;
+  padding: 0 calc(100vw - 1275px);
+}
+
+@media only screen and (max-width: 1200px) {
+  h1 {
+    padding: 0 5vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    padding: 0;
+  }
 }
 
 .title {
@@ -256,11 +269,6 @@ h1, h2, h3 {
   }
 }
 
-h1 {
-  font-size: 1.75rem;
-  padding: 0 calc(100vw - 1275px);
-}
-
 h2 {
   font-size: 1.25rem;
   margin-top: -20px;
@@ -428,10 +436,19 @@ nav {
   padding: 0 calc(100vw - 1275px);
 }
 
+@media only screen and (max-width: 1200px) {
+  nav {
+    padding: 0 5vw;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   header {
     width: 85vw;
     max-width: 85vw;
+  }
+  nav {
+    padding: 0;
   }
 }
 
@@ -939,4 +956,146 @@ body:has(header .title:focus-visible) .basic-info .name {
   .nav-sep-about {
     display: none;
   } */
+}
+
+.theme-toggle {
+  width: 26px;
+  height: 26px;
+  border: solid #99b1d3 1px;
+  background: rgba(37, 33, 51, 0.65);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 0;
+  margin-bottom: 3px;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: #B57E9B;
+}
+
+.theme-toggle img {
+  width: 15px;
+  height: 15px;
+  filter: invert(94%) sepia(14%) saturate(138%) hue-rotate(290deg) brightness(107%) contrast(92%);
+}
+
+body.light-mode {
+  background-color: #f8f3ef;
+  background-image: none !important;
+  color: #2d2234;
+}
+
+body.light-mode header {
+  background-color: #f8f3ef;
+  background-image: none !important;
+}
+
+body.light-mode a {
+  color: #2d2234;
+}
+
+body.light-mode a:hover,
+body.light-mode header nav a.is-active {
+  color: #456a93;
+}
+
+body.light-mode cite,
+body.light-mode cite a {
+  color: #B57E9B;
+}
+
+body.light-mode hr {
+  border-color: #5e877e;
+}
+
+body.light-mode hr.accent,
+body.light-mode hr.highlight {
+  border-color: #B57E9B;
+}
+
+body.light-mode hr.blue,
+body.light-mode hr.blue-dash {
+  border-color: #456a93;
+}
+
+body.light-mode .basic-info .item,
+body.light-mode .mini-gallery-link,
+body.light-mode .mini-project-link,
+body.light-mode .mini-testimonial-counter,
+body.light-mode .mini-gallery-counter,
+body.light-mode cite,
+body.light-mode cite a {
+  color: #2d2234;
+}
+
+body.light-mode .basic-info .headshot-link {
+  border-color: rgba(69, 106, 147, 0.35);
+}
+
+body.light-mode .mini-gallery-dot,
+body.light-mode .mini-testimonial-dot {
+  border-color: #456a93;
+}
+
+body.light-mode .mini-gallery-dot.is-active,
+body.light-mode .mini-testimonial-dot.is-active {
+  background: #456a93;
+}
+
+body.light-mode .mini-gallery-card,
+body.light-mode .mini-project-item {
+  border-color: rgba(69, 106, 147, 0.35);
+  background: rgba(255, 255, 255, 0.74);
+}
+
+body.light-mode .mini-gallery-preview-image,
+body.light-mode .mini-gallery-hover-popup-image,
+body.light-mode .mini-project-content img {
+  border-color: rgba(69, 106, 147, 0.35);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .mini-gallery-hover-popup {
+  border-color: rgba(69, 106, 147, 0.45);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+body.light-mode .mini-testimonial-arrow {
+  border-color: #456a93;
+}
+
+body.light-mode .mini-testimonial-arrow:hover,
+body.light-mode .mini-testimonial-arrow:focus-visible {
+  border-color: #8f4f71;
+}
+
+body.light-mode .mini-testimonial-arrow img,
+body.light-mode .mini-scroll-top img,
+body.light-mode .mini-project-item[open] summary::before {
+  filter: invert(39%) sepia(14%) saturate(1211%) hue-rotate(172deg) brightness(89%) contrast(90%);
+}
+
+body.light-mode .theme-toggle {
+  border-color: #8f4f71;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body.light-mode .theme-toggle:hover,
+body.light-mode .theme-toggle:focus-visible {
+  border-color: #456a93;
+}
+
+body.light-mode .theme-toggle img {
+  filter: invert(11%) sepia(17%) saturate(1327%) hue-rotate(247deg) brightness(94%) contrast(88%);
+}
+
+@media only screen and (min-width: 901px) {
+  body.light-mode .mini-scroll-top {
+    border-color: #456a93;
+    background: rgba(255, 255, 255, 0.9);
+  }
 }

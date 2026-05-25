@@ -64,6 +64,7 @@ const app = {
         lastScrollPosition: 0,
         items: [],
         index: -1,
+        openedIndex: -1,
         transitionDirection: '',
         touch: {
             startX: 0,
@@ -714,6 +715,7 @@ const app = {
 
             app.projectLightbox.items = images;
             app.projectLightbox.index = index;
+            app.projectLightbox.openedIndex = index;
             app.projectLightbox.transitionDirection = '';
             app.projectLightbox.lastActiveElement = document.activeElement;
             app.projectLightbox.lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
@@ -728,6 +730,13 @@ const app = {
             const lightbox = app.projectLightbox.element;
             if (!lightbox || !lightbox.hasClass('is-open')) return;
 
+            const currentItem = (app.projectLightbox.index >= 0 && app.projectLightbox.index < app.projectLightbox.items.length)
+                ? app.projectLightbox.items[app.projectLightbox.index]
+                : null;
+            const shouldScrollToCurrentItem = Boolean(currentItem)
+                && app.projectLightbox.openedIndex >= 0
+                && app.projectLightbox.index !== app.projectLightbox.openedIndex;
+
             const restoreY = app.projectLightbox.scrollLock.active
                 ? app.projectLightbox.scrollLock.y
                 : app.projectLightbox.lastScrollPosition;
@@ -738,6 +747,7 @@ const app = {
             lightbox.find('.project-lightbox-title, .project-lightbox-description').text('');
             app.projectLightbox.items = [];
             app.projectLightbox.index = -1;
+            app.projectLightbox.openedIndex = -1;
             app.projectLightbox.transitionDirection = '';
             app.functions.resetProjectLightboxTouchState();
             $('body').removeClass('project-lightbox-open');
@@ -749,6 +759,13 @@ const app = {
                 } catch (_error) {
                     app.projectLightbox.lastActiveElement.focus();
                 }
+            }
+
+            if (shouldScrollToCurrentItem && typeof currentItem.scrollIntoView === 'function') {
+                requestAnimationFrame(() => {
+                    currentItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+                return;
             }
 
             window.scrollTo(0, restoreY);
