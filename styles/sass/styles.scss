@@ -1381,6 +1381,10 @@ header {
                 max-height: 160px;
                 transition: opacity 0.5s;
                 display: block;
+
+                @media only screen and (max-width: $tablet) {
+                    max-height: 100px;
+                }
             }
 
             .headshot-wrapper {

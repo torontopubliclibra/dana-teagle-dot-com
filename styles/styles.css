@@ -5071,6 +5071,11 @@ header .scroll-title {
   transition: opacity 0.5s;
   display: block;
 }
+@media only screen and (max-width: 970px) {
+  #about .about-content .basic-info .headshot {
+    max-height: 100px;
+  }
+}
 #about .about-content .basic-info .headshot-wrapper {
   display: flex;
   flex-direction: column;
