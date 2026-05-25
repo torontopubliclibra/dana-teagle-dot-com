@@ -20,6 +20,9 @@
     <link rel="icon" href="./assets/icons/favicon.ico" type="image/icon type"/>
     <meta property="og:image" content="./assets/meta-banner.png" />
     <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./assets/icons/cloud.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/dark.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./assets/icons/alt.png" as="image" type="image/png" />
     <link rel="preload" href="./assets/icons/arrow-down.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/arrow-up.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="./assets/icons/checkbox.svg" as="image" type="image/svg+xml" />
@@ -49,13 +52,6 @@
   </script>
   <body class="dark-mode">
     <header id="home">
-      <div class="toggles">
-        <p><span class="mr"></span>Toggle on/off<span class="pr">:</span><span class="mr"></span></p>
-        <ul>
-          <li><button class="button selected" id="animations-toggle" onclick="app.functions.toggleAnimations()"><img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations</button></li>
-          <li><button class="button selected" id="darkmode-toggle" onclick="app.functions.toggleDarkMode()"><img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark mode</button></li>
-        </ul>
-      </div>
       <div class="wrapper"> 
         <nav>
           <div class="mobile-menu">
@@ -75,7 +71,12 @@
               <a href="/dt-insta" target="_blank" title="dana teagle dot com on Instagram" class="button social"><img src="./assets/icons/instagram.svg" alt="Instagram icon"></a>
             </li>
             <li class="socials right">
-              <a href="/mini" target="_blank" title="dana teagle dot com mini site" class="button social">Mini site</a>
+              <button class="button social" id="darkmode-toggle" onclick="app.functions.toggleDarkMode()">
+                <img src="./assets/icons/cloud.svg" alt="Light mode icon">
+              </button>
+              <a href="/alt" target="_blank" title="dana teagle dot com alt site" class="button social">
+                <img src="./assets/icons/alt.png" alt="Alternate mode icon">
+              </a>
             </li>
           </ul>
         </nav>
@@ -135,7 +136,7 @@
         </div>
         <div class="gallery-container">
           <!-- javascript fallback error message -->
-          <p class="js-disabled-gallery">Sorry, but the gallery section isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason. Try the <a href="/mini">mini site</a> or check back later.</p>
+          <p class="js-disabled-gallery">Sorry, but the gallery section isn't working right now. It uses jQuery to inject content, so if you have JavaScript disabled in your browser, that's probably the reason. Try the <a href="/alt">alt site</a> or check back later.</p>
           <!-- animated gallery carousel (injected by jquery) -->
           <div class="gallery-content">
           </div>
@@ -204,7 +205,7 @@
         <p class="credit">
           Website designed and developed by Dana Rosamund Teagle in Toronto.
           <br/><br/>
-          <a href="mailto:contact@danateagle.com">Contact</a> | <a href="/sitemap.xml" target="_blank" title="This site's XML sitemap">Sitemap</a> | <a href="/mini" target="_blank" title="A mini version of this site">Mini site</a>
+          <a href="mailto:contact@danateagle.com">Contact</a> | <a href="/sitemap.xml" target="_blank" title="This site's XML sitemap">Sitemap</a> | <a href="/alt" target="_blank" title="An alt version of this site">Alt site</a>
         </p>
       </div>
     </footer>

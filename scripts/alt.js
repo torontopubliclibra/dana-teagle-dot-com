@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const getVisibleCount = () => {
       if (window.innerWidth <= 900) {
-        return 1;
+        return 2;
       }
 
       if (window.innerWidth <= 1200) {

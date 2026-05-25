@@ -24,7 +24,6 @@ const app = {
         scrollTitle: $(".scroll-title"),
         scrollTopButton: $(".scroll-to-top"),
         darkModeToggle: $("#darkmode-toggle"),
-        animationsToggle: $("#animations-toggle"),
         projectsContainer: $(".projects-container"),
         projectsNav: $(".projects-controls-accordion .projects-nav"),
         projectDescription: $(".project-description"),
@@ -42,7 +41,6 @@ const app = {
         projectsAccordionPanel: document.querySelector(".projects-controls-accordion .accordion-panel")
     },
     toggles: {
-        animations: true,
         darkMode: true,
     },
     projects: {
@@ -81,32 +79,14 @@ const app = {
         }
     },
     functions: {
-        toggleAnimations() {
-            app.elements.animationsToggle.toggleClass('selected');
-            app.toggles.animations = !app.toggles.animations;
-            if (app.toggles.animations === false) {
-                app.elements.header.css('animation', 'none');
-                app.elements.scrollDownButton.css('animation', 'none');
-                app.elements.scrollDownButton.css('transform', 'translate(-50%, 0px)');
-                app.functions.galleryPause('pause');
-                app.elements.animationsToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Animations');
-            } else {
-                app.elements.header.css('animation', '30s infinite ease-in-out gradient');
-                app.elements.scrollDownButton.css('transform', 'none');
-                app.elements.scrollDownButton.css('animation', '4s infinite ease-in-out pulse');
-                app.functions.galleryPause('unpause');
-                app.elements.animationsToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Animations');
-            }
-            localStorage['animations'] = `${app.toggles.animations}`;
-        },
         toggleDarkMode() {
             app.elements.body.toggleClass("dark-mode");
             app.elements.darkModeToggle.toggleClass('selected');
             app.toggles.darkMode = !app.toggles.darkMode;
             if (app.toggles.darkMode === true) {
-                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
+                app.elements.darkModeToggle.html('<img src="./assets/icons/cloud.svg" alt="Light mode icon">');
             } else {
-                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox-blank.svg" alt="Unchecked checkbox">Dark mode');
+                app.elements.darkModeToggle.html('<img src="./assets/icons/dark.svg" alt="Dark mode icon">');
             }
             localStorage['dark-mode'] = `${app.toggles.darkMode}`;
         },
@@ -1310,9 +1290,6 @@ const app = {
             .catch(error => console.log(error));
         }
         app.events();
-        if (localStorage['animations'] === 'false') {
-            app.functions.toggleAnimations();
-        }
         if (localStorage['dark-mode'] === 'false') {
             if (app.toggles.darkMode === true) {
                 app.functions.toggleDarkMode();
@@ -1322,7 +1299,7 @@ const app = {
                 app.elements.body.addClass('dark-mode');
                 app.elements.darkModeToggle.addClass('selected');
                 app.toggles.darkMode = true;
-                app.elements.darkModeToggle.html('<img src="./assets/icons/checkbox.svg" alt="Checked checkbox">Dark Mode');
+                app.elements.darkModeToggle.html('Dark Mode <img src="./assets/icons/checkbox.svg" alt="Checked checkbox">');
             }
         }
         setTimeout(() => {

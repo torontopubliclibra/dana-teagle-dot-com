@@ -32,7 +32,7 @@
 
 # Misc
 /sitemap /sitemap.xml
-/alt /tpl
+/mini /alt
 /tpl/logs
 /about /#about
 /gallery /#gallery

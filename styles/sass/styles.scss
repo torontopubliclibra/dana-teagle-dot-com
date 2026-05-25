@@ -445,22 +445,28 @@ header {
 
         @media only screen and (max-width: $tablet) {
             gap: 20px;
-            right: 20px;
-            top: 570px;
+            right: 0;
+            left: 0;
+            width: 100%;
+            top: 80px;
             height: 70px;
-
-            &.left {
-                left: 20px;
-            }
         }
         @media only screen and (max-width: $mobile) {
-            top: 580px;
+            top: 75px;
+
+            &.left {
+                top: 155px;
+            }
         }
     }
 
     .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
         padding: 15px;
-        padding-bottom: 10px;
+        padding-bottom: 12px;
         border-bottom: solid $color2 4px;
         background-color: rgba($white, 0.5);
         font-size: 0.9rem;
@@ -472,7 +478,7 @@ header {
         &:hover, &:focus {
             background-color: rgba($white, 0.5);
             border-bottom: solid $color3 4px;
-            color: $white;
+            color: $black;
         }
 
         @media only screen and (max-width: $tablet) {
@@ -601,7 +607,7 @@ header {
             }
 
             @media only screen and (max-width: $mobile) {
-                padding-top: 200px;
+                padding-top: 235px;
             }
         }
         // nav list when active
@@ -1880,8 +1886,10 @@ body.dark-mode {
         h1, nav ul li a {
             color: $white;
         }
-        nav ul li.socials a {
+        nav ul li.socials a,
+        nav ul li.socials button {
             background-color: $black;
+            color: $white;
 
             img {
                 filter: invert(1);

@@ -3890,7 +3890,7 @@ body.loaded {
 
 .projects-controls-accordion {
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   width: 100%;
   overflow: hidden;
 }
@@ -4215,22 +4215,28 @@ header .socials.left {
 @media only screen and (max-width: 970px) {
   header .socials {
     gap: 20px;
-    right: 20px;
-    top: 570px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    top: 80px;
     height: 70px;
-  }
-  header .socials.left {
-    left: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
   header .socials {
-    top: 580px;
+    top: 75px;
+  }
+  header .socials.left {
+    top: 155px;
   }
 }
 header .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   padding: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   border-bottom: solid #B57E9B 4px;
   background-color: rgba(243, 232, 233, 0.5);
   font-size: 0.9rem;
@@ -4241,7 +4247,7 @@ header .social img {
 header .social:hover, header .social:focus {
   background-color: rgba(243, 232, 233, 0.5);
   border-bottom: solid #7a91b1 4px;
-  color: #f3e8e9;
+  color: #282b2c;
 }
 @media only screen and (max-width: 970px) {
   header .social {
@@ -4377,7 +4383,7 @@ header nav ul li a {
 }
 @media only screen and (max-width: 768px) {
   header nav ul {
-    padding-top: 200px;
+    padding-top: 235px;
   }
 }
 @media only screen and (max-width: 970px) {
@@ -5265,7 +5271,7 @@ header .scroll-title {
   border: solid #B57E9B 5px;
   margin: 0;
   height: 100%;
-  width: 385px;
+  width: 375px;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
@@ -5532,10 +5538,13 @@ body.dark-mode header.four-oh-four {
 body.dark-mode header h1, body.dark-mode header nav ul li a {
   color: #f3e8e9;
 }
-body.dark-mode header nav ul li.socials a {
+body.dark-mode header nav ul li.socials a,
+body.dark-mode header nav ul li.socials button {
   background-color: #282b2c;
+  color: #f3e8e9;
 }
-body.dark-mode header nav ul li.socials a img {
+body.dark-mode header nav ul li.socials a img,
+body.dark-mode header nav ul li.socials button img {
   filter: invert(1);
 }
 body.dark-mode header .toggles p, body.dark-mode header .toggles button {
