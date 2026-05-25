@@ -4055,7 +4055,7 @@ header {
   right: initial;
   bottom: initial;
   left: initial;
-  min-height: 750px;
+  min-height: 550px;
   height: 100vh;
   max-height: 1000px;
 }

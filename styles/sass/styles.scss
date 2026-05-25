@@ -261,7 +261,7 @@ header {
     background: linear-gradient(120deg, rgba($color3, 0.75) 0%, rgba($color3, 0.75) 2%, rgba($color1, 0.25) 60%, rgba($color1, 0.5) 98%, rgba($color1, 0.5) 100%);
     background-size: 400% 400%;
     @include positioning(relative);
-    min-height: 750px;
+    min-height: 550px;
     height: 100vh;
     max-height: 1000px;
 
