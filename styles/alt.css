@@ -952,10 +952,10 @@ body:has(header .title:focus-visible) .basic-info .name {
     display: none;
   }
 
-  /* .nav-about,
+  .nav-about,
   .nav-sep-about {
     display: none;
-  } */
+  }
 }
 
 .theme-toggle {
