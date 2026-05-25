@@ -41,11 +41,11 @@
     },
     "social profiles": {
         "Instagram (I)": {
-            "link": "/tpl-insta",
+            "link": "/tplgram",
             "description": "@torontopubliclibra"
         },
         "Instagram (II)": {
-            "link": "/dt-insta",
+            "link": "/dtgram",
             "description": "@danateagledotcom"
         },
         "Letterboxd": {
