@@ -475,10 +475,14 @@ header {
             height: 20px;
         }
 
-        &:hover, &:focus, &:active {
+        &:hover {
             background-color: rgba($white, 0.5);
             border-bottom: solid $color3 4px;
             color: $black;
+        }
+
+        &:focus, &:active {
+            border-bottom: solid $color2 4px;
         }
 
         @media only screen and (max-width: $tablet) {
