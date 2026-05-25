@@ -505,6 +505,12 @@ body:has(header .title:focus-visible) .basic-info .name {
   max-height: 80px;
 }
 
+@media only screen and (max-width: 900px) {
+  .basic-info .headshot, .basic-info .headshot-link {
+    display: none;
+  }
+}
+
 .basic-info .headshot-pixel-wrapper {
   z-index: 0;
   position: relative;
