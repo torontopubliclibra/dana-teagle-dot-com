@@ -871,13 +871,14 @@ html.tpl main .tpl-landing, html.tpl main.tpl-subpage {
 }
 html.tpl main .tpl-landing img.rusty, html.tpl main.tpl-subpage img.rusty {
   margin: 0;
-  width: 150px;
+  width: auto;
+  height: 160px;
   display: block;
 }
 html.tpl main .tpl-landing .rusty-pixel-wrapper, html.tpl main.tpl-subpage .rusty-pixel-wrapper {
   display: inline-block;
   position: relative;
-  border: solid 3px rgba(243, 232, 233, 0.5);
+  border: solid 4px rgba(243, 232, 233, 0.5);
   margin: 10px 0;
   margin-top: 0;
   line-height: 0;
@@ -5066,7 +5067,7 @@ header .scroll-title {
 }
 #about .about-content .basic-info .headshot {
   width: auto;
-  max-height: 175px;
+  max-height: 160px;
   transition: opacity 0.5s;
   display: block;
 }

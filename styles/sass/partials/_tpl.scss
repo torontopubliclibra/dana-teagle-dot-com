@@ -425,13 +425,14 @@ html.tpl {
             padding-top: 15px;
             img.rusty {
                 margin: 0;
-                width: 150px;
+                width: auto;
+                height: 160px;
                 display: block;
             }
             .rusty-pixel-wrapper {
                 display: inline-block;
                 position: relative;
-                border: solid 3px rgba($white, 0.5);
+                border: solid 4px rgba($white, 0.5);
                 margin: 10px 0;
                 margin-top: 0;
                 line-height: 0;
