@@ -4217,7 +4217,7 @@ header .socials.left {
     flex-direction: row-reverse;
     gap: 20px;
     right: 20px;
-    bottom: 40px;
+    top: 440px;
     height: 70px;
     width: auto;
   }
@@ -4227,7 +4227,7 @@ header .socials.left {
 }
 @media only screen and (max-width: 768px) {
   header .socials {
-    bottom: 20px;
+    top: 460px;
   }
 }
 header .social {
@@ -4382,7 +4382,7 @@ header nav ul li a {
 }
 @media only screen and (max-width: 768px) {
   header nav ul {
-    padding-top: 80px;
+    padding-top: 75px;
   }
 }
 @media only screen and (max-width: 970px) {

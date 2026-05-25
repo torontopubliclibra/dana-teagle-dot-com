@@ -447,7 +447,7 @@ header {
             flex-direction: row-reverse;
             gap: 20px;
             right: 20px;
-            bottom: 40px;
+            top: 440px;
             height: 70px;
             width: auto;
 
@@ -456,7 +456,7 @@ header {
             }
         }
         @media only screen and (max-width: $mobile) {
-            bottom: 20px;
+            top: 460px;
         }
     }
 
@@ -606,7 +606,7 @@ header {
             }
 
             @media only screen and (max-width: $mobile) {
-                padding-top: 80px;
+                padding-top: 75px;
             }
         }
         // nav list when active
