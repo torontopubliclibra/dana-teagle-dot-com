@@ -1076,7 +1076,7 @@ html.tpl main .tpl-landing {
     max-width: 85%;
   }
   html.tpl main .tpl-landing img.rusty {
-    width: 150px;
+    height: 100px;
   }
 }
 @media only screen and (max-width: 970px) {
