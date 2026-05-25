@@ -444,7 +444,6 @@ header {
         }
 
         @media only screen and (max-width: $tablet) {
-            flex-direction: row-reverse;
             gap: 20px;
             right: 20px;
             top: 440px;

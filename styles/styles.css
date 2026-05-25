@@ -4215,7 +4215,6 @@ header .socials.left {
 }
 @media only screen and (max-width: 970px) {
   header .socials {
-    flex-direction: row-reverse;
     gap: 20px;
     right: 20px;
     top: 440px;
