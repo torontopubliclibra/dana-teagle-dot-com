@@ -4245,7 +4245,7 @@ header .social {
 header .social img {
   height: 20px;
 }
-header .social:hover, header .social:focus {
+header .social:hover, header .social:focus, header .social:active {
   background-color: rgba(243, 232, 233, 0.5);
   border-bottom: solid #7a91b1 4px;
   color: #282b2c;
@@ -4269,7 +4269,7 @@ header .social:hover, header .social:focus {
   header .social img {
     height: 25px;
   }
-  header .social:hover, header .social:focus {
+  header .social:hover, header .social:focus, header .social:active {
     background-color: #f3e8e9;
     border-bottom: solid #B57E9B 4px;
     margin-bottom: 10px;

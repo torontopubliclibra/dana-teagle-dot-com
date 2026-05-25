@@ -475,7 +475,7 @@ header {
             height: 20px;
         }
 
-        &:hover, &:focus {
+        &:hover, &:focus, &:active {
             background-color: rgba($white, 0.5);
             border-bottom: solid $color3 4px;
             color: $black;
@@ -500,7 +500,7 @@ header {
                 height: 25px;
             }
 
-            &:hover, &:focus {
+            &:hover, &:focus, &:active {
                 background-color: $white;
                 border-bottom: solid $color2 4px;
                 margin-bottom: 10px;
