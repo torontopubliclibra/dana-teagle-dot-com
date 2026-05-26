@@ -1,12 +1,43 @@
 fetch('../data/rcc.json')
   .then(response => response.json())
   .then(data => {
-    const container = document.querySelector('.horizontal-scroll-container');
-    if (!container || !data.rcc) return;
-    container.innerHTML = '';
+    const grid = document.getElementById('rcc-grid');
+    const statsMount = document.getElementById('rcc-stats');
+    const lightboxRoot = document.getElementById('rcc-lightbox-root');
+    const confirmedToggle = document.getElementById('rcc-confirmed-toggle');
+    const filterTabsContainer = document.querySelector('.rcc-filter-tabs');
+
+    if (!grid || !statsMount || !lightboxRoot || !data.rcc || !filterTabsContainer) {
+      return;
+    }
+
+    const films = data.rcc;
+    const cardFilms = films.filter(film => film.poster || film.title === 'TBD');
+    let activeFilms = cardFilms;
+
+    const parseFilmDate = dateStr => {
+      if (!dateStr || typeof dateStr !== 'string') {
+        return null;
+      }
+
+      const [day, month, year] = dateStr.split('-').map(Number);
+      if (!day || !month || !year) {
+        return null;
+      }
+
+      return new Date(year, month - 1, day);
+    };
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const currentYearLabel = String(today.getFullYear());
+
+    let activeFilter = 'upcoming';
+
     const monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const monthsLong = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const days = ['Sun', 'Mon', 'Tues', 'Weds', 'Thurs', 'Fri', 'Sat'];
+
     const formatDate = (dateStr, long = false) => {
       const [day, month, year] = dateStr.split('-');
       const dateObj = new Date(`${year}-${month}-${day}`);
@@ -15,22 +46,40 @@ fetch('../data/rcc.json')
       }
       return `${monthsShort[parseInt(month, 10) - 1]} ${parseInt(day, 10)} ${year}`;
     };
-    const getInfoBarHTML = (film, opts = {}) => {
+
+    const getFilmYear = film => {
+      const parsedDate = parseFilmDate(film.date);
+      return parsedDate ? String(parsedDate.getFullYear()) : null;
+    };
+
+    const getFilterTabElements = () => Array.from(filterTabsContainer.querySelectorAll('[data-rcc-filter]'));
+
+    const getCardInfoHTML = film => {
+      const release = film.year ? ` (${film.year})` : '';
+      const series = film.series ? `<span class="rcc-card-series">${film.series}</span>` : '';
+      return `
+        <p class="rcc-card-title">${film.title}${release}</p>
+        ${series}
+      `;
+    };
+
+    const getFullInfoHTML = film => {
       let infoText = '';
-      if (opts.short) {
-        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" class="rcc-link">${film.title}</a> (${film.year}) on ${formatDate(film.date)} //`;
-        return infoText;
-      }
       infoText += `<strong>${formatDate(film.date, true)} //</strong><br/>`;
-      if (film.series) infoText += `<em class="rcc-series-title">${film.series}:</em><br/>`;
+
+      if (film.series) {
+        infoText += `<em class="rcc-series-title">${film.series}:</em><br/>`;
+      }
+
       if (film.title === 'TBD') {
-        infoText += `TBD<br/>`;
+        infoText += 'TBD<br/>';
         if (Array.isArray(film.nominees) && film.nominees.length > 0) {
           infoText += `<span class="rcc-nominees">Nominees: ${film.nominees.join(', ')}</span><br/>`;
         }
       } else {
-        infoText += `<a href="${film.link}" target="_blank" rel="norefferrer" class="rcc-link--full">${film.title}</a> ${film.year ? `(${film.year}) ` : ''}<br/>`;
+        infoText += `<a href="${film.link}" target="_blank" rel="noreferrer" class="rcc-link--full">${film.title}</a>${film.year ? ` (${film.year})` : ''}<br/>`;
       }
+
       if (
         film.director &&
         Array.isArray(film.writer) &&
@@ -39,190 +88,546 @@ fetch('../data/rcc.json')
       ) {
         infoText += `<hr/>Written and Directed by: ${film.director}<br/>`;
       } else {
-        if (film.director) infoText += `<hr/>Directed by: ${film.director}<br/>`;
+        if (film.director) {
+          infoText += `<hr/>Directed by: ${film.director}<br/>`;
+        }
         if (Array.isArray(film.writer) && film.writer.length > 0) {
           infoText += `Written by: ${film.writer.join(', ')}<br/>`;
         }
       }
+
       if (Array.isArray(film.cast) && film.cast.length > 0) {
         infoText += `Starring: ${film.cast.join(', ')}<br/>`;
       }
-      if (film.runtime) infoText += `<hr/>${film.runtime} mins | ${film.languages ? film.languages.join(', ') : ''}<br/>`;
+
+      if (film.runtime) {
+        const languages = Array.isArray(film.languages) ? film.languages.join(', ') : '';
+        infoText += `<hr/>${film.runtime} mins${languages ? ` | ${languages}` : ''}<br/>`;
+      }
+
       return infoText;
     };
-    const createPosterSection = film => {
-      if (film.title === 'TBD') return null;
-      const section = document.createElement('section');
-      const infoBar = document.createElement('div');
-      infoBar.className = 'rcc-info-bar rcc-info-bar--short';
-      infoBar.innerHTML = getInfoBarHTML(film, { short: true });
-      section.appendChild(infoBar);
-      const img = document.createElement('img');
-      img.src = film.poster;
-      img.alt = `'${film.title}' (${film.year}) poster`;
-      img.className = 'poster';
-      section.appendChild(img);
-      return section;
-    };
-    const createListItem = film => {
-      const li = document.createElement('li');
-      li.className = 'rcc-list-item';
-      const infoBar = document.createElement('div');
-      infoBar.className = 'rcc-info-bar rcc-info-bar--full';
-      infoBar.innerHTML = getInfoBarHTML(film);
-      if (film.series) infoBar.classList.add('rcc-info-bar--series');
-      li.appendChild(infoBar);
-      const img = document.createElement('img');
-      img.src = (film.title === 'TBD') ? 'blank.png' : film.poster;
-      img.alt = `'${film.title}' (${film.year}) poster`;
-      img.className = `poster rcc-list-poster${film.series ? ' rcc-list-poster--series' : ''}${film.title === 'TBD' ? ' rcc-list-poster--tbd' : ''}`;
-      if (film.title !== 'TBD') {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', () => openLightbox(film.poster, film.title, film.year));
+
+    const createPosterElement = (film, baseClass, placeholderClass) => {
+      if (film.poster) {
+        const poster = document.createElement('img');
+        poster.src = film.poster;
+        poster.alt = `'${film.title}' (${film.year || 'Unknown year'}) poster`;
+        poster.className = baseClass;
+        return poster;
       }
-      li.appendChild(img);
-      return li;
+
+      const placeholder = document.createElement('div');
+      placeholder.className = `${baseClass} ${placeholderClass}`;
+      placeholder.textContent = 'TBD';
+      placeholder.setAttribute('role', 'img');
+      placeholder.setAttribute('aria-label', `'${film.title}' (${film.year || 'Unknown year'}) poster placeholder`);
+      return placeholder;
     };
-    const openLightbox = (src, title, year) => {
+
+    let currentIndex = 0;
+    let keyHandler = null;
+    let previousFocus = null;
+
+    const getPrevIndex = () => Math.max(0, currentIndex - 1);
+    const getNextIndex = () => Math.min(activeFilms.length - 1, currentIndex + 1);
+
+    const closeLightbox = () => {
+      lightboxRoot.innerHTML = '';
+      document.body.style.overflow = '';
+      if (keyHandler) {
+        document.removeEventListener('keydown', keyHandler);
+        keyHandler = null;
+      }
+      if (previousFocus) {
+        previousFocus.focus();
+      }
+    };
+
+    const renderLightbox = () => {
+      const film = activeFilms[currentIndex];
+      if (!film) {
+        return;
+      }
+
+      lightboxRoot.innerHTML = '';
+
       const overlay = document.createElement('div');
       overlay.className = 'rcc-lightbox-overlay';
-      const content = document.createElement('div');
-      content.className = 'rcc-lightbox-content';
-      const banner = document.createElement('div');
-      banner.className = 'rcc-lightbox-banner';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('aria-label', `${film.title} details`);
+
+      const panel = document.createElement('div');
+      panel.className = 'rcc-lightbox-panel';
+
+      const topBar = document.createElement('div');
+      topBar.className = 'rcc-lightbox-topbar';
+
+      const counter = document.createElement('p');
+      counter.className = 'rcc-lightbox-count';
+      counter.textContent = `${currentIndex + 1} of ${activeFilms.length}`;
+
       const closeBtn = document.createElement('button');
       closeBtn.className = 'rcc-lightbox-close';
+      closeBtn.setAttribute('type', 'button');
+      closeBtn.setAttribute('aria-label', 'Close lightbox');
       closeBtn.innerHTML = '&#10005;';
-      closeBtn.setAttribute('aria-label', 'Close');
-      closeBtn.addEventListener('click', () => overlay.remove());
-      banner.appendChild(closeBtn);
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = `'${title}' (${year}) poster`;
-      content.appendChild(banner);
-      content.appendChild(img);
-      overlay.appendChild(content);
-      overlay.addEventListener('click', e => {
-        if (e.target === overlay) overlay.remove();
+      closeBtn.addEventListener('click', closeLightbox);
+
+      topBar.appendChild(counter);
+      topBar.appendChild(closeBtn);
+
+      const body = document.createElement('div');
+      body.className = 'rcc-lightbox-body';
+
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'rcc-lightbox-nav rcc-lightbox-nav--prev';
+      prevBtn.setAttribute('type', 'button');
+      prevBtn.setAttribute('aria-label', 'Previous poster');
+      prevBtn.textContent = '←';
+      const hasPrev = currentIndex > 0;
+      prevBtn.disabled = !hasPrev;
+      prevBtn.addEventListener('click', () => {
+        if (!hasPrev) {
+          return;
+        }
+        currentIndex = getPrevIndex();
+        renderLightbox();
       });
-      document.addEventListener('keydown', function handler(e) {
-        if (e.key === 'Escape') {
-          overlay.remove();
-          document.removeEventListener('keydown', handler);
+
+      const media = document.createElement('div');
+      media.className = 'rcc-lightbox-media';
+
+      const mediaPoster = createPosterElement(film, 'rcc-lightbox-poster', 'rcc-lightbox-poster--placeholder');
+      mediaPoster.classList.add('rcc-lightbox-swipe-surface');
+
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchDeltaX = 0;
+      let isTouchTracking = false;
+
+      mediaPoster.addEventListener('touchstart', event => {
+        if (event.touches.length !== 1) {
+          return;
+        }
+
+        const touch = event.touches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+        touchDeltaX = 0;
+        isTouchTracking = true;
+        mediaPoster.classList.add('is-swipe-active');
+        mediaPoster.style.transition = 'none';
+      }, { passive: true });
+
+      mediaPoster.addEventListener('touchmove', event => {
+        if (!isTouchTracking || event.touches.length !== 1) {
+          return;
+        }
+
+        const touch = event.touches[0];
+        const deltaX = touch.clientX - touchStartX;
+        const deltaY = touch.clientY - touchStartY;
+
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+          event.preventDefault();
+          touchDeltaX = deltaX;
+          const clampedDelta = Math.max(-72, Math.min(72, deltaX));
+          mediaPoster.style.transform = `translateX(${clampedDelta}px)`;
+        }
+      }, { passive: false });
+
+      mediaPoster.addEventListener('touchend', () => {
+        if (!isTouchTracking) {
+          return;
+        }
+
+        isTouchTracking = false;
+        mediaPoster.classList.remove('is-swipe-active');
+        mediaPoster.style.transition = '';
+        mediaPoster.style.transform = '';
+
+        if (Math.abs(touchDeltaX) < 56) {
+          return;
+        }
+
+        if (touchDeltaX < 0 && hasNext) {
+          currentIndex = getNextIndex();
+        } else if (touchDeltaX > 0 && hasPrev) {
+          currentIndex = getPrevIndex();
+        } else {
+          return;
+        }
+
+        renderLightbox();
+      });
+
+      const info = document.createElement('div');
+      info.className = 'rcc-info-bar rcc-info-bar--full rcc-lightbox-info';
+      if (film.series) {
+        info.classList.add('rcc-info-bar--series');
+      }
+      info.innerHTML = getFullInfoHTML(film);
+
+      media.appendChild(mediaPoster);
+      media.appendChild(info);
+
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'rcc-lightbox-nav rcc-lightbox-nav--next';
+      nextBtn.setAttribute('type', 'button');
+      nextBtn.setAttribute('aria-label', 'Next poster');
+      nextBtn.textContent = '→';
+      const hasNext = currentIndex < activeFilms.length - 1;
+      nextBtn.disabled = !hasNext;
+      nextBtn.addEventListener('click', () => {
+        if (!hasNext) {
+          return;
+        }
+        currentIndex = getNextIndex();
+        renderLightbox();
+      });
+
+      body.appendChild(prevBtn);
+      body.appendChild(media);
+      body.appendChild(nextBtn);
+
+      panel.appendChild(topBar);
+      panel.appendChild(body);
+      overlay.appendChild(panel);
+
+      overlay.addEventListener('click', event => {
+        if (event.target === overlay) {
+          closeLightbox();
         }
       });
-      document.body.appendChild(overlay);
+
+      lightboxRoot.appendChild(overlay);
+      closeBtn.focus();
     };
-    data.rcc.forEach(film => {
-      const section = createPosterSection(film);
-      if (section) container.appendChild(section);
-    });
-    const list = document.createElement('ul');
-    list.className = 'rcc-list';
-    data.rcc.forEach(film => {
-      list.appendChild(createListItem(film));
-    });
-    container.parentNode.insertBefore(list, container.nextSibling);
-    const listBtn = document.getElementById('rcc-list-btn');
-    const postersBtn = document.getElementById('rcc-posters-btn');
-    const statsBtn = document.getElementById('rcc-stats-btn');
-    const statsList = document.createElement('ul');
-    statsList.className = 'rcc-stats-list';
-    const createStatList = (items, label, formatter) => {
-      const header = document.createElement('li');
-      header.innerHTML = `<strong>${label} //</strong>`;
-      const ul = document.createElement('ul');
-      ul.className = 'rcc-stat-sublist';
-      Object.keys(items).sort().forEach(key => {
-        const li = document.createElement('li');
-        li.textContent = formatter ? formatter(key, items[key]) : `${key}: ${items[key]}`;
-        ul.appendChild(li);
-      });
-      statsList.appendChild(header);
-      statsList.appendChild(ul);
-    };
-    const countBy = (arr, keyFn) => arr.reduce((acc, item) => {
-      const key = keyFn(item);
-      if (key) acc[key] = (acc[key] || 0) + 1;
-      return acc;
-    }, {});
-    createStatList(countBy(data.rcc, film => film.year ? Math.floor(film.year / 10) * 10 : null), 'Decades', (decade, count) => `${decade}s movie(s): ${count}`);
-    createStatList(
-      data.rcc.reduce((acc, film) => {
-        if (film.country) film.country.forEach(c => acc[c] = (acc[c] || 0) + 1);
-        return acc;
-      }, {}),
-      '<hr/>Countries',
-      (country, count) => `${country} produced movie(s): ${count}`
-    );
-    createStatList(
-      data.rcc.reduce((acc, film) => {
-        if (film.languages) film.languages.forEach(lang => acc[lang] = (acc[lang] || 0) + 1);
-        return acc;
-      }, {}),
-      '<hr/>Languages',
-      (lang, count) => `${lang} language movie(s): ${count}`
-    );
-    const castAppearances = {};
-    data.rcc.forEach(film => {
-      if (Array.isArray(film.cast)) {
-        film.cast.forEach(actor => {
-          if (!castAppearances[actor]) castAppearances[actor] = [];
-          castAppearances[actor].push(film.title);
-        });
+
+    const openLightbox = index => {
+      currentIndex = index;
+      previousFocus = document.activeElement;
+      document.body.style.overflow = 'hidden';
+
+      if (keyHandler) {
+        document.removeEventListener('keydown', keyHandler);
       }
-    });
-    const repeatPerformers = Object.entries(castAppearances)
-      .filter(([, movies]) => movies.length > 1)
-      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
-    if (repeatPerformers.length > 0) {
-      const rpHeader = document.createElement('li');
-      rpHeader.innerHTML = '<hr/><strong>Repeat Performers //</strong>';
-      const rpUl = document.createElement('ul');
-      rpUl.className = 'rcc-stat-sublist';
-      repeatPerformers.forEach(([actor, movies]) => {
-        const li = document.createElement('li');
-        li.textContent = `${actor}: ${movies.length} appearances (${movies.join(', ')})`;
-        rpUl.appendChild(li);
+
+      keyHandler = event => {
+        if (!lightboxRoot.firstChild) {
+          return;
+        }
+
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          closeLightbox();
+          return;
+        }
+
+        if (event.key === 'ArrowLeft') {
+          if (currentIndex <= 0) {
+            return;
+          }
+          event.preventDefault();
+          currentIndex = getPrevIndex();
+          renderLightbox();
+          return;
+        }
+
+        if (event.key === 'ArrowRight') {
+          if (currentIndex >= activeFilms.length - 1) {
+            return;
+          }
+          event.preventDefault();
+          currentIndex = getNextIndex();
+          renderLightbox();
+        }
+      };
+
+      document.addEventListener('keydown', keyHandler);
+      renderLightbox();
+    };
+
+    const isUpcoming = film => {
+      const parsedDate = parseFilmDate(film.date);
+      return parsedDate ? parsedDate >= today : false;
+    };
+
+    const isSpecialPresentation = film => Boolean(film.series);
+    const isConfirmedScreening = film => film.title !== 'TBD';
+    const isConfirmedToggleAvailable = () => activeFilter === 'upcoming' || activeFilter === currentYearLabel;
+
+    const getAvailableYearFilters = () => {
+      const filmsByYear = new Map();
+
+      cardFilms.forEach(film => {
+        const year = getFilmYear(film);
+        if (!year) {
+          return;
+        }
+
+        if (!filmsByYear.has(year)) {
+          filmsByYear.set(year, []);
+        }
+
+        filmsByYear.get(year).push(film);
       });
-      statsList.appendChild(rpHeader);
-      statsList.appendChild(rpUl);
-    }
-    const totalFilms = data.rcc.length;
-    const directorsList = [...new Set(data.rcc.map(film => film.director).filter(Boolean))].sort();
-    const writersList = [...new Set(
-      data.rcc.flatMap(film => Array.isArray(film.writer) ? film.writer : []).filter(Boolean)
-    )].sort();
-    const totalRuntime = data.rcc.reduce((sum, film) => sum + (film.runtime || 0), 0);
-    const totalsUl = document.createElement('ul');
-    totalsUl.className = 'rcc-stat-sublist';
-    [
-      `Directors: ${directorsList.join(', ')}`,
-      `Writers: ${writersList.join(', ')}`,
-      `Total runtime: ${totalRuntime} mins (${(totalRuntime / 60).toFixed(2)} hrs)`,
-      `Total # of movies: ${totalFilms}`
-    ].forEach(text => {
-      const li = document.createElement('li');
-      li.textContent = text;
-      totalsUl.appendChild(li);
+
+      return Array.from(filmsByYear.entries())
+        .filter(([, filmsForYear]) => {
+          if (confirmedToggle && confirmedToggle.checked) {
+            return filmsForYear.some(isConfirmedScreening);
+          }
+          return filmsForYear.length > 0;
+        })
+        .map(([year]) => year)
+        .sort((a, b) => Number(b) - Number(a));
+    };
+
+    const renderFilterTabs = () => {
+      const availableYearFilters = getAvailableYearFilters();
+      const availableFilters = ['upcoming', ...availableYearFilters, 'special-presentations'];
+
+      if (!availableFilters.includes(activeFilter)) {
+        activeFilter = 'upcoming';
+      }
+
+      filterTabsContainer.innerHTML = availableFilters
+        .map(filter => {
+          const label = filter === 'upcoming'
+            ? 'Upcoming'
+            : filter === 'special-presentations'
+              ? 'Special Presentations'
+              : filter;
+          return `<button class="rcc-filter-tab" type="button" role="tab" data-rcc-filter="${filter}" aria-selected="false">${label}</button>`;
+        })
+        .join('');
+    };
+
+    const getVisibleFilms = () => {
+      if (activeFilter === 'all') {
+        return cardFilms;
+      }
+      const filteredFilms = activeFilter === 'upcoming'
+        ? cardFilms.filter(isUpcoming)
+        : activeFilter === 'special-presentations'
+          ? cardFilms.filter(isSpecialPresentation)
+          : cardFilms.filter(film => getFilmYear(film) === activeFilter);
+
+      if (confirmedToggle && !confirmedToggle.disabled && confirmedToggle.checked) {
+        return filteredFilms.filter(isConfirmedScreening);
+      }
+
+      return filteredFilms;
+    };
+
+    const syncFilterTabs = () => {
+      getFilterTabElements().forEach(tab => {
+        const isActive = tab.dataset.rccFilter === activeFilter;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+
+      if (confirmedToggle) {
+        confirmedToggle.disabled = !isConfirmedToggleAvailable();
+        confirmedToggle.parentElement?.classList.toggle('is-disabled', confirmedToggle.disabled);
+      }
+    };
+
+    const renderGrid = () => {
+      activeFilms = getVisibleFilms();
+      closeLightbox();
+      grid.innerHTML = '';
+
+      activeFilms.forEach((film, index) => {
+        const button = document.createElement('button');
+        button.className = 'rcc-card';
+        button.setAttribute('type', 'button');
+        button.setAttribute('aria-label', `Open ${film.title} details`);
+
+        const date = document.createElement('p');
+        date.className = 'rcc-card-date rcc-card-date--top';
+        date.textContent = formatDate(film.date);
+
+        const cardPoster = createPosterElement(film, 'rcc-card-poster', 'rcc-card-poster--placeholder');
+
+        const info = document.createElement('div');
+        info.className = 'rcc-info-bar rcc-info-bar--short';
+        info.innerHTML = getCardInfoHTML(film);
+
+        button.appendChild(date);
+        button.appendChild(cardPoster);
+        button.appendChild(info);
+        button.addEventListener('click', () => openLightbox(index));
+        grid.appendChild(button);
+      });
+
+      renderStats(activeFilms);
+    };
+
+    const renderStats = filmsToUse => {
+      statsMount.innerHTML = '';
+
+      const details = document.createElement('details');
+      details.className = 'rcc-stats-details';
+
+      const summary = document.createElement('summary');
+      summary.className = 'rcc-stats-summary';
+      summary.textContent = 'Details';
+      details.appendChild(summary);
+
+      const statsContent = document.createElement('div');
+      statsContent.className = 'rcc-stats-content';
+
+      const createStatBlock = (label, values) => {
+        const block = document.createElement('section');
+        block.className = 'rcc-stats-block';
+
+        const heading = document.createElement('h2');
+        heading.textContent = `${label} //`;
+        block.appendChild(heading);
+
+        const list = document.createElement('ul');
+        list.className = 'rcc-stat-sublist';
+
+        values.forEach(value => {
+          const item = document.createElement('li');
+          item.textContent = value;
+          list.appendChild(item);
+        });
+
+        block.appendChild(list);
+        return block;
+      };
+
+      const countBy = (arr, keyFn) => arr.reduce((acc, item) => {
+        const key = keyFn(item);
+        if (key) {
+          acc[key] = (acc[key] || 0) + 1;
+        }
+        return acc;
+      }, {});
+
+      const decades = countBy(filmsToUse, film => film.year ? `${Math.floor(Number(film.year) / 10) * 10}s` : null);
+      const countries = filmsToUse.reduce((acc, film) => {
+        if (Array.isArray(film.country)) {
+          film.country.forEach(country => {
+            acc[country] = (acc[country] || 0) + 1;
+          });
+        }
+        return acc;
+      }, {});
+      const languages = filmsToUse.reduce((acc, film) => {
+        if (Array.isArray(film.languages)) {
+          film.languages.forEach(language => {
+            acc[language] = (acc[language] || 0) + 1;
+          });
+        }
+        return acc;
+      }, {});
+
+      const castAppearances = {};
+      filmsToUse.forEach(film => {
+        if (Array.isArray(film.cast)) {
+          film.cast.forEach(actor => {
+            if (!castAppearances[actor]) {
+              castAppearances[actor] = [];
+            }
+            castAppearances[actor].push(film.title);
+          });
+        }
+      });
+
+      const repeatPerformers = Object.entries(castAppearances)
+        .filter(([, movieTitles]) => movieTitles.length > 1)
+        .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]))
+        .map(([actor, movieTitles]) => `${actor}: ${movieTitles.length} appearances (${movieTitles.join(', ')})`);
+
+      const totalFilms = filmsToUse.length;
+      const directorsList = [...new Set(filmsToUse.map(film => film.director).filter(Boolean))].sort();
+      const writersList = [...new Set(filmsToUse.flatMap(film => Array.isArray(film.writer) ? film.writer : []).filter(Boolean))].sort();
+      const totalRuntime = filmsToUse.reduce((sum, film) => sum + (film.runtime || 0), 0);
+      const runtimeHours = Math.floor(totalRuntime / 60);
+      const runtimeMinutes = totalRuntime % 60;
+
+      const totalsValues = [
+        `Directors: ${directorsList.join(', ')}`,
+        `Writers: ${writersList.join(', ')}`,
+        `Total runtime: ${runtimeHours} hrs ${runtimeMinutes} mins`,
+        `Total # of movies: ${totalFilms}`
+      ];
+
+      const totalsBlock = document.createElement('section');
+      totalsBlock.className = 'rcc-stats-block';
+
+      const totalsList = document.createElement('ul');
+      totalsList.className = 'rcc-stat-sublist';
+
+      totalsValues.forEach(value => {
+        const item = document.createElement('li');
+        item.textContent = value;
+        totalsList.appendChild(item);
+      });
+
+      totalsBlock.appendChild(totalsList);
+      statsContent.appendChild(totalsBlock);
+
+      statsContent.appendChild(
+        createStatBlock(
+          'Decades',
+          Object.keys(decades).sort().map(decade => `${decade} movie(s): ${decades[decade]}`)
+        )
+      );
+      statsContent.appendChild(
+        createStatBlock(
+          'Countries',
+          Object.keys(countries).sort().map(country => `${country} produced movie(s): ${countries[country]}`)
+        )
+      );
+      statsContent.appendChild(
+        createStatBlock(
+          'Languages',
+          Object.keys(languages).sort().map(language => `${language} language movie(s): ${languages[language]}`)
+        )
+      );
+
+      if (repeatPerformers.length > 0) {
+        statsContent.appendChild(createStatBlock('Repeat Performers', repeatPerformers));
+      }
+
+      details.appendChild(statsContent);
+      statsMount.appendChild(details);
+    };
+
+    filterTabsContainer.addEventListener('click', event => {
+      const tab = event.target.closest('[data-rcc-filter]');
+      if (!tab) {
+        return;
+      }
+
+      const nextFilter = tab.dataset.rccFilter;
+      if (!nextFilter || nextFilter === activeFilter) {
+        return;
+      }
+
+      activeFilter = nextFilter;
+      syncFilterTabs();
+      renderGrid();
     });
-    const totalsHeader = document.createElement('li');
-    totalsHeader.innerHTML = '<hr/><strong>Totals //</strong>';
-    statsList.appendChild(totalsHeader);
-    statsList.appendChild(totalsUl);
-    container.parentNode.insertBefore(statsList, container.nextSibling);
-    function showView(view) {
-      [listBtn, postersBtn, statsBtn].forEach(btn => btn && btn.classList.remove('selected'));
-      container.classList.toggle('hidden', view !== 'posters');
-      list.classList.toggle('active', view === 'list');
-      statsList.classList.toggle('active', view === 'stats');
-      if (view === 'list' && listBtn) listBtn.classList.add('selected');
-      else if (view === 'stats' && statsBtn) statsBtn.classList.add('selected');
-      else if (postersBtn) postersBtn.classList.add('selected');
+
+    if (confirmedToggle) {
+      confirmedToggle.addEventListener('change', () => {
+        renderFilterTabs();
+        syncFilterTabs();
+        renderGrid();
+      });
     }
-    const hash = window.location.hash.replace('#', '');
-    showView(['list', 'stats', 'posters'].includes(hash) ? hash : 'posters');
-    if (listBtn) listBtn.addEventListener('click', () => { window.location.hash = 'list'; showView('list'); });
-    if (postersBtn) postersBtn.addEventListener('click', () => { window.location.hash = 'posters'; showView('posters'); });
-    if (statsBtn) statsBtn.addEventListener('click', () => { window.location.hash = 'stats'; showView('stats'); });
+
+    renderFilterTabs();
+    syncFilterTabs();
+    renderGrid();
+
   });

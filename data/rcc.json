@@ -1,6 +1,215 @@
 {
     "rcc": [
         {
+            "date": "11-07-2024",
+            "title": "Alice (Něco z Alenky)",
+            "year": 1988,
+            "director": "Jan Švankmajer",
+            "writer": ["Jan Švankmajer", "Lewis Carroll"],
+            "poster": "/rcc/alice.png",
+            "link": "https://letterboxd.com/film/alice-1988/",
+            "country": ["Czech"],
+            "languages": ["Czech"],
+            "cast": ["Kristýna Kohoutová"],
+            "runtime": 86
+        },
+        {
+            "date": "08-08-2024",
+            "title": "Bound",
+            "year": 1996,
+            "director": "Lana Wachowski, Lilly Wachowski",
+            "writer": ["Lana Wachowski", "Lilly Wachowski"],
+            "poster": "/rcc/bound.png",
+            "link": "https://letterboxd.com/film/bound-1996/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Jennifer Tilly", "Gina Gershon", "Joe Pantoliano", "Christopher Meloni", "Richard C. Sarafian", "Barry Kivel", "Mary Mara", "Margaret Smith", "Susie Bright"],
+            "runtime": 105
+        },
+        {
+            "date": "21-11-2024",
+            "title": "Crash",
+            "year": 1996,
+            "director": "David Cronenberg",
+            "writer": ["J.G. Ballard", "David Cronenberg"],
+            "poster": "/rcc/crash.png",
+            "link": "https://letterboxd.com/film/crash-1996/",
+            "country": ["Canadian", "British"],
+            "languages": ["English"],
+            "cast": ["James Spader", "Holly Hunter", "Elias Koteas", "Deborah Kara Unger", "Rosanna Arquette", "Peter MacNeill", "Cheryl Swarts"],
+            "runtime": 100
+        },
+        {
+            "date": "19-12-2024",
+            "title": "Shallow Grave",
+            "year": 1994,
+            "director": "Danny Boyle",
+            "writer": ["John Hodge"],
+            "poster": "/rcc/shallowgrave.png",
+            "link": "https://letterboxd.com/film/shallow-grave/",
+            "country": ["British"],
+            "languages": ["English"],
+            "cast": ["Ewan McGregor", "Kerry Fox", "Christopher Eccleston", "Ken Stott", "Lesley Sharp", "Peter Mullan", "Tony Curran", "Gary Lewis"],
+            "runtime": 93
+        },
+        {
+            "date": "13-02-2025",
+            "title": "Blue Velvet",
+            "year": 1986,
+            "director": "David Lynch",
+            "writer": ["David Lynch", "Barry Gifford"],
+            "poster": "/rcc/bluevelvet.png",
+            "link": "https://letterboxd.com/film/blue-velvet/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Kyle MacLachlan", "Isabella Rossellini", "Dennis Hopper", "Laura Dern", "Hope Lange", "Dean Stockwell", "George Dickerson", "Jack Nance", "Priscilla Pointer"],
+            "runtime": 120,
+            "series": "In Tribute to David Lynch"
+        },
+        {
+            "date": "20-02-2025",
+            "title": "Tokyo Drifter",
+            "year": 1966,
+            "director": "Seijun Suzuki",
+            "writer": ["Seijun Suzuki", "Yoshiyuki Fukuda"],
+            "poster": "/rcc/tokyodrifter.png",
+            "link": "https://letterboxd.com/film/tokyo-drifter/",
+            "country": ["Japanese"],
+            "languages": ["Japanese"],
+            "cast": ["Tetsuya Watari", "Chieko Matsubara", "Hideaki Nitani", "Tamio Kawachi", "Tomoko Hamakawa", "Takeshi Yoshida", "Isao Tamagawa", "Eiji Go", "Eitmei Esumi"],
+            "runtime": 83
+        },
+        {
+            "date": "02-04-2025",
+            "title": "Tout va Bien",
+            "year": 1972,
+            "director": "Jean-Luc Godard",
+            "writer": ["Jean-Luc Godard", "Jean-Pierre Gorin"],
+            "poster": "/rcc/toutvabien.png",
+            "link": "https://letterboxd.com/film/tout-va-bien/",
+            "country": ["French", "Italian"],
+            "languages": ["French", "English"],
+            "cast": ["Jane Fonda", "Yves Montand", "Vittorio Caprioli", "Elizabeth Chauvin", "Castel Casti", "Louis Bugette", "Yves Gabrielli", "Pierre Oudrey", "Jean Pignol"],
+            "runtime": 95
+        },
+        {
+            "date": "05-06-2025",
+            "title": "Sunset Boulevard",
+            "year": 1950,
+            "director": "Billy Wilder",
+            "writer": ["Charles Brackett", "Billy Wilder", "D.M. Marshman Jr."],
+            "poster": "/rcc/sunsetboulevard.png",
+            "link": "https://letterboxd.com/film/sunset-boulevard/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["William Holden", "Gloria Swanson", "Erich von Stroheim", "Nancy Olson", "Fred Clark", "Jack Webb", "Barbara Lawrence", "Lloyd Gough"],
+            "runtime": 110
+        },
+        {
+            "date": "19-06-2025",
+            "title": "Pride",
+            "year": 2014,
+            "director": "Matthew Warchus",
+            "writer": ["Stephen Beresford"],
+            "poster": "/rcc/pride.png",
+            "link": "https://letterboxd.com/film/pride/",
+            "country": ["British"],
+            "languages": ["English"],
+            "cast": ["Joseph Gilgun", "George MacKay", "Freddie Fox", "Bill Nighy", "Imelda Staunton", "Dominic West", "Andrew Scott", "Ben Schnetzer", "Faye Marsay", "Jessica Gunning", "Clive Rowe", "Liz White"],
+            "runtime": 120
+        },
+        {
+            "date": "03-07-2025",
+            "title": "Showgirls",
+            "year": 1995,
+            "director": "Paul Verhoeven",
+            "writer": ["Joe Eszterhas"],
+            "poster": "/rcc/showgirls.png",
+            "link": "https://letterboxd.com/film/showgirls/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Elizabeth Berkley", "Gina Gershon", "Kyle MacLachlan", "Glenn Plummer", "Robert Davi", "Alan Rachins", "Gina Ravera", "Lin Tucci", "Greg Travis", "Al Ruscio"],
+            "runtime": 131
+        },
+        {
+            "date": "14-08-2025",
+            "title": "The Living End",
+            "year": 1992,
+            "director": "Gregg Araki",
+            "writer": ["Gregg Araki"],
+            "poster": "/rcc/thelivingend.png",
+            "link": "https://letterboxd.com/film/the-living-end/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Mike Dytri", "Craig Gilmore", "Mark Finch", "Mary Woronov", "Johanna Went", "Darcy Marta", "Scott Goetz", "Brett Vail", "Nicole Dillenberg", "Stephen Holman"],
+            "runtime": 85
+        },
+        {
+            "date": "14-08-2025",
+            "title": "Love Lies Bleeding",
+            "year": 2024,
+            "director": "Rose Glass",
+            "writer": ["Rose Glass"],
+            "poster": "/rcc/loveliesbleeding.png",
+            "link": "https://letterboxd.com/film/love-lies-bleeding/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Kristen Stewart", "Katy O'Brian", "Ed Harris", "Dave Franco", "Jena Malone", "Anna Baryshnikov", "Orion Carrington", "Matthew Blood-Smyth", "David DeLao", "Hilary Fleming"],
+            "runtime": 104
+        },
+        {
+            "date": "18-09-2025",
+            "title": "How to Blow Up a Pipeline",
+            "year": 2022,
+            "director": "Daniel Goldhaber",
+            "writer": ["Daniel Goldhaber"],
+            "poster": "/rcc/howtoblowupapipeline.png",
+            "link": "https://letterboxd.com/film/how-to-blow-up-a-pipeline/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Ariela Barer", "Kristine Froseth", "Lukas Gage", "Forrest Goodluck", "Sasha Lane", "Jayme Lawson", "Marcus Scribner", "Jake Weary", "Irene Bedard", "Olive Jane Lorraine"],
+            "runtime": 104
+        },
+        {
+            "date": "16-10-2025",
+            "title": "Xanadu",
+            "year": 1980,
+            "director": "Robert Greenwald",
+            "writer": ["Douglas McGrath"],
+            "poster": "/rcc/xanadu.png",
+            "link": "https://letterboxd.com/film/xanadu/",
+            "country": ["American"],
+            "languages": ["English"],
+            "cast": ["Olivia Newton-John", "Gene Kelly", "Michael Beck", "James Sloyan", "Katie Hanley", "Fred McCarren", "Ren Woods", "Dimitra Arliss"],
+            "runtime": 96
+        },
+        {
+            "date": "05-11-2025",
+            "title": "Persona",
+            "year": 1966,
+            "director": "Ingmar Bergman",
+            "writer": ["Ingmar Bergman"],
+            "poster": "/rcc/persona.png",
+            "link": "https://letterboxd.com/film/persona/",
+            "country": ["Swedish"],
+            "languages": ["Swedish"],
+            "cast": ["Bibi Andersson", "Liv Ullmann", "Margaretha Krook", "Gunnar Björnstrand", "Jörgen Lindström"],
+            "runtime": 84
+        },
+        {
+            "date": "17-12-2025",
+            "title": "Let the Right One In",
+            "year": 2008,
+            "director": "Tomas Alfredson",
+            "writer": ["John Ajvide Lindqvist"],
+            "poster": "/rcc/lettherightonein.png",
+            "link": "https://letterboxd.com/film/let-the-right-one-in/",
+            "country": ["Swedish"],
+            "languages": ["Swedish"],
+            "cast": ["Kåre Hedebrant", "Lina Leandersson", "Per Ragnar", "Henrik Dahl", "Karin Bergquist", "Peter Carlberg", "Ika Nord", "Mikael Rahm", "Anders T. Peedu"],
+            "runtime": 115
+        },
+        {
             "date": "14-01-2026",
             "title": "Challengers",
             "year": 2024,
@@ -82,7 +291,8 @@
         },
         {
             "date": "25-06-2026",
-            "title": "TBD"
+            "title": "TBD",
+            "nominees": ["Medium Cool (1969)", "The Umbrellas of Cherbourg (1964)", "May December (2023)"]
         },
         {
             "date": "30-07-2026",
@@ -135,6 +345,30 @@
         },
         {
             "date": "17-12-2026",
+            "title": "TBD"
+        },
+        {
+            "date": "14-01-2027",
+            "title": "TBD"
+        },
+        {
+            "date": "11-02-2027",
+            "title": "TBD"
+        },
+        {
+            "date": "11-03-2027",
+            "title": "TBD"
+        },
+        {
+            "date": "08-04-2027",
+            "title": "TBD"
+        },
+        {
+            "date": "06-05-2027",
+            "title": "TBD"
+        },
+        {
+            "date": "03-06-2027",
             "title": "TBD"
         }
     ]

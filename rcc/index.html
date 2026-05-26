@@ -24,13 +24,18 @@
     gtag('config', 'G-0PTP2QQ47Q');
   </script>
 <body>
-    <div class="horizontal-scroll-container">
-    </div>
-	<footer>
-		<p>
-		    <!-- <button id="rcc-now-btn" class="button">Now Playing</button> -->
-            <button id="rcc-posters-btn" class="button">Posters</button><button id="rcc-list-btn" class="button">List</button><button id="rcc-stats-btn" class="button">Stats</button>
-		</p>
-	</footer>
+  <main class="rcc-page" id="rcc-page">
+    <header class="rcc-page-header">
+      <h1>Rusty Cinema Club</h1>
+      <div class="rcc-filter-tabs" role="tablist" aria-label="Browse RCC films by year"></div>
+      <label class="rcc-confirmed-toggle" for="rcc-confirmed-toggle">
+        <input type="checkbox" id="rcc-confirmed-toggle" checked />
+        Only show confirmed screenings
+      </label>
+    </header>
+    <section class="rcc-grid" id="rcc-grid" aria-label="RCC film posters"></section>
+    <section class="rcc-stats-accordion" id="rcc-stats" aria-label="RCC statistics"></section>
+  </main>
+  <div id="rcc-lightbox-root"></div>
 <script src="../scripts/rcc.js"></script>
 </html>
