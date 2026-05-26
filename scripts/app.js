@@ -1315,8 +1315,13 @@ const app = {
             if (!app.elements.body.hasClass('dark-mode')) {
                 app.elements.body.addClass('dark-mode');
                 app.elements.darkModeToggle.addClass('selected');
+                app.elements.darkModeToggle.setAttribute("aria-label", "Switch to dark mode");
+                app.elements.darkModeToggle.setAttribute("title", "switch to dark mode");
                 app.toggles.darkMode = true;
                 app.elements.darkModeToggle.html('Dark Mode <img src="./assets/icons/checkbox.svg" alt="Checked checkbox">');
+            } else {
+                app.elements.darkModeToggle.setAttribute("aria-label", "Switch to light mode");
+                app.elements.darkModeToggle.setAttribute("title", "switch to light mode");
             }
         }
         setTimeout(() => {
