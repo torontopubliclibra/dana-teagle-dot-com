@@ -71,7 +71,7 @@ const tplNow = {
             const date = post.date ? `<div class="now-feed-date">&gt; ${post.date}</div>` : '';
             return `<a href="${permalink}" class="now-feed-post">${img}${date}</a>`;
         }).join('');
-        const link = `<a href='/tpl/feed'>more</a> / <a href="/tpl/rss.xml" target="_blank" title="RSS Feed" class="now-rss-icon"><img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon" style="text-decoration: underline;width:12px;"></a>`;
+        const link = `<a href='/tpl/feed'>more</a> / <a href="/tpl/feed.xml" target="_blank" title="RSS Feed" class="now-rss-icon"><img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon" style="text-decoration: underline;width:12px;"></a>`;
         return `<hr>${this.renderSection('latest feed posts', link, feedItems, 'now-feed-scroll', 'id="now-feed-scroll"')}`;
     },
     renderMovies() {
