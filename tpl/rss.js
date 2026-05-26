@@ -1,5 +1,21 @@
 let tplRssFormatter = {
     formattedRss: '',
+    escapeXml: (value) => String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;'),
+    getMimeType: (url) => {
+        const extension = String(url || '').split('.').pop().toLowerCase();
+        const mimeTypes = {
+            jpg: 'image/jpeg',
+            jpeg: 'image/jpeg',
+            png: 'image/png',
+            gif: 'image/gif',
+            webp: 'image/webp',
+            svg: 'image/svg+xml',
+        };
+        return mimeTypes[extension] || 'application/octet-stream';
+    },
     formatDate: (datestamp) => {
         const [day, month, year] = datestamp.split('/').map(Number);
         const fullYear = year < 100 ? 2000 + year : year;
@@ -14,12 +30,10 @@ let tplRssFormatter = {
             let date = Array.isArray(item.date) ? item.date[0] : item.date;
             let formattedDate = tplRssFormatter.formatDate(date);
             let headline = item.alt || '';
-            let imageUrl = item.url;
-            let image = imageUrl.replace(/^\.\//, '');
-            let title = item.alt || '';
-            if (title.includes('&')) {
-                title = title.replace(/&/g, '&amp;');
-            }
+            let imageUrl = item.url || '';
+            let title = tplRssFormatter.escapeXml(headline);
+            let description = headline.replace(/\]\]>/g, ']]&gt;');
+            let enclosureType = tplRssFormatter.getMimeType(imageUrl);
             let permalink = `https://www.torontopubliclibra.com/feed#${item.id}`;
             let formattedItem =
 `<item>
@@ -27,7 +41,8 @@ let tplRssFormatter = {
     <link>${permalink}</link>
     <guid>${permalink}</guid>
     <pubDate>${formattedDate}</pubDate>
-    <description><![CDATA[<img src="${image}" alt="${title}"/><br/>${headline}]]></description>
+    <description><![CDATA[${description}]]></description>
+    <enclosure url="${imageUrl}" type="${enclosureType}"/>
 </item>`;
             formattedItems += formattedItem + '\n';
         });
@@ -35,10 +50,22 @@ let tplRssFormatter = {
     },
     init: () => {
         fetch('../../data/feed.json')
-            .then(response => response.json())
-            .then(data => tplRssFormatter.formatRss(data));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch feed.json: ${response.status} ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => tplRssFormatter.formatRss(data))
+            .catch(error => {
+                console.error('RSS formatter error:', error);
+            });
     },
 };
-document.addEventListener('DOMContentLoaded', function () {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+        tplRssFormatter.init();
+    });
+} else {
     tplRssFormatter.init();
-});
+}
