@@ -273,18 +273,18 @@ h2 {
   font-size: 1.25rem;
   margin-top: -20px;
   padding-top: 20px;
-  scroll-margin-top: 121px;
+  scroll-margin-top: 195px;
 }
 
 #testimonial {
-  scroll-margin-top: 151px;
+  scroll-margin-top: 195px;
 }
 
 #about,
 #gallery,
 #services,
 #projects {
-  scroll-margin-top: 151px;
+  scroll-margin-top: 195px;
 }
 
 cite {
