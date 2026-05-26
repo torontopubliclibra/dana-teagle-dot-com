@@ -186,7 +186,7 @@ fetch('../data/rcc.json')
       prevBtn.className = 'rcc-lightbox-nav rcc-lightbox-nav--prev';
       prevBtn.setAttribute('type', 'button');
       prevBtn.setAttribute('aria-label', 'Previous poster');
-      prevBtn.textContent = '←';
+      prevBtn.innerHTML = '<img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true">';
       const hasPrev = currentIndex > 0;
       prevBtn.disabled = !hasPrev;
       prevBtn.addEventListener('click', () => {
@@ -278,7 +278,7 @@ fetch('../data/rcc.json')
       nextBtn.className = 'rcc-lightbox-nav rcc-lightbox-nav--next';
       nextBtn.setAttribute('type', 'button');
       nextBtn.setAttribute('aria-label', 'Next poster');
-      nextBtn.textContent = '→';
+      nextBtn.innerHTML = '<img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true">';
       const hasNext = currentIndex < activeFilms.length - 1;
       nextBtn.disabled = !hasNext;
       nextBtn.addEventListener('click', () => {
