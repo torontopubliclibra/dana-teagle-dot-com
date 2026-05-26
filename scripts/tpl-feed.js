@@ -13,6 +13,7 @@ const tplFeed = {
     lastScrollPosition: 0,
     lightboxOpenedItemId: '',
     lastOpenedItemId: '',
+    activeTag: '',
     lightboxTouch: {
         startX: 0,
         startY: 0,
@@ -34,6 +35,33 @@ const tplFeed = {
         },
         getRangeEnd(start = tplFeed.range.start) {
             return Math.min(start + FEED_PAGE_SIZE, tplFeed.items.length);
+        },
+        getActiveTag() {
+            const searchParams = new URLSearchParams(window.location.search);
+            const tag = (searchParams.get('tag') || '').trim();
+
+            return tag ? tag.toLowerCase() : '';
+        },
+        updateActiveTagLabel() {
+            const label = $('.feed-tag-label');
+
+            if (!label.length) {
+                return;
+            }
+
+            if (!tplFeed.activeTag) {
+                label.text('').attr('hidden', true);
+                return;
+            }
+
+            label.text(` / ${tplFeed.activeTag}`).removeAttr('hidden');
+        },
+        filterItemsByTag(items, tag) {
+            if (!tag) {
+                return items;
+            }
+
+            return items.filter(item => Array.isArray(item.tags) && item.tags.some(itemTag => String(itemTag).toLowerCase() === tag));
         },
         setRange(start) {
             tplFeed.range.start = Math.max(0, start);
@@ -653,10 +681,15 @@ const tplFeed = {
         },
     },
     init() {
+        tplFeed.activeTag = tplFeed.functions.getActiveTag();
+        tplFeed.functions.updateActiveTagLabel();
+
         fetch('../data/feed.json')
             .then(response => response.json())
             .then(data => {
-                tplFeed.items = Array.isArray(data) ? data : Object.values(data)[0];
+                const feedItems = Array.isArray(data) ? data : Object.values(data)[0];
+                tplFeed.items = tplFeed.functions.filterItemsByTag(feedItems, tplFeed.activeTag);
+                tplFeed.functions.setRange(0);
                 tplFeed.functions.feedDisplay(tplFeed.range.start, tplFeed.range.end);
                 tplFeed.functions.scrollToHash();
             })
