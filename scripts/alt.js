@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       toggle.setAttribute("aria-label", isDarkMode ? "Switch to light mode" : "Switch to dark mode");
+      toggle.setAttribute("title", isDarkMode ? "switch to light mode" : "switch to dark mode");
       if (themeMeta) {
         themeMeta.setAttribute("content", isDarkMode ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
       }
