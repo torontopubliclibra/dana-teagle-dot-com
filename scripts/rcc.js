@@ -160,6 +160,7 @@ fetch('../data/rcc.json')
 
       const panel = document.createElement('div');
       panel.className = 'rcc-lightbox-panel';
+      panel.classList.add('rcc-lightbox-swipe-surface');
 
       const topBar = document.createElement('div');
       topBar.className = 'rcc-lightbox-topbar';
@@ -200,14 +201,13 @@ fetch('../data/rcc.json')
       media.className = 'rcc-lightbox-media';
 
       const mediaPoster = createPosterElement(film, 'rcc-lightbox-poster', 'rcc-lightbox-poster--placeholder');
-      mediaPoster.classList.add('rcc-lightbox-swipe-surface');
 
       let touchStartX = 0;
       let touchStartY = 0;
       let touchDeltaX = 0;
       let isTouchTracking = false;
 
-      mediaPoster.addEventListener('touchstart', event => {
+      panel.addEventListener('touchstart', event => {
         if (event.touches.length !== 1) {
           return;
         }
@@ -217,11 +217,11 @@ fetch('../data/rcc.json')
         touchStartY = touch.clientY;
         touchDeltaX = 0;
         isTouchTracking = true;
-        mediaPoster.classList.add('is-swipe-active');
-        mediaPoster.style.transition = 'none';
+        panel.classList.add('is-swipe-active');
+        panel.style.transition = 'none';
       }, { passive: true });
 
-      mediaPoster.addEventListener('touchmove', event => {
+      panel.addEventListener('touchmove', event => {
         if (!isTouchTracking || event.touches.length !== 1) {
           return;
         }
@@ -234,19 +234,19 @@ fetch('../data/rcc.json')
           event.preventDefault();
           touchDeltaX = deltaX;
           const clampedDelta = Math.max(-72, Math.min(72, deltaX));
-          mediaPoster.style.transform = `translateX(${clampedDelta}px)`;
+          panel.style.transform = `translateX(${clampedDelta}px)`;
         }
       }, { passive: false });
 
-      mediaPoster.addEventListener('touchend', () => {
+      panel.addEventListener('touchend', () => {
         if (!isTouchTracking) {
           return;
         }
 
         isTouchTracking = false;
-        mediaPoster.classList.remove('is-swipe-active');
-        mediaPoster.style.transition = '';
-        mediaPoster.style.transform = '';
+        panel.classList.remove('is-swipe-active');
+        panel.style.transition = '';
+        panel.style.transform = '';
 
         if (Math.abs(touchDeltaX) < 56) {
           return;
@@ -257,6 +257,7 @@ fetch('../data/rcc.json')
         } else if (touchDeltaX > 0 && hasPrev) {
           currentIndex = getPrevIndex();
         } else {
+          closeLightbox();
           return;
         }
 
