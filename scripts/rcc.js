@@ -42,7 +42,7 @@ fetch('../data/rcc.json')
       const [day, month, year] = dateStr.split('-');
       const dateObj = new Date(`${year}-${month}-${day}`);
       if (long) {
-        return `${days[dateObj.getDay()]} ${monthsLong[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
+        return `${days[dateObj.getDay() + 1]} ${monthsLong[parseInt(month, 10) - 1]} ${parseInt(day, 10)}, ${year}`;
       }
       return `${monthsShort[parseInt(month, 10) - 1]} ${parseInt(day, 10)} ${year}`;
     };
@@ -451,7 +451,7 @@ fetch('../data/rcc.json')
 
         const date = document.createElement('p');
         date.className = 'rcc-card-date rcc-card-date--top';
-        date.textContent = formatDate(film.date);
+        date.textContent = formatDate(film.date, true);
 
         const cardPoster = createPosterElement(film, 'rcc-card-poster', 'rcc-card-poster--placeholder');
 
@@ -470,6 +470,7 @@ fetch('../data/rcc.json')
     };
 
     const renderStats = filmsToUse => {
+      const wasOpen = statsMount.querySelector('details.rcc-stats-details')?.open ?? false;
       statsMount.innerHTML = '';
 
       const details = document.createElement('details');
@@ -601,6 +602,7 @@ fetch('../data/rcc.json')
 
       details.appendChild(statsContent);
       statsMount.appendChild(details);
+      details.open = wasOpen;
     };
 
     filterTabsContainer.addEventListener('click', event => {

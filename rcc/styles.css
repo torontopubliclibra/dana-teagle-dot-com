@@ -65,35 +65,44 @@ hr {
 .rcc-page-header {
   margin-bottom: 0.5rem;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(192, 197, 210, 0.18);
-  background: rgba(26, 29, 30, 0.75);
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 0.75rem;
 }
 
 .rcc-page-header h1 {
   font-family: "Rockwell Regular", serif;
   font-weight: normal;
-  font-style: italic;
+  text-align: center;
   margin: 0;
-  font-size: 2.6rem;
+  font-size: 4rem;
   letter-spacing: 0.06em;
+  text-shadow: 2px 2px 0 rgba(73, 78, 88, 0.24);
   text-transform: uppercase;
+  transform: perspective(200px) rotateX(6deg);
   color: #d1d5df;
   margin-top: -0.25rem;
   margin-bottom: -0.5rem;
 }
 
+@media only screen and (max-width: 900px) {
+  .rcc-page-header h1 {
+    font-size: 3rem;
+    margin-bottom: -0.25rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .rcc-page-header h1 {
-    font-size: 1.6rem;
+    font-size: 2.25rem;
+    margin-bottom: -0.25rem;
   }
 }
 
 .rcc-filter-tabs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -131,13 +140,20 @@ hr {
 }
 
 .rcc-confirmed-toggle {
+  width: auto;
+  margin: 0 auto;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 0.5rem;
   font-size: 0.78rem;
   color: #aeb5c4;
   cursor: pointer;
   user-select: none;
+}
+
+.rcc-confirmed-toggle:hover {
+    font-style: italic;
 }
 
 .rcc-confirmed-toggle input {
@@ -163,7 +179,10 @@ hr {
 }
 
 .rcc-grid {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
   gap: 0.75rem;
 }
@@ -171,6 +190,8 @@ hr {
 .rcc-card {
   font-family: "Source Code Pro", monospace;
   display: flex;
+  max-width: 18%;
+  width: 100%;
   flex-direction: column;
   appearance: none;
   border: 1px solid rgba(192, 197, 210, 0.2);
@@ -266,7 +287,8 @@ hr {
 }
 
 .rcc-stats-accordion {
-  margin-top: 0.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .rcc-stats-details {
@@ -285,6 +307,7 @@ hr {
   letter-spacing: 0.08em;
   background: rgba(53, 45, 53, 0.8);
   color: #d1d5df;
+  text-align: center;
 }
 
 .rcc-stats-summary::-webkit-details-marker {
@@ -403,7 +426,7 @@ hr {
   display: grid;
   grid-template-columns: 46px minmax(0, 1fr) 46px;
   align-items: stretch;
-  gap: 1rem;
+  gap: 0.25rem;
   padding: 1rem;
   min-height: 0;
 }
@@ -415,8 +438,8 @@ hr {
   color: #c0c5d2;
   cursor: pointer;
   font-size: 1rem;
-  min-height: 44px;
-  width: 100%;
+  height: 35px;
+  width: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,6 +522,10 @@ hr {
 }
 
 @media only screen and (max-width: 980px) {
+  .rcc-card {
+    max-width: calc(30% - 0.5rem);
+  }
+
   .rcc-lightbox-panel {
     width: min(760px, calc(100vw - 18px));
     max-height: calc(100dvh - 18px);
@@ -540,6 +567,10 @@ hr {
   .rcc-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+  }
+
+  .rcc-card {
+    max-width: calc(50% - 0.5rem);
   }
 
   .rcc-card-title {
