@@ -85,9 +85,9 @@ const app = {
             app.elements.darkModeToggle.toggleClass('selected');
             app.toggles.darkMode = !app.toggles.darkMode;
             if (app.toggles.darkMode === true) {
-                app.elements.darkModeToggle.html('<img src="./assets/icons/cloud.svg" alt="Light mode icon">');
+                app.elements.darkModeToggle.html('<img src="./assets/icons/cloud.svg" alt="Light mode icon" aria-label="Switch to light mode" title="switch to light mode">');
             } else {
-                app.elements.darkModeToggle.html('<img src="./assets/icons/dark.svg" alt="Dark mode icon">');
+                app.elements.darkModeToggle.html('<img src="./assets/icons/dark.svg" alt="Dark mode icon" aria-label="Switch to dark mode" title="switch to dark mode">');
             }
             localStorage['dark-mode'] = `${app.toggles.darkMode}`;
         },
@@ -1315,13 +1315,8 @@ const app = {
             if (!app.elements.body.hasClass('dark-mode')) {
                 app.elements.body.addClass('dark-mode');
                 app.elements.darkModeToggle.addClass('selected');
-                app.elements.darkModeToggle.setAttribute("aria-label", "Switch to dark mode");
-                app.elements.darkModeToggle.setAttribute("title", "switch to dark mode");
                 app.toggles.darkMode = true;
                 app.elements.darkModeToggle.html('Dark Mode <img src="./assets/icons/checkbox.svg" alt="Checked checkbox">');
-            } else {
-                app.elements.darkModeToggle.setAttribute("aria-label", "Switch to light mode");
-                app.elements.darkModeToggle.setAttribute("title", "switch to light mode");
             }
         }
         setTimeout(() => {
