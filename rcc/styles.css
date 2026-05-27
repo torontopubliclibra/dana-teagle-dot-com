@@ -147,7 +147,7 @@ hr {
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: #aeb5c4;
   cursor: pointer;
   user-select: none;
@@ -236,6 +236,7 @@ hr {
   font-size: 0.84rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-style: italic;
   font-family: "Rockwell Regular", serif;
   color: #9097a8;
   border-top: 1px solid rgba(192, 197, 210, 0.1);
@@ -332,7 +333,7 @@ hr {
 
 .rcc-stats-block h2 {
   margin: 0 0 5px;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: #d1d5df;
 }
 
@@ -365,7 +366,6 @@ hr {
 }
 
 .rcc-nominees {
-  font-size: 0.85em;
   color: #b7b7b7;
 }
 
@@ -403,9 +403,15 @@ hr {
 
 .rcc-lightbox-count {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
   color: #d1d5df;
+}
+
+@media only screen and (max-width: 600px) {
+  .rcc-lightbox-count {
+    font-size: 0.75rem;
+  }
 }
 
 .rcc-lightbox-close {
@@ -505,6 +511,7 @@ hr {
   font-size: clamp(1rem, 1.8vw, 1.5rem);
   letter-spacing: 0.22em;
   text-transform: uppercase;
+  font-style: italic;
   color: #9ca3b3;
   background:
     repeating-linear-gradient(

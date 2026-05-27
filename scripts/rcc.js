@@ -65,19 +65,16 @@ fetch('../data/rcc.json')
 
     const getFullInfoHTML = film => {
       let infoText = '';
-      infoText += `<strong>${formatDate(film.date, true)} //</strong><br/>`;
 
       if (film.series) {
-        infoText += `<em class="rcc-series-title">${film.series}:</em><br/>`;
+        infoText += `<em class="rcc-series-title">${film.series}</em><hr/>`;
       }
 
       if (film.title === 'TBD') {
         infoText += 'TBD<br/>';
         if (Array.isArray(film.nominees) && film.nominees.length > 0) {
-          infoText += `<span class="rcc-nominees">Nominees: ${film.nominees.join(', ')}</span><br/>`;
+          infoText += `<hr/><span class="rcc-nominees">Nominees: ${film.nominees.join(', ')}</span><br/>`;
         }
-      } else {
-        infoText += `<a href="${film.link}" target="_blank" rel="noreferrer" class="rcc-link--full">${film.title}</a>${film.year ? ` (${film.year})` : ''}<br/>`;
       }
 
       if (
@@ -86,10 +83,10 @@ fetch('../data/rcc.json')
         film.writer.length === 1 &&
         film.writer[0] === film.director
       ) {
-        infoText += `<hr/>Written and Directed by: ${film.director}<br/>`;
+        infoText += `Written and Directed by: ${film.director}<br/>`;
       } else {
         if (film.director) {
-          infoText += `<hr/>Directed by: ${film.director}<br/>`;
+          infoText += `Directed by: ${film.director}<br/>`;
         }
         if (Array.isArray(film.writer) && film.writer.length > 0) {
           infoText += `Written by: ${film.writer.join(', ')}<br/>`;
@@ -102,7 +99,10 @@ fetch('../data/rcc.json')
 
       if (film.runtime) {
         const languages = Array.isArray(film.languages) ? film.languages.join(', ') : '';
-        infoText += `<hr/>${film.runtime} mins${languages ? ` | ${languages}` : ''}<br/>`;
+        const letterboxdLink = film.link
+          ? ` | <a href="${film.link}" target="_blank" rel="noreferrer" class="rcc-link--full">View on Letterboxd</a>`
+          : '';
+        infoText += `<hr/>${film.runtime} mins${languages ? ` | ${languages}` : ''}${letterboxdLink}<br/>`;
       }
 
       return infoText;
@@ -167,7 +167,11 @@ fetch('../data/rcc.json')
 
       const counter = document.createElement('p');
       counter.className = 'rcc-lightbox-count';
-      counter.textContent = `${currentIndex + 1} of ${activeFilms.length}`;
+      const releaseYear = film.year ? ` (${film.year})` : '';
+      const formattedDate = film.date ? formatDate(film.date, true) : '';
+      counter.textContent = formattedDate
+        ? `${film.title}${releaseYear} // ${formattedDate}`
+        : `${film.title}${releaseYear}`;
 
       const closeBtn = document.createElement('button');
       closeBtn.className = 'rcc-lightbox-close';
