@@ -486,7 +486,7 @@ hr {
   width: 90vw;
   max-width: 90vw;
   max-height: 90vh;
-  height: 90%;
+  height: auto;
   display: flex;
   flex-direction: column;
   background: #1d2122;
@@ -698,6 +698,7 @@ hr {
   .rcc-lightbox-panel {
     width: min(520px, calc(100vw - 12px));
     max-height: auto;
+    height: 90%;
   }
 
   .rcc-lightbox-poster {
