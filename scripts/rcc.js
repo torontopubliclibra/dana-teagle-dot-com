@@ -176,8 +176,8 @@ fetch('../data/rcc.json')
       counter.className = 'rcc-lightbox-count';
       const releaseYear = film.year ? ` (${film.year})` : '';
       const formattedDate = film.date ? formatDate(film.date, true) : '';
-      counter.textContent = formattedDate
-        ? `${film.title}${releaseYear} // ${formattedDate}`
+      counter.innerHTML = formattedDate
+        ? `${formattedDate} // <br/>${film.title}${releaseYear}`
         : `${film.title}${releaseYear}`;
 
       const closeBtn = document.createElement('button');
