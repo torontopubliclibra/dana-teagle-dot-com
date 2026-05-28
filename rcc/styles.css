@@ -485,7 +485,7 @@ hr {
   width: 90vw;
   max-width: 90vw;
   max-height: 90vh;
-  height: 90vh;
+  height: 90%;
   display: flex;
   flex-direction: column;
   background: #1d2122;
@@ -591,6 +591,12 @@ hr {
   object-fit: contain;
   background: #151819;
   border: 1px solid rgba(192, 197, 210, 0.15);
+}
+
+@media only screen and (max-width: 600px) {
+  .rcc-lightbox-poster {
+    max-height: none;
+  }
 }
 
 .rcc-lightbox-swipe-surface {
