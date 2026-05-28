@@ -462,7 +462,7 @@ fetch('../data/rcc.json')
 
         const date = document.createElement('p');
         date.className = 'rcc-card-date rcc-card-date--top';
-        date.textContent = formatDate(film.date, true);
+        date.textContent = formatDate(film.date);
 
         const cardPoster = createPosterElement(film, 'rcc-card-poster', 'rcc-card-poster--placeholder');
 
