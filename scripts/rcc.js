@@ -4,12 +4,19 @@ fetch('../data/rcc.json')
     const grid = document.getElementById('rcc-grid');
     const statsMount = document.getElementById('rcc-stats');
     const lightboxRoot = document.getElementById('rcc-lightbox-root');
+    const page = document.getElementById('rcc-page');
+    const accessGate = document.getElementById('rcc-access-gate');
+    const passwordInput = document.getElementById('rcc-password');
+    const accessMessage = document.getElementById('rcc-access-message');
     const confirmedToggle = document.getElementById('rcc-confirmed-toggle');
     const filterTabsContainer = document.querySelector('.rcc-filter-tabs');
 
-    if (!grid || !statsMount || !lightboxRoot || !data.rcc || !filterTabsContainer) {
+    if (!grid || !statsMount || !lightboxRoot || !page || !data.rcc || !filterTabsContainer) {
       return;
     }
+
+    const ACCESS_STORAGE_KEY = 'rccAccessGranted';
+    const ACCESS_PASSWORD = 'popcorn';
 
     const films = data.rcc;
     const cardFilms = films.filter(film => film.poster || film.title === 'TBD');
@@ -473,6 +480,43 @@ fetch('../data/rcc.json')
       renderStats(activeFilms);
     };
 
+    let hasRenderedContent = false;
+
+    const renderContent = () => {
+      if (hasRenderedContent) {
+        return;
+      }
+
+      renderFilterTabs();
+      syncFilterTabs();
+      renderGrid();
+      hasRenderedContent = true;
+    };
+
+    const getStoredAccess = () => {
+      try {
+        return window.localStorage.getItem(ACCESS_STORAGE_KEY) === 'true';
+      } catch {
+        return false;
+      }
+    };
+
+    const setStoredAccess = value => {
+      try {
+        window.localStorage.setItem(ACCESS_STORAGE_KEY, value ? 'true' : 'false');
+      } catch {
+        // Ignore localStorage write errors and keep current session usable.
+      }
+    };
+
+    const unlockPage = () => {
+      page.classList.remove('is-locked');
+      if (accessGate) {
+        accessGate.hidden = true;
+      }
+      renderContent();
+    };
+
     const renderStats = filmsToUse => {
       const wasOpen = statsMount.querySelector('details.rcc-stats-details')?.open ?? false;
       statsMount.innerHTML = '';
@@ -633,8 +677,47 @@ fetch('../data/rcc.json')
       });
     }
 
-    renderFilterTabs();
-    syncFilterTabs();
-    renderGrid();
+    if (accessGate) {
+      accessGate.addEventListener('submit', event => {
+        event.preventDefault();
+
+        if (!passwordInput) {
+          return;
+        }
+
+        const password = passwordInput.value.trim();
+        if (password !== ACCESS_PASSWORD) {
+          if (accessMessage) {
+            accessMessage.textContent = 'Incorrect password.';
+            accessMessage.classList.add('is-error');
+          }
+          passwordInput.select();
+          return;
+        }
+
+        setStoredAccess(true);
+        if (accessMessage) {
+          accessMessage.textContent = '';
+          accessMessage.classList.remove('is-error');
+        }
+        passwordInput.value = '';
+        unlockPage();
+      });
+    }
+
+    if (getStoredAccess()) {
+      unlockPage();
+    } else {
+      page.classList.add('is-locked');
+      if (accessGate) {
+        accessGate.hidden = false;
+      }
+      if (accessMessage) {
+        accessMessage.textContent = '';
+      }
+      if (passwordInput) {
+        passwordInput.focus();
+      }
+    }
 
   });

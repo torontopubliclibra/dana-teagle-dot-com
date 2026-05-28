@@ -62,12 +62,89 @@ hr {
   padding: 1rem 0;
 }
 
+.rcc-page.is-locked .rcc-filter-tabs,
+.rcc-page.is-locked .rcc-confirmed-toggle,
+.rcc-page.is-locked .rcc-grid,
+.rcc-page.is-locked .rcc-stats-accordion {
+  display: none;
+}
+
 .rcc-page-header {
   margin-bottom: 0.5rem;
   padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.rcc-access-gate {
+  margin: 0 auto;
+  width: min(420px, 100%);
+  padding: 0.75rem 1.75rem;
+  padding-top: 1.25rem;
+  border: 1px solid rgba(192, 197, 210, 0.3);
+  background: rgba(30, 33, 35, 0.92);
+}
+
+.rcc-access-gate label {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d1d5df;
+  text-align: center;
+}
+
+.rcc-access-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rcc-access-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgba(192, 197, 210, 0.35);
+  background: rgba(24, 27, 28, 0.92);
+  color: #d1d5df;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.625rem;
+}
+
+.rcc-access-input:focus-visible {
+  outline: 2px solid #7ba0cf;
+  outline-offset: 1px;
+}
+
+.rcc-access-button {
+  appearance: none;
+  border: 1px solid rgba(123, 160, 207, 0.8);
+  background: rgba(53, 45, 53, 0.82);
+  color: #d1d5df;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+
+.rcc-access-button:hover,
+.rcc-access-button:focus-visible {
+  background: rgba(74, 58, 74, 0.86);
+}
+
+.rcc-access-message {
+  min-height: 1.25rem;
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aeb5c4;
+}
+
+.rcc-access-message.is-error {
+  color: #e1a9a9;
 }
 
 .rcc-page-header h1 {
@@ -85,6 +162,20 @@ hr {
   margin-bottom: -0.5rem;
 }
 
+.rcc-page-header h2 {
+  font-family: "Rockwell Regular", serif;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  text-shadow: 2px 2px 0 rgba(73, 78, 88, 0.24);
+  text-transform: uppercase;
+  color: #d1d5df;
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+}
+
 @media only screen and (max-width: 900px) {
   .rcc-page-header h1 {
     font-size: 2.75rem;
@@ -97,6 +188,18 @@ hr {
   .rcc-page-header h1 {
     font-size: 1.6rem;
     margin: 0;
+  }
+
+  .rcc-page-header h2 {
+    font-size: 0.95rem;
+  }
+
+  .rcc-access-controls {
+    flex-direction: column;
+  }
+
+  .rcc-access-button {
+    width: 100%;
   }
 }
 
@@ -154,7 +257,7 @@ hr {
 }
 
 .rcc-confirmed-toggle:hover {
-    font-style: italic;
+  font-style: italic;
 }
 
 .rcc-confirmed-toggle input {
@@ -184,7 +287,6 @@ hr {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
   gap: 0.75rem;
 }
 
@@ -242,13 +344,11 @@ hr {
   border-top: 1px solid rgba(192, 197, 210, 0.1);
   border-bottom: 1px solid rgba(192, 197, 210, 0.1);
   background:
-    repeating-linear-gradient(
-      -45deg,
+    repeating-linear-gradient(-45deg,
       rgba(73, 78, 88, 0.22) 0,
       rgba(73, 78, 88, 0.22) 10px,
       rgba(40, 44, 49, 0.6) 10px,
-      rgba(40, 44, 49, 0.6) 20px
-    ),
+      rgba(40, 44, 49, 0.6) 20px),
     #1a1d1e;
 }
 
@@ -514,13 +614,11 @@ hr {
   font-style: italic;
   color: #9ca3b3;
   background:
-    repeating-linear-gradient(
-      -45deg,
+    repeating-linear-gradient(-45deg,
       rgba(73, 78, 88, 0.24) 0,
       rgba(73, 78, 88, 0.24) 14px,
       rgba(30, 34, 38, 0.72) 14px,
-      rgba(30, 34, 38, 0.72) 28px
-    ),
+      rgba(30, 34, 38, 0.72) 28px),
     #151819;
 }
 
@@ -613,10 +711,11 @@ hr {
     font-size: 0.85rem;
     padding-top: 0;
   }
+
   .rcc-card:hover,
-    .rcc-card:focus-visible {
-        transform: none;
-        border: 1px solid rgba(192, 197, 210, 0.2);
-        background: #202425;
-    }
+  .rcc-card:focus-visible {
+    transform: none;
+    border: 1px solid rgba(192, 197, 210, 0.2);
+    background: #202425;
+  }
 }

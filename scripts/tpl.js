@@ -202,8 +202,14 @@ function buildCategoryNavLink(category) {
 }
 
 function buildLinkCard(link, categoryTag) {
+    const isDtDotCom = link.title === "dana teagle dot com";
+    const isIdGuide = link.title === "I.D. Guide";
+    const isRustprop = link.title === "RUSTPROP";
+    const dtDotComClass = isDtDotCom ? " dt-dot-com-link" : "";
+    const idGuideClass = isIdGuide ? " id-guide-link" : "";
+    const rustpropClass = isRustprop ? " rustprop-link" : "";
     const description = link.description ? `<hr/><p class="button-description">${link.description}</p>` : "";
-    return `<a class="button tpl-link ${categoryTag}" href="${link.link}" target="_blank"><span class="link-title"><p class="button-label">${link.title}</p><img src="../assets/icons/external-link.svg" alt="external link icon"></span>${description}</a>`;
+    return `<a class="button tpl-link ${categoryTag}${dtDotComClass}${idGuideClass}${rustpropClass}" href="${link.link}" target="_blank"><span class="link-title"><p class="button-label">${link.title}</p><img src="../assets/icons/external-link.svg" alt="external link icon"></span>${description}</a>`;
 }
 
 function buildCategorySection(category, links, index) {

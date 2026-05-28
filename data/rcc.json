@@ -5,12 +5,21 @@
             "title": "Alice (Něco z Alenky)",
             "year": 1988,
             "director": "Jan Švankmajer",
-            "writer": ["Jan Švankmajer", "Lewis Carroll"],
-            "poster": "/rcc/alice.png",
+            "writer": [
+                "Jan Švankmajer",
+                "Lewis Carroll"
+            ],
+            "poster": "/rcc/posters/alice.png",
             "link": "https://letterboxd.com/film/alice-1988/",
-            "country": ["Czech"],
-            "languages": ["Czech"],
-            "cast": ["Kristýna Kohoutová"],
+            "country": [
+                "Czech"
+            ],
+            "languages": [
+                "Czech"
+            ],
+            "cast": [
+                "Kristýna Kohoutová"
+            ],
             "runtime": 86
         },
         {
@@ -18,12 +27,29 @@
             "title": "Bound",
             "year": 1996,
             "director": "Lana Wachowski, Lilly Wachowski",
-            "writer": ["Lana Wachowski", "Lilly Wachowski"],
-            "poster": "/rcc/bound.png",
-            "link": "https://letterboxd.com/film/bound-1996/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Jennifer Tilly", "Gina Gershon", "Joe Pantoliano", "Christopher Meloni", "Richard C. Sarafian", "Barry Kivel", "Mary Mara", "Margaret Smith", "Susie Bright"],
+            "writer": [
+                "Lana Wachowski",
+                "Lilly Wachowski"
+            ],
+            "poster": "/rcc/posters/bound.png",
+            "link": "https://letterboxd.com/film/bound/",
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Jennifer Tilly",
+                "Gina Gershon",
+                "Joe Pantoliano",
+                "Christopher Meloni",
+                "Richard C. Sarafian",
+                "Barry Kivel",
+                "Mary Mara",
+                "Margaret Smith",
+                "Susie Bright"
+            ],
             "runtime": 105
         },
         {
@@ -31,12 +57,28 @@
             "title": "Crash",
             "year": 1996,
             "director": "David Cronenberg",
-            "writer": ["J.G. Ballard", "David Cronenberg"],
-            "poster": "/rcc/crash.png",
-            "link": "https://letterboxd.com/film/crash-1996/",
-            "country": ["Canadian", "British"],
-            "languages": ["English"],
-            "cast": ["James Spader", "Holly Hunter", "Elias Koteas", "Deborah Kara Unger", "Rosanna Arquette", "Peter MacNeill", "Cheryl Swarts"],
+            "writer": [
+                "J.G. Ballard",
+                "David Cronenberg"
+            ],
+            "poster": "/rcc/posters/crash.png",
+            "link": "https://letterboxd.com/film/crash/",
+            "country": [
+                "Canadian",
+                "British"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "James Spader",
+                "Holly Hunter",
+                "Elias Koteas",
+                "Deborah Kara Unger",
+                "Rosanna Arquette",
+                "Peter MacNeill",
+                "Cheryl Swarts"
+            ],
             "runtime": 100
         },
         {
@@ -44,12 +86,27 @@
             "title": "Shallow Grave",
             "year": 1994,
             "director": "Danny Boyle",
-            "writer": ["John Hodge"],
-            "poster": "/rcc/shallowgrave.png",
+            "writer": [
+                "John Hodge"
+            ],
+            "poster": "/rcc/posters/shallowgrave.png",
             "link": "https://letterboxd.com/film/shallow-grave/",
-            "country": ["British"],
-            "languages": ["English"],
-            "cast": ["Ewan McGregor", "Kerry Fox", "Christopher Eccleston", "Ken Stott", "Lesley Sharp", "Peter Mullan", "Tony Curran", "Gary Lewis"],
+            "country": [
+                "British"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Ewan McGregor",
+                "Kerry Fox",
+                "Christopher Eccleston",
+                "Ken Stott",
+                "Lesley Sharp",
+                "Peter Mullan",
+                "Tony Curran",
+                "Gary Lewis"
+            ],
             "runtime": 93
         },
         {
@@ -57,12 +114,29 @@
             "title": "Blue Velvet",
             "year": 1986,
             "director": "David Lynch",
-            "writer": ["David Lynch", "Barry Gifford"],
-            "poster": "/rcc/bluevelvet.png",
+            "writer": [
+                "David Lynch",
+                "Barry Gifford"
+            ],
+            "poster": "/rcc/posters/bluevelvet.png",
             "link": "https://letterboxd.com/film/blue-velvet/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Kyle MacLachlan", "Isabella Rossellini", "Dennis Hopper", "Laura Dern", "Hope Lange", "Dean Stockwell", "George Dickerson", "Jack Nance", "Priscilla Pointer"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Kyle MacLachlan",
+                "Isabella Rossellini",
+                "Dennis Hopper",
+                "Laura Dern",
+                "Hope Lange",
+                "Dean Stockwell",
+                "George Dickerson",
+                "Jack Nance",
+                "Priscilla Pointer"
+            ],
             "runtime": 120,
             "series": "In Tribute to David Lynch"
         },
@@ -71,12 +145,29 @@
             "title": "Tokyo Drifter",
             "year": 1966,
             "director": "Seijun Suzuki",
-            "writer": ["Seijun Suzuki", "Yoshiyuki Fukuda"],
-            "poster": "/rcc/tokyodrifter.png",
+            "writer": [
+                "Seijun Suzuki",
+                "Yoshiyuki Fukuda"
+            ],
+            "poster": "/rcc/posters/tokyodrifter.png",
             "link": "https://letterboxd.com/film/tokyo-drifter/",
-            "country": ["Japanese"],
-            "languages": ["Japanese"],
-            "cast": ["Tetsuya Watari", "Chieko Matsubara", "Hideaki Nitani", "Tamio Kawachi", "Tomoko Hamakawa", "Takeshi Yoshida", "Isao Tamagawa", "Eiji Go", "Eitmei Esumi"],
+            "country": [
+                "Japanese"
+            ],
+            "languages": [
+                "Japanese"
+            ],
+            "cast": [
+                "Tetsuya Watari",
+                "Chieko Matsubara",
+                "Hideaki Nitani",
+                "Tamio Kawachi",
+                "Tomoko Hamakawa",
+                "Takeshi Yoshida",
+                "Isao Tamagawa",
+                "Eiji Go",
+                "Eitmei Esumi"
+            ],
             "runtime": 83
         },
         {
@@ -84,12 +175,31 @@
             "title": "Tout va Bien",
             "year": 1972,
             "director": "Jean-Luc Godard",
-            "writer": ["Jean-Luc Godard", "Jean-Pierre Gorin"],
-            "poster": "/rcc/toutvabien.png",
+            "writer": [
+                "Jean-Luc Godard",
+                "Jean-Pierre Gorin"
+            ],
+            "poster": "/rcc/posters/toutvabien.png",
             "link": "https://letterboxd.com/film/tout-va-bien/",
-            "country": ["French", "Italian"],
-            "languages": ["French", "English"],
-            "cast": ["Jane Fonda", "Yves Montand", "Vittorio Caprioli", "Elizabeth Chauvin", "Castel Casti", "Louis Bugette", "Yves Gabrielli", "Pierre Oudrey", "Jean Pignol"],
+            "country": [
+                "French",
+                "Italian"
+            ],
+            "languages": [
+                "French",
+                "English"
+            ],
+            "cast": [
+                "Jane Fonda",
+                "Yves Montand",
+                "Vittorio Caprioli",
+                "Elizabeth Chauvin",
+                "Castel Casti",
+                "Louis Bugette",
+                "Yves Gabrielli",
+                "Pierre Oudrey",
+                "Jean Pignol"
+            ],
             "runtime": 95
         },
         {
@@ -97,12 +207,29 @@
             "title": "Sunset Boulevard",
             "year": 1950,
             "director": "Billy Wilder",
-            "writer": ["Charles Brackett", "Billy Wilder", "D.M. Marshman Jr."],
-            "poster": "/rcc/sunsetboulevard.png",
+            "writer": [
+                "Charles Brackett",
+                "Billy Wilder",
+                "D.M. Marshman Jr."
+            ],
+            "poster": "/rcc/posters/sunsetboulevard.png",
             "link": "https://letterboxd.com/film/sunset-boulevard/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["William Holden", "Gloria Swanson", "Erich von Stroheim", "Nancy Olson", "Fred Clark", "Jack Webb", "Barbara Lawrence", "Lloyd Gough"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "William Holden",
+                "Gloria Swanson",
+                "Erich von Stroheim",
+                "Nancy Olson",
+                "Fred Clark",
+                "Jack Webb",
+                "Barbara Lawrence",
+                "Lloyd Gough"
+            ],
             "runtime": 110
         },
         {
@@ -110,12 +237,31 @@
             "title": "Pride",
             "year": 2014,
             "director": "Matthew Warchus",
-            "writer": ["Stephen Beresford"],
-            "poster": "/rcc/pride.png",
-            "link": "https://letterboxd.com/film/pride/",
-            "country": ["British"],
-            "languages": ["English"],
-            "cast": ["Joseph Gilgun", "George MacKay", "Freddie Fox", "Bill Nighy", "Imelda Staunton", "Dominic West", "Andrew Scott", "Ben Schnetzer", "Faye Marsay", "Jessica Gunning", "Clive Rowe", "Liz White"],
+            "writer": [
+                "Stephen Beresford"
+            ],
+            "poster": "/rcc/posters/pride.png",
+            "link": "https://letterboxd.com/film/pride-2014/",
+            "country": [
+                "British"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Joseph Gilgun",
+                "George MacKay",
+                "Freddie Fox",
+                "Bill Nighy",
+                "Imelda Staunton",
+                "Dominic West",
+                "Andrew Scott",
+                "Ben Schnetzer",
+                "Faye Marsay",
+                "Jessica Gunning",
+                "Clive Rowe",
+                "Liz White"
+            ],
             "runtime": 120
         },
         {
@@ -123,12 +269,29 @@
             "title": "Showgirls",
             "year": 1995,
             "director": "Paul Verhoeven",
-            "writer": ["Joe Eszterhas"],
-            "poster": "/rcc/showgirls.png",
+            "writer": [
+                "Joe Eszterhas"
+            ],
+            "poster": "/rcc/posters/showgirls.png",
             "link": "https://letterboxd.com/film/showgirls/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Elizabeth Berkley", "Gina Gershon", "Kyle MacLachlan", "Glenn Plummer", "Robert Davi", "Alan Rachins", "Gina Ravera", "Lin Tucci", "Greg Travis", "Al Ruscio"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Elizabeth Berkley",
+                "Gina Gershon",
+                "Kyle MacLachlan",
+                "Glenn Plummer",
+                "Robert Davi",
+                "Alan Rachins",
+                "Gina Ravera",
+                "Lin Tucci",
+                "Greg Travis",
+                "Al Ruscio"
+            ],
             "runtime": 131
         },
         {
@@ -136,12 +299,29 @@
             "title": "The Living End",
             "year": 1992,
             "director": "Gregg Araki",
-            "writer": ["Gregg Araki"],
-            "poster": "/rcc/thelivingend.png",
+            "writer": [
+                "Gregg Araki"
+            ],
+            "poster": "/rcc/posters/thelivingend.png",
             "link": "https://letterboxd.com/film/the-living-end/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Mike Dytri", "Craig Gilmore", "Mark Finch", "Mary Woronov", "Johanna Went", "Darcy Marta", "Scott Goetz", "Brett Vail", "Nicole Dillenberg", "Stephen Holman"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Mike Dytri",
+                "Craig Gilmore",
+                "Mark Finch",
+                "Mary Woronov",
+                "Johanna Went",
+                "Darcy Marta",
+                "Scott Goetz",
+                "Brett Vail",
+                "Nicole Dillenberg",
+                "Stephen Holman"
+            ],
             "runtime": 85
         },
         {
@@ -149,12 +329,29 @@
             "title": "Love Lies Bleeding",
             "year": 2024,
             "director": "Rose Glass",
-            "writer": ["Rose Glass"],
-            "poster": "/rcc/loveliesbleeding.png",
-            "link": "https://letterboxd.com/film/love-lies-bleeding/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Kristen Stewart", "Katy O'Brian", "Ed Harris", "Dave Franco", "Jena Malone", "Anna Baryshnikov", "Orion Carrington", "Matthew Blood-Smyth", "David DeLao", "Hilary Fleming"],
+            "writer": [
+                "Rose Glass"
+            ],
+            "poster": "/rcc/posters/loveliesbleeding.png",
+            "link": "https://letterboxd.com/film/love-lies-bleeding-2024/",
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Kristen Stewart",
+                "Katy O'Brian",
+                "Ed Harris",
+                "Dave Franco",
+                "Jena Malone",
+                "Anna Baryshnikov",
+                "Orion Carrington",
+                "Matthew Blood-Smyth",
+                "David DeLao",
+                "Hilary Fleming"
+            ],
             "runtime": 104
         },
         {
@@ -162,12 +359,29 @@
             "title": "How to Blow Up a Pipeline",
             "year": 2022,
             "director": "Daniel Goldhaber",
-            "writer": ["Daniel Goldhaber"],
-            "poster": "/rcc/howtoblowupapipeline.png",
+            "writer": [
+                "Daniel Goldhaber"
+            ],
+            "poster": "/rcc/posters/howtoblowupapipeline.png",
             "link": "https://letterboxd.com/film/how-to-blow-up-a-pipeline/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Ariela Barer", "Kristine Froseth", "Lukas Gage", "Forrest Goodluck", "Sasha Lane", "Jayme Lawson", "Marcus Scribner", "Jake Weary", "Irene Bedard", "Olive Jane Lorraine"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Ariela Barer",
+                "Kristine Froseth",
+                "Lukas Gage",
+                "Forrest Goodluck",
+                "Sasha Lane",
+                "Jayme Lawson",
+                "Marcus Scribner",
+                "Jake Weary",
+                "Irene Bedard",
+                "Olive Jane Lorraine"
+            ],
             "runtime": 104
         },
         {
@@ -175,12 +389,27 @@
             "title": "Xanadu",
             "year": 1980,
             "director": "Robert Greenwald",
-            "writer": ["Douglas McGrath"],
-            "poster": "/rcc/xanadu.png",
+            "writer": [
+                "Douglas McGrath"
+            ],
+            "poster": "/rcc/posters/xanadu.png",
             "link": "https://letterboxd.com/film/xanadu/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Olivia Newton-John", "Gene Kelly", "Michael Beck", "James Sloyan", "Katie Hanley", "Fred McCarren", "Ren Woods", "Dimitra Arliss"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Olivia Newton-John",
+                "Gene Kelly",
+                "Michael Beck",
+                "James Sloyan",
+                "Katie Hanley",
+                "Fred McCarren",
+                "Ren Woods",
+                "Dimitra Arliss"
+            ],
             "runtime": 96
         },
         {
@@ -188,12 +417,24 @@
             "title": "Persona",
             "year": 1966,
             "director": "Ingmar Bergman",
-            "writer": ["Ingmar Bergman"],
-            "poster": "/rcc/persona.png",
+            "writer": [
+                "Ingmar Bergman"
+            ],
+            "poster": "/rcc/posters/persona.png",
             "link": "https://letterboxd.com/film/persona/",
-            "country": ["Swedish"],
-            "languages": ["Swedish"],
-            "cast": ["Bibi Andersson", "Liv Ullmann", "Margaretha Krook", "Gunnar Björnstrand", "Jörgen Lindström"],
+            "country": [
+                "Swedish"
+            ],
+            "languages": [
+                "Swedish"
+            ],
+            "cast": [
+                "Bibi Andersson",
+                "Liv Ullmann",
+                "Margaretha Krook",
+                "Gunnar Björnstrand",
+                "Jörgen Lindström"
+            ],
             "runtime": 84
         },
         {
@@ -201,12 +442,28 @@
             "title": "Let the Right One In",
             "year": 2008,
             "director": "Tomas Alfredson",
-            "writer": ["John Ajvide Lindqvist"],
-            "poster": "/rcc/lettherightonein.png",
+            "writer": [
+                "John Ajvide Lindqvist"
+            ],
+            "poster": "/rcc/posters/lettherightonein.png",
             "link": "https://letterboxd.com/film/let-the-right-one-in/",
-            "country": ["Swedish"],
-            "languages": ["Swedish"],
-            "cast": ["Kåre Hedebrant", "Lina Leandersson", "Per Ragnar", "Henrik Dahl", "Karin Bergquist", "Peter Carlberg", "Ika Nord", "Mikael Rahm", "Anders T. Peedu"],
+            "country": [
+                "Swedish"
+            ],
+            "languages": [
+                "Swedish"
+            ],
+            "cast": [
+                "Kåre Hedebrant",
+                "Lina Leandersson",
+                "Per Ragnar",
+                "Henrik Dahl",
+                "Karin Bergquist",
+                "Peter Carlberg",
+                "Ika Nord",
+                "Mikael Rahm",
+                "Anders T. Peedu"
+            ],
             "runtime": 115
         },
         {
@@ -214,12 +471,24 @@
             "title": "Challengers",
             "year": 2024,
             "director": "Luca Guadagnino",
-            "writer": ["Justin Kuritzkes"],
-            "poster": "/rcc/challengers.png",
+            "writer": [
+                "Justin Kuritzkes"
+            ],
+            "poster": "/rcc/posters/challengers.png",
             "link": "https://letterboxd.com/film/challengers/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Zendaya", "Josh O'Connor", "Mike Faist", "Darnell Appling", "Hailey Gates"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Zendaya",
+                "Josh O'Connor",
+                "Mike Faist",
+                "Darnell Appling",
+                "Hailey Gates"
+            ],
             "runtime": 131
         },
         {
@@ -227,12 +496,32 @@
             "title": "But I'm a Cheerleader",
             "year": 1999,
             "director": "Jamie Babbit",
-            "writer": ["Brian Peterson"],
-            "poster": "/rcc/cheerleader.png",
+            "writer": [
+                "Brian Peterson"
+            ],
+            "poster": "/rcc/posters/cheerleader.png",
             "link": "https://letterboxd.com/film/but-im-a-cheerleader/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Natasha Lyonne", "Clea DuVall", "RuPaul", "Eddie Cibrian", "Cathy Moriarty", "Mink Stole", "Bud Cort", "Melanie Lynskey", "Joel Michaely", "Kip Perdue", "Dante Basco", "Michelle Williams", "Julie Delpy"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Natasha Lyonne",
+                "Clea DuVall",
+                "RuPaul",
+                "Eddie Cibrian",
+                "Cathy Moriarty",
+                "Mink Stole",
+                "Bud Cort",
+                "Melanie Lynskey",
+                "Joel Michaely",
+                "Kip Perdue",
+                "Dante Basco",
+                "Michelle Williams",
+                "Julie Delpy"
+            ],
             "runtime": 85,
             "series": "Yearning on Film #1"
         },
@@ -241,12 +530,31 @@
             "title": "Rope",
             "year": 1948,
             "director": "Alfred Hitchcock",
-            "writer": ["Hume Cronyn", "Arthur Laurents", "Patrick Hamilton"],
-            "poster": "/rcc/rope.png",
+            "writer": [
+                "Hume Cronyn",
+                "Arthur Laurents",
+                "Patrick Hamilton"
+            ],
+            "poster": "/rcc/posters/rope.png",
             "link": "https://letterboxd.com/film/rope/",
-            "country": ["American", "Canadian"],
-            "languages": ["English"],
-            "cast": ["James Stewart", "John Dall", "Farley Granger", "Constance Collier", "Joan Chandler", "Douglas Dick", "Cedric Hardwicke", "Edith Evanson", "Dick Hogan"],
+            "country": [
+                "American",
+                "Canadian"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "James Stewart",
+                "John Dall",
+                "Farley Granger",
+                "Constance Collier",
+                "Joan Chandler",
+                "Douglas Dick",
+                "Cedric Hardwicke",
+                "Edith Evanson",
+                "Dick Hogan"
+            ],
             "runtime": 81
         },
         {
@@ -254,12 +562,29 @@
             "title": "Torch Song Trilogy",
             "year": "1988",
             "director": "Paul Bogart",
-            "writer": ["Harvey Fierstein"],
-            "poster": "/rcc/torchsongtrilogy.png",
+            "writer": [
+                "Harvey Fierstein"
+            ],
+            "poster": "/rcc/posters/torchsongtrilogy.png",
             "link": "https://letterboxd.com/film/torch-song-trilogy/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Harvey Fierstein", "Anne Bancroft", "Matthew Broderick", "Brian Kerwin", "Karen Young", "Eddie Castrodad", "Ken Page", "Charles Pierce", "Axel Vera", "Robert Lee Minor"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Harvey Fierstein",
+                "Anne Bancroft",
+                "Matthew Broderick",
+                "Brian Kerwin",
+                "Karen Young",
+                "Eddie Castrodad",
+                "Ken Page",
+                "Charles Pierce",
+                "Axel Vera",
+                "Robert Lee Minor"
+            ],
             "runtime": 120
         },
         {
@@ -267,12 +592,33 @@
             "title": "Saving Face",
             "year": 2004,
             "director": "Alice Wu",
-            "writer": ["Alice Wu"],
-            "poster": "/rcc/savingface.png",
+            "writer": [
+                "Alice Wu"
+            ],
+            "poster": "/rcc/posters/savingface.png",
             "link": "https://letterboxd.com/film/saving-face/",
-            "country": ["American"],
-            "languages": ["English", "Mandarin", "Shanghainese" ],
-            "cast": ["Michelle Krusiec", "Joan Chen", "Lynn Chen", "Jin Wang", "Guang Lan Koh", "Jessica Hecht", "Ato Essandoh", "Wang Luoyong", "David Shih", "Brian Yang", "Nathaniel Geng", "Mao Zhao"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English",
+                "Mandarin",
+                "Shanghainese"
+            ],
+            "cast": [
+                "Michelle Krusiec",
+                "Joan Chen",
+                "Lynn Chen",
+                "Jin Wang",
+                "Guang Lan Koh",
+                "Jessica Hecht",
+                "Ato Essandoh",
+                "Wang Luoyong",
+                "David Shih",
+                "Brian Yang",
+                "Nathaniel Geng",
+                "Mao Zhao"
+            ],
             "runtime": 91,
             "series": "Yearning on Film #2"
         },
@@ -281,30 +627,75 @@
             "title": "American Psycho",
             "year": 2000,
             "director": "Mary Harron",
-            "writer": ["Guinevere Turner", "Mary Harron", "Bret Easton Ellis"],
-            "poster": "/rcc/americanpsycho.png",
+            "writer": [
+                "Guinevere Turner",
+                "Mary Harron",
+                "Bret Easton Ellis"
+            ],
+            "poster": "/rcc/posters/americanpsycho.png",
             "link": "https://letterboxd.com/film/american-psycho/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Christian Bale", "Justin Theroux", "Josh Lucas", "Bill Sage", "Jared Leto", "Reese Witherspoon", "Samantha Mathis", "Willem Dafoe", "Chloë Sevigny", "Matt Ross", "Guinevere Turner", "Cara Seymour"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Christian Bale",
+                "Justin Theroux",
+                "Josh Lucas",
+                "Bill Sage",
+                "Jared Leto",
+                "Reese Witherspoon",
+                "Samantha Mathis",
+                "Willem Dafoe",
+                "Chloë Sevigny",
+                "Matt Ross",
+                "Guinevere Turner",
+                "Cara Seymour"
+            ],
             "runtime": 102
         },
         {
             "date": "25-06-2026",
             "title": "TBD",
-            "nominees": ["Medium Cool (1969)", "The Umbrellas of Cherbourg (1964)", "May December (2023)"]
+            "nominees": [
+                "Medium Cool (1969)",
+                "The Umbrellas of Cherbourg (1964)",
+                "May December (2023)"
+            ]
         },
         {
             "date": "30-07-2026",
             "title": "Desert Hearts",
             "year": 1985,
             "director": "Donna Deitch",
-            "writer": ["Natalie Cooper", "Jane Rule"],
-            "poster": "/rcc/deserthearts.png",
+            "writer": [
+                "Natalie Cooper",
+                "Jane Rule"
+            ],
+            "poster": "/rcc/posters/deserthearts.png",
             "link": "https://letterboxd.com/film/desert-hearts/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Helen Shaver", "Patricia Charbonneau", "Audra Lindley", "Andra Akers", "Gwen Welles", "Dean Butler", "James Staley", "Katie La Bourdette", "Alex McArthur", "Tyler Tyhurst", "Denise Crosby", "Antony Ponzini"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Helen Shaver",
+                "Patricia Charbonneau",
+                "Audra Lindley",
+                "Andra Akers",
+                "Gwen Welles",
+                "Dean Butler",
+                "James Staley",
+                "Katie La Bourdette",
+                "Alex McArthur",
+                "Tyler Tyhurst",
+                "Denise Crosby",
+                "Antony Ponzini"
+            ],
             "runtime": 96,
             "series": "Yearning on Film #3"
         },
@@ -317,12 +708,38 @@
             "title": "Lost Highway",
             "year": 1997,
             "director": "David Lynch",
-            "writer": ["David Lynch", "Barry Gifford"],
-            "poster": "/rcc/losthighway.png",
+            "writer": [
+                "David Lynch",
+                "Barry Gifford"
+            ],
+            "poster": "/rcc/posters/losthighway.png",
             "link": "https://letterboxd.com/film/lost-highway/",
-            "country": ["American", "French"],
-            "languages": ["English"],
-            "cast": ["Bill Pullman", "Patricia Arquette", "Balthazar Getty", "Robert Blake", "Robert Loggia", "Richard Pryor", "Gary Busey", "Henry Rollins", "Jack Nance", "Mink Stole", "Lisa Boyle", "Natasha Gregson Wagner", "Marilyn Manson", "Scott Coffey", "Giovanni Ribisi", "Jack Kehler", "Michael Shamus Wiles"],
+            "country": [
+                "American",
+                "French"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Bill Pullman",
+                "Patricia Arquette",
+                "Balthazar Getty",
+                "Robert Blake",
+                "Robert Loggia",
+                "Richard Pryor",
+                "Gary Busey",
+                "Henry Rollins",
+                "Jack Nance",
+                "Mink Stole",
+                "Lisa Boyle",
+                "Natasha Gregson Wagner",
+                "Marilyn Manson",
+                "Scott Coffey",
+                "Giovanni Ribisi",
+                "Jack Kehler",
+                "Michael Shamus Wiles"
+            ],
             "runtime": 134
         },
         {
@@ -334,12 +751,25 @@
             "title": "Pariah",
             "year": 2011,
             "director": "Dee Rees",
-            "writer": ["Dee Rees"],
-            "poster": "/rcc/pariah.png",
+            "writer": [
+                "Dee Rees"
+            ],
+            "poster": "/rcc/posters/pariah.png",
             "link": "https://letterboxd.com/film/pariah/",
-            "country": ["American"],
-            "languages": ["English"],
-            "cast": ["Adepero Oduye", "Aasha Davis", "Charles Parnell", "Kim Wayans", "Pernell Walker", "Sahra Mellesse"],
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Adepero Oduye",
+                "Aasha Davis",
+                "Charles Parnell",
+                "Kim Wayans",
+                "Pernell Walker",
+                "Sahra Mellesse"
+            ],
             "runtime": 86,
             "series": "Yearning on Film #4"
         },

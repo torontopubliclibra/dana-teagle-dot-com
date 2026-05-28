@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Rusty Cinema Club</title>
-    <meta name="title" content="Rusty Cinema Club" />
-    <meta property="og:title" content="Rusty Cinema Club" />
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="theme-color" content="#7BA0CF"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://danateagle.com/rcc" />
-    <meta name="description" content="" />
-    <meta property="og:description" content="" />
-    <meta name="author" content="Dana Rosamund Teagle" />
-	<link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="./styles.css"/>
+  <title>Rusty Cinema Club</title>
+  <meta name="title" content="Rusty Cinema Club" />
+  <meta property="og:title" content="Rusty Cinema Club" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#7BA0CF" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danateagle.com/rcc" />
+  <meta name="description" content="" />
+  <meta property="og:description" content="" />
+  <meta name="author" content="Dana Rosamund Teagle" />
+  <link rel="preload" href="./fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf" as="font" type="font/ttf"
+    crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PTP2QQ47Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0PTP2QQ47Q');
-  </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-0PTP2QQ47Q');
+</script>
+
 <body>
-  <main class="rcc-page" id="rcc-page">
+  <main class="rcc-page is-locked" id="rcc-page">
     <header class="rcc-page-header">
       <h1>Rusty Cinema Club</h1>
+      <h2>An invite-only movie club brought to you by <a href="https://danateagle.com/tpl" target="_blank">Dana 'Rusty'
+          Rosamund
+          Teagle</a>.</h2>
+      <form class="rcc-access-gate" id="rcc-access-gate" autocomplete="off">
+        <label for="rcc-password">Enter RCC password</label>
+        <div class="rcc-access-controls">
+          <input type="password" id="rcc-password" class="rcc-access-input" placeholder="Password" required />
+          <button type="submit" class="rcc-access-button">Enter</button>
+        </div>
+        <p class="rcc-access-message" id="rcc-access-message" aria-live="polite"></p>
+      </form>
       <div class="rcc-filter-tabs" role="tablist" aria-label="Browse RCC films by year"></div>
       <label class="rcc-confirmed-toggle" for="rcc-confirmed-toggle">
         <input type="checkbox" id="rcc-confirmed-toggle" checked />
@@ -37,5 +51,6 @@
     <section class="rcc-stats-accordion" id="rcc-stats" aria-label="RCC statistics"></section>
   </main>
   <div id="rcc-lightbox-root"></div>
-<script src="../scripts/rcc.js"></script>
+  <script src="../scripts/rcc.js"></script>
+
 </html>
