@@ -288,6 +288,7 @@ hr {
   align-items: stretch;
   flex-wrap: wrap;
   gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .rcc-card {
