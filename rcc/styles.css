@@ -722,6 +722,10 @@ hr {
     padding-bottom: 24px;
   }
 
+  .rcc-link--full {
+    font-size: 0.85rem;
+  }
+
   .rcc-card:hover,
   .rcc-card:focus-visible {
     transform: none;
