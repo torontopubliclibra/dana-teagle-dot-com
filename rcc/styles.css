@@ -593,12 +593,6 @@ hr {
   border: 1px solid rgba(192, 197, 210, 0.15);
 }
 
-@media only screen and (max-width: 600px) {
-  .rcc-lightbox-poster {
-    max-height: none;
-  }
-}
-
 .rcc-lightbox-swipe-surface {
   touch-action: pan-y;
   transition: transform 0.16s ease;
@@ -705,6 +699,13 @@ hr {
     max-height: auto;
   }
 
+  .rcc-lightbox-poster {
+    width: calc(100% - 24px);
+    max-height: none;
+    margin: 12px;
+    margin-bottom: 0;
+  }
+
   .rcc-lightbox-topbar {
     padding: 7px 8px;
   }
@@ -718,6 +719,7 @@ hr {
     padding: 12px;
     font-size: 0.85rem;
     padding-top: 0;
+    padding-bottom: 24px;
   }
 
   .rcc-card:hover,

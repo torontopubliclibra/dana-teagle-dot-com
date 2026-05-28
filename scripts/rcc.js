@@ -518,6 +518,14 @@ fetch('../data/rcc.json')
     };
 
     const renderStats = filmsToUse => {
+      const shouldHideStats = activeFilter === 'upcoming' || activeFilter === 'special-presentations';
+      if (shouldHideStats) {
+        statsMount.innerHTML = '';
+        statsMount.hidden = true;
+        return;
+      }
+
+      statsMount.hidden = false;
       const wasOpen = statsMount.querySelector('details.rcc-stats-details')?.open ?? false;
       statsMount.innerHTML = '';
 
