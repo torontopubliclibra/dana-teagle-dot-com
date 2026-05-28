@@ -496,7 +496,9 @@ html.tpl #contact {
   background: none !important;
   padding: 0 !important;
 }
-html.tpl h1, html.tpl h2, html.tpl h3 {
+html.tpl h1,
+html.tpl h2,
+html.tpl h3 {
   text-align: center;
   cursor: text;
   color: #f3e8e9;
@@ -504,7 +506,9 @@ html.tpl h1, html.tpl h2, html.tpl h3 {
   max-width: 850px;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl h1, html.tpl h2, html.tpl h3 {
+  html.tpl h1,
+  html.tpl h2,
+  html.tpl h3 {
     text-align: left;
   }
 }
@@ -627,11 +631,13 @@ html.tpl hr.margin-bottom {
 html.tpl hr.alt-color {
   border-color: #B57E9B;
 }
-html.tpl main, html.tpl footer {
+html.tpl main,
+html.tpl footer {
   opacity: 0;
   animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
 }
-html.tpl main, html.tpl header {
+html.tpl main,
+html.tpl header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -721,7 +727,10 @@ html.tpl nav .button.back:hover img {
     padding: 7px 25px;
     font-size: 1rem;
   }
-  html.tpl nav .button, html.tpl nav .button:hover, html.tpl nav .button.selected, html.tpl nav .button.selected:hover {
+  html.tpl nav .button,
+  html.tpl nav .button:hover,
+  html.tpl nav .button.selected,
+  html.tpl nav .button.selected:hover {
     font-style: normal;
   }
   html.tpl nav .button:hover {
@@ -836,12 +845,14 @@ html.tpl main .badges img {
   image-rendering: crisp-edges;
   image-rendering: -webkit-optimize-contrast;
 }
-html.tpl main .badges a:hover img, html.tpl main .badges button:hover img {
+html.tpl main .badges a:hover img,
+html.tpl main .badges button:hover img {
   filter: contrast(1.15);
   border: solid 2px rgba(243, 232, 233, 0.5);
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main .badges a:hover img, html.tpl main .badges button:hover img {
+  html.tpl main .badges a:hover img,
+  html.tpl main .badges button:hover img {
     filter: none;
     border: none;
   }
@@ -921,13 +932,17 @@ html.tpl main .tpl-landing img.feed-item.horizontal, html.tpl main.tpl-subpage i
     min-height: unset;
   }
 }
-html.tpl main .tpl-landing p, html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p, html.tpl main.tpl-subpage label {
+html.tpl main .tpl-landing p,
+html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p,
+html.tpl main.tpl-subpage label {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main .tpl-landing p, html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p, html.tpl main.tpl-subpage label {
+  html.tpl main .tpl-landing p,
+  html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p,
+  html.tpl main.tpl-subpage label {
     text-align: left;
   }
 }
@@ -1176,13 +1191,15 @@ html.tpl main.tpl-subpage .tpl-page-content button.range:disabled {
     font-style: normal;
   }
 }
-html.tpl main.tpl-subpage .tpl-page-content .year-selected, html.tpl main.tpl-subpage .tpl-page-content .range-selected {
+html.tpl main.tpl-subpage .tpl-page-content .year-selected,
+html.tpl main.tpl-subpage .tpl-page-content .range-selected {
   color: #84A59D;
   font-size: 1rem;
   font-style: italic;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main.tpl-subpage .tpl-page-content .year-selected, html.tpl main.tpl-subpage .tpl-page-content .range-selected {
+  html.tpl main.tpl-subpage .tpl-page-content .year-selected,
+  html.tpl main.tpl-subpage .tpl-page-content .range-selected {
     font-style: normal;
   }
 }
@@ -1266,15 +1283,21 @@ html.tpl main.tpl-subpage .tpl-page-content .tpl-page-text .sub.mix img.icon.dis
     width: 85%;
   }
 }
-html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
+html.tpl main.tpl-subpage #books,
+html.tpl main.tpl-subpage #movies,
+html.tpl main.tpl-subpage #tv {
   scroll-margin-top: 250px;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
+  html.tpl main.tpl-subpage #books,
+  html.tpl main.tpl-subpage #movies,
+  html.tpl main.tpl-subpage #tv {
     scroll-margin-top: 285px;
   }
 }
-html.tpl main.tpl-subpage #books, html.tpl main.tpl-subpage #movies, html.tpl main.tpl-subpage #tv {
+html.tpl main.tpl-subpage #books,
+html.tpl main.tpl-subpage #movies,
+html.tpl main.tpl-subpage #tv {
   animation: fade-in 0.5s;
 }
 html.tpl main .tpl-links {
@@ -1391,38 +1414,6 @@ html.tpl main .tpl-links .tpl-link .link-title p {
 html.tpl main .tpl-links .tpl-link .link-title img {
   width: 18px;
   filter: invert(1);
-}
-html.tpl main .tpl-links .tpl-link.dt-dot-com-link {
-  border-color: #7a91b1;
-}
-html.tpl main .tpl-links .tpl-link.dt-dot-com-link hr {
-  border-color: #B57E9B;
-}
-html.tpl main .tpl-links .tpl-link.dt-dot-com-link .button-label {
-  font-size: 1.05rem;
-  line-height: 1;
-}
-html.tpl main .tpl-links .tpl-link.id-guide-link .button-label {
-  font-size: 1.1rem;
-  line-height: 1;
-}
-html.tpl main .tpl-links .tpl-link.id-guide-link {
-  border-color: #684a62;
-}
-html.tpl main .tpl-links .tpl-link.id-guide-link .button-label {
-  font-family: "Special Gothic Expanded One", "Source Code Pro", monospace;
-  text-transform: none;
-  font-size: 1.15rem;
-  line-height: 1;
-}
-html.tpl main .tpl-links .tpl-link.rustprop-link {
-  border-color: rgb(95, 31, 71);
-}
-html.tpl main .tpl-links .tpl-link.rustprop-link .button-label {
-  font-family: "VT323", monospace;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  line-height: 1;
 }
 html.tpl main .tpl-links .tpl-link .button-description {
   min-width: 100%;
@@ -1554,7 +1545,8 @@ html.tpl footer {
     padding-top: 10px;
   }
 }
-html.tpl footer p.credit, html.tpl footer a {
+html.tpl footer p.credit,
+html.tpl footer a {
   width: 85%;
   max-width: 850px;
   margin: 0 auto;
@@ -1562,7 +1554,8 @@ html.tpl footer p.credit, html.tpl footer a {
   font-size: 14px;
 }
 @media only screen and (max-width: 970px) {
-  html.tpl footer p.credit, html.tpl footer a {
+  html.tpl footer p.credit,
+  html.tpl footer a {
     text-align: left;
   }
 }
@@ -1974,7 +1967,8 @@ html.tpl .mix {
   scroll-margin-top: 250px;
 }
 @media (max-width: 600px) {
-  html.tpl .feed-item-container, html.tpl .mix {
+  html.tpl .feed-item-container,
+  html.tpl .mix {
     scroll-margin-top: 290px;
   }
 }
@@ -2112,10 +2106,16 @@ html.tpl .now-card-info span {
     font-size: 0.65rem;
   }
 }
-html.tpl .now-album, html.tpl .now-movie, html.tpl .now-book, html.tpl .now-tv {
+html.tpl .now-album,
+html.tpl .now-movie,
+html.tpl .now-book,
+html.tpl .now-tv {
   border: none;
 }
-html.tpl .now-album .now-card-info, html.tpl .now-movie .now-card-info, html.tpl .now-book .now-card-info, html.tpl .now-tv .now-card-info {
+html.tpl .now-album .now-card-info,
+html.tpl .now-movie .now-card-info,
+html.tpl .now-book .now-card-info,
+html.tpl .now-tv .now-card-info {
   padding-bottom: 0;
 }
 html.tpl .now-feed-post {
