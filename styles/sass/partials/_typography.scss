@@ -8,19 +8,29 @@
   src: url(/fonts/source_code_pro/SourceCodePro-VariableFont_wght.ttf) format("truetype");
   font-display: swap;
 }
+
 @font-face {
   font-family: "Old English Text MT";
   src: url(/fonts/old_english_text_mt/old-english-text-mt.ttf) format("truetype");
   font-display: swap;
 }
+
 @font-face {
   font-family: "VT323";
   src: url(/fonts/vt323/vt323.ttf) format("truetype");
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Special Gothic Expanded One";
+  src: url(/fonts/special_gothic_expanded_one/SpecialGothicExpandedOne.ttf) format("truetype");
+  font-display: swap;
+}
+
 // default typography
-body, button, .button {
+body,
+button,
+.button {
   @include textStyle (18px);
   font-family: "Source Code Pro", monospace;
   font-display: swap;
@@ -38,16 +48,19 @@ button {
 }
 
 // selected/highlighted text effect
-.selected, .highlight {
+.selected,
+.highlight {
   background: linear-gradient(120deg, $color2 0%, $color2 100%);
   background-repeat: no-repeat;
 }
+
 .selected {
   background: linear-gradient(120deg, $color3 0%, $color3 100%);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 90%;
 }
+
 .highlight {
   background-size: 100% 15%;
   background-position: 0 97%;
@@ -59,6 +72,7 @@ button {
     background-size: 100% 25%;
     background-position: 0 95%;
   }
+
   .highlight {
     background-size: 100% 10%;
     background-position: 0 45%;
@@ -69,7 +83,11 @@ button {
 p {
   margin: 0;
 }
-.about-content p, .contact-content p, .about-content a, .contact-content a {
+
+.about-content p,
+.contact-content p,
+.about-content a,
+.contact-content a {
   text-align: left;
 
   // reponsive to tablet
@@ -84,11 +102,13 @@ p {
 }
 
 // links
-a, button {
+a,
+button {
   @include textStyle (18px);
   transition: 0.4s color;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     cursor: pointer;
     color: $color3;
     font-style: italic;
@@ -107,7 +127,9 @@ a:hover {
 }
 
 // buttons and nav links
-button, .button, nav ul li a {
+button,
+.button,
+nav ul li a {
   user-select: none;
 
   // reponsive to tablet
@@ -163,7 +185,8 @@ nav {
     text-decoration: none;
     border-bottom: solid $color3 3px;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $black;
       border-bottom: solid $color2 3px;
       outline: initial;
@@ -180,7 +203,8 @@ h1 {
   margin: 0 auto;
   user-select: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     font-style: italic;
   }
 
@@ -197,7 +221,10 @@ h1 {
 }
 
 html.tpl {
-  h1, h2, h3 {
+
+  h1,
+  h2,
+  h3 {
     font-family: "Old English Text MT", serif;
     letter-spacing: 5%;
     font-weight: 400;
@@ -228,7 +255,8 @@ html.tpl {
     }
   }
 
-  h3, .tpl-links h3 {
+  h3,
+  .tpl-links h3 {
     font-size: 1.6rem;
     font-style: normal;
   }
@@ -254,7 +282,7 @@ h2 {
   font-weight: 600;
   margin: 0 auto 15px auto;
   width: 100%;
-  
+
   @media only screen and (max-width: $mobile) {
     @include textStyle (34px);
     width: 85%;
@@ -335,6 +363,7 @@ h3 {
 
   a {
     display: inline;
+
     &:hover {
       color: $color2;
     }
@@ -342,7 +371,7 @@ h3 {
 
   .quote-marks {
     font-size: 1.5rem;
-    
+
     &:first-of-type {
       padding-right: 4px;
     }
@@ -357,7 +386,10 @@ h3 {
   }
 
   @media only screen and (max-width: $mobile) {
-    p, a, cite {
+
+    p,
+    a,
+    cite {
       font-size: 14px !important;
     }
   }
@@ -374,29 +406,42 @@ h3 {
   p {
     font-size: 14px;
   }
-  a, button {
+
+  a,
+  button {
     font-size: 14px;
   }
-  ul, li, li button {
+
+  ul,
+  li,
+  li button {
     font-size: 14px;
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
+
   li button {
     padding-bottom: 5px;
   }
+
   .selected {
     font-style: italic;
     padding-bottom: 3px;
   }
 
   @media only screen and (max-width: $mobile) {
-    ul, li, li button, button {
+
+    ul,
+    li,
+    li button,
+    button {
       @include textStyle (14px, "", 1);
       font-style: normal;
     }
-    li button, .selected {
+
+    li button,
+    .selected {
       padding: 3px 0;
       padding-right: 5px;
     }
@@ -404,7 +449,9 @@ h3 {
 }
 
 // project descriptions
-.project-description p, .project-description a, .project-description button {
+.project-description p,
+.project-description a,
+.project-description button {
   @include textStyle (18px, center);
 
   @media only screen and (max-width: $tablet) {
@@ -414,7 +461,10 @@ h3 {
 
 // footer text
 footer {
-  .credit, p, a {
+
+  .credit,
+  p,
+  a {
     @include textStyle (18px, center);
 
 

@@ -1415,6 +1415,26 @@ html.tpl main .tpl-links .tpl-link .link-title img {
   width: 18px;
   filter: invert(1);
 }
+html.tpl main .tpl-links .tpl-link.dt-dot-com-link .button-label {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+html.tpl main .tpl-links .tpl-link.id-guide-link .button-label {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+html.tpl main .tpl-links .tpl-link.id-guide-link .button-label {
+  font-family: "Special Gothic Expanded One", "Source Code Pro", monospace;
+  text-transform: none;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+html.tpl main .tpl-links .tpl-link.rustprop-link .button-label {
+  font-family: "VT323", monospace;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 1;
+}
 html.tpl main .tpl-links .tpl-link .button-description {
   min-width: 100%;
   font-size: 12px;
@@ -3424,7 +3444,14 @@ html body.project-lightbox-open {
   src: url(/fonts/vt323/vt323.ttf) format("truetype");
   font-display: swap;
 }
-body, button, .button {
+@font-face {
+  font-family: "Special Gothic Expanded One";
+  src: url(/fonts/special_gothic_expanded_one/SpecialGothicExpandedOne.ttf) format("truetype");
+  font-display: swap;
+}
+body,
+button,
+.button {
   font-size: 18px;
   text-align: left;
   line-height: 1.25;
@@ -3444,7 +3471,8 @@ button {
   padding: 0;
 }
 
-.selected, .highlight {
+.selected,
+.highlight {
   background: linear-gradient(120deg, #B57E9B 0%, #B57E9B 100%);
   background-repeat: no-repeat;
 }
@@ -3475,34 +3503,47 @@ p {
   margin: 0;
 }
 
-.about-content p, .contact-content p, .about-content a, .contact-content a {
+.about-content p,
+.contact-content p,
+.about-content a,
+.contact-content a {
   text-align: left;
 }
 @media only screen and (max-width: 970px) {
-  .about-content p, .contact-content p, .about-content a, .contact-content a {
+  .about-content p,
+  .contact-content p,
+  .about-content a,
+  .contact-content a {
     text-align: left;
   }
 }
 @media only screen and (max-width: 768px) {
-  .about-content p, .contact-content p, .about-content a, .contact-content a {
+  .about-content p,
+  .contact-content p,
+  .about-content a,
+  .contact-content a {
     font-size: 17px;
   }
 }
 
-a, button {
+a,
+button {
   font-size: 18px;
   text-align: left;
   line-height: 1.25;
   color: #282b2c;
   transition: 0.4s color;
 }
-a:hover, a:focus, button:hover, button:focus {
+a:hover, a:focus,
+button:hover,
+button:focus {
   cursor: pointer;
   color: #7a91b1;
   font-style: italic;
 }
 @media only screen and (max-width: 970px) {
-  a, button {
+  a,
+  button {
     font-style: italic;
   }
 }
@@ -3513,13 +3554,17 @@ a:hover, a:focus, button:hover, button:focus {
   }
 }
 
-button, .button, nav ul li a {
+button,
+.button,
+nav ul li a {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 @media only screen and (max-width: 970px) {
-  button, .button, nav ul li a {
+  button,
+  .button,
+  nav ul li a {
     font-style: italic;
   }
 }
@@ -3620,7 +3665,9 @@ h1:hover, h1:focus {
   }
 }
 
-html.tpl h1, html.tpl h2, html.tpl h3 {
+html.tpl h1,
+html.tpl h2,
+html.tpl h3 {
   font-family: "Old English Text MT", serif;
   letter-spacing: 5%;
   font-weight: 400;
@@ -3647,7 +3694,8 @@ html.tpl h2 {
 html.tpl h2.tpl-page-heading {
   font-size: 1.6rem;
 }
-html.tpl h3, html.tpl .tpl-links h3 {
+html.tpl h3,
+html.tpl .tpl-links h3 {
   font-size: 1.6rem;
   font-style: normal;
 }
@@ -3782,7 +3830,9 @@ h3 {
   font-style: normal;
 }
 @media only screen and (max-width: 768px) {
-  #services blockquote p, #services blockquote a, #services blockquote cite {
+  #services blockquote p,
+  #services blockquote a,
+  #services blockquote cite {
     font-size: 14px !important;
   }
 }
@@ -3795,10 +3845,13 @@ h3 {
 .projects-nav p {
   font-size: 14px;
 }
-.projects-nav a, .projects-nav button {
+.projects-nav a,
+.projects-nav button {
   font-size: 14px;
 }
-.projects-nav ul, .projects-nav li, .projects-nav li button {
+.projects-nav ul,
+.projects-nav li,
+.projects-nav li button {
   font-size: 14px;
   list-style-type: none;
   margin: 0;
@@ -3812,46 +3865,60 @@ h3 {
   padding-bottom: 3px;
 }
 @media only screen and (max-width: 768px) {
-  .projects-nav ul, .projects-nav li, .projects-nav li button, .projects-nav button {
+  .projects-nav ul,
+  .projects-nav li,
+  .projects-nav li button,
+  .projects-nav button {
     font-size: 14px;
     text-align: "";
     line-height: 1;
     color: #282b2c;
     font-style: normal;
   }
-  .projects-nav li button, .projects-nav .selected {
+  .projects-nav li button,
+  .projects-nav .selected {
     padding: 3px 0;
     padding-right: 5px;
   }
 }
 
-.project-description p, .project-description a, .project-description button {
+.project-description p,
+.project-description a,
+.project-description button {
   font-size: 18px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
 }
 @media only screen and (max-width: 970px) {
-  .project-description p, .project-description a, .project-description button {
+  .project-description p,
+  .project-description a,
+  .project-description button {
     text-align: left;
   }
 }
 
-footer .credit, footer p, footer a {
+footer .credit,
+footer p,
+footer a {
   font-size: 18px;
   text-align: center;
   line-height: 1.25;
   color: #282b2c;
 }
 @media only screen and (max-width: 768px) {
-  footer .credit, footer p, footer a {
+  footer .credit,
+  footer p,
+  footer a {
     font-size: 16px;
     text-align: center;
     line-height: 1.25;
     color: #282b2c;
   }
 }
-footer .credit a:hover, footer p a:hover, footer a a:hover {
+footer .credit a:hover,
+footer p a:hover,
+footer a a:hover {
   color: #B57E9B;
 }
 
