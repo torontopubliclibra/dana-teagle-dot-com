@@ -327,6 +327,8 @@ hr {
   width: 100%;
   object-fit: cover;
   background: #1a1d1e;
+  user-select: none;
+  pointer-events: none;
 }
 
 .rcc-card-poster--placeholder {
@@ -592,6 +594,8 @@ hr {
   object-fit: contain;
   background: #151819;
   border: 1px solid rgba(192, 197, 210, 0.15);
+  user-select: none;
+  pointer-events: none;
 }
 
 .rcc-lightbox-swipe-surface {
