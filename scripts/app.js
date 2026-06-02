@@ -57,6 +57,8 @@ const app = {
         data: [],
         paused: false,
         fullscreen: false,
+        resizeTimer: null,
+        lastViewportWidth: null,
     },
     projectLightbox: {
         element: null,
@@ -387,7 +389,8 @@ const app = {
                             return img + spacing;
                         });
                         formattedItem.images = `<div class="images-container">` + formattedImages.reduce((accumulator, item) => {
-                        return accumulator + item}) + `</div>`;
+                            return accumulator + item
+                        }) + `</div>`;
                     } else {
                         formattedItem.images = `<img src="${item.images[0]}" alt="${item.title}">`
                     }
@@ -406,7 +409,7 @@ const app = {
                         itemLinks.push(`<button onclick="app.functions.openGalleryProject('${item.id}')">Project info</button>`)
                     }
                     if (itemLinks.length > 0) {
-                        formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => {return accumulator + ` | ` + item}) + `</p>`
+                        formattedLinks = `<p>` + itemLinks.reduce((accumulator, item) => { return accumulator + ` | ` + item }) + `</p>`
                     }
                     if (formattedItem.multi) {
                         return `<div class="gallery-item multi">` + formattedItem.images + `<div class="gallery-item-info">` + formattedTitle + formattedService + formattedLinks + `<hr></div></div>`
@@ -414,7 +417,7 @@ const app = {
                         return `<div class="gallery-item">` + formattedItem.images + `<div class="gallery-item-info">` + formattedTitle + formattedService + formattedLinks + `<hr></div></div>`
                     }
                 });
-                app.elements.galleryContent.innerHTML= galleryArray.reduce((accumulator, item) => {
+                app.elements.galleryContent.innerHTML = galleryArray.reduce((accumulator, item) => {
                     return accumulator + item;
                 }) + `<div class="gallery-end-space" aria-hidden="true"></div>`;
             }
@@ -523,11 +526,11 @@ const app = {
             const offset = arguments.length > 1 ? ((arguments[1] || 0) * rootFontSize) : 0;
             if (direction === "top") {
                 location = Math.max(0, 0 - offset);
-                window.scrollTo({top: location, behavior: "smooth"});
+                window.scrollTo({ top: location, behavior: "smooth" });
                 history.pushState(null, null, ' ');
             } else {
                 location = Math.max(0, $(`#${direction}`).offset().top - offset);
-                window.scrollTo({top: location, behavior: "smooth"});
+                window.scrollTo({ top: location, behavior: "smooth" });
                 setTimeout(() => {
                     history.pushState(null, null, `#${direction}`);
                 }, 300);
@@ -543,11 +546,19 @@ const app = {
             const targetTop = Math.max(0, window.pageYOffset + target.getBoundingClientRect().top);
             window.scrollTo({ top: targetTop, behavior: 'smooth' });
         },
+        getViewportWidth() {
+            const width = (window.visualViewport && window.visualViewport.width)
+                || window.innerWidth
+                || document.documentElement.clientWidth
+                || 0;
+
+            return Math.round(width);
+        },
         scrollUp(direction) {
             let location = "";
             location = $(`#${direction}`).offset().top;
             if (window.scrollY > location) {
-                window.scrollTo({top: location, behavior: "smooth"});
+                window.scrollTo({ top: location, behavior: "smooth" });
             }
             setTimeout(() => {
                 history.pushState(null, null, `#${direction}`);
@@ -682,7 +693,7 @@ const app = {
             lightbox.find('.project-lightbox-description').text(description);
             lightbox.find('.project-lightbox-link-wrap').html(
                 externalLink
-                    ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-link">${externalLink.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0]}<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
+                    ? `<a href="${externalLink}" target="_blank" rel="noopener noreferrer" class="project-lightbox-link">open link<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
                     : ''
             );
             lightbox.find('.project-lightbox-prev').prop('disabled', !canGoPrev).attr('aria-disabled', (!canGoPrev).toString());
@@ -697,6 +708,7 @@ const app = {
             const delta = direction === 'next' ? 1 : -1;
             const newIndex = app.projectLightbox.index + delta;
             if (newIndex < 0 || newIndex >= app.projectLightbox.items.length) {
+                app.functions.closeProjectLightbox();
                 return;
             }
 
@@ -912,16 +924,16 @@ const app = {
                         filterName = `#` + filter;
                         if (filter === app.projects.filter) {
                             return `<li class="selected">`
-                            + filterName
-                            + `</li>`;
+                                + filterName
+                                + `</li>`;
                         } else if (filter === "All") {
                             return `<li><button onclick="app.functions.projectDisplay('All', app.projects.expand);app.functions.scrollUp('projects')" title="All projects">`
-                            + filterName
-                            + `</button></li>`;
+                                + filterName
+                                + `</button></li>`;
                         } else {
                             return `<li><button onclick="app.functions.projectDisplay('${filter}', app.projects.expand);app.functions.scrollUp('projects')" title="${filter} projects">`
-                            + filterName
-                            + `</button></li>`;
+                                + filterName
+                                + `</button></li>`;
                         };
                     } else {
                         return ``;
@@ -991,26 +1003,26 @@ const app = {
                         ? ` style="object-position: ${imageJustify.replace(/\"/g, '&quot;')};"`
                         : '';
                     formattedProject.image = `<button type="button" class="project-image-trigger" aria-label="Expand image for `
-                    + project.title
-                    + `"><img src="`
-                    + project.image
-                    + `" class="project-image"`
-                    + imageJustifyStyle
-                    + ` data-project-title="`
-                    + project.title
-                    + `" data-project-description="`
-                    + projectDescription
-                    + `" data-project-link="`
-                    + (project.site || '')
-                    + `" alt="`
-                    + project.title
-                    + ` website screenshot"></button>`
+                        + project.title
+                        + `"><img src="`
+                        + project.image
+                        + `" class="project-image"`
+                        + imageJustifyStyle
+                        + ` data-project-title="`
+                        + project.title
+                        + `" data-project-description="`
+                        + projectDescription
+                        + `" data-project-link="`
+                        + (project.site || '')
+                        + `" alt="`
+                        + project.title
+                        + ` website screenshot"></button>`
                 }
                 if (project.description.length > 0) {
                     let formattedParagraph = project.description.reduce((accumulator, paragraph) => {
                         return accumulator
-                        + `</br></br>`
-                        + paragraph
+                            + `</br></br>`
+                            + paragraph
                     });
                     formattedProject.description =
                         `<button class="button read-more" title="`
@@ -1023,20 +1035,20 @@ const app = {
                     const siteLabel = project.site.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
                     formattedProject.site =
                         `<a href="${project.site}" target="_blank" class="button" title="${project.title} website">${siteLabel}<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
-                    };
+                };
                 if (project.code) {
                     formattedProject.code =
                         `<a href="${project.code}" class="button" target="_blank" title="${project.title} repo on Github">Code<img src="./assets/icons/external-link.svg" alt="external link icon"></a>`
-                    };
+                };
                 return `<div class="project" id="${project.id}">`
-                + formattedProject.heading
-                + formattedProject.image
-                + `<div class="project-description">`
-                + formattedProject.site
-                + formattedProject.code
-                + formattedProject.description
-                + formattedProject.tags
-                + `</div></div><hr class="classic-hr"/>`
+                    + formattedProject.heading
+                    + formattedProject.image
+                    + `<div class="project-description">`
+                    + formattedProject.site
+                    + formattedProject.code
+                    + formattedProject.description
+                    + formattedProject.tags
+                    + `</div></div><hr class="classic-hr"/>`
             });
             app.elements.projectsContainer.html(formattedProjects.reduce((accumulator, project) => {
                 return accumulator + project;
@@ -1123,7 +1135,7 @@ const app = {
         app.functions.setupHeadshotPixelation();
 
         if (app.elements.projectsAccordionToggle && app.elements.projectsAccordionPanel) {
-            app.elements.projectsAccordionToggle.addEventListener('click', function() {
+            app.elements.projectsAccordionToggle.addEventListener('click', function () {
                 const expanded = this.getAttribute('aria-expanded') === 'true';
                 this.setAttribute('aria-expanded', !expanded);
                 if (expanded) {
@@ -1153,19 +1165,38 @@ const app = {
             document.addEventListener('fullscreenchange', app.functions.updateGalleryFullscreenState);
             document.addEventListener('webkitfullscreenchange', app.functions.updateGalleryFullscreenState);
         }
-        
+
+        app.gallery.lastViewportWidth = app.functions.getViewportWidth();
+
         window.addEventListener('resize', () => {
-            app.functions.galleryDisplay();
+            if (!app.elements.galleryContainer) {
+                return;
+            }
+
+            const nextViewportWidth = app.functions.getViewportWidth();
+            if (nextViewportWidth === app.gallery.lastViewportWidth) {
+                return;
+            }
+
+            app.gallery.lastViewportWidth = nextViewportWidth;
+
+            if (app.gallery.resizeTimer) {
+                clearTimeout(app.gallery.resizeTimer);
+            }
+
+            app.gallery.resizeTimer = window.setTimeout(() => {
+                app.functions.galleryDisplay();
+            }, 150);
         });
 
         let h1HoverActive = false;
         function updateH1Hover() {
             if (window.matchMedia('(min-width: 970px)').matches) {
                 if (!h1HoverActive) {
-                    app.elements.h1.on('mouseenter.h1hover', function() {
+                    app.elements.h1.on('mouseenter.h1hover', function () {
                         app.functions.changeTitleText("dana rosamund teagle");
                     });
-                    app.elements.h1.on('mouseleave.h1hover', function() {
+                    app.elements.h1.on('mouseleave.h1hover', function () {
                         app.functions.changeTitleText("dana teagle dot com");
                     });
                     h1HoverActive = true;
@@ -1244,67 +1275,67 @@ const app = {
     init() {
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
             fetch('./data/projects.json').then(response => response.json())
-            .then((data) => {
-                let projects = [];
-                for (let object in data) {
-                    let project = {
-                        "title": object,
-                        "id": "",
-                        "year": "",
-                        "image": "",
-                        "tags": [],
-                        "description": [],
-                        "site": "",
-                        "code": ""
-                    }
-                    for (let property in data[object]) {
-                        project[property] = data[object][property];
+                .then((data) => {
+                    let projects = [];
+                    for (let object in data) {
+                        let project = {
+                            "title": object,
+                            "id": "",
+                            "year": "",
+                            "image": "",
+                            "tags": [],
+                            "description": [],
+                            "site": "",
+                            "code": ""
+                        }
+                        for (let property in data[object]) {
+                            project[property] = data[object][property];
+                        };
+                        projects.push(project);
                     };
-                    projects.push(project);
-                };
-                app.projects.data = projects;
-                app.functions.projectDisplay(app.projects.filter, app.projects.expand);
-            })
-            .catch(error => console.log(error));
+                    app.projects.data = projects;
+                    app.functions.projectDisplay(app.projects.filter, app.projects.expand);
+                })
+                .catch(error => console.log(error));
             fetch('./data/gallery.json').then(response => response.json())
-            .then((data) => {
-                let gallery = [];
-                for (let object in data) {
-                    let item = {
-                        "title": "",
-                        "year": "",
-                        "service": "",
-                        "id": "",
-                        "site": "",
-                        "images": []
-                    }
-                    for (let property in data[object]) {
-                        item[property] = data[object][property];
+                .then((data) => {
+                    let gallery = [];
+                    for (let object in data) {
+                        let item = {
+                            "title": "",
+                            "year": "",
+                            "service": "",
+                            "id": "",
+                            "site": "",
+                            "images": []
+                        }
+                        for (let property in data[object]) {
+                            item[property] = data[object][property];
+                        };
+                        gallery.push(item);
                     };
-                    gallery.push(item);
-                };
-                app.gallery.data = app.functions.shuffleArray(gallery);
-                app.functions.galleryDisplay();
-            })
-            .catch(error => console.log(error));
+                    app.gallery.data = app.functions.shuffleArray(gallery);
+                    app.functions.galleryDisplay();
+                })
+                .catch(error => console.log(error));
             fetch('./data/testimonials.json').then(response => response.json())
-            .then((data) => {
-                let testimonials = [];
-                for (let object in data) {
-                    let testimonial = {
-                        "quote": "",
-                        "cite": ""
-                    }
-                    for (let property in data[object]) {
-                        testimonial[property] = data[object][property];
+                .then((data) => {
+                    let testimonials = [];
+                    for (let object in data) {
+                        let testimonial = {
+                            "quote": "",
+                            "cite": ""
+                        }
+                        for (let property in data[object]) {
+                            testimonial[property] = data[object][property];
+                        };
+                        testimonials.push(testimonial);
                     };
-                    testimonials.push(testimonial);
-                };
-                app.testimonials.data = app.functions.shuffleArray(testimonials);
-                app.testimonials.index = 0;
-                app.functions.testimonialDisplay();
-            })
-            .catch(error => console.log(error));
+                    app.testimonials.data = app.functions.shuffleArray(testimonials);
+                    app.testimonials.index = 0;
+                    app.functions.testimonialDisplay();
+                })
+                .catch(error => console.log(error));
         }
         app.events();
         if (localStorage['dark-mode'] === 'false') {

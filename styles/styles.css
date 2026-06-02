@@ -3829,13 +3829,6 @@ h3 {
 #services blockquote cite {
   font-style: normal;
 }
-@media only screen and (max-width: 768px) {
-  #services blockquote p,
-  #services blockquote a,
-  #services blockquote cite {
-    font-size: 14px !important;
-  }
-}
 
 .project .button {
   font-size: 14px;
@@ -3958,11 +3951,15 @@ body.loaded {
   }
 }
 
-.js-enabled-projects, .js-enabled-gallery, .js-enabled {
+.js-enabled-projects,
+.js-enabled-gallery,
+.js-enabled {
   display: none;
 }
 
-.js-disabled-projects, .js-disabled-gallery, .js-disabled {
+.js-disabled-projects,
+.js-disabled-gallery,
+.js-disabled {
   margin: 0 auto;
   margin-top: 80px;
   padding: 40px;
@@ -3977,14 +3974,18 @@ body.loaded {
   animation: fade-in-error 0.5s ease-in 1.5s forwards;
 }
 @media only screen and (max-width: 768px) {
-  .js-disabled-projects, .js-disabled-gallery, .js-disabled {
+  .js-disabled-projects,
+  .js-disabled-gallery,
+  .js-disabled {
     width: 80%;
     font-size: 16px;
     margin-top: 120px;
     padding: 20px;
   }
 }
-.js-disabled-projects a, .js-disabled-gallery a, .js-disabled a {
+.js-disabled-projects a,
+.js-disabled-gallery a,
+.js-disabled a {
   animation: fade-in 0.5s ease-in 1.5s forwards;
 }
 
@@ -4065,19 +4066,29 @@ body.loaded {
   }
 }
 
-#services, #gallery {
+#services,
+#gallery {
   background: rgba(122, 145, 177, 0.4);
 }
 
-#about, #contact {
+#about,
+#contact {
   background: rgba(132, 165, 157, 0.6);
 }
 
-#about, #gallery, #projects, #services, #contact {
+#about,
+#gallery,
+#projects,
+#services,
+#contact {
   padding: 30px 0;
 }
 @media only screen and (max-width: 970px) {
-  #about, #gallery, #projects, #services, #contact {
+  #about,
+  #gallery,
+  #projects,
+  #services,
+  #contact {
     padding: 70px 0;
   }
 }
@@ -4109,7 +4120,8 @@ hr.classic-hr {
 .button:hover, .button:focus {
   transition: background-color 0.75s;
 }
-.button i, .button img {
+.button i,
+.button img {
   font-size: 18px;
   transition: transform 0.2s;
 }
@@ -4476,7 +4488,9 @@ header nav ul li a {
     background: #7a91b1;
     z-index: 3;
   }
-  header nav ul li a, header nav ul li a:focus, header nav ul li a:hover {
+  header nav ul li a,
+  header nav ul li a:focus,
+  header nav ul li a:hover {
     background: #f3e8e9;
     border-bottom: solid #B57E9B 5px;
     font-style: italic;
@@ -4588,7 +4602,8 @@ header .scroll-title {
   border-right: none;
   border-width: 2.5px;
 }
-#gallery .pause-button, #gallery .remote-button {
+#gallery .pause-button,
+#gallery .remote-button {
   margin-top: 1rem;
   margin-bottom: 25px;
   width: 100%;
@@ -4605,7 +4620,10 @@ header .scroll-title {
   padding: 0;
   transition: background 0.2s;
 }
-#gallery .pause-button button, #gallery .pause-button a, #gallery .remote-button button, #gallery .remote-button a {
+#gallery .pause-button button,
+#gallery .pause-button a,
+#gallery .remote-button button,
+#gallery .remote-button a {
   width: 100%;
   display: flex;
   align-items: center;
@@ -4614,27 +4632,36 @@ header .scroll-title {
   padding: 12px 15px;
   font-size: 16px;
 }
-#gallery .pause-button button:hover, #gallery .pause-button a:hover, #gallery .remote-button button:hover, #gallery .remote-button a:hover {
+#gallery .pause-button button:hover,
+#gallery .pause-button a:hover,
+#gallery .remote-button button:hover,
+#gallery .remote-button a:hover {
   color: #282b2c;
 }
-#gallery .pause-button:hover, #gallery .pause-button:focus, #gallery .remote-button:hover, #gallery .remote-button:focus {
+#gallery .pause-button:hover, #gallery .pause-button:focus,
+#gallery .remote-button:hover,
+#gallery .remote-button:focus {
   background: rgba(122, 145, 177, 0.4);
   background-repeat: no-repeat;
   background-size: 100% 20%;
   background-position: 0 95%;
 }
-#gallery .pause-button img, #gallery .remote-button img {
+#gallery .pause-button img,
+#gallery .remote-button img {
   height: 18px;
   margin-bottom: -2px;
 }
-#gallery .pause-button[aria-expanded=true], #gallery .remote-button[aria-expanded=true] {
+#gallery .pause-button[aria-expanded=true],
+#gallery .remote-button[aria-expanded=true] {
   background: rgba(122, 145, 177, 0.4);
 }
-#gallery .pause-button[aria-expanded=true] img, #gallery .remote-button[aria-expanded=true] img {
+#gallery .pause-button[aria-expanded=true] img,
+#gallery .remote-button[aria-expanded=true] img {
   transform: rotate(0deg);
 }
 @media only screen and (max-width: 768px) {
-  #gallery .pause-button, #gallery .remote-button {
+  #gallery .pause-button,
+  #gallery .remote-button {
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -4734,7 +4761,9 @@ header .scroll-title {
   opacity: 100%;
   padding: 5px;
 }
-#gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info p, #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info a, #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info button {
+#gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info p,
+#gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info a,
+#gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info button {
   font-size: 1.15rem;
 }
 #gallery .gallery-container.is-fullscreen .gallery-item .gallery-item-info hr {
@@ -4797,7 +4826,8 @@ header .scroll-title {
 #gallery .gallery-item .gallery-spacing {
   width: 5px;
 }
-#gallery .gallery-item img, #gallery .gallery-item .gallery-item-info {
+#gallery .gallery-item img,
+#gallery .gallery-item .gallery-item-info {
   width: auto;
   height: 300px;
   -o-object-fit: cover;
@@ -4845,22 +4875,29 @@ header .scroll-title {
   font-size: 1.25rem;
   cursor: default;
 }
-#gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a, #gallery .gallery-item .gallery-item-info button {
+#gallery .gallery-item .gallery-item-info p,
+#gallery .gallery-item .gallery-item-info a,
+#gallery .gallery-item .gallery-item-info button {
   color: #f3e8e9;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .gallery-item .gallery-item-info p, #gallery .gallery-item .gallery-item-info a, #gallery .gallery-item .gallery-item-info button {
+  #gallery .gallery-item .gallery-item-info p,
+  #gallery .gallery-item .gallery-item-info a,
+  #gallery .gallery-item .gallery-item-info button {
     font-size: 0.9rem;
   }
 }
-#gallery .gallery-item .gallery-item-info a, #gallery .gallery-item .gallery-item-info button {
+#gallery .gallery-item .gallery-item-info a,
+#gallery .gallery-item .gallery-item-info button {
   text-decoration: underline;
 }
-#gallery .gallery-item .gallery-item-info a:hover, #gallery .gallery-item .gallery-item-info button:hover {
+#gallery .gallery-item .gallery-item-info a:hover,
+#gallery .gallery-item .gallery-item-info button:hover {
   color: #d39cb9;
 }
 @media only screen and (max-width: 970px) {
-  #gallery .gallery-item .gallery-item-info a:hover, #gallery .gallery-item .gallery-item-info button:hover {
+  #gallery .gallery-item .gallery-item-info a:hover,
+  #gallery .gallery-item .gallery-item-info button:hover {
     color: #f3e8e9;
   }
 }
@@ -5027,7 +5064,8 @@ header .scroll-title {
     gap: 15px;
   }
 }
-#services .services-content a img, #services .services-content button img {
+#services .services-content a img,
+#services .services-content button img {
   font-size: 12px;
 }
 #services .services-content .service {
@@ -5047,7 +5085,9 @@ header .scroll-title {
 #services .services-content .service:last-of-type {
   margin-bottom: 40px;
 }
-#services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
+#services .services-content .service h3,
+#services .services-content .service h4,
+#services .services-content .service li {
   width: 100%;
   text-align: left;
 }
@@ -5093,13 +5133,20 @@ header .scroll-title {
     width: 85%;
     margin: 0;
   }
-  #services .services-content .services-description p, #services .services-content .services-description a, #services .services-content .services-list p, #services .services-content .services-list a {
+  #services .services-content .services-description p,
+  #services .services-content .services-description a,
+  #services .services-content .services-list p,
+  #services .services-content .services-list a {
     font-size: 17px;
   }
-  #services .services-content .service h3, #services .services-content .service h4, #services .services-content .service li {
+  #services .services-content .service h3,
+  #services .services-content .service h4,
+  #services .services-content .service li {
     text-align: left;
   }
-  #services .services-content .service ul, #services .services-content .service h3, #services .services-content .service h4 {
+  #services .services-content .service ul,
+  #services .services-content .service h3,
+  #services .services-content .service h4 {
     padding: 0;
   }
   #services .services-content .service ul {
@@ -5237,7 +5284,7 @@ header .scroll-title {
     margin: 5px 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 970px) {
   #about .about-content .basic-info {
     flex-direction: column-reverse;
     width: 100%;
@@ -5395,7 +5442,8 @@ header .scroll-title {
   margin-top: 0px;
   padding: 10px 15px;
 }
-#projects .projects-container .project .tags button.tag, #projects .projects-container .project .tags span.tag {
+#projects .projects-container .project .tags button.tag,
+#projects .projects-container .project .tags span.tag {
   font-size: 14px;
 }
 #projects .projects-container .project .tags button.tag:hover {
@@ -5414,7 +5462,8 @@ header .scroll-title {
     margin: 0;
     justify-content: left;
   }
-  #projects .projects-container .project .tags button.tag, #projects .projects-container .project .tags span.tag {
+  #projects .projects-container .project .tags button.tag,
+  #projects .projects-container .project .tags span.tag {
     font-size: 14px;
   }
 }
@@ -5615,26 +5664,36 @@ footer .wrapper .scroll-to-top:hover, footer .wrapper .scroll-to-top:focus {
 body.dark-mode {
   background: #282b2c;
 }
-body.dark-mode .js-disabled-projects, body.dark-mode .js-disabled-gallery, body.dark-mode .js-disabled {
+body.dark-mode .js-disabled-projects,
+body.dark-mode .js-disabled-gallery,
+body.dark-mode .js-disabled {
   animation: fade-in-error-dark 0.5s ease-in 1.5s forwards;
 }
-body.dark-mode .js-disabled-projects a, body.dark-mode .js-disabled-gallery a, body.dark-mode .js-disabled a {
+body.dark-mode .js-disabled-projects a,
+body.dark-mode .js-disabled-gallery a,
+body.dark-mode .js-disabled a {
   animation: fade-in 0.5s ease-in 1.5s forwards;
   color: #f3e8e9;
 }
-body.dark-mode .js-disabled-projects a:hover, body.dark-mode .js-disabled-gallery a:hover, body.dark-mode .js-disabled a:hover {
+body.dark-mode .js-disabled-projects a:hover,
+body.dark-mode .js-disabled-gallery a:hover,
+body.dark-mode .js-disabled a:hover {
   color: #99b1d3;
 }
-body.dark-mode .js-disabled-gallery p, body.dark-mode .js-disabled-gallery a {
+body.dark-mode .js-disabled-gallery p,
+body.dark-mode .js-disabled-gallery a {
   color: #282b2c !important;
 }
-body.dark-mode .accordion-toggle, body.dark-mode #gallery .pause-button button {
+body.dark-mode .accordion-toggle,
+body.dark-mode #gallery .pause-button button {
   color: #f3e8e9;
 }
-body.dark-mode .accordion-toggle img, body.dark-mode #gallery .pause-button button img {
+body.dark-mode .accordion-toggle img,
+body.dark-mode #gallery .pause-button button img {
   filter: invert(1);
 }
-body.dark-mode #gallery .pause-button, body.dark-mode .remote-button {
+body.dark-mode #gallery .pause-button,
+body.dark-mode .remote-button {
   width: 100%;
   background: rgba(40, 43, 44, 0.2);
 }
@@ -5645,7 +5704,8 @@ body.dark-mode header {
 body.dark-mode header.four-oh-four {
   background: #282b2c;
 }
-body.dark-mode header h1, body.dark-mode header nav ul li a {
+body.dark-mode header h1,
+body.dark-mode header nav ul li a {
   color: #f3e8e9;
 }
 body.dark-mode header nav ul li.socials a,
@@ -5657,10 +5717,12 @@ body.dark-mode header nav ul li.socials a img,
 body.dark-mode header nav ul li.socials button img {
   filter: invert(1);
 }
-body.dark-mode header .toggles p, body.dark-mode header .toggles button {
+body.dark-mode header .toggles p,
+body.dark-mode header .toggles button {
   color: #f3e8e9;
 }
-body.dark-mode header .toggles p img, body.dark-mode header .toggles button img {
+body.dark-mode header .toggles p img,
+body.dark-mode header .toggles button img {
   filter: invert(1);
 }
 @media only screen and (max-width: 970px) {
@@ -5684,7 +5746,9 @@ body.dark-mode header .toggles p img, body.dark-mode header .toggles button img 
     filter: invert(1);
   }
 }
-body.dark-mode #about .about-content, body.dark-mode #about h2, body.dark-mode #about a {
+body.dark-mode #about .about-content,
+body.dark-mode #about h2,
+body.dark-mode #about a {
   color: #f3e8e9;
 }
 body.dark-mode #about a:hover {
@@ -5713,16 +5777,23 @@ body.dark-mode #about .about-content {
 body.dark-mode #gallery {
   background-color: rgba(122, 145, 177, 0.6);
 }
-body.dark-mode #gallery h2, body.dark-mode #gallery h3, body.dark-mode #gallery button {
+body.dark-mode #gallery h2,
+body.dark-mode #gallery h3,
+body.dark-mode #gallery button {
   color: #f3e8e9;
 }
 body.dark-mode #gallery .gallery-item {
   border-color: rgba(243, 232, 233, 0.75);
 }
-body.dark-mode #gallery .pause-button img, body.dark-mode #gallery .remote-button img {
+body.dark-mode #gallery .pause-button img,
+body.dark-mode #gallery .remote-button img {
   filter: invert(1);
 }
-body.dark-mode #projects h2, body.dark-mode #projects .projects-nav p, body.dark-mode #projects .projects-nav button, body.dark-mode #projects h3, body.dark-mode #projects .project-filters .selected {
+body.dark-mode #projects h2,
+body.dark-mode #projects .projects-nav p,
+body.dark-mode #projects .projects-nav button,
+body.dark-mode #projects h3,
+body.dark-mode #projects .project-filters .selected {
   color: #f3e8e9;
 }
 body.dark-mode #projects .project-filters li button:hover {
@@ -5742,63 +5813,88 @@ body.dark-mode #projects .projects-container .project {
 body.dark-mode #projects .projects-container .project .project-description .project-image {
   border: solid rgba(243, 232, 233, 0.8) 4px;
 }
-body.dark-mode #projects .projects-container .project .project-description button, body.dark-mode #projects .projects-container .project .project-description a {
+body.dark-mode #projects .projects-container .project .project-description button,
+body.dark-mode #projects .projects-container .project .project-description a {
   background-color: rgba(40, 43, 44, 0.8);
   border-color: rgba(40, 43, 44, 0);
   color: #f3e8e9;
 }
-body.dark-mode #projects .projects-container .project .project-description button img, body.dark-mode #projects .projects-container .project .project-description a img {
+body.dark-mode #projects .projects-container .project .project-description button img,
+body.dark-mode #projects .projects-container .project .project-description a img {
   filter: invert(1);
 }
-body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description button.read-less, body.dark-mode #projects .projects-container .project .project-description a:hover, body.dark-mode #projects .projects-container .project .project-description a:focus, body.dark-mode #projects .projects-container .project .project-description a.read-less {
+body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description button.read-less,
+body.dark-mode #projects .projects-container .project .project-description a:hover,
+body.dark-mode #projects .projects-container .project .project-description a:focus,
+body.dark-mode #projects .projects-container .project .project-description a.read-less {
   background-color: rgba(40, 43, 44, 0.8);
 }
-body.dark-mode #projects .projects-container .project .project-description button.read-less:hover, body.dark-mode #projects .projects-container .project .project-description button.read-less:focus, body.dark-mode #projects .projects-container .project .project-description a.read-less:hover, body.dark-mode #projects .projects-container .project .project-description a.read-less:focus {
+body.dark-mode #projects .projects-container .project .project-description button.read-less:hover, body.dark-mode #projects .projects-container .project .project-description button.read-less:focus,
+body.dark-mode #projects .projects-container .project .project-description a.read-less:hover,
+body.dark-mode #projects .projects-container .project .project-description a.read-less:focus {
   background-color: rgba(40, 43, 44, 0.8);
 }
 @media only screen and (max-width: 970px) {
-  body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus, body.dark-mode #projects .projects-container .project .project-description a:hover, body.dark-mode #projects .projects-container .project .project-description a:focus {
+  body.dark-mode #projects .projects-container .project .project-description button:hover, body.dark-mode #projects .projects-container .project .project-description button:focus,
+  body.dark-mode #projects .projects-container .project .project-description a:hover,
+  body.dark-mode #projects .projects-container .project .project-description a:focus {
     background-color: rgba(40, 43, 44, 0.8);
     border-color: rgba(40, 43, 44, 0);
     color: #f3e8e9;
   }
-  body.dark-mode #projects .projects-container .project .project-description button:hover img, body.dark-mode #projects .projects-container .project .project-description button:focus img, body.dark-mode #projects .projects-container .project .project-description a:hover img, body.dark-mode #projects .projects-container .project .project-description a:focus img {
+  body.dark-mode #projects .projects-container .project .project-description button:hover img, body.dark-mode #projects .projects-container .project .project-description button:focus img,
+  body.dark-mode #projects .projects-container .project .project-description a:hover img,
+  body.dark-mode #projects .projects-container .project .project-description a:focus img {
     filter: invert(1);
   }
-  body.dark-mode #projects .projects-container .project .project-description button.read-less:hover, body.dark-mode #projects .projects-container .project .project-description a.read-less:hover {
+  body.dark-mode #projects .projects-container .project .project-description button.read-less:hover,
+  body.dark-mode #projects .projects-container .project .project-description a.read-less:hover {
     background-color: rgba(40, 43, 44, 0.8);
     border-color: #B57E9B;
     color: #f3e8e9;
   }
-  body.dark-mode #projects .projects-container .project .project-description button.read-less:hover img, body.dark-mode #projects .projects-container .project .project-description a.read-less:hover img {
+  body.dark-mode #projects .projects-container .project .project-description button.read-less:hover img,
+  body.dark-mode #projects .projects-container .project .project-description a.read-less:hover img {
     filter: invert(1);
   }
 }
-body.dark-mode #projects .projects-container .project .project-description p, body.dark-mode #projects .projects-container .project .project-description .tags {
+body.dark-mode #projects .projects-container .project .project-description p,
+body.dark-mode #projects .projects-container .project .project-description .tags {
   background-color: rgba(40, 43, 44, 0.8);
   color: #f3e8e9;
 }
-body.dark-mode #projects .projects-container .project .project-description p button, body.dark-mode #projects .projects-container .project .project-description .tags button {
+body.dark-mode #projects .projects-container .project .project-description p button,
+body.dark-mode #projects .projects-container .project .project-description .tags button {
   background-color: rgba(40, 43, 44, 0);
   color: #f3e8e9;
 }
-body.dark-mode #projects .projects-container .project .project-description p a, body.dark-mode #projects .projects-container .project .project-description .tags a {
+body.dark-mode #projects .projects-container .project .project-description p a,
+body.dark-mode #projects .projects-container .project .project-description .tags a {
   background: none;
   color: #f3e8e9;
 }
-body.dark-mode #projects .projects-container .project .project-description p a:hover, body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
+body.dark-mode #projects .projects-container .project .project-description p a:hover,
+body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
   background: none;
   color: #99b1d3;
 }
 @media only screen and (max-width: 970px) {
-  body.dark-mode #projects .projects-container .project .project-description p a:hover, body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
+  body.dark-mode #projects .projects-container .project .project-description p a:hover,
+  body.dark-mode #projects .projects-container .project .project-description .tags a:hover {
     color: #f3e8e9;
   }
 }
 body.dark-mode #services {
   background-color: rgba(122, 145, 177, 0.6);
 }
-body.dark-mode #services h2, body.dark-mode #services p, body.dark-mode #services a, body.dark-mode #services h3, body.dark-mode #services h4, body.dark-mode #services h4 button, body.dark-mode #services blockquote, body.dark-mode #services cite {
+body.dark-mode #services h2,
+body.dark-mode #services p,
+body.dark-mode #services a,
+body.dark-mode #services h3,
+body.dark-mode #services h4,
+body.dark-mode #services h4 button,
+body.dark-mode #services blockquote,
+body.dark-mode #services cite {
   color: #f3e8e9;
 }
 body.dark-mode #services h4 button img {
@@ -5829,7 +5925,9 @@ body.dark-mode #services blockquote a:hover {
 body.dark-mode #contact .contact-content {
   background-color: rgba(40, 43, 44, 0.8);
 }
-body.dark-mode #contact h2, body.dark-mode #contact p, body.dark-mode #contact a {
+body.dark-mode #contact h2,
+body.dark-mode #contact p,
+body.dark-mode #contact a {
   color: #f3e8e9;
 }
 body.dark-mode #contact a:hover {
@@ -5840,7 +5938,8 @@ body.dark-mode #contact a:hover {
     color: #f3e8e9;
   }
 }
-body.dark-mode footer p, body.dark-mode footer a {
+body.dark-mode footer p,
+body.dark-mode footer a {
   color: #f3e8e9;
 }
 body.dark-mode footer .button {
