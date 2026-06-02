@@ -1416,7 +1416,7 @@ html.tpl main .tpl-links .tpl-link .link-title img {
   filter: invert(1);
 }
 html.tpl main .tpl-links .tpl-link.dt-dot-com-link .button-label {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1;
 }
 html.tpl main .tpl-links .tpl-link.id-guide-link .button-label {
