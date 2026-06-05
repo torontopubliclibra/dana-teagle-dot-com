@@ -4,13 +4,19 @@
             "url": "../assets/feed/310.jpeg",
             "alt": "I'm officially the most normal girl in the whole world, they just announced it",
             "date": "03/06/2026",
-            "id": "310"
+            "id": "310",
+            "tags": [
+                "gpoy"
+            ]
         },
         {
             "url": "../assets/feed/309.jpeg",
             "alt": "An expressionless Weyes Blood with the caption 'I'm on here reading your tweets and not saying anything'",
             "date": "02/06/2026",
-            "id": "309"
+            "id": "309",
+            "tags": [
+                "inspo"
+            ]
         },
         {
             "url": "../assets/feed/308.jpeg",
@@ -22,19 +28,28 @@
             "url": "../assets/feed/307.jpeg",
             "alt": "'Young Female Playwright' on the marquee at the Paradise Cinema in Toronto",
             "date": "01/06/2026",
-            "id": "307"
+            "id": "307",
+            "tags": [
+                "movies"
+            ]
         },
         {
             "url": "../assets/feed/304.jpeg",
             "alt": "Dana's cats Snufkin and Winnipeg sitting in the sunlight on the hardwood floor and coffee table above",
             "date": "29/05/2026",
-            "id": "304"
+            "id": "304",
+            "tags": [
+                "cats"
+            ]
         },
         {
             "url": "../assets/feed/306.jpeg",
             "alt": "Dana's foot in her strappy black flat held up in front of a blue cloudy sky",
             "date": "28/05/2026",
-            "id": "306"
+            "id": "306",
+            "tags": [
+                "gpoy"
+            ]
         },
         {
             "url": "../assets/feed/303.jpeg",
@@ -46,10 +61,7 @@
             "url": "../assets/feed/302.jpeg",
             "alt": "A pink stiletto heel stepping delicately into a bear trap",
             "date": "26/05/2026",
-            "id": "302",
-            "tags": [
-                "inspo"
-            ]
+            "id": "302"
         },
         {
             "url": "../assets/feed/301.jpg",
