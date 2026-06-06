@@ -34,16 +34,21 @@
 # Misc
 /sitemap /sitemap.xml
 /mini /alt
-/tpl/logs
+/logs /tpl/logs
+/feed /tpl/feed
+/photos /tpl/photos
+/mixes /tpl/mixes
+/misc /tpl/misc
 /about /#about
 /gallery /#gallery
 /projects /#projects
 /services /#services
 /contact /#contact
 https://danateagle.com/now /tpl/now
-/trans-id-resources https://idguide.ca
-/trans-id https://idguide.ca
+/trans-id-resources https://idguide.ca/
+/trans-id https://idguide.ca/
 /rss.xml /feed.xml
+/torontopubliclibra /tpl/
 /newsletter https://torontopubliclibra.substack.com/
 /tpl/newsletter https://torontopubliclibra.substack.com/
 https://torontopubliclibra.com/newsletter https://torontopubliclibra.substack.com/
