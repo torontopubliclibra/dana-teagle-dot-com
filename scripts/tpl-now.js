@@ -8,6 +8,8 @@ const tplNow = {
     tv: [],
     mixes: [],
     feedPosts: [],
+    newsletters: [],
+    _newslettersFetched: false,
     topAlbums: [],
     tmdbKey: '',
     tmdbImageBase: 'https://image.tmdb.org/t/p/w185',
@@ -25,6 +27,19 @@ const tplNow = {
         if (!body) return '';
         const extraAttrs = attributes ? ` ${attributes}` : '';
         return `<p>>> ${title} (${link})</p><div class="${className}"${extraAttrs}>${body}</div>`;
+    },
+    renderJumpNav() {
+        const sections = [
+            ['feed', 'feed'],
+            ['newsletters', 'newsletters'],
+            ['mixes', 'mixes'],
+            ['albums', 'albums'],
+            ['movies', 'movies'],
+            ['books', 'books'],
+            ['tv', 'tv shows']
+        ];
+        const navItems = sections.map(([id, label]) => `<li class="link-category"><a href="#now-${id}">${label}<img src="../assets/icons/arrow-down.svg" alt="scroll down icon"></a></li>`).join('');
+        return `<hr class="small" style="margin-bottom:10px;border-color:#7a91b1;"><div class="tpl-categories now-jump"><ul style="gap: 12px;">${navItems}</ul></div><hr class="small" style="margin-top:10px;border-color:#7a91b1;">`;
     },
     buildPoster(url, alt, fallback, fallbackClass = '') {
         if (url) {
@@ -51,10 +66,38 @@ const tplNow = {
     },
     bindFeedScroll() {
         setTimeout(() => {
-            $('#now-feed-scroll').off('click').on('click', function() {
+            $('#now-feed-scroll').off('click').on('click', function () {
                 window.location.href = '/tpl/feed';
             });
         }, 0);
+    },
+    bindJumpScroll() {
+        this.content.off('click', '.now-jump a').on('click', '.now-jump a', function (e) {
+            const targetId = $(this).attr('href');
+            const target = targetId ? document.querySelector(targetId) : null;
+
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    },
+    renderNewsletters() {
+        const substackLink = `<a href="https://torontopubliclibra.substack.com/" target="_blank" rel="noopener noreferrer">substack</a>`;
+        if (!this._newslettersFetched) return '';
+        let body;
+        if (!this.newsletters.length) {
+            body = '<p class="now-coming-soon">coming soon</p>';
+        } else {
+            body = this.newsletters.map(post => {
+                const image = post.thumbnail ? `<img src="${post.thumbnail}" alt="${this.escapeAttr(post.title)}" class="now-mix-img"/>` : '';
+                const title = `<p class="now-mix-title"><small>${post.title}</small></p>`;
+                const date = post.date ? `<p class="now-mix-featuring">${post.date}</p>` : '';
+                const icon = `<p class="now-mix-icon">></p>`;
+                return `<a href="${post.link}" target="_blank" rel="noopener noreferrer" class="now-mix">${image}<span class="now-mix-details">${title}${date}</span>${icon}</a>`;
+            }).join('');
+        }
+        return `<hr>${this.renderSection('latest newsletters', substackLink, body, 'now-mixes-list')}<hr>`;
     },
     renderFeedPosts() {
         if (!this.feedPosts.length) return '';
@@ -72,7 +115,7 @@ const tplNow = {
             return `<a href="${permalink}" class="now-feed-post">${img}${date}</a>`;
         }).join('');
         const link = `<a href='/tpl/feed'>more</a> / <a href="/tpl/feed.xml" target="_blank" title="RSS Feed" class="now-rss-icon"><img src="../../assets/icons/rss.svg" class="feed-rss-icon" alt="RSS icon" style="text-decoration: underline;width:12px;"></a>`;
-        return `<hr>${this.renderSection('latest feed posts', link, feedItems, 'now-feed-scroll', 'id="now-feed-scroll"')}`;
+        return `${this.renderSection('latest feed posts', link, feedItems, 'now-feed-scroll', 'id="now-feed-scroll"')}`;
     },
     renderMovies() {
         if (!this.movies.length) return '';
@@ -119,7 +162,7 @@ const tplNow = {
             const lastFmUrl = album.url || 'https://www.last.fm/user/rustbecomesher';
             return this.buildCard(lastFmUrl, 'now-album', img, info);
         }).join('');
-        return this.renderSection('latest top albums', '<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">last.fm</a>', albumItems);
+        return `${this.renderSection('latest top albums', '<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">last.fm</a>', albumItems)}<hr>`;
     },
     renderMixes() {
         if (!this.mixes.length) return '';
@@ -134,21 +177,23 @@ const tplNow = {
             const icon = `<p class="now-mix-icon">></p>`;
             return `<a href="${link}" class="now-mix">${image}<span class="now-mix-details">${title}${featuring}</span>${icon}</a>`;
         }).join('');
-        return this.renderSection('latest rusty mixes', '<a href="/tpl/mixes">more</a>', mixesItems, 'now-mixes-list');
+        return `${this.renderSection('latest rusty mixes', '<a href="/tpl/mixes">more</a>', mixesItems, 'now-mixes-list')}<hr>`;
     },
     _initialized: false,
-    _sections: ['now-list', 'feed', 'mixes', 'albums', 'movies', 'books', 'tv'],
+    _sections: ['now-list', 'jump', 'feed', 'newsletters', 'mixes', 'albums', 'movies', 'books', 'tv'],
     _ensureContainers() {
         if (this._initialized) return;
         this._initialized = true;
-        this.content.html(this._sections.map(id => `<div id="now-${id}"></div>`).join(''));
+        this.content.html(this._sections.map(id => `<div id="now-${id}" class="now-section"></div>`).join(''));
     },
     nowDisplay(...changed) {
         this._ensureContainers();
-        const sections = changed.length ? changed : this._sections;
+        const sections = changed.length ? Array.from(new Set([...changed, 'jump'])) : this._sections;
         const renderers = {
             'now-list': () => this.list.map(bullet => `<p>>> ${bullet}</p>`).join(''),
+            jump: () => this.renderJumpNav(),
             feed: () => this.renderFeedPosts(),
+            newsletters: () => this.renderNewsletters(),
             mixes: () => this.renderMixes(),
             albums: () => this.renderTopAlbums(),
             movies: () => this.renderMovies(),
@@ -164,6 +209,7 @@ const tplNow = {
         });
 
         this.date.text(this.updated);
+        this.bindJumpScroll();
         if (!changed.length || changed.includes('feed')) {
             this.bindFeedScroll();
         }
@@ -204,6 +250,7 @@ const tplNow = {
             const posts = (data && data.items) ? data.items : [];
             this.feedPosts = posts.slice(0, 10);
         });
+        this.fetchNewsletters();
         this.tmdbKey = '1d27d67ac5b026aad089308525f64f5f';
         const lastFmKey = '8387eaa633e79d3aaab96fb9c1173163';
         const lastFmUrl = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=rustbecomesher&period=1month&api_key=${lastFmKey}&format=json&limit=4`;
@@ -216,6 +263,34 @@ const tplNow = {
                 image: (album.image && album.image.length) ? album.image[album.image.length - 1]['#text'] : ''
             }));
         });
+    },
+    fetchNewsletters() {
+        fetch('https://torontopubliclibra.substack.com/feed')
+            .then(res => res.text())
+            .then(str => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(str, 'application/xml');
+                const items = Array.from(doc.getElementsByTagName('item')).slice(0, 2);
+                this.newsletters = items.map(item => {
+                    const title = item.getElementsByTagName('title')[0]?.textContent || '';
+                    const linkEl = item.getElementsByTagName('link')[0];
+                    const link = linkEl ? (linkEl.textContent || linkEl.getAttribute('href') || '#') : '#';
+                    const pubDate = item.getElementsByTagName('pubDate')[0]?.textContent || '';
+                    const date = pubDate ? new Date(pubDate).toLocaleDateString('en-CA', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+                    const mediaContent = item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0];
+                    const mediaThumbnail = item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0];
+                    const enclosure = item.getElementsByTagName('enclosure')[0];
+                    const thumbnail = mediaContent?.getAttribute('url') || mediaThumbnail?.getAttribute('url') || enclosure?.getAttribute('url') || '';
+                    return { title, link, date, thumbnail };
+                });
+                this._newslettersFetched = true;
+                this.nowDisplay('newsletters');
+            })
+            .catch(() => {
+                this._newslettersFetched = true;
+                this.newsletters = [];
+                this.nowDisplay('newsletters');
+            });
     },
     fetchTMDBPosters(items, type) {
         if (!items.length || !this.tmdbKey) return;
@@ -240,7 +315,7 @@ const tplNow = {
                         }
                     }
                 })
-                .catch(() => {});
+                .catch(() => { });
         });
         const section = type === 'movie' ? 'movies' : 'tv';
         Promise.all(promises).then(() => this.nowDisplay(section));
@@ -258,7 +333,7 @@ const tplNow = {
             return fetch(searchUrl)
                 .then(res => res.json())
                 .then(data => {
-                if (data.docs && data.docs.length > 0) {
+                    if (data.docs && data.docs.length > 0) {
                         if (data.docs[0].key) {
                             book.openLibraryUrl = `https://openlibrary.org${data.docs[0].key}`;
                         }
@@ -272,7 +347,7 @@ const tplNow = {
                         }
                     }
                 })
-                .catch(() => {});
+                .catch(() => { });
         });
         Promise.all(promises).then(() => this.nowDisplay('books'));
     }

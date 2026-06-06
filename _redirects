@@ -44,6 +44,9 @@ https://danateagle.com/now /tpl/now
 /trans-id-resources https://idguide.ca
 /trans-id https://idguide.ca
 /rss.xml /feed.xml
+/newsletter https://torontopubliclibra.substack.com/
+/tpl/newsletter https://torontopubliclibra.substack.com/
+https://torontopubliclibra.com/newsletter https://torontopubliclibra.substack.com/
 
 # Feed permalink compatibility
 /tpl/feed/:id /tpl/feed#:id 301!
