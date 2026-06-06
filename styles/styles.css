@@ -1311,12 +1311,6 @@ html.tpl main.tpl-subpage #tv {
     scroll-margin-top: 285px;
   }
 }
-html.tpl main.tpl-subpage .now-section,
-html.tpl main.tpl-subpage #books,
-html.tpl main.tpl-subpage #movies,
-html.tpl main.tpl-subpage #tv {
-  animation: fade-in 0.5s;
-}
 html.tpl main .tpl-links {
   width: 100%;
   max-width: 750px;
