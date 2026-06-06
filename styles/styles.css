@@ -933,7 +933,9 @@ html.tpl main .tpl-landing img.feed-item.horizontal, html.tpl main.tpl-subpage i
   }
 }
 html.tpl main .tpl-landing p,
+html.tpl main .tpl-landing a,
 html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p,
+html.tpl main.tpl-subpage a,
 html.tpl main.tpl-subpage label {
   color: #f3e8e9;
   font-size: 1rem;
@@ -941,7 +943,9 @@ html.tpl main.tpl-subpage label {
 }
 @media only screen and (max-width: 970px) {
   html.tpl main .tpl-landing p,
+  html.tpl main .tpl-landing a,
   html.tpl main .tpl-landing label, html.tpl main.tpl-subpage p,
+  html.tpl main.tpl-subpage a,
   html.tpl main.tpl-subpage label {
     text-align: left;
   }
