@@ -123,15 +123,22 @@ const tplLogs = {
             return tplLogs.functions.renderListMedia(item, catKey === 'tv');
         },
         fetchPostersForYear(year) {
-            if (tplLogs.postersFetched[year]) return;
+            if (tplLogs.postersFetched[year]) return Promise.resolve();
             tplLogs.postersFetched[year] = true;
             const yearObj = tplLogs.years[year];
-            tplLogs.functions.fetchTMDBPosters(yearObj.movies, 'movie');
-            tplLogs.functions.fetchBookCovers(yearObj.books);
-            tplLogs.functions.fetchTMDBPosters(yearObj.tv, 'tv');
+            return Promise.all([
+                tplLogs.functions.fetchTMDBPosters(yearObj.movies, 'movie'),
+                tplLogs.functions.fetchBookCovers(yearObj.books),
+                tplLogs.functions.fetchTMDBPosters(yearObj.tv, 'tv')
+            ]).then(() => {
+                // Avoid re-rendering from stale async responses when user switched years.
+                if (tplLogs.year === year) {
+                    tplLogs.functions.logsDisplay();
+                }
+            });
         },
         fetchTMDBPosters(items, type) {
-            if (!items.length || !tplLogs.tmdbKey) return;
+            if (!items.length || !tplLogs.tmdbKey) return Promise.resolve();
             const promises = items.map(item => {
                 if (item.poster) return Promise.resolve();
                 const query = encodeURIComponent(item.log);
@@ -144,12 +151,12 @@ const tplLogs = {
                             item.poster = data.results[0].poster_path || '';
                         }
                     })
-                    .catch(() => {});
+                    .catch(() => { });
             });
-            Promise.all(promises).then(() => tplLogs.functions.logsDisplay());
+            return Promise.all(promises);
         },
         fetchBookCovers(books) {
-            if (!books.length) return;
+            if (!books.length) return Promise.resolve();
             const promises = books.map(book => {
                 if (book.coverUrl) return Promise.resolve();
                 if (book.cover) { book.coverUrl = book.cover; return Promise.resolve(); }
@@ -170,9 +177,9 @@ const tplLogs = {
                             }
                         }
                     })
-                    .catch(() => {});
+                    .catch(() => { });
             });
-            Promise.all(promises).then(() => tplLogs.functions.logsDisplay());
+            return Promise.all(promises);
         },
         renderMoviesShelves(movies) {
             if (!movies.length) return '';
