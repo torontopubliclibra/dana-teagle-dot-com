@@ -2,6 +2,34 @@
     "2026": {
         "movies": [
             {
+                "log": "The Women",
+                "year": "1939",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/the-women/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/3/7/8/6/2/37862-the-women-0-2000-0-3000-crop.jpg?v=6ac3f5dc26"
+            },
+            {
+                "log": "Matt and Mara",
+                "year": "2024",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/matt-and-mara/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/7/9/8/1/2/5/798125-matt-and-mara-0-2000-0-3000-crop.jpg?v=aa0fcbb474"
+            },
+            {
+                "log": "Peter Hujar's Day",
+                "year": "2025",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/peter-hujars-day/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/4/5/6/5/1/1045651-peter-hujars-day-0-2000-0-3000-crop.jpg?v=72400d36c2"
+            },
+            {
+                "log": "Backrooms",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/backrooms-2026/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-2000-0-3000-crop.jpg?v=f7a99e3fc8"
+            },
+            {
                 "log": "Young Female Playwright",
                 "year": "2026",
                 "rewatch": false,

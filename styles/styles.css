@@ -2345,6 +2345,29 @@ html.tpl .mix-search-query-display {
 }
 html.tpl .stream-select {
   padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+html.tpl .stream-platform {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+html.tpl .stream-platform-label {
+  line-height: 1;
+}
+html.tpl .stream-platform-icon {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  filter: grayscale(1) contrast(200%);
+}
+html.tpl .stream-platform.range-selected .stream-platform-icon {
+  transform: skew(-10deg);
 }
 html.tpl .scroll-to-top {
   display: none;
