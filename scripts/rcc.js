@@ -369,7 +369,7 @@ fetch('../data/rcc.json')
 
     const isSpecialPresentation = film => Boolean(film.series);
     const isConfirmedScreening = film => film.title !== 'TBD';
-    const isConfirmedToggleAvailable = () => activeFilter === 'upcoming' || activeFilter === currentYearLabel;
+    const isConfirmedToggleAvailable = () => activeFilter === 'upcoming' || activeFilter === currentYearLabel || activeFilter === 'all';
 
     const getAvailableYearFilters = () => {
       const filmsByYear = new Map();
@@ -400,7 +400,7 @@ fetch('../data/rcc.json')
 
     const renderFilterTabs = () => {
       const availableYearFilters = getAvailableYearFilters();
-      const availableFilters = ['upcoming', ...availableYearFilters, 'special-presentations'];
+      const availableFilters = ['upcoming', ...availableYearFilters, 'special-presentations', 'all'];
 
       if (!availableFilters.includes(activeFilter)) {
         activeFilter = 'upcoming';
@@ -410,9 +410,11 @@ fetch('../data/rcc.json')
         .map(filter => {
           const label = filter === 'upcoming'
             ? 'Upcoming'
-            : filter === 'special-presentations'
-              ? 'Special Presentations'
-              : filter;
+            : filter === 'all'
+              ? 'All Screenings'
+              : filter === 'special-presentations'
+                ? 'Special Presentations'
+                : filter;
           return `<button class="rcc-filter-tab" type="button" role="tab" data-rcc-filter="${filter}" aria-selected="false">${label}</button>`;
         })
         .join('');
@@ -420,6 +422,10 @@ fetch('../data/rcc.json')
 
     const getVisibleFilms = () => {
       if (activeFilter === 'all') {
+        if (confirmedToggle && !confirmedToggle.disabled && confirmedToggle.checked) {
+          return cardFilms.filter(isConfirmedScreening);
+        }
+
         return cardFilms;
       }
       const filteredFilms = activeFilter === 'upcoming'
