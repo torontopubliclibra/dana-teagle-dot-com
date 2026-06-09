@@ -658,7 +658,33 @@
         },
         {
             "date": "25-06-2026",
-            "title": "TBD"
+            "title": "Medium Cool",
+            "year": 1969,
+            "director": "Haskell Wexler",
+            "writer": [
+                "Haskell Wexler"
+            ],
+            "poster": "/rcc/posters/mediumcool.png",
+            "link": "https://letterboxd.com/film/medium-cool/",
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Robert Forster",
+                "Verna Bloom",
+                "Peter Bonerz",
+                "Marianna Hill",
+                "Harold Blankenship",
+                "Charles Geary",
+                "Sid McCoy",
+                "Christine Bergstrom",
+                "William Sickingen",
+                "Roberet McAndrew"
+            ],
+            "runtime": 111
         },
         {
             "date": "30-07-2026",
