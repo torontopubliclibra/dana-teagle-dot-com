@@ -613,15 +613,17 @@ fetch('../data/rcc.json')
       const totalFilms = filmsToUse.length;
       const directorsList = [...new Set(filmsToUse.map(film => film.director).filter(Boolean))].sort();
       const writersList = [...new Set(filmsToUse.flatMap(film => Array.isArray(film.writer) ? film.writer : []).filter(Boolean))].sort();
+      const womenDirectedCount = filmsToUse.filter(film => film.women_directors === true).length;
       const totalRuntime = filmsToUse.reduce((sum, film) => sum + (film.runtime || 0), 0);
       const runtimeHours = Math.floor(totalRuntime / 60);
       const runtimeMinutes = totalRuntime % 60;
 
       const totalsValues = [
+        `Total # of movies: ${totalFilms}`,
+        `Total runtime: ${runtimeHours} hrs ${runtimeMinutes} mins`,
         `Directors: ${directorsList.join(', ')}`,
         `Writers: ${writersList.join(', ')}`,
-        `Total runtime: ${runtimeHours} hrs ${runtimeMinutes} mins`,
-        `Total # of movies: ${totalFilms}`
+        `Movies directed (or co-directed) by a woman: ${womenDirectedCount}`,
       ];
 
       const totalsBlock = document.createElement('section');
@@ -642,19 +644,19 @@ fetch('../data/rcc.json')
       statsContent.appendChild(
         createStatBlock(
           'Decades',
-          Object.keys(decades).sort().map(decade => `${decade} movie(s): ${decades[decade]}`)
+          Object.keys(decades).sort().map(decade => `${decade} movies: ${decades[decade]}`)
         )
       );
       statsContent.appendChild(
         createStatBlock(
           'Countries',
-          Object.keys(countries).sort().map(country => `${country} produced movie(s): ${countries[country]}`)
+          Object.keys(countries).sort().map(country => `${country} produced movies: ${countries[country]}`)
         )
       );
       statsContent.appendChild(
         createStatBlock(
           'Languages',
-          Object.keys(languages).sort().map(language => `${language} language movie(s): ${languages[language]}`)
+          Object.keys(languages).sort().map(language => `${language} language movies: ${languages[language]}`)
         )
       );
 

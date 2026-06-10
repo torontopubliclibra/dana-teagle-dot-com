@@ -27,6 +27,7 @@
             "title": "Bound",
             "year": 1996,
             "director": "Lana Wachowski, Lilly Wachowski",
+            "women_directors": true,
             "writer": [
                 "Lana Wachowski",
                 "Lilly Wachowski"
@@ -329,6 +330,7 @@
             "title": "Love Lies Bleeding",
             "year": 2024,
             "director": "Rose Glass",
+            "women_directors": true,
             "writer": [
                 "Rose Glass"
             ],
@@ -496,6 +498,7 @@
             "title": "But I'm a Cheerleader",
             "year": 1999,
             "director": "Jamie Babbit",
+            "women_directors": true,
             "writer": [
                 "Brian Peterson"
             ],
@@ -592,6 +595,7 @@
             "title": "Saving Face",
             "year": 2004,
             "director": "Alice Wu",
+            "women_directors": true,
             "writer": [
                 "Alice Wu"
             ],
@@ -627,6 +631,7 @@
             "title": "American Psycho",
             "year": 2000,
             "director": "Mary Harron",
+            "women_directors": true,
             "writer": [
                 "Guinevere Turner",
                 "Mary Harron",
@@ -691,6 +696,7 @@
             "title": "Desert Hearts",
             "year": 1985,
             "director": "Donna Deitch",
+            "women_directors": true,
             "writer": [
                 "Natalie Cooper",
                 "Jane Rule"
@@ -772,6 +778,7 @@
             "title": "Pariah",
             "year": 2011,
             "director": "Dee Rees",
+            "women_directors": true,
             "writer": [
                 "Dee Rees"
             ],
