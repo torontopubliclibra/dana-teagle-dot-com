@@ -208,8 +208,10 @@ fetch('../data/rcc.json')
       const mediaPoster = createPosterElement(film, 'rcc-lightbox-poster', 'rcc-lightbox-poster--placeholder');
 
       let touchStartX = 0;
+      let touchStartY = 0;
       let touchDeltaX = 0;
       let isTouchTracking = false;
+      let touchAxis = null;
 
       prevBtn.addEventListener('click', () => {
         if (!hasPrev) {
@@ -226,8 +228,10 @@ fetch('../data/rcc.json')
 
         const touch = event.touches[0];
         touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
         touchDeltaX = 0;
         isTouchTracking = true;
+        touchAxis = null;
         panel.classList.add('is-swipe-active');
         panel.style.transition = 'none';
       }, { passive: true });
@@ -239,8 +243,19 @@ fetch('../data/rcc.json')
 
         const touch = event.touches[0];
         const deltaX = touch.clientX - touchStartX;
+        const deltaY = touch.clientY - touchStartY;
+        const absX = Math.abs(deltaX);
+        const absY = Math.abs(deltaY);
 
-        if (Math.abs(deltaX) > 14) {
+        if (!touchAxis) {
+          if (absX > 26 && absX > absY * 1.4) {
+            touchAxis = 'x';
+          } else if (absY > 12 && absY > absX) {
+            touchAxis = 'y';
+          }
+        }
+
+        if (touchAxis === 'x') {
           event.preventDefault();
           touchDeltaX = deltaX;
           const clampedDelta = Math.max(-72, Math.min(72, deltaX));
@@ -257,8 +272,14 @@ fetch('../data/rcc.json')
         panel.classList.remove('is-swipe-active');
         panel.style.transition = '';
         panel.style.transform = '';
+        const axis = touchAxis;
+        touchAxis = null;
 
-        if (Math.abs(touchDeltaX) < 56) {
+        if (axis !== 'x') {
+          return;
+        }
+
+        if (Math.abs(touchDeltaX) < 88) {
           return;
         }
 
@@ -272,6 +293,14 @@ fetch('../data/rcc.json')
         }
 
         renderLightbox();
+      });
+
+      panel.addEventListener('touchcancel', () => {
+        isTouchTracking = false;
+        touchAxis = null;
+        panel.classList.remove('is-swipe-active');
+        panel.style.transition = '';
+        panel.style.transform = '';
       });
 
       const info = document.createElement('div');
