@@ -208,10 +208,7 @@ fetch('../data/rcc.json')
       const mediaPoster = createPosterElement(film, 'rcc-lightbox-poster', 'rcc-lightbox-poster--placeholder');
 
       let touchStartX = 0;
-      let touchStartY = 0;
       let touchDeltaX = 0;
-      let touchDeltaY = 0;
-      let swipeAxis = null;
       let isTouchTracking = false;
 
       prevBtn.addEventListener('click', () => {
@@ -229,10 +226,7 @@ fetch('../data/rcc.json')
 
         const touch = event.touches[0];
         touchStartX = touch.clientX;
-        touchStartY = touch.clientY;
         touchDeltaX = 0;
-        touchDeltaY = 0;
-        swipeAxis = null;
         isTouchTracking = true;
         panel.classList.add('is-swipe-active');
         panel.style.transition = 'none';
@@ -245,28 +239,12 @@ fetch('../data/rcc.json')
 
         const touch = event.touches[0];
         const deltaX = touch.clientX - touchStartX;
-        const deltaY = touch.clientY - touchStartY;
 
-        if (!swipeAxis && (Math.abs(deltaX) > 14 || Math.abs(deltaY) > 14)) {
-          swipeAxis = Math.abs(deltaX) > Math.abs(deltaY) ? 'x' : 'y';
-        }
-
-        if (swipeAxis === 'x') {
+        if (Math.abs(deltaX) > 14) {
           event.preventDefault();
           touchDeltaX = deltaX;
-          touchDeltaY = 0;
           const clampedDelta = Math.max(-72, Math.min(72, deltaX));
           panel.style.transform = `translateX(${clampedDelta}px)`;
-          return;
-        }
-
-        if (swipeAxis === 'y') {
-          event.preventDefault();
-          touchDeltaY = deltaY;
-          touchDeltaX = 0;
-          const clampedDelta = Math.max(-120, Math.min(120, deltaY));
-          const scale = Math.max(0.93, 1 - Math.abs(clampedDelta) / 1500);
-          panel.style.transform = `translate3d(0, ${clampedDelta}px, 0) scale(${scale})`;
         }
       }, { passive: false });
 
@@ -279,13 +257,6 @@ fetch('../data/rcc.json')
         panel.classList.remove('is-swipe-active');
         panel.style.transition = '';
         panel.style.transform = '';
-
-        if (swipeAxis === 'y') {
-          if (Math.abs(touchDeltaY) >= 72) {
-            closeLightbox();
-          }
-          return;
-        }
 
         if (Math.abs(touchDeltaX) < 56) {
           return;

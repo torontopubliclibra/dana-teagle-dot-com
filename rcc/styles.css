@@ -599,7 +599,7 @@ hr {
 }
 
 .rcc-lightbox-swipe-surface {
-  touch-action: none;
+  touch-action: pan-y;
   transition: transform 0.16s ease;
 }
 
