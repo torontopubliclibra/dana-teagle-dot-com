@@ -199,14 +199,8 @@ fetch('../data/rcc.json')
       prevBtn.setAttribute('aria-label', 'Previous poster');
       prevBtn.innerHTML = '<img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true">';
       const hasPrev = currentIndex > 0;
+      const hasNext = currentIndex < activeFilms.length - 1;
       prevBtn.disabled = !hasPrev;
-      prevBtn.addEventListener('click', () => {
-        if (!hasPrev) {
-          return;
-        }
-        currentIndex = getPrevIndex();
-        renderLightbox();
-      });
 
       const media = document.createElement('div');
       media.className = 'rcc-lightbox-media';
@@ -216,7 +210,30 @@ fetch('../data/rcc.json')
       let touchStartX = 0;
       let touchStartY = 0;
       let touchDeltaX = 0;
+      let touchDeltaY = 0;
+      let swipeAxis = null;
       let isTouchTracking = false;
+
+      const triggerPageTurn = (direction, onComplete) => {
+        const pageTurnClass = direction === 'left' ? 'is-page-turning-left' : 'is-page-turning-right';
+        panel.classList.remove('is-page-turning-left', 'is-page-turning-right');
+        panel.classList.add('is-page-turning', pageTurnClass);
+
+        panel.addEventListener('animationend', () => {
+          panel.classList.remove('is-page-turning', pageTurnClass);
+          onComplete();
+        }, { once: true });
+      };
+
+      prevBtn.addEventListener('click', () => {
+        if (!hasPrev) {
+          return;
+        }
+        triggerPageTurn('right', () => {
+          currentIndex = getPrevIndex();
+          renderLightbox();
+        });
+      });
 
       panel.addEventListener('touchstart', event => {
         if (event.touches.length !== 1) {
@@ -227,6 +244,8 @@ fetch('../data/rcc.json')
         touchStartX = touch.clientX;
         touchStartY = touch.clientY;
         touchDeltaX = 0;
+        touchDeltaY = 0;
+        swipeAxis = null;
         isTouchTracking = true;
         panel.classList.add('is-swipe-active');
         panel.style.transition = 'none';
@@ -241,11 +260,28 @@ fetch('../data/rcc.json')
         const deltaX = touch.clientX - touchStartX;
         const deltaY = touch.clientY - touchStartY;
 
-        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (!swipeAxis && (Math.abs(deltaX) > 14 || Math.abs(deltaY) > 14)) {
+          swipeAxis = Math.abs(deltaX) > Math.abs(deltaY) ? 'x' : 'y';
+        }
+
+        if (swipeAxis === 'x') {
           event.preventDefault();
           touchDeltaX = deltaX;
-          const clampedDelta = Math.max(-72, Math.min(72, deltaX));
-          panel.style.transform = `translateX(${clampedDelta}px)`;
+          touchDeltaY = 0;
+          const clampedDelta = Math.max(-120, Math.min(120, deltaX));
+          const rotation = Math.max(-9, Math.min(9, clampedDelta / -14));
+          const scale = Math.max(0.94, 1 - Math.abs(clampedDelta) / 1700);
+          panel.style.transform = `translate3d(${clampedDelta}px, 0, 0) rotateY(${rotation}deg) scale(${scale})`;
+          return;
+        }
+
+        if (swipeAxis === 'y') {
+          event.preventDefault();
+          touchDeltaY = deltaY;
+          touchDeltaX = 0;
+          const clampedDelta = Math.max(-120, Math.min(120, deltaY));
+          const scale = Math.max(0.93, 1 - Math.abs(clampedDelta) / 1500);
+          panel.style.transform = `translate3d(0, ${clampedDelta}px, 0) scale(${scale})`;
         }
       }, { passive: false });
 
@@ -259,20 +295,33 @@ fetch('../data/rcc.json')
         panel.style.transition = '';
         panel.style.transform = '';
 
+        if (swipeAxis === 'y') {
+          if (Math.abs(touchDeltaY) >= 72) {
+            closeLightbox();
+          }
+          return;
+        }
+
         if (Math.abs(touchDeltaX) < 56) {
           return;
         }
 
         if (touchDeltaX < 0 && hasNext) {
-          currentIndex = getNextIndex();
+          triggerPageTurn('left', () => {
+            currentIndex = getNextIndex();
+            renderLightbox();
+          });
+          return;
         } else if (touchDeltaX > 0 && hasPrev) {
-          currentIndex = getPrevIndex();
+          triggerPageTurn('right', () => {
+            currentIndex = getPrevIndex();
+            renderLightbox();
+          });
+          return;
         } else {
           closeLightbox();
           return;
         }
-
-        renderLightbox();
       });
 
       const info = document.createElement('div');
@@ -290,14 +339,15 @@ fetch('../data/rcc.json')
       nextBtn.setAttribute('type', 'button');
       nextBtn.setAttribute('aria-label', 'Next poster');
       nextBtn.innerHTML = '<img src="/assets/icons/arrow-left.svg" alt="" aria-hidden="true">';
-      const hasNext = currentIndex < activeFilms.length - 1;
       nextBtn.disabled = !hasNext;
       nextBtn.addEventListener('click', () => {
         if (!hasNext) {
           return;
         }
-        currentIndex = getNextIndex();
-        renderLightbox();
+        triggerPageTurn('left', () => {
+          currentIndex = getNextIndex();
+          renderLightbox();
+        });
       });
 
       body.appendChild(prevBtn);

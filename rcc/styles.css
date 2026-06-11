@@ -482,6 +482,7 @@ hr {
   justify-content: center;
   background: rgba(10, 11, 12, 0.87);
   backdrop-filter: blur(2px);
+  perspective: 1400px;
 }
 
 .rcc-lightbox-panel {
@@ -494,6 +495,8 @@ hr {
   background: #1d2122;
   border: 1px solid rgba(192, 197, 210, 0.25);
   overflow: hidden;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .rcc-lightbox-topbar {
@@ -599,12 +602,55 @@ hr {
 }
 
 .rcc-lightbox-swipe-surface {
-  touch-action: pan-y;
-  transition: transform 0.16s ease;
+  touch-action: none;
+  transition: transform 0.22s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .rcc-lightbox-swipe-surface.is-swipe-active {
   transition: none;
+}
+
+.rcc-lightbox-swipe-surface.is-page-turning {
+  pointer-events: none;
+}
+
+.rcc-lightbox-swipe-surface.is-page-turning-left {
+  animation: rcc-page-turn-left 220ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.rcc-lightbox-swipe-surface.is-page-turning-right {
+  animation: rcc-page-turn-right 220ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes rcc-page-turn-left {
+  from {
+    transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+  }
+
+  to {
+    transform: translate3d(-34vw, 0, 0) rotateY(17deg) scale(0.96);
+  }
+}
+
+@keyframes rcc-page-turn-right {
+  from {
+    transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+  }
+
+  to {
+    transform: translate3d(34vw, 0, 0) rotateY(-17deg) scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rcc-lightbox-swipe-surface {
+    transition-duration: 0s;
+  }
+
+  .rcc-lightbox-swipe-surface.is-page-turning-left,
+  .rcc-lightbox-swipe-surface.is-page-turning-right {
+    animation-duration: 0s;
+  }
 }
 
 .rcc-lightbox-poster--placeholder {
