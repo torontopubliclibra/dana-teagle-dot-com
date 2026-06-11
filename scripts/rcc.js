@@ -214,25 +214,12 @@ fetch('../data/rcc.json')
       let swipeAxis = null;
       let isTouchTracking = false;
 
-      const triggerPageTurn = (direction, onComplete) => {
-        const pageTurnClass = direction === 'left' ? 'is-page-turning-left' : 'is-page-turning-right';
-        panel.classList.remove('is-page-turning-left', 'is-page-turning-right');
-        panel.classList.add('is-page-turning', pageTurnClass);
-
-        panel.addEventListener('animationend', () => {
-          panel.classList.remove('is-page-turning', pageTurnClass);
-          onComplete();
-        }, { once: true });
-      };
-
       prevBtn.addEventListener('click', () => {
         if (!hasPrev) {
           return;
         }
-        triggerPageTurn('right', () => {
-          currentIndex = getPrevIndex();
-          renderLightbox();
-        });
+        currentIndex = getPrevIndex();
+        renderLightbox();
       });
 
       panel.addEventListener('touchstart', event => {
@@ -268,10 +255,8 @@ fetch('../data/rcc.json')
           event.preventDefault();
           touchDeltaX = deltaX;
           touchDeltaY = 0;
-          const clampedDelta = Math.max(-120, Math.min(120, deltaX));
-          const rotation = Math.max(-9, Math.min(9, clampedDelta / -14));
-          const scale = Math.max(0.94, 1 - Math.abs(clampedDelta) / 1700);
-          panel.style.transform = `translate3d(${clampedDelta}px, 0, 0) rotateY(${rotation}deg) scale(${scale})`;
+          const clampedDelta = Math.max(-72, Math.min(72, deltaX));
+          panel.style.transform = `translateX(${clampedDelta}px)`;
           return;
         }
 
@@ -307,21 +292,15 @@ fetch('../data/rcc.json')
         }
 
         if (touchDeltaX < 0 && hasNext) {
-          triggerPageTurn('left', () => {
-            currentIndex = getNextIndex();
-            renderLightbox();
-          });
-          return;
+          currentIndex = getNextIndex();
         } else if (touchDeltaX > 0 && hasPrev) {
-          triggerPageTurn('right', () => {
-            currentIndex = getPrevIndex();
-            renderLightbox();
-          });
-          return;
+          currentIndex = getPrevIndex();
         } else {
           closeLightbox();
           return;
         }
+
+        renderLightbox();
       });
 
       const info = document.createElement('div');
@@ -344,10 +323,8 @@ fetch('../data/rcc.json')
         if (!hasNext) {
           return;
         }
-        triggerPageTurn('left', () => {
-          currentIndex = getNextIndex();
-          renderLightbox();
-        });
+        currentIndex = getNextIndex();
+        renderLightbox();
       });
 
       body.appendChild(prevBtn);
