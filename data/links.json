@@ -1,5 +1,5 @@
 {
-    "work & creative": {
+    "work & projects": {
         "dana teagle dot com": {
             "link": "/",
             "description": "Design & web/software development portfolio"
@@ -13,33 +13,7 @@
             "description": "Political messaging with varying degrees of importance"
         }
     },
-    "contact & pay": {
-        "Personal email": {
-            "link": "mailto:dana@torontopubliclibra.com",
-            "description": "dana [at] torontopubliclibra.com"
-        },
-        "Business email": {
-            "link": "mailto:contact@danateagle.com",
-            "description": "contact [at] danateagle.com"
-        },
-        "PayPal": {
-            "link": "/paypal",
-            "description": "Send payments via PayPal"
-        },
-        "Wise": {
-            "link": "/wise",
-            "description": "Send payments via Wise"
-        },
-        "Discord": {
-            "link": "/discord",
-            "description": "torontopubliclibra on Discord"
-        },
-        "PGP key": {
-            "link": "/data/rusty-pgp.asc",
-            "description": "ASCII text file download"
-        }
-    },
-    "social profiles": {
+    "socials": {
         "Instagram (I)": {
             "link": "/tplgram",
             "description": "@torontopubliclibra"
@@ -69,6 +43,28 @@
             "description": "@torontopubliclibra"
         }
     },
+    "referral codes": {
+        "Meridian credit union": {
+            "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
+            "description": "Open a Meridian chequing account and get $50 CAD using my referral code: RFGB4ND5"
+        },
+        "Koho virtual pre-paid Mastercard": {
+            "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
+            "description": "Get 3 free months of Koho's everything plan with my referral code: GLHLKHFX5P"
+        },
+        "Proton": {
+            "link": "https://pr.tn/ref/G1GD74NF",
+            "description": "Get a two-week free trial of paid Proton services and $20 USD credit with my referral code: G1GD74NF"
+        },
+        "Oxio home internet": {
+            "link": "https://order.oxio.ca/?referral=RE3RXUH",
+            "description": "Get a free month of home internet service with Oxio using my referral code: RE3RXUH"
+        },
+        "Freedom Mobile": {
+            "link": "https://referme.to/danarosamundt-9",
+            "description": "Get a $25 CAD credit when you join Freedom Mobile using my referral code: danarosamundt-9"
+        }
+    },
     "mutual aid": {
         "Funds for Gaza": {
             "link": "https://linktr.ee/fundsforgaza",
@@ -93,6 +89,32 @@
         "Penn2Paper": {
             "link": "https://penn2paper.ca/",
             "description": "A free platonic pen pal program between federal prisoners and community volunteers"
+        }
+    },
+    "contact & pay": {
+        "Personal email": {
+            "link": "mailto:dana@torontopubliclibra.com",
+            "description": "dana [at] torontopubliclibra.com"
+        },
+        "Business email": {
+            "link": "mailto:contact@danateagle.com",
+            "description": "contact [at] danateagle.com"
+        },
+        "PayPal": {
+            "link": "/paypal",
+            "description": "Send payments via PayPal"
+        },
+        "Wise": {
+            "link": "/wise",
+            "description": "Send payments via Wise"
+        },
+        "Discord": {
+            "link": "/discord",
+            "description": "torontopubliclibra on Discord"
+        },
+        "PGP key": {
+            "link": "/data/rusty-pgp.asc",
+            "description": "ASCII text file download"
         }
     }
 }
