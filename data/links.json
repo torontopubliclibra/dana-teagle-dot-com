@@ -26,6 +26,10 @@
             "link": "/letterboxd",
             "description": "@torontolibra"
         },
+        "Serializd": {
+            "link": "/serializd",
+            "description": "@torontopubliclibra"
+        },
         "Tumblr": {
             "link": "/tumblr",
             "description": "@torontopubliclibra"
@@ -46,7 +50,7 @@
     "referral codes": {
         "Meridian credit union": {
             "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
-            "description": "Open a Meridian chequing account and get $50 CAD using my referral code: RFGB4ND5"
+            "description": "Open a Meridian chequing account and get $50 using my referral code: RFGB4ND5"
         },
         "Koho virtual pre-paid Mastercard": {
             "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
@@ -54,7 +58,7 @@
         },
         "Proton": {
             "link": "https://pr.tn/ref/G1GD74NF",
-            "description": "Get a two-week free trial of paid Proton services and $20 USD credit with my referral code: G1GD74NF"
+            "description": "Get a two-week free trial of paid Proton services and $20 credit with my referral code: G1GD74NF"
         },
         "Oxio home internet": {
             "link": "https://order.oxio.ca/?referral=RE3RXUH",
@@ -62,7 +66,7 @@
         },
         "Freedom Mobile": {
             "link": "https://referme.to/danarosamundt-9",
-            "description": "Get a $25 CAD credit when you join Freedom Mobile using my referral code: danarosamundt-9"
+            "description": "Get a $25 credit when you join Freedom Mobile using my referral code: danarosamundt-9"
         }
     },
     "mutual aid": {
