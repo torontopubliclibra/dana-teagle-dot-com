@@ -2,6 +2,55 @@
     "2026": {
         "movies": [
             {
+                "log": "Inland Empire",
+                "year": "2006",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/inland-empire/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/5/0/8/2/2/50822-inland-empire-0-2000-0-3000-crop.jpg?v=b4bd226d73"
+            },
+            {
+                "log": "CAMP",
+                "year": "2025",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/camp-2025/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/0/8/5/3/1250853-camp-2025-0-2000-0-3000-crop.jpg?v=9d5d354cae"
+            },
+            {
+                "log": "Medium Cool",
+                "year": "1969",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/medium-cool/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/2/2/4/7/4/22474-medium-cool-0-2000-0-3000-crop.jpg?v=ed4aaaaae8"
+            },
+            {
+                "log": "Sullivan's Travels",
+                "year": "1941",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/sullivans-travels/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/4/1/6/6/4/41664-sullivan-s-travels-0-2000-0-3000-crop.jpg?v=a5227de2a9"
+            },
+            {
+                "log": "The Girl Can't Help It",
+                "year": "1956",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/the-girl-cant-help-it/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/2/2/2/5/5/22255-the-girl-can-t-help-it-0-2000-0-3000-crop.jpg?v=b1293bd723"
+            },
+            {
+                "log": "I Know Where I'm Going!",
+                "year": "1945",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/i-know-where-im-going/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/9/9/3/8/9938-i-know-where-i-m-going--0-2000-0-3000-crop.jpg?v=286b5960e3"
+            },
+            {
+                "log": "Before Sunrise",
+                "year": "1995",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/before-sunrise/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/9/7/4/51974-before-sunrise-0-2000-0-3000-crop.jpg?v=006e8fedea"
+            },
+            {
                 "log": "Moomins and the Comet Chase",
                 "year": "2010",
                 "rewatch": false,
@@ -663,7 +712,39 @@
         ],
         "tv": [
             {
-                "log": "daria",
+                "log": "How to Get to Heaven from Belfast",
+                "season": "1",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://thetvdb.com/series/how-to-get-to-heaven-from-belfast",
+                "poster": "https://artworks.thetvdb.com/banners/v4/series/438599/posters/697f24982fe5a.jpg"
+            },
+            {
+                "log": "The Other Bennet Sister",
+                "season": "1",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://thetvdb.com/series/the-other-bennet-sister",
+                "poster": "https://artworks.thetvdb.com/banners/v4/series/455324/posters/69ce529ba4216.jpg"
+            },
+            {
+                "log": "Only Connect",
+                "season": "21",
+                "year": "2025",
+                "rewatch": false,
+                "link": "https://thetvdb.com/series/only-connect",
+                "poster": "https://artworks.thetvdb.com/banners/posters/83221-2.jpg"
+            },
+            {
+                "log": "Interview with the Vampire",
+                "season": "1",
+                "year": "2022",
+                "rewatch": false,
+                "link": "https://thetvdb.com/series/interview-with-the-vampire",
+                "poster": "https://artworks.thetvdb.com/banners/v4/series/405535/posters/63277b27543d5.jpg"
+            },
+            {
+                "log": "Daria",
                 "season": "1",
                 "year": "1997",
                 "rewatch": true,
@@ -677,14 +758,6 @@
                 "rewatch": false,
                 "link": "https://thetvdb.com/series/the-way-out-uk",
                 "poster": "https://artworks.thetvdb.com/banners/v4/series/476020/posters/6a047b4c66139.jpg"
-            },
-            {
-                "log": "The Other Bennet Sister",
-                "season": "1",
-                "year": "2026",
-                "rewatch": false,
-                "link": "https://thetvdb.com/series/the-other-bennet-sister",
-                "poster": "https://artworks.thetvdb.com/banners/v4/series/455324/posters/69ce529ba4216.jpg"
             },
             {
                 "log": "Bojack Horseman",
