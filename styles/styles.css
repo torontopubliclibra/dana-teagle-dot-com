@@ -3297,7 +3297,8 @@ html body.project-lightbox-open {
   border-bottom: solid 4px transparent;
 }
 
-.project-lightbox-link img, .project-lightbox-close img {
+.project-lightbox-link img,
+.project-lightbox-close img {
   width: 14px;
   height: 14px;
   filter: invert(100%) sepia(100%) grayscale(100%) brightness(150%);
@@ -3445,10 +3446,10 @@ html body.project-lightbox-open {
     order: 0;
   }
   .project-lightbox-panel {
-    width: 85vw;
-    max-width: 85vw;
+    width: 95vw;
+    max-width: 95vw;
     height: auto;
-    max-height: 80vh;
+    max-height: 95vh;
     padding: 15px;
     padding-bottom: 15px;
     gap: 15px;
@@ -5026,7 +5027,7 @@ header .scroll-title {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 10px;
   padding: 10px 15px;
 }

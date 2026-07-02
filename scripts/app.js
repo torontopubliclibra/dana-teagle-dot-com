@@ -498,7 +498,7 @@ const app = {
                 return `<span class="testimonial-dot${isActive ? ' active' : ''}" aria-hidden="true"></span>`;
             }).join('');
 
-            app.elements.testimonialsButton.innerHTML = `<span class="testimonial-button-label">Another testimonial <img src="./assets/icons/refresh.svg" alt="" srcset=""></span><span class="testimonial-button-dots" aria-hidden="true">${testimonialDots}</span>`;
+            app.elements.testimonialsButton.innerHTML = `<span class="testimonial-button-dots" aria-hidden="true">${testimonialDots}</span> <span class="testimonial-button-label">Another testimonial <img src="./assets/icons/refresh.svg" alt="" srcset=""></span>`;
             app.elements.testimonialsButton.setAttribute('aria-label', `Show testimonial ${currentTestimonial} of ${totalTestimonials}`);
         },
         testimonialDisplay() {
