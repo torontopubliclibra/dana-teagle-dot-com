@@ -728,7 +728,34 @@
         },
         {
             "date": "27-08-2026",
-            "title": "TBD"
+            "title": "Do the Right Thing",
+            "year": 1989,
+            "director": "Spike Lee",
+            "writer": [
+                "Spike Lee"
+            ],
+            "poster": "/rcc/posters/dotherightthing.png",
+            "link": "https://letterboxd.com/film/desert-hearts/",
+            "country": [
+                "American"
+            ],
+            "languages": [
+                "English"
+            ],
+            "cast": [
+                "Spike Lee",
+                "Danny Aiello",
+                "Ossie Davis",
+                "Ruby Dee",
+                "Richard Edson",
+                "Giancarlo Esposito",
+                "Bill Nunn",
+                "John Turturro",
+                "Rosie Perez",
+                "Joie Lee",
+                "Frankie Faison"
+            ],
+            "runtime": 120
         },
         {
             "date": "24-09-2026",
@@ -771,7 +798,12 @@
         },
         {
             "date": "22-10-2026",
-            "title": "TBD"
+            "title": "TBD",
+            "nominees": [
+                "The Lighthouse (2019)",
+                "Good Bye Lenin (2003)",
+                "The Lost Boys (1987)"
+            ]
         },
         {
             "date": "19-11-2026",
@@ -803,7 +835,12 @@
         },
         {
             "date": "17-12-2026",
-            "title": "TBD"
+            "title": "TBD",
+            "nominees": [
+                "The Thing (1982)",
+                "Little Women (2019)",
+                "Spencer (2021)"
+            ]
         },
         {
             "date": "14-01-2027",
