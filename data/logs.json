@@ -2,6 +2,34 @@
     "2026": {
         "movies": [
             {
+                "log": "Enola Holmes",
+                "year": "2020",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/enola-holmes/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/4/2/7/8/5/2/427852-enola-holmes-0-2000-0-3000-crop.jpg?v=319e1769a5"
+            },
+            {
+                "log": "Cat People",
+                "year": "1942",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/cat-people/",
+                "poster": "https://a.ltrbxd.com/resized/sm/upload/g1/83/p5/51/lQgGh5QLdmlhNABHQcl5bBn5tmk-0-2000-0-3000-crop.jpg?v=e3172df17a"
+            },
+            {
+                "log": "Supergirl",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/supergirl-2026/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/4/2/8/6/974286-supergirl-2026-0-2000-0-3000-crop.jpg?v=e85ddf39db"
+            },
+            {
+                "log": "Bound",
+                "year": "1996",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/bound/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/2/8/9/47289-bound-0-2000-0-3000-crop.jpg?v=54e3ef63ae"
+            },
+            {
                 "log": "Inland Empire",
                 "year": "2006",
                 "rewatch": true,
@@ -712,6 +740,22 @@
         ],
         "tv": [
             {
+                "log": "X-Men '97",
+                "season": "2",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://thetvdb.com/series/x-men-97",
+                "poster": "https://artworks.thetvdb.com/banners/v4/series/412432/posters/66252b6a2681f.jpg"
+            },
+            {
+                "log": "Make That Movie",
+                "season": "1",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://thetvdb.com/series/make-that-movie",
+                "poster": "https://artworks.thetvdb.com/banners/v4/series/456337/posters/6a18d8e045030.jpg"
+            },
+            {
                 "log": "How to Get to Heaven from Belfast",
                 "season": "1",
                 "year": "2026",
@@ -905,6 +949,22 @@
             }
         ],
         "books": [
+            {
+                "log": "The Passion According to G.H.",
+                "author": "Clarice Lispector",
+                "year": "1964",
+                "reread": false,
+                "link": "https://anotherstory.ca/item/hvTabYmi134uJNuQsPlBhw",
+                "cover": "https://cdn1.bookmanager.com/i/m?b=hvTabYmi134uJNuQsPlBhw&cb=1699023040"
+            },
+            {
+                "log": "Hexes of the Deadwood Forest",
+                "author": "Agnieszka Szpila",
+                "year": "2026",
+                "reread": false,
+                "link": "https://anotherstory.ca/item/ssARrWrToAYoPQSvAhm6Hg",
+                "cover": "https://cdn1.bookmanager.com/i/m?b=ssARrWrToAYoPQSvAhm6Hg&cb=1760498629"
+            },
             {
                 "log": "On the Calculation of Volume III",
                 "author": "Solvej Balle",
