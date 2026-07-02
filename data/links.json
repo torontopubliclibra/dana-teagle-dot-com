@@ -48,14 +48,6 @@
         }
     },
     "referrals": {
-        "Meridian credit union": {
-            "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
-            "description": "Open a Meridian chequing account and get $50 using my referral code: RFGB4ND5"
-        },
-        "Koho virtual pre-paid Mastercard": {
-            "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
-            "description": "Get 3 free months of Koho's everything plan with my referral code: GLHLKHFX5P"
-        },
         "Proton": {
             "link": "https://pr.tn/ref/G1GD74NF",
             "description": "Get a two-week free trial of paid Proton services and $20 credit with my referral code: G1GD74NF"
@@ -64,9 +56,13 @@
             "link": "https://order.oxio.ca/?referral=RE3RXUH",
             "description": "Get a free month of home internet service with Oxio using my referral code: RE3RXUH"
         },
-        "Freedom Mobile": {
-            "link": "https://referme.to/danarosamundt-9",
-            "description": "Get a $25 credit when you join Freedom Mobile using my referral code: danarosamundt-9"
+        "Meridian credit union": {
+            "link": "https://www.meridiancu.ca/personal/chequing-and-savings-accounts/chequing-accounts",
+            "description": "Open a Meridian chequing account and get $50 using my referral code: RFGB4ND5"
+        },
+        "Koho virtual pre-paid Mastercard": {
+            "link": "https://web.koho.ca/referral-landing?rsCode=GLHLKHFX5P",
+            "description": "Get 3 free months of Koho's everything plan with my referral code: GLHLKHFX5P"
         }
     },
     "mutual aid": {
