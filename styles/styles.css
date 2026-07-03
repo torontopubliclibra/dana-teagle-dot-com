@@ -2509,7 +2509,8 @@ html.rustprop body.rp-lightbox-open {
 html.rustprop body {
   background-color: #282b2c;
 }
-html.rustprop body, html.rustprop .button {
+html.rustprop body,
+html.rustprop .button {
   text-transform: uppercase;
 }
 html.rustprop .rp-lightbox {
@@ -2671,11 +2672,15 @@ html.rustprop hr.accent {
 html.rustprop h1 {
   text-align: center;
   cursor: text;
-  width: 85%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 100vw;
   border-bottom: solid 4px rgba(243, 232, 233, 0.75);
   padding-bottom: 25px;
   padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 {
@@ -2702,6 +2707,27 @@ html.rustprop h1 a {
     width: 100%;
   }
 }
+html.rustprop h1 .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+html.rustprop h1 .links a {
+  background-color: #D4B3C2;
+  font-size: 1rem;
+  padding: 10px;
+  padding-bottom: 8px;
+}
+html.rustprop h1 .links a:hover {
+  background-color: rgba(243, 232, 233, 0.75);
+}
+html.rustprop h1 .links a:hover img {
+  transform: skew(-10deg);
+}
+html.rustprop h1 .links img {
+  height: 18px;
+  width: 18px;
+}
 html.rustprop h2 {
   width: 85%;
   text-align: center;
@@ -2714,11 +2740,13 @@ html.rustprop h2 {
     text-align: left;
   }
 }
-html.rustprop .img-gallery, html.rustprop footer {
+html.rustprop .img-gallery,
+html.rustprop footer {
   opacity: 0;
   animation: fade-in-tpl 0.4s ease-in 0.2s forwards;
 }
-html.rustprop main, html.rustprop header {
+html.rustprop main,
+html.rustprop header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2786,7 +2814,8 @@ html.rustprop main a.pdf-link {
   max-width: 500px;
   padding: 10px 25px;
 }
-html.rustprop main .rp-landing, html.rustprop main .four-oh-four {
+html.rustprop main .rp-landing,
+html.rustprop main .four-oh-four {
   width: 85%;
   max-width: 900px;
   display: flex;
@@ -2797,22 +2826,12 @@ html.rustprop main .rp-landing, html.rustprop main .four-oh-four {
   padding-top: 10px;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: solid 4px rgba(243, 232, 233, 0.75);
+  border-bottom: solid 4px rgba(95, 31, 71, 0.75);
 }
-html.rustprop main .rp-landing .rp-links, html.rustprop main .four-oh-four .rp-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 10px;
-}
-@media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing .rp-links, html.rustprop main .four-oh-four .rp-links {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustprop main .four-oh-four p, html.rustprop main .four-oh-four a {
+html.rustprop main .rp-landing p,
+html.rustprop main .rp-landing a,
+html.rustprop main .four-oh-four p,
+html.rustprop main .four-oh-four a {
   color: #f3e8e9;
   font-size: 1rem;
   text-align: center;
@@ -2820,69 +2839,99 @@ html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustpro
   line-height: 1.8;
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing p, html.rustprop main .rp-landing a, html.rustprop main .four-oh-four p, html.rustprop main .four-oh-four a {
+  html.rustprop main .rp-landing p,
+  html.rustprop main .rp-landing a,
+  html.rustprop main .four-oh-four p,
+  html.rustprop main .four-oh-four a {
     text-align: left;
     width: 100%;
   }
 }
-html.rustprop main .rp-landing a, html.rustprop main .four-oh-four a {
+html.rustprop main .rp-landing a,
+html.rustprop main .four-oh-four a {
   color: #282b2c;
   background-color: #D4B3C2;
   padding: 0 8px;
 }
-html.rustprop main .rp-landing .new-line, html.rustprop main .four-oh-four .new-line {
+html.rustprop main .rp-landing .new-line,
+html.rustprop main .four-oh-four .new-line {
   margin-top: 5px;
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing .new-line, html.rustprop main .four-oh-four .new-line {
+  html.rustprop main .rp-landing .new-line,
+  html.rustprop main .four-oh-four .new-line {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
   }
 }
-html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
+html.rustprop main .rp-landing a img,
+html.rustprop main .four-oh-four a img {
   height: 0.9rem;
   margin-left: 10px;
   margin-bottom: -0.3%;
   filter: invert(12%) sepia(7%) saturate(472%) hue-rotate(149deg) brightness(98%) contrast(89%);
 }
-html.rustprop main .rp-landing a img.lrg, html.rustprop main .four-oh-four a img.lrg {
+html.rustprop main .rp-landing a img.lrg,
+html.rustprop main .four-oh-four a img.lrg {
   transform: scale(1.15);
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing a img, html.rustprop main .four-oh-four a img {
+  html.rustprop main .rp-landing a img,
+  html.rustprop main .four-oh-four a img {
     transform: skew(-10deg);
   }
-  html.rustprop main .rp-landing a img.lrg, html.rustprop main .four-oh-four a img.lrg {
+  html.rustprop main .rp-landing a img.lrg,
+  html.rustprop main .four-oh-four a img.lrg {
     transform: scale(1.15) skew(-10deg);
   }
 }
-html.rustprop main .rp-landing p, html.rustprop main .four-oh-four p {
+html.rustprop main .rp-landing p,
+html.rustprop main .four-oh-four p {
   width: 80%;
 }
 @media only screen and (max-width: 970px) {
-  html.rustprop main .rp-landing p, html.rustprop main .four-oh-four p {
+  html.rustprop main .rp-landing p,
+  html.rustprop main .four-oh-four p {
     width: 100%;
   }
 }
-html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus, html.rustprop main .four-oh-four a:hover, html.rustprop main .four-oh-four a:focus {
+html.rustprop main .rp-landing a:hover,
+html.rustprop main .rp-landing a:focus,
+html.rustprop main .four-oh-four a:hover,
+html.rustprop main .four-oh-four a:focus {
   background-color: rgba(243, 232, 233, 0.75);
 }
-html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img, html.rustprop main .four-oh-four a:hover img, html.rustprop main .four-oh-four a:focus img {
+html.rustprop main .rp-landing a:hover img,
+html.rustprop main .rp-landing a:focus img,
+html.rustprop main .four-oh-four a:hover img,
+html.rustprop main .four-oh-four a:focus img {
   transform: skew(-10deg);
 }
-html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg, html.rustprop main .four-oh-four a:hover img.lrg, html.rustprop main .four-oh-four a:focus img.lrg {
+html.rustprop main .rp-landing a:hover img.lrg,
+html.rustprop main .rp-landing a:focus img.lrg,
+html.rustprop main .four-oh-four a:hover img.lrg,
+html.rustprop main .four-oh-four a:focus img.lrg {
   transform: scale(1.15) skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop main .rp-landing a:hover, html.rustprop main .rp-landing a:focus, html.rustprop main .four-oh-four a:hover, html.rustprop main .four-oh-four a:focus {
+  html.rustprop main .rp-landing a:hover,
+  html.rustprop main .rp-landing a:focus,
+  html.rustprop main .four-oh-four a:hover,
+  html.rustprop main .four-oh-four a:focus {
     background-color: #D4B3C2;
   }
-  html.rustprop main .rp-landing a:hover img, html.rustprop main .rp-landing a:focus img, html.rustprop main .four-oh-four a:hover img, html.rustprop main .four-oh-four a:focus img {
+  html.rustprop main .rp-landing a:hover img,
+  html.rustprop main .rp-landing a:focus img,
+  html.rustprop main .four-oh-four a:hover img,
+  html.rustprop main .four-oh-four a:focus img {
     transform: skew(-10deg);
   }
-  html.rustprop main .rp-landing a:hover img.lrg, html.rustprop main .rp-landing a:focus img.lrg, html.rustprop main .four-oh-four a:hover img.lrg, html.rustprop main .four-oh-four a:focus img.lrg {
+  html.rustprop main .rp-landing a:hover img.lrg,
+  html.rustprop main .rp-landing a:focus img.lrg,
+  html.rustprop main .four-oh-four a:hover img.lrg,
+  html.rustprop main .four-oh-four a:focus img.lrg {
     transform: scale(1.15) skew(-10deg);
   }
 }
@@ -3028,14 +3077,16 @@ html.rustprop footer {
 html.rustprop footer p.credit {
   color: #f3e8e9;
 }
-html.rustprop footer p.credit, html.rustprop footer a {
+html.rustprop footer p.credit,
+html.rustprop footer a {
   width: 85%;
   max-width: 900px;
   margin: 0 auto;
   font-size: 14px;
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop footer p.credit, html.rustprop footer a {
+  html.rustprop footer p.credit,
+  html.rustprop footer a {
     text-align: left;
   }
 }
@@ -3046,24 +3097,30 @@ html.rustprop footer a {
   text-decoration: none;
   margin: 5px -2px;
 }
-html.rustprop footer a:hover, html.rustprop footer a:focus {
+html.rustprop footer a:hover,
+html.rustprop footer a:focus {
   background-color: rgba(243, 232, 233, 0.75);
   color: #282b2c;
 }
-html.rustprop footer a:hover img, html.rustprop footer a:focus img {
+html.rustprop footer a:hover img,
+html.rustprop footer a:focus img {
   transform: skew(-10deg);
 }
-html.rustprop footer a:hover img.lrg, html.rustprop footer a:focus img.lrg {
+html.rustprop footer a:hover img.lrg,
+html.rustprop footer a:focus img.lrg {
   transform: scale(1.15) skew(-10deg);
 }
 @media only screen and (max-width: 768px) {
-  html.rustprop footer a:hover, html.rustprop footer a:focus {
+  html.rustprop footer a:hover,
+  html.rustprop footer a:focus {
     background-color: #D4B3C2;
   }
-  html.rustprop footer a:hover img, html.rustprop footer a:focus img {
+  html.rustprop footer a:hover img,
+  html.rustprop footer a:focus img {
     transform: skew(-10deg);
   }
-  html.rustprop footer a:hover img.lrg, html.rustprop footer a:focus img.lrg {
+  html.rustprop footer a:hover img.lrg,
+  html.rustprop footer a:focus img.lrg {
     transform: scale(1.15) skew(-10deg);
   }
 }
@@ -3499,6 +3556,16 @@ html body.project-lightbox-open {
 @font-face {
   font-family: "Special Gothic Expanded One";
   src: url(/fonts/special_gothic_expanded_one/SpecialGothicExpandedOne.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Transit";
+  src: url(/fonts/transit/TG-Transit.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Transit Condensed";
+  src: url(/fonts/transit/TG-Transit-Condensed.otf) format("opentype");
   font-display: swap;
 }
 body,
