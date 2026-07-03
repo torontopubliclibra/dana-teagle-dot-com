@@ -10,7 +10,6 @@ const tplMixes = {
     searchStatus: `<p class="mix-search-status" id="mix-search-status"><span class="mix-search-query-display" id="mix-search-query-display"></span><button onclick="document.getElementById('mix-search-input').value=''; tplMixes.functions.updateQuery('');" class="range" id="mix-search-clear">clear search</button></p>`,
     streamSelect: "",
     rangeSelect: "",
-    scrollToTop: `<p class="scroll-to-top" id="scroll-to-top"><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});return false;"><img src="/assets/icons/arrow-up.svg" alt="scroll up icon" class="scroll-to-top-icon">Back to Top</a></p>`,
     helpers: {
         getMaxMixNumber() {
             return tplMixes.mixes.length > 0
@@ -229,7 +228,6 @@ const tplMixes = {
             });
 
             html += `</ul><hr/>`;
-            html += tplMixes.scrollToTop;
 
             tplMixes.heading.text("rusty mixes artist index");
             tplMixes.nav.html("");
@@ -332,13 +330,12 @@ const tplMixes = {
             tplMixes.functions.randomMix();
         },
         navDisplay() {
-            $(".tpl-page-nav").each(function(idx) {
+            $(".tpl-page-nav").each(function (idx) {
                 const navContent = idx === 0
                     ? [tplMixes.searchStatus, tplMixes.rangeSelect, tplMixes.searchBar]
                     : [
                         '<hr class="bottom-nav-hr"/>',
                         '<div class="bottom-nav-flex">',
-                        tplMixes.scrollToTop,
                         tplMixes.rangeSelect,
                         '</div>',
                         '<p class="index-button"><button onclick="tplMixes.functions.showIndex()" class="range">Index</button> | <button onclick="tplMixes.functions.showTileView()" class="range">Grid view</button> | <button onclick="tplMixes.functions.randomMix()" class="range">Random</button></p>'
@@ -365,7 +362,7 @@ const tplMixes = {
 
             tplMixes.content.html([backBtn, gridHtml].join(''));
 
-            $(".mix-tile-link").on("click", function(e) {
+            $(".mix-tile-link").on("click", function (e) {
                 e.preventDefault();
                 const mixNum = $(this).data("mixnum");
                 window.location.hash = `#${mixNum}`;
