@@ -213,6 +213,7 @@ html.rustprop {
         gap: 1rem;
 
         @media only screen and (max-width: $mobile) {
+            flex-direction: column;
             text-align: center;
             width: 85%;
             display: flex;
@@ -239,6 +240,14 @@ html.rustprop {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media only screen and (max-width: $mobile) {
+            flex-direction: row;
+            gap: 15px;
+            margin-bottom: -10px;
+            justify-content: space-between;
+            width: 100%;
+        }
     }
 
     h1 .links a {
@@ -252,6 +261,14 @@ html.rustprop {
 
             img {
                 transform: skew(-10deg);
+            }
+
+            @media only screen and (max-width: $mobile) {
+                background-color: #D4B3C2;
+
+                img {
+                    transform: skew(0deg) scale(1);
+                }
             }
         }
     }

@@ -2684,6 +2684,7 @@ html.rustprop h1 {
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 {
+    flex-direction: column;
     text-align: center;
     width: 85%;
     display: flex;
@@ -2712,6 +2713,15 @@ html.rustprop h1 .links {
   flex-direction: column;
   gap: 10px;
 }
+@media only screen and (max-width: 768px) {
+  html.rustprop h1 .links {
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: -10px;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 html.rustprop h1 .links a {
   background-color: #D4B3C2;
   font-size: 1rem;
@@ -2723,6 +2733,14 @@ html.rustprop h1 .links a:hover {
 }
 html.rustprop h1 .links a:hover img {
   transform: skew(-10deg);
+}
+@media only screen and (max-width: 768px) {
+  html.rustprop h1 .links a:hover {
+    background-color: #D4B3C2;
+  }
+  html.rustprop h1 .links a:hover img {
+    transform: skew(0deg) scale(1);
+  }
 }
 html.rustprop h1 .links img {
   height: 18px;
@@ -3827,7 +3845,7 @@ html.rustprop h1 a {
 }
 @media only screen and (max-width: 768px) {
   html.rustprop h1 a {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 }
 
