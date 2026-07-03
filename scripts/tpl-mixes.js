@@ -38,8 +38,8 @@ const tplMixes = {
         getStreamLink(mix, stream = tplMixes.stream) {
             const streamLinks = {
                 tidal: mix.tidal,
-                apple: mix.apple,
-                spotify: mix.spotify
+                spotify: mix.spotify,
+                apple: mix.apple
             };
             return streamLinks[stream] || null;
         },
@@ -79,7 +79,7 @@ const tplMixes = {
             ).join(' ');
         },
         renderStreamSelect(stream = tplMixes.stream) {
-            const streams = ["tidal", "apple", "spotify"];
+            const streams = ["tidal", "spotify", "apple"];
             const buttons = streams.map(option => option === stream
                 ? `<span class="range-selected">${option}</span>`
                 : `<button class="range" onclick="tplMixes.functions.streamSet('${option}')">${option}</button>`
