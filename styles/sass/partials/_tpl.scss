@@ -5,10 +5,19 @@
 html.tpl {
     body {
         background-color: $black;
+        background: -webkit-repeating-linear-gradient(-75deg,
+                rgba($black, 0.98),
+                rgba($black, 0.97) 1px,
+                $black 1px,
+                $black 2px);
+        background: repeating-linear-gradient(-75deg,
+                rgba($black, 0.98),
+                rgba($black, 0.97) 1px,
+                $black 1px,
+                $black 2px);
     }
 
     header {
-        background: none !important;
         min-width: 380px;
 
         @media only screen and (max-width: $tablet) {
@@ -182,7 +191,7 @@ html.tpl {
         padding: 30px 0;
         position: sticky;
         top: 0;
-        background-color: #282b2c !important;
+        background: #282b2c;
         z-index: 100;
 
         @media only screen and (max-width: $tablet) {
@@ -199,6 +208,7 @@ html.tpl {
         top: 120px;
         background: #282b2c;
         z-index: 100;
+        overflow-x: hidden;
 
         @media only screen and (max-width: $tablet) {
             top: 156px;
@@ -211,6 +221,8 @@ html.tpl {
         hr {
             border-color: $color2;
             width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
             margin: 0 auto;
 
             &:first-of-type {
@@ -305,6 +317,7 @@ html.tpl {
             flex-flow: row nowrap;
             gap: 25px;
             padding: 30px 0;
+            padding-top: 0;
             margin: 0 auto;
             width: 100%;
             max-width: 1200px;
@@ -313,10 +326,10 @@ html.tpl {
             scrollbar-width: none;
 
             @media only screen and (max-width: $tablet) {
-                width: 90%;
+                width: 100%;
                 gap: 15px;
-                padding-left: 10px;
-                padding-right: 10px;
+                padding-left: 40px;
+                padding-right: 40px;
                 justify-content: left;
                 align-items: center;
             }
@@ -908,7 +921,7 @@ html.tpl {
             #books,
             #movies,
             #tv {
-                scroll-margin-top: 250px;
+                scroll-margin-top: 220px;
 
                 @media only screen and (max-width: $tablet) {
                     scroll-margin-top: 285px;
@@ -933,7 +946,7 @@ html.tpl {
                 width: auto;
                 margin-bottom: 10px;
                 padding-top: 0;
-                scroll-margin-top: 250px;
+                scroll-margin-top: 225px;
 
                 @media only screen and (max-width: $tablet) {
                     max-width: 90%;
@@ -1677,11 +1690,11 @@ html.tpl {
     }
 
     .feed-item-container {
-        scroll-margin-top: 258px;
+        scroll-margin-top: 220px;
     }
 
     .mix {
-        scroll-margin-top: 250px;
+        scroll-margin-top: 225px;
     }
 
     .feed-item-container,
