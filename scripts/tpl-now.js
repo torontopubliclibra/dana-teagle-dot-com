@@ -11,6 +11,7 @@ const tplNow = {
     newsletters: [],
     _newslettersFetched: false,
     topAlbums: [],
+    lastFmIgnoredArtists: new Set(),
     tmdbKey: '',
     tmdbImageBase: 'https://image.tmdb.org/t/p/w185',
     seasonStr(season) {
@@ -22,6 +23,30 @@ const tplNow = {
     },
     escapeText(value = '') {
         return String(value).replace(/'/g, '&#39;');
+    },
+    normalizeArtistName(value = '') {
+        return String(value).trim().toLowerCase();
+    },
+    parseLastFmIgnoredArtists(data) {
+        const artists = data && Array.isArray(data.artists) ? data.artists : [];
+        return new Set(
+            artists
+                .map(artist => this.normalizeArtistName(artist))
+                .filter(Boolean)
+        );
+    },
+    fetchLastFmIgnoredArtists() {
+        return fetch('../data/lastfm-ignore.json')
+            .then(response => response.json())
+            .then(data => {
+                this.lastFmIgnoredArtists = this.parseLastFmIgnoredArtists(data);
+            })
+            .catch(() => {
+                this.lastFmIgnoredArtists = new Set();
+            });
+    },
+    shouldIgnoreLastFmArtist(artist = '') {
+        return this.lastFmIgnoredArtists.has(this.normalizeArtistName(artist));
     },
     renderSection(title, link, body, className = 'now-scroll', attributes = '') {
         if (!body) return '';
@@ -253,15 +278,20 @@ const tplNow = {
         this.fetchNewsletters();
         this.tmdbKey = '1d27d67ac5b026aad089308525f64f5f';
         const lastFmKey = '8387eaa633e79d3aaab96fb9c1173163';
-        const lastFmUrl = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=rustbecomesher&period=1month&api_key=${lastFmKey}&format=json&limit=4`;
-        this.fetchSection(lastFmUrl, ['albums'], data => {
-            const albums = (data && data.topalbums && data.topalbums.album) ? data.topalbums.album : [];
-            this.topAlbums = albums.map(album => ({
-                name: album.name,
-                artist: album.artist.name,
-                url: album.url,
-                image: (album.image && album.image.length) ? album.image[album.image.length - 1]['#text'] : ''
-            }));
+        const lastFmUrl = `https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=rustbecomesher&period=1month&api_key=${lastFmKey}&format=json&limit=12`;
+        this.fetchLastFmIgnoredArtists().then(() => {
+            this.fetchSection(lastFmUrl, ['albums'], data => {
+                const albums = (data && data.topalbums && data.topalbums.album) ? data.topalbums.album : [];
+                this.topAlbums = albums
+                    .filter(album => !this.shouldIgnoreLastFmArtist(album && album.artist ? album.artist.name : ''))
+                    .slice(0, 4)
+                    .map(album => ({
+                        name: album.name,
+                        artist: album.artist.name,
+                        url: album.url,
+                        image: (album.image && album.image.length) ? album.image[album.image.length - 1]['#text'] : ''
+                    }));
+            });
         });
     },
     fetchNewsletters() {
