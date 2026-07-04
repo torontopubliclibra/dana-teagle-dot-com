@@ -1341,7 +1341,7 @@ html.tpl main .tpl-links h3 {
     text-align: left;
     margin-right: auto;
     margin-left: auto;
-    scroll-margin-top: 285px;
+    scroll-margin-top: 250px;
   }
 }
 html.tpl main .tpl-links h3.h3-trans-id {
@@ -2004,7 +2004,7 @@ html.tpl .mix {
 @media (max-width: 600px) {
   html.tpl .feed-item-container,
   html.tpl .mix {
-    scroll-margin-top: 290px;
+    scroll-margin-top: 255px;
   }
 }
 html.tpl .featuring-ellipsis {
