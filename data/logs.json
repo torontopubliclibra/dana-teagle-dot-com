@@ -2,6 +2,20 @@
     "2026": {
         "movies": [
             {
+                "log": "Sense and Sensibility",
+                "year": "1995",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/sense-and-sensibility/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/4/9/2/3/2/49232-sense-and-sensibility-0-2000-0-3000-crop.jpg?v=15cebc0b43"
+            },
+            {
+                "log": "Exotica",
+                "year": "1994",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/exotica/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/3/9/1/9/6/39196-exotica-0-2000-0-3000-crop.jpg?v=79627bcf88"
+            },
+            {
                 "log": "Enola Holmes",
                 "year": "2020",
                 "rewatch": true,
