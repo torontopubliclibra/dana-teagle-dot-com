@@ -61,7 +61,7 @@ const tplLogs = {
             return tplLogs.yearSelect + tplLogs.viewSelect;
         },
         renderFooter(topToggles) {
-            return `<hr>${topToggles}<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`;
+            return `<hr>${topToggles}<p>See also: <a href="/letterboxd" target="_blank" title="@torontolibra on Letterboxd">Letterboxd</a> | <a href="/serializd" target="_blank" title="@torontopubliclibra on Serializd">Serializd</a> | <a href="/goodreads" target="_blank" title="Dana Teagle on Goodreads">Goodreads</a></p>`;
         },
         renderSectionHeader(cat, year, count, index) {
             return `${index === 0 ? '<hr class="no-top">' : '<hr>'}<p id="${cat.key}">>> ${cat.label} in ${year} (${count})</p>`;
