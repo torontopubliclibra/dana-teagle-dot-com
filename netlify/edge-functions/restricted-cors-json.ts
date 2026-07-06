@@ -1,5 +1,6 @@
 const LOCALHOST_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(?::\d+)?$/;
 const ALLOWED_ORIGINS = new Set([
+    "https://danateagle.com/tpl/",
     "https://clouds.danateagle.com",
     "https://birds.danateagle.com",
 ]);

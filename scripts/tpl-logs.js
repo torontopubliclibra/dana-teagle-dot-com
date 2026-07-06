@@ -14,6 +14,9 @@ const tplLogs = {
     view: "shelves",
     tmdbKey: '1d27d67ac5b026aad089308525f64f5f',
     postersFetched: {},
+    _logsLoaded: false,
+    nowDate: '',
+    feedLatestDate: '',
     functions: {
         categories: [
             { key: 'movies', label: 'movies watched', icon: 'arrow-down.svg' },
@@ -56,6 +59,51 @@ const tplLogs = {
         },
         escapeTitle(title) {
             return `${title || ''}`.replace(/'/g, '&#39;');
+        },
+        parseDateValue(dateText = '') {
+            const match = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/.exec(String(dateText).trim());
+            if (!match) {
+                return null;
+            }
+
+            const day = Number(match[1]);
+            const month = Number(match[2]);
+            const year = Number(match[3]);
+
+            if (!day || !month || !year) {
+                return null;
+            }
+
+            return { day, month, year };
+        },
+        compareDateValues(leftDate, rightDate) {
+            if (!leftDate) return rightDate;
+            if (!rightDate) return leftDate;
+
+            if (leftDate.year !== rightDate.year) {
+                return leftDate.year > rightDate.year ? leftDate : rightDate;
+            }
+
+            if (leftDate.month !== rightDate.month) {
+                return leftDate.month > rightDate.month ? leftDate : rightDate;
+            }
+
+            if (leftDate.day !== rightDate.day) {
+                return leftDate.day > rightDate.day ? leftDate : rightDate;
+            }
+
+            return leftDate;
+        },
+        getLaterDate(...dates) {
+            const latest = dates.reduce((currentLatest, dateText) => {
+                const parsedDate = tplLogs.functions.parseDateValue(dateText);
+                return tplLogs.functions.compareDateValues(currentLatest, parsedDate);
+            }, null);
+
+            return latest ? `${String(latest.day).padStart(2, '0')}/${String(latest.month).padStart(2, '0')}/${latest.year}` : '';
+        },
+        updateUpdatedDate() {
+            tplLogs.updated = tplLogs.functions.getLaterDate(tplLogs.nowDate, tplLogs.feedLatestDate) || tplLogs.nowDate || tplLogs.feedLatestDate;
         },
         getTopToggles() {
             return tplLogs.yearSelect + tplLogs.viewSelect;
@@ -268,10 +316,23 @@ const tplLogs = {
         fetch('../data/now.json')
             .then(response => response.json())
             .then(nowData => {
-                tplLogs.updated = Object.keys(nowData)[0] || '';
+                tplLogs.nowDate = Object.keys(nowData)[0] || '';
+                tplLogs.functions.updateUpdatedDate();
             })
             .catch(error => console.log(error))
             .finally(() => {
+                fetch('../data/feed.json')
+                    .then(response => response.json())
+                    .then(feedData => {
+                        const posts = (feedData && Array.isArray(feedData.items)) ? feedData.items : [];
+                        tplLogs.feedLatestDate = tplLogs.functions.getLaterDate(...posts.map(post => post && post.date).filter(Boolean));
+                        tplLogs.functions.updateUpdatedDate();
+                        if (tplLogs._logsLoaded) {
+                            tplLogs.functions.logsDisplay();
+                        }
+                    })
+                    .catch(error => console.log(error));
+
                 fetch('../data/logs.json')
                     .then(response => response.json())
                     .then(data => {
@@ -281,6 +342,7 @@ const tplLogs = {
                             tplLogs.years[year].tv = data[year]?.tv || [];
                         });
                         tplLogs.functions.fetchPostersForYear(tplLogs.year);
+                        tplLogs._logsLoaded = true;
                         tplLogs.functions.logsDisplay();
                     })
                     .catch(error => console.log(error));
