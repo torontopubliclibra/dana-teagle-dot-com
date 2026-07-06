@@ -80,6 +80,14 @@
   status = 200
   force = true
 
+[[edge_functions]]
+  path = "/data/feed.json"
+  function = "restricted-cors-json"
+
+[[edge_functions]]
+  path = "/data/logs.json"
+  function = "restricted-cors-json"
+
 [[redirects]]
   from = "https://www.danatgirl.com/"
   to = "https://www.danateagle.com/alt"
