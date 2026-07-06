@@ -32,7 +32,7 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://danateagle.com/tpl/rss.xml</loc>
+        <loc>https://danateagle.com/tpl/feed.xml</loc>
         <lastmod>2026-05-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
