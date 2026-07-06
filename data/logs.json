@@ -2,6 +2,13 @@
     "2026": {
         "movies": [
             {
+                "log": "Smooth Talk",
+                "year": "1985",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/smooth-talk/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/2/9/5/5/7/29557-smooth-talk-0-2000-0-3000-crop.jpg?v=c4449bde13"
+            },
+            {
                 "log": "Sense and Sensibility",
                 "year": "1995",
                 "rewatch": false,
@@ -964,6 +971,14 @@
         ],
         "books": [
             {
+                "log": "Slow Days, Fast Company: The World, the Flesh, and L.A.",
+                "author": "Eve Babitz",
+                "year": "1964",
+                "reread": false,
+                "link": "https://anotherstory.ca/item/1SqnOF0xZ8sNyRy-BZBaTQ",
+                "cover": "https://cdn1.bookmanager.com/i/m?b=1SqnOF0xZ8sNyRy-BZBaTQ&cb=1743216560"
+            },
+            {
                 "log": "The Passion According to G.H.",
                 "author": "Clarice Lispector",
                 "year": "1964",
@@ -1049,7 +1064,7 @@
                 "year": "2020",
                 "reread": false,
                 "link": "https://openlibrary.org/works/OL25803688W",
-                "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbooksandbao.com%2Fwp-content%2Fuploads%2F2022%2F01%2FThe-Employees-by-Olga-Ravn-670x1000.jpeg.webp&f=1&nofb=1&ipt=334d3f354b682b5bdd31981641a03915d35b03ed3809908d56852bce46c711e2"
+                "cover": "https://cdn1.bookmanager.com/i/m?b=AUgNRER1yUo99F6Jv8WU7w&cb=1706872716"
             },
             {
                 "log": "lao tzu's tao te ching",

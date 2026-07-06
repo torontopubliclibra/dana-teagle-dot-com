@@ -14,6 +14,8 @@ const tplNow = {
     lastFmIgnoredArtists: new Set(),
     tmdbKey: '',
     tmdbImageBase: 'https://image.tmdb.org/t/p/w185',
+    nowDate: '',
+    feedLatestDate: '',
     seasonStr(season) {
         if (!season) return '';
         return typeof season === 'string' && season.includes('-') ? ` seasons ${season}` : ` season ${season}`;
@@ -34,6 +36,51 @@ const tplNow = {
                 .map(artist => this.normalizeArtistName(artist))
                 .filter(Boolean)
         );
+    },
+    parseDateValue(dateText = '') {
+        const match = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/.exec(String(dateText).trim());
+        if (!match) {
+            return null;
+        }
+
+        const day = Number(match[1]);
+        const month = Number(match[2]);
+        const year = Number(match[3]);
+
+        if (!day || !month || !year) {
+            return null;
+        }
+
+        return { day, month, year };
+    },
+    compareDateValues(leftDate, rightDate) {
+        if (!leftDate) return rightDate;
+        if (!rightDate) return leftDate;
+
+        if (leftDate.year !== rightDate.year) {
+            return leftDate.year > rightDate.year ? leftDate : rightDate;
+        }
+
+        if (leftDate.month !== rightDate.month) {
+            return leftDate.month > rightDate.month ? leftDate : rightDate;
+        }
+
+        if (leftDate.day !== rightDate.day) {
+            return leftDate.day > rightDate.day ? leftDate : rightDate;
+        }
+
+        return leftDate;
+    },
+    getLaterDate(...dates) {
+        const latest = dates.reduce((currentLatest, dateText) => {
+            const parsedDate = this.parseDateValue(dateText);
+            return this.compareDateValues(currentLatest, parsedDate);
+        }, null);
+
+        return latest ? `${String(latest.day).padStart(2, '0')}/${String(latest.month).padStart(2, '0')}/${latest.year}` : '';
+    },
+    updateNowDate() {
+        this.updated = this.getLaterDate(this.nowDate, this.feedLatestDate) || this.nowDate || this.feedLatestDate;
     },
     fetchLastFmIgnoredArtists() {
         return fetch('../data/lastfm-ignore.json')
@@ -250,8 +297,9 @@ const tplNow = {
     },
     init() {
         this.fetchSection('../data/now.json', ['now-list'], data => {
-            this.updated = Object.keys(data)[0];
+            this.nowDate = Object.keys(data)[0] || '';
             this.list = Object.values(data)[0] || [];
+            this.updateNowDate();
         });
         this.fetchSection('../data/logs.json', ['movies', 'books', 'tv'], data => {
             this.movies = this.getRecentLogs(data, 'movies');
@@ -274,6 +322,8 @@ const tplNow = {
         this.fetchSection('../data/feed.json', ['feed'], data => {
             const posts = (data && data.items) ? data.items : [];
             this.feedPosts = posts.slice(0, 10);
+            this.feedLatestDate = this.getLaterDate(...posts.map(post => post && post.date).filter(Boolean));
+            this.updateNowDate();
         });
         this.fetchNewsletters();
         this.tmdbKey = '1d27d67ac5b026aad089308525f64f5f';
