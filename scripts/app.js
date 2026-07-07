@@ -20,6 +20,7 @@ const app = {
         projectsLink: $("nav .projects"),
         servicesLink: $("nav .services"),
         contactLink: $("nav .contact"),
+        testimonialsLink: $("nav .testimonials"),
         scrollDownButton: $(".scroll-down"),
         scrollTitle: $(".scroll-title"),
         scrollTopButton: $(".scroll-to-top"),
@@ -1249,6 +1250,13 @@ const app = {
             e.preventDefault();
             app.functions.scroll("services");
         });
+        app.elements.testimonialsLink.click((e) => {
+            e.preventDefault();
+            const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+            const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+            const testimonialOffset = isMobileViewport ? (90 / rootFontSize) : 0;
+            app.functions.scroll("testimonial", testimonialOffset);
+        });
         app.elements.contactLink.click((e) => {
             e.preventDefault();
             app.functions.scroll("contact");
@@ -1263,7 +1271,7 @@ const app = {
         });
         app.elements.aboutToTestimonial.click((e) => {
             e.preventDefault();
-            app.functions.scroll("testimonial", 1);
+            app.functions.scroll("testimonials", 1);
         });
         app.elements.servicesToContact.click((e) => {
             e.preventDefault();

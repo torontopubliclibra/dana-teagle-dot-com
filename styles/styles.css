@@ -4469,7 +4469,7 @@ header .socials.left {
   header .socials {
     gap: 20px;
     right: 20px;
-    top: 440px;
+    top: 520px;
     height: 70px;
     width: auto;
   }
@@ -4479,7 +4479,7 @@ header .socials.left {
 }
 @media only screen and (max-width: 768px) {
   header .socials {
-    top: 460px;
+    top: 540px;
   }
 }
 header .social {
@@ -4607,6 +4607,14 @@ header nav ul {
 }
 header nav ul li a {
   padding: 10px 20px;
+}
+header nav ul li.mobile-only {
+  display: none;
+}
+@media only screen and (max-width: 970px) {
+  header nav ul li.mobile-only {
+    display: inline-flex;
+  }
 }
 @media only screen and (max-width: 970px) {
   header nav ul {
@@ -5742,6 +5750,11 @@ header .scroll-title {
 
 #testimonial {
   scroll-margin-top: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  #testimonial {
+    scroll-margin-top: 90px;
+  }
 }
 
 footer .wrapper {
