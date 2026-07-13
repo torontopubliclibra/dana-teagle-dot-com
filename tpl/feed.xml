@@ -6,6 +6,14 @@
         <link>https://www.danateagle.com/tpl/feed</link>
         <description>Woman, libra, blonde, has opinions.</description>
         <item>
+            <title>Mirror selfie of Dana sitting on her bed in a white boat neck top and a short baby blue skirt with white lacy trim, white socks, and black loafers. Blue text over top reads: 'Legs covered in unattributable bruises'</title>
+            <link>https://www.torontopubliclibra.com/feed#333</link>
+            <guid>https://www.torontopubliclibra.com/feed#333</guid>
+            <pubDate>Thu, 09 Jul 2026</pubDate>
+            <description><![CDATA[Mirror selfie of Dana sitting on her bed in a white boat neck top and a short baby blue skirt with white lacy trim, white socks, and black loafers. Blue text over top reads: 'Legs covered in unattributable bruises']]></description>
+            <enclosure url="../assets/feed/333.jpg" type="image/jpeg"/>
+        </item>
+        <item>
             <title>Dana's desk calendar, with an illustration of a Tamagotchi</title>
             <link>https://www.torontopubliclibra.com/feed#332</link>
             <guid>https://www.torontopubliclibra.com/feed#332</guid>
@@ -14,11 +22,11 @@
             <enclosure url="../assets/feed/332.jpg" type="image/jpeg"/>
         </item>
         <item>
-            <title>Laura Dern as Connie in 'Smooth Talk', walking down the dirt road back to her house, seen only from behind</title>
+            <title>Laura Dern as Connie in 'Smooth Talk', lying on her back on the grass listening to the radio</title>
             <link>https://www.torontopubliclibra.com/feed#331</link>
             <guid>https://www.torontopubliclibra.com/feed#331</guid>
             <pubDate>Sun, 05 Jul 2026</pubDate>
-            <description><![CDATA[Laura Dern as Connie in 'Smooth Talk', walking down the dirt road back to her house, seen only from behind]]></description>
+            <description><![CDATA[Laura Dern as Connie in 'Smooth Talk', lying on her back on the grass listening to the radio]]></description>
             <enclosure url="../assets/feed/331.jpg" type="image/jpeg"/>
         </item>
         <item>
@@ -76,14 +84,6 @@
             <pubDate>Wed, 01 Jul 2026</pubDate>
             <description><![CDATA[A mirror selfie of Dana with fresh bangs, sitting on her bed in a large plaid dress]]></description>
             <enclosure url="../assets/feed/324.jpg" type="image/jpeg"/>
-        </item>
-        <item>
-            <title>Apocalypse in 'X-Men 97' on Dana's TV with the caption 'The 1990s.'</title>
-            <link>https://www.torontopubliclibra.com/feed#323</link>
-            <guid>https://www.torontopubliclibra.com/feed#323</guid>
-            <pubDate>Wed, 01 Jul 2026</pubDate>
-            <description><![CDATA[Apocalypse in 'X-Men 97' on Dana's TV with the caption 'The 1990s.']]></description>
-            <enclosure url="../assets/feed/323.jpg" type="image/jpeg"/>
         </item>
     </channel>
 </rss>
