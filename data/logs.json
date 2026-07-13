@@ -2,6 +2,20 @@
     "2026": {
         "movies": [
             {
+                "log": "Nirvanna the Band the Show the Movie",
+                "year": "2025",
+                "rewatch": true,
+                "link": "https://letterboxd.com/film/nirvanna-the-band-the-show-the-movie/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/4/1/0/1/2/1041012-nirvanna-the-band-the-show-the-movie-0-2000-0-3000-crop.jpg?v=4d80f82f8a"
+            },
+            {
+                "log": "La Chimera",
+                "year": "2023",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/la-chimera/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/7/5/2/6/2/6/752626-la-chimera-0-2000-0-3000-crop.jpg?v=8f8cf76e33"
+            },
+            {
                 "log": "Smooth Talk",
                 "year": "1985",
                 "rewatch": false,
@@ -603,7 +617,8 @@
                 "log": "Nirvanna the Band the Show the Movie",
                 "year": "2025",
                 "rewatch": false,
-                "link": "https://letterboxd.com/film/nirvanna-the-band-the-show-the-movie/"
+                "link": "https://letterboxd.com/film/nirvanna-the-band-the-show-the-movie/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/4/1/0/1/2/1041012-nirvanna-the-band-the-show-the-movie-0-2000-0-3000-crop.jpg?v=4d80f82f8a"
             },
             {
                 "log": "Brief Encounter",
@@ -760,6 +775,14 @@
             }
         ],
         "tv": [
+            {
+                "log": "Widow's Bay",
+                "season": "1",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://www.serializd.com/show/Widow's-Bay-270476",
+                "poster": "https://image.tmdb.org/t/p/w500/vKq8XEJKxQTHd2Bm5zZMFPUrke7.jpg"
+            },
             {
                 "log": "X-Men '97",
                 "season": "2",
