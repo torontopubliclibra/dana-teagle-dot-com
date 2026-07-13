@@ -1,4 +1,25 @@
 {
+    "walk away (she never looks back)": {
+        "number": "202",
+        "tidal": "https://tidal.com/playlist/b6045099-8827-41b5-a3b4-3dc3063a6e20",
+        "spotify": "",
+        "apple": "",
+        "image": "https://resources.tidal.com/images/405592b6/4711/44f8/b27a/cf07922869f7/1080x1080.jpg",
+        "featuring": [
+            "Rose Gray",
+            "Fcukers",
+            "Sudan Archives",
+            "Charli XCX",
+            "Gelli Haha",
+            "INJI",
+            "Zara Larsson",
+            "JADE",
+            "Lily Allen",
+            "Fred again...",
+            "Skepta",
+            "PlaqueBoyMax"
+        ]
+    },
     "drop dead (I want you)": {
         "number": "201",
         "tidal": "https://tidal.com/playlist/5a349fb5-92c7-45d2-bb38-0434ca8b361f",
@@ -14,7 +35,7 @@
             "The Cure",
             "Olivia Rodrigo",
             "New Order",
-            "Charli xcx",
+            "Charli XCX",
             "Phoebe Bridgers",
             "Rosalía"
         ]
