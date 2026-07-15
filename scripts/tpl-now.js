@@ -96,7 +96,6 @@ const tplNow = {
         return this.lastFmIgnoredArtists.has(this.normalizeArtistName(artist));
     },
     renderSection(title, link, body, className = 'now-scroll', attributes = '') {
-        if (!body) return '';
         const extraAttrs = attributes ? ` ${attributes}` : '';
         return `<p>>> ${title} (${link})</p><div class="${className}"${extraAttrs}>${body}</div>`;
     },
@@ -156,24 +155,20 @@ const tplNow = {
     },
     renderNewsletters() {
         const substackLink = `<a href="https://torontopubliclibra.substack.com/" target="_blank" rel="noopener noreferrer">substack</a>`;
-        if (!this._newslettersFetched) return '';
-        let body;
-        if (!this.newsletters.length) {
-            body = '<p class="now-coming-soon">coming soon</p>';
-        } else {
-            body = this.newsletters.map(post => {
-                const image = post.thumbnail ? `<img src="${post.thumbnail}" alt="${this.escapeAttr(post.title)}" class="now-mix-img"/>` : '';
-                const title = `<p class="now-mix-title"><small>${post.title}</small></p>`;
-                const date = post.date ? `<p class="now-mix-featuring">${post.date}</p>` : '';
-                const icon = `<p class="now-mix-icon">></p>`;
-                return `<a href="${post.link}" target="_blank" rel="noopener noreferrer" class="now-mix">${image}<span class="now-mix-details">${title}${date}</span>${icon}</a>`;
-            }).join('');
-        }
+        const body = this._newslettersFetched
+            ? (this.newsletters.length
+                ? this.newsletters.map(post => {
+                    const image = post.thumbnail ? `<img src="${post.thumbnail}" alt="${this.escapeAttr(post.title)}" class="now-mix-img"/>` : '';
+                    const title = `<p class="now-mix-title"><small>${post.title}</small></p>`;
+                    const date = post.date ? `<p class="now-mix-featuring">${post.date}</p>` : '';
+                    const icon = `<p class="now-mix-icon">></p>`;
+                    return `<a href="${post.link}" target="_blank" rel="noopener noreferrer" class="now-mix">${image}<span class="now-mix-details">${title}${date}</span>${icon}</a>`;
+                }).join('')
+                : '<p class="now-coming-soon">coming soon</p>')
+            : '';
         return `<hr>${this.renderSection('latest newsletters', substackLink, body, 'now-mixes-list')}<hr>`;
     },
     renderFeedPosts() {
-        if (!this.feedPosts.length) return '';
-
         const feedItems = this.feedPosts.map(post => {
             const id = post.id || post.ID || post.number;
             const permalink = id ? `/tpl/feed#${id}` : '#';
@@ -190,7 +185,6 @@ const tplNow = {
         return `${this.renderSection('latest feed posts', link, feedItems, 'now-feed-scroll', 'id="now-feed-scroll"')}`;
     },
     renderMovies() {
-        if (!this.movies.length) return '';
         const movieItems = this.movies.map(movie => {
             const img = this.buildPoster(this.tmdbPosterUrl(movie.poster), `${movie.log} poster`, movie.log);
             const info = `&gt; '${this.escapeText(movie.log)}' (${movie.year}${movie.rewatch ? ', rewatch' : ''})`;
@@ -200,7 +194,6 @@ const tplNow = {
         return this.renderSection('last watched movies', '<a href="/tpl/logs#movies">more</a>', movieItems);
     },
     renderBooks() {
-        if (!this.books.length) return '';
         const bookItems = this.books.map(book => {
             const title = book.log || '';
             const author = book.author || '';
@@ -216,7 +209,6 @@ const tplNow = {
         return this.renderSection('last read books', '<a href="/tpl/logs#books">more</a>', bookItems);
     },
     renderTV() {
-        if (!this.tv.length) return '';
         const tvItems = this.tv.map(show => {
             const img = this.buildPoster(this.tmdbPosterUrl(show.poster), `${show.log} poster`, show.log, 'tall');
             const info = `&gt; '${this.escapeText(show.log)}'${this.seasonStr(show.season)} (${show.year}${show.rewatch ? ', rewatch' : ''})`;
@@ -226,7 +218,6 @@ const tplNow = {
         return this.renderSection('last watched tv shows', '<a href="/tpl/logs#tv">more</a>', tvItems);
     },
     renderTopAlbums() {
-        if (!this.topAlbums.length) return '';
         const albumItems = this.topAlbums.map(album => {
             const artwork = album.image || '';
             const img = artwork ? `<img src="${artwork}" alt="${this.escapeAttr(album.name)} album art" class="now-album-art"/>` : '';
@@ -237,7 +228,6 @@ const tplNow = {
         return `${this.renderSection('latest top albums', '<a href="https://www.last.fm/user/rustbecomesher" target="_blank" rel="noopener noreferrer">last.fm</a>', albumItems)}<hr>`;
     },
     renderMixes() {
-        if (!this.mixes.length) return '';
         const mixesItems = this.mixes.map(object => {
             const link = `/tpl/mixes#${object.number}`;
             const image = object.image ? `<img src="${object.image}" alt="rusty mix #${object.number} cover art" class="now-mix-img"/>` : '';
@@ -296,6 +286,7 @@ const tplNow = {
             .catch(error => console.log(error));
     },
     init() {
+        this.nowDisplay();
         this.fetchSection('../data/now.json', ['now-list'], data => {
             this.nowDate = Object.keys(data)[0] || '';
             this.list = Object.values(data)[0] || [];
