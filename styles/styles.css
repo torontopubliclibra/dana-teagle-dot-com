@@ -1460,6 +1460,7 @@ html.tpl main .tpl-links .tpl-link.pigeon-link .button-label {
   text-transform: uppercase;
   font-size: 0.9rem;
   line-height: 2;
+  margin-bottom: -4px;
 }
 html.tpl main .tpl-links .tpl-link.notetaken-link .button-label {
   font-family: "Homemade Apple", monospace;
