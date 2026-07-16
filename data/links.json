@@ -14,25 +14,21 @@
         }
     },
     "socials": {
-        "Instagram (I)": {
-            "link": "/tplgram",
-            "description": "@torontopubliclibra"
-        },
-        "Instagram (II)": {
-            "link": "/dtgram",
-            "description": "@danateagledotcom"
-        },
         "Letterboxd": {
             "link": "/letterboxd",
             "description": "@torontolibra"
         },
-        "Serializd": {
-            "link": "/serializd",
+        "Personal Instagram": {
+            "link": "/tplgram",
             "description": "@torontopubliclibra"
         },
-        "Tumblr": {
-            "link": "/tumblr",
-            "description": "@torontopubliclibra"
+        "Professional Instagram": {
+            "link": "/dtgram",
+            "description": "@danateagledotcom"
+        },
+        "I.D. Guide Instagram": {
+            "link": "/dtgram",
+            "description": "@idguide.ca"
         },
         "Last.fm": {
             "link": "/lastfm",
@@ -44,6 +40,14 @@
         },
         "Discogs": {
             "link": "/discogs",
+            "description": "@torontopubliclibra"
+        },
+        "Serializd": {
+            "link": "/serializd",
+            "description": "@torontopubliclibra"
+        },
+        "Tumblr": {
+            "link": "/tumblr",
             "description": "@torontopubliclibra"
         }
     },

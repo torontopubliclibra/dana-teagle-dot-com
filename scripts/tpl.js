@@ -209,7 +209,7 @@ function buildLinkCard(link, categoryTag) {
     const idGuideClass = isIdGuide ? " id-guide-link" : "";
     const rustpropClass = isRustprop ? " rustprop-link" : "";
     const description = link.description ? `<hr/><p class="button-description">${link.description}</p>` : "";
-    return `<a class="button tpl-link ${categoryTag}${dtDotComClass}${idGuideClass}${rustpropClass}" href="${link.link}" target="_blank"><span class="link-title"><p class="button-label">${link.title}</p><img src="../assets/icons/external-link.svg" alt="external link icon"></span>${description}</a>`;
+    return `<a class="button tpl-link ${categoryTag}${dtDotComClass}${idGuideClass}${rustpropClass}" href="${link.link}" target="_blank"><span class="link-title"><p class="button-label">${link.title}</p><img src="${link.title === "PGP key" ? "../assets/icons/download.svg" : "../assets/icons/external-link.svg"}" alt="external link icon"></span>${description}</a>`;
 }
 
 function buildCategorySection(category, links, index) {
@@ -222,7 +222,7 @@ function buildCategorySection(category, links, index) {
 
 function bindCategoryScrollLinks() {
     tpl.tplCategories.off("click", ".link-category a");
-    tpl.tplCategories.on("click", ".link-category a", function(e) {
+    tpl.tplCategories.on("click", ".link-category a", function (e) {
         const targetId = $(this).attr("href").replace("#", "");
         const target = document.getElementById(targetId);
 
@@ -289,7 +289,7 @@ function bindBookmarkButton() {
         return;
     }
 
-    bookmarkButton.addEventListener("click", function() {
+    bookmarkButton.addEventListener("click", function () {
         if (window.sidebar && window.sidebar.addPanel) {
             window.sidebar.addPanel(document.title, window.location.href, "");
         } else if (window.external && ("AddFavorite" in window.external)) {
