@@ -13,7 +13,7 @@
       <body style="background-color: #282b2c; color: #f3e8e9;padding-bottom:30px;">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body" style="margin-bottom: 0 !important;">
           <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1" style="background-color: #4a5f7dff !important; padding: 15px !important;text-transform:lowercase;font-size:0.9rem;">
-            <strong>This is a web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader. Visit <a href="https://aboutfeeds.com" style="color: #f3e8e9; text-decoration: underline;" target="_blank" rel="norefferrer">About Feeds</a> to get started with newsreaders and subscribing.
+            <strong>This is an XML web feed,</strong> also known as an RSS feed. <strong>Subscribe</strong> by copying the URL <textarea style="font-size: 0.75rem; background-color: rgba(27, 31, 35, 0.5); width: 262px; height: 18px;border: none;padding: 0 5px;color: #f3e8e9;resize: none;" readonly="true">https://danateagle.com/tpl/feed.xml</textarea> into your newsreader. Visit <a href="https://aboutfeeds.com" style="color: #f3e8e9; text-decoration: underline;" target="_blank" rel="norefferrer">About Feeds</a> to get started with newsreaders and subscribing.
           </p>
         </nav>
         <div class="container-md px-3 py-3 markdown-body" style="margin-top: 0 !important; padding-top: 0 !important;">

@@ -85,13 +85,5 @@
             <description><![CDATA['Our hands are coarse and full of words.—Bear with my telling you that God is not pretty.' - Clarice Lispector, The Passion According to G.H.]]></description>
             <enclosure url="../assets/feed/325.jpg" type="image/jpeg"/>
         </item>
-        <item>
-            <title>A mirror selfie of Dana with fresh bangs, sitting on her bed in a large plaid dress</title>
-            <link>https://www.torontopubliclibra.com/feed#324</link>
-            <guid>https://www.torontopubliclibra.com/feed#324</guid>
-            <pubDate>Wed, 01 Jul 2026</pubDate>
-            <description><![CDATA[A mirror selfie of Dana with fresh bangs, sitting on her bed in a large plaid dress]]></description>
-            <enclosure url="../assets/feed/324.jpg" type="image/jpeg"/>
-        </item>
     </channel>
 </rss>
