@@ -226,6 +226,33 @@ const app = {
             window.addEventListener("resize", resizeCanvas);
             headshotLink.addEventListener("click", triggerPixelateAndNavigate);
         },
+        setLastUpdatedDate() {
+            const lastUpdatedElement = document.querySelector("#last-updated");
+            if (!lastUpdatedElement) {
+                return;
+            }
+
+            fetch("./sitemap.xml")
+                .then((response) => response.text())
+                .then((xmlText) => {
+                    const xmlDocument = new DOMParser().parseFromString(xmlText, "application/xml");
+                    const rootUrl = Array.from(xmlDocument.querySelectorAll("url")).find((url) => {
+                        const location = url.querySelector("loc")?.textContent?.trim();
+                        return location === "https://danateagle.com/";
+                    });
+
+                    const lastmod = rootUrl?.querySelector("lastmod")?.textContent?.trim();
+                    if (!lastmod) {
+                        return;
+                    }
+
+                    const [year, month, day] = lastmod.split("-");
+                    const humanReadableDate = `${day}/${month}/${year}`;
+
+                    lastUpdatedElement.textContent = humanReadableDate;
+                })
+                .catch((error) => console.log(error));
+        },
         shuffleArray(array) {
             const groups = array.reduce((acc, item) => {
                 acc[item.title] = acc[item.title] || [];
@@ -1282,6 +1309,7 @@ const app = {
     },
     init() {
         if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+            app.functions.setLastUpdatedDate();
             fetch('./data/projects.json').then(response => response.json())
                 .then((data) => {
                     let projects = [];

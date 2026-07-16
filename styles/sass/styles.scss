@@ -1910,10 +1910,10 @@ footer .wrapper {
     @include flex(row-reverse, 0, center, flex-end);
     padding: 20px 0;
     margin: 20px auto;
-    width: 95%;
+    width: 100%;
 
     .credit {
-        width: 75%;
+        width: 78%;
         text-align: left;
         margin: 15px 0;
         font-size: 0.9rem;

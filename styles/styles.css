@@ -5837,10 +5837,10 @@ footer .wrapper {
   align-items: flex-end;
   padding: 20px 0;
   margin: 20px auto;
-  width: 95%;
+  width: 100%;
 }
 footer .wrapper .credit {
-  width: 75%;
+  width: 78%;
   text-align: left;
   margin: 15px 0;
   font-size: 0.9rem;
