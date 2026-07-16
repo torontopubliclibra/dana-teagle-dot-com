@@ -2,6 +2,13 @@
     "2026": {
         "movies": [
             {
+                "log": "Toronto Apartment",
+                "year": "2026",
+                "rewatch": false,
+                "link": "https://letterboxd.com/film/toronto-apartment/",
+                "poster": "https://a.ltrbxd.com/resized/film-poster/1/5/5/7/2/0/1/1557201-toronto-apartment-0-2000-0-3000-crop.jpg?v=750a9158d1"
+            },
+            {
                 "log": "Nirvanna the Band the Show the Movie",
                 "year": "2025",
                 "rewatch": true,
