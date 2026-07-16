@@ -1691,7 +1691,7 @@ header {
             @include borderedBox(rgba($color3, 0.5), $color2);
             margin: 0;
             height: 100%;
-            width: 375px;
+            width: 300px;
 
             .tags {
                 min-width: 100%;
@@ -1766,6 +1766,14 @@ header {
                 align-items: center;
                 padding: 0;
                 overflow: hidden;
+
+                p {
+                    font-size: 1rem;
+
+                    @media only screen and (max-width: $tablet) {
+                        font-size: 1.1rem;
+                    }
+                }
 
                 // buttons
                 .button {
@@ -2109,12 +2117,22 @@ body.dark-mode {
 
     #projects {
 
+        p,
+        p a,
         h2,
         .projects-nav p,
         .projects-nav button,
         h3,
         .project-filters .selected {
             color: $white;
+        }
+
+        p a:hover {
+            color: $color1;
+
+            @media only screen and (max-width: $tablet) {
+                color: $white;
+            }
         }
 
         .project-filters li button:hover {

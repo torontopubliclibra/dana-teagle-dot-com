@@ -3941,6 +3941,23 @@ h3 {
   }
 }
 
+#projects h3 {
+  font-size: 1.1rem;
+}
+@media only screen and (max-width: 768px) {
+  #projects h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  #projects p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+  }
+}
+
 #gallery h3 {
   font-style: normal;
   font-size: 18px;
@@ -5623,7 +5640,7 @@ header .scroll-title {
   border: solid #B57E9B 5px;
   margin: 0;
   height: 100%;
-  width: 375px;
+  width: 300px;
 }
 #projects .projects-container .project .tags {
   min-width: 100%;
@@ -5694,6 +5711,14 @@ header .scroll-title {
   align-items: center;
   padding: 0;
   overflow: hidden;
+}
+#projects .projects-container .project .project-description p {
+  font-size: 1rem;
+}
+@media only screen and (max-width: 970px) {
+  #projects .projects-container .project .project-description p {
+    font-size: 1.1rem;
+  }
 }
 #projects .projects-container .project .project-description .button {
   width: 95%;
@@ -5989,12 +6014,22 @@ body.dark-mode #gallery .pause-button img,
 body.dark-mode #gallery .remote-button img {
   filter: invert(1);
 }
+body.dark-mode #projects p,
+body.dark-mode #projects p a,
 body.dark-mode #projects h2,
 body.dark-mode #projects .projects-nav p,
 body.dark-mode #projects .projects-nav button,
 body.dark-mode #projects h3,
 body.dark-mode #projects .project-filters .selected {
   color: #f3e8e9;
+}
+body.dark-mode #projects p a:hover {
+  color: #84A59D;
+}
+@media only screen and (max-width: 970px) {
+  body.dark-mode #projects p a:hover {
+    color: #f3e8e9;
+  }
 }
 body.dark-mode #projects .project-filters li button:hover {
   color: #7a91b1;

@@ -344,6 +344,22 @@ h3 {
   }
 }
 
+#projects h3 {
+  font-size: 1.1rem;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 1.25rem;
+  }
+}
+
+#projects p {
+  @media only screen and (max-width: $tablet) {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+  }
+}
+
 #gallery h3 {
   font-style: normal;
   font-size: 18px;
