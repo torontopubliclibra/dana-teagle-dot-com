@@ -1450,6 +1450,14 @@ html.tpl main .tpl-links .tpl-link.rustprop-link .button-label {
   font-size: 1.8rem;
   line-height: 1;
 }
+html.tpl main .tpl-links .tpl-link.rcc-link .button-label {
+  font-family: "Rockwell Regular", monospace;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2px;
+}
 html.tpl main .tpl-links .tpl-link.twohours-link .button-label {
   font-family: "Bitcount Prop", monospace;
   font-size: 1.2rem;
@@ -3634,6 +3642,11 @@ html body.project-lightbox-open {
 @font-face {
   font-family: "Chomsky";
   src: url(/fonts/chomsky/Chomsky.otf) format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rockwell Regular";
+  src: url(/fonts/rockwell/Rockwell-Regular.otf) format("opentype");
   font-display: swap;
 }
 body,

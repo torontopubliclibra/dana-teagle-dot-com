@@ -1068,6 +1068,15 @@ html.tpl {
                     line-height: 1;
                 }
 
+                &.rcc-link .button-label {
+                    font-family: "Rockwell Regular", monospace;
+                    text-transform: uppercase;
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    line-height: 1;
+                    letter-spacing: 2px;
+                }
+
                 &.twohours-link .button-label {
                     font-family: "Bitcount Prop", monospace;
                     font-size: 1.2rem;
