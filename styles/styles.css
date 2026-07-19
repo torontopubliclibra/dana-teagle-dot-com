@@ -2748,6 +2748,9 @@ html.rustprop h1 a {
   html.rustprop h1 a {
     width: 100%;
   }
+  html.rustprop h1 a .org {
+    display: none;
+  }
 }
 html.rustprop h1 .links {
   display: flex;

@@ -233,6 +233,10 @@ html.rustprop {
 
         @media only screen and (max-width: $mobile) {
             width: 100%;
+
+            .org {
+                display: none;
+            }
         }
     }
 

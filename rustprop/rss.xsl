@@ -38,7 +38,7 @@
                 <path d="M184 213A140 140 0 0 0 44 73 V 38a175 175 0 0 1 175 175z" fill="#FFF"/>
               </svg>
 
-              <span class="title">RUSTPROP</span> Feed
+              <span class="title">RUSTPROP.ORG</span> Feed
             </h1>
             <p><xsl:value-of select="/rss/channel/description"/></p>
             <a class="head_link" target="_blank" style="color: #B57E9B;">

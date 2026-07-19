@@ -204,7 +204,7 @@ function buildCategoryNavLink(category) {
 function buildLinkCard(link, categoryTag) {
     const isDtDotCom = link.title === "dana teagle dot com";
     const isIdGuide = link.title === "I.D. Guide";
-    const isRustprop = link.title === "RUSTPROP";
+    const isRustprop = link.title === "RUSTPROP.ORG";
     const dtDotComClass = isDtDotCom ? " dt-dot-com-link" : "";
     const idGuideClass = isIdGuide ? " id-guide-link" : "";
     const rustpropClass = isRustprop ? " rustprop-link" : "";
