@@ -3,6 +3,8 @@
 @use 'animations';
 
 html.tpl {
+    background: #282b2c;
+
     body {
         background-color: $black;
         background: -webkit-repeating-linear-gradient(-75deg,

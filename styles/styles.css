@@ -480,6 +480,9 @@ html.sitemap body {
   animation: fade-in 2s;
 }
 
+html.tpl {
+  background: #282b2c;
+}
 html.tpl body {
   background-color: #282b2c;
   background: repeating-linear-gradient(-75deg, rgba(40, 43, 44, 0.98), rgba(40, 43, 44, 0.97) 1px, #282b2c 1px, #282b2c 2px);
